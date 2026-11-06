@@ -1,6 +1,7 @@
 # Private EBM workspace
 
-This repository contains the current B control condition. See CONTROL_B.md.
+This server branch restores the archived batch240 baseline. See SERVER_BASELINE.md.
+The B control condition remains on main; CONTROL_B.md describes main.
 The original project and its license are retained; upstream is kimho1wq/EBM.
 
 - origin is the private siajin/EBM repository. Work on branches in this repository.

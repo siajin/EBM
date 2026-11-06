@@ -11,7 +11,7 @@ def get_args():
     system_args = {
         # expeirment info
         'project'       : 'CM',
-        'name'          : 'EBM_e50_bs240_lr1e5_B_zeropad_short303',
+        'name'          : 'EBM_e50_bs240_lr1e5',
         'tags'          : ['LA'],
         'description'   : '',
         # log
@@ -62,14 +62,6 @@ def get_args():
         'use_class_weight'  : True,
 
         # data processing
-        # B: cap long at 404 frames and short at 303; never repeat audio.
-        'native_length'       : True,
-        'cap_long'            : True,
-        'micro_batch_size'    : 8,
-        'eval_batch_size'     : 8,
-        'short_oc_weight'     : 0.0,
-        'padding_loss_weight' : 0.0,
-
         'num_train_frames'  : 404,
         'num_train_frames_short'  : 303,
         'num_test_frames'   : 404,

@@ -25,7 +25,7 @@ class LocalLogger(ExperimentLogger):
 		
 		# make directory
 		if os.path.exists(path):
-			raise FileExistsError("Refusing to overwrite experiment results: " + path)
+			shutil.rmtree(path)
 		for dir in self.paths.values():
 			os.makedirs(dir)
 
