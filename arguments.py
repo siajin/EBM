@@ -11,7 +11,7 @@ def get_args():
     system_args = {
         # expeirment info
         'project'       : 'CM',
-        'name'          : 'EBM_e50_bs240_lr1e5',
+        'name'          : 'EBM_e50_bs240_lr1e5_nocodec_rerun_20261106',
         'tags'          : ['LA'],
         'description'   : '',
         # log
