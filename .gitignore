@@ -119,3 +119,32 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+# Private experiment workspace: source only; never commit data or credentials.
+*.bak.*
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.flac
+*.mp3
+*.ogg
+*.m4a
+*.npy
+*.npz
+*.parquet
+*.h5
+*.hdf5
+*.bundle
+data/
+datasets/
+results/
+checkpoints/
+artifacts/
+.env.*
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+*password*.txt
+*token*.txt

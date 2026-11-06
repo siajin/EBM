@@ -11,7 +11,7 @@ def get_args():
     system_args = {
         # expeirment info
         'project'       : 'CM',
-        'name'          : 'EBM',
+        'name'          : 'EBM_e50_bs240_lr1e5_B_zeropad_short303',
         'tags'          : ['LA'],
         'description'   : '',
         # log
@@ -35,8 +35,8 @@ def get_args():
 
         # experiment
         'attack_type'       : 'LA', 
-        'epoch'             : 150,
-        'batch_size'        : 40,
+        'epoch'             : 50,
+        'batch_size'        : 240,
         'rand_seed'		    : 1,
         'ratio_bona'        : 0.1,
         'ratio_spoof'       : 0.9,
@@ -62,14 +62,22 @@ def get_args():
         'use_class_weight'  : True,
 
         # data processing
+        # B: cap long at 404 frames and short at 303; never repeat audio.
+        'native_length'       : True,
+        'cap_long'            : True,
+        'micro_batch_size'    : 8,
+        'eval_batch_size'     : 8,
+        'short_oc_weight'     : 0.0,
+        'padding_loss_weight' : 0.0,
+
         'num_train_frames'  : 404,
         'num_train_frames_short'  : 303,
         'num_test_frames'   : 404,
         'num_seg'           : 1,
 
         # learning rate
-        'lr'                : 1e-6,
-        'lr_min'            : 1e-6,
+        'lr'                : 1e-5,
+        'lr_min'            : 1e-5,
         'weight_decay'      : 0.0001,
         'T_0'               : 150,
         'T_mult'            : 1,

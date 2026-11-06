@@ -20,7 +20,7 @@ class ASVspoof2021_DF_Eval:
                 strI[4] = 'bonafide'
             label=1 if strI[5] == 'bonafide' else 0
             item = Trial(
-                path=os.path.join(path, 'ASVspoof2021_DF_eval/flac', f'{strI[1]}.flac'), 
+                path=os.path.join(path, 'ASVspoof2021_DF_eval/flac', f'{strI[1]}.wav'), 
                 type=strI[4], 
                 label=label
             )

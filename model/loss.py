@@ -38,7 +38,7 @@ class OCSoftmax(nn.Module):
         
         self.softplus = nn.Softplus()
 
-    def forward(self, x, label=None):
+    def forward(self, x, label=None, logical_batch_size=None):
             
         w = F.normalize(self.weight, p=2, dim=1)
         x = F.normalize(x, p=2, dim=1)
@@ -53,7 +53,7 @@ class OCSoftmax(nn.Module):
 
         loss = self.softplus(self.alpha * scores)
         # class_weight
-        if x.size(0) > 4:
+        if (x.size(0) if logical_batch_size is None else logical_batch_size) > 4:
             loss[label == 0] = loss[label == 0] * self.class_weight[0]
             loss[label == 1] = loss[label == 1] * self.class_weight[1]
         

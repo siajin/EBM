@@ -38,8 +38,10 @@ def set_experiment_environment(args):
     os.environ['MASTER_PORT'] = args['port']
     args['rank'] = args['process_id']
     args['device'] = f'cuda:{args["process_id"]}'
-    torch.distributed.init_process_group(
-            backend='nccl', world_size=args['world_size'], rank=args['rank'])
+    torch.cuda.set_device(args['process_id'])
+    torch.distributed.init_process_group(   
+            backend='nccl', world_size=args['world_size'], rank=args['rank'],
+            timeout=datetime.timedelta(hours=12))
     torch.cuda.empty_cache()
 
 def run(process_id, args, experiment_args):
@@ -83,14 +85,14 @@ def run(process_id, args, experiment_args):
             print('class_weight: ',class_weight)
         
         # Data loader
-        trainer.train_loader_bona, trainer.sampler_bona, trainer.train_loader_spoof, trainer.sampler_spoof, \
-            trainer.val_loader, trainer.eval_loader = data_loaders.get_loaders(args, train_set, train_db_19la.dev_set, test_set)
+        trainer.train_loader, trainer.train_sampler, trainer.val_loader, trainer.eval_loader = \
+            data_loaders.get_loaders(args, train_set, train_db_19la.dev_set, test_set)
         trainer.num_val = len(train_db_19la.dev_set) 
 
     # Data augmentation
-    #trainer.da = None
-    trainer.da = WaveformAugmetation(['ACN'],
-    {'sr': 16000, 'ACN':{'min_snr_in_db': 10, 'max_snr_in_db': 40, 'min_f_decay': -2.0, 'max_f_decay': 2.0, 'p': 1}}).to(args['device'])
+    trainer.da = None
+    # trainer.da = WaveformAugmetation(['ACN'],
+    # {'sr': 16000, 'ACN':{'min_snr_in_db': 10, 'max_snr_in_db': 40, 'min_f_decay': -2.0, 'max_f_decay': 2.0, 'p': 1}}).to(args['device'])
     
     # Speech pre-trained model
     config = AutoConfig.from_pretrained(
@@ -106,10 +108,8 @@ def run(process_id, args, experiment_args):
         revision="main",
         ignore_mismatched_sizes=False,
     ).to(args['device'])
-    trainer.plm = nn.SyncBatchNorm.convert_sync_batchnorm(trainer.plm)
-    trainer.plm = nn.parallel.DistributedDataParallel(
-        trainer.plm, device_ids=[args['device']], find_unused_parameters=True
-    )
+    trainer.plm.eval()
+    trainer.plm.requires_grad_(False)
 
     # classifier
     trainer.classifier = model.B_Linear(
@@ -176,6 +176,17 @@ if __name__ == '__main__':
     args['world_size'] = len(args['gpu_ids'])
     args['batch_size'] = args['batch_size'] // args['world_size']
 
+
+    # Validate before spawning workers or constructing the destructive logger.
+    if args['epoch'] > args['T_0']:
+        raise ValueError('This native-length implementation keeps XLS-R frozen; epoch must be <= T_0')
+    if not 0 <= args['short_oc_weight'] <= 1 or args['padding_loss_weight'] < 0:
+        raise ValueError('Invalid auxiliary loss weights')
+    if not args['native_length'] and (args['short_oc_weight'] or args['padding_loss_weight']):
+        raise ValueError('Legacy E0 requires both auxiliary weights set to zero')
+    result_path = os.path.join('/', args['path_log'], args['project'], '/'.join(args['tags']), args['name'])
+    if os.path.exists(result_path):
+        raise FileExistsError('Result directory already exists: '+result_path)
 
     # start
     torch.multiprocessing.set_sharing_strategy('file_system')

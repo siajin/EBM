@@ -21,22 +21,25 @@ class B_Linear(nn.Module):
         self.loss = loss
         self.loss_bpl = loss_bpl
 
-    def forward(self, x, x_short=None, label=None, bona_size=None):
+    def forward(self, x, x_short=None, label=None, bona_size=None, mask=None, mask_short=None, return_embedding=False, logical_batch_size=None):
         # Full linear
-        x = self.bridge_module(x)
-        x = self.AHP_ASP(x)
+        x = self.bridge_module(x, mask=mask)
+        x = self.AHP_ASP(x, mask=mask)
         x = self.linear(x)
         x = self.layer_norm(x)
         
-        if x_short != None:
-            x_short = self.bridge_module(x_short)
-            x_short = self.AHP_ASP(x_short)
+        if return_embedding:
+            return x
+
+        if x_short is not None:
+            x_short = self.bridge_module(x_short, mask=mask_short)
+            x_short = self.AHP_ASP(x_short, mask=mask_short)
             x_short = self.linear(x_short)
             x_short = self.layer_norm(x_short)
 
         if self.loss:
-            loss, scores = self.loss(x, label)
-            if x_short != None and bona_size != None and self.loss_bpl != None:
+            loss, scores = self.loss(x, label, logical_batch_size=logical_batch_size)
+            if x_short is not None and bona_size != None and self.loss_bpl != None:
                 loss_cos = self.loss_bpl(x[:bona_size, :], x_short[:bona_size, :])
 
                 return loss + loss_cos, scores
@@ -72,7 +75,7 @@ class Bridge_module(nn.Module):
                 torch.Tensor(1, agg_size), requires_grad=True)
         torch.nn.init.kaiming_uniform_(self.AHP_W_att)
     
-    def forward(self, x):
+    def forward(self, x, mask=None):
         B, L, T, H = x.size()   # B, L, T, H
         output = None
         att = None
@@ -80,7 +83,7 @@ class Bridge_module(nn.Module):
             x_i = x[:, i, :, :]
             x_i_ouput = self.squeeze_module_linears[i](x_i)
             x_i_ouput = self.squeeze_module_norms[i](x_i_ouput)
-            x_i = self.AHP_ASP[i](x_i_ouput)  # (B, H)
+            x_i = self.AHP_ASP[i](x_i_ouput, mask=mask)  # (B, H)
             if output == None:
                 output = x_i_ouput.unsqueeze(1) # (B, 1, T, H)
             else:
@@ -131,7 +134,12 @@ class SelfWeightedPooling(nn.Module):
             torch.Tensor(num_head, feature_dim), requires_grad=True)
         torch.nn.init.kaiming_uniform_(self.mm_weights)
         
-    def forward(self, inputs, get_w=False, tanh=True):
+    def forward(self, inputs, get_w=False, tanh=True, mask=None):
+        if mask is not None:
+            mask = mask.to(device=inputs.device, dtype=torch.bool)
+            if mask.shape != inputs.shape[:2] or not torch.all(mask.sum(1) >= (2 if self.asp else 1)):
+                raise ValueError('Invalid temporal mask or too few valid frames')
+            inputs = inputs.masked_fill(~mask.unsqueeze(-1), 0.)
         batch_size = inputs.size(0)
         feat_dim = inputs.size(2)
         
@@ -139,9 +147,13 @@ class SelfWeightedPooling(nn.Module):
                             self.mm_weights.permute(1, 0).contiguous()\
                             .unsqueeze(0).repeat(batch_size, 1, 1))
         
+        if tanh:
+            weights = torch.tanh(weights)
+        if mask is not None:
+            weights = weights.masked_fill(~mask.unsqueeze(-1), -torch.inf)
         # attention (batchsize, length, num_head)
         if tanh:
-            attentions = nn.functional.softmax(torch.tanh(weights), dim=1)    
+            attentions = nn.functional.softmax(weights, dim=1)    
         else: 
             attentions = nn.functional.softmax(weights, dim=1)  
         
@@ -161,7 +173,16 @@ class SelfWeightedPooling(nn.Module):
             noise = self.noise_std * torch.randn(
                 weighted.size(), dtype=weighted.dtype, device=weighted.device)
 
-            avg_repr, std_repr = weighted.sum(1), (weighted+noise).std(1)
+            avg_repr = weighted.sum(1)
+            if mask is None:
+                std_repr = (weighted+noise).std(1)
+            else:
+                valid = mask.unsqueeze(-1)
+                count = valid.sum(1)
+                noisy = weighted + noise
+                mean = (noisy*valid).sum(1)/count
+                variance = (((noisy-mean.unsqueeze(1))**2)*valid).sum(1)/(count-1)
+                std_repr = variance.clamp_min(1e-30).sqrt()
             # concatenate mean and std
             representations = torch.cat((avg_repr,std_repr),1)
         else:
