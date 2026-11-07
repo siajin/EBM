@@ -254,4 +254,4 @@ class EnrollmentSet(Dataset):
                 audio = audio[:self.crop_size]
 
         return audio, item.type, item.label, index
-    
+    
