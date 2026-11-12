@@ -1,4 +1,6 @@
-# E105. 앞 저에너지의 존재·지속 길이 규칙과 모델 점수의 관계
+<a id="e105-앞-저에너지의-존재지속-길이-규칙과-모델-점수의-관계"></a>
+
+# 앞 저에너지의 존재·지속 길이 규칙과 모델 점수의 관계
 
 **실행 상태:** 기존 실제 결과 확인·문서화 완료
 
@@ -43,14 +45,14 @@
 
 ## 실험 코드
 
-- [historical_analysis/asv_quiet_presence_hypothesis.py](code/asv_quiet_presence_hypothesis.py)
-- [historical_analysis/asv_train_presence_context.py](code/asv_train_presence_context.py)
+- [소스: asv_quiet_presence_hypothesis.py](code/asv_quiet_presence_hypothesis.py)
+- [소스: asv_train_presence_context.py](code/asv_train_presence_context.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [artifacts/experiment_methods_audit_20261111/historical_receipts/EBM80_ASV_quiet_presence_hypothesis_20261030.json](../../_shared/references/artifacts/experiment_methods_audit_20261111/historical_receipts/EBM80_ASV_quiet_presence_hypothesis_20261030.json)
+- [설정·결과 근거](../../_shared/references/artifacts/experiment_methods_audit_20261111/historical_receipts/EBM80_ASV_quiet_presence_hypothesis_20261030.json)
 
 ## 연결
 

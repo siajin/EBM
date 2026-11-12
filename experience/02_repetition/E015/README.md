@@ -1,6 +1,8 @@
-# E015. 자연적으로 2초 이하인 음성에서 오류 전이·임계값 이동·공격별 회복 분석
+<a id="e015-자연적으로-2초-이하인-음성에서-오류-전이임계값-이동공격별-회복-분석"></a>
 
-**실행 상태:** [E014](../E014/README.md) 저장 점수 분석 완료
+# 자연적으로 2초 이하인 음성에서 오류 전이·임계값 이동·공격별 회복 분석
+
+**실행 상태:** [개발 전체와 21LA 전체에서 반복/비반복 입력을 직접 교차 평가](../E014/README.md) 저장 점수 분석 완료
 
 이 문서의 상태는 2026-11-12 출판 검토 기준이다. 기존 문서·state의 시점별 상태와 충돌하면 실제 완료표식과 본문 최신 보완을 우선한다.
 
@@ -16,7 +18,7 @@
 
 ## 모델·데이터·표본
 
-[E014](../E014/README.md)의 21LA 전체 점수. 원음이 32,000샘플 이하인 정상 571개·위조 49,193개를 분석한다. 원음이 정확히 2초인 정상 64개·위조 497개가 포함된다. 따라서 앞선 2초 미만 분석의 정상 507개·위조 48,696개와 분모가 다르다.
+[개발 전체와 21LA 전체에서 반복/비반복 입력을 직접 교차 평가](../E014/README.md)의 21LA 전체 점수. 원음이 32,000샘플 이하인 정상 571개·위조 49,193개를 분석한다. 원음이 정확히 2초인 정상 64개·위조 497개가 포함된다. 따라서 앞선 2초 미만 분석의 정상 507개·위조 48,696개와 분모가 다르다.
 
 ## 실험 내용과 상세 절차
 
@@ -27,7 +29,7 @@
 
 ## 측정과 검증
 
-원래 240 native 개발 임계값 0.9927267432, 반복 개발 임계값 0.3411039114. 정상 거부·위조 누락을 각각 계산한다.
+배치 240 고정 길이 반복 입력 학습 native 개발 임계값 0.9927267432, 반복 개발 임계값 0.3411039114. 정상 거부·위조 누락을 각각 계산한다.
 
 ## 결과
 
@@ -43,17 +45,17 @@
 
 ## 실험 코드
 
-- [EBM/tools/review_repetition_results.py](code/EBM/tools/review_repetition_results.py)
+- [소스: review_repetition_results.py](code/EBM/tools/review_repetition_results.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [EBM/tools/review_repetition_results.py](../../../tools/review_repetition_results.py)
-- [artifacts/repetition_shortcut_20261111/reviewed_analysis/operating_points_21LA.csv](../../_shared/references/artifacts/repetition_shortcut_20261111/reviewed_analysis/operating_points_21LA.csv)
-- [artifacts/repetition_shortcut_20261111/reviewed_analysis/paired_transitions.csv](../../_shared/references/artifacts/repetition_shortcut_20261111/reviewed_analysis/paired_transitions.csv)
-- [artifacts/repetition_shortcut_20261111/reviewed_analysis/attacks_21LA.csv](../../_shared/references/artifacts/repetition_shortcut_20261111/reviewed_analysis/attacks_21LA.csv)
-- [artifacts/repetition_shortcut_20261111/reviewed_analysis/length_specific_eer.csv](../../_shared/references/artifacts/repetition_shortcut_20261111/reviewed_analysis/length_specific_eer.csv)
+- [소스: review_repetition_results.py](../../../tools/review_repetition_results.py)
+- [집계 결과 표](../../_shared/references/artifacts/repetition_shortcut_20261111/reviewed_analysis/operating_points_21LA.csv)
+- [집계 결과 표](../../_shared/references/artifacts/repetition_shortcut_20261111/reviewed_analysis/paired_transitions.csv)
+- [집계 결과 표](../../_shared/references/artifacts/repetition_shortcut_20261111/reviewed_analysis/attacks_21LA.csv)
+- [집계 결과 표](../../_shared/references/artifacts/repetition_shortcut_20261111/reviewed_analysis/length_specific_eer.csv)
 
 ## 연결
 

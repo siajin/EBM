@@ -1,4 +1,6 @@
-# E047. 좌표 선택의 전체 169조건과 회전 좌표계 대조
+<a id="e047-좌표-선택의-전체-169조건과-회전-좌표계-대조"></a>
+
+# 좌표 선택의 전체 169조건과 회전 좌표계 대조
 
 **실행 상태:** 캐시 점수 개입 완료
 
@@ -43,16 +45,16 @@
 
 ## 실험 코드
 
-- [artifacts/geometry_experiments/frozen_n0.py](code/artifacts/geometry_experiments/frozen_n0.py)
+- [소스: frozen_n0.py](code/artifacts/geometry_experiments/frozen_n0.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [artifacts/geometry_experiments/frozen_n0.py](../../_shared/workspace/artifacts/geometry_experiments/frozen_n0.py)
-- [artifacts/geometry_cache/local_analysis/frozen_all_v1/F1/masks.json](../../_shared/references/artifacts/geometry_cache/local_analysis/frozen_all_v1/F1/masks.json)
-- [artifacts/geometry_cache/local_analysis/frozen_all_v1/F1/mask_curves.csv](../../_shared/references/artifacts/geometry_cache/local_analysis/frozen_all_v1/F1/mask_curves.csv)
-- [artifacts/geometry_cache/local_analysis/frozen_all_v1/F1/paired_effects.json](../../_shared/references/artifacts/geometry_cache/local_analysis/frozen_all_v1/F1/paired_effects.json)
+- [소스: frozen_n0.py](../../_shared/workspace/artifacts/geometry_experiments/frozen_n0.py)
+- [설정·결과 근거](../../_shared/references/artifacts/geometry_cache/local_analysis/frozen_all_v1/F1/masks.json)
+- [집계 결과 표](../../_shared/references/artifacts/geometry_cache/local_analysis/frozen_all_v1/F1/mask_curves.csv)
+- [설정·결과 근거](../../_shared/references/artifacts/geometry_cache/local_analysis/frozen_all_v1/F1/paired_effects.json)
 
 ## 연결
 

@@ -1,4 +1,6 @@
-# E023. 가변 길이 학습과 기존 모델의 21LA 길이·공격별 오류 재분석
+<a id="e023-가변-길이-학습과-기존-모델의-21la-길이공격별-오류-재분석"></a>
+
+# 가변 길이 학습과 기존 모델의 21LA 길이·공격별 오류 재분석
 
 **실행 상태:** 기존 점수 분석 완료
 
@@ -16,7 +18,7 @@
 
 ## 모델·데이터·표본
 
-[E022](../E022/README.md)의 21LA 전체 점수, B20/C20, 참고 B45/C30·원래 24050의 완료 점수. 모든 발화 ID·원음 길이를 맞춘다.
+[중단한 가변 길이 학습의 저장 20epoch를 21LA·DF 전체 평가](../E022/README.md)의 21LA 전체 점수, 4.0375초 상한 비반복 학습 20/원음 전체 비반복 학습 20epoch 모델, 참고 4.0375초 상한 비반복 학습 45/원음 전체 비반복 학습 30epoch 모델·원래 24050의 완료 점수. 모든 발화 ID·원음 길이를 맞춘다.
 
 ## 실험 내용과 상세 절차
 
@@ -43,16 +45,16 @@
 
 ## 실험 코드
 
-- [EBM/tools/analyze_coverage20_length_shortcut.py](code/EBM/tools/analyze_coverage20_length_shortcut.py)
+- [소스: analyze_coverage20_length_shortcut.py](code/EBM/tools/analyze_coverage20_length_shortcut.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [EBM/tools/analyze_coverage20_length_shortcut.py](../../../tools/analyze_coverage20_length_shortcut.py)
-- [artifacts/coverage20_length_shortcut_20261111/plan.json](../../_shared/references/artifacts/coverage20_length_shortcut_20261111/plan.json)
-- [artifacts/coverage20_length_shortcut_20261111/analysis.json](../../_shared/references/artifacts/coverage20_length_shortcut_20261111/analysis.json)
-- [artifacts/coverage20_length_shortcut_20261111/findings.json](../../_shared/references/artifacts/coverage20_length_shortcut_20261111/findings.json)
+- [소스: analyze_coverage20_length_shortcut.py](../../../tools/analyze_coverage20_length_shortcut.py)
+- [설정·결과 근거](../../_shared/references/artifacts/coverage20_length_shortcut_20261111/plan.json)
+- [설정·결과 근거](../../_shared/references/artifacts/coverage20_length_shortcut_20261111/analysis.json)
+- [설정·결과 근거](../../_shared/references/artifacts/coverage20_length_shortcut_20261111/findings.json)
 
 ## 연결
 

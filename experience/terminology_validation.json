@@ -1,0 +1,132 @@
+{
+  "status": "passed",
+  "checked_at": "2026-11-12T11:32:49.744812+09:00",
+  "base_commit": "4afe39c5be82b84132c5f97f02e585e12e632076",
+  "reader_facing_names": {
+    "capped_no_repeat": "4.0375초 상한 비반복 학습",
+    "full_context_no_repeat": "원음 전체 비반복 학습",
+    "conditional_short_alignment": "짧은 정상 음성의 3.0275초·2초 정렬 학습",
+    "repeated_fixed_input": "배치 240 고정 길이 반복 입력 학습"
+  },
+  "model_branches_verified": {
+    "baseline/e50-bs240-lr1e5": "cc7d324c7287b4c5e5f8a29dafec303f834f3525",
+    "train/ebm-e50-bs240-lr1e5-nocodec-20261106": "10f3bcd057dc6a2ca687fbd5389ad6c9e15a3746",
+    "train/ebm-B-zeropad-e50-bs240-20261106": "2c2c6ff65bbadf33b811983f7c648c97fffb81a1",
+    "train/ebm-C-native-long-e50-bs240-20261108": "cf199af03044c40837c08ce31d633e2c048bde08"
+  },
+  "source_diff_between_nonrepeating_model_branches": [
+    "arguments.py",
+    "data_loaders.py",
+    "docs/CONTROL_C.md"
+  ],
+  "experiment_records": 113,
+  "local_links_checked": 3641,
+  "numeric_table_cells_unchanged": 2426,
+  "legacy_heading_anchors_preserved": 361,
+  "mathematical_symbols_preserved": [
+    {
+      "path": "experience/01_duration_bias/E026/README.md",
+      "kind": "defined algebraic loss / classifier regularization parameter"
+    },
+    {
+      "path": "experience/03_bonafide_diversity/E090/README.md",
+      "kind": "defined algebraic loss / classifier regularization parameter"
+    },
+    {
+      "path": "experience/03_bonafide_diversity/E096/README.md",
+      "kind": "defined algebraic loss / classifier regularization parameter"
+    },
+    {
+      "path": "experience/04_norm_information/E040/README.md",
+      "kind": "defined algebraic loss / classifier regularization parameter"
+    },
+    {
+      "path": "experience/04_norm_information/E045/README.md",
+      "kind": "defined algebraic loss / classifier regularization parameter"
+    },
+    {
+      "path": "experience/05_residual_geometry/E042/README.md",
+      "kind": "defined algebraic loss / classifier regularization parameter"
+    },
+    {
+      "path": "experience/05_residual_geometry/E043/README.md",
+      "kind": "defined algebraic loss / classifier regularization parameter"
+    },
+    {
+      "path": "experience/_shared/references/docs/experiments/BPL1_BPL2_final_plan_20261111.md",
+      "kind": "defined algebraic loss / classifier regularization parameter"
+    },
+    {
+      "path": "experience/_shared/references/docs/experiments/cached_core_20261105/03_layernorm.md",
+      "kind": "defined algebraic loss / classifier regularization parameter"
+    },
+    {
+      "path": "experience/_shared/references/docs/experiments/ebm_cached_core_results_20261105.md",
+      "kind": "defined algebraic loss / classifier regularization parameter"
+    },
+    {
+      "path": "experience/_shared/references/docs/experiments/ebm_completed_evidence_interpretation_20261111.md",
+      "kind": "defined algebraic loss / classifier regularization parameter"
+    },
+    {
+      "path": "experience/_shared/references/docs/experiments/ebm_completed_evidence_interpretation_20261111.md",
+      "kind": "defined algebraic loss / classifier regularization parameter"
+    },
+    {
+      "path": "experience/_shared/references/docs/experiments/ebm_completed_evidence_interpretation_20261111.md",
+      "kind": "defined algebraic loss / classifier regularization parameter"
+    },
+    {
+      "path": "experience/_shared/references/docs/experiments/ebm_completed_evidence_interpretation_20261111.md",
+      "kind": "defined algebraic loss / classifier regularization parameter"
+    },
+    {
+      "path": "experience/_shared/references/docs/experiments/ebm_completed_evidence_interpretation_20261111.md",
+      "kind": "defined algebraic loss / classifier regularization parameter"
+    },
+    {
+      "path": "experience/_shared/references/docs/experiments/ebm_completed_evidence_interpretation_20261111.md",
+      "kind": "defined algebraic loss / classifier regularization parameter"
+    },
+    {
+      "path": "experience/_shared/references/docs/experiments/ebm_completed_evidence_interpretation_20261111.md",
+      "kind": "defined algebraic loss / classifier regularization parameter"
+    },
+    {
+      "path": "experience/_shared/references/docs/experiments/ebm_five_research_themes_20261111.md",
+      "kind": "defined algebraic loss / classifier regularization parameter"
+    },
+    {
+      "path": "experience/_shared/references/docs/experiments/ebm_five_research_themes_20261111.md",
+      "kind": "defined algebraic loss / classifier regularization parameter"
+    },
+    {
+      "path": "experience/_shared/references/docs/experiments/ebm_five_research_themes_20261111.md",
+      "kind": "defined algebraic loss / classifier regularization parameter"
+    },
+    {
+      "path": "experience/_shared/references/docs/experiments/ebm_five_research_themes_20261111.md",
+      "kind": "defined algebraic loss / classifier regularization parameter"
+    },
+    {
+      "path": "experience/_shared/references/docs/experiments/ebm_five_research_themes_20261111.md",
+      "kind": "defined algebraic loss / classifier regularization parameter"
+    },
+    {
+      "path": "experience/_shared/references/docs/experiments/ebm_five_research_themes_20261111.md",
+      "kind": "defined algebraic loss / classifier regularization parameter"
+    },
+    {
+      "path": "experience/_shared/references/docs/experiments/ebm_five_research_themes_20261111.md",
+      "kind": "defined algebraic loss / classifier regularization parameter"
+    },
+    {
+      "path": "experience/_shared/references/docs/experiments/ebm_perturbation_candidate_audit_and_plan_20261106.md",
+      "kind": "defined algebraic loss / classifier regularization parameter"
+    }
+  ],
+  "scientific_source_or_measurement_changes": 0,
+  "new_training_or_inference": 0,
+  "spending_ceiling_usd": 0,
+  "errors": []
+}

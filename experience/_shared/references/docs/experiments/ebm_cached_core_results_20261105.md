@@ -1,3 +1,5 @@
+> 표시 명칭·링크 이름은 설명형으로 정리했다. 원래 코드·경로·수치는 그대로 보존한다.
+
 > 역사 문서 보존본. 원문 작성 당시의 상태·계획을 포함한다. 최신 상태와 확정 결과는 experience의 각 실험 README를 우선한다.
 
 # 기존 임베딩 캐시로 수행한 네 가지 진단
@@ -66,7 +68,7 @@ scalar 입력은 코사인의 5-knot cubic spline, log(z norm), direction-valid 
 | scalar + 조건 | 1.493337 | 44.3396 | 0.538092 |
 | scalar + 조건 + 잔여 방향 | 0.389107 | 16.0377 | 0.925774 |
 
-각 예측은 전체 DF 교차검증에서 이미 held-out으로 생성된 값을 사용했다. 매칭 표본으로 분류기나 C를 다시 선택하지 않았다. 방향 추가의 log-loss 개선은 0.826350, 개별 95% 구간은 [0.532227, 1.365502]였다. 방향 평균 차이의 norm은 0.452861, 매칭된 정상/스푸프 방향의 평균 코사인은 0.674227이었다. 이 방향 통계에 정확한 조건부 검정 p값은 붙이지 않았다.
+각 예측은 전체 DF 교차검증에서 이미 held-out으로 생성된 값을 사용했다. 매칭 표본으로 분류기나 원음 전체 비반복 학습을 다시 선택하지 않았다. 방향 추가의 log-loss 개선은 0.826350, 개별 95% 구간은 [0.532227, 1.365502]였다. 방향 평균 차이의 norm은 0.452861, 매칭된 정상/스푸프 방향의 평균 코사인은 0.674227이었다. 이 방향 통계에 정확한 조건부 검정 p값은 붙이지 않았다.
 
 주 매칭은 정상의 5.3%, 스푸프의 0.59%만 포함한다. 유사한 점수의 어려운 표본을 선택한 결과이므로 이 성능을 DF 모집단 성능으로 일반화할 수 없다. 전체 DF로 fit한 예측의 calibration도 매칭 표본의 균형 분포에 맞춰 다시 보정하지 않았다. 코사인·크기는 유한한 허용 오차로 맞췄으며 정확히 동일하지 않다.
 
@@ -98,7 +100,7 @@ EER가 유지된다고 점수가 변하지 않은 것은 아니다. 사후 기�
 
 ## ③ LayerNorm 전후의 읽기 쉬운 정보
 
-scalar에 원래 160차원 h 또는 z를 각각 추가하고 동일한 L2 logistic, 같은 C grid, 같은 nested fold를 적용했다. h에 z의 centroid를 적용하지 않았다.
+scalar에 원래 160차원 h 또는 z를 각각 추가하고 동일한 L2 logistic, 같은 원음 전체 비반복 학습 grid, 같은 nested fold를 적용했다. h에 z의 centroid를 적용하지 않았다.
 
 | DF 내부 입력 | Balanced log-loss ↓ | EER (%) ↓ |
 | --- | ---: | ---: |
@@ -134,11 +136,11 @@ CI는 저장된 OOF 예측에 조건부이며 bootstrap마다 nested 분류기�
 
 마스크·매칭·동률 EER·누락 클래스·ID 잡음·balanced loss 부호의 합성 경계 검사를 통과했다. 실제 결과는 별도 구현의 log-loss, rank 기반 AUROC, DET 기반 EER로 8개 probe를 검증했다. 3개 dataset×85조건=255개 마스크 지표도 재계산했고 독립 마스크 점수의 최대 오차는 2.22e-15였다. 저장 예측의 ID/label 정렬과 화자당 한 outer fold를 확인했다. 그림의 축·레이블·막대·범례를 렌더링해 확인했다.
 
-최초 실행은 교차검증 완료 후 정상만 있는 매칭 구간의 빈 정수 index 처리에서 멈췄다. 완료된 예측을 보존하고 이 처리만 고쳐 후속 매칭·군집 단계를 복구했다. probe 재학습·C 재선택은 0회였다. V threshold와 같은 native 점수의 부동소수점 합산 오차가 경계 판정을 바꾸지 않도록, 사후 threshold 점검의 native 기준값은 저장된 원래 cosine을 그대로 사용했다.
+최초 실행은 교차검증 완료 후 정상만 있는 매칭 구간의 빈 정수 index 처리에서 멈췄다. 완료된 예측을 보존하고 이 처리만 고쳐 후속 매칭·군집 단계를 복구했다. probe 재학습·원음 전체 비반복 학습 재선택은 0회였다. V threshold와 같은 native 점수의 부동소수점 합산 오차가 경계 판정을 바꾸지 않도록, 사후 threshold 점검의 native 기준값은 저장된 원래 cosine을 그대로 사용했다.
 
 ## 재현과 결과 위치
 
-계산 코드는 [cached_core_diagnostics.py](../../../workspace/artifacts/geometry_experiments/cached_core_diagnostics.py), 수학 경계 검사는 [verify_cached_core_math.py](../../../workspace/artifacts/geometry_experiments/verify_cached_core_math.py), 출력 독립 검증은 [audit_cached_core_results.py](../../../workspace/artifacts/geometry_experiments/audit_cached_core_results.py), 그림 생성은 [plot_cached_core.py](../../../workspace/artifacts/geometry_experiments/plot_cached_core.py)다. 연구실 원본 소스를 복제한 코드가 아니다.
+계산 코드는 [소스: cached_core_diagnostics.py](../../../workspace/artifacts/geometry_experiments/cached_core_diagnostics.py), 수학 경계 검사는 [소스: verify_cached_core_math.py](../../../workspace/artifacts/geometry_experiments/verify_cached_core_math.py), 출력 독립 검증은 [소스: audit_cached_core_results.py](../../../workspace/artifacts/geometry_experiments/audit_cached_core_results.py), 그림 생성은 [소스: plot_cached_core.py](../../../workspace/artifacts/geometry_experiments/plot_cached_core.py)다. 연구실 원본 소스를 복제한 코드가 아니다.
 
 결과 폴더는 `artifacts/geometry_cache/local_analysis/cached_core_v1/`이다. 핵심 파일은 `summary.json`, `probe_metrics.csv`, `matched_summary.json`, `channel_ablation_curves.csv`, `cluster_associations.csv`, `output_audit.json`, `core_diagnostics.png`다. 발화별 예측·매칭·마스크 점수도 같은 로컬 캐시 안에 저장했다. 기존 캐시·원래 분석·frozen registry는 보존했다.
 

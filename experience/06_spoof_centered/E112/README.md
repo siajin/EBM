@@ -1,4 +1,6 @@
-# E112. 역할 평가의 점수 부호·smoke 범위·checkpoint 용도 오류 감사
+<a id="e112-역할-평가의-점수-부호smoke-범위checkpoint-용도-오류-감사"></a>
+
+# 역할 평가의 점수 부호·smoke 범위·checkpoint 용도 오류 감사
 
 **실행 상태:** 결함 재현·로컬 수정·86검사 통과; 실제 사용자 실행의 원인 미확정
 
@@ -16,7 +18,7 @@
 
 ## 모델·데이터·표본
 
-[E111](../E111/README.md) 로컬구현·합성CPU·두Gloo프로세스. 실제 사용자run root는 확보되지 않았으며 원격실행·실제음성 추론0회.
+[정상 중심과 스푸프 중심을 명시적으로 전환하는 원본240 기반 구현](../E111/README.md) 로컬구현·합성CPU·두Gloo프로세스. 실제 사용자run root는 확보되지 않았으며 원격실행·실제음성 추론0회.
 
 ## 실험 내용과 상세 절차
 
@@ -43,23 +45,23 @@
 
 ## 실험 코드
 
-- [EBM/role_lifecycle.py](code/EBM/role_lifecycle.py)
-- [EBM/role_runtime.py](code/EBM/role_runtime.py)
-- [EBM/tools/train_role_experiment.py](code/EBM/tools/train_role_experiment.py)
-- [EBM/tests/test_role_code_audit.py](code/EBM/tests/test_role_code_audit.py)
-- [artifacts/reverse_ebm_code_audit_20261112/before/role_lifecycle.py](code/artifacts/reverse_ebm_code_audit_20261112/before/role_lifecycle.py)
-- [artifacts/reverse_ebm_code_audit_20261112/before/role_model.py](code/artifacts/reverse_ebm_code_audit_20261112/before/role_model.py)
-- [artifacts/reverse_ebm_code_audit_20261112/before/role_objectives.py](code/artifacts/reverse_ebm_code_audit_20261112/before/role_objectives.py)
-- [artifacts/reverse_ebm_code_audit_20261112/before/role_runtime.py](code/artifacts/reverse_ebm_code_audit_20261112/before/role_runtime.py)
-- [artifacts/reverse_ebm_code_audit_20261112/before/role_training.py](code/artifacts/reverse_ebm_code_audit_20261112/before/role_training.py)
+- [소스: role_lifecycle.py](code/EBM/role_lifecycle.py)
+- [소스: role_runtime.py](code/EBM/role_runtime.py)
+- [소스: train_role_experiment.py](code/EBM/tools/train_role_experiment.py)
+- [소스: test_role_code_audit.py](code/EBM/tests/test_role_code_audit.py)
+- [소스: role_lifecycle.py](code/artifacts/reverse_ebm_code_audit_20261112/before/role_lifecycle.py)
+- [소스: role_model.py](code/artifacts/reverse_ebm_code_audit_20261112/before/role_model.py)
+- [소스: role_objectives.py](code/artifacts/reverse_ebm_code_audit_20261112/before/role_objectives.py)
+- [소스: role_runtime.py](code/artifacts/reverse_ebm_code_audit_20261112/before/role_runtime.py)
+- [소스: role_training.py](code/artifacts/reverse_ebm_code_audit_20261112/before/role_training.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [EBM/ROLE_EBM.md](../../../ROLE_EBM.md)
-- [artifacts/reverse_ebm_code_audit_20261112/validation.json](../../_shared/references/artifacts/reverse_ebm_code_audit_20261112/validation.json)
-- [artifacts/reverse_ebm_code_audit_20261112/runtime_preflight.json](../../_shared/references/artifacts/reverse_ebm_code_audit_20261112/runtime_preflight.json)
+- [상세 설계·실험 기록](../../../ROLE_EBM.md)
+- [검산 결과](../../_shared/references/artifacts/reverse_ebm_code_audit_20261112/validation.json)
+- [설정·결과 근거](../../_shared/references/artifacts/reverse_ebm_code_audit_20261112/runtime_preflight.json)
 
 ## 연결
 

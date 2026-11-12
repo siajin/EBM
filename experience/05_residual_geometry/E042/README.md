@@ -1,4 +1,6 @@
-# E042. 원래 코사인을 유지한 방향 잔차와 공분산 거리의 전이 대조
+<a id="e042-원래-코사인을-유지한-방향-잔차와-공분산-거리의-전이-대조"></a>
+
+# 원래 코사인을 유지한 방향 잔차와 공분산 거리의 전이 대조
 
 **실행 상태:** 추가 분류기·캐시 평가 완료
 
@@ -22,7 +24,7 @@
 
 1. 학습 자료만으로 단조 확률 보정 p =sigmoid(8.710543812499347s −0.7151751091389169)를 고정하고 순위에는 포화되지 않은 logit을 쓴다.
 2. 옆 방향 u의 L2 logistic decision에 tanh를 적용한 잔차를 s +epsilon×tanh(decision/2)로 더 한다. C =0.01/0.1/1/10,epsilon =0/0.01/0.03/0.1를 개발로그 손실로 선택한다.
-3. 차원이 같은 고정 잡음 방향으로 동일 잔차를 학습한다. 동률 1e-12 에서는 epsilon0·작은 C를 우선한다.
+3. 차원이 같은 고정 잡음 방향으로 동일 잔차를 학습한다. 동률 1e-12 에서는 epsilon0·작은 원음 전체 비반복 학습을 우선한다.
 4. 같은 학습 정상 공분산의 대각/전체 거리와 수축 0.01/0.1/0.5/1를 비교하고, 개발 EER 동률은 gamma1 =identity를 고른다.
 
 ## 측정과 검증
@@ -31,7 +33,7 @@ EER·AUROC·균형로그 손실·개발 고정 오류·9개 비교 보정 구간
 
 ## 결과
 
-방향 잔차의 선택은 C1·epsilon0.1 이었으나 DFEER 3.35%로같고로그 손실은 악화했다. 잡음 잔차는 epsilon0, 거리 선택도 identity 였다.
+방향 잔차의 선택은 분류기 규제 계수 1·epsilon0.1 이었으나 DFEER 3.35%로같고로그 손실은 악화했다. 잡음 잔차는 epsilon0, 거리 선택도 identity 였다.
 
 ## 해석·실패한 부분·한계
 
@@ -43,18 +45,18 @@ EER·AUROC·균형로그 손실·개발 고정 오류·9개 비교 보정 구간
 
 ## 실험 코드
 
-- [artifacts/geometry_experiments/validate_native_preserving.py](code/artifacts/geometry_experiments/validate_native_preserving.py)
-- [artifacts/geometry_experiments/plot_native_preserving.py](code/artifacts/geometry_experiments/plot_native_preserving.py)
-- [artifacts/geometry_experiments/verify_native_preserving_math.py](code/artifacts/geometry_experiments/verify_native_preserving_math.py)
+- [소스: validate_native_preserving.py](code/artifacts/geometry_experiments/validate_native_preserving.py)
+- [소스: plot_native_preserving.py](code/artifacts/geometry_experiments/plot_native_preserving.py)
+- [소스: verify_native_preserving_math.py](code/artifacts/geometry_experiments/verify_native_preserving_math.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [artifacts/geometry_cache/local_analysis/native_preserving_v1/protocol.json](../../_shared/references/artifacts/geometry_cache/local_analysis/native_preserving_v1/protocol.json)
-- [artifacts/geometry_cache/local_analysis/native_preserving_v1/summary.json](../../_shared/references/artifacts/geometry_cache/local_analysis/native_preserving_v1/summary.json)
-- [artifacts/geometry_experiments/validate_native_preserving.py](../../_shared/workspace/artifacts/geometry_experiments/validate_native_preserving.py)
-- [artifacts/geometry_cache/local_analysis/df_interpretation_v1/interpretation.json](../../_shared/references/artifacts/geometry_cache/local_analysis/df_interpretation_v1/interpretation.json)
+- [설정·결과 근거](../../_shared/references/artifacts/geometry_cache/local_analysis/native_preserving_v1/protocol.json)
+- [설정·결과 근거](../../_shared/references/artifacts/geometry_cache/local_analysis/native_preserving_v1/summary.json)
+- [소스: validate_native_preserving.py](../../_shared/workspace/artifacts/geometry_experiments/validate_native_preserving.py)
+- [설정·결과 근거](../../_shared/references/artifacts/geometry_cache/local_analysis/df_interpretation_v1/interpretation.json)
 
 ## 연결
 

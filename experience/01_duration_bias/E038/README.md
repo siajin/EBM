@@ -1,4 +1,6 @@
-# E038. 가변 길이 OC +BPL과 평가 중심·난수·저장의 실제 연결 검사
+<a id="e038-가변-길이-oc-bpl과-평가-중심난수저장의-실제-연결-검사"></a>
+
+# 가변 길이 OC +BPL과 평가 중심·난수·저장의 실제 연결 검사
 
 **실행 상태:** 구현 검증 완료·장기 성능 실험 아님
 
@@ -16,7 +18,7 @@ OC를 유지한 최종 가변 길이 학습과 기존 모델의 평가 점수가
 
 ## 모델·데이터·표본
 
-학습 자료 정책·실제 파형·두 GPU의 짧은 갱신 배치. 기존 240/B/C 보존 모델은 평가 전용으로만 읽는다.
+학습 자료 정책·실제 파형·두 GPU의 짧은 갱신 배치. 배치 240 고정 길이 반복 입력 학습/4.0375초 상한 비반복 학습과 원음 전체 비반복 학습 보존 모델은 평가 전용으로만 읽는다.
 
 ## 실험 내용과 상세 절차
 
@@ -31,7 +33,7 @@ OC를 유지한 최종 가변 길이 학습과 기존 모델의 평가 점수가
 
 ## 결과
 
-저장 모델 평가 점수 최대 차이 4.10e-8·EER 동일 등 연결 검사를 통과했다. 이후 장기 학습은 [E021](../E021/README.md)로 별도 실행됐다.
+저장 모델 평가 점수 최대 차이 4.10e-8·EER 동일 등 연결 검사를 통과했다. 이후 장기 학습은 [정상·위조 길이와 음성활동을 맞추고 독립 정상 묶음을 정렬한 학습](../E021/README.md)로 별도 실행됐다.
 
 ## 해석·실패한 부분·한계
 
@@ -43,18 +45,18 @@ OC를 유지한 최종 가변 길이 학습과 기존 모델의 평가 점수가
 
 ## 실험 코드
 
-- [EBM/positive_bpl.py](code/EBM/positive_bpl.py)
-- [EBM/controlled_data_loaders.py](code/EBM/controlled_data_loaders.py)
-- [EBM/tests/test_positive_bpl.py](code/EBM/tests/test_positive_bpl.py)
+- [소스: positive_bpl.py](code/EBM/positive_bpl.py)
+- [소스: controlled_data_loaders.py](code/EBM/controlled_data_loaders.py)
+- [소스: test_positive_bpl.py](code/EBM/tests/test_positive_bpl.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [artifacts/oc_bpl_matched_variable_20261110/state.json](../../_shared/references/artifacts/oc_bpl_matched_variable_20261110/state.json)
-- [artifacts/positive_bpl_code_review_20261110/state.json](../../_shared/references/artifacts/positive_bpl_code_review_20261110/state.json)
-- [artifacts/oc_bpl_code_audit_20261110/analysis.json](../../_shared/references/artifacts/oc_bpl_code_audit_20261110/analysis.json)
-- [EBM/POSITIVE_BPL.md](../../../POSITIVE_BPL.md)
+- [설정·결과 근거](../../_shared/references/artifacts/oc_bpl_matched_variable_20261110/state.json)
+- [설정·결과 근거](../../_shared/references/artifacts/positive_bpl_code_review_20261110/state.json)
+- [설정·결과 근거](../../_shared/references/artifacts/oc_bpl_code_audit_20261110/analysis.json)
+- [상세 설계·실험 기록](../../../POSITIVE_BPL.md)
 
 ## 연결
 

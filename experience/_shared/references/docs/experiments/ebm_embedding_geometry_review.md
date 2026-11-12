@@ -1,3 +1,5 @@
+> 표시 명칭·링크 이름은 설명형으로 정리했다. 원래 코드·경로·수치는 그대로 보존한다.
+
 > 역사 문서 보존본. 원문 작성 당시의 상태·계획을 포함한다. 최신 상태와 확정 결과는 experience의 각 실험 README를 우선한다.
 
 # EBM 임베딩 실험 명세 검토 기록
@@ -55,7 +57,7 @@
 | 원래 benchmark 재사용 | 탐색 및 재평가의 범위를 명시하고 새로운 외부 U와 구분 |
 | 비교 방향과 단위 | baseline EER minus candidate EER, percentage point |
 | threshold | V에서 목표 정상 오거부율 1%로 고정, test EER threshold 재사용 금지 |
-| B와 G 중복 학습 | B는 G0/G1/G2/Gm run을 재사용 |
+| 4.0375초 상한 비반복 학습과 G 중복 학습 | 4.0375초 상한 비반복 학습은 G0/G1/G2/Gm run을 재사용 |
 | F와 G의 순환 의존 | F_frozen과 F_trained를 분리 |
 | noise 20dB와 10dB | 같은 noise_base waveform에 크기만 변경 |
 | prototype 초기화 | T 목적함수로 restart 선택, V로 seed를 고르지 않음 |

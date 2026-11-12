@@ -1,4 +1,6 @@
-# E020. 정상 두 묶음만 사용한 108회 양성쌍 손실의 단기 학습
+<a id="e020-정상-두-묶음만-사용한-108회-양성쌍-손실의-단기-학습"></a>
+
+# 정상 두 묶음만 사용한 108회 양성쌍 손실의 단기 학습
 
 **실행 상태:** 단기 학습·진단 완료
 
@@ -35,7 +37,7 @@
 
 ## 해석·실패한 부분·한계
 
-108회·소표본·OC 없는 진단 표본이다. B/C 또는 정식 OC +BPL의 우월성을 입증하지 않는다. RawBoost도 있어 잡음 개선을 서로 다른 정상 원음 정렬만의 효과로 분리하지 못한다.
+108회·소표본·OC 없는 진단 표본이다. 4.0375초 상한 비반복 학습과 원음 전체 비반복 학습 또는 정식 OC +BPL의 우월성을 입증하지 않는다. RawBoost도 있어 잡음 개선을 서로 다른 정상 원음 정렬만의 효과로 분리하지 못한다.
 
 ## 배운 점
 
@@ -43,17 +45,17 @@
 
 ## 실험 코드
 
-- [training_snapshots/ebm_positive_bpl_20261110_v1/positive_bpl_pilot.py](code/snapshots/ebm_positive_bpl_20261110_v1/positive_bpl_pilot.py)
-- [EBM/tools/positive_bpl_pilot.py](code/EBM/tools/positive_bpl_pilot.py)
-- [EBM/tools/analyze_positive_bpl_pilot.py](code/EBM/tools/analyze_positive_bpl_pilot.py)
+- [소스: positive_bpl_pilot.py](code/snapshots/ebm_positive_bpl_20261110_v1/positive_bpl_pilot.py)
+- [소스: positive_bpl_pilot.py](code/EBM/tools/positive_bpl_pilot.py)
+- [소스: analyze_positive_bpl_pilot.py](code/EBM/tools/analyze_positive_bpl_pilot.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [artifacts/positive_only_bpl_20261110/protocol.json](../../_shared/references/artifacts/positive_only_bpl_20261110/protocol.json)
-- [artifacts/positive_only_bpl_20261110/analysis.json](../../_shared/references/artifacts/positive_only_bpl_20261110/analysis.json)
-- [artifacts/positive_only_bpl_20261110/state.json](../../_shared/references/artifacts/positive_only_bpl_20261110/state.json)
+- [설정·결과 근거](../../_shared/references/artifacts/positive_only_bpl_20261110/protocol.json)
+- [설정·결과 근거](../../_shared/references/artifacts/positive_only_bpl_20261110/analysis.json)
+- [설정·결과 근거](../../_shared/references/artifacts/positive_only_bpl_20261110/state.json)
 
 ## 연결
 

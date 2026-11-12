@@ -1,4 +1,6 @@
-# E080. 4초·3초·2초 삼중 조합과 추가 학습 아이디어의 미실행 설계
+<a id="e080-4초3초2초-삼중-조합과-추가-학습-아이디어의-미실행-설계"></a>
+
+# 4초·3초·2초 삼중 조합과 추가 학습 아이디어의 미실행 설계
 
 **실행 상태:** 설계만; 성능 실험 미실행
 
@@ -28,7 +30,7 @@
 
 ## 측정과 검증
 
-설계의 수 식·분할·미실행 상태. [E026](../E026/README.md)·[E052](../../05_residual_geometry/E052/README.md)~[E055](../../05_residual_geometry/E055/README.md)의 실제 방법과 대조한다.
+설계의 수 식·분할·미실행 상태. [원음 2초 이하 정상에만 3.0275초·2초 손실을 더한 배치 240 고정 길이 반복 입력 학습 학습](../E026/README.md)·[고정 특징 위에서 정적·입력별 좌표 가중치와 같은 크기 신경망 학습](../../05_residual_geometry/E052/README.md)~[두 평가 자료 내부의 방향·정규화 전 특징·같은 차원 잡음 대조 9 종](../../05_residual_geometry/E055/README.md)의 실제 방법과 대조한다.
 
 ## 결과
 
@@ -46,15 +48,15 @@
 
 이 항목은 설계/예시/기존 기록 분석이다. 별도 실행 구현을 확보하지 못했거나 애초 구현하지 않았다. 아래 설정·설계·검산 근거를 보존했으며 실행 코드를 새로 꾸며 넣지 않았다.
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [artifacts/bpl_three_view_design_20261111/selected_short32_plan.json](../../_shared/references/artifacts/bpl_three_view_design_20261111/selected_short32_plan.json)
-- [docs/experiments/ebm_embedding_geometry_protocol.json](../../_shared/references/docs/experiments/ebm_embedding_geometry_protocol.json)
-- [docs/experiments/ebm_condition_audit_20261105.md](../../_shared/references/docs/experiments/ebm_condition_audit_20261105.md)
-- [artifacts/geometry_cache/local_analysis/frozen_all_v1/CV4_coverage_candidate_v1/execution_decision.json](../../_shared/references/artifacts/geometry_cache/local_analysis/frozen_all_v1/CV4_coverage_candidate_v1/execution_decision.json)
-- [docs/experiments/ebm_perturbation_candidate_audit_and_plan_20261106.md](../../_shared/references/docs/experiments/ebm_perturbation_candidate_audit_and_plan_20261106.md)
+- [설정·결과 근거](../../_shared/references/artifacts/bpl_three_view_design_20261111/selected_short32_plan.json)
+- [설정·결과 근거](../../_shared/references/docs/experiments/ebm_embedding_geometry_protocol.json)
+- [상세 설계·실험 기록](../../_shared/references/docs/experiments/ebm_condition_audit_20261105.md)
+- [설정·결과 근거](../../_shared/references/artifacts/geometry_cache/local_analysis/frozen_all_v1/CV4_coverage_candidate_v1/execution_decision.json)
+- [상세 설계·실험 기록](../../_shared/references/docs/experiments/ebm_perturbation_candidate_audit_and_plan_20261106.md)
 
 ## 연결
 

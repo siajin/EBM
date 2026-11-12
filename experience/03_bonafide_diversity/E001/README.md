@@ -1,4 +1,6 @@
-# E001. 배치 80·80epoch의 초기 반복 입력 학습
+<a id="e001-배치-8080epoch의-초기-반복-입력-학습"></a>
+
+# 배치 80·80epoch의 초기 반복 입력 학습
 
 **실행 상태:** 학습 완료
 
@@ -43,43 +45,43 @@
 
 ## 실험 코드
 
-- [training_snapshots/EBM/arguments.py](code/snapshots/EBM/arguments.py)
-- [training_snapshots/EBM/data_loaders.py](code/snapshots/EBM/data_loaders.py)
+- [소스: arguments.py](code/snapshots/EBM/arguments.py)
+- [소스: data_loaders.py](code/snapshots/EBM/data_loaders.py)
 - [training_snapshots/EBM/docker_build.sh](code/snapshots/EBM/docker_build.sh)
 - [training_snapshots/EBM/docker_run.sh](code/snapshots/EBM/docker_run.sh)
-- [training_snapshots/EBM/main.py](code/snapshots/EBM/main.py)
-- [training_snapshots/EBM/train.py](code/snapshots/EBM/train.py)
-- [training_snapshots/EBM/dataset/ASVspoof2019_la_eval.py](code/snapshots/EBM/dataset/ASVspoof2019_la_eval.py)
-- [training_snapshots/EBM/dataset/ASVspoof2019_la_train.py](code/snapshots/EBM/dataset/ASVspoof2019_la_train.py)
-- [training_snapshots/EBM/dataset/ASVspoof2021_df_eval.py](code/snapshots/EBM/dataset/ASVspoof2021_df_eval.py)
-- [training_snapshots/EBM/dataset/ASVspoof2021_la_eval.py](code/snapshots/EBM/dataset/ASVspoof2021_la_eval.py)
-- [training_snapshots/EBM/dataset/__init__.py](code/snapshots/EBM/dataset/__init__.py)
-- [training_snapshots/EBM/data_processing/__init__.py](code/snapshots/EBM/data_processing/__init__.py)
-- [training_snapshots/EBM/logger/interface.py](code/snapshots/EBM/logger/interface.py)
-- [training_snapshots/EBM/logger/local.py](code/snapshots/EBM/logger/local.py)
-- [training_snapshots/EBM/logger/logger.py](code/snapshots/EBM/logger/logger.py)
-- [training_snapshots/EBM/logger/neptune.py](code/snapshots/EBM/logger/neptune.py)
-- [training_snapshots/EBM/logger/wandb.py](code/snapshots/EBM/logger/wandb.py)
-- [training_snapshots/EBM/logger/__init__.py](code/snapshots/EBM/logger/__init__.py)
-- [training_snapshots/EBM/model/b_linear.py](code/snapshots/EBM/model/b_linear.py)
-- [training_snapshots/EBM/model/loss.py](code/snapshots/EBM/model/loss.py)
-- [training_snapshots/EBM/model/__init__.py](code/snapshots/EBM/model/__init__.py)
-- [training_snapshots/EBM/scheduler/cosine_warmup.py](code/snapshots/EBM/scheduler/cosine_warmup.py)
-- [training_snapshots/EBM/scheduler/steplr.py](code/snapshots/EBM/scheduler/steplr.py)
-- [training_snapshots/EBM/utils/ddp_util.py](code/snapshots/EBM/utils/ddp_util.py)
-- [training_snapshots/EBM/utils/get_threshold.py](code/snapshots/EBM/utils/get_threshold.py)
-- [training_snapshots/EBM/utils/__init__.py](code/snapshots/EBM/utils/__init__.py)
-- [training_snapshots/EBM/data_processing/augmentation/augmentation.py](code/snapshots/EBM/data_processing/augmentation/augmentation.py)
-- [training_snapshots/EBM/data_processing/augmentation/codec_aug.py](code/snapshots/EBM/data_processing/augmentation/codec_aug.py)
-- [training_snapshots/EBM/data_processing/augmentation/raw_boost.py](code/snapshots/EBM/data_processing/augmentation/raw_boost.py)
-- [training_snapshots/EBM/data_processing/augmentation/wav_read_functions.py](code/snapshots/EBM/data_processing/augmentation/wav_read_functions.py)
+- [소스: main.py](code/snapshots/EBM/main.py)
+- [소스: train.py](code/snapshots/EBM/train.py)
+- [소스: ASVspoof2019_la_eval.py](code/snapshots/EBM/dataset/ASVspoof2019_la_eval.py)
+- [소스: ASVspoof2019_la_train.py](code/snapshots/EBM/dataset/ASVspoof2019_la_train.py)
+- [소스: ASVspoof2021_df_eval.py](code/snapshots/EBM/dataset/ASVspoof2021_df_eval.py)
+- [소스: ASVspoof2021_la_eval.py](code/snapshots/EBM/dataset/ASVspoof2021_la_eval.py)
+- [소스: __init__.py](code/snapshots/EBM/dataset/__init__.py)
+- [소스: __init__.py](code/snapshots/EBM/data_processing/__init__.py)
+- [소스: interface.py](code/snapshots/EBM/logger/interface.py)
+- [소스: local.py](code/snapshots/EBM/logger/local.py)
+- [소스: logger.py](code/snapshots/EBM/logger/logger.py)
+- [소스: neptune.py](code/snapshots/EBM/logger/neptune.py)
+- [소스: wandb.py](code/snapshots/EBM/logger/wandb.py)
+- [소스: __init__.py](code/snapshots/EBM/logger/__init__.py)
+- [소스: b_linear.py](code/snapshots/EBM/model/b_linear.py)
+- [소스: loss.py](code/snapshots/EBM/model/loss.py)
+- [소스: __init__.py](code/snapshots/EBM/model/__init__.py)
+- [소스: cosine_warmup.py](code/snapshots/EBM/scheduler/cosine_warmup.py)
+- [소스: steplr.py](code/snapshots/EBM/scheduler/steplr.py)
+- [소스: ddp_util.py](code/snapshots/EBM/utils/ddp_util.py)
+- [소스: get_threshold.py](code/snapshots/EBM/utils/get_threshold.py)
+- [소스: __init__.py](code/snapshots/EBM/utils/__init__.py)
+- [소스: augmentation.py](code/snapshots/EBM/data_processing/augmentation/augmentation.py)
+- [소스: codec_aug.py](code/snapshots/EBM/data_processing/augmentation/codec_aug.py)
+- [소스: raw_boost.py](code/snapshots/EBM/data_processing/augmentation/raw_boost.py)
+- [소스: wav_read_functions.py](code/snapshots/EBM/data_processing/augmentation/wav_read_functions.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [artifacts/analysis/ebm-all-runs-comparison-20261104.json](../../_shared/references/artifacts/analysis/ebm-all-runs-comparison-20261104.json)
-- [artifacts/analysis/ebm-performance-diagnosis-20261104.json](../../_shared/references/artifacts/analysis/ebm-performance-diagnosis-20261104.json)
+- [설정·결과 근거](../../_shared/references/artifacts/analysis/ebm-all-runs-comparison-20261104.json)
+- [설정·결과 근거](../../_shared/references/artifacts/analysis/ebm-performance-diagnosis-20261104.json)
 
 ## 연결
 

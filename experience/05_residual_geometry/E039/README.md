@@ -1,4 +1,6 @@
-# E039. 고정 모델의 정규화 전후 특징 추출·전체 평가 캐시 구축
+<a id="e039-고정-모델의-정규화-전후-특징-추출전체-평가-캐시-구축"></a>
+
+# 고정 모델의 정규화 전후 특징 추출·전체 평가 캐시 구축
 
 **실행 상태:** 추출·검증 완료
 
@@ -43,18 +45,18 @@
 
 ## 실험 코드
 
-- [artifacts/geometry_experiments/frozen_r1_extract.py](code/artifacts/geometry_experiments/frozen_r1_extract.py)
-- [artifacts/geometry_experiments/la21_extract.py](code/artifacts/geometry_experiments/la21_extract.py)
-- [artifacts/geometry_experiments/geometry_cache.py](code/artifacts/geometry_experiments/geometry_cache.py)
+- [소스: frozen_r1_extract.py](code/artifacts/geometry_experiments/frozen_r1_extract.py)
+- [소스: la21_extract.py](code/artifacts/geometry_experiments/la21_extract.py)
+- [소스: geometry_cache.py](code/artifacts/geometry_experiments/geometry_cache.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [docs/experiments/21la_cache_20261105.md](../../_shared/references/docs/experiments/21la_cache_20261105.md)
-- [docs/experiments/ebm_frozen_all_results_20261105.md](../../_shared/references/docs/experiments/ebm_frozen_all_results_20261105.md)
-- [artifacts/geometry_experiments/README.md](../../_shared/references/artifacts/geometry_experiments/README.md)
-- [artifacts/geometry_cache/catalog.json](../../_shared/references/artifacts/geometry_cache/catalog.json)
+- [상세 설계·실험 기록](../../_shared/references/docs/experiments/21la_cache_20261105.md)
+- [상세 설계·실험 기록](../../_shared/references/docs/experiments/ebm_frozen_all_results_20261105.md)
+- [상세 설계·실험 기록](../../_shared/references/artifacts/geometry_experiments/README.md)
+- [설정·결과 근거](../../_shared/references/artifacts/geometry_cache/catalog.json)
 
 ## 연결
 

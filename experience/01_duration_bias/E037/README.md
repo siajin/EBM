@@ -1,4 +1,6 @@
-# E037. 매 epoch 모든 원음을 사용하면서 기존 기대 선택 비율을 유지하는 샘플러
+<a id="e037-매-epoch-모든-원음을-사용하면서-기존-기대-선택-비율을-유지하는-샘플러"></a>
+
+# 매 epoch 모든 원음을 사용하면서 기존 기대 선택 비율을 유지하는 샘플러
 
 **실행 상태:** 학습 자료 재생·검증 완료
 
@@ -36,7 +38,7 @@ OC 정상 2,580·OC 위조 22,800·BPL 오른쪽 정상 2,580의 세 stream. 두
 
 ## 해석·실패한 부분·한계
 
-원음 100% 사용은 원음의 모든 시간 구간·긴 연속 문맥 100% 사용이 아니다. 이 샘플러 검증 자체의 EER은 없으며 학습에 연결한 결과는 [E021](../E021/README.md)이다.
+원음 100% 사용은 원음의 모든 시간 구간·긴 연속 문맥 100% 사용이 아니다. 이 샘플러 검증 자체의 EER은 없으며 학습에 연결한 결과는 [정상·위조 길이와 음성활동을 맞추고 독립 정상 묶음을 정렬한 학습](../E021/README.md)이다.
 
 ## 배운 점
 
@@ -44,17 +46,17 @@ OC 정상 2,580·OC 위조 22,800·BPL 오른쪽 정상 2,580의 세 stream. 두
 
 ## 실험 코드
 
-- [EBM/positive_bpl.py](code/EBM/positive_bpl.py)
-- [EBM/tools/validate_source_coverage.py](code/EBM/tools/validate_source_coverage.py)
+- [소스: positive_bpl.py](code/EBM/positive_bpl.py)
+- [소스: validate_source_coverage.py](code/EBM/tools/validate_source_coverage.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [artifacts/source_coverage_20261110/verified_summary.json](../../_shared/references/artifacts/source_coverage_20261110/verified_summary.json)
-- [artifacts/source_coverage_20261110/final_audit.json](../../_shared/references/artifacts/source_coverage_20261110/final_audit.json)
-- [EBM/POSITIVE_BPL.md](../../../POSITIVE_BPL.md)
-- [EBM/positive_bpl.py](../../../positive_bpl.py)
+- [설정·결과 근거](../../_shared/references/artifacts/source_coverage_20261110/verified_summary.json)
+- [설정·결과 근거](../../_shared/references/artifacts/source_coverage_20261110/final_audit.json)
+- [상세 설계·실험 기록](../../../POSITIVE_BPL.md)
+- [소스: positive_bpl.py](../../../positive_bpl.py)
 
 ## 연결
 

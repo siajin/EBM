@@ -1,4 +1,6 @@
-# E048. 같은 화자·코덱·점수·크기의 정상/위조 방향 분포 매칭
+<a id="e048-같은-화자코덱점수크기의-정상위조-방향-분포-매칭"></a>
+
+# 같은 화자·코덱·점수·크기의 정상/위조 방향 분포 매칭
 
 **실행 상태:** 계산 완료·표본 부족으로 주가 설 판정 불가
 
@@ -43,16 +45,16 @@ MMD²·방향 통계와 매칭 coverage. biased MMD의 양의 구간을 동일 �
 
 ## 실험 코드
 
-- [artifacts/geometry_experiments/frozen_n0.py](code/artifacts/geometry_experiments/frozen_n0.py)
+- [소스: frozen_n0.py](code/artifacts/geometry_experiments/frozen_n0.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [artifacts/geometry_experiments/frozen_n0.py](../../_shared/workspace/artifacts/geometry_experiments/frozen_n0.py)
-- [artifacts/geometry_cache/local_analysis/frozen_all_v1/F2/summary.json](../../_shared/references/artifacts/geometry_cache/local_analysis/frozen_all_v1/F2/summary.json)
-- [artifacts/geometry_cache/local_analysis/frozen_all_v1/F2/matching_balance.csv](../../_shared/references/artifacts/geometry_cache/local_analysis/frozen_all_v1/F2/matching_balance.csv)
-- [docs/experiments/ebm_frozen_model_protocol_20261105.json](../../_shared/references/docs/experiments/ebm_frozen_model_protocol_20261105.json)
+- [소스: frozen_n0.py](../../_shared/workspace/artifacts/geometry_experiments/frozen_n0.py)
+- [설정·결과 근거](../../_shared/references/artifacts/geometry_cache/local_analysis/frozen_all_v1/F2/summary.json)
+- [집계 결과 표](../../_shared/references/artifacts/geometry_cache/local_analysis/frozen_all_v1/F2/matching_balance.csv)
+- [설정·결과 근거](../../_shared/references/docs/experiments/ebm_frozen_model_protocol_20261105.json)
 
 ## 연결
 

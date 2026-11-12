@@ -1,4 +1,6 @@
-# E108. 저에너지 시간 위치와 나머지 XLS-R 특징을 교체·제외한 내부 개입
+<a id="e108-저에너지-시간-위치와-나머지-xls-r-특징을-교체제외한-내부-개입"></a>
+
+# 저에너지 시간 위치와 나머지 XLS-R 특징을 교체·제외한 내부 개입
 
 **실행 상태:** 기존 실제 결과 확인·문서화 완료
 
@@ -16,11 +18,11 @@
 
 ## 모델·데이터·표본
 
-[E107](../../03_bonafide_diversity/E107/README.md)의 고정 모델과 96개 무작위 사례. 같은 입력의 파형 개입·내부 특징 개입을 구별한다.
+[고정 BPL 학습 모델의 실제 증강 쌍·저에너지 이식 반응 검토](../../03_bonafide_diversity/E107/README.md)의 고정 모델과 96개 무작위 사례. 같은 입력의 파형 개입·내부 특징 개입을 구별한다.
 
 ## 실험 내용과 상세 절차
 
-1. [E107](../../03_bonafide_diversity/E107/README.md)에서 효과 크기를 보지 않고 개발/DF×클래스마다 24개씩 총 96개를 뽑는다.
+1. [고정 BPL 학습 모델의 실제 증강 쌍·저에너지 이식 반응 검토](../../03_bonafide_diversity/E107/README.md)에서 효과 크기를 보지 않고 개발/DF×클래스마다 24개씩 총 96개를 뽑는다.
 2. 원본·저에너지 변형의 25개 XLS-R 층을 계산하고, 전체 합성곱 수용 구간이 저에너지 선택 구간 안에 든 프레임만 저에너지 위치로 표시한다.
 3. 원본, 변형, 저에너지 위치만 교체, 다른 위치만 교체, 원본의 저에너지 위치를 모든 후속 시간 요약에서 제외, 변형의 같은 위치 제외의 여섯 조건을 비교한다.
 4. pooling 잡음은 0으로 하고 가중치는 고정한다. 원래 특징 조합의 점수 재현을 검사한다.
@@ -43,13 +45,13 @@
 
 ## 실험 코드
 
-- [historical_analysis/bpl_frozen_patch_20261030_v1.py](code/bpl_frozen_patch_20261030_v1.py)
+- [소스: bpl_frozen_patch_20261030_v1.py](code/bpl_frozen_patch_20261030_v1.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [artifacts/experiment_methods_audit_20261111/historical_receipts/EBM80_BPL_frozen_audit_20261030_v1.json](../../_shared/references/artifacts/experiment_methods_audit_20261111/historical_receipts/EBM80_BPL_frozen_audit_20261030_v1.json)
+- [설정·결과 근거](../../_shared/references/artifacts/experiment_methods_audit_20261111/historical_receipts/EBM80_BPL_frozen_audit_20261030_v1.json)
 
 ## 연결
 

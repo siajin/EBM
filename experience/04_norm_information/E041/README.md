@@ -1,4 +1,6 @@
-# E041. 초기 학습 자료 분류기와 선택 좌표 분류기의 DF 전이 평가
+<a id="e041-초기-학습-자료-분류기와-선택-좌표-분류기의-df-전이-평가"></a>
+
+# 초기 학습 자료 분류기와 선택 좌표 분류기의 DF 전이 평가
 
 **실행 상태:** 추가 분류기·전이 평가 완료
 
@@ -20,14 +22,14 @@ Train에서 읽은 방향·좌표 정보가 다른 DF 출처로 전이될 수 �
 
 ## 실험 내용과 상세 절차
 
-1. [E040](../E040/README.md)의 다섯 점수/크기/방향/잡음 입력을 학습 자료에서 fit 한다. C는 개발 전체에서 클래스 균형로그 손실 최소로 하나 선택한다.
+1. [초기 개발 자료에서 점수·크기·옆 방향 특징을 읽는 분류기 비교](../E040/README.md)의 다섯 점수/크기/방향/잡음 입력을 학습 자료에서 fit 한다. 원음 전체 비반복 학습은 개발 전체에서 클래스 균형로그 손실 최소로 하나 선택한다.
 2. 추가로 raw z160개 전부, 학습 자료 공격별 Fisher 상위 40개, 고정 seed 200~219의 무작위 40개 각각에 같은 L2 logistic 분류기를 학습한다.
 3. Fisher는 정상과 각 공격의 평균 차이 제곱을 두 분산 합 +1e-8로 나눈 뒤 공격별 평균한다. 개발/DF로 좌표 순위를 선택하지 않는다.
 4. 정상 unit 특징 공분산의 대각/전체·수축 0.01/0.1/0.5/1 거리 후보도 고정한다. 모든 설정과 threshold를 DF 평가 전에 잠근다.
 
 ## 측정과 검증
 
-DFEER·AUROC·로그손실·개발 고정 오류, 출처 × 화자 93 그룹 bootstrap. DF 에서 fit 하거나 C를 선택하지 않는다.
+DFEER·AUROC·로그손실·개발 고정 오류, 출처 × 화자 93 그룹 bootstrap. DF 에서 fit 하거나 원음 전체 비반복 학습을 선택하지 않는다.
 
 ## 결과
 
@@ -43,19 +45,19 @@ DF 내부에서 학습한 후속 분류기의 낮은 EER과 비교해 같은 방
 
 ## 실험 코드
 
-- [artifacts/geometry_experiments/df_screen.py](code/artifacts/geometry_experiments/df_screen.py)
-- [artifacts/geometry_experiments/fast_analyze.py](code/artifacts/geometry_experiments/fast_analyze.py)
+- [소스: df_screen.py](code/artifacts/geometry_experiments/df_screen.py)
+- [소스: fast_analyze.py](code/artifacts/geometry_experiments/fast_analyze.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [artifacts/geometry_experiments/df_screen.py](../../_shared/workspace/artifacts/geometry_experiments/df_screen.py)
-- [artifacts/geometry_experiments/fast_analyze.py](../../_shared/workspace/artifacts/geometry_experiments/fast_analyze.py)
-- [artifacts/geometry_experiments/README.md](../../_shared/references/artifacts/geometry_experiments/README.md)
-- [artifacts/geometry_cache/local_analysis/6ac3505da0708324/metrics.csv](../../_shared/references/artifacts/geometry_cache/local_analysis/6ac3505da0708324/metrics.csv)
-- [artifacts/geometry_cache/local_analysis/7f2722d6dad62841/verification.json](../../_shared/references/artifacts/geometry_cache/local_analysis/7f2722d6dad62841/verification.json)
-- [artifacts/geometry_cache/local_analysis/9e2d4fccadfa67a5/verification.json](../../_shared/references/artifacts/geometry_cache/local_analysis/9e2d4fccadfa67a5/verification.json)
+- [소스: df_screen.py](../../_shared/workspace/artifacts/geometry_experiments/df_screen.py)
+- [소스: fast_analyze.py](../../_shared/workspace/artifacts/geometry_experiments/fast_analyze.py)
+- [상세 설계·실험 기록](../../_shared/references/artifacts/geometry_experiments/README.md)
+- [집계 결과 표](../../_shared/references/artifacts/geometry_cache/local_analysis/6ac3505da0708324/metrics.csv)
+- [설정·결과 근거](../../_shared/references/artifacts/geometry_cache/local_analysis/7f2722d6dad62841/verification.json)
+- [설정·결과 근거](../../_shared/references/artifacts/geometry_cache/local_analysis/9e2d4fccadfa67a5/verification.json)
 
 ## 연결
 

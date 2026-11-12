@@ -1,4 +1,6 @@
-# E053. 정상·위조 라벨로 대각 거리 가중치만 학습하는 대조
+<a id="e053-정상위조-라벨로-대각-거리-가중치만-학습하는-대조"></a>
+
+# 정상·위조 라벨로 대각 거리 가중치만 학습하는 대조
 
 **실행 상태:** 추가 모듈 학습·전이 평가 완료
 
@@ -16,13 +18,13 @@
 
 ## 모델·데이터·표본
 
-[E052](../E052/README.md)와 같은 학습 자료·개발·DF/21LA 자료와 seed 3개. 원래 160차원 특징·중심 고정.
+[고정 특징 위에서 정적·입력별 좌표 가중치와 같은 크기 신경망 학습](../E052/README.md)와 같은 학습 자료·개발·DF/21LA 자료와 seed 3개. 원래 160차원 특징·중심 고정.
 
 ## 실험 내용과 상세 절차
 
 1. 각좌표 양의 가중치 a_j =160 exp(2tanh(v_j))/sum_l exp(2tanh(v_l))를 학습한다.
 2. 점수 1 −0.5sum_j a_j(x_j −c_j)² 를 사용한다. trace160·조건 비율 ≤exp(4), 처음 a_j =1의 identity를 확인한다.
-3. [E052](../E052/README.md)와 같은 두 클래스 OC 목적·0.01 규제·Adam·개발로그 손실·epoch0 선택·조기 중단을 쓴다.
+3. [고정 특징 위에서 정적·입력별 좌표 가중치와 같은 크기 신경망 학습](../E052/README.md)와 같은 두 클래스 OC 목적·0.01 규제·Adam·개발로그 손실·epoch0 선택·조기 중단을 쓴다.
 
 ## 측정과 검증
 
@@ -42,15 +44,15 @@
 
 ## 실험 코드
 
-- [artifacts/geometry_experiments/frozen_heads.py](code/artifacts/geometry_experiments/frozen_heads.py)
+- [소스: frozen_heads.py](code/artifacts/geometry_experiments/frozen_heads.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [artifacts/geometry_experiments/frozen_heads.py](../../_shared/workspace/artifacts/geometry_experiments/frozen_heads.py)
-- [artifacts/geometry_cache/local_analysis/frozen_all_v1/head_metrics.csv](../../_shared/references/artifacts/geometry_cache/local_analysis/frozen_all_v1/head_metrics.csv)
-- [artifacts/geometry_cache/local_analysis/frozen_all_v1/head_paired_effects.json](../../_shared/references/artifacts/geometry_cache/local_analysis/frozen_all_v1/head_paired_effects.json)
+- [소스: frozen_heads.py](../../_shared/workspace/artifacts/geometry_experiments/frozen_heads.py)
+- [집계 결과 표](../../_shared/references/artifacts/geometry_cache/local_analysis/frozen_all_v1/head_metrics.csv)
+- [설정·결과 근거](../../_shared/references/artifacts/geometry_cache/local_analysis/frozen_all_v1/head_paired_effects.json)
 
 ## 연결
 

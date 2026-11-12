@@ -1,4 +1,6 @@
-# E052. 고정 특징 위에서 정적·입력별 좌표 가중치와 같은 크기 신경망 학습
+<a id="e052-고정-특징-위에서-정적입력별-좌표-가중치와-같은-크기-신경망-학습"></a>
+
+# 고정 특징 위에서 정적·입력별 좌표 가중치와 같은 크기 신경망 학습
 
 **실행 상태:** 추가 모듈 학습·전이 평가 완료
 
@@ -45,16 +47,16 @@ seed 별 EER·균형로그 손실·개발 고정 오류. DF 주 5 비교는 10,0
 
 ## 실험 코드
 
-- [artifacts/geometry_experiments/frozen_heads.py](code/artifacts/geometry_experiments/frozen_heads.py)
+- [소스: frozen_heads.py](code/artifacts/geometry_experiments/frozen_heads.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [artifacts/geometry_experiments/frozen_heads.py](../../_shared/workspace/artifacts/geometry_experiments/frozen_heads.py)
-- [artifacts/geometry_cache/local_analysis/frozen_all_v1/head_protocol_lock.json](../../_shared/references/artifacts/geometry_cache/local_analysis/frozen_all_v1/head_protocol_lock.json)
-- [artifacts/geometry_cache/local_analysis/frozen_all_v1/head_metrics.csv](../../_shared/references/artifacts/geometry_cache/local_analysis/frozen_all_v1/head_metrics.csv)
-- [artifacts/geometry_cache/local_analysis/frozen_all_v1/head_paired_effects.json](../../_shared/references/artifacts/geometry_cache/local_analysis/frozen_all_v1/head_paired_effects.json)
+- [소스: frozen_heads.py](../../_shared/workspace/artifacts/geometry_experiments/frozen_heads.py)
+- [설정·결과 근거](../../_shared/references/artifacts/geometry_cache/local_analysis/frozen_all_v1/head_protocol_lock.json)
+- [집계 결과 표](../../_shared/references/artifacts/geometry_cache/local_analysis/frozen_all_v1/head_metrics.csv)
+- [설정·결과 근거](../../_shared/references/artifacts/geometry_cache/local_analysis/frozen_all_v1/head_paired_effects.json)
 
 ## 연결
 

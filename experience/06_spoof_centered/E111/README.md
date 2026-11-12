@@ -1,4 +1,6 @@
-# E111. 정상 중심과 스푸프 중심을 명시적으로 전환하는 원본240 기반 구현
+<a id="e111-정상-중심과-스푸프-중심을-명시적으로-전환하는-원본240-기반-구현"></a>
+
+# 정상 중심과 스푸프 중심을 명시적으로 전환하는 원본240 기반 구현
 
 **실행 상태:** 설계·로컬 CPU 구현 검증 완료; 실제 GPU 학습 미실행
 
@@ -12,7 +14,7 @@
 
 정상 지지 문제의 후속 가설로 compact class 자체를 바꾸되 데이터 라벨·원본240 입력·두 단계 갱신을 통제한다.
 
-대조와 통제의 근거: 기존파일140개·원본snapshot·원격작업은 보존. 원래240과 별도RNG격리이므로 새bona통제arm도 동일격리를 적용해야 한다. 실제 음성·GPU/NCCL smoke는 수행하지 않았다.
+대조와 통제의 근거: 기존파일140개·원본snapshot·원격작업은 보존. 배치 240 고정 길이 반복 입력 학습과 별도RNG격리이므로 새bona통제arm도 동일격리를 적용해야 한다. 실제 음성·GPU/NCCL smoke는 수행하지 않았다.
 
 ## 모델·데이터·표본
 
@@ -44,22 +46,22 @@
 
 ## 실험 코드
 
-- [EBM/role_lifecycle.py](code/EBM/role_lifecycle.py)
-- [EBM/role_model.py](code/EBM/role_model.py)
-- [EBM/role_objectives.py](code/EBM/role_objectives.py)
-- [EBM/role_runtime.py](code/EBM/role_runtime.py)
-- [EBM/role_training.py](code/EBM/role_training.py)
-- [EBM/tools/train_role_experiment.py](code/EBM/tools/train_role_experiment.py)
-- [EBM/tests/test_role_experiment.py](code/EBM/tests/test_role_experiment.py)
+- [소스: role_lifecycle.py](code/EBM/role_lifecycle.py)
+- [소스: role_model.py](code/EBM/role_model.py)
+- [소스: role_objectives.py](code/EBM/role_objectives.py)
+- [소스: role_runtime.py](code/EBM/role_runtime.py)
+- [소스: role_training.py](code/EBM/role_training.py)
+- [소스: train_role_experiment.py](code/EBM/tools/train_role_experiment.py)
+- [소스: test_role_experiment.py](code/EBM/tests/test_role_experiment.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [docs/experiments/ebm_spoof_centered_design_20261112.md](../../_shared/references/docs/experiments/ebm_spoof_centered_design_20261112.md)
-- [EBM/ROLE_EBM.md](../../../ROLE_EBM.md)
-- [artifacts/reverse_ebm_implementation_20261112/validation.json](../../_shared/references/artifacts/reverse_ebm_implementation_20261112/validation.json)
-- [artifacts/reverse_ebm_implementation_20261112/full_head_identity.json](../../_shared/references/artifacts/reverse_ebm_implementation_20261112/full_head_identity.json)
+- [상세 설계·실험 기록](../../_shared/references/docs/experiments/ebm_spoof_centered_design_20261112.md)
+- [상세 설계·실험 기록](../../../ROLE_EBM.md)
+- [검산 결과](../../_shared/references/artifacts/reverse_ebm_implementation_20261112/validation.json)
+- [설정·결과 근거](../../_shared/references/artifacts/reverse_ebm_implementation_20261112/full_head_identity.json)
 
 ## 연결
 

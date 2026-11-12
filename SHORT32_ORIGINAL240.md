@@ -8,7 +8,7 @@
 기준 commit: `10f3bcd057dc6a2ca687fbd5389ad6c9e15a3746`.
 `baseline240_source/`의 main.py, train.py, data_loaders.py, model/b_linear.py,
 model/loss.py는 해당 Git blob의 바이트 그대로 보관했다. manifest.json의 SHA256을
-읽을 때 확인한다. 기존 C/가변길이 코드와 공존하도록 opt-in 경로에서만 사용한다.
+읽을 때 확인한다. 기존 원음 전체 비반복 학습/가변길이 코드와 공존하도록 opt-in 경로에서만 사용한다.
 
 - `TrainSet` 및 `get_loaders()`를 그대로 호출한다. 정상·스푸프 **두 개의 실제
   torch DataLoader**와 각각의 DistributedSampler를 사용한다.
@@ -23,8 +23,8 @@ model/loss.py는 해당 Git blob의 바이트 그대로 보관했다. manifest.j
 - global240/두 rank이면 일반 배치는 GPU당120개(정상12/스푸프108), 106번째72개,
   마지막114개(정상6), 기존 BPL 쌍은 보통144개·마지막36개다.
 
-이전 구현의 단일 loader 및 short32용 gradient replay 경로는 제거했다.
-`native_steps.train_batch()`로 short32를 실행하려 하면 오류로 차단한다.
+이전 구현의 단일 loader 및 짧은 정상 음성의 3.0275초·2초 정렬 학습용 gradient replay 경로는 제거했다.
+`native_steps.train_batch()`로 짧은 정상 음성의 3.0275초·2초 정렬 학습를 실행하려 하면 오류로 차단한다.
 
 ## 추가한 부분
 
@@ -95,7 +95,7 @@ frontend revision 및 **rank별 Python/NumPy/Torch/해당 CUDA RNG 상태**를 �
 frontend는 unwrapped로 호출한다. 배치마다 모든 rank가 오류를 공유하며, shard 크기가
 달라도 같은 수의 상태 교환을 수행한다. 원음/worker/추론/검산 오류 때문에 한 rank만
 나머지 rank의 결과를 기다리게 하지 않는다. 평가용 worker는120초 입력 timeout,
-short32 분산 process group은 기본600초 timeout으로12시간 대기를 줄인다.
+짧은 정상 음성의 3.0275초·2초 정렬 학습 분산 process group은 기본600초 timeout으로12시간 대기를 줄인다.
 프로세스 강제 종료·GPU 드라이버 장애를 Python 예외 처리로 복구한다고 보장하지 않는다.
 
 평가 전후에 학습 객체·모드·난수를 복원하고 optimizer는 갱신하지 않는다. 실행에 쓰지

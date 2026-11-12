@@ -1,4 +1,6 @@
-# E013. 원래 배치 240 모델의 반복 구간과 오류 분포 조사
+<a id="e013-원래-배치-240-모델의-반복-구간과-오류-분포-조사"></a>
+
+# 원래 배치 240 모델의 반복 구간과 오류 분포 조사
 
 **실행 상태:** 기존 기록 분석 완료
 
@@ -44,20 +46,20 @@
 
 ## 실험 코드
 
-- [EBM/tools/audit_original_repetition.py](code/EBM/tools/audit_original_repetition.py)
-- [artifacts/padding_analysis_20261030/analyze_padding.py](code/artifacts/padding_analysis_20261030/analyze_padding.py)
-- [artifacts/spoof_error_audit_20261108/analyze.py](code/artifacts/spoof_error_audit_20261108/analyze.py)
+- [소스: audit_original_repetition.py](code/EBM/tools/audit_original_repetition.py)
+- [소스: analyze_padding.py](code/artifacts/padding_analysis_20261030/analyze_padding.py)
+- [소스: analyze.py](code/artifacts/spoof_error_audit_20261108/analyze.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [artifacts/original_repetition_20261108/results.json](../../_shared/references/artifacts/original_repetition_20261108/results.json)
-- [artifacts/repetition_shortcut_20261111/original_length_distribution.csv](../../_shared/references/artifacts/repetition_shortcut_20261111/original_length_distribution.csv)
-- [artifacts/repetition_shortcut_20261111/reviewed_analysis/normal_repeat_groups.csv](../../_shared/references/artifacts/repetition_shortcut_20261111/reviewed_analysis/normal_repeat_groups.csv)
-- [artifacts/padding_analysis_20261030/analyze_padding.py](../../_shared/workspace/artifacts/padding_analysis_20261030/analyze_padding.py)
-- [artifacts/spoof_error_audit_20261108/analyze.py](../../_shared/workspace/artifacts/spoof_error_audit_20261108/analyze.py)
-- [artifacts/experiment_methods_audit_20261111/historical_receipts/EBM_padding_length_20261030_v1.json](../../_shared/references/artifacts/experiment_methods_audit_20261111/historical_receipts/EBM_padding_length_20261030_v1.json)
+- [설정·결과 근거](../../_shared/references/artifacts/original_repetition_20261108/results.json)
+- [집계 결과 표](../../_shared/references/artifacts/repetition_shortcut_20261111/original_length_distribution.csv)
+- [집계 결과 표](../../_shared/references/artifacts/repetition_shortcut_20261111/reviewed_analysis/normal_repeat_groups.csv)
+- [소스: analyze_padding.py](../../_shared/workspace/artifacts/padding_analysis_20261030/analyze_padding.py)
+- [소스: analyze.py](../../_shared/workspace/artifacts/spoof_error_audit_20261108/analyze.py)
+- [설정·결과 근거](../../_shared/references/artifacts/experiment_methods_audit_20261111/historical_receipts/EBM_padding_length_20261030_v1.json)
 
 ## 연결
 

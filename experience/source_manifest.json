@@ -208,8 +208,8 @@
     "bytes": 27966,
     "kind": "current EBM source",
     "original_sha256": "18f154a108bce2586e2609e73a9c148d2a115b7d28928d1c9b5a49cbd9b7011c",
-    "published_sha256": "44b8868e9ea717b9cd0ada670964747ab8503621babe344814e99fec12010d3b",
-    "transformation": "Markdown links rebased for repository layout"
+    "published_sha256": "8af2ef21f4307bbaf613a40e14818ebbd7b856a3fc39d66777e2c2cf3324b7c8",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "EBM/positive_bpl.py",
@@ -231,8 +231,8 @@
     "bytes": 13041,
     "kind": "current EBM source",
     "original_sha256": "60f4218e5f08e087955a3cffed318c51269122985dd07e6985b236d0d8e7961a",
-    "published_sha256": "d9aa3b8496d55506c8aef06ef965e1ab04b3b69e0134acdf4b2dd64c097e4397",
-    "transformation": "Markdown links rebased for repository layout"
+    "published_sha256": "88b7ccdc5bb0c884e4cba87c880e957b77e610645ca6eb93c4662c370ef6096d",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "EBM/role_lifecycle.py",
@@ -335,9 +335,11 @@
   {
     "source": "EBM/SHORT32_ORIGINAL240.md",
     "published": "SHORT32_ORIGINAL240.md",
-    "sha256": "5a1f9cc558a8c8cced84bd2ccd8638b4c7d7fe9cdebf7715c0257bad1b583e8e",
     "bytes": 10362,
-    "kind": "current EBM source"
+    "kind": "current EBM source",
+    "original_sha256": "5a1f9cc558a8c8cced84bd2ccd8638b4c7d7fe9cdebf7715c0257bad1b583e8e",
+    "published_sha256": "95e8be56dbe9f65cbbc2c177b3c7f227db6f0edc14ed3d469170885d147d0ddd",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "EBM/short32_original240.py",
@@ -503,9 +505,11 @@
   {
     "source": "EBM/docs/CONTROL_B.md",
     "published": "docs/CONTROL_B.md",
-    "sha256": "9762df2ad997b0ef7b16bfb9ab92adf98ff9d25a978dc7e23f0e639d95d7824a",
     "bytes": 2954,
-    "kind": "current EBM source"
+    "kind": "current EBM source",
+    "original_sha256": "9762df2ad997b0ef7b16bfb9ab92adf98ff9d25a978dc7e23f0e639d95d7824a",
+    "published_sha256": "78749a1a4f52e285bd6dcf8fb853f1f20e055874f5b2e871b821cfc95290bbfc",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "EBM/docs/CONTROL_C.md",
@@ -513,8 +517,8 @@
     "bytes": 3175,
     "kind": "current EBM source",
     "original_sha256": "d41373b6592f7595daf627fa3d9ef24c3a0de0c77a138ae5163891011d35820a",
-    "published_sha256": "cc5701acc0e32df0fc2894fad39cdaa3d3ac64bc32ee059231ebb7e03d6d85b7",
-    "transformation": "Markdown links rebased for repository layout"
+    "published_sha256": "2257d1bdd7685ecc2feab6e46c9275d695969cd2ad5f5284d9a3417b17481317",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "EBM/docs/RUN_B_20261106.md",
@@ -522,15 +526,17 @@
     "bytes": 1880,
     "kind": "current EBM source",
     "original_sha256": "e3e22faf86dbf766eda3df747c9b4f5a924b5168d6d2cfca340390edeb59ec56",
-    "published_sha256": "66abd39f62771f29bb033641c56828754a44d64a5567201b8fd182438337e503",
-    "transformation": "Markdown links rebased for repository layout"
+    "published_sha256": "723bb2705f73c44e50ed2a13f7005b000453f0a0769ad34a8c408a6bb6e6d56f",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "EBM/docs/WORKFLOW.md",
     "published": "docs/WORKFLOW.md",
-    "sha256": "667736023ab955a04cf45cfa0101542fc87150bb64d3ca47e9f772efca266c40",
     "bytes": 1073,
-    "kind": "current EBM source"
+    "kind": "current EBM source",
+    "original_sha256": "667736023ab955a04cf45cfa0101542fc87150bb64d3ca47e9f772efca266c40",
+    "published_sha256": "85fecc147756b56e2dfeda7d705627c12b0ad327cb6cfe7a640bdab0732387c2",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "EBM/logger/interface.py",
@@ -10987,8 +10993,9 @@
     "source": "docs/experiments/cached_core_20261105/figures_clusters/captions.md",
     "published": "experience/_shared/references/docs/experiments/cached_core_20261105/figures_clusters/captions.md",
     "original_sha256": "f7549ac967006d40a2f4304fc6b64780c351d6fb01df1d92569f33385a7931c6",
-    "published_sha256": "2d1104d5d6dbd0de5d0326c1b1305c475264410d660395f17e8c411229279462",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "ea784d741eb6f595387228682d83008c70280ebd6d3272bbf67543f5ce951dd6",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "docs/experiments/cached_core_20261105/figures_author/01_method.png",
@@ -11015,8 +11022,9 @@
     "source": "docs/experiments/cached_core_20261105/figures_author/captions.md",
     "published": "experience/_shared/references/docs/experiments/cached_core_20261105/figures_author/captions.md",
     "original_sha256": "afebf53c53e9ce7598c98988690d1a0940fc6dea3d2463e9815a85032488cea1",
-    "published_sha256": "50bb1f859e0f3e49af96b0dd6cfbf6678686840a5c926d52a145993dbfd5ff2b",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "e25e80fd5fbbccf1531e0989ff7fe9dd66c66f0e3da955c09104baa3670c7163",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "artifacts/geometry_cache/local_analysis/cached_core_v1/output_audit.json",
@@ -11043,8 +11051,9 @@
     "source": "docs/experiments/cached_core_20261105/README.md",
     "published": "experience/_shared/references/docs/experiments/cached_core_20261105/README.md",
     "original_sha256": "eed7c1e9e4b2fce996db899f721e2b499f67acd924243229724c060e3a596f27",
-    "published_sha256": "193848b707839bc80d86175cc675ca7b1a4813381e54572a732f6998017acbeb",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "30c2993345d41ca4a9839fb5ad3b1791513e717cc30f758a87e6b991d974f61f",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "artifacts/geometry_cache/local_analysis/cached_core_v1/cluster_registry.json",
@@ -11099,8 +11108,9 @@
     "source": "docs/experiments/cached_core_20261105/03_layernorm.md",
     "published": "experience/_shared/references/docs/experiments/cached_core_20261105/03_layernorm.md",
     "original_sha256": "bf84eb619b0b9a12fa3caafd7ea92977b1c4864a0062b14d02d0dfde8367aac8",
-    "published_sha256": "2b59e9f7fc28cb6e06dda7122aa8a61b1fee7fdd1b524e926c57eaf05cb8a9c9",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "ee5f5d0ef16ec41b945dbba8591ee27917afe2fd8978d7cebfe3cb1de79d2535",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "artifacts/geometry_cache/local_analysis/channel_roc_explanation_v1/roc_crossing.png",
@@ -11141,8 +11151,9 @@
     "source": "docs/experiments/cached_core_20261105/02_related_work_fulltext_review_20261105.md",
     "published": "experience/_shared/references/docs/experiments/cached_core_20261105/02_related_work_fulltext_review_20261105.md",
     "original_sha256": "9884c1ee15e8a2794fae60b01678469696a9eb758ff6a876200f3dcfb863e4b5",
-    "published_sha256": "6fd9346e4b48e1e5aedd9af310d5e6c8f5ef531815f73c37224945bff96a07ee",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "b139b75d87563c4ed0637236caf922587a23bdf74e205a4f7f3f08a3816d5de8",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "artifacts/geometry_cache/local_analysis/channel_keep_one_v3/how_two_and_one_work.png",
@@ -11197,8 +11208,9 @@
     "source": "docs/experiments/cached_core_20261105/02_channel_reduction_to1_and_explanation.md",
     "published": "experience/_shared/references/docs/experiments/cached_core_20261105/02_channel_reduction_to1_and_explanation.md",
     "original_sha256": "339b115f2d5eef425f0755cdfc9227b0a9322c2123662931dbdd509ce078ba46",
-    "published_sha256": "8c8fc176478605628636eae2d6510c13c6fc88a6e91e8246ba48f70b44f012df",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "72caf0aebb88b2b47b9575cdccaf98f470eaa5d2c248aa9874d7910f7992e759",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "artifacts/geometry_cache/local_analysis/channel_keep_sweep_v1/channel_keep_sweep.png",
@@ -11246,15 +11258,17 @@
     "source": "docs/experiments/cached_core_20261105/02_channel_ablation.md",
     "published": "experience/_shared/references/docs/experiments/cached_core_20261105/02_channel_ablation.md",
     "original_sha256": "ba03960fa45c9529085ca2cf6ce54abe8e26c2c9c8b4e0bf9ea5182134383163",
-    "published_sha256": "2cbfe55580eba7f1f775315895664c587e53921a8bc37ffa7e5024950a0e94a1",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "2d03478e59270df8bdfda9de697b5f76663883e335b62d0010700bd3cdef62f4",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "docs/experiments/cached_core_20261105/01_direction.md",
     "published": "experience/_shared/references/docs/experiments/cached_core_20261105/01_direction.md",
     "original_sha256": "13c78548c38f59af3bf8d334b2a10b3adc515f773098c9b1805dbb4fa70b1dd8",
-    "published_sha256": "a7353e8919525c08fe5786700db8addd8a2aa7b8c5f48e469d9a94ea05aa46f8",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "e716c3016dabdc8d3509f988d9169e4be424c8e4f977491619952091cd1c7822",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "artifacts/crop_repetition_eer_20261111/requested_comparison.csv",
@@ -11302,8 +11316,9 @@
     "source": "docs/experiments/ebm_shortening_vs_repetition_eer_20261111.md",
     "published": "experience/_shared/references/docs/experiments/ebm_shortening_vs_repetition_eer_20261111.md",
     "original_sha256": "31a161a1ff22160b344441e5115b06f8b1adafafb6eae8a3cdd56f2fe4d89cda",
-    "published_sha256": "3fa4263795de341289e4029d9e2f8c7c751326154b712dfda5c1094ae2079507",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "d0e39bf0ff53d860920ce90e3fd0980fe9eb6b88873c8d10ee83abebebb6d533",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "artifacts/ebm_git_private_20261106/server_baseline_restore.json",
@@ -11316,8 +11331,9 @@
     "source": "docs/experiments/ebm_server_baseline_restore_20261106.md",
     "published": "experience/_shared/references/docs/experiments/ebm_server_baseline_restore_20261106.md",
     "original_sha256": "5500bc8201913ac20862ed33f9fb3b39f6349b60e92e73af7f87a5da3a878d92",
-    "published_sha256": "e1039ffdad292407fb1432a90c9381ffcc79d51522e0d12fde1d90fdb1ecf103",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "97b842e1fbddb893a66a9638baa600bda9c29e7636a6c8b741815412f9187c6f",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "artifacts/ebm_git_private_20261106/connection.json",
@@ -11330,8 +11346,9 @@
     "source": "docs/experiments/ebm_private_repository_setup_20261106.md",
     "published": "experience/_shared/references/docs/experiments/ebm_private_repository_setup_20261106.md",
     "original_sha256": "4b8fbe8b52cda75ec75ffcc33612e338b38156f4a03859007e760a6323ba3091",
-    "published_sha256": "6de2e0467ae5baa4bfbdddf5d0d445f2ae011da0c48df6f771a40202b542133b",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "a7ef87e323e62fbcc76faeddbca3e1f80dedf84767d97933d9014203a961a5f2",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "artifacts/geometry_cache/local_analysis/frozen_all_v1/P3_P4/verification.json",
@@ -11421,8 +11438,9 @@
     "source": "docs/experiments/ebm_norm_information_research_20261111.md",
     "published": "experience/_shared/references/docs/experiments/ebm_norm_information_research_20261111.md",
     "original_sha256": "bb575799de8a64058d1937f910bedc42ddd2d73984de79b141ea40fe57524041",
-    "published_sha256": "e712aa4a8c7ec548fd71449f40939e69f9ff08a6da56203a36aace8608ae290c",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "8a40632b7ba25dc541dc483b812af45c32fbccce9a961805ecb01f6d87768176",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "artifacts/geometry_cache/local_analysis/variable_length_audit_20261106_v1/normal_duration_counts.json",
@@ -11484,8 +11502,9 @@
     "source": "docs/experiments/ebm_native_length_short3_code_changes_20261106.md",
     "published": "experience/_shared/references/docs/experiments/ebm_native_length_short3_code_changes_20261106.md",
     "original_sha256": "43ab98669894b2200c604f8927485204d04a4f1291854ec2b2a26c064a07c6fe",
-    "published_sha256": "5fb9975a94cad1d4ea23dc54c43c480115ccb9d99c24211865c07b709e1280fa",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "68176f98e2af6d830c00a01b637d1688ad7de56e32341ce07cb9aa0482514985",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "artifacts/geometry_cache/local_analysis/ebm_full_github_audit_20261106_v1/repo_comparison.json",
@@ -11526,8 +11545,9 @@
     "source": "docs/experiments/ebm_native_github_full_audit_20261106.md",
     "published": "experience/_shared/references/docs/experiments/ebm_native_github_full_audit_20261106.md",
     "original_sha256": "a2e91b50939b108a19c5c0295e5fd37d1c409d331b5edd57e570713bd96d5b9a",
-    "published_sha256": "0e4d0aa54b8c63610472396a5c7eea6a4dbc301e343e4f5eb90ac257f9382656",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "764314c3b0adbfb175aec64fbcb709cbf1ff0993869843b563a8d64d67bced99",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "artifacts/geometry_cache/analysis_manifests/frozen_data_sizes_v1/lock.json",
@@ -11554,8 +11574,9 @@
     "source": "docs/experiments/ebm_frozen_model_experiments_20261105.md",
     "published": "experience/_shared/references/docs/experiments/ebm_frozen_model_experiments_20261105.md",
     "original_sha256": "6a28bad7f0ce8701257e0e8526a7e7b630aaafd42d18da5e64cb3c39d18e1d2f",
-    "published_sha256": "2a87843fabb9f967636a82120451119d216b8c3b6ebb6d7039b39c5c4dc1036f",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "e5ff7fd1d37bf0a9acb6e6149f8bbdc869b47e3bb2cd8aed8f199ca1d6f75e87",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "artifacts/geometry_cache/local_analysis/bonafide_cross_recheck_20261106_v1/class_replacement_eer.csv",
@@ -11596,29 +11617,33 @@
     "source": "docs/experiments/ebm_five_research_themes_20261111.md",
     "published": "experience/_shared/references/docs/experiments/ebm_five_research_themes_20261111.md",
     "original_sha256": "88410d1036b50329f21a3033b7c328a66c97fcfff4635dadd3dad56a251c43d9",
-    "published_sha256": "c8b2f918bc83229702b3beb9de32ed55a89df0a95b1da5b9159af37ede5f774c",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "606d1c0318642c178d1f16769fceb4432d061dceeaad18b33f65b3f3f5aa0c08",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "artifacts/experiment_methods_audit_20261111/source_coverage.md",
     "published": "experience/_shared/references/artifacts/experiment_methods_audit_20261111/source_coverage.md",
     "original_sha256": "1008e58efc06100392e99bd1899da6f9d23c0f6f2b66ebbceb24e799cb71e8f1",
-    "published_sha256": "a77f8e9815999e3918c389c082eb1ec7bd45d45c9e0fcfecaf2191ca2ddfb331",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "7ff49120684bfdf0b18e5f6b41fdeaea4e83b93dce252b2d7a70e05e4f21d98e",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "docs/experiments/ebm_embedding_geometry_spec_20261105.md",
     "published": "experience/_shared/references/docs/experiments/ebm_embedding_geometry_spec_20261105.md",
     "original_sha256": "96331b1da5dfb9bebd0784e3105e1851a5977ee1391fdd6bf4f8c8f5f32b9a0a",
-    "published_sha256": "4bd7d1f666e0d7e6156a222a765a48fdc00947462f5bd493d5f1b7bf95bcbfdf",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "ee9941ecb90edec4571e17ab4e6a8045e820b148cd40d867674cd29fdb0a0849",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "docs/experiments/ebm_embedding_geometry_review.md",
     "published": "experience/_shared/references/docs/experiments/ebm_embedding_geometry_review.md",
     "original_sha256": "c3e0821474c23db4027add14684bcb6a5b1976368afb46e622f633cb9edb1dae",
-    "published_sha256": "ce3f2d5739444577e67d1b23d81721988e3d694d35aef4d1be8b739291057ac5",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "fbaebf8fb19e8b8c2cbcf554166ec7d0fa976c3cb6203973227355dd65038abe",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "artifacts/repetition_shortcut_20261111/reviewed_analysis/interpretation.json",
@@ -11645,8 +11670,9 @@
     "source": "docs/experiments/ebm_duration_bias_research_20261111.md",
     "published": "experience/_shared/references/docs/experiments/ebm_duration_bias_research_20261111.md",
     "original_sha256": "7f5ca92ea261f5084f3cf9756847c20d196cbabd20de76e30902d20c6bdeb67a",
-    "published_sha256": "c1a1a11296b754f21f2fe03c5b1e72958cd0ab3c72efd8d9ba83f7f2a0e5565d",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "083012061dc787aab398740370af69dd7ef65a5039fc17dfad49ad3f5a9ca465",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "artifacts/geometry_cache/local_analysis/padding_causal_20261106_v1/pooling_mechanism/summary.json",
@@ -11701,8 +11727,9 @@
     "source": "artifacts/duration_bias_research_20261111/duration_bias_full_evidence_before_selection.md",
     "published": "experience/_shared/references/artifacts/duration_bias_research_20261111/duration_bias_full_evidence_before_selection.md",
     "original_sha256": "2a2800c32d889ca28ca9d3ce254cf879521e7684a86c9f4f8ee22c41709ebc1e",
-    "published_sha256": "8884c244394a64837d53b38f6575ae2d23cb363ab8e95b28b3f56508e2c72790",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "c6ae414488f31e4970b9bf40f8dd33c3b580304448cf20a6048a401bf60c8d27",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "artifacts/experiment_methods_audit_20261111/experiment_registry.json",
@@ -11736,15 +11763,17 @@
     "source": "docs/experiments/ebm_completed_evidence_interpretation_20261111.md",
     "published": "experience/_shared/references/docs/experiments/ebm_completed_evidence_interpretation_20261111.md",
     "original_sha256": "de7f78003a5bc97a7a4b7dd5a0ba06f11dd5b803caf15bfd71f10e37704697a1",
-    "published_sha256": "e0cd62944661539366c8d6a9a53229c5b374ad6f3f0ff1c1adeca3fe65d33dd8",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "85619c5564c7ac16042971268325b30612593f299f6b3e26a1be494d5d82ae40",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "artifacts/experiment_methods_audit_20261111/previous_summary.md",
     "published": "experience/_shared/references/artifacts/experiment_methods_audit_20261111/previous_summary.md",
     "original_sha256": "89b4c5161cf9609f40424df39bf0cf708cf3ad8656fc83b9c815077661f04bee",
-    "published_sha256": "86b9dfbf1b507291039b042fd1a3c39fe7443884bcd1986c1d0aa8250433dadc",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "fc18326876778082063e08d95916fa4a6dee6e7773dc87364e57a4f7266eb6bd",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "artifacts/ebm_git_private_20261106/B_training_launch.json",
@@ -11764,15 +11793,17 @@
     "source": "docs/experiments/ebm_B_training_started_20261106.md",
     "published": "experience/_shared/references/docs/experiments/ebm_B_training_started_20261106.md",
     "original_sha256": "5fc2cce47e6d1643092b7c5a5acfe4755f4468a996c7ce96316dcc10ff9b2c21",
-    "published_sha256": "8b58c7f3954e4494ee4dfb2816d1977a745b4f6248f023fb92150c9486682f6b",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "e64ae20ebca6b5af2520d22ca10d78a172ceabf9b59c615bb1042323dddb0676",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "docs/experiments/ebm_B_purpose_analysis_protocol_20261107.md",
     "published": "experience/_shared/references/docs/experiments/ebm_B_purpose_analysis_protocol_20261107.md",
     "original_sha256": "14fa055ee73df349f46d6f299ee1cc23130ace1f19a00238086be87bdcb98938",
-    "published_sha256": "3f6afd4e2a54f2007f33bb05141ec3731592df2f33900f3f1d4adf6f885ad67a",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "a284a3644ff43fb3cb0dc164233eacd95124d3e5820f59970657c6db3f7d68b4",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "artifacts/ebm_git_private_20261106/B_monitor_schedule.json",
@@ -11785,8 +11816,9 @@
     "source": "docs/experiments/ebm_B_monitoring_and_final_analysis_20261106.md",
     "published": "experience/_shared/references/docs/experiments/ebm_B_monitoring_and_final_analysis_20261106.md",
     "original_sha256": "b653e0d75c516a86eb816ad38134824a884c866ff04b4ff10a71499c41a1e3e6",
-    "published_sha256": "069d482c69e4dd568018add41f3afcb08e07ab76ed99285ac69567971ea33cc4",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "f6f68f664f623d9f38dcfb8d8e57a400c6784ca30e9a3bb9dc97cb543451973a",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "artifacts/ebm_git_private_20261106/B_final_evaluation_state.json",
@@ -11799,8 +11831,9 @@
     "source": "docs/experiments/ebm_B_final_evaluation_started_20261107.md",
     "published": "experience/_shared/references/docs/experiments/ebm_B_final_evaluation_started_20261107.md",
     "original_sha256": "1eeb80dcb608eb588e53b4de544fee0740e958b1b7cb455eb694200978b09264",
-    "published_sha256": "8cfde97dfd601fbdd2e1d480e416c1298a5dd53b4ad20fd6eaec37db9b5e0ff5",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "7a1690915a964161d63e3abffde82608ea5072cc813f57f2359c23e370d34659",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "artifacts/ebm_B_checkpoints_20261108/state.json",
@@ -11820,8 +11853,9 @@
     "source": "docs/experiments/ebm_B_checkpoint_evaluation_20261108.md",
     "published": "experience/_shared/references/docs/experiments/ebm_B_checkpoint_evaluation_20261108.md",
     "original_sha256": "17da07d67c019b048512637aea186b94e1bb8ac1ef27695849848931fb6419b0",
-    "published_sha256": "a683150e7eee120b628bbe798be0388539889e495da5af87b8444e0d293f2e31",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "ead74e84326eed67fa382be4bbca349114ce624d40045c22bdefbd1b82b61822",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "artifacts/geometry_cache/local_analysis/bonafide_cross_recheck_20261106_v1/codec_sensitivity.csv",
@@ -11883,8 +11917,9 @@
     "source": "docs/experiments/ebm_bonafide_diversity_research_20261111.md",
     "published": "experience/_shared/references/docs/experiments/ebm_bonafide_diversity_research_20261111.md",
     "original_sha256": "71728c7e698892022d068c78bf769de4ebf246cc27d89f4038904c9f2102d8a8",
-    "published_sha256": "16bd8ed3dcaaaa646a5d932459824e7b008395c52c5e14d1bf1760ee871c1703",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "a25f33797709f64bd877ec1da380f2c793018adb476064e013bfdc0e9d777400",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "artifacts/reverse_ebm_design_20261112/source_audit.json",
@@ -11918,8 +11953,9 @@
     "source": "docs/experiments/ebm_spoof_centered_design_20261112.md",
     "published": "experience/_shared/references/docs/experiments/ebm_spoof_centered_design_20261112.md",
     "original_sha256": "d13e6092f2a006ce3b400599a28f9ee2c5e80b75cad162956d352d54fb983d6b",
-    "published_sha256": "4e30c125283f108bcc6df1b98d92c6ccc38aedd6b84fb1937414b2018c9f6997",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "dda110e7a8477119c4862b22b6e08076991954a7963b8d8a2991aa13f1238d7c",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "artifacts/geometry_cache/visualizations/centroid_centered_20261105_v2/01_centroid_angle_map.png",
@@ -11967,15 +12003,17 @@
     "source": "docs/experiments/19la_train_xlsr_last_20261105.md",
     "published": "experience/_shared/references/docs/experiments/19la_train_xlsr_last_20261105.md",
     "original_sha256": "db0f7cb540dd0f9ec797414d4315ad8f41a2ccd116b56a7076725c994a39648f",
-    "published_sha256": "9787e960d6289a602dd02f5240463f0ee197c1382abe2463f2f9eb63965c21d7",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "61729a731ffc36e04738f54e3553343b2ae3d6c87382a0ab46e99cb5c0b05c87",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "docs/experiments/ebm_paired_minimum_eer_evaluation_20261111.md",
     "published": "experience/_shared/references/docs/experiments/ebm_paired_minimum_eer_evaluation_20261111.md",
     "original_sha256": "3bf6b3fbe320d840424706ca78f09c95015ad8febea5162314fe470a3b8d5c9f",
-    "published_sha256": "e728df3e13f837e8e2a95a86b997d0e20b900f79346d2c055ad31368dbc90e25",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "e241a10583600a0ec6ec566d9c441b69bbf50539510688c5d1b08ed4aa8116f0",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "artifacts/short32_train_20261111_v2/state.json",
@@ -12002,8 +12040,9 @@
     "source": "docs/experiments/BPL1_BPL2_final_plan_20261111.md",
     "published": "experience/_shared/references/docs/experiments/BPL1_BPL2_final_plan_20261111.md",
     "original_sha256": "db0cc7bca6ac92f21e947c40c6e356674196afc3597e649bd9f6841754a1db19",
-    "published_sha256": "f8e1aa2c089658287396384900761337ffcf3cf8bb0075564b0bd93b88044903",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "95edb87c40e4bbf0f101c97ad61a697675b7cc2779f42592a47eac29a0d9527e",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "artifacts/geometry_cache/local_analysis/padding_causal_20261106_v1/01_same_waveform_padding.png",
@@ -12037,8 +12076,9 @@
     "source": "docs/experiments/ebm_padding_context_mechanism_20261106.md",
     "published": "experience/_shared/references/docs/experiments/ebm_padding_context_mechanism_20261106.md",
     "original_sha256": "a11a4c6e024b0aef01e00c1674e751f8d17e086192b7c4b5b552047bfe1f1b13",
-    "published_sha256": "670ee0923dc63d415059f37bc5d0a8d862685c0fc63a4e22b88ccb7abed53e4a",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "5f59b58ca9834f921916ff1d21dc9db132858cf817f6b4b039e9c8a634cfb6c4",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "artifacts/geometry_cache/local_analysis/full_score_overlap_20261106_v2/overlap_and_coverage.csv",
@@ -12072,8 +12112,9 @@
     "source": "docs/experiments/ebm_full_score_overlap_results_20261106.md",
     "published": "experience/_shared/references/docs/experiments/ebm_full_score_overlap_results_20261106.md",
     "original_sha256": "e6a18fc7dc7e73d304ea3315b4e1b321cd6dc20078c4775dd78df3fb3e72c05a",
-    "published_sha256": "a13cd2413eac6f4ca34c0ca045533bc943afbe32a687dac96d0a5f3899861e19",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "6dde9e0bc7560d8880cfe9b3c7fb2d688dd97d921366cdca7db431cec458f076",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "artifacts/geometry_cache/local_analysis/spoof_path_geometry_v1/path_density_v1/density_support.png",
@@ -12135,8 +12176,9 @@
     "source": "docs/experiments/ebm_duration_conditioned_centroids_results_20261106.md",
     "published": "experience/_shared/references/docs/experiments/ebm_duration_conditioned_centroids_results_20261106.md",
     "original_sha256": "cef39f93b146541f264695aa60984bafbe6840df13805a1e45b23b8b910a4d19",
-    "published_sha256": "cc12f4d1ebb5e8be9acc4d69143e856f04f9b748e7daf7466f2fb47addc06f23",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "6dd9418efec7e8196b6069fc0620d513ad845b6a86c5c152b2d83871a6cb3281",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "artifacts/geometry_cache/local_analysis/normal_cause_audit_v1/training_duration_coverage.csv",
@@ -12156,15 +12198,17 @@
     "source": "docs/experiments/ebm_duration_conditioned_centroids_plan_20261106.md",
     "published": "experience/_shared/references/docs/experiments/ebm_duration_conditioned_centroids_plan_20261106.md",
     "original_sha256": "dec4b70be8485b47340715906e449df6c9be56444ea404162779f4d9320f9110",
-    "published_sha256": "53f24a361fbfa057e67efc0e8894837e9e55a89630aaf257269e8515543abadd",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "01e6cae7e40b66a21b6e0ad8f2107a0846a11efda83333e614e7a1840dbb6fd2",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "docs/experiments/ebm_19la_to_21la_cross_results_20261106.md",
     "published": "experience/_shared/references/docs/experiments/ebm_19la_to_21la_cross_results_20261106.md",
     "original_sha256": "f5cb0c0377ab0ac0f454620587a6a9a10c30254b2f4a250692d7d813e2ddd569",
-    "published_sha256": "b06a8bf742f57301c577f3f7de35f0134ea06fc617c72de31393ee4192225e4a",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "4d1fe17abbd85cfedd145c17cae01e9ea63617e42002467d8fe6b8b2c0a0ac2a",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "artifacts/geometry_cache/local_analysis/bonafide_cross_recheck_20261106_v1/cross_eer_matrix.png",
@@ -12247,8 +12291,9 @@
     "source": "docs/experiments/ebm_cache_hypotheses_20261106.md",
     "published": "experience/_shared/references/docs/experiments/ebm_cache_hypotheses_20261106.md",
     "original_sha256": "6869aa48afed0d80da49f7a06351c957cf424d24e84e0cbd636630d31c4b1d49",
-    "published_sha256": "a0e1f6c92aee689fe2182824e70a5f2a1e46a788a57364ed177c70355241a7fc",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "368019c3dd024304defdda0c0e85bbcddb67f812e81643714a7f50a52ce7e514",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "artifacts/geometry_cache/local_analysis/perturbation_candidate_audit_20261106_v1/class_response_summary.csv",
@@ -12282,8 +12327,9 @@
     "source": "docs/experiments/ebm_perturbation_candidate_audit_and_plan_20261106.md",
     "published": "experience/_shared/references/docs/experiments/ebm_perturbation_candidate_audit_and_plan_20261106.md",
     "original_sha256": "d15d36b56145e5a0a4ada0d20e1ed2c29c8a23e6f674dc4281960da492c2b8fe",
-    "published_sha256": "8dc1b4ba4a775e711f6ac38779ec3e5b810980e2cfc2c7b517f36361833865c8",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "5eee7e24e1a1d6e3d5db2c75700d07afbb6dd1380955f2cfa384549ad3a84e92",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "artifacts/geometry_cache/local_analysis/frozen_all_v1/condition_audit_20261105_v2/verification.json",
@@ -12324,8 +12370,9 @@
     "source": "docs/experiments/ebm_condition_audit_20261105.md",
     "published": "experience/_shared/references/docs/experiments/ebm_condition_audit_20261105.md",
     "original_sha256": "696518eef50bb14bb87ddc775a815e6e5b075c3f23a7df6ee72f89cd1d0f2b14",
-    "published_sha256": "effdf5fc95b0db4d0f82af55c645d7b197e72b015b7b47e39c35ef141fac4bfe",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "f0b813520c22058c733cf4b5804f957668a60b5ca7b189d5ca7025d25dcddd7e",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "artifacts/geometry_cache/local_analysis/channel_keep_tiny_v1/channel_keep_tiny.png",
@@ -12387,15 +12434,17 @@
     "source": "docs/experiments/ebm_cached_core_results_20261105.md",
     "published": "experience/_shared/references/docs/experiments/ebm_cached_core_results_20261105.md",
     "original_sha256": "3cdc649e3154bda67ab7471b0f4ca11f8396312893cbece0dac2aedc125008e0",
-    "published_sha256": "ee2ceb54693e70d91ba35d4b9bd257fc4b25e4473eb0108e6b0beb6a9a85e576",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "747ef067c410bc118f8683bd2e6cdc7fb761326f7a603371f63b1fc3f0784c96",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "artifacts/geometry_experiments/README.md",
     "published": "experience/_shared/references/artifacts/geometry_experiments/README.md",
     "original_sha256": "d634acbe867294966c226343fec517c044eceb5df53c0839ed64c14841145685",
-    "published_sha256": "e7e2b5c6b8d55558d83791d8b75495d6bb5e7d6a87fbead6ae9f396dd68c081c",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "147d2d21b267487a9a21232b9d99b8d1b7b672b3bccf2f6f90bfb18e09876b5f",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "artifacts/geometry_cache/local_analysis/21la_cache_validation_v1/verification.json",
@@ -12408,8 +12457,9 @@
     "source": "docs/experiments/21la_cache_20261105.md",
     "published": "experience/_shared/references/docs/experiments/21la_cache_20261105.md",
     "original_sha256": "2647eb607e9caabdb86a87405c0c35dd524aa51ca3ebe0bbd3b70e8998e8fb63",
-    "published_sha256": "c66dba374e66429b952a998ef11288b7b04e00da158f79f65d043960423b586f",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "ada71e830aba1cd160158dd93658f981bce32651798a815b8e8812ab4d3829e7",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "artifacts/duration_partitions_20261109/README.md",
@@ -12513,8 +12563,9 @@
     "source": "docs/experiments/ebm_B_C_all_checkpoint_evaluation_20261109.md",
     "published": "experience/_shared/references/docs/experiments/ebm_B_C_all_checkpoint_evaluation_20261109.md",
     "original_sha256": "2a6b26ece444efb2d7696fdf19e972232be08ece7b21143c804cbccfd396132c",
-    "published_sha256": "52375823b6465c2bf190e3377ad4bbfe722881f4863f1778247fa8af59ccd0d2",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "d878953b72c3d713b15865c8ce0e8ffea1a62fe544440d09cad15f1246d6ee4c",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "artifacts/ebm_C_20261108/local_code_audit.json",
@@ -12562,8 +12613,9 @@
     "source": "docs/experiments/ebm_C_training_started_20261108.md",
     "published": "experience/_shared/references/docs/experiments/ebm_C_training_started_20261108.md",
     "original_sha256": "961215913e823baed875465ee2e916386edb7cf8a8c334ce8c29de3bf39cd191",
-    "published_sha256": "200c9bf4b5ef9d914ec731a881cf699611e2bbb9706e789cffa545540a97e0c0",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "0f01849150562b0bf473893a6f1326bcaf10a90ac3b0a32b3a70e3651fda7984",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "docs/experiments/figures/ebm_B_final_20261108/training_dev.png",
@@ -12681,15 +12733,17 @@
     "source": "docs/experiments/ebm_B_final_results_20261108.md",
     "published": "experience/_shared/references/docs/experiments/ebm_B_final_results_20261108.md",
     "original_sha256": "94f6a2802dcdee080e0dde0dfdcf4248ec2c02f6d91b68411abdcaa2ff89593a",
-    "published_sha256": "6d1371d67d35d59a0fc1d9441282af8faf8fffa91e17012d395f2a274f9cde2c",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "505eb6c23082dbc65be45e05fb6f168010483fb3f0a815c8698b91bfb0d10078",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "docs/experiments/ebm_control_B_20261106.md",
     "published": "experience/_shared/references/docs/experiments/ebm_control_B_20261106.md",
     "original_sha256": "51391b881c631eb8210f0d863a47b1631ee6536fec725974505d06f1de9e1cef",
-    "published_sha256": "d935b11a2f7fb8ffcc2fa33d3f2c2c84e855f50f671d0966c8c2df7fbfcb6980",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "537d7aef91bcf66ef614ea3ec0302e347e0162ddb3978362740f8eaa5312e403",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   },
   {
     "source": "artifacts/geometry_cache/local_analysis/frozen_all_v1/F4/condition_metrics.csv",
@@ -12702,7 +12756,8 @@
     "source": "docs/experiments/ebm_frozen_all_results_20261105.md",
     "published": "experience/_shared/references/docs/experiments/ebm_frozen_all_results_20261105.md",
     "original_sha256": "b6b25d138f35b9111f1a81ed0015bad0419d32c7bed2a93deeb6aeb17568d181",
-    "published_sha256": "43584ab38fbcca32479e4338aa15f533c909c921fc2df9a367d6ce73c3d5e644",
-    "kind": "historical Markdown with rebased links / archival context"
+    "published_sha256": "3704e16ed49406d1975dfd0e6081dcb7d6386b61aa5f244a0494a56caa3b95e3",
+    "kind": "historical Markdown with rebased links / archival context",
+    "transformation": "Reader-visible experiment names expanded; link labels made descriptive; file paths and scientific values retained"
   }
 ]

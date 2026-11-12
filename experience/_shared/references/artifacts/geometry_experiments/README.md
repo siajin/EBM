@@ -1,3 +1,5 @@
+> 표시 명칭·링크 이름은 설명형으로 정리했다. 원래 코드·경로·수치는 그대로 보존한다.
+
 > 역사 문서 보존본. 원문 작성 당시의 상태·계획을 포함한다. 최신 상태와 확정 결과는 experience의 각 실험 README를 우선한다.
 
 # EBM 기하 분석 첫 실행
@@ -6,7 +8,7 @@
 
 후속 상태: **11:29 KST 21LA 전체 eval 캐시 추가·독립 검수까지 완료했다.** 현재 재사용 가능한 자료는 T/V/DF pilot/21LA eval 총208,539개이며, 하단의 로컬 캐시 절과 [21LA 기록](../../docs/experiments/21la_cache_20261105.md)을 따른다.
 
-후속 분석의 기본 표본 수는 **DF_pilot20,000개와21LA_pilot20,000개(각정상2,000/spoof18,000)**다. 21LA 전체148,176개 캐시는 보존하고 마지막 보조 평가에만 사용한다. R2/R3 초기 확인은 각pilot 안의2,000개(200/1,800)씩이며, 각 실험별 수와 고정 ID 읽기는 [동결 명세3.1.1](../../docs/experiments/ebm_frozen_model_experiments_20261105.md#311-신규-캐시-실험의-기본-데이터-수)을 따른다. 분석 표본 이름은 raw cache API의 새 별칭이 아니며 manifest의 cache_row로 원본 배열을 선택한다.
+후속 분석의 기본 표본 수는 **DF_pilot20,000개와21LA_pilot20,000개(각정상2,000/spoof18,000)**다. 21LA 전체148,176개 캐시는 보존하고 마지막 보조 평가에만 사용한다. R2/R3 초기 확인은 각pilot 안의2,000개(200/1,800)씩이며, 각 실험별 수와 고정 ID 읽기는 [상세 설계·실험 기록](../../docs/experiments/ebm_frozen_model_experiments_20261105.md#311-신규-캐시-실험의-기본-데이터-수)을 따른다. 분석 표본 이름은 raw cache API의 새 별칭이 아니며 manifest의 cache_row로 원본 배열을 선택한다.
 
 최신 후속 결과: **2026-11-05 09:06 KST 재추출 없는 네 가지 CPU 진단 완료.** [결과 문서](../../docs/experiments/ebm_cached_core_results_20261105.md)와 `geometry_cache/local_analysis/cached_core_v1/`을 참고한다. DF 내부 nested 화자 교차검증에서는 방향 추가가 scalar·잡음 대조보다 좋았고, 고정 코사인의 T-Fisher 상위 채널 제거는 무작위 제거보다 크게 악화되지 않았다. LayerNorm 전후와 조건별 방향 군집 비교도 포함한다. DF 내부 학습 결과를 T→DF 전이 성능으로 해석하지 않는다.
 
@@ -23,7 +25,7 @@
 | prepare | 공식 protocol 점검, T/V/Q 화자 분할 | exit 0 |
 | QC | T 128개, 반복·GPU 간 일치·native score 확인 | exit 0 |
 | extract | T+V 40,363개, h/z 각 160차원 | exit 0, 약20분55초 |
-| fast analysis | C/A/E/D 일부, 아래 계약 | exit 0, 약27초 |
+| fast analysis | 잔여 방향 정보 판독 비교/A/E/D 일부, 아래 계약 | exit 0, 약27초 |
 | output verification | 점수 범위, 행 정렬, log-loss·거리 항등식 재계산 | exit 0 |
 
 `fast_extract.py`와 `fast_analyze.py`는 이번 작업에서 새로 작성한 runner다. 서버 원본 연구 코드를 복사한 파일이 아니다. 원음·원시 임베딩·원래 checkpoint·발화별 metadata와 예측은 서버에만 둔다. 두 파일은 서버에 `fast_extract_v1.py`, `fast_analyze_v1.py`로 업로드했다.
@@ -38,14 +40,14 @@ QC 결과: 정상 32개와 A01~A06 각각16개, 총128개. 반복 및 GPU 간 z 
 
 ## 축소 분석 계약
 
-1. **C**: spline(s), log(norm), valid 지시자를 대조한 뒤 tangent 단위 방향 u의 160좌표를 추가한다. 같은 차원의 label 독립 unit noise를 보조 대조군으로 넣는다. L2 logistic probe만 사용한다.
+1. **잔여 방향 정보 판독 비교**: spline(s), log(norm), valid 지시자를 대조한 뒤 tangent 단위 방향 u의 160좌표를 추가한다. 같은 차원의 label 독립 unit noise를 보조 대조군으로 넣는다. L2 logistic probe만 사용한다.
 2. **A**: T에서 공격별 Fisher score를 계산해 macro 평균으로 순위를 정한다. 전체160채널, 상위40채널, 무작위40채널 20개를 logistic probe로 비교한다. 채널 attention을 학습하는 실험은 아니다.
 3. **E**: T 정상의 unit z 공분산만 사용해 고정 learned centroid 주변 대각/전체 metric을 만든다. shrinkage 0.01/0.1/0.5/1.0을 모두 보고한다. gamma=1은 정규화 Euclidean과 cosine의 동등성 대조군이다. 후보 중 V 최저값은 독립 검증 성능이 아니다.
 4. **D**: T의 공격별 평균 방향 크기와 uncentered 2차모멘트 participation ratio를 기술한다. 평균 방향 크기만으로 다봉 구조 또는 구조 부재를 판정하지 않는다. V 재현성과 표본 수가 같은 isotropic 대조는 아직 수행하지 않는다.
 
-probe/scaler/순위/covariance는 T에서만 fit한다. C/A 정규화 계수 C는 0.01/0.1/1/10 중 V의 held-out 화자 이외로 선택해 합친다. 10명 화자에 대한 V 내부 5-fold 교차 선택 결과다. C의 log-loss 차이에는 2,000회 화자 bootstrap을 붙이지만, 개발 결과를 완전히 독립적인 검정처럼 해석하지 않는다. 정상/스푸프 각각50% 가중 log-loss이며 y=1과 큰 score는 정상이다.
+probe/scaler/순위/covariance는 T에서만 fit한다. 잔여 방향 정보 판독 비교/A 정규화 계수 분류기 규제 계수는 0.01/0.1/1/10 중 V의 held-out 화자 이외로 선택해 합친다. 10명 화자에 대한 V 내부 5-fold 교차 선택 결과다. 잔여 방향 정보 판독 비교의 log-loss 차이에는 2,000회 화자 bootstrap을 붙이지만, 개발 결과를 완전히 독립적인 검정처럼 해석하지 않는다. 정상/스푸프 각각50% 가중 log-loss이며 y=1과 큰 score는 정상이다.
 
-전체 명세의 MLP, 반복 seed, 나머지 mask 비율, 조건부 MMD, 방향 shuffle, Q/외부 평가, perturbation F, attention 및 손실 재학습 B/G는 실행하지 않는다. 이번 결과로 미지 공격 일반화, attention의 효과, 새 loss의 효과를 확인했다고 주장하지 않는다.
+전체 명세의 MLP, 반복 seed, 나머지 mask 비율, 조건부 MMD, 방향 shuffle, Q/외부 평가, perturbation F, attention 및 손실 재학습 발화별 채널 가중치 비교/G는 실행하지 않는다. 이번 결과로 미지 공격 일반화, attention의 효과, 새 loss의 효과를 확인했다고 주장하지 않는다.
 
 ## 재접속 시
 
@@ -55,20 +57,20 @@ probe/scaler/순위/covariance는 T에서만 fit한다. C/A 정규화 계수 C�
 
 ## 1차 결과와 해석
 
-V에서 기존 cosine EER가 이미0%, AUROC1이다. 정상 최소 cosine0.509365와 스푸프 최대-0.290336 사이에0.799701의 간격이 있어, 별도 점수 범위 계산도 완전 분리를 확인했다. C 다섯 probe와 E 여덟 후보도 EER0%다. 무작위40채널20개 중19개도 EER0%여서 이 V로 추가 탐지 이득을 비교하기 어렵다.
+V에서 기존 cosine EER가 이미0%, AUROC1이다. 정상 최소 cosine0.509365와 스푸프 최대-0.290336 사이에0.799701의 간격이 있어, 별도 점수 범위 계산도 완전 분리를 확인했다. 잔여 방향 정보 판독 비교 다섯 probe와 E 여덟 후보도 EER0%다. 무작위40채널20개 중19개도 EER0%여서 이 V로 추가 탐지 이득을 비교하기 어렵다.
 
-| C 비교 | V balanced log-loss |
+| 잔여 방향 정보 판독 비교 비교 | V balanced log-loss |
 | --- | ---: |
-| C0: cosine spline | 0.0029737963 |
-| C1v: cosine spline + norm + valid | 0.0042803381 |
-| C2: C1v + tangent 방향 | 0.0003809358 |
-| Cnoise: C1v + 독립 unit noise | 0.0004038119 |
+| 코사인 점수 판독기 : cosine spline | 0.0029737963 |
+| 점수·벡터 크기·방향 유효 표시 판독기 : cosine spline + norm + valid | 0.0042803381 |
+| 잔여 방향을 추가한 판독기 : 점수·벡터 크기·방향 유효 표시 판독기 + tangent 방향 | 0.0003809358 |
+| 독립 잡음 방향을 추가한 판독기 : 점수·벡터 크기·방향 유효 표시 판독기 + 독립 unit noise | 0.0004038119 |
 
 방향 추가의 log-loss는 감소했지만 noise 대조도 비슷한 값이다. 방향 고유의 정보나 새 loss의 효과가 입증됐다고 해석하지 않는다. 상위40채널의 log-loss0.0000774292는 무작위20개 중앙값0.0001763974보다 작지만, attention 학습이나 미지 공격의 개선은 아직 확인하지 않았다.
 
 D에서 학습 공격별 평균 방향 크기0.9342~0.9559, 2차모멘트 participation ratio1.1954~1.3083을 얻었다. 이 통계만으로 서로 다른 공격 방향이나 정상과의 방향 차이를 확인한 것은 아니다. centered covariance 차원과도 구분한다.
 
-서버의 `verify_fast_outputs_v1.py`는 자체 작성한 [검증 코드](../../../workspace/artifacts/geometry_experiments/verify_fast_outputs.py)다. 정상/스푸프 점수 범위, 전체 행과 예측 정렬, C log-loss 독립 재계산을 확인했다. 정규화 Euclidean과 cosine의 최대 차이는6.66e-16이다. 서버 `output_verification_v1.json`에 집계 검증 결과, `fast_analysis/summary.json`에 분석 집계가 있다. 원시 임베딩과 발화별 결과는 계속 서버에만 둔다. 마지막 확인 시 지정 GPU는 유휴였다.
+서버의 `verify_fast_outputs_v1.py`는 자체 작성한 [검증 코드](../../../workspace/artifacts/geometry_experiments/verify_fast_outputs.py)다. 정상/스푸프 점수 범위, 전체 행과 예측 정렬, 잔여 방향 정보 판독 비교 log-loss 독립 재계산을 확인했다. 정규화 Euclidean과 cosine의 최대 차이는6.66e-16이다. 서버 `output_verification_v1.json`에 집계 검증 결과, `fast_analysis/summary.json`에 분석 집계가 있다. 원시 임베딩과 발화별 결과는 계속 서버에만 둔다. 마지막 확인 시 지정 GPU는 유휴였다.
 
 ## 후속 DF pilot — 완료
 
@@ -76,7 +78,7 @@ D에서 학습 공격별 평균 방향 크기0.9342~0.9559, 2차모멘트 partic
 
 원래 평가 코드와 [공식 DF metadata](https://github.com/asvspoof-challenge/2021/blob/main/eval-package/README.md#df)의 `eval`533,928개에서 정상2,000/스푸프18,000개를 SHA256 발화ID 우선순위로 클래스 내 균등 추출했다. 점수와 무관하고 행 순서에도 불변이다.110개 공격·9개 codec을 모두 포함한다. 이2만 개 수치를 전체 DF 성능이라고 부르지 않는다. 기존 추출 속도로 pilot10~11분, 전체 약4시간40분이 예상된다.
 
-T에서 분석용 분류기와 통계량을 fit하고 V 전체에서 설정과 threshold를 고정한 뒤 DF를 평가한다. DF에서 새로 fit하거나 설정을 선택하지 않는다. 기존 V 내부 교차 선택 예측과는 달리 각 probe의 C를 V 전체로 하나 선택한 모델을 보존한다. 기존 E의 V EER 동률 규칙에 따라 주 metric은gamma1=cosine으로 선택됐다. 사전에 고정한 나머지 covariance 후보는 민감도 분석으로 모두 보고하되 DF 최저값을 새 주 모델로 채택하지 않는다.
+T에서 분석용 분류기와 통계량을 fit하고 V 전체에서 설정과 threshold를 고정한 뒤 DF를 평가한다. DF에서 새로 fit하거나 설정을 선택하지 않는다. 기존 V 내부 교차 선택 예측과는 달리 각 probe의 잔여 방향 정보 판독 비교를 V 전체로 하나 선택한 모델을 보존한다. 기존 E의 V EER 동률 규칙에 따라 주 metric은gamma1=cosine으로 선택됐다. 사전에 고정한 나머지 covariance 후보는 민감도 분석으로 모두 보고하되 DF 최저값을 새 주 모델로 채택하지 않는다.
 
 자체 작성 runner는 [DF 추출](../../../workspace/artifacts/geometry_experiments/df_extract.py), [설정 고정과 평가](../../../workspace/artifacts/geometry_experiments/df_screen.py), [합성 수치 검증](../../../workspace/artifacts/geometry_experiments/verify_df_math.py)이다. 원래 연구실 코드를 수정하지 않는다. 기존 컨테이너의 GPU0/1을 사용하고, 발화별 난수·native 평가 경로·최종 LayerNorm 전후 추출을 유지한다. DF QC128개는 반복/GPU 간 오차0, native score 오차1.00e-7 이하로 통과했다. source×speaker93그룹으로 paired bootstrap을 산출하지만 source-family 매핑은 미해결이다.
 
@@ -88,7 +90,7 @@ T에서 분석용 분류기와 통계량을 fit하고 V 전체에서 설정과 t
 
 캐시 폴더는 `artifacts/geometry_cache/`, 색인은 `catalog.json`이다. **T25,380개·V14,983개·DF pilot20,000개·21LA eval148,176개, 합계208,539개를 저장했다.** 파생 결과53파일306,968,382바이트(약307MB)다. Q·19LA eval·DF 전체는 아직 캐시가 없다. 이전 절의 서버 전용 저장 설명은 사용자 저장 요청 전의 기록이다.
 
-21LA 별칭은 `21LA_eval`이다. `load_embeddings("21LA_eval")`로 h/z 각[148176,160]과 native score·codec·transmission metadata를 읽는다. 같은 기준 checkpoint이고 원래 단일 발화와 QC128개의 h/z/score 오차가0이다. 전체 native EER1.0535393%, AUROC.997452884를 독립 검수했다. `verify_la21_cache.py`와 `local_analysis/21la_cache_validation_v1/verification.json`을 참고한다. 기존 C/A probe를21LA에 새로 fit/evaluate한 것은 아니며 `analysis_complete=false`는 그 추가 분석의 미실행을 뜻한다. native 캐시는 완료·검증됐다.
+21LA 별칭은 `21LA_eval`이다. `load_embeddings("21LA_eval")`로 h/z 각[148176,160]과 native score·codec·transmission metadata를 읽는다. 같은 기준 checkpoint이고 원래 단일 발화와 QC128개의 h/z/score 오차가0이다. 전체 native EER1.0535393%, AUROC.997452884를 독립 검수했다. `verify_la21_cache.py`와 `local_analysis/21la_cache_validation_v1/verification.json`을 참고한다. 기존 잔여 방향 정보 판독 비교/A probe를21LA에 새로 fit/evaluate한 것은 아니며 `analysis_complete=false`는 그 추가 분석의 미실행을 뜻한다. native 캐시는 완료·검증됐다.
 
 저장 항목은 LayerNorm 전후 h/z, 정규화 centroid, 발화별 점수·label·분석 metadata, 기존 예측, 집계 결과다. 원래 음성 파일 경로를 포함하는 source manifest, 원본 소스, checkpoint, 인증 파일, 실행 로그, pickle 모델을 가져오지 않는다. 모델 SHA256·추출 코드 SHA256·manifest SHA256·frontend commit·실행 식별자로 캐시 버전을 구분하며, 각 파일의 크기와 SHA256을 서버/로컬에서 대조한다. 과거 frontend 가중치의 별도 비트 단위 해시 일치를 증명한 것은 아니며 그 한계도 기록한다.
 
@@ -125,7 +127,7 @@ predictions = load_predictions("V")
 
 검증된 최신 재계산 결과는 `artifacts/geometry_cache/local_analysis/6ac3505da0708324/metrics.csv`, 검증 기록은 같은 폴더의 `verification.json`이다. 서버/GPU 없이43개 지표를 재계산해 서버 집계와1e-9 이내로 일치했다. 추가 동기화에서도38파일을 모두 재사용했고 새 다운로드는0바이트였다.
 
-DF pilot의 native EER는3.35%, C1v14.55%, 방향 추가C2는11.2389%, 잡음 대조Cnoise16.80%, 전체채널 probe13.05%, 상위40채널 probe5.3111%다. 방향 추가가 C1v probe보다 좋아도 native cosine보다 나쁘므로 기존 탐지기를 개선했다고 해석하지 않는다. DF 전체 수치가 아니며 V에서 선택한 설정을 DF에서 다시 고르지 않았다. 상세 결과는 캐시의 `DF_evaluation/summary.json`에 있다.
+DF pilot의 native EER는3.35%, 점수·벡터 크기·방향 유효 표시 판독기 14.55%, 방향 추가잔여 방향을 추가한 판독기 는11.2389%, 잡음 대조독립 잡음 방향을 추가한 판독기 16.80%, 전체채널 probe13.05%, 상위40채널 probe5.3111%다. 방향 추가가 점수·벡터 크기·방향 유효 표시 판독기 probe보다 좋아도 native cosine보다 나쁘므로 기존 탐지기를 개선했다고 해석하지 않는다. DF 전체 수치가 아니며 V에서 선택한 설정을 DF에서 다시 고르지 않았다. 상세 결과는 캐시의 `DF_evaluation/summary.json`에 있다.
 
 ### 캐시에서 추가로 확인한 해석
 
@@ -133,7 +135,7 @@ DF pilot의 native EER는3.35%, C1v14.55%, 방향 추가C2는11.2389%, 잡음 �
 
 비등방 대각 거리의 후보 EER는3.05~3.1778%, 전체 공분산 후보는3.0833~3.15%다. 대각gamma0.01의 native 대비 delta0.30pp, source×speaker93그룹 paired bootstrap2,000회의95% CI[0.0680,0.3862]를 얻었다. 다만 DF 결과를 관찰한 뒤 추가 해석한 여섯 후보의 보정 없는 탐색 CI이며 source-family 파생 관계도 미해결이다. V에서 사전 선택된gamma1의 주 결과는 여전히cosine과 같다.3.05%를 독립 확인 성능으로 바꾸어 보고하지 않는다.
 
-C의 cosine-only spline probe C0조차 DF EER17.10%로 native3.35%보다 나빴다. 실제 DF score를 정렬했을 때 변환 확률이 감소하는 인접 구간을 확인해, 단조 제약 없는 spline이 native 점수 순서를 보존하지 않음을 검증했다. 따라서 C2의 C1v 대비 개선만으로 방향의 고유 판별력이나 새 loss 효과를 확정할 수 없다. 다음 진단은 native score를 보존하는 대조군이 필요하다.
+잔여 방향 정보 판독 비교의 cosine-only spline probe 코사인 점수 판독기조차 DF EER17.10%로 native3.35%보다 나빴다. 실제 DF score를 정렬했을 때 변환 확률이 감소하는 인접 구간을 확인해, 단조 제약 없는 spline이 native 점수 순서를 보존하지 않음을 검증했다. 따라서 잔여 방향을 추가한 판독기의 점수·벡터 크기·방향 유효 표시 판독기 대비 개선만으로 방향의 고유 판별력이나 새 loss 효과를 확정할 수 없다. 다음 진단은 native score를 보존하는 대조군이 필요하다.
 
 상위40채널5.3111%는 무작위40채널20개의 중앙값12.10%보다 낮지만 최저 무작위 subset3.4111%보다 높다. 전체160채널 probe 대비 개선이 attention 또는 native detector 대비 개선의 증거는 아니다. V 정상 오거부율0.962%에서 고정한 native threshold0.9883067은 DF에서 정상39%를 거부했다. EER의 DF threshold sweep과 이 V-fixed 운용 오류를 구분해야 한다.
 
@@ -141,7 +143,7 @@ C의 cosine-only spline probe C0조차 DF EER17.10%로 native3.35%보다 나빴�
 
 [검증 코드](../../../workspace/artifacts/geometry_experiments/validate_native_preserving.py)를 같은 캐시에서 실행했다. 결과 폴더는 `geometry_cache/local_analysis/native_preserving_v1/`이고 `summary.json`, `metrics.csv`, `paired_intervals.csv`, `loss_geometry_audit.json`, `validation.png`를 보관했다. 원래 결과를 덮어쓰지 않은 새 탐색 버전이다.
 
-T에서 fit한 양의 기울기의 scalar logistic calibration은 DF EER3.35%를 정확히 유지했다. 이어 native s의 계수를1로 고정한 `S=s+epsilon*tanh(f(u)/2)`를 fit했다. C와epsilon은 T/V만으로 선택했고 보정 크기는0.1 이하다. 방향 보정도 DF EER3.35%, 개선95% CI[-0.0603,0.0954]pp로 이득을 확인하지 못했다. baseline calibrated log-loss0.56368은 방향 보정0.62813보다 낮았다. 잡음 보정은 V에서epsilon0을 선택해 baseline과 같았다. 순서 보존은 fixed u에서 s의 경로와 calibration에 대한 것이며, 모든 샘플의 상대 순서를 보존한다는 뜻은 아니다.
+T에서 fit한 양의 기울기의 scalar logistic calibration은 DF EER3.35%를 정확히 유지했다. 이어 native s의 계수를1로 고정한 `S=s+epsilon*tanh(f(u)/2)`를 fit했다. 잔여 방향 정보 판독 비교와epsilon은 T/V만으로 선택했고 보정 크기는0.1 이하다. 방향 보정도 DF EER3.35%, 개선95% CI[-0.0603,0.0954]pp로 이득을 확인하지 못했다. baseline calibrated log-loss0.56368은 방향 보정0.62813보다 낮았다. 잡음 보정은 V에서epsilon0을 선택해 baseline과 같았다. 순서 보존은 fixed u에서 s의 경로와 calibration에 대한 것이며, 모든 샘플의 상대 순서를 보존한다는 뜻은 아니다.
 
 가중 거리3.05%는 재현했지만 이번9개 비교를 보정한 대각gamma.01 개선 구간은[0.0000,0.4641]pp로0을 포함했다. 새 검증에10000회 source×speaker paired bootstrap을 적용했고, DF의 이전 관찰·탐색 이력과 원발화 파생 의존성까지 해소한 것은 아니다. 가중 거리의 주 V 선택은 여전히identity다.
 

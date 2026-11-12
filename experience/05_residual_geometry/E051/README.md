@@ -1,4 +1,6 @@
-# E051. 같은 정상 기준 각도에서 손실이 구별하지 않는 방향의 수학 검사
+<a id="e051-같은-정상-기준-각도에서-손실이-구별하지-않는-방향의-수학-검사"></a>
+
+# 같은 정상 기준 각도에서 손실이 구별하지 않는 방향의 수학 검사
 
 **실행 상태:** 합성 수치·미분 검사 완료
 
@@ -43,17 +45,17 @@ loss 차이·직 교성·수학적 gradient·동점/극단 점 경계 검수.
 
 ## 실험 코드
 
-- [docs/experiments/verify_spec_math.py](code/docs/experiments/verify_spec_math.py)
-- [artifacts/geometry_experiments/verify_native_preserving_math.py](code/artifacts/geometry_experiments/verify_native_preserving_math.py)
+- [소스: verify_spec_math.py](code/docs/experiments/verify_spec_math.py)
+- [소스: verify_native_preserving_math.py](code/artifacts/geometry_experiments/verify_native_preserving_math.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [docs/experiments/ebm_frozen_all_results_20261105.md](../../_shared/references/docs/experiments/ebm_frozen_all_results_20261105.md)
-- [docs/experiments/verify_spec_math.py](../../_shared/workspace/docs/experiments/verify_spec_math.py)
-- [docs/experiments/spec_validation.json](../../_shared/references/docs/experiments/spec_validation.json)
-- [artifacts/geometry_cache/local_analysis/native_preserving_v1/loss_geometry_audit.json](../../_shared/references/artifacts/geometry_cache/local_analysis/native_preserving_v1/loss_geometry_audit.json)
+- [상세 설계·실험 기록](../../_shared/references/docs/experiments/ebm_frozen_all_results_20261105.md)
+- [소스: verify_spec_math.py](../../_shared/workspace/docs/experiments/verify_spec_math.py)
+- [설정·결과 근거](../../_shared/references/docs/experiments/spec_validation.json)
+- [설정·결과 근거](../../_shared/references/artifacts/geometry_cache/local_analysis/native_preserving_v1/loss_geometry_audit.json)
 
 ## 연결
 

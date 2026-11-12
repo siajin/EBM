@@ -57,7 +57,7 @@ PyTorch의 동적 unused-parameter 계약에 따라 두 단계 DDP는 `find_unus
 | `tools/train_role_experiment.py` | 기본 read-only validate, 명시적 smoke/train, 기존 경로 덮어쓰기 거부·timeout·자신의 자손 정리 |
 | `tests/test_role_experiment.py` | 원본 회귀·실제 sampler·부분 배치·합성108step·두 CPU rank·저장/평가/실패 검사 |
 
-`baseline240_source`의5파일을 기존 manifest SHA로 확인하고 정상 import 가능한 `baseline240_source.data_loaders` 이름으로 사용한다. 실행 중인 원본·short32 snapshot, 원래 `ModelTrainer.train`, 기존 B/C/native 경로는 건드리지 않는다. 이 경로는 동일한 원본 흐름을 명시적인 역할 선택으로 구현한 새 trainer이며 원본 함수를 무수정 호출한다고 설명하지 않는다.
+`baseline240_source`의5파일을 기존 manifest SHA로 확인하고 정상 import 가능한 `baseline240_source.data_loaders` 이름으로 사용한다. 실행 중인 원본·짧은 정상 음성의 3.0275초·2초 정렬 학습 snapshot, 원래 `ModelTrainer.train`, 기존 4.0375초 상한 비반복 학습과 원음 전체 비반복 학습/native 경로는 건드리지 않는다. 이 경로는 동일한 원본 흐름을 명시적인 역할 선택으로 구현한 새 trainer이며 원본 함수를 무수정 호출한다고 설명하지 않는다.
 
 실제 학습 입력은 원본64,600/48,440sample·부족하면 wrap·독립 RawBoost0~8·codec-off다. global240·두 GPU·보통12bona+108spoof/rank를 유지한다.106번째72행·마지막114행과 작은 loader 순환도 유지한다. 일반 spoof pair는108×108, 부분 spoof60일 때60×60이다. 전체 pair mean이므로81배 계수를 추가하지 않는다.
 

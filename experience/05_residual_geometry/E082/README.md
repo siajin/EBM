@@ -1,4 +1,6 @@
-# E082. 2019 LA 학습 음성의 XLS-R 마지막 층 전체 특징 직접 저장
+<a id="e082-2019-la-학습-음성의-xls-r-마지막-층-전체-특징-직접-저장"></a>
+
+# 2019 LA 학습 음성의 XLS-R 마지막 층 전체 특징 직접 저장
 
 **실행 상태:** 실제 추출·수신 완료
 
@@ -43,17 +45,17 @@ F:/IRLab/XLSR/19LA_train_last_20261105_01의 status/summary가 complete 이고 �
 
 ## 실험 코드
 
-- [artifacts/geometry_experiments/xlsr_last_layer_extract.py](code/artifacts/geometry_experiments/xlsr_last_layer_extract.py)
-- [artifacts/geometry_experiments/receive_xlsr_last_layer.py](code/artifacts/geometry_experiments/receive_xlsr_last_layer.py)
+- [소스: xlsr_last_layer_extract.py](code/artifacts/geometry_experiments/xlsr_last_layer_extract.py)
+- [소스: receive_xlsr_last_layer.py](code/artifacts/geometry_experiments/receive_xlsr_last_layer.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [docs/experiments/19la_train_xlsr_last_20261105.md](../../_shared/references/docs/experiments/19la_train_xlsr_last_20261105.md)
-- [artifacts/geometry_experiments/xlsr_last_layer_extract.py](../../_shared/workspace/artifacts/geometry_experiments/xlsr_last_layer_extract.py)
-- [artifacts/geometry_experiments/receive_xlsr_last_layer.py](../../_shared/workspace/artifacts/geometry_experiments/receive_xlsr_last_layer.py)
-- [artifacts/experiment_methods_audit_20261111/last_hidden_export_receipt.json](../../_shared/references/artifacts/experiment_methods_audit_20261111/last_hidden_export_receipt.json)
+- [상세 설계·실험 기록](../../_shared/references/docs/experiments/19la_train_xlsr_last_20261105.md)
+- [소스: xlsr_last_layer_extract.py](../../_shared/workspace/artifacts/geometry_experiments/xlsr_last_layer_extract.py)
+- [소스: receive_xlsr_last_layer.py](../../_shared/workspace/artifacts/geometry_experiments/receive_xlsr_last_layer.py)
+- [설정·결과 근거](../../_shared/references/artifacts/experiment_methods_audit_20261111/last_hidden_export_receipt.json)
 
 ## 연결
 

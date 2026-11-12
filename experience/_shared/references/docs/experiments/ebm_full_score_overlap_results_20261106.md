@@ -1,3 +1,5 @@
+> 표시 명칭·링크 이름은 설명형으로 정리했다. 원래 코드·경로·수치는 그대로 보존한다.
+
 > 역사 문서 보존본. 원문 작성 당시의 상태·계획을 포함한다. 최신 상태와 확정 결과는 experience의 각 실험 README를 우선한다.
 
 # 같은 EBM 원점수의 정상·스푸프: 전체 캐시와 기존 변형 결과 확인
@@ -68,7 +70,7 @@ DF 엄격 6쌍을 원점수 구간별로 나눈 결과는 다음과 같다. 구�
 
 ## 4. 다음검증에필요한범위
 
-확인한것은C0(native overlap와기존반응coverage)이며,C1의확대된반응효과는아직측정하지않았다. 전체음성을새로추론할필요는없다. 잠근matched pair들의누락발화에서만후보변형을계산하면된다.
+확인한것은원음 전체 비반복 학습 0(native overlap와기존반응coverage)이며,원음 전체 비반복 학습 1의확대된반응효과는아직측정하지않았다. 전체음성을새로추론할필요는없다. 잠근matched pair들의누락발화에서만후보변형을계산하면된다.
 
 현재저장한엄격caliper0.02의최대쌍·최소원점수차이목록에서R2/R3반응이없는endpoint는DF935개,21LA187개,합계1,122개다. 이는**이선택된pair목록기준**이며추론량최소화까지최적화한절대최소값은아니다. 해당UID·원점수·metadata만포함한manifest를저장했으며작업을실행·예약하지않았다. native점수는이미있고,새로운추론이필요한것은반응이다.
 
@@ -76,9 +78,9 @@ DF 엄격 6쌍을 원점수 구간별로 나눈 결과는 다음과 같다. 구�
 
 ## 5. 재현과검수
 
-- 실행기: [check_full_score_overlap_20261106.py](../../../workspace/artifacts/geometry_experiments/check_full_score_overlap_20261106.py).
-- 독립검수: [verify_full_score_overlap_20261106.py](../../../workspace/artifacts/geometry_experiments/verify_full_score_overlap_20261106.py).
-- 정식결과v2: [overlap_and_coverage.csv](../../artifacts/geometry_cache/local_analysis/full_score_overlap_20261106_v2/overlap_and_coverage.csv), [existing_matched_responses.csv](../../artifacts/geometry_cache/local_analysis/full_score_overlap_20261106_v2/existing_matched_responses.csv), [score구간별반응](../../artifacts/geometry_cache/local_analysis/full_score_overlap_20261106_v2/existing_response_by_native_score.csv).
+- 실행기: [소스: check_full_score_overlap_20261106.py](../../../workspace/artifacts/geometry_experiments/check_full_score_overlap_20261106.py).
+- 독립검수: [소스: verify_full_score_overlap_20261106.py](../../../workspace/artifacts/geometry_experiments/verify_full_score_overlap_20261106.py).
+- 정식결과v2: [집계 결과 표](../../artifacts/geometry_cache/local_analysis/full_score_overlap_20261106_v2/overlap_and_coverage.csv), [집계 결과 표](../../artifacts/geometry_cache/local_analysis/full_score_overlap_20261106_v2/existing_matched_responses.csv), [score구간별반응](../../artifacts/geometry_cache/local_analysis/full_score_overlap_20261106_v2/existing_response_by_native_score.csv).
 - `../../artifacts/geometry_cache/local_analysis/full_score_overlap_20261106_v2/missing_endpoints_for_locked_strict_pairs.parquet` (원자료 경로; 배포 제외 또는 미확보, 출처 목록 참조).
 - [검수결과](../../artifacts/geometry_cache/local_analysis/full_score_overlap_20261106_v2/independent_verification.json).
 

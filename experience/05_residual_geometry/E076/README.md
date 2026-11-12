@@ -1,4 +1,6 @@
-# E076. 저점유 방향 제거 152~158개를 한 축씩 늘리는 정밀 비교
+<a id="e076-저점유-방향-제거-152158개를-한-축씩-늘리는-정밀-비교"></a>
+
+# 저점유 방향 제거 152~158개를 한 축씩 늘리는 정밀 비교
 
 **실행 상태:** 기존캐시 점수개입·독립 검수 완료
 
@@ -16,7 +18,7 @@
 
 ## 모델·데이터·표본
 
-[E075](../E075/README.md)에서 이미 정한 기저·순서를 재사용한다. DF 전체 533,928개 와 개발 선택 부분. 새기저 fit 없음.
+[학습 정상이 드물게 차지하는 방향 축부터 통째로 제거](../E075/README.md)에서 이미 정한 기저·순서를 재사용한다. DF 전체 533,928개 와 개발 선택 부분. 새기저 fit 없음.
 
 ## 실험 내용과 상세 절차
 
@@ -42,15 +44,15 @@ DFEER은 152~158 순서 3.149353/3.185765/3.181115/3.217361/3.349250/4.452216/5.
 
 ## 실험 코드
 
-- [EBM/tools/evaluate_low_occupancy_152_158.py](code/EBM/tools/evaluate_low_occupancy_152_158.py)
+- [소스: evaluate_low_occupancy_152_158.py](code/EBM/tools/evaluate_low_occupancy_152_158.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [artifacts/geometry_cache/local_analysis/low_occupancy_ablation_152_158_20261111_v1/plan.json](../../_shared/references/artifacts/geometry_cache/local_analysis/low_occupancy_ablation_152_158_20261111_v1/plan.json)
-- [artifacts/geometry_cache/local_analysis/low_occupancy_ablation_152_158_20261111_v1/DF_152_to_158.csv](../../_shared/references/artifacts/geometry_cache/local_analysis/low_occupancy_ablation_152_158_20261111_v1/DF_152_to_158.csv)
-- [artifacts/geometry_cache/local_analysis/low_occupancy_ablation_152_158_20261111_v1/validation.json](../../_shared/references/artifacts/geometry_cache/local_analysis/low_occupancy_ablation_152_158_20261111_v1/validation.json)
+- [설정·결과 근거](../../_shared/references/artifacts/geometry_cache/local_analysis/low_occupancy_ablation_152_158_20261111_v1/plan.json)
+- [집계 결과 표](../../_shared/references/artifacts/geometry_cache/local_analysis/low_occupancy_ablation_152_158_20261111_v1/DF_152_to_158.csv)
+- [검산 결과](../../_shared/references/artifacts/geometry_cache/local_analysis/low_occupancy_ablation_152_158_20261111_v1/validation.json)
 
 ## 연결
 

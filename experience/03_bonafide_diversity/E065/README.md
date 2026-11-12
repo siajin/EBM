@@ -1,4 +1,6 @@
-# E065. 틀린 정상 특징이 학습 위조 또는 평가 정상의 어디에 가까운지 조사
+<a id="e065-틀린-정상-특징이-학습-위조-또는-평가-정상의-어디에-가까운지-조사"></a>
+
+# 틀린 정상 특징이 학습 위조 또는 평가 정상의 어디에 가까운지 조사
 
 **실행 상태:** 최근접 참조 분석 완료
 
@@ -16,14 +18,14 @@
 
 ## 모델·데이터·표본
 
-배치 160 고정 모델의 학습 자료·DF 진단. [E064](../E064/README.md)와 같은 화자 분리 fold 에서 각 학습 부분의 정상/위조 참조를 사용한다.
+배치 160 고정 모델의 학습 자료·DF 진단. [정상 예시를 더 잘 대표하는 중심·이동·정규화 점수 7 종](../E064/README.md)와 같은 화자 분리 fold 에서 각 학습 부분의 정상/위조 참조를 사용한다.
 
 ## 실험 내용과 상세 절차
 
 1. 160차원 전체 z의 cosine 거리를 사용한다. 화면의 2차원 거리로 최근접을 정하지 않는다.
 2. 학습 자료 참조와 DF 바깥 학습 fold 참조 각각의 정상/위조 개수를 같게 ID 해시로 선택한다.
 3. 기존 임계값에서 틀린 정상·맞은 정상별로 최근접 1개 와 가까운 5개 평균 거리의 정상 우세 여부를 계산한다.
-4. 출처·길이·코덱 공통 조건을 분해하고 다음 [E066](../E066/README.md)의 다른 오류 정의에서도 다시 검사한다.
+4. 출처·길이·코덱 공통 조건을 분해하고 다음 [DF 자체 EER 부근 오류 꼬리와 길이·최근접·음향 특성 재검토](../E066/README.md)의 다른 오류 정의에서도 다시 검사한다.
 
 ## 측정과 검증
 
@@ -43,15 +45,15 @@
 
 ## 실험 코드
 
-- [artifacts/geometry_experiments/trace_normal_neighborhoods.py](code/artifacts/geometry_experiments/trace_normal_neighborhoods.py)
+- [소스: trace_normal_neighborhoods.py](code/artifacts/geometry_experiments/trace_normal_neighborhoods.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [artifacts/geometry_cache/local_analysis/normal_cause_audit_v1/neighborhood_lock.json](../../_shared/references/artifacts/geometry_cache/local_analysis/normal_cause_audit_v1/neighborhood_lock.json)
-- [artifacts/geometry_cache/local_analysis/normal_cause_audit_v1/neighborhood_complete.json](../../_shared/references/artifacts/geometry_cache/local_analysis/normal_cause_audit_v1/neighborhood_complete.json)
-- [artifacts/geometry_experiments/trace_normal_neighborhoods.py](../../_shared/workspace/artifacts/geometry_experiments/trace_normal_neighborhoods.py)
+- [설정·결과 근거](../../_shared/references/artifacts/geometry_cache/local_analysis/normal_cause_audit_v1/neighborhood_lock.json)
+- [설정·결과 근거](../../_shared/references/artifacts/geometry_cache/local_analysis/normal_cause_audit_v1/neighborhood_complete.json)
+- [소스: trace_normal_neighborhoods.py](../../_shared/workspace/artifacts/geometry_experiments/trace_normal_neighborhoods.py)
 
 ## 연결
 

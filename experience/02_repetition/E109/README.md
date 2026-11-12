@@ -1,4 +1,6 @@
-# E109. 같은 저에너지 내부 개입을 다섯 저장 모델에 반복한 대조
+<a id="e109-같은-저에너지-내부-개입을-다섯-저장-모델에-반복한-대조"></a>
+
+# 같은 저에너지 내부 개입을 다섯 저장 모델에 반복한 대조
 
 **실행 상태:** 기존 실제 결과 확인·문서화 완료
 
@@ -20,7 +22,7 @@
 
 ## 실험 내용과 상세 절차
 
-1. [E108](../../05_residual_geometry/E108/README.md)의 같은 무작위 96개를 사용한다. 원래 80epoch 학습의 65/70/75/80epoch와 배치 160·50epoch 모델을 읽는다.
+1. [저에너지 시간 위치와 나머지 XLS-R 특징을 교체·제외한 내부 개입](../../05_residual_geometry/E108/README.md)의 같은 무작위 96개를 사용한다. 원래 80epoch 학습의 65/70/75/80epoch와 배치 160·50epoch 모델을 읽는다.
 2. 각 파일·모델에서 같은 원본/변형/위치 교체·제외 조건과 잡음 0을 적용한다. XLS-R 고정 경로는 공통 사용한다.
 3. 모델별 정상 기준 코사인 변화·최종 특징 이동을 계산하고 체크포인트 해시와 원래 80epoch 점수 재현을 검사한다.
 
@@ -42,13 +44,13 @@
 
 ## 실험 코드
 
-- [historical_analysis/bpl_frozen_replication_20261030_v1.py](code/bpl_frozen_replication_20261030_v1.py)
+- [소스: bpl_frozen_replication_20261030_v1.py](code/bpl_frozen_replication_20261030_v1.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [artifacts/experiment_methods_audit_20261111/historical_receipts/EBM80_BPL_frozen_audit_20261030_v1.json](../../_shared/references/artifacts/experiment_methods_audit_20261111/historical_receipts/EBM80_BPL_frozen_audit_20261030_v1.json)
+- [설정·결과 근거](../../_shared/references/artifacts/experiment_methods_audit_20261111/historical_receipts/EBM80_BPL_frozen_audit_20261030_v1.json)
 
 ## 연결
 

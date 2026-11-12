@@ -1,4 +1,6 @@
-# E077. 공개 예시 음성 네 개의 비음성 구간·0 값·파형 측정
+<a id="e077-공개-예시-음성-네-개의-비음성-구간0-값파형-측정"></a>
+
+# 공개 예시 음성 네 개의 비음성 구간·0 값·파형 측정
 
 **실행 상태:** 예시 측정 완료·모집단 실험 아님
 
@@ -42,16 +44,16 @@
 
 ## 실험 코드
 
-- [artifacts/silence_analysis/analyze_silence.py](code/artifacts/silence_analysis/analyze_silence.py)
+- [소스: analyze_silence.py](code/artifacts/silence_analysis/analyze_silence.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [artifacts/silence_analysis/sources.json](../../_shared/references/artifacts/silence_analysis/sources.json)
-- [artifacts/silence_analysis/measurements.json](../../_shared/references/artifacts/silence_analysis/measurements.json)
-- [artifacts/silence_analysis/zoom_measurements.json](../../_shared/references/artifacts/silence_analysis/zoom_measurements.json)
-- [artifacts/silence_analysis/vad_intervals.csv](../../_shared/references/artifacts/silence_analysis/vad_intervals.csv)
+- [설정·결과 근거](../../_shared/references/artifacts/silence_analysis/sources.json)
+- [설정·결과 근거](../../_shared/references/artifacts/silence_analysis/measurements.json)
+- [설정·결과 근거](../../_shared/references/artifacts/silence_analysis/zoom_measurements.json)
+- [집계 결과 표](../../_shared/references/artifacts/silence_analysis/vad_intervals.csv)
 
 ## 연결
 

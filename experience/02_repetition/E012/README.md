@@ -1,4 +1,6 @@
-# E012. 같은 768개 원음의 반복 여부를 두 모델에 교차 적용
+<a id="e012-같은-768개-원음의-반복-여부를-두-모델에-교차-적용"></a>
+
+# 같은 768개 원음의 반복 여부를 두 모델에 교차 적용
 
 **실행 상태:** 추론·분석 완료
 
@@ -16,7 +18,7 @@
 
 ## 모델·데이터·표본
 
-배치 240 원래 모델과 B의 50epoch. 19LA·21LA·DF 각각 정상/위조 ×4 길이 구간에서 32개 씩, 총 768개 원음.
+배치 240 원래 모델과 4.0375초 상한 비반복 학습의 50epoch. 19LA·21LA·DF 각각 정상/위조 ×4 길이 구간에서 32개 씩, 총 768개 원음.
 
 ## 실험 내용과 상세 절차
 
@@ -31,7 +33,7 @@
 
 ## 결과
 
-DF<2초 정상 32개에서 원래 240은 반복을 없애면 평균 기준 각 52.364 →4.086°로 가까워졌고, B는 6.966 →43.190° 로 멀어졌다. 모델에 따라 반응이 반대였다.
+DF<2초 정상 32개에서 배치 240 고정 길이 반복 입력 학습은 반복을 없애면 평균 기준 각 52.364 →4.086°로 가까워졌고, 4.0375초 상한 비반복 학습은 6.966 →43.190° 로 멀어졌다. 모델에 따라 반응이 반대였다.
 
 ## 해석·실패한 부분·한계
 
@@ -39,21 +41,21 @@ DF<2초 정상 32개에서 원래 240은 반복을 없애면 평균 기준 각 5
 
 ## 배운 점
 
-기존240과 B의 반응이 반대였다. 반복 입력을 모든 모델에 유해하거나 유익한 것으로 일반화할 수 없다.
+배치 240 고정 길이 반복 입력 학습과 4.0375초 상한 비반복 학습의 반응이 반대였다. 반복 입력을 모든 모델에 유해하거나 유익한 것으로 일반화할 수 없다.
 
 ## 실험 코드
 
-- [historical_analysis/geometry_B_intervention.py](code/geometry_B_intervention.py)
-- [artifacts/ebm_git_private_20261106/render_B_final_analysis.py](code/artifacts/ebm_git_private_20261106/render_B_final_analysis.py)
+- [학습 모델과 추론 반복 정책의 교차 개입 코드](code/geometry_B_intervention.py)
+- [고정 길이 반복 학습과 비반복 학습의 결과 시각화 코드](code/artifacts/ebm_git_private_20261106/render_B_final_analysis.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [docs/experiments/ebm_B_final_results_20261108.md](../../_shared/references/docs/experiments/ebm_B_final_results_20261108.md)
-- [artifacts/geometry_cache/local_analysis/B_final_analysis_20261108_v1/mechanism_2x2/protocol.json](../../_shared/references/artifacts/geometry_cache/local_analysis/B_final_analysis_20261108_v1/mechanism_2x2/protocol.json)
-- [artifacts/geometry_cache/local_analysis/B_final_analysis_20261108_v1/analysis/geometry_statistics.json](../../_shared/references/artifacts/geometry_cache/local_analysis/B_final_analysis_20261108_v1/analysis/geometry_statistics.json)
-- [artifacts/repetition_shortcut_20261111/cached_paired_interventions.csv](../../_shared/references/artifacts/repetition_shortcut_20261111/cached_paired_interventions.csv)
+- [상세 설계·실험 기록](../../_shared/references/docs/experiments/ebm_B_final_results_20261108.md)
+- [설정·결과 근거](../../_shared/references/artifacts/geometry_cache/local_analysis/B_final_analysis_20261108_v1/mechanism_2x2/protocol.json)
+- [설정·결과 근거](../../_shared/references/artifacts/geometry_cache/local_analysis/B_final_analysis_20261108_v1/analysis/geometry_statistics.json)
+- [집계 결과 표](../../_shared/references/artifacts/repetition_shortcut_20261111/cached_paired_interventions.csv)
 
 ## 연결
 

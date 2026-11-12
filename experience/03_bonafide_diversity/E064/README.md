@@ -1,4 +1,6 @@
-# E064. 정상 예시를 더 잘 대표하는 중심·이동·정규화 점수 7 종
+<a id="e064-정상-예시를-더-잘-대표하는-중심이동정규화-점수-7-종"></a>
+
+# 정상 예시를 더 잘 대표하는 중심·이동·정규화 점수 7 종
 
 **실행 상태:** 정상만 이용한 기준 추정·평가 완료
 
@@ -44,15 +46,15 @@ EER/AUROC·paired 차이·정상 train 수·fold 정합성.
 
 ## 실험 코드
 
-- [artifacts/geometry_experiments/test_normal_reference_mechanisms.py](code/artifacts/geometry_experiments/test_normal_reference_mechanisms.py)
+- [소스: test_normal_reference_mechanisms.py](code/artifacts/geometry_experiments/test_normal_reference_mechanisms.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [artifacts/geometry_experiments/test_normal_reference_mechanisms.py](../../_shared/workspace/artifacts/geometry_experiments/test_normal_reference_mechanisms.py)
-- [artifacts/geometry_cache/local_analysis/normal_cause_audit_v1/normal_reference_lock.json](../../_shared/references/artifacts/geometry_cache/local_analysis/normal_cause_audit_v1/normal_reference_lock.json)
-- [artifacts/geometry_cache/local_analysis/normal_cause_audit_v1/normal_reference_metrics.json](../../_shared/references/artifacts/geometry_cache/local_analysis/normal_cause_audit_v1/normal_reference_metrics.json)
+- [소스: test_normal_reference_mechanisms.py](../../_shared/workspace/artifacts/geometry_experiments/test_normal_reference_mechanisms.py)
+- [설정·결과 근거](../../_shared/references/artifacts/geometry_cache/local_analysis/normal_cause_audit_v1/normal_reference_lock.json)
+- [설정·결과 근거](../../_shared/references/artifacts/geometry_cache/local_analysis/normal_cause_audit_v1/normal_reference_metrics.json)
 
 ## 연결
 

@@ -1,4 +1,6 @@
-# E072. 특징 복제의 표준편차 배율과 평균·표준편차 경로 교체
+<a id="e072-특징-복제의-표준편차-배율과-평균표준편차-경로-교체"></a>
+
+# 특징 복제의 표준편차 배율과 평균·표준편차 경로 교체
 
 **실행 상태:** 실제 내부 개입·수학 검수 완료
 
@@ -16,7 +18,7 @@
 
 ## 모델·데이터·표본
 
-[E071](../E071/README.md)의 같은 471개·배치 160 모델. 원래 반복/비반복 두 forward의 최종 pooling 벡터와 비반복 XLS-R 특징을 메모리에서 사용한다.
+[출처별 같은 원음의 순환 반복·반사채움·비반복과 긴 원음 절단 대조](../E071/README.md)의 같은 471개·배치 160 모델. 원래 반복/비반복 두 forward의 최종 pooling 벡터와 비반복 XLS-R 특징을 메모리에서 사용한다.
 
 ## 실험 내용과 상세 절차
 
@@ -44,16 +46,16 @@
 
 ## 실험 코드
 
-- [artifacts/geometry_experiments/pooling_mechanism_sidecar.py](code/artifacts/geometry_experiments/pooling_mechanism_sidecar.py)
-- [artifacts/geometry_experiments/verify_padding_mechanisms.py](code/artifacts/geometry_experiments/verify_padding_mechanisms.py)
+- [소스: pooling_mechanism_sidecar.py](code/artifacts/geometry_experiments/pooling_mechanism_sidecar.py)
+- [소스: verify_padding_mechanisms.py](code/artifacts/geometry_experiments/verify_padding_mechanisms.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [artifacts/geometry_experiments/pooling_mechanism_sidecar.py](../../_shared/workspace/artifacts/geometry_experiments/pooling_mechanism_sidecar.py)
-- [docs/experiments/ebm_padding_context_mechanism_20261106.md](../../_shared/references/docs/experiments/ebm_padding_context_mechanism_20261106.md)
-- [artifacts/geometry_experiments/verify_padding_mechanisms.py](../../_shared/workspace/artifacts/geometry_experiments/verify_padding_mechanisms.py)
+- [소스: pooling_mechanism_sidecar.py](../../_shared/workspace/artifacts/geometry_experiments/pooling_mechanism_sidecar.py)
+- [상세 설계·실험 기록](../../_shared/references/docs/experiments/ebm_padding_context_mechanism_20261106.md)
+- [소스: verify_padding_mechanisms.py](../../_shared/workspace/artifacts/geometry_experiments/verify_padding_mechanisms.py)
 
 ## 연결
 

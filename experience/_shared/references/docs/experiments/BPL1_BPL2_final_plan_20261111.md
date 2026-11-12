@@ -1,8 +1,10 @@
+> 표시 명칭·링크 이름은 설명형으로 정리했다. 원래 코드·경로·수치는 그대로 보존한다.
+
 > 역사 문서 보존본. 원문 작성 당시의 상태·계획을 포함한다. 최신 상태와 확정 결과는 experience의 각 실험 README를 우선한다.
 
 # OC·BPL1·BPL2 최종 후보와 첫 조건부 길이 실험
 
-> **최신 상태: 2026-11-11 13:31KST 원본240+short32 v2 본학습 시작.** 기존사용자실행승인에따라검증기Git경로오류만새snapshot에서수정했고서버57검사·실제2GPU3step·저장/세집합smoke를통과했다.1epoch16/108양rank실제갱신·유한loss·frozenfrontend·고정소스불변을확인했다.원본학습함수와두DataLoader는유지하며5epoch마다저장검증후19LA,학습후저장checkpoint각21LA→DF/최소EER를기록한다.현재상태: [v2](../../artifacts/short32_train_20261111_v2/state.json).학습완료/EER완료아님.
+> **최신 상태: 2026-11-11 13:31KST 원본240+짧은 정상 음성의 3.0275초·2초 정렬 학습 v2 본학습 시작.** 기존사용자실행승인에따라검증기Git경로오류만새snapshot에서수정했고서버57검사·실제2GPU3step·저장/세집합smoke를통과했다.1epoch16/108양rank실제갱신·유한loss·frozenfrontend·고정소스불변을확인했다.원본학습함수와두DataLoader는유지하며5epoch마다저장검증후19LA,학습후저장checkpoint각21LA→DF/최소EER를기록한다.현재상태: [v2](../../artifacts/short32_train_20261111_v2/state.json).학습완료/EER완료아님.
 
 작성: 2026-11-11 KST. 이전 종합 후보를 보존하고, 아래의 **사용자 선택 첫 실험**을 별도로 구분한다. 종합 후보 전체를 한 번에 학습하는 문서가 아니다.
 
@@ -17,11 +19,11 @@
 - 원음≤2초는 정상109/2580개다. 세 고정길이는 같은 원음 정보를 반복하므로 2초추가가 새로운 독립음성정보를 늘리는 것은 아니다. 정상오류와 함께 짧은스푸프·A10/A11누락을 검사한다.
 - **새실험실행은계속보류**다. 이전5/4-4/3코드초안은이3/2설계를구현하지않으며그코드로대신실행하지않는다.
 
-상세기록: [selected_short32_plan.json](../../artifacts/bpl_three_view_design_20261111/selected_short32_plan.json).
+상세기록: [설정·결과 근거](../../artifacts/bpl_three_view_design_20261111/selected_short32_plan.json).
 
 ### 구현·검증 기록
 
-최신 실행 경로는 [short32_original240.py](../../../../../short32_original240.py)다. 원본 소스5개를 [manifest](../../../../../baseline240_source/manifest.json)로 검증하며 원래 두 DataLoader와 full-graph `ModelTrainer.train`을 그대로 호출한다. Dataset의3값 출력, 각 클래스 sampler, 작은loader순환, 부분배치, 독립RawBoost, backend→OC중심의두단계Adam은 유지한다. 이전 합성batch/replay 경로는 실행 경로에서 제거했다.
+최신 실행 경로는 [실험 구현·검증 소스](../../../../../short32_original240.py)다. 원본 소스5개를 [manifest](../../../../../baseline240_source/manifest.json)로 검증하며 원래 두 DataLoader와 full-graph `ModelTrainer.train`을 그대로 호출한다. Dataset의3값 출력, 각 클래스 sampler, 작은loader순환, 부분배치, 독립RawBoost, backend→OC중심의두단계Adam은 유지한다. 이전 합성batch/replay 경로는 실행 경로에서 제거했다.
 
 정상 원음 길이와 원본 sampler 순서를 읽기 전용으로 대응해 추가손실 대상을 판정한다. 추가2초view는 이미 증강된 원래3초view의 앞32,000sample이다. 추가backend난수는 별도fork_rng로 분리해 원래4/3·OC중심·worker seed의 흐름을 보존한다.
 
@@ -57,7 +59,7 @@
 - 기존 BPL: 원래 약4초/약3초 view 및 독립 RawBoost, GPU당 정상12×12쌍(부분 배치는 실제 정상 수의 제곱).
 - BPL2: 같은 UID의 조건부 5/4 또는4/3쌍, 정상 anchor당 한 쌍. 긴 참조 embedding은 stop-gradient, 짧은 쪽에만 직접 역전파한다. 별도 teacher 모델은 없다.
 - BPL2 짧은 입력은 긴 입력 안의 연속 구간으로 만든다. 가능한 경우 인위적 반복 경계 없이 원래 구간 안에서 선택한다. 증강 파형의 해당 구간을 그대로 잘라 길이 외 차이를 줄인다.
-- 기존 RawBoost0~8 유지, codec/speed/tempo 증강·새 VAD 재표집 정책 없음. mild 변형 캐시를 이 실험의 학습 원음으로 사용하지 않는다.
+- 기존 RawBoost0~8 유지, codec/speed/tempo 증강·새 VAD 재표집 정책 없음. 속도 0.8~1.2배·최대 20% 절단 변형 변형 캐시를 이 실험의 학습 원음으로 사용하지 않는다.
 - global OC batch240, GPU당 정상12/스푸프108, 동일 원음 sampler·부분 배치·optimizer두 단계·frozen XLSR·lr1e-5·원래 scheduler 유지.
 - 추가 view는 OC 배치를 늘리는 것이 아니다. 실제 파형 수/프레임/메모리는 별도로 기록한다.
 - BPL 계수는 처음부터 0.5/0.5. 종합 후보의 0.75/0.25와 warm-up 제안은 이번에 자동 적용하지 않는다.
@@ -72,11 +74,11 @@ dev 새 평가는 없다. checkpoint5/10/.../50은 평가 전에 원자적으로
 
 ## 이전 종합 후보: OC + BPL1 + BPL2
 
-이 절은 사용자가 먼저 Markdown으로 저장해 달라고 한 종합 설계의 보존본이다. 세부 기계 판독 명세는 [specification.json](../../artifacts/bpl1_bpl2_final_design_20261111/specification.json)에 있다.
+이 절은 사용자가 먼저 Markdown으로 저장해 달라고 한 종합 설계의 보존본이다. 세부 기계 판독 명세는 [설정·결과 근거](../../artifacts/bpl1_bpl2_final_design_20261111/specification.json)에 있다.
 
 ### OC
 
-기존240의 정상/스푸프 판별을 유지한다. OC 입력 분포까지 강제로 짧게 바꾸지 않는다. 원래 정상/스푸프 클래스 배치, OC 중심과 두 단계 Adam, frozen SSL을 유지한다.
+배치 240 고정 길이 반복 입력 학습의 정상/스푸프 판별을 유지한다. OC 입력 분포까지 강제로 짧게 바꾸지 않는다. 원래 정상/스푸프 클래스 배치, OC 중심과 두 단계 Adam, frozen SSL을 유지한다.
 
 ### BPL1: 같은 화자의 다른 정상 발화
 
@@ -96,8 +98,8 @@ dev 새 평가는 없다. checkpoint5/10/.../50은 평가 전에 원자적으로
 
 ## 분석·연구 근거
 
-- 완료된 coverage20은 목표 입력의80%가2초 이하인 강한 단문 정책이었다. 길이 보정 후에도 성능 저하가 남았고 A10/A11의 문제가 같은 길이 안에서도 관측됐다. 이를 ‘크롭이 원인’이라는 단일 인과 결론으로 취급하지 않는다.
-- 기존240 보관 소표본의21LA<2초 정상오류는 비반복3/32→반복8/32, 스푸프 누락은6/32→0/32였다. 반복은 양쪽을 스푸프 방향으로 밀었다. 새로운 전체 반복·dose진단 결과와 구분한다.
+- 완료된 길이·음성활동·원음 전수 노출을 맞춘 20epoch 학습은 목표 입력의80%가2초 이하인 강한 단문 정책이었다. 길이 보정 후에도 성능 저하가 남았고 A10/A11의 문제가 같은 길이 안에서도 관측됐다. 이를 ‘크롭이 원인’이라는 단일 인과 결론으로 취급하지 않는다.
+- 배치 240 고정 길이 반복 입력 학습 보관 소표본의21LA<2초 정상오류는 비반복3/32→반복8/32, 스푸프 누락은6/32→0/32였다. 반복은 양쪽을 스푸프 방향으로 밀었다. 새로운 전체 반복·dose진단 결과와 구분한다.
 - Train2초 이하 비율은 정상4.22%/스푸프14.07%지만, long반복 필요 비율은 정상77.67%/스푸프72.83%다. 반복 여부와 반복 정도를 구분해야 한다.
 - [EBM, Interspeech2025](https://www.isca-archive.org/interspeech_2025/kim25g_interspeech.pdf): Sec3.1·4·5.2/Table2 확인. EOC-S에BPL 추가 시21LA1.41→1.21%, DF2.12→1.89%. 논문 대응 쌍과 로컬 전체쌍 구현, 배치·학습량 차이를 구분한다.
 - [AASIST2](https://arxiv.org/pdf/2309.08279): Sec2.2·4/Table1 확인. DCS의4초평가 LA1.76→1.08%, DF4.38→7.14%. 길이 변형의 효과가 데이터셋별로 다르다.
@@ -105,4 +107,4 @@ dev 새 평가는 없다. checkpoint5/10/.../50은 평가 전에 원자적으로
 - [Speaker-Invariant Representation Learning, Odyssey2026](https://www.isca-archive.org/odyssey_2026/dao26_odyssey.pdf): Sec3~5/Table1 확인. ASV5학습·9OOD집합 통합EER13.67→10.15%. 화자 편향 억제도 유효할 수 있으나 추가 teacher/GRL/VIB와 다른 데이터 조건이다. BPL1의 효과를 직접 입증하지 않는다.
 - [Speaker Identity 영향, 2026 preprint](https://arxiv.org/pdf/2602.20805): ASV5학습·21LA hidden의A11 EER17.02→8.76%. 우리 A11 오류의 원인이 화자라는 증명은 아니다.
 
-원문 실험 위치와 제한은 [evidence_review.json](../../artifacts/bpl1_bpl2_final_design_20261111/evidence_review.json)에 기록했다. 새로운 설계를 확정 성능으로 보고하지 않는다.
+원문 실험 위치와 제한은 [설정·결과 근거](../../artifacts/bpl1_bpl2_final_design_20261111/evidence_review.json)에 기록했다. 새로운 설계를 확정 성능으로 보고하지 않는다.

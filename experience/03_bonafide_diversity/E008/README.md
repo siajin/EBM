@@ -1,4 +1,6 @@
-# E008. 기존 학습들의 배치·정상 쌍 수·학습 진행량 비교
+<a id="e008-기존-학습들의-배치정상-쌍-수학습-진행량-비교"></a>
+
+# 기존 학습들의 배치·정상 쌍 수·학습 진행량 비교
 
 **실행 상태:** 기록 분석 완료
 
@@ -16,7 +18,7 @@
 
 ## 모델·데이터·표본
 
-[E001](../E001/README.md)~[E005](../../02_repetition/E005/README.md)의 보관 설정·손실 로그·EER 기록. 새 음성 추론·학습 없음.
+[배치 80·80epoch의 초기 반복 입력 학습](../E001/README.md)~[배치 240·원래 반복 입력·GPU 별 정상 쌍 학습](../../02_repetition/E005/README.md)의 보관 설정·손실 로그·EER 기록. 새 음성 추론·학습 없음.
 
 ## 실험 내용과 상세 절차
 
@@ -43,17 +45,17 @@ GPU 간 공유는 쌍 수를 늘렸지만 19LA 최소는 로컬보다 높고 21L
 
 ## 실험 코드
 
-- [artifacts/analysis/plot_ebm_all_runs_20261104.py](code/artifacts/analysis/plot_ebm_all_runs_20261104.py)
-- [artifacts/analysis/plot_ebm_bpl_comparison.py](code/artifacts/analysis/plot_ebm_bpl_comparison.py)
-- [artifacts/analysis/plot_ebm_diagnosis_20261104.py](code/artifacts/analysis/plot_ebm_diagnosis_20261104.py)
-- [artifacts/analysis/plot_ebm_three_runs_paper.py](code/artifacts/analysis/plot_ebm_three_runs_paper.py)
+- [소스: plot_ebm_all_runs_20261104.py](code/artifacts/analysis/plot_ebm_all_runs_20261104.py)
+- [소스: plot_ebm_bpl_comparison.py](code/artifacts/analysis/plot_ebm_bpl_comparison.py)
+- [소스: plot_ebm_diagnosis_20261104.py](code/artifacts/analysis/plot_ebm_diagnosis_20261104.py)
+- [소스: plot_ebm_three_runs_paper.py](code/artifacts/analysis/plot_ebm_three_runs_paper.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [artifacts/analysis/ebm-all-runs-comparison-20261104.json](../../_shared/references/artifacts/analysis/ebm-all-runs-comparison-20261104.json)
-- [artifacts/analysis/ebm-performance-diagnosis-20261104.json](../../_shared/references/artifacts/analysis/ebm-performance-diagnosis-20261104.json)
+- [설정·결과 근거](../../_shared/references/artifacts/analysis/ebm-all-runs-comparison-20261104.json)
+- [설정·결과 근거](../../_shared/references/artifacts/analysis/ebm-performance-diagnosis-20261104.json)
 
 ## 연결
 

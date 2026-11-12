@@ -17,13 +17,13 @@ ASVspoof2019 Train25380(정상2580/위조22800),공식eval19LA71237·21LA148176�
 |계열|실제 코드|역사 구성과 구분|
 |---|---|---|
 |초기80/160/전역160/240/실패320|각실험code/snapshots의main.py·arguments.py·train.py|당시고정길이64600/48440·wrap·로컬또는전역BPL|
-|B/C|E006/E007의frozen snapshot,루트native_steps.py|비반복·mask·분할gradient replay·B/C의long상한차이|
+|4.0375초 상한 비반복 학습과 원음 전체 비반복 학습|E006/E007의frozen snapshot,루트native_steps.py|비반복·mask·분할gradient replay·4.0375초 상한 비반복 학습과 원음 전체 비반복 학습의long상한차이|
 |coverage|tools/train_coverage_experiment.py,positive_bpl.py|길이·VAD·coverage정책과독립오른쪽정상stream|
-|mild원본240|tools/train_baseline240_mild.py,baseline240_mild.py|실패v1/v2snapshot을각각보존|
-|short32|tools/run_short32_experiment.py,short32_original240.py,short32_lifecycle.py|원본240hook·대상행조건부재가중·save-first|
+|속도 0.8~1.2배·최대 20% 절단 변형원본240|tools/train_baseline240_mild.py,baseline240_mild.py|실패v1/v2snapshot을각각보존|
+|짧은 정상 음성의 3.0275초·2초 정렬 학습|tools/run_short32_experiment.py,short32_original240.py,short32_lifecycle.py|원본240hook·대상행조건부재가중·save-first|
 |역할전환|tools/train_role_experiment.py,role_*.py|기본validate;실제GPUsmoke/train미실행|
 
-현재main.py 기본설정은C/native계열의개발기본값이다. 과거원본240재현은그대로main.py를실행하는대신실험snapshot을사용한다. 같은결과이름재실행시원본로거가결과를삭제할수있으므로재현은새고유root를사용한다. 취소한paired watcher·대기는재활성화하지않는다.
+현재main.py 기본설정은원음 전체 비반복 학습/native계열의개발기본값이다. 과거원본240재현은그대로main.py를실행하는대신실험snapshot을사용한다. 같은결과이름재실행시원본로거가결과를삭제할수있으므로재현은새고유root를사용한다. 취소한paired watcher·대기는재활성화하지않는다.
 
 역할전환의코드·metadata사전검사는다음처럼명시적으로확인할수있다(학습실행아님).
 

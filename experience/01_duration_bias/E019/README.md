@@ -1,4 +1,6 @@
-# E019. 같은 표본에서 두 속도 변형 알고리즘을 직접 비교
+<a id="e019-같은-표본에서-두-속도-변형-알고리즘을-직접-비교"></a>
+
+# 같은 표본에서 두 속도 변형 알고리즘을 직접 비교
 
 **실행 상태:** 추론 완료
 
@@ -10,13 +12,13 @@
 
 ## 그렇게 설계한 이유
 
-[E018](../E018/README.md)의 실패가 속도 변경 자체인지 특정 변형 알고리즘에 민감한지 본다.
+[고정 모델에서 길이 정규화와 속도 변형 비교](../E018/README.md)의 실패가 속도 변경 자체인지 특정 변형 알고리즘에 민감한지 본다.
 
 대조와 통제의 근거: pooling 잡음 0. 모델 갱신 없음. atempo 전체 →약 4초는 실제 3.4331875~4.061875초로 정확 4.0375초 대조가 아니다.
 
 ## 모델·데이터·표본
 
-[E018](../E018/README.md)에서 각 집합 × 클래스 × 길이 구간마다 메타데이터 순서 2개 씩, 총 64개(정상 32·위조 32). 같은 세 50epoch 모델.
+[고정 모델에서 길이 정규화와 속도 변형 비교](../E018/README.md)에서 각 집합 × 클래스 × 길이 구간마다 메타데이터 순서 2개 씩, 총 64개(정상 32·위조 32). 같은 세 50epoch 모델.
 
 ## 실험 내용과 상세 절차
 
@@ -30,7 +32,7 @@
 
 ## 결과
 
-B 정상 32개에서 원본 거부 2개,0.8배 phase-vocoder31개,0.8배 atempo2개. atempo1.25배 5개, 왕복 2개, 전체 →약 4초 7개였다.
+4.0375초 상한 비반복 학습 정상 32개에서 원본 거부 2개,0.8배 phase-vocoder31개,0.8배 atempo2개. atempo1.25배 5개, 왕복 2개, 전체 →약 4초 7개였다.
 
 ## 해석·실패한 부분·한계
 
@@ -42,16 +44,16 @@ atempo와 phase-vocoder가 크게 달랐다. 변형 알고리즘과 실제 출�
 
 ## 실험 코드
 
-- [EBM/tools/diagnose_speed_atempo.py](code/EBM/tools/diagnose_speed_atempo.py)
-- [artifacts/speed_duration_feasibility_20261109/write_report.py](code/artifacts/speed_duration_feasibility_20261109/write_report.py)
+- [소스: diagnose_speed_atempo.py](code/EBM/tools/diagnose_speed_atempo.py)
+- [소스: write_report.py](code/artifacts/speed_duration_feasibility_20261109/write_report.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [docs/experiments/ebm_B_C_all_checkpoint_evaluation_20261109.md](../../_shared/references/docs/experiments/ebm_B_C_all_checkpoint_evaluation_20261109.md)
-- [artifacts/speed_duration_feasibility_20261109/state.json](../../_shared/references/artifacts/speed_duration_feasibility_20261109/state.json)
-- [artifacts/speed_duration_feasibility_20261109/write_report.py](../../_shared/workspace/artifacts/speed_duration_feasibility_20261109/write_report.py)
+- [상세 설계·실험 기록](../../_shared/references/docs/experiments/ebm_B_C_all_checkpoint_evaluation_20261109.md)
+- [설정·결과 근거](../../_shared/references/artifacts/speed_duration_feasibility_20261109/state.json)
+- [소스: write_report.py](../../_shared/workspace/artifacts/speed_duration_feasibility_20261109/write_report.py)
 
 ## 연결
 

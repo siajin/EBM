@@ -1,4 +1,6 @@
-# E040. 초기 개발 자료에서 점수·크기·옆 방향 특징을 읽는 분류기 비교
+<a id="e040-초기-개발-자료에서-점수크기옆-방향-특징을-읽는-분류기-비교"></a>
+
+# 초기 개발 자료에서 점수·크기·옆 방향 특징을 읽는 분류기 비교
 
 **실행 상태:** 추가 분류기 학습·평가 완료
 
@@ -16,13 +18,13 @@
 
 ## 모델·데이터·표본
 
-[E039](../../05_residual_geometry/E039/README.md)의 학습 자료 25,380에서 추가 분류기를 학습하고 개발 선택 14,983에서 평가한다. 기존 EBM 전체와 정상 기준 벡터는 고정한다.
+[고정 모델의 정규화 전후 특징 추출·전체 평가 캐시 구축](../../05_residual_geometry/E039/README.md)의 학습 자료 25,380에서 추가 분류기를 학습하고 개발 선택 14,983에서 평가한다. 기존 EBM 전체와 정상 기준 벡터는 고정한다.
 
 ## 실험 내용과 상세 절차
 
 1. 코사인 s에 5-knot·3차 spline을 학습 자료에서 fit 한다. 다섯 입력은 spline(s), 여기에 log ||z || 추가, 방향 유효 표시 추가, 실제 옆 방향 u160개 추가, u 대신 고정 단위 잡음 160개 추가다.
 2. 각 입력을 학습 자료 통계로 표준화하고 class-balanced L2 logistic regression을 C =0.01/0.1/1/10,lbfgs,max_iter2000,tol1e-6로 학습한다.
-3. 개발 자료의 화자를 seed 11로 다섯 묶음으로 나눈다. 한 묶음의 예측에 쓸 정규화 강도 C는 나머지 개발 화자들에서만 고른다. 추가 분류기의 파라미터는 학습 자료로 맞추며, 각 개발 발화는 자기 화자가 C 선택에 쓰이지 않은 예측을 받는다.
+3. 개발 자료의 화자를 seed 11로 다섯 묶음으로 나눈다. 한 묶음의 예측에 쓸 정규화 강도 원음 전체 비반복 학습은 나머지 개발 화자들에서만 고른다. 추가 분류기의 파라미터는 학습 자료로 맞추며, 각 개발 발화는 자기 화자가 원음 전체 비반복 학습 선택에 쓰이지 않은 예측을 받는다.
 4. 이상치 출력·미수렴·동점 ROC·라벨 정렬을 검사한다.2,000회 화자 bootstrap 으로 로그 손실 차이를 구한다.
 
 ## 측정과 검증
@@ -43,15 +45,15 @@
 
 ## 실험 코드
 
-- [artifacts/geometry_experiments/fast_analyze.py](code/artifacts/geometry_experiments/fast_analyze.py)
+- [소스: fast_analyze.py](code/artifacts/geometry_experiments/fast_analyze.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [artifacts/geometry_experiments/fast_analyze.py](../../_shared/workspace/artifacts/geometry_experiments/fast_analyze.py)
-- [artifacts/geometry_cache/local_analysis/910ba7e8d87b4cc1/metrics.csv](../../_shared/references/artifacts/geometry_cache/local_analysis/910ba7e8d87b4cc1/metrics.csv)
-- [artifacts/geometry_cache/local_analysis/910ba7e8d87b4cc1/verification.json](../../_shared/references/artifacts/geometry_cache/local_analysis/910ba7e8d87b4cc1/verification.json)
+- [소스: fast_analyze.py](../../_shared/workspace/artifacts/geometry_experiments/fast_analyze.py)
+- [집계 결과 표](../../_shared/references/artifacts/geometry_cache/local_analysis/910ba7e8d87b4cc1/metrics.csv)
+- [설정·결과 근거](../../_shared/references/artifacts/geometry_cache/local_analysis/910ba7e8d87b4cc1/verification.json)
 
 ## 연결
 

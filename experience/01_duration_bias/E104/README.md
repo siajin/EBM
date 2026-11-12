@@ -1,4 +1,6 @@
-# E104. 자연적인 앞 저에너지 길이를 읽는 특징 방향: −20dB와 안정성
+<a id="e104-자연적인-앞-저에너지-길이를-읽는-특징-방향-20db와-안정성"></a>
+
+# 자연적인 앞 저에너지 길이를 읽는 특징 방향: −20dB와 안정성
 
 **실행 상태:** 기존 실제 결과 확인·문서화 완료
 
@@ -16,11 +18,11 @@
 
 ## 모델·데이터·표본
 
-[E103](../E103/README.md)과 같은 기존 원음 전체 특징. 새 음성 추론·EBM 재학습 없이 회귀·분할·조건 조정만 수행했다.
+[자연적인 앞 저에너지 길이를 읽는 특징 방향: −40dB 정의](../E103/README.md)과 같은 기존 원음 전체 특징. 새 음성 추론·EBM 재학습 없이 회귀·분할·조건 조정만 수행했다.
 
 ## 실험 내용과 상세 절차
 
-1. [E103](../E103/README.md)과 같은 1,050개·화자 분리를 쓰되 기준을 최대 RMS의 10% 미만인 −20dB로 정한다.
+1. [자연적인 앞 저에너지 길이를 읽는 특징 방향: −40dB 정의](../E103/README.md)과 같은 1,050개·화자 분리를 쓰되 기준을 최대 RMS의 10% 미만인 −20dB로 정한다.
 2. 주 조건 조정에는 코덱·뒤 저에너지 길이·활성 RMS와 제곱만 넣는다. 목표 앞 길이에서 뺀 파생 길이는 넣지 않는다. 전체 길이와 제곱은 보조로만 조정한다.
 3. 같은 주 축을 유지하며 길이 정의만 −30/−40/−50dB로 바꿔 상관을 계산한다.
 4. 다른 화자 다섯 분할의 축·예측 상관·R², 단순 평균 변화 방향, 학습 PCA, 양의 길이와 1.5초 이하 범위를 검토한다.
@@ -43,15 +45,15 @@
 
 ## 실험 코드
 
-- [historical_analysis/natural_lowenergy_axis_db20.py](code/natural_lowenergy_axis_db20.py)
-- [historical_analysis/verify_natural_lowenergy_axis.py](code/verify_natural_lowenergy_axis.py)
+- [소스: natural_lowenergy_axis_db20.py](code/natural_lowenergy_axis_db20.py)
+- [소스: verify_natural_lowenergy_axis.py](code/verify_natural_lowenergy_axis.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [artifacts/experiment_methods_audit_20261111/historical_receipts/EBM80_ASV_bona_natural_lowenergy_axis_db20.json](../../_shared/references/artifacts/experiment_methods_audit_20261111/historical_receipts/EBM80_ASV_bona_natural_lowenergy_axis_db20.json)
-- [artifacts/experiment_methods_audit_20261111/historical_method_source_checks.json](../../_shared/references/artifacts/experiment_methods_audit_20261111/historical_method_source_checks.json)
+- [설정·결과 근거](../../_shared/references/artifacts/experiment_methods_audit_20261111/historical_receipts/EBM80_ASV_bona_natural_lowenergy_axis_db20.json)
+- [설정·결과 근거](../../_shared/references/artifacts/experiment_methods_audit_20261111/historical_method_source_checks.json)
 
 ## 연결
 

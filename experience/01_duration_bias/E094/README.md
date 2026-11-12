@@ -1,4 +1,6 @@
-# E094. 저에너지 구간의 길이·에너지를 유지한 미세 파형 구조 개입
+<a id="e094-저에너지-구간의-길이에너지를-유지한-미세-파형-구조-개입"></a>
+
+# 저에너지 구간의 길이·에너지를 유지한 미세 파형 구조 개입
 
 **실행 상태:** 기존 실제 결과 확인·문서화 완료
 
@@ -42,13 +44,13 @@
 
 ## 실험 코드
 
-- [historical_analysis/quiet_texture_21df.py](code/quiet_texture_21df.py)
+- [소스: quiet_texture_21df.py](code/quiet_texture_21df.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [artifacts/experiment_methods_audit_20261111/historical_receipts/EBM80_21DF_quiet_texture.json](../../_shared/references/artifacts/experiment_methods_audit_20261111/historical_receipts/EBM80_21DF_quiet_texture.json)
+- [설정·결과 근거](../../_shared/references/artifacts/experiment_methods_audit_20261111/historical_receipts/EBM80_21DF_quiet_texture.json)
 
 ## 연결
 

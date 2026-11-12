@@ -1,4 +1,6 @@
-# E099. 다른 출처·라벨의 저에너지 프레임을 이식한 실험
+<a id="e099-다른-출처라벨의-저에너지-프레임을-이식한-실험"></a>
+
+# 다른 출처·라벨의 저에너지 프레임을 이식한 실험
 
 **실행 상태:** 기존 실제 결과 확인·문서화 완료
 
@@ -20,7 +22,7 @@
 
 ## 실험 내용과 상세 절차
 
-1. ASVspoof·VCC2018·VCC2020별로 화자가 겹치지 않는 A/B 제공자 묶음을 만든다. 같은 출처·화자·코덱의 정상/위조 제공자를 맞춘다.
+1. ASVspoof·VCC2018·VCC2020별로 화자가 겹치지 않는 동일 구현의 반복 입력·비반복 입력 대조 제공자 묶음을 만든다. 같은 출처·화자·코덱의 정상/위조 제공자를 맞춘다.
 2. 원래 앞 저에너지 20ms 프레임에서 처음·끝 16샘플은 두고 내부 288샘플만 교체한다. 수신 프레임의 내부 평균·분산을 복원하며 다른 위치는 그대로 둔다.
 3. 수신 원음마다 최대 8개의 고유 제공 프레임과 같은 재사용 순서를 모든 12개 제공 조건에 공통 사용한다. 기준·무변형·자기 재사용·자기 섞기·가우시안 잡음 대조까지 총 17조건이다.
 4. 주비교는 같은 출처에서 정상 제공자−위조 제공자, 두 제공자 묶음 평균이다. 양쪽·두 묶음 모두 진폭 복원 10배 이하인 수신자만 주집단으로 삼고 전체 결과를 보조로 둔다.
@@ -44,14 +46,14 @@
 
 ## 실험 코드
 
-- [historical_analysis/quiet_donor_audit.py](code/quiet_donor_audit.py)
-- [historical_analysis/analyze_quiet_donor_audit.py](code/analyze_quiet_donor_audit.py)
+- [소스: quiet_donor_audit.py](code/quiet_donor_audit.py)
+- [소스: analyze_quiet_donor_audit.py](code/analyze_quiet_donor_audit.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [artifacts/experiment_methods_audit_20261111/historical_receipts/EBM80_quiet_donor_audit.json](../../_shared/references/artifacts/experiment_methods_audit_20261111/historical_receipts/EBM80_quiet_donor_audit.json)
+- [설정·결과 근거](../../_shared/references/artifacts/experiment_methods_audit_20261111/historical_receipts/EBM80_quiet_donor_audit.json)
 
 ## 연결
 

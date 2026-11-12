@@ -1,4 +1,6 @@
-# E113. short32 중단25epoch의21LA·DF 전체평가와 독립ROC 검산
+<a id="e113-short32-중단25epoch의21ladf-전체평가와-독립roc-검산"></a>
+
+# 짧은 정상 음성의 3.0275초·2초 정렬 학습 중단25epoch의21LA·DF 전체평가와 독립ROC 검산
 
 **실행 상태:** 전체평가·독립 검산 완료
 
@@ -6,17 +8,17 @@
 
 ## 가설
 
-원본240의조건부3/2초정렬이 같은epoch의B/C보다단음일반화를개선할수있다.
+원본240의조건부3/2초정렬이 같은epoch의4.0375초 상한 비반복 학습과 원음 전체 비반복 학습보다단음일반화를개선할수있다.
 
 ## 그렇게 설계한 이유
 
 초기5epoch의미확정상태를갱신하고 사용자가지정한25epoch의최종완료결과를 남긴다.
 
-대조와 통제의 근거: B/C의기본입력·점수정의는같지만별도평가실행난수다. [E026](../E026/README.md)과독립학습반복으로세지않는다. target에서사후최저epoch를고른평가가아니다.
+대조와 통제의 근거: 4.0375초 상한 비반복 학습과 원음 전체 비반복 학습의기본입력·점수정의는같지만별도평가실행난수다. [원음 2초 이하 정상에만 3.0275초·2초 손실을 더한 배치 240 고정 길이 반복 입력 학습 학습](../E026/README.md)과독립학습반복으로세지않는다. target에서사후최저epoch를고른평가가아니다.
 
 ## 모델·데이터·표본
 
-[E026](../E026/README.md)과같은한학습궤적의CLS25/TrainState25. 19LA71,237은저장된중간평가,21LA148,176·DF533,928은별도고정25 전체평가. checkpoint SHA53c6e963d76608a8b2490f531834822ace79832c315af0a15ec2ed1b77b7e8be.
+[원음 2초 이하 정상에만 3.0275초·2초 손실을 더한 배치 240 고정 길이 반복 입력 학습 학습](../E026/README.md)과같은한학습궤적의CLS25/TrainState25. 19LA71,237은저장된중간평가,21LA148,176·DF533,928은별도고정25 전체평가. checkpoint SHA53c6e963d76608a8b2490f531834822ace79832c315af0a15ec2ed1b77b7e8be.
 
 ## 실험 내용과 상세 절차
 
@@ -24,7 +26,7 @@
 2. 별도고유root에서 실제두GPU·rank별4worker smoke와19LA저장점수일치후21LA→DF전체평가를수행했다.
 3. 앞64600cap·비반복·마스크·batch8·seed1729·ASP잡음1e-5·학습OC중심cosine을사용했다. optimizer갱신0회다.
 4. 이번출판작업에서완료표식과metrics를읽고 파생점수만로컬메모리로받아682,104행의index·UID유일성·class분모·cap·유한값을검사하고동점ROC를독립재계산했다. 원음·모델·SSL출력은수신하지않았다.
-5. 같은epoch B25/C25와비교하며 역사적24025 반복평가는별도조건으로표시한다.
+5. 같은epoch 4.0375초 상한 비반복 학습 25/원음 전체 비반복 학습 25epoch 모델와비교하며 역사적24025 반복평가는별도조건으로표시한다.
 
 ## 측정과 검증
 
@@ -32,7 +34,7 @@
 
 ## 결과
 
-19LA1.2100611828687935%,21LA11.308488302339532%,DF5.427399287107404%. B25는0.788579/5.009748/2.512431%,C25는0.652617/5.248950/2.730513%. 세집합모두short32가나빴다.
+19LA1.2100611828687935%,21LA11.308488302339532%,DF5.427399287107404%. 4.0375초 상한 비반복 학습 25epoch 모델는0.788579/5.009748/2.512431%,원음 전체 비반복 학습 25epoch 모델는0.652617/5.248950/2.730513%. 세집합모두짧은 정상 음성의 3.0275초·2초 정렬 학습가나빴다.
 
 ## 해석·실패한 부분·한계
 
@@ -40,23 +42,23 @@
 
 ## 배운 점
 
-최종지정25epoch는세집합모두B/C25보다나빴다. 초기5epoch와최신완료를구분하고실패관측도보존한다.
+최종지정25epoch는세집합모두4.0375초 상한 비반복 학습/원음 전체 비반복 학습 25epoch 모델보다나빴다. 초기5epoch와최신완료를구분하고실패관측도보존한다.
 
 ## 실험 코드
 
-- [EBM/tools/evaluate_short32_fixed25.py](code/EBM/tools/evaluate_short32_fixed25.py)
-- [EBM/tools/analyze_short32_fixed25.py](code/EBM/tools/analyze_short32_fixed25.py)
+- [실험 구현·검증 소스](code/EBM/tools/evaluate_short32_fixed25.py)
+- [실험 구현·검증 소스](code/EBM/tools/analyze_short32_fixed25.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [EBM/tools/evaluate_short32_fixed25.py](../../../tools/evaluate_short32_fixed25.py)
-- [EBM/tools/analyze_short32_fixed25.py](../../../tools/analyze_short32_fixed25.py)
-- [artifacts/short32_train_20261111_v2/stop25_eval_status.json](../../_shared/references/artifacts/short32_train_20261111_v2/stop25_eval_status.json)
+- [실험 구현·검증 소스](../../../tools/evaluate_short32_fixed25.py)
+- [실험 구현·검증 소스](../../../tools/analyze_short32_fixed25.py)
+- [설정·결과 근거](../../_shared/references/artifacts/short32_train_20261111_v2/stop25_eval_status.json)
 - [최신25epoch 전체점수 독립검산](evidence/independent_audit.json)
-- [최신 metrics_21LA.json](evidence/metrics_21LA.json)
-- [최신 metrics_21DF.json](evidence/metrics_21DF.json)
+- [설정·결과 근거](evidence/metrics_21LA.json)
+- [설정·결과 근거](evidence/metrics_21DF.json)
 - [평가완료 표식](evidence/complete.json)
 
 ## 연결

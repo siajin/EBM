@@ -1,4 +1,6 @@
-# E078. 화자가 다른 정상 발화 정렬과 같은 원음의 보수적 길이 일관성 결합 안
+<a id="e078-화자가-다른-정상-발화-정렬과-같은-원음의-보수적-길이-일관성-결합-안"></a>
+
+# 화자가 다른 정상 발화 정렬과 같은 원음의 보수적 길이 일관성 결합 안
 
 **실행 상태:** 설계·메타데이터 가능성 점검만; 학습 미실행
 
@@ -16,7 +18,7 @@
 
 ## 모델·데이터·표본
 
-계획상 학습 자료 정상 2,580개·기존 240 구조. 실제 장기 학습·새 모듈 추론 결과는 없다.
+계획상 학습 자료 정상 2,580개·배치 240 고정 길이 반복 입력 학습 구조. 실제 장기 학습·새 모듈 추론 결과는 없다.
 
 ## 실험 내용과 상세 절차
 
@@ -45,13 +47,13 @@
 
 이 항목은 설계/예시/기존 기록 분석이다. 별도 실행 구현을 확보하지 못했거나 애초 구현하지 않았다. 아래 설정·설계·검산 근거를 보존했으며 실행 코드를 새로 꾸며 넣지 않았다.
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [docs/experiments/BPL1_BPL2_final_plan_20261111.md](../../_shared/references/docs/experiments/BPL1_BPL2_final_plan_20261111.md)
-- [artifacts/bpl1_bpl2_final_design_20261111/specification.json](../../_shared/references/artifacts/bpl1_bpl2_final_design_20261111/specification.json)
-- [artifacts/bpl1_bpl2_final_design_20261111/validation.json](../../_shared/references/artifacts/bpl1_bpl2_final_design_20261111/validation.json)
+- [상세 설계·실험 기록](../../_shared/references/docs/experiments/BPL1_BPL2_final_plan_20261111.md)
+- [설정·결과 근거](../../_shared/references/artifacts/bpl1_bpl2_final_design_20261111/specification.json)
+- [검산 결과](../../_shared/references/artifacts/bpl1_bpl2_final_design_20261111/validation.json)
 
 ## 연결
 

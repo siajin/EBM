@@ -46,7 +46,7 @@
   },
   {
     "id": "E006",
-    "title": "학습 길이 상한을 유지하면서 짧은 음성 반복을 제거한 학습(B)",
+    "title": "학습 길이 상한을 유지하면서 짧은 음성 반복을 제거한 학습",
     "theme": 2,
     "status": "학습 50epoch 완료",
     "report": "experience/02_repetition/E006/README.md",
@@ -55,7 +55,7 @@
   },
   {
     "id": "E007",
-    "title": "반복 없는 학습에서 긴 입력의 상한만 제거한 학습(C)",
+    "title": "반복 없는 학습에서 긴 입력의 상한만 제거한 학습",
     "theme": 1,
     "status": "학습 50epoch 완료",
     "report": "experience/01_duration_bias/E007/README.md",
@@ -217,7 +217,7 @@
   },
   {
     "id": "E025",
-    "title": "완만한 변형 캐시를 원래 240 학습에 연결한 두 실행",
+    "title": "완만한 변형 캐시를 배치 240 고정 길이 반복 입력 학습 학습에 연결한 두 실행",
     "theme": 1,
     "status": "1차 진입 실패·2차 평가 오류로 중단",
     "report": "experience/01_duration_bias/E025/README.md",
@@ -226,7 +226,7 @@
   },
   {
     "id": "E026",
-    "title": "원음 2초 이하 정상에만 3.0275초·2초 손실을 더한 원래 240 학습",
+    "title": "원음 2초 이하 정상에만 3.0275초·2초 손실을 더한 배치 240 고정 길이 반복 입력 학습 학습",
     "theme": 1,
     "status": "사용자 중단:25epoch 저장·19LA 완료·후속21LA/DF 전체 평가 완료",
     "report": "experience/01_duration_bias/E026/README.md",
@@ -1009,7 +1009,7 @@
   },
   {
     "id": "E113",
-    "title": "short32 중단25epoch의21LA·DF 전체평가와 독립ROC 검산",
+    "title": "짧은 정상 음성의 3.0275초·2초 정렬 학습 중단25epoch의21LA·DF 전체평가와 독립ROC 검산",
     "theme": 1,
     "status": "전체평가·독립 검산 완료",
     "report": "experience/01_duration_bias/E113/README.md",

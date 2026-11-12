@@ -1,4 +1,6 @@
-# E074. 틀린 정상의 옆 방향이 학습 정상 주축에 집중되는지 분석
+<a id="e074-틀린-정상의-옆-방향이-학습-정상-주축에-집중되는지-분석"></a>
+
+# 틀린 정상의 옆 방향이 학습 정상 주축에 집중되는지 분석
 
 **실행 상태:** 기존캐시 통계·독립 검수 완료
 
@@ -44,16 +46,16 @@ DF와21LA의 조건보정 차이 부호가 달랐다. 모든도메인에 같은�
 
 ## 실험 코드
 
-- [EBM/tools/analyze_bona_tangent_errors.py](code/EBM/tools/analyze_bona_tangent_errors.py)
-- [EBM/tools/verify_bona_tangent_errors.py](code/EBM/tools/verify_bona_tangent_errors.py)
+- [소스: analyze_bona_tangent_errors.py](code/EBM/tools/analyze_bona_tangent_errors.py)
+- [소스: verify_bona_tangent_errors.py](code/EBM/tools/verify_bona_tangent_errors.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [artifacts/geometry_cache/local_analysis/bona_tangent_errors_20261111_v1/plan.json](../../_shared/references/artifacts/geometry_cache/local_analysis/bona_tangent_errors_20261111_v1/plan.json)
-- [artifacts/geometry_cache/local_analysis/bona_tangent_errors_20261111_v1/findings.json](../../_shared/references/artifacts/geometry_cache/local_analysis/bona_tangent_errors_20261111_v1/findings.json)
-- [artifacts/geometry_cache/local_analysis/bona_tangent_errors_20261111_v1/independent_validation.json](../../_shared/references/artifacts/geometry_cache/local_analysis/bona_tangent_errors_20261111_v1/independent_validation.json)
+- [설정·결과 근거](../../_shared/references/artifacts/geometry_cache/local_analysis/bona_tangent_errors_20261111_v1/plan.json)
+- [설정·결과 근거](../../_shared/references/artifacts/geometry_cache/local_analysis/bona_tangent_errors_20261111_v1/findings.json)
+- [설정·결과 근거](../../_shared/references/artifacts/geometry_cache/local_analysis/bona_tangent_errors_20261111_v1/independent_validation.json)
 
 ## 연결
 

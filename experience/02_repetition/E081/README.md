@@ -1,4 +1,6 @@
-# E081. 네 모델·전체 체크포인트의 반복/비반복 공통 평가 준비와 실행 전 취소
+<a id="e081-네-모델전체-체크포인트의-반복비반복-공통-평가-준비와-실행-전-취소"></a>
+
+# 네 모델·전체 체크포인트의 반복/비반복 공통 평가 준비와 실행 전 취소
 
 **실행 상태:** 검사·분석 재현만 완료; 추가 GPU 평가 취소
 
@@ -16,7 +18,7 @@
 
 ## 모델·데이터·표본
 
-예정은 원래 240 보존 8개 +B10개 +C10개 +현재 학습 10개 =38 체크포인트,19LA/21LA/DF 전체. 실제 새 음성 점수는 없다.
+예정은 배치 240 고정 길이 반복 입력 학습 보존 8개 +4.0375초 상한 비반복 학습 10epoch 모델개 +원음 전체 비반복 학습 10epoch 모델개 +현재 학습 10개 =38 체크포인트,19LA/21LA/DF 전체. 실제 새 음성 점수는 없다.
 
 ## 실험 내용과 상세 절차
 
@@ -31,7 +33,7 @@
 
 ## 결과
 
-새 평가 점수 없음. 기존 두 모델 50epoch 전체 반복 진단 [E014](../E014/README.md)와 모든 38개 checkpoint 평가 계획은 다르다.
+새 평가 점수 없음. 기존 두 모델 50epoch 전체 반복 진단 [개발 전체와 21LA 전체에서 반복/비반복 입력을 직접 교차 평가](../E014/README.md)와 모든 38개 checkpoint 평가 계획은 다르다.
 
 ## 해석·실패한 부분·한계
 
@@ -43,18 +45,18 @@
 
 ## 실험 코드
 
-- [EBM/paired_evaluation.py](code/EBM/paired_evaluation.py)
-- [EBM/paired_queue_guard.py](code/EBM/paired_queue_guard.py)
-- [EBM/tools/run_paired_evaluation.py](code/EBM/tools/run_paired_evaluation.py)
+- [소스: paired_evaluation.py](code/EBM/paired_evaluation.py)
+- [소스: paired_queue_guard.py](code/EBM/paired_queue_guard.py)
+- [소스: run_paired_evaluation.py](code/EBM/tools/run_paired_evaluation.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [docs/experiments/ebm_paired_minimum_eer_evaluation_20261111.md](../../_shared/references/docs/experiments/ebm_paired_minimum_eer_evaluation_20261111.md)
-- [artifacts/paired_min_eer_20261111/queue_cancelled.json](../../_shared/references/artifacts/paired_min_eer_20261111/queue_cancelled.json)
-- [artifacts/paired_min_eer_20261111/validation.json](../../_shared/references/artifacts/paired_min_eer_20261111/validation.json)
-- [artifacts/paired_min_eer_20261111/derived_analysis_validation.json](../../_shared/references/artifacts/paired_min_eer_20261111/derived_analysis_validation.json)
+- [상세 설계·실험 기록](../../_shared/references/docs/experiments/ebm_paired_minimum_eer_evaluation_20261111.md)
+- [설정·결과 근거](../../_shared/references/artifacts/paired_min_eer_20261111/queue_cancelled.json)
+- [검산 결과](../../_shared/references/artifacts/paired_min_eer_20261111/validation.json)
+- [설정·결과 근거](../../_shared/references/artifacts/paired_min_eer_20261111/derived_analysis_validation.json)
 
 ## 연결
 

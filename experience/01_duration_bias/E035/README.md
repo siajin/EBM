@@ -1,4 +1,6 @@
-# E035. 목표 길이 안에서 정상·위조의 음성활동 비율까지 맞추는 정책
+<a id="e035-목표-길이-안에서-정상위조의-음성활동-비율까지-맞추는-정책"></a>
+
+# 목표 길이 안에서 정상·위조의 음성활동 비율까지 맞추는 정책
 
 **실행 상태:** 정책 생성·실제 파형 검증 완료
 
@@ -44,19 +46,19 @@
 
 ## 실험 코드
 
-- [EBM/activity_policy.py](code/EBM/activity_policy.py)
-- [EBM/tools/fit_activity_policy.py](code/EBM/tools/fit_activity_policy.py)
-- [EBM/tools/validate_activity_policy.py](code/EBM/tools/validate_activity_policy.py)
-- [EBM/tools/build_activity_candidates.py](code/EBM/tools/build_activity_candidates.py)
+- [소스: activity_policy.py](code/EBM/activity_policy.py)
+- [소스: fit_activity_policy.py](code/EBM/tools/fit_activity_policy.py)
+- [소스: validate_activity_policy.py](code/EBM/tools/validate_activity_policy.py)
+- [소스: build_activity_candidates.py](code/EBM/tools/build_activity_candidates.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [artifacts/joint_activity_balance_20261110/state.json](../../_shared/references/artifacts/joint_activity_balance_20261110/state.json)
-- [artifacts/joint_activity_balance_20261110/final_audit.json](../../_shared/references/artifacts/joint_activity_balance_20261110/final_audit.json)
-- [EBM/POSITIVE_BPL.md](../../../POSITIVE_BPL.md)
-- [EBM/activity_policy.py](../../../activity_policy.py)
+- [설정·결과 근거](../../_shared/references/artifacts/joint_activity_balance_20261110/state.json)
+- [설정·결과 근거](../../_shared/references/artifacts/joint_activity_balance_20261110/final_audit.json)
+- [상세 설계·실험 기록](../../../POSITIVE_BPL.md)
+- [소스: activity_policy.py](../../../activity_policy.py)
 
 ## 연결
 

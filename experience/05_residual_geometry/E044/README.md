@@ -1,4 +1,6 @@
-# E044. 기존 코사인에서 좌표를 제거하거나 1~80개만 남기는 실험
+<a id="e044-기존-코사인에서-좌표를-제거하거나-180개만-남기는-실험"></a>
+
+# 기존 코사인에서 좌표를 제거하거나 1~80개만 남기는 실험
 
 **실행 상태:** 캐시 점수 개입 완료
 
@@ -20,7 +22,7 @@
 
 ## 실험 내용과 상세 절차
 
-1. [E041](../../04_norm_information/E041/README.md)의 공격별 평균 Fisher 순위를 학습 자료에서만 고정한다. z와 정상 기준 벡터 c의 동일 좌표를 같이 남긴 뒤 각각 재정규화해 코사인을 계산한다.
+1. [초기 학습 자료 분류기와 선택 좌표 분류기의 DF 전이 평가](../../04_norm_information/E041/README.md)의 공격별 평균 Fisher 순위를 학습 자료에서만 고정한다. z와 정상 기준 벡터 c의 동일 좌표를 같이 남긴 뒤 각각 재정규화해 코사인을 계산한다.
 2. 기본 제거 실험은 상위 8/16/40/80개 제거와 seed 200~219의 무작위 제거 20개다.
 3. 후속 유지 실험은 80/70/60/50/40/30/20/10개, 이어 5/3/2개, 마지막 1개를 계산한다. 각 k 에서 상위·하위·중첩 무작위 20개를 모두 보고한다.
 4. 1개 좌표에서는 수학적으로 sign(z_j)sign(c_j)의 두 점수만 가능하다. float 나눗셈 반올림으로 동점을 가짜 세분화하지 않고 모든 이진 운영점을 열거한다.
@@ -44,19 +46,19 @@ EER/AUROC·기존 개발 임계값 오류·점수 변화·화자 군집 2,000회
 
 ## 실험 코드
 
-- [artifacts/geometry_experiments/channel_keep_one.py](code/artifacts/geometry_experiments/channel_keep_one.py)
-- [artifacts/geometry_experiments/channel_keep_sweep.py](code/artifacts/geometry_experiments/channel_keep_sweep.py)
-- [artifacts/geometry_experiments/channel_keep_tiny_sweep.py](code/artifacts/geometry_experiments/channel_keep_tiny_sweep.py)
+- [소스: channel_keep_one.py](code/artifacts/geometry_experiments/channel_keep_one.py)
+- [소스: channel_keep_sweep.py](code/artifacts/geometry_experiments/channel_keep_sweep.py)
+- [소스: channel_keep_tiny_sweep.py](code/artifacts/geometry_experiments/channel_keep_tiny_sweep.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [artifacts/geometry_cache/local_analysis/channel_keep_sweep_v1/protocol_lock.json](../../_shared/references/artifacts/geometry_cache/local_analysis/channel_keep_sweep_v1/protocol_lock.json)
-- [artifacts/geometry_cache/local_analysis/channel_keep_tiny_v1/protocol_lock.json](../../_shared/references/artifacts/geometry_cache/local_analysis/channel_keep_tiny_v1/protocol_lock.json)
-- [artifacts/geometry_cache/local_analysis/channel_keep_one_v3/protocol_lock.json](../../_shared/references/artifacts/geometry_cache/local_analysis/channel_keep_one_v3/protocol_lock.json)
-- [artifacts/geometry_experiments/channel_keep_one.py](../../_shared/workspace/artifacts/geometry_experiments/channel_keep_one.py)
-- [docs/experiments/cached_core_20261105/02_channel_reduction_to2.md](../../_shared/references/docs/experiments/cached_core_20261105/02_channel_reduction_to2.md)
+- [설정·결과 근거](../../_shared/references/artifacts/geometry_cache/local_analysis/channel_keep_sweep_v1/protocol_lock.json)
+- [설정·결과 근거](../../_shared/references/artifacts/geometry_cache/local_analysis/channel_keep_tiny_v1/protocol_lock.json)
+- [설정·결과 근거](../../_shared/references/artifacts/geometry_cache/local_analysis/channel_keep_one_v3/protocol_lock.json)
+- [소스: channel_keep_one.py](../../_shared/workspace/artifacts/geometry_experiments/channel_keep_one.py)
+- [상세 설계·실험 기록](../../_shared/references/docs/experiments/cached_core_20261105/02_channel_reduction_to2.md)
 
 ## 연결
 

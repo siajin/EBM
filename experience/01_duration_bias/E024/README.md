@@ -1,4 +1,6 @@
-# E024. 최대 20% 절단·0.8~1.2배 속도 변형의 학습 자료 정책과 실제 변형 캐시
+<a id="e024-최대-20-절단0812배-속도-변형의-학습-자료-정책과-실제-변형-캐시"></a>
+
+# 최대 20% 절단·0.8~1.2배 속도 변형의 학습 자료 정책과 실제 변형 캐시
 
 **실행 상태:** 정책·캐시생성 검증 완료
 
@@ -12,7 +14,7 @@
 
 강한 짧은 조각 대신 원음 대부분을 남기는 완만한 변형으로 클래스 길이를 맞출 수 있는지 확인한다.
 
-대조와 통제의 근거: 원음의 최소 80% 구간 보존은 이 변형 생성 단계의 조건이다. 뒤의 원래 240 고정 길이 입력 절단·반복 후에도 80%가 신경망에 들어간다는 보장이 아니다.
+대조와 통제의 근거: 원음의 최소 80% 구간 보존은 이 변형 생성 단계의 조건이다. 뒤의 배치 240 고정 길이 반복 입력 학습 고정 길이 입력 절단·반복 후에도 80%가 신경망에 들어간다는 보장이 아니다.
 
 ## 모델·데이터·표본
 
@@ -43,18 +45,18 @@
 
 ## 실험 코드
 
-- [EBM/mild_duration.py](code/EBM/mild_duration.py)
-- [EBM/tools/build_mild_duration_policy.py](code/EBM/tools/build_mild_duration_policy.py)
-- [EBM/tools/prepare_mild_audio.py](code/EBM/tools/prepare_mild_audio.py)
+- [실험 구현·검증 소스](code/EBM/mild_duration.py)
+- [실험 구현·검증 소스](code/EBM/tools/build_mild_duration_policy.py)
+- [실험 구현·검증 소스](code/EBM/tools/prepare_mild_audio.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [EBM/mild_duration.py](../../../mild_duration.py)
-- [artifacts/mild_duration_data_analysis_20261111/summary.json](../../_shared/references/artifacts/mild_duration_data_analysis_20261111/summary.json)
-- [artifacts/mild_duration_data_analysis_20261111/validation.json](../../_shared/references/artifacts/mild_duration_data_analysis_20261111/validation.json)
-- [artifacts/mild_duration_baseline240_20261111_v2/cache_complete.json](../../_shared/references/artifacts/mild_duration_baseline240_20261111_v2/cache_complete.json)
+- [실험 구현·검증 소스](../../../mild_duration.py)
+- [설정·결과 근거](../../_shared/references/artifacts/mild_duration_data_analysis_20261111/summary.json)
+- [검산 결과](../../_shared/references/artifacts/mild_duration_data_analysis_20261111/validation.json)
+- [설정·결과 근거](../../_shared/references/artifacts/mild_duration_baseline240_20261111_v2/cache_complete.json)
 
 ## 연결
 

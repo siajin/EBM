@@ -1,4 +1,6 @@
-# E085. 기존 변형 결과에서 정상 안정성과 위조의 정상 방향 이동을 따로 검토
+<a id="e085-기존-변형-결과에서-정상-안정성과-위조의-정상-방향-이동을-따로-검토"></a>
+
+# 기존 변형 결과에서 정상 안정성과 위조의 정상 방향 이동을 따로 검토
 
 **실행 상태:** 기존 반응 점수의 탐색적 재분석 완료
 
@@ -24,7 +26,7 @@
 2. 층 가중치 균등, 시간 가중치 균등, 둘 다 균등, 백색잡음 20dB·10dB, Opus 32kbps의 6개 조건을 비교한다. 2,000개 확인용 표본은 20,000개 안에 있으므로 독립 반복으로 합치지 않는다.
 3. 긴 원음 절단은 앞·뒤 점수를 원음별로 먼저 평균한다. 4.0375초에서 비반복 1.5초 또는 2초로 줄이는 비교와, 같은 짧은 내용의 반복/비반복 비교를 나누어 내용 감소와 반복 문맥을 구별한다.
 4. 출처 안에서 화자 군집을 5,000회 복원 추출해 대응 점별 95% 구간을 계산한다. 여러 조건의 다중 비교 보정은 하지 않았으며, 이미 관찰한 결과를 다시 본 탐색 분석이다.
-5. 변형 전 점수와 메타데이터가 비슷한 정상·위조의 반응 차이도 조사했다. 초기 단순 매칭의 한계를 확인한 뒤 전체 자료의 최적 매칭은 [E070](../E070/README.md)으로 확장했다. 확대 반응 추론은 실행 하지 않았다.
+5. 변형 전 점수와 메타데이터가 비슷한 정상·위조의 반응 차이도 조사했다. 초기 단순 매칭의 한계를 확인한 뒤 전체 자료의 최적 매칭은 [같은 변형 전 점수 표본의 전체 가능 매칭과 이미 저장된 변형 반응의 범위](../E070/README.md)으로 확장했다. 확대 반응 추론은 실행 하지 않았다.
 
 ## 측정과 검증
 
@@ -44,17 +46,17 @@
 
 ## 실험 코드
 
-- [artifacts/geometry_experiments/audit_perturbation_candidates_20261106.py](code/artifacts/geometry_experiments/audit_perturbation_candidates_20261106.py)
+- [소스: audit_perturbation_candidates_20261106.py](code/artifacts/geometry_experiments/audit_perturbation_candidates_20261106.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [docs/experiments/ebm_perturbation_candidate_audit_and_plan_20261106.md](../../_shared/references/docs/experiments/ebm_perturbation_candidate_audit_and_plan_20261106.md)
-- [artifacts/geometry_experiments/audit_perturbation_candidates_20261106.py](../../_shared/workspace/artifacts/geometry_experiments/audit_perturbation_candidates_20261106.py)
-- [artifacts/geometry_cache/local_analysis/perturbation_candidate_audit_20261106_v1/audit_scope.json](../../_shared/references/artifacts/geometry_cache/local_analysis/perturbation_candidate_audit_20261106_v1/audit_scope.json)
-- [artifacts/geometry_cache/local_analysis/perturbation_candidate_audit_20261106_v1/summary.json](../../_shared/references/artifacts/geometry_cache/local_analysis/perturbation_candidate_audit_20261106_v1/summary.json)
-- [artifacts/geometry_cache/local_analysis/perturbation_candidate_audit_20261106_v1/independent_verification.json](../../_shared/references/artifacts/geometry_cache/local_analysis/perturbation_candidate_audit_20261106_v1/independent_verification.json)
+- [상세 설계·실험 기록](../../_shared/references/docs/experiments/ebm_perturbation_candidate_audit_and_plan_20261106.md)
+- [소스: audit_perturbation_candidates_20261106.py](../../_shared/workspace/artifacts/geometry_experiments/audit_perturbation_candidates_20261106.py)
+- [설정·결과 근거](../../_shared/references/artifacts/geometry_cache/local_analysis/perturbation_candidate_audit_20261106_v1/audit_scope.json)
+- [설정·결과 근거](../../_shared/references/artifacts/geometry_cache/local_analysis/perturbation_candidate_audit_20261106_v1/summary.json)
+- [설정·결과 근거](../../_shared/references/artifacts/geometry_cache/local_analysis/perturbation_candidate_audit_20261106_v1/independent_verification.json)
 
 ## 연결
 

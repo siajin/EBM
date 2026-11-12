@@ -1,3 +1,5 @@
+> 표시 명칭·링크 이름은 설명형으로 정리했다. 원래 코드·경로·수치는 그대로 보존한다.
+
 > 역사 문서 보존본. 원문 작성 당시의 상태·계획을 포함한다. 최신 상태와 확정 결과는 experience의 각 실험 README를 우선한다.
 
 # EBM 변형 반응 후보 재검토와 후속 실험 결정
@@ -13,11 +15,13 @@
 
 ## 0. 사용자 정정 반영: 실험의 중심과 순서
 
-**C0 실행 완료:** [전체 캐시·반응 coverage 확인 결과](ebm_full_score_overlap_results_20261106.md). 전체 native에서 엄격 최대 matching은 DF515/21LA106쌍이지만, 기존 변형 결과만으로 가능한 엄격 비교는6/3쌍이다. DF515쌍도18화자에한정된다. v2 결과는 최대쌍수 내 원점수차이의합을최소화했고, 기존반응의조건부점추정은여전히작은표본이다. 새GPU추론·fit은없다. 따라서C1의확대검증을완료했다고해석하지않는다.
+**원점수 겹침 표본 확보 실행 완료:** [전체 캐시·반응 coverage 확인 결과](ebm_full_score_overlap_results_20261106.md). 전체 native에서 엄격 최대 matching은 DF515/21LA106쌍이지만, 기존 변형 결과만으로 가능한 엄격 비교는6/3쌍이다. DF515쌍도18화자에한정된다. v2 결과는 최대쌍수 내 원점수차이의합을최소화했고, 기존반응의조건부점추정은여전히작은표본이다. 새GPU추론·fit은없다. 따라서정상·위조의 변형 반응 비교의확대검증을완료했다고해석하지않는다.
 
-**주질문은 ‘같은 native score와 비교 가능한 녹음 조건에서, 정상·스푸프의 변형 반응 분포가 다른가?’다.** 전체 두 클래스 평균 이동량이나 전체 EER가 좋아지는지만 먼저 보는 것은 이 질문을 직접 검증하지 않는다. 아래 C0→C1을 주실험으로 하며, 기존4절의 readout 전이는 C2 보조 단계다. 이 절의 순서가 뒤의 과거 우선순위보다 우선한다.
+**주질문은 ‘같은 native score와 비교 가능한 녹음 조건에서, 정상·스푸프의 변형 반응 분포가 다른가?’다.** 전체 두 클래스 평균 이동량이나 전체 EER가 좋아지는지만 먼저 보는 것은 이 질문을 직접 검증하지 않는다. 아래 원점수 겹침 표본 확보→정상·위조의 변형 반응 비교을 주실험으로 하며, 기존4절의 readout 전이는 변형 반응 판독기의 전이 평가 보조 단계다. 이 절의 순서가 뒤의 과거 우선순위보다 우선한다.
 
-### C0. 원점수 overlap 표본 확보가 먼저다
+<a id="c0-원점수-overlap-표본-확보가-먼저다"></a>
+
+### 원점수 겹침 표본 확보. 원점수 overlap 표본 확보가 먼저다
 
 1. 이미 허용·보존된 전체DF/전체21LA의 native score와 metadata만으로 common support를 조사한다. pilot으로 한정해6/3쌍밖에 없는 상태에서 새 GPU 실험을 먼저 확대하지 않는다. 전체캐시로 늘려도 충분하다고 가정하지 않는다.
 2. 주 caliper는 기존과 같은 |s_B−s_S|≤0.02, 민감도는≤0.01과≤0.005다. source·codec(21LA transmission 포함)·길이bin 일치, 원길이 차이≤0.25초를 유지하고, 동일 화자가 가능한 엄격 층과 다른 화자를 허용한 층을 구분한다. 반응 결과를 보고 caliper를 넓히지 않는다.
@@ -25,7 +29,9 @@
 4. score 구간별 양 클래스 수·기여 화자·사용가능 pair·남은 baseline 차이를 보고한다. 서로 겹치지 않는 구간은 분석 대상에서 제외하고 대상 모집단의 범위를 명시한다. 전체표본의 조건부 효과를 외삽하지 않는다.
 5. 사전 실행 가능성 기준은 한 도메인에서 완화 matching≥200쌍 및 양 클래스 각각≥20개 화자다. 이는 검정력 보장이 아닌 예산상 최소 기준이다. 기준 미달이면 효과를0으로 결론내리지 않고 ‘현재 자료로 주질문 판정 불가’로 둔다. 실제 표본·화자 상관·유의수준을 반영한MDE를 결과를 보기 전에 계산하고 임계효과0.05를 구별할 수 없는 경우에도 판정 불가로 둔다. 엄격matching의 적은 결과를 완화matching으로 숨기지 않는다.
 
-### C1. 같은 점수에서 같은 변형에 대한 반응을 직접 비교한다
+<a id="c1-같은-점수에서-같은-변형에-대한-반응을-직접-비교한다"></a>
+
+### 정상·위조의 변형 반응 비교. 같은 점수에서 같은 변형에 대한 반응을 직접 비교한다
 
 각 고정pair에서 `d_B=s(T(x_B))−s(x_B)`, `d_S=s(T(x_S))−s(x_S)`를 구하고 주량을 `D=d_S−d_B`로 둔다. 이는 서로 다른 native score 집단의 전체평균 차이와 다르다. 클래스별s/duration 차이와 s_after도 함께 보고한다.
 
@@ -38,9 +44,11 @@
 
 현재target을이미관찰했으므로위절차를앞으로고정해도과거탐색이사라지지않는다. 새미관측확인자료가없으면탐색적후속으로표시한다. 취소한DF4×3 CV를되살리거나target정답으로새readout을fit하는단계가아니다.
 
-### C2. 주질문 다음에만 실용성을 평가한다
+<a id="c2-주질문-다음에만-실용성을-평가한다"></a>
 
-기존4절의T/V학습→target전이는반응의실용성검증이다. C1에서정보가있어보이지만실용성이없을수있고,평균형태가실패해도다른반응특징이도움될수있다. 두결과를같은주장으로합치지않는다. **현재당장할일은C0의전체캐시overlap점검이며,C1표본이성립하기전에는전체GPU추론이나분류기학습부터시작하지않는다.**
+### 변형 반응 판독기의 전이 평가. 주질문 다음에만 실용성을 평가한다
+
+기존4절의T/V학습→target전이는반응의실용성검증이다. 정상·위조의 변형 반응 비교에서정보가있어보이지만실용성이없을수있고,평균형태가실패해도다른반응특징이도움될수있다. 두결과를같은주장으로합치지않는다. **현재당장할일은원점수 겹침 표본 확보의전체캐시overlap점검이며,정상·위조의 변형 반응 비교표본이성립하기전에는전체GPU추론이나분류기학습부터시작하지않는다.**
 
 ## 1. 정의와 자료
 
@@ -54,7 +62,7 @@
 2. Padding 개입: DF nocodec 층화471개(정상303 / spoof168). 긴 원음 부분집합144개(정상96 / spoof48)에 1.5/2초 head/tail crop이 있다. 출처별 긴 정상32 / spoof16이다. 이 구성은 전체 DF 비중이 아니다.
 3. DF와21LA의 공유 화자·자료, 미해결 원발화 family 의존성을 유지한다. 독립 benchmark 두 번이라고 해석하지 않는다.
 
-현재 재계산 코드: [audit_perturbation_candidates_20261106.py](../../../workspace/artifacts/geometry_experiments/audit_perturbation_candidates_20261106.py).
+현재 재계산 코드: [소스: audit_perturbation_candidates_20261106.py](../../../workspace/artifacts/geometry_experiments/audit_perturbation_candidates_20261106.py).
 결과 루트: `../../artifacts/geometry_cache/local_analysis/perturbation_candidate_audit_20261106_v1/` (원자료 경로; 배포 제외 또는 미확보, 출처 목록 참조).
 
 ## 2. 기존 실험에서 확인한 후보
@@ -118,7 +126,9 @@ DF 완화52쌍에서 원점수 평균 차이는0.009805다. 이 부분집합에�
 
 모든 기존 target은 이미 관찰됐다. 이번 구간은 source별 화자 군집을5000회 재표집한 개별 탐색95% 구간이며, 후보 탐색 전체의 다중비교·선택을 보정한 확인 구간이 아니다. family 관계·모델 학습·표본 선택 불확실성은 포함하지 않는다. 재계산에서 입력 hash와 UID/label/score delta 항등식을 확인했다.
 
-## 4. 후보의 구현과 C2 실용성 검증 세부 — 0절의 주실험 이후
+<a id="4-후보의-구현과-c2-실용성-검증-세부--0절의-주실험-이후"></a>
+
+## 4. 후보의 구현과 변형 반응 판독기의 전이 평가 실용성 검증 세부 — 0절의 주실험 이후
 
 ### E1 — layer attention 반응에 추가 판별 정보가 있는가? 최우선
 
@@ -140,7 +150,7 @@ DF 완화52쌍에서 원점수 평균 차이는0.009805다. 이 부분집합에�
 4. P_mean: P_scalar에 세 view의 평균 점수 하나만 추가. `d_0.5,d_1`의 일반적인 양방향 조합과 같지는 않지만, ‘평균하기만 해도 되는가’를 평가한다. 원본과 변형 하나의 평균은 그 변형 delta와 원본으로 정확히 복원 가능하므로 독립된 기전 증거로 세지 않는다.
 5. P_noise: P_scalar에 UID로 생성한 정규잡음2개를 추가. 같은 차원의 정규화·분류기 대조.
 
-부모 EBM은 T에서 이미 학습됐으므로 T 성능은 독립 결과가 아니다. 모든 response 출력을 T/V에서 새로 계산하고, 두 결합기의 scaler/spline knot는 T만으로 fit한다. spline은 degree3/quantile5 knots, 중복 knot는 deterministic unique 처리한다. ridge C={0.01,0.1,1,10}, 각 모델은 V balanced log-loss로 선택하며 동점은 작은 C 우선이다. V가 너무 쉬워 분별하지 못하면 선택력 부족으로 보고하며 target에서 tau/C/feature를 재선택하지 않는다. seed는 fit 구현에 필요한 경우101/102/103 고정이며 결과를 보고 좋은 seed를 고르지 않는다.
+부모 EBM은 T에서 이미 학습됐으므로 T 성능은 독립 결과가 아니다. 모든 response 출력을 T/V에서 새로 계산하고, 두 결합기의 scaler/spline knot는 T만으로 fit한다. spline은 degree3/quantile5 knots, 중복 knot는 deterministic unique 처리한다. ridge C={0.01,0.1,1,10}, 각 모델은 V balanced log-loss로 선택하며 동점은 작은 원음 전체 비반복 학습 우선이다. V가 너무 쉬워 분별하지 못하면 선택력 부족으로 보고하며 target에서 tau/원음 전체 비반복 학습/feature를 재선택하지 않는다. seed는 fit 구현에 필요한 경우101/102/103 고정이며 결과를 보고 좋은 seed를 고르지 않는다.
 
 주 지표는 고정 target에서 `LL(P_scalar)−LL(P_response)`다. 주 도메인은 DF,21LA 두 개다. 보조는 EER/AUROC와 V에서 bona FRR≤1%로 정한 각 모델별 threshold의 FAR/FRR다. 원점수의 단조 보정만으로 EER는 바뀌지 않지만 scalar 결합기는 norm·길이도 쓰므로 native와 따로 비교한다. 반응은 이 모든 공통 항을 넘어 이득이 있어야 한다.
 
@@ -184,7 +194,7 @@ T/V의 긴 발화에서 fit/선택하고 target의 같은 길이 조건으로 �
 ## 6. 근거 파일과 검수
 
 - [기존 전체 결과](ebm_frozen_all_results_20261105.md), R2/R3의 실제 입력·내부 개입 정의와 기존 EER.
-- [반복/문맥 통제 결과](ebm_padding_context_mechanism_20261106.md), 선택471개와 frontend 기전.
+- [상세 설계·실험 기록](ebm_padding_context_mechanism_20261106.md), 선택471개와 frontend 기전.
 - [이번 class별 반응 수치](../../artifacts/geometry_cache/local_analysis/perturbation_candidate_audit_20261106_v1/class_response_summary.csv).
 - [이번 같은 원점수 matching](../../artifacts/geometry_cache/local_analysis/perturbation_candidate_audit_20261106_v1/native_score_matching.csv).
 - [이번 출처·길이별 수치](../../artifacts/geometry_cache/local_analysis/perturbation_candidate_audit_20261106_v1/source_length_response.csv).

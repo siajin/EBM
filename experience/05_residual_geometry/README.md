@@ -10,40 +10,40 @@
 
 각 항목에 가설, 설계 이유, 데이터·통제, 절차, 실제 결과, 실패·한계, 배운 점, 코드와 근거를 담았다. 검증·캐시생성·설계만인 항목을 독립 성능 실험으로 세지 않는다.
 
-|실험|내용|실행 상태|
-|---|---|---|
-|[E039](E039/README.md)|고정 모델의 정규화 전후 특징 추출·전체 평가 캐시 구축|추출·검증 완료|
-|[E042](E042/README.md)|원래 코사인을 유지한 방향 잔차와 공분산 거리의 전이 대조|추가 분류기·캐시 평가 완료|
-|[E043](E043/README.md)|DF 안에서 점수·크기를 통제한 잔여 방향의 판별 정보|추가 분류기·내부 교차검증 완료|
-|[E044](E044/README.md)|기존 코사인에서 좌표를 제거하거나 1~80개만 남기는 실험|캐시 점수 개입 완료|
-|[E046](E046/README.md)|정상 기준 밖의 방향 군집과 출처·코덱·길이의 연관|캐시 군집 분석 완료|
-|[E047](E047/README.md)|좌표 선택의 전체 169조건과 회전 좌표계 대조|캐시 점수 개입 완료|
-|[E048](E048/README.md)|같은 화자·코덱·점수·크기의 정상/위조 방향 분포 매칭|계산 완료·표본 부족으로 주가 설 판정 불가|
-|[E049](E049/README.md)|학습 정상 공분산으로 거리 방향을 바꾸되 정상 기준 벡터는 고정|캐시거리 평가 완료|
-|[E050](E050/README.md)|방향 벡터 전체의 조건별 분산과 길이·패딩 연관|캐시 통계 완료|
-|[E051](E051/README.md)|같은 정상 기준 각도에서 손실이 구별하지 않는 방향의 수학 검사|합성 수치·미분 검사 완료|
-|[E052](E052/README.md)|고정 특징 위에서 정적·입력별 좌표 가중치와 같은 크기 신경망 학습|추가 모듈 학습·전이 평가 완료|
-|[E053](E053/README.md)|정상·위조 라벨로 대각 거리 가중치만 학습하는 대조|추가 모듈 학습·전이 평가 완료|
-|[E054](E054/README.md)|원래 점수에 단조인 기본 식과 방향/잡음 잔차의 학습 자료 →평가 전이|추가 분류기 학습·전이 평가 완료|
-|[E055](E055/README.md)|두 평가 자료 내부의 방향·정규화 전 특징·같은 차원 잡음 대조 9 종|추가 분류기·내부 교차검증 완료|
-|[E056](E056/README.md)|개발에서 고른 고정 후처리를 전체 자료로 확장 평가|추출·적용 평가 완료|
-|[E057](E057/README.md)|기존 모델의 층 가중치·최종 시간 가중치를 균등하게 바꾸는 개입|실제 추론 완료|
-|[E058](E058/README.md)|같은 음성의 백색잡음 20/10dB와 Opus32kbps 재압축 개입|실제 추론·전처리 검수 완료|
-|[E068](E068/README.md)|위조 특징의 주축과 두 위조 사이 연속 경로의 정상 최근접 진입|기하 분석·연속 검산 완료|
-|[E069](E069/README.md)|위조 연결 경로 주변의 정상·위조 밀도와 빈 구간|기하 밀도 분석 완료|
-|[E070](E070/README.md)|같은 변형 전 점수 표본의 전체 가능 매칭과 이미 저장된 변형 반응의 범위|기존캐시매칭·산술 검증 완료|
-|[E074](E074/README.md)|틀린 정상의 옆 방향이 학습 정상 주축에 집중되는지 분석|기존캐시 통계·독립 검수 완료|
-|[E075](E075/README.md)|학습 정상이 드물게 차지하는 방향 축부터 통째로 제거|기존캐시 점수개입·독립 검수 완료|
-|[E076](E076/README.md)|저점유 방향 제거 152~158개를 한 축씩 늘리는 정밀 비교|기존캐시 점수개입·독립 검수 완료|
-|[E082](E082/README.md)|2019 LA 학습 음성의 XLS-R 마지막 층 전체 특징 직접 저장|실제 추출·수신 완료|
-|[E083](E083/README.md)|원래 160차원 관계를 보존하거나 왜곡을 밝힌 2차원·구면 시각화|보조 기하 분석·그림 검증|
-|[E085](E085/README.md)|기존 변형 결과에서 정상 안정성과 위조의 정상 방향 이동을 따로 검토|기존 반응 점수의 탐색적 재분석 완료|
-|[E087](E087/README.md)|특징 추출 단계별 분리와 같은 원음의 긴·짧은 특징 비교|기존 실제 결과 확인·문서화 완료|
-|[E108](E108/README.md)|저에너지 시간 위치와 나머지 XLS-R 특징을 교체·제외한 내부 개입|기존 실제 결과 확인·문서화 완료|
+|실험|실행 상태|
+|---|---|
+|[고정 모델의 정규화 전후 특징 추출·전체 평가 캐시 구축](E039/README.md)|추출·검증 완료|
+|[원래 코사인을 유지한 방향 잔차와 공분산 거리의 전이 대조](E042/README.md)|추가 분류기·캐시 평가 완료|
+|[DF 안에서 점수·크기를 통제한 잔여 방향의 판별 정보](E043/README.md)|추가 분류기·내부 교차검증 완료|
+|[기존 코사인에서 좌표를 제거하거나 1~80개만 남기는 실험](E044/README.md)|캐시 점수 개입 완료|
+|[정상 기준 밖의 방향 군집과 출처·코덱·길이의 연관](E046/README.md)|캐시 군집 분석 완료|
+|[좌표 선택의 전체 169조건과 회전 좌표계 대조](E047/README.md)|캐시 점수 개입 완료|
+|[같은 화자·코덱·점수·크기의 정상/위조 방향 분포 매칭](E048/README.md)|계산 완료·표본 부족으로 주가 설 판정 불가|
+|[학습 정상 공분산으로 거리 방향을 바꾸되 정상 기준 벡터는 고정](E049/README.md)|캐시거리 평가 완료|
+|[방향 벡터 전체의 조건별 분산과 길이·패딩 연관](E050/README.md)|캐시 통계 완료|
+|[같은 정상 기준 각도에서 손실이 구별하지 않는 방향의 수학 검사](E051/README.md)|합성 수치·미분 검사 완료|
+|[고정 특징 위에서 정적·입력별 좌표 가중치와 같은 크기 신경망 학습](E052/README.md)|추가 모듈 학습·전이 평가 완료|
+|[정상·위조 라벨로 대각 거리 가중치만 학습하는 대조](E053/README.md)|추가 모듈 학습·전이 평가 완료|
+|[원래 점수에 단조인 기본 식과 방향/잡음 잔차의 학습 자료 →평가 전이](E054/README.md)|추가 분류기 학습·전이 평가 완료|
+|[두 평가 자료 내부의 방향·정규화 전 특징·같은 차원 잡음 대조 9 종](E055/README.md)|추가 분류기·내부 교차검증 완료|
+|[개발에서 고른 고정 후처리를 전체 자료로 확장 평가](E056/README.md)|추출·적용 평가 완료|
+|[기존 모델의 층 가중치·최종 시간 가중치를 균등하게 바꾸는 개입](E057/README.md)|실제 추론 완료|
+|[같은 음성의 백색잡음 20/10dB와 Opus32kbps 재압축 개입](E058/README.md)|실제 추론·전처리 검수 완료|
+|[위조 특징의 주축과 두 위조 사이 연속 경로의 정상 최근접 진입](E068/README.md)|기하 분석·연속 검산 완료|
+|[위조 연결 경로 주변의 정상·위조 밀도와 빈 구간](E069/README.md)|기하 밀도 분석 완료|
+|[같은 변형 전 점수 표본의 전체 가능 매칭과 이미 저장된 변형 반응의 범위](E070/README.md)|기존캐시매칭·산술 검증 완료|
+|[틀린 정상의 옆 방향이 학습 정상 주축에 집중되는지 분석](E074/README.md)|기존캐시 통계·독립 검수 완료|
+|[학습 정상이 드물게 차지하는 방향 축부터 통째로 제거](E075/README.md)|기존캐시 점수개입·독립 검수 완료|
+|[저점유 방향 제거 152~158개를 한 축씩 늘리는 정밀 비교](E076/README.md)|기존캐시 점수개입·독립 검수 완료|
+|[2019 LA 학습 음성의 XLS-R 마지막 층 전체 특징 직접 저장](E082/README.md)|실제 추출·수신 완료|
+|[원래 160차원 관계를 보존하거나 왜곡을 밝힌 2차원·구면 시각화](E083/README.md)|보조 기하 분석·그림 검증|
+|[기존 변형 결과에서 정상 안정성과 위조의 정상 방향 이동을 따로 검토](E085/README.md)|기존 반응 점수의 탐색적 재분석 완료|
+|[특징 추출 단계별 분리와 같은 원음의 긴·짧은 특징 비교](E087/README.md)|기존 실제 결과 확인·문서화 완료|
+|[저에너지 시간 위치와 나머지 XLS-R 특징을 교체·제외한 내부 개입](E108/README.md)|기존 실제 결과 확인·문서화 완료|
 
 ## 다른 가설과 공유하는 근거
 
-[E012](../02_repetition/E012/README.md) · [E016](../02_repetition/E016/README.md) · [E020](../03_bonafide_diversity/E020/README.md) · [E026](../01_duration_bias/E026/README.md) · [E040](../04_norm_information/E040/README.md) · [E041](../04_norm_information/E041/README.md) · [E045](../04_norm_information/E045/README.md) · [E059](../04_norm_information/E059/README.md) · [E060](../03_bonafide_diversity/E060/README.md) · [E061](../03_bonafide_diversity/E061/README.md) · [E064](../03_bonafide_diversity/E064/README.md) · [E065](../03_bonafide_diversity/E065/README.md) · [E067](../01_duration_bias/E067/README.md) · [E071](../02_repetition/E071/README.md) · [E072](../02_repetition/E072/README.md) · [E073](../02_repetition/E073/README.md) · [E078](../01_duration_bias/E078/README.md) · [E079](../01_duration_bias/E079/README.md) · [E080](../01_duration_bias/E080/README.md) · [E086](../03_bonafide_diversity/E086/README.md) · [E089](../03_bonafide_diversity/E089/README.md) · [E090](../03_bonafide_diversity/E090/README.md) · [E094](../01_duration_bias/E094/README.md) · [E095](../02_repetition/E095/README.md) · [E097](../01_duration_bias/E097/README.md) · [E098](../01_duration_bias/E098/README.md) · [E099](../03_bonafide_diversity/E099/README.md) · [E100](../01_duration_bias/E100/README.md) · [E101](../01_duration_bias/E101/README.md) · [E102](../01_duration_bias/E102/README.md) · [E103](../01_duration_bias/E103/README.md) · [E104](../01_duration_bias/E104/README.md) · [E107](../03_bonafide_diversity/E107/README.md) · [E109](../02_repetition/E109/README.md) · [E111](../06_spoof_centered/E111/README.md) · [E112](../06_spoof_centered/E112/README.md)
+[같은 768개 원음의 반복 여부를 두 모델에 교차 적용](../02_repetition/E012/README.md) · [긴 원음의 같은 1초/2초 구간에서 반복량·접합부·반사대조](../02_repetition/E016/README.md) · [정상 두 묶음만 사용한 108회 양성쌍 손실의 단기 학습](../03_bonafide_diversity/E020/README.md) · [원음 2초 이하 정상에만 3.0275초·2초 손실을 더한 배치 240 고정 길이 반복 입력 학습 학습](../01_duration_bias/E026/README.md) · [초기 개발 자료에서 점수·크기·옆 방향 특징을 읽는 분류기 비교](../04_norm_information/E040/README.md) · [초기 학습 자료 분류기와 선택 좌표 분류기의 DF 전이 평가](../04_norm_information/E041/README.md) · [LayerNorm 전후 특징·평균·표준편차를 읽는 내부 분류기](../04_norm_information/E045/README.md) · [기존 OC gradient·방향 정규화·정규화 전 특징 복원·변형 반응의 네 후속 분석](../04_norm_information/E059/README.md) · [정상 점수와 위조 점수의 데이터셋을 따로 교체하는 교차 평가](../03_bonafide_diversity/E060/README.md) · [정상 음성의 출처 차이가 코덱·반복 없는 부분에서도 남는 지 조사](../03_bonafide_diversity/E061/README.md) · [정상 예시를 더 잘 대표하는 중심·이동·정규화 점수 7 종](../03_bonafide_diversity/E064/README.md) · [틀린 정상 특징이 학습 위조 또는 평가 정상의 어디에 가까운지 조사](../03_bonafide_diversity/E065/README.md) · [원음 길이별 정상 평균 기준과 점수 보정·무작위 중심 대조](../01_duration_bias/E067/README.md) · [출처별 같은 원음의 순환 반복·반사채움·비반복과 긴 원음 절단 대조](../02_repetition/E071/README.md) · [특징 복제의 표준편차 배율과 평균·표준편차 경로 교체](../02_repetition/E072/README.md) · [파형을 먼저 반복하는 경우와 추출한 특징을 뒤에서 반복하는 경우의 8조건](../02_repetition/E073/README.md) · [화자가 다른 정상 발화 정렬과 같은 원음의 보수적 길이 일관성 결합 안](../01_duration_bias/E078/README.md) · [원음 길이에 따라 5초/4초 또는 4초/3초를 정렬하는 보류 안](../01_duration_bias/E079/README.md) · [4초·3초·2초 삼중 조합과 추가 학습 아이디어의 미실행 설계](../01_duration_bias/E080/README.md) · [이전 80epoch 모델의 정상 기준 각도와 160차원 분포](../03_bonafide_diversity/E086/README.md) · [정상 특징으로 여러 평균 기준 벡터를 만든 초기 실험](../03_bonafide_diversity/E089/README.md) · [낮은 정상 점수 꼬리의 출처·코덱·길이·음향·화자 진단](../03_bonafide_diversity/E090/README.md) · [저에너지 구간의 길이·에너지를 유지한 미세 파형 구조 개입](../01_duration_bias/E094/README.md) · [이전 모델에서 특징 복제와 통계 요약의 길이 배율을 분리](../02_repetition/E095/README.md) · [같은 본문·총길이·에너지에서 앞뒤 저에너지 배치만 바꾼 실험](../01_duration_bias/E097/README.md) · [저에너지 파형의 에너지·스펙트럼·위치 요인과 진폭 용량 비교](../01_duration_bias/E098/README.md) · [다른 출처·라벨의 저에너지 프레임을 이식한 실험](../03_bonafide_diversity/E099/README.md) · [원음 전체를 보존하고 앞 또는 뒤에만 저에너지를 추가한 엄격 대조](../01_duration_bias/E100/README.md) · [엄격 원음 추가 실험의 고정 평가 입력·반복 재현·경험적 정상 기준 대조](../01_duration_bias/E101/README.md) · [ASVspoof 출처만 남긴 자연 길이·자체 파형·제공자 효과 재검토](../01_duration_bias/E102/README.md) · [자연적인 앞 저에너지 길이를 읽는 특징 방향: −40dB 정의](../01_duration_bias/E103/README.md) · [자연적인 앞 저에너지 길이를 읽는 특징 방향: −20dB와 안정성](../01_duration_bias/E104/README.md) · [고정 BPL 학습 모델의 실제 증강 쌍·저에너지 이식 반응 검토](../03_bonafide_diversity/E107/README.md) · [같은 저에너지 내부 개입을 다섯 저장 모델에 반복한 대조](../02_repetition/E109/README.md) · [정상 중심과 스푸프 중심을 명시적으로 전환하는 원본240 기반 구현](../06_spoof_centered/E111/README.md) · [역할 평가의 점수 부호·smoke 범위·checkpoint 용도 오류 감사](../06_spoof_centered/E112/README.md)
 
 같은 checkpoint·음성·캐시를 재사용한 분석은 독립 학습이나 독립 표본으로 중복 합산하지 않는다.
 

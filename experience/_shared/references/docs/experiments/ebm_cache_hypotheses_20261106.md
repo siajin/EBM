@@ -1,3 +1,5 @@
+> 표시 명칭·링크 이름은 설명형으로 정리했다. 원래 코드·경로·수치는 그대로 보존한다.
+
 > 역사 문서 보존본. 원문 작성 당시의 상태·계획을 포함한다. 최신 상태와 확정 결과는 experience의 각 실험 README를 우선한다.
 
 # EBM 새 가설의 캐시 검증 — 2026-11-06
@@ -167,8 +169,8 @@ CI는 동일 발화·화자 그룹의 paired resampling2,000회에 따른 개별
 초기 v1은 합성 수치검증에서 smooth softplus와 실제 threshold20 구현의 극소 차이를 발견해 가설 결과 생성 전에 종료했다. 실제 구현의 분기를 반영한 v2에서 검수와 계산을 완료했으며 v1 기록은 보존했다. 원래 손실·모델·실험 결과를 수정한 것은 아니다.
 
 - [실행 전 고정한 범위](../../artifacts/geometry_cache/local_analysis/cache_hypotheses_20261106_v2/protocol.json); [입력 해시](../../artifacts/geometry_cache/local_analysis/cache_hypotheses_20261106_v2/inputs.json)
-- [OC loss/gradient](../../artifacts/geometry_cache/local_analysis/cache_hypotheses_20261106_v2/H3_OC_gradients.json); [LN 복원](../../artifacts/geometry_cache/local_analysis/cache_hypotheses_20261106_v2/H5_LN_reconstruction.json)
+- [설정·결과 근거](../../artifacts/geometry_cache/local_analysis/cache_hypotheses_20261106_v2/H3_OC_gradients.json); [LN 복원](../../artifacts/geometry_cache/local_analysis/cache_hypotheses_20261106_v2/H5_LN_reconstruction.json)
 - [DF 기하](../../artifacts/geometry_cache/local_analysis/cache_hypotheses_20261106_v2/H4_DF_pilot_summary.json); [21LA 기하](../../artifacts/geometry_cache/local_analysis/cache_hypotheses_20261106_v2/H4_21LA_pilot_summary.json)
 - [DF 방향 이득](../../artifacts/geometry_cache/local_analysis/cache_hypotheses_20261106_v2/H1_DF_pilot_advantage_retention.json); [21LA 방향 이득](../../artifacts/geometry_cache/local_analysis/cache_hypotheses_20261106_v2/H1_21LA_pilot_advantage_retention.json)
 - [실행 검수](../../artifacts/geometry_cache/local_analysis/cache_hypotheses_20261106_v2/verification.json); [독립 수식 검수](../../artifacts/geometry_cache/local_analysis/cache_hypotheses_20261106_v2/independent_verification.json)
-- [기존 F/P/R 결과](ebm_frozen_all_results_20261105.md); [기존 분할 제한](ebm_condition_audit_20261105.md)
+- [상세 설계·실험 기록](ebm_frozen_all_results_20261105.md); [기존 분할 제한](ebm_condition_audit_20261105.md)

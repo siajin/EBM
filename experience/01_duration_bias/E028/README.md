@@ -1,4 +1,6 @@
-# E028. 학습·개발·평가 자료의 원음 길이와 공격별 클래스 구성
+<a id="e028-학습개발평가-자료의-원음-길이와-공격별-클래스-구성"></a>
+
+# 학습·개발·평가 자료의 원음 길이와 공격별 클래스 구성
 
 **실행 상태:** 메타데이터 분석 완료
 
@@ -23,7 +25,7 @@
 1. 자료 분할을 유지하고 정상/위조별 원음 샘플 수의 히스토그램·누적분포·분위수·2초 미만/이하 비율을 계산한다.
 2. 샘플러로 가중하지 않은 고유 원음 분포와 학습 중 실제 노출 분포를 구별한다.
 3. 21LA는 공식 공격 ID·코덱·전송 조건, DF는 출처·공격·코덱, Train은 화자·공격별로 교차 집계한다.
-4. C 학습에서 상한보다 긴 원음의 개수·고유 샘플 수와 B 대비 추가 사용량도 계산한다.
+4. 원음 전체 비반복 학습 학습에서 상한보다 긴 원음의 개수·고유 샘플 수와 4.0375초 상한 비반복 학습 대비 추가 사용량도 계산한다.
 
 ## 측정과 검증
 
@@ -43,18 +45,18 @@
 
 ## 실험 코드
 
-- [EBM/tools/plot_class_distributions.py](code/EBM/tools/plot_class_distributions.py)
+- [소스: plot_class_distributions.py](code/EBM/tools/plot_class_distributions.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [artifacts/repetition_shortcut_20261111/original_length_distribution.csv](../../_shared/references/artifacts/repetition_shortcut_20261111/original_length_distribution.csv)
-- [artifacts/repetition_shortcut_20261111/training_original_lengths.csv](../../_shared/references/artifacts/repetition_shortcut_20261111/training_original_lengths.csv)
-- [artifacts/ebm_C_length_class_distribution_20261109/analysis.json](../../_shared/references/artifacts/ebm_C_length_class_distribution_20261109/analysis.json)
-- [artifacts/class_distributions_20261108/validation.json](../../_shared/references/artifacts/class_distributions_20261108/validation.json)
-- [artifacts/segment_group_shifts_20261110/analysis.json](../../_shared/references/artifacts/segment_group_shifts_20261110/analysis.json)
-- [artifacts/duration_zoom_20261109/validation.json](../../_shared/references/artifacts/duration_zoom_20261109/validation.json)
+- [집계 결과 표](../../_shared/references/artifacts/repetition_shortcut_20261111/original_length_distribution.csv)
+- [집계 결과 표](../../_shared/references/artifacts/repetition_shortcut_20261111/training_original_lengths.csv)
+- [설정·결과 근거](../../_shared/references/artifacts/ebm_C_length_class_distribution_20261109/analysis.json)
+- [검산 결과](../../_shared/references/artifacts/class_distributions_20261108/validation.json)
+- [설정·결과 근거](../../_shared/references/artifacts/segment_group_shifts_20261110/analysis.json)
+- [검산 결과](../../_shared/references/artifacts/duration_zoom_20261109/validation.json)
 
 ## 연결
 

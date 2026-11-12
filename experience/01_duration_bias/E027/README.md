@@ -1,4 +1,6 @@
-# E027. 가변 길이 입력·마스크·기울기 계산의 실제 GPU 가능성 점검
+<a id="e027-가변-길이-입력마스크기울기-계산의-실제-gpu-가능성-점검"></a>
+
+# 가변 길이 입력·마스크·기울기 계산의 실제 GPU 가능성 점검
 
 **실행 상태:** 구현 검증 완료·성능 학습 아님
 
@@ -27,7 +29,7 @@
 
 ## 측정과 검증
 
-길이별 단독/배치 score 최대 오차 5.96e-8, 특징 차이·유한 gradient·frontend 불변·두 GPU 동일 검사. 뒤 B/C 연결 검사는 별도 E006/E007에 기록한다.
+길이별 단독/배치 score 최대 오차 5.96e-8, 특징 차이·유한 gradient·frontend 불변·두 GPU 동일 검사. 뒤 4.0375초 상한 비반복 학습과 원음 전체 비반복 학습 연결 검사는 별도 E006/E007에 기록한다.
 
 ## 결과
 
@@ -35,7 +37,7 @@
 
 ## 해석·실패한 부분·한계
 
-작은 검증 배치 통과를 전체 학습 메모리 상한이나 일반화 성능으로 대체하지 않는다. 초기 short303 설정은 짧은 입력 303 프레임, 추가 짧은 분류 손실 0, 반복 관련 추가 손실 0으로 arguments.py만 바꾼 준비 단계였다. 해당 검증 표식은 full_training_started =false 다. 이후 실제 50epoch 학습은 [E006](../../02_repetition/E006/README.md)에서 별도로 기록한다.
+작은 검증 배치 통과를 전체 학습 메모리 상한이나 일반화 성능으로 대체하지 않는다. 초기 short303 설정은 짧은 입력 303 프레임, 추가 짧은 분류 손실 0, 반복 관련 추가 손실 0으로 arguments.py만 바꾼 준비 단계였다. 해당 검증 표식은 full_training_started =false 다. 이후 실제 50epoch 학습은 [학습 길이 상한을 유지하면서 짧은 음성 반복을 제거한 학습](../../02_repetition/E006/README.md)에서 별도로 기록한다.
 
 ## 배운 점
 
@@ -43,18 +45,18 @@
 
 ## 실험 코드
 
-- [artifacts/geometry_experiments/variable_length_sidecar.py](code/artifacts/geometry_experiments/variable_length_sidecar.py)
-- [artifacts/geometry_experiments/variable_length_augmentation_sidecar.py](code/artifacts/geometry_experiments/variable_length_augmentation_sidecar.py)
+- [소스: variable_length_sidecar.py](code/artifacts/geometry_experiments/variable_length_sidecar.py)
+- [소스: variable_length_augmentation_sidecar.py](code/artifacts/geometry_experiments/variable_length_augmentation_sidecar.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [docs/experiments/ebm_variable_length_feasibility_20261106.md](../../_shared/references/docs/experiments/ebm_variable_length_feasibility_20261106.md)
-- [artifacts/geometry_experiments/variable_length_sidecar.py](../../_shared/workspace/artifacts/geometry_experiments/variable_length_sidecar.py)
-- [artifacts/geometry_experiments/variable_length_augmentation_sidecar.py](../../_shared/workspace/artifacts/geometry_experiments/variable_length_augmentation_sidecar.py)
-- [artifacts/geometry_cache/local_analysis/variable_length_audit_20261106_v1/metadata_audit.json](../../_shared/references/artifacts/geometry_cache/local_analysis/variable_length_audit_20261106_v1/metadata_audit.json)
-- [artifacts/geometry_cache/local_analysis/native_short303_E1_20261106_v1/verification.json](../../_shared/references/artifacts/geometry_cache/local_analysis/native_short303_E1_20261106_v1/verification.json)
+- [상세 설계·실험 기록](../../_shared/references/docs/experiments/ebm_variable_length_feasibility_20261106.md)
+- [소스: variable_length_sidecar.py](../../_shared/workspace/artifacts/geometry_experiments/variable_length_sidecar.py)
+- [소스: variable_length_augmentation_sidecar.py](../../_shared/workspace/artifacts/geometry_experiments/variable_length_augmentation_sidecar.py)
+- [설정·결과 근거](../../_shared/references/artifacts/geometry_cache/local_analysis/variable_length_audit_20261106_v1/metadata_audit.json)
+- [설정·결과 근거](../../_shared/references/artifacts/geometry_cache/local_analysis/native_short303_E1_20261106_v1/verification.json)
 
 ## 연결
 

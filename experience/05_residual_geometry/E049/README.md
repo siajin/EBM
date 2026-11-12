@@ -1,4 +1,6 @@
-# E049. 학습 정상 공분산으로 거리 방향을 바꾸되 정상 기준 벡터는 고정
+<a id="e049-학습-정상-공분산으로-거리-방향을-바꾸되-정상-기준-벡터는-고정"></a>
+
+# 학습 정상 공분산으로 거리 방향을 바꾸되 정상 기준 벡터는 고정
 
 **실행 상태:** 캐시거리 평가 완료
 
@@ -35,7 +37,7 @@ Train 정상 공분산을 반영한 비등방 거리가 단일 코사인보다 �
 
 ## 해석·실패한 부분·한계
 
-수축 거리 전체가 무용하다는 결론도, 가장 좋은 DF 후보가 전이 개선을 확정했다는 결론도 아니다. [E042](../E042/README.md)의 유사 후보와 재사용 관계를 명시한다.
+수축 거리 전체가 무용하다는 결론도, 가장 좋은 DF 후보가 전이 개선을 확정했다는 결론도 아니다. [원래 코사인을 유지한 방향 잔차와 공분산 거리의 전이 대조](../E042/README.md)의 유사 후보와 재사용 관계를 명시한다.
 
 ## 배운 점
 
@@ -43,15 +45,15 @@ Train 정상 공분산을 반영한 비등방 거리가 단일 코사인보다 �
 
 ## 실험 코드
 
-- [artifacts/geometry_experiments/frozen_n0.py](code/artifacts/geometry_experiments/frozen_n0.py)
+- [소스: frozen_n0.py](code/artifacts/geometry_experiments/frozen_n0.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [artifacts/geometry_experiments/frozen_n0.py](../../_shared/workspace/artifacts/geometry_experiments/frozen_n0.py)
-- [artifacts/geometry_cache/local_analysis/frozen_all_v1/F3/metric_registry.json](../../_shared/references/artifacts/geometry_cache/local_analysis/frozen_all_v1/F3/metric_registry.json)
-- [artifacts/geometry_cache/local_analysis/frozen_all_v1/F3/paired_effects.json](../../_shared/references/artifacts/geometry_cache/local_analysis/frozen_all_v1/F3/paired_effects.json)
+- [소스: frozen_n0.py](../../_shared/workspace/artifacts/geometry_experiments/frozen_n0.py)
+- [설정·결과 근거](../../_shared/references/artifacts/geometry_cache/local_analysis/frozen_all_v1/F3/metric_registry.json)
+- [설정·결과 근거](../../_shared/references/artifacts/geometry_cache/local_analysis/frozen_all_v1/F3/paired_effects.json)
 
 ## 연결
 

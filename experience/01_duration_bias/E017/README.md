@@ -1,4 +1,6 @@
-# E017. 클래스별 길이 분포를 맞추되 공격·코덱 비율을 보존한 EER
+<a id="e017-클래스별-길이-분포를-맞추되-공격코덱-비율을-보존한-eer"></a>
+
+# 클래스별 길이 분포를 맞추되 공격·코덱 비율을 보존한 EER
 
 **실행 상태:** 기존 점수 재가중 완료
 
@@ -16,7 +18,7 @@
 
 ## 모델·데이터·표본
 
-[E014](../../02_repetition/E014/README.md)의 21LA 148,176개. 정상과 위조가 모두 존재하는 길이 구간 145,097개를 공통 지지 집합으로 사용한다.
+[개발 전체와 21LA 전체에서 반복/비반복 입력을 직접 교차 평가](../../02_repetition/E014/README.md)의 21LA 148,176개. 정상과 위조가 모두 존재하는 길이 구간 145,097개를 공통 지지 집합으로 사용한다.
 
 ## 실험 내용과 상세 절차
 
@@ -32,7 +34,7 @@
 
 ## 결과
 
-공통 지지집합의 비반복 점수에서 공격·코덱 비율을 보존하며 길이를 맞추면, 원래 배치 240 모델의 EER은 6.470629→3.799113%, B는 4.844912→6.262632%였다. 반복 입력에서는 각각 1.068460→1.289147%, 7.624289→6.904698%였다.
+공통 지지집합의 비반복 점수에서 공격·코덱 비율을 보존하며 길이를 맞추면, 원래 배치 240 모델의 EER은 6.470629→3.799113%, 4.0375초 상한 비반복 학습은 4.844912→6.262632%였다. 반복 입력에서는 각각 1.068460→1.289147%, 7.624289→6.904698%였다.
 
 ## 해석·실패한 부분·한계
 
@@ -40,21 +42,21 @@
 
 ## 배운 점
 
-기존240과 B의 길이 재가중 반응이 달랐다. 평가 구성 민감도를 학습 원인 증명으로 쓰면 안 된다.
+배치 240 고정 길이 반복 입력 학습과 4.0375초 상한 비반복 학습의 길이 재가중 반응이 달랐다. 평가 구성 민감도를 학습 원인 증명으로 쓰면 안 된다.
 
 ## 실험 코드
 
-- [EBM/tools/review_repetition_results.py](code/EBM/tools/review_repetition_results.py)
-- [EBM/tools/analyze_repetition_duration_proxy.py](code/EBM/tools/analyze_repetition_duration_proxy.py)
+- [소스: review_repetition_results.py](code/EBM/tools/review_repetition_results.py)
+- [소스: analyze_repetition_duration_proxy.py](code/EBM/tools/analyze_repetition_duration_proxy.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [EBM/tools/review_repetition_results.py](../../../tools/review_repetition_results.py)
-- [artifacts/repetition_shortcut_20261111/reviewed_analysis/weighted_eer_21LA.csv](../../_shared/references/artifacts/repetition_shortcut_20261111/reviewed_analysis/weighted_eer_21LA.csv)
-- [artifacts/repetition_shortcut_20261111/reviewed_analysis/validation.json](../../_shared/references/artifacts/repetition_shortcut_20261111/reviewed_analysis/validation.json)
-- [artifacts/repetition_shortcut_20261111/native_length_reweighted_eer.csv](../../_shared/references/artifacts/repetition_shortcut_20261111/native_length_reweighted_eer.csv)
+- [소스: review_repetition_results.py](../../../tools/review_repetition_results.py)
+- [집계 결과 표](../../_shared/references/artifacts/repetition_shortcut_20261111/reviewed_analysis/weighted_eer_21LA.csv)
+- [검산 결과](../../_shared/references/artifacts/repetition_shortcut_20261111/reviewed_analysis/validation.json)
+- [집계 결과 표](../../_shared/references/artifacts/repetition_shortcut_20261111/native_length_reweighted_eer.csv)
 
 ## 연결
 

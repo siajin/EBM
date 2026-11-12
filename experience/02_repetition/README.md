@@ -4,35 +4,35 @@
 
 순환 반복이 모델에 내용 외의 문맥·반복량 단서를 만들며 학습과 추론의 일치가 성능에 영향을 주는가?
 
-기존240은 반복 입력, B는 비반복 입력에서 유리했다. 반복의 보편적 해로움은 입증되지 않았다. 파형반복과 후기 특징복제는 다른 결과를 냈다.
+배치 240 고정 길이 반복 입력 학습은 반복 입력, 4.0375초 상한 비반복 학습은 비반복 입력에서 유리했다. 반복의 보편적 해로움은 입증되지 않았다. 파형반복과 후기 특징복제는 다른 결과를 냈다.
 
 ## 실험별 상세 기록
 
 각 항목에 가설, 설계 이유, 데이터·통제, 절차, 실제 결과, 실패·한계, 배운 점, 코드와 근거를 담았다. 검증·캐시생성·설계만인 항목을 독립 성능 실험으로 세지 않는다.
 
-|실험|내용|실행 상태|
-|---|---|---|
-|[E005](E005/README.md)|배치 240·원래 반복 입력·GPU 별 정상 쌍 학습|학습 완료|
-|[E006](E006/README.md)|학습 길이 상한을 유지하면서 짧은 음성 반복을 제거한 학습(B)|학습 50epoch 완료|
-|[E009](E009/README.md)|두 고정 50epoch 모델을 같은 비반복 입력으로 전체 평가|평가 완료|
-|[E010](E010/README.md)|두 반복 제거 학습 모델의 모든 저장 epoch 평가와 최소 EER 비교|평가 완료|
-|[E012](E012/README.md)|같은 768개 원음의 반복 여부를 두 모델에 교차 적용|추론·분석 완료|
-|[E013](E013/README.md)|원래 배치 240 모델의 반복 구간과 오류 분포 조사|기존 기록 분석 완료|
-|[E014](E014/README.md)|개발 전체와 21LA 전체에서 반복/비반복 입력을 직접 교차 평가|추론·독립 검산 완료|
-|[E015](E015/README.md)|자연적으로 2초 이하인 음성에서 오류 전이·임계값 이동·공격별 회복 분석|E014 저장 점수 분석 완료|
-|[E016](E016/README.md)|긴 원음의 같은 1초/2초 구간에서 반복량·접합부·반사대조|추론·분석 완료|
-|[E071](E071/README.md)|출처별 같은 원음의 순환 반복·반사채움·비반복과 긴 원음 절단 대조|실제 추론·독립 검수 완료|
-|[E072](E072/README.md)|특징 복제의 표준편차 배율과 평균·표준편차 경로 교체|실제 내부 개입·수학 검수 완료|
-|[E073](E073/README.md)|파형을 먼저 반복하는 경우와 추출한 특징을 뒤에서 반복하는 경우의 8조건|실제 내부 개입·검산 완료|
-|[E081](E081/README.md)|네 모델·전체 체크포인트의 반복/비반복 공통 평가 준비와 실행 전 취소|검사·분석 재현만 완료; 추가 GPU 평가 취소|
-|[E091](E091/README.md)|파형 크기·반복·0 채움·반사·가장자리 절단의 초기 교차 개입|기존 실제 결과 확인·문서화 완료|
-|[E092](E092/README.md)|저에너지 가장자리 제거 후 반복·0 채움 위치를 달리한 대조|기존 실제 결과 확인·문서화 완료|
-|[E095](E095/README.md)|이전 모델에서 특징 복제와 통계 요약의 길이 배율을 분리|기존 실제 결과 확인·문서화 완료|
-|[E109](E109/README.md)|같은 저에너지 내부 개입을 다섯 저장 모델에 반복한 대조|기존 실제 결과 확인·문서화 완료|
+|실험|실행 상태|
+|---|---|
+|[배치 240·원래 반복 입력·GPU 별 정상 쌍 학습](E005/README.md)|학습 완료|
+|[학습 길이 상한을 유지하면서 짧은 음성 반복을 제거한 학습](E006/README.md)|학습 50epoch 완료|
+|[두 고정 50epoch 모델을 같은 비반복 입력으로 전체 평가](E009/README.md)|평가 완료|
+|[두 반복 제거 학습 모델의 모든 저장 epoch 평가와 최소 EER 비교](E010/README.md)|평가 완료|
+|[같은 768개 원음의 반복 여부를 두 모델에 교차 적용](E012/README.md)|추론·분석 완료|
+|[원래 배치 240 모델의 반복 구간과 오류 분포 조사](E013/README.md)|기존 기록 분석 완료|
+|[개발 전체와 21LA 전체에서 반복/비반복 입력을 직접 교차 평가](E014/README.md)|추론·독립 검산 완료|
+|[자연적으로 2초 이하인 음성에서 오류 전이·임계값 이동·공격별 회복 분석](E015/README.md)|E014 저장 점수 분석 완료|
+|[긴 원음의 같은 1초/2초 구간에서 반복량·접합부·반사대조](E016/README.md)|추론·분석 완료|
+|[출처별 같은 원음의 순환 반복·반사채움·비반복과 긴 원음 절단 대조](E071/README.md)|실제 추론·독립 검수 완료|
+|[특징 복제의 표준편차 배율과 평균·표준편차 경로 교체](E072/README.md)|실제 내부 개입·수학 검수 완료|
+|[파형을 먼저 반복하는 경우와 추출한 특징을 뒤에서 반복하는 경우의 8조건](E073/README.md)|실제 내부 개입·검산 완료|
+|[네 모델·전체 체크포인트의 반복/비반복 공통 평가 준비와 실행 전 취소](E081/README.md)|검사·분석 재현만 완료; 추가 GPU 평가 취소|
+|[파형 크기·반복·0 채움·반사·가장자리 절단의 초기 교차 개입](E091/README.md)|기존 실제 결과 확인·문서화 완료|
+|[저에너지 가장자리 제거 후 반복·0 채움 위치를 달리한 대조](E092/README.md)|기존 실제 결과 확인·문서화 완료|
+|[이전 모델에서 특징 복제와 통계 요약의 길이 배율을 분리](E095/README.md)|기존 실제 결과 확인·문서화 완료|
+|[같은 저에너지 내부 개입을 다섯 저장 모델에 반복한 대조](E109/README.md)|기존 실제 결과 확인·문서화 완료|
 
 ## 다른 가설과 공유하는 근거
 
-[E001](../03_bonafide_diversity/E001/README.md) · [E002](../03_bonafide_diversity/E002/README.md) · [E003](../03_bonafide_diversity/E003/README.md) · [E008](../03_bonafide_diversity/E008/README.md) · [E020](../03_bonafide_diversity/E020/README.md) · [E021](../01_duration_bias/E021/README.md) · [E022](../01_duration_bias/E022/README.md) · [E023](../01_duration_bias/E023/README.md) · [E024](../01_duration_bias/E024/README.md) · [E025](../01_duration_bias/E025/README.md) · [E026](../01_duration_bias/E026/README.md) · [E027](../01_duration_bias/E027/README.md) · [E028](../01_duration_bias/E028/README.md) · [E035](../01_duration_bias/E035/README.md) · [E036](../01_duration_bias/E036/README.md) · [E037](../01_duration_bias/E037/README.md) · [E038](../01_duration_bias/E038/README.md) · [E050](../05_residual_geometry/E050/README.md) · [E067](../01_duration_bias/E067/README.md) · [E084](../01_duration_bias/E084/README.md) · [E088](../01_duration_bias/E088/README.md) · [E093](../01_duration_bias/E093/README.md) · [E094](../01_duration_bias/E094/README.md) · [E097](../01_duration_bias/E097/README.md) · [E098](../01_duration_bias/E098/README.md) · [E100](../01_duration_bias/E100/README.md) · [E101](../01_duration_bias/E101/README.md) · [E102](../01_duration_bias/E102/README.md) · [E105](../01_duration_bias/E105/README.md) · [E106](../01_duration_bias/E106/README.md) · [E107](../03_bonafide_diversity/E107/README.md) · [E108](../05_residual_geometry/E108/README.md) · [E110](../01_duration_bias/E110/README.md) · [E113](../01_duration_bias/E113/README.md)
+[배치 80·80epoch의 초기 반복 입력 학습](../03_bonafide_diversity/E001/README.md) · [배치 160·50epoch·GPU 별 정상 쌍 학습](../03_bonafide_diversity/E002/README.md) · [배치 160에서 두 GPU의 정상 특징을 공유하는 학습](../03_bonafide_diversity/E003/README.md) · [기존 학습들의 배치·정상 쌍 수·학습 진행량 비교](../03_bonafide_diversity/E008/README.md) · [정상 두 묶음만 사용한 108회 양성쌍 손실의 단기 학습](../03_bonafide_diversity/E020/README.md) · [정상·위조 길이와 음성활동을 맞추고 독립 정상 묶음을 정렬한 학습](../01_duration_bias/E021/README.md) · [중단한 가변 길이 학습의 저장 20epoch를 21LA·DF 전체 평가](../01_duration_bias/E022/README.md) · [가변 길이 학습과 기존 모델의 21LA 길이·공격별 오류 재분석](../01_duration_bias/E023/README.md) · [최대 20% 절단·0.8~1.2배 속도 변형의 학습 자료 정책과 실제 변형 캐시](../01_duration_bias/E024/README.md) · [완만한 변형 캐시를 배치 240 고정 길이 반복 입력 학습 학습에 연결한 두 실행](../01_duration_bias/E025/README.md) · [원음 2초 이하 정상에만 3.0275초·2초 손실을 더한 배치 240 고정 길이 반복 입력 학습 학습](../01_duration_bias/E026/README.md) · [가변 길이 입력·마스크·기울기 계산의 실제 GPU 가능성 점검](../01_duration_bias/E027/README.md) · [학습·개발·평가 자료의 원음 길이와 공격별 클래스 구성](../01_duration_bias/E028/README.md) · [목표 길이 안에서 정상·위조의 음성활동 비율까지 맞추는 정책](../01_duration_bias/E035/README.md) · [구간만 직접 읽는 방식의 속도·발화량·원음 사용률 진단](../01_duration_bias/E036/README.md) · [매 epoch 모든 원음을 사용하면서 기존 기대 선택 비율을 유지하는 샘플러](../01_duration_bias/E037/README.md) · [가변 길이 OC +BPL과 평가 중심·난수·저장의 실제 연결 검사](../01_duration_bias/E038/README.md) · [방향 벡터 전체의 조건별 분산과 길이·패딩 연관](../05_residual_geometry/E050/README.md) · [원음 길이별 정상 평균 기준과 점수 보정·무작위 중심 대조](../01_duration_bias/E067/README.md) · [학습·분산 기울기·저장·worker 오류의 실행 전 통합 검증](../01_duration_bias/E084/README.md) · [동일 음성의 다섯 시간 위치·두 길이 절단 평가](../01_duration_bias/E088/README.md) · [학습 원음의 저에너지·음량 분포와 클래스 단서의 초기 조사](../01_duration_bias/E093/README.md) · [저에너지 구간의 길이·에너지를 유지한 미세 파형 구조 개입](../01_duration_bias/E094/README.md) · [같은 본문·총길이·에너지에서 앞뒤 저에너지 배치만 바꾼 실험](../01_duration_bias/E097/README.md) · [저에너지 파형의 에너지·스펙트럼·위치 요인과 진폭 용량 비교](../01_duration_bias/E098/README.md) · [원음 전체를 보존하고 앞 또는 뒤에만 저에너지를 추가한 엄격 대조](../01_duration_bias/E100/README.md) · [엄격 원음 추가 실험의 고정 평가 입력·반복 재현·경험적 정상 기준 대조](../01_duration_bias/E101/README.md) · [ASVspoof 출처만 남긴 자연 길이·자체 파형·제공자 효과 재검토](../01_duration_bias/E102/README.md) · [앞 저에너지의 존재·지속 길이 규칙과 모델 점수의 관계](../01_duration_bias/E105/README.md) · [앞 저에너지 100ms 이하·500ms 이상인 자연 표본의 양 클래스 평가](../01_duration_bias/E106/README.md) · [고정 BPL 학습 모델의 실제 증강 쌍·저에너지 이식 반응 검토](../03_bonafide_diversity/E107/README.md) · [저에너지 시간 위치와 나머지 XLS-R 특징을 교체·제외한 내부 개입](../05_residual_geometry/E108/README.md) · [원음 전체와 실제 긴·짧은 증강 입력의 저에너지 위치 분포 전수 조사](../01_duration_bias/E110/README.md) · [짧은 정상 음성의 3.0275초·2초 정렬 학습 중단25epoch의21LA·DF 전체평가와 독립ROC 검산](../01_duration_bias/E113/README.md)
 
 같은 checkpoint·음성·캐시를 재사용한 분석은 독립 학습이나 독립 표본으로 중복 합산하지 않는다.
 

@@ -1,4 +1,6 @@
-# E036. 구간만 직접 읽는 방식의 속도·발화량·원음 사용률 진단
+<a id="e036-구간만-직접-읽는-방식의-속도발화량원음-사용률-진단"></a>
+
+# 구간만 직접 읽는 방식의 속도·발화량·원음 사용률 진단
 
 **실행 상태:** 실제 파형·로더진단완료
 
@@ -43,17 +45,17 @@ bit-exact 읽기 개선은 확인했지만 전체 학습 속도 향상과 다르
 
 ## 실험 코드
 
-- [EBM/positive_bpl.py](code/EBM/positive_bpl.py)
-- [EBM/tools/analyze_train_crop_io.py](code/EBM/tools/analyze_train_crop_io.py)
+- [소스: positive_bpl.py](code/EBM/positive_bpl.py)
+- [소스: analyze_train_crop_io.py](code/EBM/tools/analyze_train_crop_io.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [artifacts/train_crop_io_activity_20261110/results/analysis.json](../../_shared/references/artifacts/train_crop_io_activity_20261110/results/analysis.json)
-- [artifacts/train_crop_io_activity_20261110/verified_summary.json](../../_shared/references/artifacts/train_crop_io_activity_20261110/verified_summary.json)
-- [artifacts/train_crop_io_activity_20261110/state.json](../../_shared/references/artifacts/train_crop_io_activity_20261110/state.json)
-- [EBM/positive_bpl.py](../../../positive_bpl.py)
+- [설정·결과 근거](../../_shared/references/artifacts/train_crop_io_activity_20261110/results/analysis.json)
+- [설정·결과 근거](../../_shared/references/artifacts/train_crop_io_activity_20261110/verified_summary.json)
+- [설정·결과 근거](../../_shared/references/artifacts/train_crop_io_activity_20261110/state.json)
+- [소스: positive_bpl.py](../../../positive_bpl.py)
 
 ## 연결
 

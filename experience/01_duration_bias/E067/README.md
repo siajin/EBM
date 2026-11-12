@@ -1,4 +1,6 @@
-# E067. 원음 길이별 정상 평균 기준과 점수 보정·무작위 중심 대조
+<a id="e067-원음-길이별-정상-평균-기준과-점수-보정무작위-중심-대조"></a>
+
+# 원음 길이별 정상 평균 기준과 점수 보정·무작위 중심 대조
 
 **실행 상태:** 캐시 점수 평가·독립 검산 완료
 
@@ -45,16 +47,16 @@ DF 전체 기준 3.241828%, 전체 평균 3.335799%, 길이별 평균 3.315623%,
 
 ## 실험 코드
 
-- [artifacts/geometry_experiments/duration_conditioned_centroids.py](code/artifacts/geometry_experiments/duration_conditioned_centroids.py)
+- [소스: duration_conditioned_centroids.py](code/artifacts/geometry_experiments/duration_conditioned_centroids.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [docs/experiments/ebm_duration_conditioned_centroids_plan_20261106.md](../../_shared/references/docs/experiments/ebm_duration_conditioned_centroids_plan_20261106.md)
-- [docs/experiments/ebm_duration_conditioned_centroids_results_20261106.md](../../_shared/references/docs/experiments/ebm_duration_conditioned_centroids_results_20261106.md)
-- [artifacts/geometry_experiments/duration_conditioned_centroids.py](../../_shared/workspace/artifacts/geometry_experiments/duration_conditioned_centroids.py)
-- [artifacts/geometry_cache/local_analysis/duration_centroids_20261106_v1/metrics_overall.csv](../../_shared/references/artifacts/geometry_cache/local_analysis/duration_centroids_20261106_v1/metrics_overall.csv)
+- [상세 설계·실험 기록](../../_shared/references/docs/experiments/ebm_duration_conditioned_centroids_plan_20261106.md)
+- [상세 설계·실험 기록](../../_shared/references/docs/experiments/ebm_duration_conditioned_centroids_results_20261106.md)
+- [소스: duration_conditioned_centroids.py](../../_shared/workspace/artifacts/geometry_experiments/duration_conditioned_centroids.py)
+- [집계 결과 표](../../_shared/references/artifacts/geometry_cache/local_analysis/duration_centroids_20261106_v1/metrics_overall.csv)
 
 ## 연결
 

@@ -1,4 +1,6 @@
-# E010. 두 반복 제거 학습 모델의 모든 저장 epoch 평가와 최소 EER 비교
+<a id="e010-두-반복-제거-학습-모델의-모든-저장-epoch-평가와-최소-eer-비교"></a>
+
+# 두 반복 제거 학습 모델의 모든 저장 epoch 평가와 최소 EER 비교
 
 **실행 상태:** 평가 완료
 
@@ -6,17 +8,17 @@
 
 ## 가설
 
-고정50 한 점보다 저장된 전체 epoch를 보면 B/C의 과적합·집합별 최적 시점을 파악할 수 있다.
+고정50 한 점보다 저장된 전체 epoch를 보면 4.0375초 상한 비반복 학습과 원음 전체 비반복 학습의 과적합·집합별 최적 시점을 파악할 수 있다.
 
 ## 그렇게 설계한 이유
 
 마지막 50epoch 한 점 대신 저장된 5~50epoch 전체를 같은 조건으로 평가한다.
 
-대조와 통제의 근거: B/C의 입력·난수는 같은 실행에서 통제한다. 기존 240 의최소표는 과거 반복 평가 15~50epoch8개 기록으로, 이 20개 평가와 입력 조건이 다르다.
+대조와 통제의 근거: 4.0375초 상한 비반복 학습과 원음 전체 비반복 학습의 입력·난수는 같은 실행에서 통제한다. 배치 240 고정 길이 반복 입력 학습 의최소표는 과거 반복 평가 15~50epoch8개 기록으로, 이 20개 평가와 입력 조건이 다르다.
 
 ## 모델·데이터·표본
 
-B와 C 각각 5,10,15,20,25,30,35,40,45,50epoch의 총 20개 모델. 개발·19LA·21LA·DF 전체 778,185개.
+4.0375초 상한 비반복 학습과 원음 전체 비반복 학습 각각 5,10,15,20,25,30,35,40,45,50epoch의 총 20개 모델. 개발·19LA·21LA·DF 전체 778,185개.
 
 ## 실험 내용과 상세 절차
 
@@ -31,7 +33,7 @@ B와 C 각각 5,10,15,20,25,30,35,40,45,50epoch의 총 20개 모델. 개발·19L
 
 ## 결과
 
-B의 최소는 19LA 0.462271%(45),21LA 3.759449%(45), DF 2.084875%(5). C는 0.488400%(40),4.622076%(30),2.152549%(5). 세 집합의 최적 epoch가 다르다.
+4.0375초 상한 비반복 학습의 최소는 19LA 0.462271%(45),21LA 3.759449%(45), DF 2.084875%(5). 원음 전체 비반복 학습은 0.488400%(40),4.622076%(30),2.152549%(5). 세 집합의 최적 epoch가 다르다.
 
 ## 해석·실패한 부분·한계
 
@@ -43,18 +45,18 @@ target별 관측 최소는 사후 요약이다. 다른 집합에서 각각 고�
 
 ## 실험 코드
 
-- [EBM/tools/evaluate_B_C_checkpoints.py](code/EBM/tools/evaluate_B_C_checkpoints.py)
-- [EBM/tools/evaluate_B_checkpoints.py](code/EBM/tools/evaluate_B_checkpoints.py)
+- [두 비반복 학습의 전체 저장점 평가 코드](code/EBM/tools/evaluate_B_C_checkpoints.py)
+- [4.0375초 상한 비반복 학습의 저장점 평가 코드](code/EBM/tools/evaluate_B_checkpoints.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [EBM/tools/evaluate_B_C_checkpoints.py](../../../tools/evaluate_B_C_checkpoints.py)
-- [artifacts/ebm_B_C_checkpoints_20261109/metrics.json](../../_shared/references/artifacts/ebm_B_C_checkpoints_20261109/metrics.json)
-- [artifacts/ebm_B_C_checkpoints_20261109/complete.json](../../_shared/references/artifacts/ebm_B_C_checkpoints_20261109/complete.json)
-- [artifacts/ebm_B_C_checkpoints_20261109/LA_analysis/validation.json](../../_shared/references/artifacts/ebm_B_C_checkpoints_20261109/LA_analysis/validation.json)
-- [artifacts/ebm_B_C_checkpoints_20261109/completed_B_C_dataset_minima.json](../../_shared/references/artifacts/ebm_B_C_checkpoints_20261109/completed_B_C_dataset_minima.json)
+- [두 비반복 학습의 전체 저장점 평가 코드](../../../tools/evaluate_B_C_checkpoints.py)
+- [집계 평가 지표](../../_shared/references/artifacts/ebm_B_C_checkpoints_20261109/metrics.json)
+- [완료 확인 기록](../../_shared/references/artifacts/ebm_B_C_checkpoints_20261109/complete.json)
+- [검산 결과](../../_shared/references/artifacts/ebm_B_C_checkpoints_20261109/LA_analysis/validation.json)
+- [설정·결과 근거](../../_shared/references/artifacts/ebm_B_C_checkpoints_20261109/completed_B_C_dataset_minima.json)
 
 ## 연결
 

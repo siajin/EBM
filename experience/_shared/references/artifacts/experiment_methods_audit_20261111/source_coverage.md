@@ -1,3 +1,5 @@
+> 표시 명칭·링크 이름은 설명형으로 정리했다. 원래 코드·경로·수치는 그대로 보존한다.
+
 > 역사 문서 보존본. 원문 작성 당시의 상태·계획을 포함한다. 최신 상태와 확정 결과는 experience의 각 실험 README를 우선한다.
 
 # 실험 방법서의 근거 범위 대조표
@@ -20,7 +22,7 @@
 |artifacts/duration_sampling_design_20261110|E033|해당 폴더의 설정·분석·결과 근거를 본문 항목에 연결|4|
 |artifacts/duration_zoom_20261109|E028|해당 폴더의 설정·분석·결과 근거를 본문 항목에 연결|6|
 |artifacts/ebm_B_C_checkpoints_20261109|E005, E007, E010, E011|해당 폴더의 설정·분석·결과 근거를 본문 항목에 연결|67|
-|artifacts/ebm_B_checkpoints_20261108|E010|B만 평가하려던 명세·소스; 이후 B/C 동시 전체 평가로 통합|2|
+|artifacts/ebm_B_checkpoints_20261108|E010|4.0375초 상한 비반복 학습만 평가하려던 명세·소스; 이후 4.0375초 상한 비반복 학습과 원음 전체 비반복 학습 동시 전체 평가로 통합|2|
 |artifacts/ebm_C_20261108|E007|해당 폴더의 설정·분석·결과 근거를 본문 항목에 연결|56|
 |artifacts/ebm_C_length_class_distribution_20261109|E028|해당 폴더의 설정·분석·결과 근거를 본문 항목에 연결|4|
 |artifacts/ebm_coverage_e20_eval_20261110|E022|해당 폴더의 설정·분석·결과 근거를 본문 항목에 연결|24|
@@ -99,7 +101,7 @@
 |artifacts/geometry_cache/local_analysis/padding_causal_20261106_v1|E071, E073|해당 폴더의 설정·분석·결과 근거를 본문 항목에 연결|60|
 |artifacts/geometry_cache/local_analysis/perturbation_candidate_audit_20261106_v1|E070, E085|해당 폴더의 설정·분석·결과 근거를 본문 항목에 연결|14|
 |artifacts/geometry_cache/local_analysis/report_revisions|E083|동일 그림의 레이블·배치 수정; 새 통계 실험 아님|1|
-|artifacts/geometry_cache/local_analysis/short3_training_design_20261106_v1|E006, E080|짧은 입력 303프레임 학습 설계와 후속 실제 B 구현의 관계|2|
+|artifacts/geometry_cache/local_analysis/short3_training_design_20261106_v1|E006, E080|짧은 입력 303프레임 학습 설계와 후속 실제 4.0375초 상한 비반복 학습 구현의 관계|2|
 |artifacts/geometry_cache/local_analysis/spoof_path_geometry_v1|E068, E069|해당 폴더의 설정·분석·결과 근거를 본문 항목에 연결|155|
 |artifacts/geometry_cache/local_analysis/variable_length_audit_20261106_v1|E027|해당 폴더의 설정·분석·결과 근거를 본문 항목에 연결|18|
 

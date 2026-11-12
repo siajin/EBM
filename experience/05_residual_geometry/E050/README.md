@@ -1,4 +1,6 @@
-# E050. 방향 벡터 전체의 조건별 분산과 길이·패딩 연관
+<a id="e050-방향-벡터-전체의-조건별-분산과-길이패딩-연관"></a>
+
+# 방향 벡터 전체의 조건별 분산과 길이·패딩 연관
 
 **실행 상태:** 캐시 통계 완료
 
@@ -43,16 +45,16 @@ DF 정상 출처 eta²0.307754, DF 위조 패딩 0.163591,21LA 정상 코덱 0.1
 
 ## 실험 코드
 
-- [artifacts/geometry_experiments/frozen_n0.py](code/artifacts/geometry_experiments/frozen_n0.py)
+- [소스: frozen_n0.py](code/artifacts/geometry_experiments/frozen_n0.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [artifacts/geometry_experiments/frozen_n0.py](../../_shared/workspace/artifacts/geometry_experiments/frozen_n0.py)
-- [artifacts/geometry_cache/local_analysis/frozen_all_v1/F4/vector_variance.csv](../../_shared/references/artifacts/geometry_cache/local_analysis/frozen_all_v1/F4/vector_variance.csv)
-- [artifacts/geometry_cache/local_analysis/frozen_all_v1/F4/padding_duration.csv](../../_shared/references/artifacts/geometry_cache/local_analysis/frozen_all_v1/F4/padding_duration.csv)
-- [artifacts/geometry_cache/local_analysis/frozen_all_v1/F4/coverage.csv](../../_shared/references/artifacts/geometry_cache/local_analysis/frozen_all_v1/F4/coverage.csv)
+- [소스: frozen_n0.py](../../_shared/workspace/artifacts/geometry_experiments/frozen_n0.py)
+- [집계 결과 표](../../_shared/references/artifacts/geometry_cache/local_analysis/frozen_all_v1/F4/vector_variance.csv)
+- [집계 결과 표](../../_shared/references/artifacts/geometry_cache/local_analysis/frozen_all_v1/F4/padding_duration.csv)
+- [집계 결과 표](../../_shared/references/artifacts/geometry_cache/local_analysis/frozen_all_v1/F4/coverage.csv)
 
 ## 연결
 

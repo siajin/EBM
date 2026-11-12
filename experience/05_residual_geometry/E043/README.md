@@ -1,4 +1,6 @@
-# E043. DF 안에서 점수·크기를 통제한 잔여 방향의 판별 정보
+<a id="e043-df-안에서-점수크기를-통제한-잔여-방향의-판별-정보"></a>
+
+# DF 안에서 점수·크기를 통제한 잔여 방향의 판별 정보
 
 **실행 상태:** 추가 분류기·내부 교차검증 완료
 
@@ -12,7 +14,7 @@
 
 기존 점수와 표현 크기가 설명하지 못하는 방향 관련 신호가 고정 특징 안에 남는지 본다.
 
-대조와 통제의 근거: 주매칭 106쌍·28 화자 그룹이며 같은 화자까지 요구하면 18쌍·7 그룹이다. 후속 엄격 매칭 [E048](../E048/README.md)과 조건이 다르다.
+대조와 통제의 근거: 주매칭 106쌍·28 화자 그룹이며 같은 화자까지 요구하면 18쌍·7 그룹이다. 후속 엄격 매칭 [같은 화자·코덱·점수·크기의 정상/위조 방향 분포 매칭](../E048/README.md)과 조건이 다르다.
 
 ## 모델·데이터·표본
 
@@ -43,17 +45,17 @@ DF 내부의 신호는 확인했지만 정답을 쓴 내부CV다. 새 도메인�
 
 ## 실험 코드
 
-- [artifacts/geometry_experiments/cached_core_diagnostics.py](code/artifacts/geometry_experiments/cached_core_diagnostics.py)
+- [소스: cached_core_diagnostics.py](code/artifacts/geometry_experiments/cached_core_diagnostics.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [docs/experiments/ebm_cached_core_results_20261105.md](../../_shared/references/docs/experiments/ebm_cached_core_results_20261105.md)
-- [artifacts/geometry_experiments/cached_core_diagnostics.py](../../_shared/workspace/artifacts/geometry_experiments/cached_core_diagnostics.py)
-- [artifacts/geometry_cache/local_analysis/cached_core_v1/protocol_lock.json](../../_shared/references/artifacts/geometry_cache/local_analysis/cached_core_v1/protocol_lock.json)
-- [artifacts/geometry_cache/local_analysis/cached_core_v1/summary.json](../../_shared/references/artifacts/geometry_cache/local_analysis/cached_core_v1/summary.json)
-- [artifacts/geometry_cache/local_analysis/cached_core_v1/matched_summary.json](../../_shared/references/artifacts/geometry_cache/local_analysis/cached_core_v1/matched_summary.json)
+- [상세 설계·실험 기록](../../_shared/references/docs/experiments/ebm_cached_core_results_20261105.md)
+- [소스: cached_core_diagnostics.py](../../_shared/workspace/artifacts/geometry_experiments/cached_core_diagnostics.py)
+- [설정·결과 근거](../../_shared/references/artifacts/geometry_cache/local_analysis/cached_core_v1/protocol_lock.json)
+- [설정·결과 근거](../../_shared/references/artifacts/geometry_cache/local_analysis/cached_core_v1/summary.json)
+- [설정·결과 근거](../../_shared/references/artifacts/geometry_cache/local_analysis/cached_core_v1/matched_summary.json)
 
 ## 연결
 

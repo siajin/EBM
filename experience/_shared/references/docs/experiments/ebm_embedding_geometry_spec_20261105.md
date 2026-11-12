@@ -1,3 +1,5 @@
+> 표시 명칭·링크 이름은 설명형으로 정리했다. 원래 코드·경로·수치는 그대로 보존한다.
+
 > 역사 문서 보존본. 원문 작성 당시의 상태·계획을 포함한다. 최신 상태와 확정 결과는 experience의 각 실험 README를 우선한다.
 
 # EBM 채널 attention과 방향 손실 실험 명세
@@ -15,8 +17,8 @@
 | 가설 | 연구 질문 | 핵심 실험 | 주된 반증 가능성 |
 | --- | --- | --- | --- |
 | H1 | 탐지에 유용한 정보가 특정 채널에 집중되는가 | A | 선택한 채널과 무작위 채널의 성능이 비슷함 |
-| H2 | 발화별로 중요 채널을 바꾸는 것이 필요한가 | B | 입력별 gate가 고정 gate나 같은 크기의 MLP보다 좋지 않음 |
-| H3 | 코사인과 벡터 크기를 넘어 방향 정보가 유용한가 | C | 방향 추가의 독립 평가 이득이 확인되지 않음 |
+| H2 | 발화별로 중요 채널을 바꾸는 것이 필요한가 | 발화별 채널 가중치 비교 | 입력별 gate가 고정 gate나 같은 크기의 MLP보다 좋지 않음 |
+| H3 | 코사인과 벡터 크기를 넘어 방향 정보가 유용한가 | 잔여 방향 정보 판독 비교 | 방향 추가의 독립 평가 이득이 확인되지 않음 |
 | H4 | spoof의 방향 구조가 공통인지 공격별인지 구별 가능한가 | D | 평균 방향 및 여러 모드가 독립 표본에서 재현되지 않음 |
 | H5 | 방향별 정상 변동과 차원 간 상관관계가 탐지에 유용한가 | E | 공분산 기반 점수가 기존 점수보다 좋지 않음 |
 | H6 | 위 정보가 화자나 수집 조건에만 의존하지 않는가 | F | 조건 통제 또는 미지 조건에서 이득이 사라짐 |
@@ -36,7 +38,7 @@ batch 240 최종 checkpoint는 보조적인 표현 재현성 비교에만 쓴다
 
 ### 2.2 새 학습의 공통 조건
 
-새 G 및 B의 완전 학습은 batch 160, epoch 50, lr=lr_min=1e-5, weight_decay=1e-4, 긴 입력 404 및 짧은 입력 303 frame 설정, 평가 404 및 num_seg=1을 기본으로 한다. 나머지 설정, optimizer 종류와 세부 인자, scheduler, 샘플 비율, 증강은 batch 160 저장 설정을 보존하고 해시를 기록한다. optimizer 종류와 decoder crop의 실제 sample 단위는 소스와 데이터 manifest 확인 전 임의로 추정하지 않는다.
+새 G 및 발화별 채널 가중치 비교의 완전 학습은 batch 160, epoch 50, lr=lr_min=1e-5, weight_decay=1e-4, 긴 입력 404 및 짧은 입력 303 frame 설정, 평가 404 및 num_seg=1을 기본으로 한다. 나머지 설정, optimizer 종류와 세부 인자, scheduler, 샘플 비율, 증강은 batch 160 저장 설정을 보존하고 해시를 기록한다. optimizer 종류와 decoder crop의 실제 sample 단위는 소스와 데이터 manifest 확인 전 임의로 추정하지 않는다.
 
 frontend는 50 epoch 동안 기존 경로와 동일하게 고정한다. classifier는 학습한다. BPL은 GPU별 정상 긴/짧은 모든 쌍의 평균을 사용하는 기존 구현으로 유지한다. 전역 BPL, batch 확대, LR schedule 변경을 이번 요인과 섞지 않는다. GPU 두 장과 `CUDA_VISIBLE_DEVICES=0,1`을 사용한다. 새로운 기본값을 선택해야 하면 모든 비교군을 동일하게 변경하고 protocol 버전을 올린다.
 
@@ -70,7 +72,7 @@ V와 Q는 speaker 그룹을 seed 11로 무작위 순열한 뒤 절반씩 나눈�
 
 후속 사용자 요청에 따라 재학습 없는 캐시 실험에는 T25,380개(정상2,580/spoof22,800), V14,983개(1,351/13,632)를 유지하고 **DF20,000개와21LA20,000개를 각각 정상2,000/spoof18,000개로 고정**한다. 21LA 전체148,176개 캐시는 보존하되 반복 진단의 기본 입력으로 전부 사용하지 않는다. R2/R3에 대응하는 소규모 개입 확인은 각pilot 안에서 정상200/spoof1,800개, 합계2,000개씩이다.
 
-구체적인 F0~F4/P1~P4/R1~R3별 수, score-independent SHA256 선택과 고정 ID 목록은 [동결 모델 명세3.1.1](ebm_frozen_model_experiments_20261105.md#311-신규-캐시-실험의-기본-데이터-수)에 있다. 이 표본 규칙은 현재 cached 분석의 후속 버전이며 과거 완료 결과의 표본을 바꾸지 않는다. 본문의 원래 B/G 공동 학습 및 공식 전체 benchmark 확인 계약과도 구분한다. 모델 학습/선택은 T/V이고, DF/21LA 내부 진단용 CV는 데이터셋별로 따로 수행해 전이 평가와 섞지 않는다. 전체21LA는 동결한 방법의 마지막 보조 평가에만 사용하며 pilot과 겹치므로 독립 확인으로 세지 않는다.
+구체적인 F0~F4/P1~P4/R1~R3별 수, score-independent SHA256 선택과 고정 ID 목록은 [상세 설계·실험 기록](ebm_frozen_model_experiments_20261105.md#311-신규-캐시-실험의-기본-데이터-수)에 있다. 이 표본 규칙은 현재 cached 분석의 후속 버전이며 과거 완료 결과의 표본을 바꾸지 않는다. 본문의 원래 발화별 채널 가중치 비교/G 공동 학습 및 공식 전체 benchmark 확인 계약과도 구분한다. 모델 학습/선택은 T/V이고, DF/21LA 내부 진단용 CV는 데이터셋별로 따로 수행해 전이 평가와 섞지 않는다. 전체21LA는 동결한 방법의 마지막 보조 평가에만 사용하며 pilot과 겹치므로 독립 확인으로 세지 않는다.
 
 ### 3.2 선택과 잠금 절차
 
@@ -165,7 +167,7 @@ seed 1, 2, 3은 screening 학습, 1, 2, 3, 4, 5는 최종 확인 학습이다. �
 
 ### 5.3 Probe와 전처리의 공통 규칙
 
-T에만 fit한 standard scaler와 class weight를 사용한다. logistic regression의 L2 C는 [0.01, 0.1, 1, 10]에서 V balanced log-loss 최소로 선택한다. 선형 probe와 1 hidden layer GELU MLP를 모두 사용한다. MLP hidden은 16 또는 32, Adam lr [1e-4, 1e-3], weight_decay [1e-4, 1e-2], batch 256, 최대 100 epoch, V patience 10이며 최저 V epoch를 저장한다. probe seed는 101, 102, 103이다. 동일 비교에서 같은 후보 수와 selection rule을 준다. test를 early stopping에 쓰지 않는다.
+T에만 fit한 standard scaler와 class weight를 사용한다. logistic regression의 L2 잔여 방향 정보 판독 비교는 [0.01, 0.1, 1, 10]에서 V balanced log-loss 최소로 선택한다. 선형 probe와 1 hidden layer GELU MLP를 모두 사용한다. MLP hidden은 16 또는 32, Adam lr [1e-4, 1e-3], weight_decay [1e-4, 1e-2], batch 256, 최대 100 epoch, V patience 10이며 최저 V epoch를 저장한다. probe seed는 101, 102, 103이다. 동일 비교에서 같은 후보 수와 selection rule을 준다. test를 early stopping에 쓰지 않는다.
 
 seed별 서로 다른 scaler를 혼합하지 않는다. feature 공간이 서로 다른 encoder끼리 채널 index나 prototype 각도를 직접 비교하지 않는다. 동일 checkpoint의 subset 비교에서만 좌표별 순위 상관을 사용한다. 다른 checkpoint의 비교는 예측 성능이나 회전 불변 스펙트럼을 사용한다. full training seed와 probe seed를 결합한 5×3 결과를 15개의 독립 full training run으로 세지 않는다. probe가 붙은 비교는 각 training seed 안의 동일 probe seed를 짝짓고, probe seed 변동을 따로 요약한다. joint CI가 필요하면 training seed, 그 안의 probe seed, evaluation dependency group을 순서대로 resample한다.
 
@@ -180,7 +182,7 @@ seed별 서로 다른 scaler를 혼합하지 않는다. feature 공간이 서로
 P0의 기존 checkpoint 임베딩을 사용하며 encoder는 고정한다. 기본은 z, h는 보조다. train 정상과 전체 spoof 및 공격 k별로 아래를 계산한다.
 
 \[
-J_{k,j}=\frac{(\mu_{B,j}-\mu_{S_k,j})^2}{\sigma^2_{B,j}+\sigma^2_{S_k,j}+10^{-8}}.
+J_{k,j}=\frac{(\mu_{발화별 채널 가중치 비교,j}-\mu_{S_k,j})^2}{\sigma^2_{발화별 채널 가중치 비교,j}+\sigma^2_{S_k,j}+10^{-8}}.
 \]
 
 J를 pooled spoof로 계산한 순위와 공격별 J의 동일 가중 평균 순위를 따로 저장한다. 주 순위는 공격 macro 평균이다. variance가 거의 0인 차원은 flag하고 분모 보정에 의존한 큰 값은 별도 보고한다. 선택 비율은 [0.05, 0.10, 0.25, 0.50, 1.00], d=160에서 개수는 [8, 16, 40, 80, 160]이다. 무작위 subset은 seed 200부터 219까지 20개를 만들고 좋은 subset 하나를 고르지 않는다.
@@ -197,7 +199,9 @@ J를 pooled spoof로 계산한 순위와 공격별 J의 동일 가중 평균 순
 
 출력: `A/channel_statistics.parquet`, `A/masks.json`, `A/probe_scores.parquet`, `A/ablation_curves.csv`, `A/attack_channel_heatmap.png`, `A/decision.json`. 무작위 mask에 대한 변동과 evaluation group bootstrap 변동은 서로 다른 축으로 저장한다.
 
-## 7 실험 B 발화별 채널 attention
+<a id="7-실험-b-발화별-채널-attention"></a>
+
+## 7 실험 발화별 채널 가중치 비교 발화별 채널 attention
 
 ### 7.1 고정한 구조
 
@@ -209,25 +213,27 @@ J를 pooled spoof로 계산한 순위와 공격별 J의 동일 가중 평균 순
 
 ### 7.2 비교군과 학습
 
-B0=기존, B1=정적 gate, B2=동적 gate, B3=잔차 MLP다. G0, G1, G2, Gm과 정확히 같은 run을 재사용한다. B와 G를 별도로 중복 학습하지 않는다. 각 seed에서 동일한 데이터 순서와 증강 난수를 가능한 한 공유하고 DDP rank별 원발화 및 crop seed 해시를 비교한다.
+추가 모듈 없는 기준 표현 =기존, 정적 채널 가중치 모듈 =정적 gate, 입력별 채널 가중치 모듈 =동적 gate, 잔차 신경망 모듈 =잔차 MLP다. G0, G1, G2, Gm과 정확히 같은 run을 재사용한다. 발화별 채널 가중치 비교와 G를 별도로 중복 학습하지 않는다. 각 seed에서 동일한 데이터 순서와 증강 난수를 가능한 한 공유하고 DDP rank별 원발화 및 crop seed 해시를 비교한다.
 
-기본 구조는 hidden 16 하나로 고정한다. hidden 8, 32 탐색을 추가한다면 B3에도 동일 예산을 주고 V에서만 선택하며 실행 수를 별도로 집계한다. 추가 하이퍼파라미터가 없는 B1과의 차이를 tuning 이득으로 과장하지 않는다.
+기본 구조는 hidden 16 하나로 고정한다. hidden 8, 32 탐색을 추가한다면 잔차 신경망 모듈에도 동일 예산을 주고 V에서만 선택하며 실행 수를 별도로 집계한다. 추가 하이퍼파라미터가 없는 정적 채널 가중치 모듈과의 차이를 tuning 이득으로 과장하지 않는다.
 
 ### 7.3 gate 기능 진단
 
-학습한 B2에서 원래 gate, 항상 1인 gate, T gate 평균, 다른 발화 gate를 비교한다. 다른 gate는 평가 라벨을 사용하지 않고 V에서 잠근 score·norm 구간 내에서 seed 301부터 320까지 20회 재배치한다. 단독 표본 구간은 제외하지 말고 unchanged로 표시한다. 이 개입은 latent 분포를 바꿀 수 있으므로 standalone 모델 superiority의 주 근거가 아니다.
+학습한 입력별 채널 가중치 모듈에서 원래 gate, 항상 1인 gate, T gate 평균, 다른 발화 gate를 비교한다. 다른 gate는 평가 라벨을 사용하지 않고 V에서 잠근 score·norm 구간 내에서 seed 301부터 320까지 20회 재배치한다. 단독 표본 구간은 제외하지 말고 unchanged로 표시한다. 이 개입은 latent 분포를 바꿀 수 있으므로 standalone 모델 superiority의 주 근거가 아니다.
 
-gate 재배치 구간은 해당 모델의 gate 전 z와 learned c로 계산한 s의 T pooled 10분위, log(norm)의 T pooled 5분위의 교차 구간이다. 경계 중복은 합치며 label에 따라 구간을 바꾸지 않는다. 이 s는 gate 후 native score와 구별하여 저장한다. C의 방향 재배치에도 원래 checkpoint의 같은 10×5 규칙을 적용한다. MMD용 score overlap 병합 규칙과 재배치용 구간 규칙은 다른 목적이므로 혼용하지 않는다.
+gate 재배치 구간은 해당 모델의 gate 전 z와 learned c로 계산한 s의 T pooled 10분위, log(norm)의 T pooled 5분위의 교차 구간이다. 경계 중복은 합치며 label에 따라 구간을 바꾸지 않는다. 이 s는 gate 후 native score와 구별하여 저장한다. 잔여 방향 정보 판독 비교의 방향 재배치에도 원래 checkpoint의 같은 10×5 규칙을 적용한다. MMD용 score overlap 병합 규칙과 재배치용 구간 규칙은 다른 목적이므로 혼용하지 않는다.
 
 상위 gate 차원 제거와 같은 수의 무작위 차원 제거도 수행한다. a_j뿐 아니라 `abs(a_j z_j)`와 class별 gate 요약을 기록한다. 큰 gate 값이 곧 인과적 음향 중요도라는 해석은 하지 않는다. gate 분산이 큰 것만으로 H2 지지로 판정하지 않는다.
 
 ### 7.4 결과와 판정
 
-주 비교는 B2 대 B1, B2 대 B3의 R21DF EER다. B2가 B0보다 좋아도 B1과 같으면 입력 적응성의 이득으로 주장하지 않는다. 원본·변형 발화의 gate 변화와 score 변화는 F에서 함께 분석한다.
+주 비교는 입력별 채널 가중치 모듈 대 정적 채널 가중치 모듈 , 입력별 채널 가중치 모듈 대 잔차 신경망 모듈의 R21DF EER다. 입력별 채널 가중치 모듈이 추가 모듈 없는 기준 표현보다 좋아도 정적 채널 가중치 모듈과 같으면 입력 적응성의 이득으로 주장하지 않는다. 원본·변형 발화의 gate 변화와 score 변화는 F에서 함께 분석한다.
 
 출력: `B/model_comparisons.csv`, `B/gate_statistics.parquet`, `B/interventions.csv`, `B/condition_effects.csv`, `B/decision.json`. main 성능은 native gate만으로 계산하고 다른 gate 개입 결과 중 좋은 것을 채택하지 않는다.
 
-## 8 실험 C 코사인을 통제한 방향 정보
+<a id="8-실험-c-코사인을-통제한-방향-정보"></a>
+
+## 8 실험 잔여 방향 정보 판독 비교 코사인을 통제한 방향 정보
 
 ### 8.1 가설의 정확한 범위
 
@@ -237,15 +243,15 @@ gate 재배치 구간은 해당 모델의 gate 전 z와 learned c로 계산한 s
 
 | ID | 입력 |
 | --- | --- |
-| C0 | s |
-| C1 | s, log(norm) |
-| C1v | s, log(norm), direction_valid |
-| C2 | s, log(norm), direction_valid, u의 160좌표 |
-| Cnoise | C1v와 u 대신 label 독립인 160차원 unit noise |
+| 코사인 점수 판독기 | s |
+| 점수·벡터 크기 판독기 | s, log(norm) |
+| 점수·벡터 크기·방향 유효 표시 판독기 | s, log(norm), direction_valid |
+| 잔여 방향을 추가한 판독기 | s, log(norm), direction_valid, u의 160좌표 |
+| 독립 잡음 방향을 추가한 판독기 | 점수·벡터 크기·방향 유효 표시 판독기와 u 대신 label 독립인 160차원 unit noise |
 
-direction_valid는 방향 안정성 정보 자체의 이득과 u의 이득을 분리한다. 주 비교는 C2 대 C1v이며 C1 대 C0는 norm의 기여다. Cnoise는 차원과 capacity의 보조 대조군이지 u와 완전히 동일한 분포의 null sample이 아니다.
+direction_valid는 방향 안정성 정보 자체의 이득과 u의 이득을 분리한다. 주 비교는 잔여 방향을 추가한 판독기 대 점수·벡터 크기·방향 유효 표시 판독기가며 점수·벡터 크기 판독기 대 코사인 점수 판독기는 norm의 기여다. 독립 잡음 방향을 추가한 판독기는 차원과 capacity의 보조 대조군이지 u와 완전히 동일한 분포의 null sample이 아니다.
 
-각 입력에서 선형 probe와 공통 MLP grid를 사용한다. scalar baseline은 T quantile에 5개 knot를 둔 cubic spline logistic 후보도 허용하여 단순한 비선형 score 보정의 이득을 누락하지 않는다. 후보와 knot는 V까지로 고정한다. Cnoise는 id별 독립 PRNG로 만들고 원발화 파생본에는 같은 noise를 사용하여 독립 표본처럼 부풀리지 않는다. 의미가 있는 ID 문자열을 feature로 넣지 않는다.
+각 입력에서 선형 probe와 공통 MLP grid를 사용한다. scalar baseline은 T quantile에 5개 knot를 둔 cubic spline logistic 후보도 허용하여 단순한 비선형 score 보정의 이득을 누락하지 않는다. 후보와 knot는 V까지로 고정한다. 독립 잡음 방향을 추가한 판독기는 id별 독립 PRNG로 만들고 원발화 파생본에는 같은 noise를 사용하여 독립 표본처럼 부풀리지 않는다. 의미가 있는 ID 문자열을 feature로 넣지 않는다.
 
 ### 8.3 score overlap과 분포 검사
 
@@ -257,9 +263,9 @@ finite bin MMD는 잔여 s·norm·화자 차이의 영향을 받을 수 있다. 
 
 ### 8.4 방향 재배치와 판정
 
-C2 score를 원래 u와, 동결된 s·norm 구간 안에서 label 없이 섞은 u로 계산한다. 섞기 20회, seed 401~420이다. valid 상태가 같은 발화끼리만 섞고 동일 family는 donor에서 제외한다. donor 없음은 unchanged이며 바뀐 비율과 donor 간 s·norm 차이를 저장한다. 이는 방향 대응을 흐트러뜨리는 민감도 진단으로만 사용한다. 정확한 조건부 null을 생성했다는 주장은 금지한다.
+잔여 방향을 추가한 판독기 score를 원래 u와, 동결된 s·norm 구간 안에서 label 없이 섞은 u로 계산한다. 섞기 20회, seed 401~420이다. valid 상태가 같은 발화끼리만 섞고 동일 family는 donor에서 제외한다. donor 없음은 unchanged이며 바뀐 비율과 donor 간 s·norm 차이를 저장한다. 이는 방향 대응을 흐트러뜨리는 민감도 진단으로만 사용한다. 정확한 조건부 null을 생성했다는 주장은 금지한다.
 
-주 지표는 Q balanced log-loss 개선, 보조는 R21DF delta EER와 error rescue/harm다. rescue와 harm은 V에서 고정한 각 모델 threshold로 계산한다. test EER threshold에서 분류한 rescue는 주 결과로 쓰지 않는다. C2가 개선되지 않으면 선형과 작은 MLP의 한계를 포함해 불확실 또는 미지지로 기록한다. 높은 MMD만으로 탐지 개선을 주장하지 않는다 [2].
+주 지표는 Q balanced log-loss 개선, 보조는 R21DF delta EER와 error rescue/harm다. rescue와 harm은 V에서 고정한 각 모델 threshold로 계산한다. test EER threshold에서 분류한 rescue는 주 결과로 쓰지 않는다. 잔여 방향을 추가한 판독기가 개선되지 않으면 선형과 작은 MLP의 한계를 포함해 불확실 또는 미지지로 기록한다. 높은 MMD만으로 탐지 개선을 주장하지 않는다 [2].
 
 출력: `C/probe_registry.json`, `C/bin_definitions.json`, `C/support_coverage.csv`, `C/mmd_by_bin.csv`, `C/probe_scores.parquet`, `C/rescue_harm.csv`, `C/direction_shuffle.csv`, `C/decision.json`.
 
@@ -322,9 +328,9 @@ T와 V의 eigen spectrum, condition number, participation ratio를 기록한다.
 
 ### 11.1 평가할 모델
 
-기존 checkpoint의 C1v와 C2, E0와 V에서 선택한 E metric, 학습 완료한 G0부터 G4를 평가한다. 모델 목록과 threshold는 변형된 Q/R 결과를 보기 전에 고정한다. 변형 표본으로 scaler, prototype, covariance, gate 또는 threshold를 다시 fit하지 않는다.
+기존 checkpoint의 점수·벡터 크기·방향 유효 표시 판독기와 잔여 방향을 추가한 판독기 , E0와 V에서 선택한 E metric, 학습 완료한 G0부터 G4를 평가한다. 모델 목록과 threshold는 변형된 Q/R 결과를 보기 전에 고정한다. 변형 표본으로 scaler, prototype, covariance, gate 또는 threshold를 다시 fit하지 않는다.
 
-F는 `F_frozen`과 `F_trained` 두 평가 시점으로 나눈다. F_frozen은 C/E의 고정 encoder 결과만 사용해 G 전에 수행할 수 있다. F_trained는 G 종료 후 새 학습군을 평가한다. 전자의 완료를 위해 G가 필요하지 않으며, 후자의 결과로 G 설정을 다시 선택하지 않는다. B도 별도 학습 runner가 아니라 G0/G1/G2/Gm의 결과를 받아 H2를 평가하는 분석 단계다.
+F는 `F_frozen`과 `F_trained` 두 평가 시점으로 나눈다. F_frozen은 잔여 방향 정보 판독 비교/E의 고정 encoder 결과만 사용해 G 전에 수행할 수 있다. F_trained는 G 종료 후 새 학습군을 평가한다. 전자의 완료를 위해 G가 필요하지 않으며, 후자의 결과로 G 설정을 다시 선택하지 않는다. 발화별 채널 가중치 비교도 별도 학습 runner가 아니라 G0/G1/G2/Gm의 결과를 받아 H2를 평가하는 분석 단계다.
 
 ### 11.2 짝지은 변형 조건
 
@@ -383,9 +389,9 @@ A=I이면 S_A=cosine이므로 baseline의 OC항으로 돌아온다. trace d로 �
 | ID | 변환 | OC항 | BPL | 역할 |
 | --- | --- | --- | --- | --- |
 | G0 | identity | baseline | 기존 local | 기준 |
-| G1 | static gate | baseline | 기존 local | B1과 같은 run |
-| G2 | dynamic gate | baseline | 기존 local | B2와 같은 run |
-| Gm | residual MLP | baseline | 기존 local | B3과 같은 run |
+| G1 | static gate | baseline | 기존 local | 정적 채널 가중치 모듈과 같은 run |
+| G2 | dynamic gate | baseline | 기존 local | 입력별 채널 가중치 모듈과 같은 run |
+| Gm | residual MLP | baseline | 기존 local | 잔차 신경망 모듈과 같은 run |
 | G3 | identity | L_dir | 기존 local | 손실만 변경 |
 | G4 | dynamic gate | L_dir | 기존 local | 결합 효과 |
 
@@ -412,7 +418,7 @@ G3-native 대 G0-cosine만으로는 학습 목적과 추론 점수 변경의 효
 
 ### 12.5 학습 후 메커니즘 확인
 
-같은 A/C/E 분석을 G0/G2/G3에 적용한다. 서로 다른 encoder의 동일 채널 번호가 같은 의미라고 가정하지 않고, 각 T에서 동일 절차로 fit한 분석의 독립 평가 성능을 비교한다. gate 앞뒤의 표현을 함께 저장한다. 같은 표현의 결정적 변환 후 probe가 좋아졌다고 정보이론적 정보량이 증가했다고 주장하지 않는다.
+같은 A/잔여 방향 정보 판독 비교/E 분석을 G0/G2/G3에 적용한다. 서로 다른 encoder의 동일 채널 번호가 같은 의미라고 가정하지 않고, 각 T에서 동일 절차로 fit한 분석의 독립 평가 성능을 비교한다. gate 앞뒤의 표현을 함께 저장한다. 같은 표현의 결정적 변환 후 probe가 좋아졌다고 정보이론적 정보량이 증가했다고 주장하지 않는다.
 
 A의 trace와 고유값, gate 포화율, 클래스별 score, loss 항목과 V 지표를 기록한다. zero norm, NaN, 발산은 실패로 남기고 같은 run ID에 다른 설정을 덮어쓰지 않는다.
 
@@ -437,8 +443,8 @@ G3p는 비등방 거리와 별개 가설이다. 알려진 spoof를 외울 위험
 | 단계 | 내용 | 완전 학습 run 수 |
 | --- | --- | --- |
 | P0 | 기존 checkpoint 추출과 QC | 0 |
-| A/C/D/E | 고정 encoder 진단과 작은 probe | 0, probe fit 수 별도 집계 |
-| B/G screening | G0/G1/G2/Gm/G3/G4 각각 seed 1,2,3 | 18 |
+| A/잔여 방향 정보 판독 비교/D/E | 고정 encoder 진단과 작은 probe | 0, probe fit 수 별도 집계 |
+| 발화별 채널 가중치 비교/G screening | G0/G1/G2/Gm/G3/G4 각각 seed 1,2,3 | 18 |
 | 주 효과 확인 | G0/G1/G2/Gm/G3에 seed 4,5 추가 | 10 추가, 합계 28 |
 | 결합 효과 확인 | G4에도 seed 4,5 추가 | 2 추가, 합계 30 |
 | G3r/G3p | full metric와 prototype 확장 | 설정과 seed에 따라 추가 |
@@ -446,9 +452,9 @@ G3p는 비등방 거리와 별개 가설이다. 알려진 spoof를 외울 위험
 
 과거 seed 1 run의 코드와 데이터 순서 등 비교 조건이 일치하지 않으면 G0 run으로 세지 않는다. GPU 측정 전 소요 시간을 단정하지 않는다. 추출도 frontend를 통과하므로 비용이 있으며 구현 단계 P0의 소수 표본 측정으로 시간과 GPU-hour를 추정한다.
 
-P0 다음에는 C와 A를 먼저 수행한다. C가 불명확하면 h의 보조 probe를 조사한다. h에는 z의 learned centroid를 그대로 적용하지 않는다. (s_z, norm_z) 대 (s_z, norm_z, h)의 probe로 LayerNorm 이전 정보 손실 가능성을 확인한다. h의 좋은 결과가 z의 잔여 방향 가설을 지지하는 것은 아니다.
+P0 다음에는 잔여 방향 정보 판독 비교와 A를 먼저 수행한다. 잔여 방향 정보 판독 비교가 불명확하면 h의 보조 probe를 조사한다. h에는 z의 learned centroid를 그대로 적용하지 않는다. (s_z, norm_z) 대 (s_z, norm_z, h)의 probe로 LayerNorm 이전 정보 손실 가능성을 확인한다. h의 좋은 결과가 z의 잔여 방향 가설을 지지하는 것은 아니다.
 
-A가 지지되지만 B의 입력 의존성이 지지되지 않으면 static gate로 충분하다는 결론도 채택한다. 확인 학습의 진입과 중단 이유를 decision.json에 기록하고 불리한 seed를 제거하지 않는다. 진단이 음성이어도 새 표현학습이 불가능하다고 결론 내리지 않는다.
+A가 지지되지만 발화별 채널 가중치 비교의 입력 의존성이 지지되지 않으면 static gate로 충분하다는 결론도 채택한다. 확인 학습의 진입과 중단 이유를 decision.json에 기록하고 불리한 seed를 제거하지 않는다. 진단이 음성이어도 새 표현학습이 불가능하다고 결론 내리지 않는다.
 
 이번 의뢰는 명세 작성이다. 위 실행 수는 학습 시작 명령이 아니다. 구현 시 기존 실험 보호, 빈 결과 경로, 여유 용량, split manifest, checkpoint 대응, protocol lock을 확인한다.
 

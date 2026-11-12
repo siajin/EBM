@@ -1,4 +1,6 @@
-# E033. 학습 원음을 균등 선택하며 0.5~6초 길이 확률을 맞추는 초기 정책
+<a id="e033-학습-원음을-균등-선택하며-056초-길이-확률을-맞추는-초기-정책"></a>
+
+# 학습 원음을 균등 선택하며 0.5~6초 길이 확률을 맞추는 초기 정책
 
 **실행 상태:** 정책 계산·구간 검증 완료; 최종 학습 안 아님
 
@@ -43,15 +45,15 @@
 
 ## 실험 코드
 
-- [EBM/tools/design_duration_sampling_policy.py](code/EBM/tools/design_duration_sampling_policy.py)
-- [EBM/tools/duration_sampling_policy.py](code/EBM/tools/duration_sampling_policy.py)
+- [소스: design_duration_sampling_policy.py](code/EBM/tools/design_duration_sampling_policy.py)
+- [소스: duration_sampling_policy.py](code/EBM/tools/duration_sampling_policy.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [artifacts/duration_sampling_design_20261110/policy.json](../../_shared/references/artifacts/duration_sampling_design_20261110/policy.json)
-- [artifacts/duration_sampling_design_20261110/validation.json](../../_shared/references/artifacts/duration_sampling_design_20261110/validation.json)
+- [설정·결과 근거](../../_shared/references/artifacts/duration_sampling_design_20261110/policy.json)
+- [검산 결과](../../_shared/references/artifacts/duration_sampling_design_20261110/validation.json)
 
 ## 연결
 

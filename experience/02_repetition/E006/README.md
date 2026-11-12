@@ -1,4 +1,6 @@
-# E006. 학습 길이 상한을 유지하면서 짧은 음성 반복을 제거한 학습(B)
+<a id="e006-학습-길이-상한을-유지하면서-짧은-음성-반복을-제거한-학습b"></a>
+
+# 학습 길이 상한을 유지하면서 짧은 음성 반복을 제거한 학습
 
 **실행 상태:** 학습 50epoch 완료
 
@@ -16,7 +18,7 @@
 
 ## 모델·데이터·표본
 
-2019 LA 학습 25,380개. 전체 배치 240, GPU 별 정상 12 +위조 108, 108배치/epoch. 새 seed 1초기화이며 기존 240 모델을 이어 학습하지 않는다.
+2019 LA 학습 25,380개. 전체 배치 240, GPU 별 정상 12 +위조 108, 108배치/epoch. 새 seed 1초기화이며 배치 240 고정 길이 반복 입력 학습 모델을 이어 학습하지 않는다.
 
 ## 실험 내용과 상세 절차
 
@@ -28,7 +30,7 @@
 
 ## 측정과 검증
 
-학습 종료/Adam5,400회/모델-학습 상태 일치와 전체 공식 평가·길이 별 오류를 확인했다. 최소 EER은 [E010](../E010/README.md)에서 별도 추출한다.
+학습 종료/Adam5,400회/모델-학습 상태 일치와 전체 공식 평가·길이 별 오류를 확인했다. 최소 EER은 [두 반복 제거 학습 모델의 모든 저장 epoch 평가와 최소 EER 비교](../E010/README.md)에서 별도 추출한다.
 
 ## 결과
 
@@ -36,57 +38,57 @@
 
 ## 해석·실패한 부분·한계
 
-옛 240과 이 실행의 차이를 파형 반복 하나로 환원하지 않는다. 같은 새 코드의 순환 반복 학습 대조는 별도 실행 하지 않았다. 길이별 정상/위조 교환 관계도 [E011](../../01_duration_bias/E011/README.md)에 기록한다.
+옛 240과 이 실행의 차이를 파형 반복 하나로 환원하지 않는다. 같은 새 코드의 순환 반복 학습 대조는 별도 실행 하지 않았다. 길이별 정상/위조 교환 관계도 [원음 길이별 오류와 임계값 민감도 분석](../../01_duration_bias/E011/README.md)에 기록한다.
 
 ## 배운 점
 
-B는 같은 비반복 입력에서 기존240보다 좋았으나 역사적 반복 평가까지 포함한 보편 우위는 아니다. 샘플러와 계산 방식도 달랐다.
+4.0375초 상한 비반복 학습은 같은 비반복 입력에서 배치 240 고정 길이 반복 입력 학습보다 좋았으나 역사적 반복 평가까지 포함한 보편 우위는 아니다. 샘플러와 계산 방식도 달랐다.
 
 ## 실험 코드
 
-- [training_snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/arguments.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/arguments.py)
-- [training_snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/data_loaders.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/data_loaders.py)
+- [소스: arguments.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/arguments.py)
+- [소스: data_loaders.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/data_loaders.py)
 - [training_snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/docker_build.sh](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/docker_build.sh)
 - [training_snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/docker_run.sh](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/docker_run.sh)
-- [training_snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/main.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/main.py)
-- [training_snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/native_steps.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/native_steps.py)
-- [training_snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/train.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/train.py)
-- [training_snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/dataset/ASVspoof2019_la_eval.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/dataset/ASVspoof2019_la_eval.py)
-- [training_snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/dataset/ASVspoof2019_la_train.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/dataset/ASVspoof2019_la_train.py)
-- [training_snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/dataset/ASVspoof2021_df_eval.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/dataset/ASVspoof2021_df_eval.py)
-- [training_snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/dataset/ASVspoof2021_la_eval.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/dataset/ASVspoof2021_la_eval.py)
-- [training_snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/dataset/__init__.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/dataset/__init__.py)
-- [training_snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/data_processing/__init__.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/data_processing/__init__.py)
-- [training_snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/logger/interface.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/logger/interface.py)
-- [training_snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/logger/local.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/logger/local.py)
-- [training_snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/logger/logger.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/logger/logger.py)
-- [training_snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/logger/neptune.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/logger/neptune.py)
-- [training_snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/logger/wandb.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/logger/wandb.py)
-- [training_snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/logger/__init__.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/logger/__init__.py)
-- [training_snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/model/b_linear.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/model/b_linear.py)
-- [training_snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/model/loss.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/model/loss.py)
-- [training_snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/model/__init__.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/model/__init__.py)
-- [training_snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/scheduler/cosine_warmup.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/scheduler/cosine_warmup.py)
-- [training_snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/scheduler/steplr.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/scheduler/steplr.py)
-- [training_snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/utils/ddp_util.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/utils/ddp_util.py)
-- [training_snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/utils/get_threshold.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/utils/get_threshold.py)
-- [training_snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/utils/__init__.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/utils/__init__.py)
-- [training_snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/data_processing/augmentation/augmentation.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/data_processing/augmentation/augmentation.py)
-- [training_snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/data_processing/augmentation/codec_aug.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/data_processing/augmentation/codec_aug.py)
-- [training_snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/data_processing/augmentation/raw_boost.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/data_processing/augmentation/raw_boost.py)
-- [training_snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/data_processing/augmentation/wav_read_functions.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/data_processing/augmentation/wav_read_functions.py)
-- [EBM/native_steps.py](code/EBM/native_steps.py)
-- [EBM/data_loaders.py](code/EBM/data_loaders.py)
+- [소스: main.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/main.py)
+- [소스: native_steps.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/native_steps.py)
+- [소스: train.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/train.py)
+- [소스: ASVspoof2019_la_eval.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/dataset/ASVspoof2019_la_eval.py)
+- [소스: ASVspoof2019_la_train.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/dataset/ASVspoof2019_la_train.py)
+- [소스: ASVspoof2021_df_eval.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/dataset/ASVspoof2021_df_eval.py)
+- [소스: ASVspoof2021_la_eval.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/dataset/ASVspoof2021_la_eval.py)
+- [소스: __init__.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/dataset/__init__.py)
+- [소스: __init__.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/data_processing/__init__.py)
+- [소스: interface.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/logger/interface.py)
+- [소스: local.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/logger/local.py)
+- [소스: logger.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/logger/logger.py)
+- [소스: neptune.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/logger/neptune.py)
+- [소스: wandb.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/logger/wandb.py)
+- [소스: __init__.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/logger/__init__.py)
+- [소스: b_linear.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/model/b_linear.py)
+- [소스: loss.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/model/loss.py)
+- [소스: __init__.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/model/__init__.py)
+- [소스: cosine_warmup.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/scheduler/cosine_warmup.py)
+- [소스: steplr.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/scheduler/steplr.py)
+- [소스: ddp_util.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/utils/ddp_util.py)
+- [소스: get_threshold.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/utils/get_threshold.py)
+- [소스: __init__.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/utils/__init__.py)
+- [소스: augmentation.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/data_processing/augmentation/augmentation.py)
+- [소스: codec_aug.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/data_processing/augmentation/codec_aug.py)
+- [소스: raw_boost.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/data_processing/augmentation/raw_boost.py)
+- [소스: wav_read_functions.py](code/snapshots/EBM_e50_bs240_lr1e5_B_zeropad_short303/data_processing/augmentation/wav_read_functions.py)
+- [소스: native_steps.py](code/EBM/native_steps.py)
+- [소스: data_loaders.py](code/EBM/data_loaders.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [docs/experiments/ebm_control_B_20261106.md](../../_shared/references/docs/experiments/ebm_control_B_20261106.md)
-- [docs/experiments/ebm_B_final_results_20261108.md](../../_shared/references/docs/experiments/ebm_B_final_results_20261108.md)
-- [artifacts/ebm_git_private_20261106/B_final_training_audit.json](../../_shared/references/artifacts/ebm_git_private_20261106/B_final_training_audit.json)
-- [EBM/native_steps.py](../../../native_steps.py)
-- [EBM/data_loaders.py](../../../data_loaders.py)
+- [상세 설계·실험 기록](../../_shared/references/docs/experiments/ebm_control_B_20261106.md)
+- [상세 설계·실험 기록](../../_shared/references/docs/experiments/ebm_B_final_results_20261108.md)
+- [설정·결과 근거](../../_shared/references/artifacts/ebm_git_private_20261106/B_final_training_audit.json)
+- [소스: native_steps.py](../../../native_steps.py)
+- [소스: data_loaders.py](../../../data_loaders.py)
 
 ## 연결
 

@@ -1,8 +1,10 @@
+> 표시 명칭·링크 이름은 설명형으로 정리했다. 원래 코드·경로·수치는 그대로 보존한다.
+
 > 역사 문서 보존본. 원문 작성 당시의 상태·계획을 포함한다. 최신 상태와 확정 결과는 experience의 각 실험 README를 우선한다.
 
 # 스푸프 중심 EBM 설계와 코드 검토
 
-작성일: 2026-11-12 KST. 최초 설계 후 사용자 요청으로 이론 재검토와 로컬 구현을 진행했다. 최신 구현과 검증 범위는 [ROLE_EBM.md](../../../../../ROLE_EBM.md)에 기록했다. 실제 서버 학습과 두 GPU smoke는 아직 수행하지 않았다.
+작성일: 2026-11-12 KST. 최초 설계 후 사용자 요청으로 이론 재검토와 로컬 구현을 진행했다. 최신 구현과 검증 범위는 [상세 설계·실험 기록](../../../../../ROLE_EBM.md)에 기록했다. 실제 서버 학습과 두 GPU smoke는 아직 수행하지 않았다.
 
 재검토에서 목적식 간 방향의 모순은 발견하지 않았다. 두 단계는 서로 다른 조건부 목적식을 줄이므로 공동 손실의 단조 감소·수렴을 보장하지 않으며, 중심 손실 계수 통제가 Adam 이동량까지 맞추는 것은 아니다. 구현에서는 보나 arm이 원본 Adam moment까지 재현하도록 곱셈 후 평균하는 연산 순서도 유지했다.
 
@@ -29,9 +31,9 @@
 | scheduler | `scheduler/{steplr,cosine_warmup}.py` | 별도 제공 모듈이며 기준 main의 실제 scheduler는 PyTorch warm restarts |
 | 환경과 문서 | `.gitignore`, `Dockerfile`, `docker_{build,run}.sh`, `README.md`, `LICENSE`, `docs/{CONTROL_B,RUN_BASELINE240_20261106,SERVER_BASELINE,WORKFLOW}.md` | source와 환경·역사적 설정의 구분 |
 
-현재 확장에서는 `native_steps.py`, `positive_bpl.py`, 현재 `train.py`·`main.py`·`data_loaders.py`·`model/b_linear.py`, `short32_original240.py`, `short32_lifecycle.py`, `paired_evaluation.py`, 통제 평가 도구의 관련 호출도 확인했다. 특히 원본 학습, native/replay 학습, short32 hook 학습을 섞으면 다른 실험이 되므로 분리한다.
+현재 확장에서는 `native_steps.py`, `positive_bpl.py`, 현재 `train.py`·`main.py`·`data_loaders.py`·`model/b_linear.py`, `short32_original240.py`, `short32_lifecycle.py`, `paired_evaluation.py`, 통제 평가 도구의 관련 호출도 확인했다. 특히 원본 학습, native/replay 학습, 짧은 정상 음성의 3.0275초·2초 정렬 학습 hook 학습을 섞으면 다른 실험이 되므로 분리한다.
 
-증거: [source_audit.json](../../artifacts/reverse_ebm_design_20261112/source_audit.json). 각 파일의 함수·클래스 위치도 포함한다.
+증거: [설정·결과 근거](../../artifacts/reverse_ebm_design_20261112/source_audit.json). 각 파일의 함수·클래스 위치도 포함한다.
 
 ## 2 원래 EBM이 실제로 최적화하는 것
 
@@ -49,7 +51,7 @@ y = 1: bonafide, y = 0: spoof
 
 ### 2.1 기존 OC
 
-[원본 loss.py](../../../../../baseline240_source/model/loss.py)의 OC는 다음과 같다.
+[소스: loss.py](../../../../../baseline240_source/model/loss.py)의 OC는 다음과 같다.
 
 ```text
 L_OC,bona = mean_i a[y_i] × {
@@ -71,13 +73,13 @@ a[1] = 1 / (2 × 0.1) = 5
 L_pair = mean_(i,j) [ φ(30 × (1 - cos(z_long_i, z_short_j))) - 0.3 ]
 ```
 
-[원본 B_Linear.forward](../../../../../baseline240_source/model/b_linear.py)는 **보나 long 전체×보나 short 전체**를 사용한다. 일반 배치는 로컬 GPU당12×12=144쌍이며 다른 UID 간 쌍도 포함한다. 같은 발화의 두 view만 맞추는 diagonal loss가 아니다. 두 입력 묶음을 각각 재정렬해도 전체 평균은 같다. 같은 UID long·short는 독립 RawBoost를 적용한다.
+[소스: b_linear.py](../../../../../baseline240_source/model/b_linear.py)는 **보나 long 전체×보나 short 전체**를 사용한다. 일반 배치는 로컬 GPU당12×12=144쌍이며 다른 UID 간 쌍도 포함한다. 같은 발화의 두 view만 맞추는 diagonal loss가 아니다. 두 입력 묶음을 각각 재정렬해도 전체 평균은 같다. 같은 UID long·short는 독립 RawBoost를 적용한다.
 
 정규화 cosine이 1이면 BPL도 `log(2)-0.3≈0.393147`이다. 학습 중 BPL 최솟값을 0이라고 기대하지 않는다. `-0.3`은 gradient에 영향을 주지 않으므로 역방향에서도 유지한다.
 
 ### 2.3 두 단계 Adam
 
-[원본 train.py](../../../../../baseline240_source/train.py)의 한 논리 배치 흐름은 다음과 같다.
+[소스: train.py](../../../../../baseline240_source/train.py)의 한 논리 배치 흐름은 다음과 같다.
 
 1. 중심 `c`를 동결하고 `L_OC,bona + L_pair,bona`로 backend `θ`를 갱신한다.
 2. 갱신된 backend로 **보나 long만 다시 임베딩**하고, backend를 동결한 채 보나 OC로 중심 `c`만 갱신한다.
@@ -150,7 +152,7 @@ L_backend = L_OC,spoof + 1.0 × L_pair,spoof
 
 `1-q_S`도 순위상 같지만, 변환 실수를 줄이기 위해 신규 canonical score는 `-q_S`로 고정한다. score 반전은 정확히 한 번만 수행한다. 원시 cosine과 canonical score를 별도 column으로 저장한다. EER가 높다는 이유로 실행 후 더 좋은 부호를 선택하지 않는다.
 
-[paired_evaluation.common_scores](../../../../../paired_evaluation.py)는 모델 `forward()`를 거치지 않고 `z @ center`를 직접 계산한다. [short32_lifecycle.evaluate](../../../../../short32_lifecycle.py)는 새 OC 객체를 생성한 뒤 tensor만 복사한다. **새 loss의 inference 출력만 바꿔서는 이 경로들이 해결되지 않는다.** 새 실험 전용 공통 scorer가 checkpoint 역할 metadata를 읽어 부호를 적용하도록 설계한다. 취소된 기존 paired 작업의 snapshot·queue는 수정하거나 재활성화하지 않는다.
+[paired_evaluation.common_scores](../../../../../paired_evaluation.py)는 모델 `forward()`를 거치지 않고 `z @ center`를 직접 계산한다. [실험 구현·검증 소스](../../../../../short32_lifecycle.py)는 새 OC 객체를 생성한 뒤 tensor만 복사한다. **새 loss의 inference 출력만 바꿔서는 이 경로들이 해결되지 않는다.** 새 실험 전용 공통 scorer가 checkpoint 역할 metadata를 읽어 부호를 적용하도록 설계한다. 취소된 기존 paired 작업의 snapshot·queue는 수정하거나 재활성화하지 않는다.
 
 `get_threshold`는 `1-cos(각도 중간값)`을 반환하는 거리 단위 helper다. 원본 확인 경로에서 EER는 이 값을 사용하지 않는다. 이것을 신규 `-cos` 점수의 threshold로 그대로 가져오면 단위가 맞지 않는다. 예를 들어 기하학적 각도 중간값을 쓰면 기존 cosine은약0.613562, 신규 canonical score는약-0.613562이며 helper 반환값은약0.386438이다. 이 값들은 학습 margin 기반 참고값이며 검증된 운용 threshold가 아니다.
 
@@ -188,7 +190,7 @@ margin은 hard constraint가 아니다. softplus는 margin을 넘겨도 작은 g
 
 ## 5 첫 실험에서 고정할 조건
 
-주 비교를 새 보나 중심 기준 arm `A`와 새 스푸프 중심 arm `R_all`로 한다. 현재 short32나 mild/cache/가변 길이 정책을 결합하지 않는다. 아래50epoch는 **비교 설계 제안**이며 이번 요청으로 실행하거나 예약하는 설정이 아니다.
+주 비교를 새 보나 중심 기준 arm `A`와 새 스푸프 중심 arm `R_all`로 한다. 현재 짧은 정상 음성의 3.0275초·2초 정렬 학습나 속도 0.8~1.2배·최대 20% 절단 변형/cache/가변 길이 정책을 결합하지 않는다. 아래50epoch는 **비교 설계 제안**이며 이번 요청으로 실행하거나 예약하는 설정이 아니다.
 
 | 항목 | A 보나 중심 | R_all 스푸프 중심 |
 |---|---|---|
@@ -210,14 +212,14 @@ margin은 hard constraint가 아니다. softplus는 margin을 넘겨도 작은 g
 
 - Train 원음25,380개, bona2,580/spoof22,800. 원래 클래스별 두 `DistributedSampler`·DataLoader·작은 loader 순환·부분 배치를 유지한다. 전역 라벨 교환·클래스 비율 교환·50:50 재표집은 없다.
 - global OC batch240, 두 GPU에서 보통rank당120=12+108, epoch당108 논리 배치. 학습50epoch·lr1e-5·weight decay1e-4·원래 epoch scheduler를 공통 적용한다. 각 단계의 실제 parameter step counter도 확인한다.
-- train long64,600sample 앞부분, short48,440sample 원래 무작위 crop, 짧으면 원래 wrap 반복. 서로 독립인 기존 RawBoost0~8. codec·추가 waveform augmentation·HiFi-GAN·speed/tempo·VAD·short32 없음.
+- train long64,600sample 앞부분, short48,440sample 원래 무작위 crop, 짧으면 원래 wrap 반복. 서로 독립인 기존 RawBoost0~8. codec·추가 waveform augmentation·HiFi-GAN·speed/tempo·VAD·짧은 정상 음성의 3.0275초·2초 정렬 학습 없음.
 - frozen XLS-R, 기존 bridge·ASP·linear·LayerNorm 구조·parameter key/shape 유지. 일부 args의 `num_blocks`나 `linear_units`를 보고 다른 backbone을 만드는 일이 없도록 실제 생성자를 기준으로 한다.
 - 비교 두 arm의 데이터 UID·crop·RawBoost 입력을 공통 seed 및 독립적인 loader RNG로 재현한다. center 대상 행 수가 달라 backend 난수 소비가 달라지므로 **같은 global seed 하나만으로 이후 난수까지 같다고 주장하지 않는다.**
 - 새 공통 runner에서는 `(seed,epoch,step,rank,phase)`로 train backend 단계별 RNG stream을 분리하고 평가 RNG를 복원하는 방식을 양 arm에 똑같이 적용하는 것을 권한다. 이는 역사적 원본의 단일 RNG stream과 차이가 있으므로 기록한다. 먼저 원본 RNG state를 그대로 준 A 경로에서 원본 full-graph loss·gradient·update 일치 회귀를 통과한 뒤, 공통 RNG 격리를 적용한다. tensor shape가 다른 중심 단계의 dropout mask 자체는 같다고 주장하지 않는다.
 
 원본 train에는 `param.require_grad=False`라는 속성명 오타가 있지만50epoch 조건의 frontend forward는 별도로 `set_grad_enabled(False)` 안에서 실행된다. 신규 runner는 `requires_grad_(False)`도 명시하고 gradient·parameter 불변을 확인한다. 또한 원래 설정은 `lr=lr_min=1e-5`이므로 scheduler가 있어도 학습률은 같은 값이다.
 
-기존 저장240/B/C/short32 성능은 참고 자료로만 사용한다. 원래 실험들이 입력·난수·학습 이력까지 이 새 비교와 같다는 근거가 없으므로 `A`를 생략하고 신규 `R_all`과 과거 최소 EER만 비교해서 방향 전환의 효과라고 결론내리지 않는다.
+기존 저장240/4.0375초 상한 비반복 학습과 원음 전체 비반복 학습/짧은 정상 음성의 3.0275초·2초 정렬 학습 성능은 참고 자료로만 사용한다. 원래 실험들이 입력·난수·학습 이력까지 이 새 비교와 같다는 근거가 없으므로 `A`를 생략하고 신규 `R_all`과 과거 최소 EER만 비교해서 방향 전환의 효과라고 결론내리지 않는다.
 
 ### 5.1 부분 배치와 표본 수
 
@@ -267,7 +269,7 @@ R_12는 일반12×12·마지막6×6이며 더 많은 스푸프 중 일부만 pai
 3. `baseline240_source/train.py:139`의 보나 전용 중심 pass를 role mask와 별도 계수5의 center 목적식으로 바꾼다.
 4. `train.py:test` 및 `paired_evaluation.py:common_scores`처럼 cosine을 반환·직접 계산하는 모든 새 평가 호출에서 canonical 방향을 일치시킨다.
 
-위 원본 파일 자체는 보존한다. 현재 `native_steps.py`에는 보나 prefix와12개를 가정한 목적식·중심 loop가 있고, `positive_bpl.py`의 matched collate도 보나 오른쪽 입력12개를 가정한다. 이 두 경로는 첫 실험에서 호출하지 않는다. short32의 원본 함수 무수정 hook도 새로운 역할 변경에 억지로 사용하지 않는다. 신규 trainer에서는 원본으로부터 바뀐 동작을 명시적으로 검토할 수 있게 한다.
+위 원본 파일 자체는 보존한다. 현재 `native_steps.py`에는 보나 prefix와12개를 가정한 목적식·중심 loop가 있고, `positive_bpl.py`의 matched collate도 보나 오른쪽 입력12개를 가정한다. 이 두 경로는 첫 실험에서 호출하지 않는다. 짧은 정상 음성의 3.0275초·2초 정렬 학습의 원본 함수 무수정 hook도 새로운 역할 변경에 억지로 사용하지 않는다. 신규 trainer에서는 원본으로부터 바뀐 동작을 명시적으로 검토할 수 있게 한다.
 
 원본 `OCSoftmax.forward(label=None)`는 inference 때도 학습용 indexing 코드를 지나가며 불필요한 loss를 만든다. 신규 scorer는 label이 없을 때 **원시 cosine 계산 후 즉시 반환**하여 라벨 없는 in-place 변형이나 학습용 값의 혼용을 피한다. 이 정리는 새 경로에만 적용한다.
 
@@ -336,7 +338,7 @@ CLS와 TrainState를 원자 저장·재로딩 검산하고, 역할 sidecar와 so
 
 ### 7.1 이번에 완료한 로컬 검산
 
-[audit_design.py](../../../workspace/artifacts/reverse_ebm_design_20261112/audit_design.py)를 CPU float64로 실행했다. 실제 원본 `OCSoftmax`·`BPL`을 불러오고 임베딩 수준에서 계산했다. optimizer를 만들거나 음성·XLS-R를 추론하지 않았다.
+[소스: audit_design.py](../../../workspace/artifacts/reverse_ebm_design_20261112/audit_design.py)를 CPU float64로 실행했다. 실제 원본 `OCSoftmax`·`BPL`을 불러오고 임베딩 수준에서 계산했다. optimizer를 만들거나 음성·XLS-R를 추론하지 않았다.
 
 | 검사 | 결과 |
 |---|---|
@@ -356,7 +358,7 @@ CLS와 TrainState를 원자 저장·재로딩 검산하고, 역할 sidecar와 so
 | 보나 간 다양성 반례 | 같은 보나 방향도 push margin 만족 |
 | 단계별 gradient 격리 | center-only와 backend-only 분리 확인 |
 
-최초 설계의15개 모두 통과했다. [validation.json](../../artifacts/reverse_ebm_design_20261112/validation.json)에 환경과 수치를 기록했다. 이후 신규 runner의 CPU 구현 검사도 수행했으며 [구현 문서](../../../../../ROLE_EBM.md)에 구분했다. 실제 음성·두 GPU·성능 검증과 혼동하지 않는다.
+최초 설계의15개 모두 통과했다. [검산 결과](../../artifacts/reverse_ebm_design_20261112/validation.json)에 환경과 수치를 기록했다. 이후 신규 runner의 CPU 구현 검사도 수행했으며 [구현 문서](../../../../../ROLE_EBM.md)에 구분했다. 실제 음성·두 GPU·성능 검증과 혼동하지 않는다.
 
 ### 7.2 구현 후 학습 전에 필요한 gate
 
@@ -397,4 +399,4 @@ CLS와 TrainState를 원자 저장·재로딩 검산하고, 역할 sidecar와 so
 
 새 실험은 기존 컨테이너와 지정 GPU의 실제 상태·기존 작업 완료를 실행 시점에 확인하고 고유 root에서만 수행한다. 자동 재시도는0, 전체 timeout과 단계별 exit를 둔다. 끝나면 자신의 worker만 종료·확인하고 임시 파일을 정리하며, 실패 로그·소스·checkpoint·검산 증거는 보존한다. 취소된 paired watcher나 중단된 기존 학습을 재가동하지 않는다.
 
-이번 source SHA·Git status 보존 검사: [preservation.json](../../artifacts/reverse_ebm_design_20261112/preservation.json). 계획과 범위: [plan.json](../../artifacts/reverse_ebm_design_20261112/plan.json).
+이번 source SHA·Git status 보존 검사: [설정·결과 근거](../../artifacts/reverse_ebm_design_20261112/preservation.json). 계획과 범위: [설정·결과 근거](../../artifacts/reverse_ebm_design_20261112/plan.json).

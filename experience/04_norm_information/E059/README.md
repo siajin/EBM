@@ -1,4 +1,6 @@
-# E059. 기존 OC gradient·방향 정규화·정규화 전 특징 복원·변형 반응의 네 후속 분석
+<a id="e059-기존-oc-gradient방향-정규화정규화-전-특징-복원변형-반응의-네-후속-분석"></a>
+
+# 기존 OC gradient·방향 정규화·정규화 전 특징 복원·변형 반응의 네 후속 분석
 
 **실행 상태:** 캐시 계산·검산 완료
 
@@ -16,7 +18,7 @@ gradient·잔여 크기·LayerNorm 복원을 함께 보면 후처리 전이 실�
 
 ## 모델·데이터·표본
 
-배치 160 모델의 학습 자료 25,380·개발 14,983·DF/21LA 진단 각 20,000, 총 80,363 고유 발화. 기존 [E058](../../05_residual_geometry/E058/README.md) 변형캐시와 저장 분류기를 재사용.
+배치 160 모델의 학습 자료 25,380·개발 14,983·DF/21LA 진단 각 20,000, 총 80,363 고유 발화. 기존 [같은 음성의 백색잡음 20/10dB와 Opus32kbps 재압축 개입](../../05_residual_geometry/E058/README.md) 변형캐시와 저장 분류기를 재사용.
 
 ## 실험 내용과 상세 절차
 
@@ -43,16 +45,16 @@ cleanTrain 위조의 균형 OC 손실 비중 2.2004%, 표본 z-gradient 평균 �
 
 ## 실험 코드
 
-- [artifacts/geometry_experiments/check_cached_hypotheses.py](code/artifacts/geometry_experiments/check_cached_hypotheses.py)
+- [소스: check_cached_hypotheses.py](code/artifacts/geometry_experiments/check_cached_hypotheses.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [docs/experiments/ebm_cache_hypotheses_20261106.md](../../_shared/references/docs/experiments/ebm_cache_hypotheses_20261106.md)
-- [artifacts/geometry_experiments/check_cached_hypotheses.py](../../_shared/workspace/artifacts/geometry_experiments/check_cached_hypotheses.py)
-- [artifacts/geometry_cache/local_analysis/cache_hypotheses_20261106_v2/protocol.json](../../_shared/references/artifacts/geometry_cache/local_analysis/cache_hypotheses_20261106_v2/protocol.json)
-- [artifacts/geometry_cache/local_analysis/cache_hypotheses_20261106_v2/complete.json](../../_shared/references/artifacts/geometry_cache/local_analysis/cache_hypotheses_20261106_v2/complete.json)
+- [상세 설계·실험 기록](../../_shared/references/docs/experiments/ebm_cache_hypotheses_20261106.md)
+- [소스: check_cached_hypotheses.py](../../_shared/workspace/artifacts/geometry_experiments/check_cached_hypotheses.py)
+- [설정·결과 근거](../../_shared/references/artifacts/geometry_cache/local_analysis/cache_hypotheses_20261106_v2/protocol.json)
+- [완료 확인 기록](../../_shared/references/artifacts/geometry_cache/local_analysis/cache_hypotheses_20261106_v2/complete.json)
 
 ## 연결
 

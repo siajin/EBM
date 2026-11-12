@@ -1,4 +1,6 @@
-# E055. 두 평가 자료 내부의 방향·정규화 전 특징·같은 차원 잡음 대조 9 종
+<a id="e055-두-평가-자료-내부의-방향정규화-전-특징같은-차원-잡음-대조-9-종"></a>
+
+# 두 평가 자료 내부의 방향·정규화 전 특징·같은 차원 잡음 대조 9 종
 
 **실행 상태:** 추가 분류기·내부 교차검증 완료
 
@@ -12,7 +14,7 @@
 
 전이 개선과 분리해 현재 특징에서 읽을 수 있는 정보와 정규화 전 통계의 증분을 검사한다.
 
-대조와 통제의 근거: 모델은 [E054](../E054/README.md)와 같은 단조 기본 식·hidden16. 정답을 사용한 평가 자료 내부 분류이므로 배포용 학습 자료 전이 수치가 아니다. DF의 VCC2018 위조 화자 4 그룹뿐이라 5fold 모든 cell에 존재할 수 없다.
+대조와 통제의 근거: 모델은 [원래 점수에 단조인 기본 식과 방향/잡음 잔차의 학습 자료 →평가 전이](../E054/README.md)와 같은 단조 기본 식·hidden16. 정답을 사용한 평가 자료 내부 분류이므로 배포용 학습 자료 전이 수치가 아니다. DF의 VCC2018 위조 화자 4 그룹뿐이라 5fold 모든 cell에 존재할 수 없다.
 
 ## 모델·데이터·표본
 
@@ -21,7 +23,7 @@ DF 진단 20,000과 21LA 진단 20,000을 따로 학습·검증한다. 두 자�
 ## 실험 내용과 상세 절차
 
 1. 각 자료에 StratifiedGroupKFold 바깥 5·안쪽 3,seed 11/12를 고정한다. 그룹은 출처:: 화자, 층화는 출처:: 클래스다.
-2. 입력 9 종은 [E054](../E054/README.md)의 기본 식/선형 방향/선형 잡음/신경망 방향/신경망 잡음에, 기본 식 +방향 +h 평균·log 표준편차 2개, 방향 +잡음 2개, 방향 +h160개, 방향 +잡음 160개를 더 한 것이다.
+2. 입력 9 종은 [원래 점수에 단조인 기본 식과 방향/잡음 잔차의 학습 자료 →평가 전이](../E054/README.md)의 기본 식/선형 방향/선형 잡음/신경망 방향/신경망 잡음에, 기본 식 +방향 +h 평균·log 표준편차 2개, 방향 +잡음 2개, 방향 +h160개, 방향 +잡음 160개를 더 한 것이다.
 3. 각 variant×seed 101/102/103× 바깥 fold 에서 ridge1e-4/1e-2의 안쪽 3개 개발 학습 곡선이 공통으로 존재하는 epoch 까지만 평균한다.
 4. 안쪽 평균 LL로 ridge와 epoch를 고르고 바깥 학습 부분만 해당 epoch 수로 다시 적합한다. scaler·결측처리·fit 통계는 해당 학습 부분에서만 만든다.
 5. 각 바깥 평가 발화 예측을 한번씩 저장하고 같은 fold·seed의 기본/잡음대조와 짝 지어 비교한다.
@@ -44,16 +46,16 @@ DF 내부 기본 EER 3.344444%, 방향 선형 2.303704%, 방향 신경망 1.6629
 
 ## 실험 코드
 
-- [artifacts/geometry_experiments/frozen_probes.py](code/artifacts/geometry_experiments/frozen_probes.py)
+- [소스: frozen_probes.py](code/artifacts/geometry_experiments/frozen_probes.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [artifacts/geometry_experiments/frozen_probes.py](../../_shared/workspace/artifacts/geometry_experiments/frozen_probes.py)
-- [docs/experiments/ebm_condition_audit_20261105.md](../../_shared/references/docs/experiments/ebm_condition_audit_20261105.md)
-- [artifacts/geometry_cache/local_analysis/frozen_all_v1/P3_P4/B/DF_pilot/complete.json](../../_shared/references/artifacts/geometry_cache/local_analysis/frozen_all_v1/P3_P4/B/DF_pilot/complete.json)
-- [artifacts/geometry_cache/local_analysis/frozen_all_v1/P3_P4/B/21LA_pilot/complete.json](../../_shared/references/artifacts/geometry_cache/local_analysis/frozen_all_v1/P3_P4/B/21LA_pilot/complete.json)
+- [소스: frozen_probes.py](../../_shared/workspace/artifacts/geometry_experiments/frozen_probes.py)
+- [상세 설계·실험 기록](../../_shared/references/docs/experiments/ebm_condition_audit_20261105.md)
+- [완료 확인 기록](../../_shared/references/artifacts/geometry_cache/local_analysis/frozen_all_v1/P3_P4/B/DF_pilot/complete.json)
+- [완료 확인 기록](../../_shared/references/artifacts/geometry_cache/local_analysis/frozen_all_v1/P3_P4/B/21LA_pilot/complete.json)
 
 ## 연결
 

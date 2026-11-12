@@ -1,4 +1,6 @@
-# E018. 고정 모델에서 길이 정규화와 속도 변형 비교
+<a id="e018-고정-모델에서-길이-정규화와-속도-변형-비교"></a>
+
+# 고정 모델에서 길이 정규화와 속도 변형 비교
 
 **실행 상태:** 추론 완료
 
@@ -16,7 +18,7 @@
 
 ## 모델·데이터·표본
 
-원래 240/B/C의 50epoch. 개발·19LA·21LA·DF 각각 정상 64 +위조 64 =128개, 총 512개. 각 클래스는 원음 길이 4구간에서 16개 씩 선택.
+배치 240 고정 길이 반복 입력 학습/4.0375초 상한 비반복 학습과 원음 전체 비반복 학습의 50epoch. 개발·19LA·21LA·DF 각각 정상 64 +위조 64 =128개, 총 512개. 각 클래스는 원음 길이 4구간에서 16개 씩 선택.
 
 ## 실험 내용과 상세 절차
 
@@ -31,7 +33,7 @@
 
 ## 결과
 
-B의 전체 →4.0375초 정상 거부는 각 집합 64개 중 63/64,64/64,62/64,64/64였다. 왕복 처리도 길이를 복원했지만 손상이 남았다.
+4.0375초 상한 비반복 학습의 전체 →4.0375초 정상 거부는 각 집합 64개 중 63/64,64/64,62/64,64/64였다. 왕복 처리도 길이를 복원했지만 손상이 남았다.
 
 ## 해석·실패한 부분·한계
 
@@ -43,16 +45,16 @@ phase-vocoder의 심한 실패는 모든 속도 증강 학습의 실패가 아�
 
 ## 실험 코드
 
-- [EBM/tools/diagnose_speed_views.py](code/EBM/tools/diagnose_speed_views.py)
+- [소스: diagnose_speed_views.py](code/EBM/tools/diagnose_speed_views.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [docs/experiments/ebm_B_C_all_checkpoint_evaluation_20261109.md](../../_shared/references/docs/experiments/ebm_B_C_all_checkpoint_evaluation_20261109.md)
-- [artifacts/speed_duration_feasibility_20261109/probe/protocol.json](../../_shared/references/artifacts/speed_duration_feasibility_20261109/probe/protocol.json)
-- [artifacts/speed_duration_feasibility_20261109/probe/results.json](../../_shared/references/artifacts/speed_duration_feasibility_20261109/probe/results.json)
-- [EBM/tools/diagnose_speed_views.py](../../../tools/diagnose_speed_views.py)
+- [상세 설계·실험 기록](../../_shared/references/docs/experiments/ebm_B_C_all_checkpoint_evaluation_20261109.md)
+- [설정·결과 근거](../../_shared/references/artifacts/speed_duration_feasibility_20261109/probe/protocol.json)
+- [설정·결과 근거](../../_shared/references/artifacts/speed_duration_feasibility_20261109/probe/results.json)
+- [소스: diagnose_speed_views.py](../../../tools/diagnose_speed_views.py)
 
 ## 연결
 

@@ -1,4 +1,6 @@
-# E030. 속도 변화 없이 길이 분포 100% 일치에 필요한 최소 절단 상한
+<a id="e030-속도-변화-없이-길이-분포-100-일치에-필요한-최소-절단-상한"></a>
+
+# 속도 변화 없이 길이 분포 100% 일치에 필요한 최소 절단 상한
 
 **실행 상태:** 메타데이터 계산·최적성 검증 완료
 
@@ -16,7 +18,7 @@
 
 ## 모델·데이터·표본
 
-[E029](../E029/README.md)와 같은 다섯 자료의 원음 길이. 클래스 안에서 원음별 확률 유지, 출력 길이는 확률적 선택을 허용한다.
+[최대 20% 절단·0.8~1.2배 속도로 길이 분포를 맞출 수 있는 한계](../E029/README.md)와 같은 다섯 자료의 원음 길이. 클래스 안에서 원음별 확률 유지, 출력 길이는 확률적 선택을 허용한다.
 
 ## 실험 내용과 상세 절차
 
@@ -42,15 +44,15 @@
 
 ## 실험 코드
 
-- [artifacts/duration_matching_20261109/minimum_crop.py](code/artifacts/duration_matching_20261109/minimum_crop.py)
+- [소스: minimum_crop.py](code/artifacts/duration_matching_20261109/minimum_crop.py)
 
-코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+코드의 파일별 원본 위치·SHA256은 [원본 파일 위치와 해시 목록](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
 
 ## 설정·결과·검산 근거
 
-- [artifacts/duration_matching_20261109/minimum_crop.py](../../_shared/workspace/artifacts/duration_matching_20261109/minimum_crop.py)
-- [artifacts/duration_matching_20261109/minimum_crop_100pct.csv](../../_shared/references/artifacts/duration_matching_20261109/minimum_crop_100pct.csv)
-- [artifacts/duration_matching_20261109/minimum_crop_validation.json](../../_shared/references/artifacts/duration_matching_20261109/minimum_crop_validation.json)
+- [소스: minimum_crop.py](../../_shared/workspace/artifacts/duration_matching_20261109/minimum_crop.py)
+- [집계 결과 표](../../_shared/references/artifacts/duration_matching_20261109/minimum_crop_100pct.csv)
+- [설정·결과 근거](../../_shared/references/artifacts/duration_matching_20261109/minimum_crop_validation.json)
 
 ## 연결
 
