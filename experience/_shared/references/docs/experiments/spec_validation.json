@@ -1,0 +1,127 @@
+{
+  "status": "pass",
+  "scope": "synthetic_numpy_CPU_math_and_protocol_checks_only",
+  "does_not_validate": [
+    "real_EBM_forward",
+    "gradient_routing_in_PyTorch",
+    "data_splits",
+    "real_embeddings",
+    "performance",
+    "GPU_DDP_implementation"
+  ],
+  "checks_passed": 25,
+  "checks": [
+    {
+      "name": "normalized_euclidean_equals_cosine",
+      "status": "pass",
+      "max_error": 8.881784197001252e-16
+    },
+    {
+      "name": "tangent_norm_has_no_new_scalar_information",
+      "status": "pass",
+      "max_error": 4.440892098500626e-16
+    },
+    {
+      "name": "unit_direction_is_perpendicular",
+      "status": "pass"
+    },
+    {
+      "name": "metric_initialization_is_identity",
+      "status": "pass"
+    },
+    {
+      "name": "identity_metric_score_equals_baseline",
+      "status": "pass"
+    },
+    {
+      "name": "identity_metric_weighted_OC_loss_equals_baseline",
+      "status": "pass"
+    },
+    {
+      "name": "label_polarity_is_bonafide_positive",
+      "status": "pass"
+    },
+    {
+      "name": "diagonal_metric_positive_definite_and_trace",
+      "status": "pass"
+    },
+    {
+      "name": "low_rank_extension_positive_definite_and_trace",
+      "status": "pass"
+    },
+    {
+      "name": "quadratic_residual_sign_symmetry",
+      "status": "pass"
+    },
+    {
+      "name": "shrinkage_gamma_one_returns_identity",
+      "status": "pass"
+    },
+    {
+      "name": "equal_cosine_can_have_different_anisotropic_scores",
+      "status": "pass",
+      "scores": [
+        0.89,
+        0.7100000000000001
+      ]
+    },
+    {
+      "name": "zero_mean_direction_does_not_imply_equal_distribution",
+      "status": "pass"
+    },
+    {
+      "name": "gate_and_residual_MLP_parameter_count",
+      "status": "pass",
+      "parameter_count": 5296
+    },
+    {
+      "name": "gate_identity_initialization",
+      "status": "pass"
+    },
+    {
+      "name": "zero_low_rank_factor_has_zero_quadratic_gradient",
+      "status": "pass"
+    },
+    {
+      "name": "confirmatory_family_matches_adjusted_CI",
+      "status": "pass"
+    },
+    {
+      "name": "training_run_counts",
+      "status": "pass"
+    },
+    {
+      "name": "all_seven_hypotheses_have_experiments",
+      "status": "pass"
+    },
+    {
+      "name": "no_locked_split_in_fit_registry",
+      "status": "pass"
+    },
+    {
+      "name": "dependencies_resolve",
+      "status": "pass"
+    },
+    {
+      "name": "experiment_dependencies_are_acyclic",
+      "status": "pass"
+    },
+    {
+      "name": "no_accidental_training_execution_claim",
+      "status": "pass"
+    },
+    {
+      "name": "all_spec_sections_exist",
+      "status": "pass"
+    },
+    {
+      "name": "document_language_review",
+      "status": "pass"
+    }
+  ],
+  "sha256": {
+    "ebm_embedding_geometry_spec_20261105.md": "c13821d7d36a1861ff2a93094ef641adfaff114b1db298ad0481e907c8454c9d",
+    "ebm_embedding_geometry_protocol.json": "5b41d6d0de33ea0b4d33cd0c5fc6e068c1a3c84e0919fa643bcd37aae05b5c14",
+    "verify_spec_math.py": "c73f4b83bdb1bd72f66a7ac19eb9a012004d0f778c4fa1b5609973f4eda1b303"
+  }
+}

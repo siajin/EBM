@@ -1,0 +1,100 @@
+{
+  "selected": {
+    "diagonal": "diagonal_1.0",
+    "full": "full_1.0"
+  },
+  "candidates": [
+    {
+      "model": "identity",
+      "V_EER": 0.0,
+      "threshold": {
+        "threshold": 0.9883067190214367,
+        "V_bona_false_reject": 0.009622501850481125,
+        "V_spoof_false_accept": 0.0
+      },
+      "trace": 160.0
+    },
+    {
+      "model": "diagonal_0.01",
+      "V_EER": 0.0,
+      "threshold": {
+        "threshold": 0.9889184883281538,
+        "V_bona_false_reject": 0.009622501850481125,
+        "V_spoof_false_accept": 0.0
+      },
+      "trace": 160.0
+    },
+    {
+      "model": "diagonal_0.1",
+      "V_EER": 0.0,
+      "threshold": {
+        "threshold": 0.9888527295723477,
+        "V_bona_false_reject": 0.009622501850481125,
+        "V_spoof_false_accept": 0.0
+      },
+      "trace": 160.0
+    },
+    {
+      "model": "diagonal_0.5",
+      "V_EER": 0.0,
+      "threshold": {
+        "threshold": 0.9886021048012372,
+        "V_bona_false_reject": 0.009622501850481125,
+        "V_spoof_false_accept": 0.0
+      },
+      "trace": 160.0
+    },
+    {
+      "model": "diagonal_1.0",
+      "V_EER": 0.0,
+      "threshold": {
+        "threshold": 0.9883067190214367,
+        "V_bona_false_reject": 0.009622501850481125,
+        "V_spoof_false_accept": 0.0
+      },
+      "trace": 159.99999999999997
+    },
+    {
+      "model": "full_0.01",
+      "V_EER": 0.0,
+      "threshold": {
+        "threshold": 0.9995452955045635,
+        "V_bona_false_reject": 0.009622501850481125,
+        "V_spoof_false_accept": 0.0
+      },
+      "trace": 160.0
+    },
+    {
+      "model": "full_0.1",
+      "V_EER": 0.0,
+      "threshold": {
+        "threshold": 0.9982812657500948,
+        "V_bona_false_reject": 0.009622501850481125,
+        "V_spoof_false_accept": 0.0
+      },
+      "trace": 160.0
+    },
+    {
+      "model": "full_0.5",
+      "V_EER": 0.0,
+      "threshold": {
+        "threshold": 0.9954567990181755,
+        "V_bona_false_reject": 0.009622501850481125,
+        "V_spoof_false_accept": 0.0
+      },
+      "trace": 160.0
+    },
+    {
+      "model": "full_1.0",
+      "V_EER": 0.0,
+      "threshold": {
+        "threshold": 0.9883067190214367,
+        "V_bona_false_reject": 0.009622501850481125,
+        "V_spoof_false_accept": 0.0
+      },
+      "trace": 159.99999999999997
+    }
+  ],
+  "selection": "V EER; tied prefer larger gamma",
+  "center_fixed": true
+}

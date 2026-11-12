@@ -1,0 +1,22 @@
+{
+  "training_status": "user_stopped",
+  "training_root": "/home/mentee/analysis/ebm_short32_original240_e50_20261111_v2",
+  "training_run_exit": 143,
+  "training_finished_KST": "2026-11-11 18:45:11",
+  "last_completed_epoch": 25,
+  "checkpoint25_sha256": "53c6e963d76608a8b2490f531834822ace79832c315af0a15ec2ed1b77b7e8be",
+  "trainstate25_sha256": "b673391bfdd4feb4e256698c7771fe1c4d2e4019c2812db765d33fd516c1aa14",
+  "checkpoint_status": "committed_and_hash_verified",
+  "19LA_eval25_EER_percent": 1.2100611828687935,
+  "GPU_6_7_after_stop": "6 MiB and 0% each",
+  "evaluation_root": "/home/mentee/analysis/ebm_short32_fixed25_eval_20261111_v1",
+  "evaluation_status": "running",
+  "evaluation_checkpoint_epoch": 25,
+  "evaluation_phases": ["21LA", "21DF"],
+  "evaluation_smoke_status": "passed: 19LA saved-score match, 21LA and 21DF, two GPUs, four workers per rank",
+  "training_resumed": false,
+  "optimizer_updates": 0,
+  "new_paid_resources": false,
+  "spending_ceiling_usd": 0,
+  "automatic_retries": 0
+}

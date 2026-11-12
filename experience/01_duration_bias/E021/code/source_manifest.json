@@ -1,0 +1,542 @@
+[
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/activity_policy.py",
+    "sha256": "8657f9614bc9dcde1b48c295402953bba34d300f1bb8137821f3a58d30f662a8",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/activity_policy.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/arguments.py",
+    "sha256": "2ed34a6255860629732d49d31617835464f5aa20a083feb9fa63658c3f55bd38",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/arguments.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/data_loaders.py",
+    "sha256": "64d565305b3028558ad9d67fe36d868d4048602b870ebf82c471c5a561a3a461",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/data_loaders.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/main.py",
+    "sha256": "9d3169f0291e384bbad2004ec88dd8dad3a278d353a9bb8b9b3ddd0cf366bc93",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/main.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/native_steps.py",
+    "sha256": "84d493b90848c3f79f0a1623c0b76eaea95b98b3a16cac80fad5523476a939b6",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/native_steps.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/positive_bpl.py",
+    "sha256": "1bd6a3eeb1e109254f7bce829b6c3517df60a4ab76fbfa734689171215d9f366",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/positive_bpl.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/train.py",
+    "sha256": "f9a5a8ab8d0feb4f9f3492b95c561ebe6dddd5ea7dfc145c352560cd07738ec7",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/train.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/dataset/ASVspoof2019_la_eval.py",
+    "sha256": "cbd2cc71222959a90f3d2d0a3cb76de1f48c93413cdb082ceab1512e53663417",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/dataset/ASVspoof2019_la_eval.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/dataset/ASVspoof2019_la_train.py",
+    "sha256": "3da40334a3888b3cbd063ecdf3db44b9d232f43d7399f6caed2a02e52e5b3172",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/dataset/ASVspoof2019_la_train.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/dataset/ASVspoof2021_df_eval.py",
+    "sha256": "770441069170385d1d7a4bd99a993566aff6e70316a37a3b0605f7b0c6dd2043",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/dataset/ASVspoof2021_df_eval.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/dataset/ASVspoof2021_la_eval.py",
+    "sha256": "fd40380232d142855d967ceffba9d5775938c22f23e9b9ba6a610714a3f63f75",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/dataset/ASVspoof2021_la_eval.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/dataset/__init__.py",
+    "sha256": "4ee0d06be74e9cd8c6401ecfb4dbb1a2026deec84716928e96b5b1e9696705e2",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/dataset/__init__.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/data_processing/__init__.py",
+    "sha256": "d224ec426097c98a684b425048bee2d76dab9228099ea8864952a448fb9e7c3f",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/data_processing/__init__.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/logger/interface.py",
+    "sha256": "4104bafe47c69d70bb9da65c6d23e65aaf152b38428a5b4432ae8f98c3bc0326",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/logger/interface.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/logger/local.py",
+    "sha256": "090b65c516ebb76d172e6ecc082cb1f2889c9a4a33cc44219e6e1aaf000054be",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/logger/local.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/logger/logger.py",
+    "sha256": "0bc18ed05e7509c9bcecf49b02d4589e8d485e0b12f0541238d1880d2d15ba11",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/logger/logger.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/logger/neptune.py",
+    "sha256": "842fd2d97190c9b18725ec9c264abefb14b192eacaf89df84f63a159127c85a5",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/logger/neptune.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/logger/wandb.py",
+    "sha256": "d83280931a9b51c3c48a28400db34c66328349e16bcc28de63dccf3e85191096",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/logger/wandb.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/logger/__init__.py",
+    "sha256": "69a9ba3b2628685a3fa23102a50a860a1a7c5607a205507e22a62e3cb4e83b10",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/logger/__init__.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/model/b_linear.py",
+    "sha256": "73bd5e5676d4877a8a08f9fb82695b9fd7358d289a94a53b3203ab114920e5cb",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/model/b_linear.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/model/loss.py",
+    "sha256": "b3c282817cf7a2781fab2881cf1508ca862710245002c78e5a5ad2708815f7bb",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/model/loss.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/model/__init__.py",
+    "sha256": "8ac912160cfb7cdad15d5d54ff8dd051a69fa2fc50d433bdf51061ac50c33929",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/model/__init__.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/scheduler/cosine_warmup.py",
+    "sha256": "776ff35974b3cd1bce350ae5a46a528e882f0fbe5495b754ce376d5c7b6ee50a",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/scheduler/cosine_warmup.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/scheduler/steplr.py",
+    "sha256": "c04eb4fd9d016dde5dcca587aac9e1ef1cc83406381f7e173b57e75873a4e2b8",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/scheduler/steplr.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/tests/gpu_positive_smoke.py",
+    "sha256": "e7e4a7e0c11d4da11485d82222423f571d8d38c39e1c44b04909ea36322162f3",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/tests/gpu_positive_smoke.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/tests/test_activity_policy.py",
+    "sha256": "127c75b3589afb6bc9b4039874573882c147805216db925c7537a977f9e4c2bd",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/tests/test_activity_policy.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/tests/test_positive_bpl.py",
+    "sha256": "ca43eafca1ca1e4800aa93038880a9939c31883dc5eeecd7efa0ce542cc5fec0",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/tests/test_positive_bpl.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/tests/test_source_coverage.py",
+    "sha256": "62cacc4d40aba6f9afa88759c6cfb80c99f72e8d20ab6f842f40a3bf6fa21aab",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/tests/test_source_coverage.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/tools/analyze_train_crop_io.py",
+    "sha256": "9f8574b6a6b517f28ac46a6e023aea4af7918c4ff3e7de2d3fb6470bb1727a81",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/tools/analyze_train_crop_io.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/tools/build_activity_candidates.py",
+    "sha256": "98ed4d9e98aa1fef0dc2fe8ceb6e5324d5fb1dc20953084076b77210d47e3c7c",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/tools/build_activity_candidates.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/tools/check_coverage_training.py",
+    "sha256": "4ad7710bb3b0afa7744bf568c075c79172b2c1c523171580b800fa487b132b5e",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/tools/check_coverage_training.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/tools/evaluate_B_C_checkpoints.py",
+    "sha256": "961ece4a5ba570bab91bfee45a6992e1767174f22cfaa94861c7e755e1a2230e",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/tools/evaluate_B_C_checkpoints.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/tools/evaluate_coverage_comparison.py",
+    "sha256": "c17bd3c0560c41bfc5e6d11dd320147f420d2793fd315d544eae6e47f8ad5ce4",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/tools/evaluate_coverage_comparison.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/tools/fit_activity_policy.py",
+    "sha256": "dbb15ffe9a4ea3f88cfd4ee5b0f4ac565aeead92d5ece6afb62f1e0f98e5d534",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/tools/fit_activity_policy.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/tools/train_coverage_experiment.py",
+    "sha256": "dcf82e8adc8b4b310ffacdfa2d23b4cd83a5a22dcb2c4f7ba1a94558306af300",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/tools/train_coverage_experiment.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/tools/validate_activity_policy.py",
+    "sha256": "a3cc2a2a65fc49d09ac24b4761432f6be6927bb1a279e7e2a8f1fe4a7d61b6bb",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/tools/validate_activity_policy.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/tools/validate_source_coverage.py",
+    "sha256": "de6bf1cde1a5e512a22f340202039c8d1912becae20eb32d24cfa243de0b178d",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/tools/validate_source_coverage.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/utils/ddp_util.py",
+    "sha256": "43bece35fb033c9f373a631082ebb554f3b3e0f3b73e814957071929f03fac79",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/utils/ddp_util.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/utils/get_threshold.py",
+    "sha256": "f93382289fd71baed602188e1b83ee5f509e66f5507381e52d12e0bcc54e8054",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/utils/get_threshold.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/utils/__init__.py",
+    "sha256": "a63eda2c5181d9de31e02d71b95f2c77fd29800e3c1432b453b795ae617be7b9",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/utils/__init__.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/data_processing/augmentation/augmentation.py",
+    "sha256": "555c0f6be6e4638fea66eedb469f3aa2ba3ab8c171f024f24d49797a85cb1863",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/data_processing/augmentation/augmentation.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/data_processing/augmentation/codec_aug.py",
+    "sha256": "d94287e460ee1d10b7d1f2bfaaa27e638300b77e3cb50d6fd79222de5423ddcd",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/data_processing/augmentation/codec_aug.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/data_processing/augmentation/raw_boost.py",
+    "sha256": "75e2c3d2ce8da0b649dae3ffc2a69817017a5514c6ada2eda28a34eef9aa0739",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/data_processing/augmentation/raw_boost.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v1/data_processing/augmentation/wav_read_functions.py",
+    "sha256": "28cf65b66970a81f1e7e53a4e16c32cecfe85718722a8155c7e446a74869baeb",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v1/data_processing/augmentation/wav_read_functions.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/activity_policy.py",
+    "sha256": "8657f9614bc9dcde1b48c295402953bba34d300f1bb8137821f3a58d30f662a8",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/activity_policy.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/arguments.py",
+    "sha256": "2ed34a6255860629732d49d31617835464f5aa20a083feb9fa63658c3f55bd38",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/arguments.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/data_loaders.py",
+    "sha256": "64d565305b3028558ad9d67fe36d868d4048602b870ebf82c471c5a561a3a461",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/data_loaders.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/main.py",
+    "sha256": "9d3169f0291e384bbad2004ec88dd8dad3a278d353a9bb8b9b3ddd0cf366bc93",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/main.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/native_steps.py",
+    "sha256": "84d493b90848c3f79f0a1623c0b76eaea95b98b3a16cac80fad5523476a939b6",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/native_steps.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/positive_bpl.py",
+    "sha256": "1bd6a3eeb1e109254f7bce829b6c3517df60a4ab76fbfa734689171215d9f366",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/positive_bpl.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/train.py",
+    "sha256": "f9a5a8ab8d0feb4f9f3492b95c561ebe6dddd5ea7dfc145c352560cd07738ec7",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/train.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/dataset/ASVspoof2019_la_eval.py",
+    "sha256": "cbd2cc71222959a90f3d2d0a3cb76de1f48c93413cdb082ceab1512e53663417",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/dataset/ASVspoof2019_la_eval.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/dataset/ASVspoof2019_la_train.py",
+    "sha256": "3da40334a3888b3cbd063ecdf3db44b9d232f43d7399f6caed2a02e52e5b3172",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/dataset/ASVspoof2019_la_train.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/dataset/ASVspoof2021_df_eval.py",
+    "sha256": "770441069170385d1d7a4bd99a993566aff6e70316a37a3b0605f7b0c6dd2043",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/dataset/ASVspoof2021_df_eval.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/dataset/ASVspoof2021_la_eval.py",
+    "sha256": "fd40380232d142855d967ceffba9d5775938c22f23e9b9ba6a610714a3f63f75",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/dataset/ASVspoof2021_la_eval.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/dataset/__init__.py",
+    "sha256": "4ee0d06be74e9cd8c6401ecfb4dbb1a2026deec84716928e96b5b1e9696705e2",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/dataset/__init__.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/data_processing/__init__.py",
+    "sha256": "d224ec426097c98a684b425048bee2d76dab9228099ea8864952a448fb9e7c3f",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/data_processing/__init__.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/logger/interface.py",
+    "sha256": "4104bafe47c69d70bb9da65c6d23e65aaf152b38428a5b4432ae8f98c3bc0326",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/logger/interface.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/logger/local.py",
+    "sha256": "090b65c516ebb76d172e6ecc082cb1f2889c9a4a33cc44219e6e1aaf000054be",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/logger/local.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/logger/logger.py",
+    "sha256": "0bc18ed05e7509c9bcecf49b02d4589e8d485e0b12f0541238d1880d2d15ba11",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/logger/logger.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/logger/neptune.py",
+    "sha256": "842fd2d97190c9b18725ec9c264abefb14b192eacaf89df84f63a159127c85a5",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/logger/neptune.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/logger/wandb.py",
+    "sha256": "d83280931a9b51c3c48a28400db34c66328349e16bcc28de63dccf3e85191096",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/logger/wandb.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/logger/__init__.py",
+    "sha256": "69a9ba3b2628685a3fa23102a50a860a1a7c5607a205507e22a62e3cb4e83b10",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/logger/__init__.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/model/b_linear.py",
+    "sha256": "73bd5e5676d4877a8a08f9fb82695b9fd7358d289a94a53b3203ab114920e5cb",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/model/b_linear.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/model/loss.py",
+    "sha256": "b3c282817cf7a2781fab2881cf1508ca862710245002c78e5a5ad2708815f7bb",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/model/loss.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/model/__init__.py",
+    "sha256": "8ac912160cfb7cdad15d5d54ff8dd051a69fa2fc50d433bdf51061ac50c33929",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/model/__init__.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/scheduler/cosine_warmup.py",
+    "sha256": "776ff35974b3cd1bce350ae5a46a528e882f0fbe5495b754ce376d5c7b6ee50a",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/scheduler/cosine_warmup.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/scheduler/steplr.py",
+    "sha256": "c04eb4fd9d016dde5dcca587aac9e1ef1cc83406381f7e173b57e75873a4e2b8",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/scheduler/steplr.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/tests/gpu_positive_smoke.py",
+    "sha256": "e7e4a7e0c11d4da11485d82222423f571d8d38c39e1c44b04909ea36322162f3",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/tests/gpu_positive_smoke.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/tests/test_activity_policy.py",
+    "sha256": "127c75b3589afb6bc9b4039874573882c147805216db925c7537a977f9e4c2bd",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/tests/test_activity_policy.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/tests/test_intermediate_19la.py",
+    "sha256": "3bfcebe872fc4af9db5383636e9f222609c788d521c6f8cc024ed53e5fee3c01",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/tests/test_intermediate_19la.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/tests/test_positive_bpl.py",
+    "sha256": "ca43eafca1ca1e4800aa93038880a9939c31883dc5eeecd7efa0ce542cc5fec0",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/tests/test_positive_bpl.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/tests/test_source_coverage.py",
+    "sha256": "62cacc4d40aba6f9afa88759c6cfb80c99f72e8d20ab6f842f40a3bf6fa21aab",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/tests/test_source_coverage.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/tools/analyze_train_crop_io.py",
+    "sha256": "9f8574b6a6b517f28ac46a6e023aea4af7918c4ff3e7de2d3fb6470bb1727a81",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/tools/analyze_train_crop_io.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/tools/build_activity_candidates.py",
+    "sha256": "98ed4d9e98aa1fef0dc2fe8ceb6e5324d5fb1dc20953084076b77210d47e3c7c",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/tools/build_activity_candidates.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/tools/check_coverage_training.py",
+    "sha256": "4ad7710bb3b0afa7744bf568c075c79172b2c1c523171580b800fa487b132b5e",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/tools/check_coverage_training.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/tools/evaluate_B_C_checkpoints.py",
+    "sha256": "961ece4a5ba570bab91bfee45a6992e1767174f22cfaa94861c7e755e1a2230e",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/tools/evaluate_B_C_checkpoints.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/tools/evaluate_coverage_comparison.py",
+    "sha256": "c17bd3c0560c41bfc5e6d11dd320147f420d2793fd315d544eae6e47f8ad5ce4",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/tools/evaluate_coverage_comparison.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/tools/fit_activity_policy.py",
+    "sha256": "dbb15ffe9a4ea3f88cfd4ee5b0f4ac565aeead92d5ece6afb62f1e0f98e5d534",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/tools/fit_activity_policy.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/tools/train_coverage_experiment.py",
+    "sha256": "f6f775cc96410db35b4b7d9eb0c2ac7c19eef3f74f609428566046002d080dbc",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/tools/train_coverage_experiment.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/tools/validate_activity_policy.py",
+    "sha256": "a3cc2a2a65fc49d09ac24b4761432f6be6927bb1a279e7e2a8f1fe4a7d61b6bb",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/tools/validate_activity_policy.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/tools/validate_source_coverage.py",
+    "sha256": "de6bf1cde1a5e512a22f340202039c8d1912becae20eb32d24cfa243de0b178d",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/tools/validate_source_coverage.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/utils/ddp_util.py",
+    "sha256": "43bece35fb033c9f373a631082ebb554f3b3e0f3b73e814957071929f03fac79",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/utils/ddp_util.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/utils/get_threshold.py",
+    "sha256": "f93382289fd71baed602188e1b83ee5f509e66f5507381e52d12e0bcc54e8054",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/utils/get_threshold.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/utils/__init__.py",
+    "sha256": "a63eda2c5181d9de31e02d71b95f2c77fd29800e3c1432b453b795ae617be7b9",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/utils/__init__.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/data_processing/augmentation/augmentation.py",
+    "sha256": "555c0f6be6e4638fea66eedb469f3aa2ba3ab8c171f024f24d49797a85cb1863",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/data_processing/augmentation/augmentation.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/data_processing/augmentation/codec_aug.py",
+    "sha256": "d94287e460ee1d10b7d1f2bfaaa27e638300b77e3cb50d6fd79222de5423ddcd",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/data_processing/augmentation/codec_aug.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/data_processing/augmentation/raw_boost.py",
+    "sha256": "75e2c3d2ce8da0b649dae3ffc2a69817017a5514c6ada2eda28a34eef9aa0739",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/data_processing/augmentation/raw_boost.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/snapshots/ebm_coverage_e50_20261110_v2_mid19LA/data_processing/augmentation/wav_read_functions.py",
+    "sha256": "28cf65b66970a81f1e7e53a4e16c32cecfe85718722a8155c7e446a74869baeb",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_coverage_e50_20261110_v2_mid19LA/data_processing/augmentation/wav_read_functions.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E021/code/EBM/tools/train_coverage_experiment.py",
+    "sha256": "f6f775cc96410db35b4b7d9eb0c2ac7c19eef3f74f609428566046002d080dbc",
+    "origin": "EBM/tools/train_coverage_experiment.py",
+    "kind": "implementation / validation source"
+  }
+]

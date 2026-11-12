@@ -1,0 +1,278 @@
+{
+  "status": "complete_exploratory",
+  "full_DF_EER": 3.241828000285131,
+  "threshold": -0.9145589682336335,
+  "false_rejected_normals": 482,
+  "padded_false_rejected_normals": 479,
+  "under2s_false_rejected_normals": 312,
+  "under3s_false_rejected_normals": 437,
+  "error_duration_quantiles": {
+    "0.0": 0.7484375,
+    "0.25": 1.3109375,
+    "0.5": 1.588,
+    "0.75": 2.3019999999999996,
+    "1.0": 4.352
+  },
+  "normal_without_padding_n": 4104,
+  "normal_without_padding_errors": 3,
+  "filtering_diagnostics": [
+    {
+      "subset": "native_all",
+      "n_bona": 14869,
+      "n_spoof": 519059,
+      "eer_percent": 3.241828000285131
+    },
+    {
+      "subset": "normals_atleast2s",
+      "n_bona": 13501,
+      "n_spoof": 519059,
+      "eer_percent": 2.3035330716243196
+    },
+    {
+      "subset": "normals_without_repeat_padding",
+      "n_bona": 4104,
+      "n_spoof": 519059,
+      "eer_percent": 1.2426900584795342
+    }
+  ],
+  "T_duration_reweighted_EER": 2.8191400206912895,
+  "reweight_support_notes": [
+    {
+      "source": "asvspoof",
+      "target_bins_missing": [
+        "[1.0, 1.5)"
+      ]
+    },
+    {
+      "source": "vcc2018",
+      "target_bins_missing": []
+    },
+    {
+      "source": "vcc2020",
+      "target_bins_missing": []
+    }
+  ],
+  "within_speaker_duration": [
+    {
+      "source": "asvspoof",
+      "within_speaker_rank_correlation": 0.021535044696629042,
+      "raw_spearman": 0.06357107928261015
+    },
+    {
+      "source": "vcc2018",
+      "within_speaker_rank_correlation": 0.6956381056941209,
+      "raw_spearman": 0.6640826902500877
+    },
+    {
+      "source": "vcc2020",
+      "within_speaker_rank_correlation": 0.5844517744193898,
+      "raw_spearman": 0.6416579796070709
+    }
+  ],
+  "actual_EER_neighborhoods": [
+    {
+      "source": "all",
+      "n": 67,
+      "T_nearest_normal_percent": 0.0,
+      "DF_nearest_normal_percent": 67.16417910447761,
+      "DF_mean5_normal_percent": 52.23880597014925
+    },
+    {
+      "source": "vcc2018",
+      "n": 65,
+      "T_nearest_normal_percent": 0.0,
+      "DF_nearest_normal_percent": 67.6923076923077,
+      "DF_mean5_normal_percent": 53.84615384615385
+    },
+    {
+      "source": "vcc2020",
+      "n": 2,
+      "T_nearest_normal_percent": 0.0,
+      "DF_nearest_normal_percent": 50.0,
+      "DF_mean5_normal_percent": 0.0
+    }
+  ],
+  "paired_treatment_EERs": [
+    {
+      "condition": "native",
+      "eer_percent": 3.3499999999999974,
+      "change_pp": 0.0,
+      "CI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "condition": "R3-noise20",
+      "eer_percent": 4.200000000000004,
+      "change_pp": 0.8500000000000063,
+      "CI95": [
+        0.5201593190226863,
+        1.3682763959101416
+      ]
+    },
+    {
+      "condition": "R3-noise10",
+      "eer_percent": 6.599999999999994,
+      "change_pp": 3.249999999999997,
+      "CI95": [
+        2.5610206748627187,
+        4.184053346564222
+      ]
+    },
+    {
+      "condition": "R3-Opus32k_recompression",
+      "eer_percent": 3.194444444444444,
+      "change_pp": -0.15555555555555323,
+      "CI95": [
+        -0.3297634235112583,
+        0.15364130119307717
+      ]
+    }
+  ],
+  "acoustic_tail_model_effects": [
+    {
+      "case": "level",
+      "OOF_AUROC": 0.9216021825396825,
+      "balanced_LL_reduction": 0.0007190122096962792,
+      "CI95": [
+        -0.04563888838886192,
+        0.07243281899065061
+      ],
+      "family95_interval": [
+        -0.05497589945876091,
+        0.08873188251573723
+      ],
+      "comparisons_in_family": 8,
+      "bootstrap_draws": 2000,
+      "speaker_groups": 86,
+      "limitation": "Conditional on OOF predictions; no refit uncertainty or source-family dependence included."
+    },
+    {
+      "case": "spectrum",
+      "OOF_AUROC": 0.9084821428571428,
+      "balanced_LL_reduction": -0.11019830662391716,
+      "CI95": [
+        -0.26793056087201994,
+        0.06453160701771475
+      ],
+      "family95_interval": [
+        -0.3318374015143777,
+        0.15013719486500698
+      ],
+      "comparisons_in_family": 8,
+      "bootstrap_draws": 2000,
+      "speaker_groups": 86,
+      "limitation": "Conditional on OOF predictions; no refit uncertainty or source-family dependence included."
+    },
+    {
+      "case": "cepstrum",
+      "OOF_AUROC": 0.806969246031746,
+      "balanced_LL_reduction": -0.6785553703950458,
+      "CI95": [
+        -1.010833153304483,
+        -0.2098190398431031
+      ],
+      "family95_interval": [
+        -1.0930120645187844,
+        -0.08386892100972095
+      ],
+      "comparisons_in_family": 8,
+      "bootstrap_draws": 2000,
+      "speaker_groups": 86,
+      "limitation": "Conditional on OOF predictions; no refit uncertainty or source-family dependence included."
+    },
+    {
+      "case": "pitch_periodicity",
+      "OOF_AUROC": 0.9148065476190477,
+      "balanced_LL_reduction": -0.044646797283846684,
+      "CI95": [
+        -0.1188718486777459,
+        0.01971289929761392
+      ],
+      "family95_interval": [
+        -0.15173190866332928,
+        0.05791407563462551
+      ],
+      "comparisons_in_family": 8,
+      "bootstrap_draws": 2000,
+      "speaker_groups": 86,
+      "limitation": "Conditional on OOF predictions; no refit uncertainty or source-family dependence included."
+    },
+    {
+      "case": "time_variation",
+      "OOF_AUROC": 0.9158730158730158,
+      "balanced_LL_reduction": -0.03936974616401101,
+      "CI95": [
+        -0.07115670381428811,
+        0.000556172311306789
+      ],
+      "family95_interval": [
+        -0.0867687309056921,
+        0.01727799540292922
+      ],
+      "comparisons_in_family": 8,
+      "bootstrap_draws": 2000,
+      "speaker_groups": 86,
+      "limitation": "Conditional on OOF predictions; no refit uncertainty or source-family dependence included."
+    },
+    {
+      "case": "wrap_seam",
+      "OOF_AUROC": 0.9212549603174603,
+      "balanced_LL_reduction": -0.02890432334380333,
+      "CI95": [
+        -0.1018918350557052,
+        0.013801149565156472
+      ],
+      "family95_interval": [
+        -0.15016087673164222,
+        0.025765758052188937
+      ],
+      "comparisons_in_family": 8,
+      "bootstrap_draws": 2000,
+      "speaker_groups": 86,
+      "limitation": "Conditional on OOF predictions; no refit uncertainty or source-family dependence included."
+    },
+    {
+      "case": "all_acoustics",
+      "OOF_AUROC": 0.7419890873015873,
+      "balanced_LL_reduction": -1.1183621763964924,
+      "CI95": [
+        -1.674650307483457,
+        -0.42262371374895397
+      ],
+      "family95_interval": [
+        -1.8199115230052474,
+        -0.3024804227977366
+      ],
+      "comparisons_in_family": 8,
+      "bootstrap_draws": 2000,
+      "speaker_groups": 86,
+      "limitation": "Conditional on OOF predictions; no refit uncertainty or source-family dependence included."
+    },
+    {
+      "case": "noise_control",
+      "OOF_AUROC": 0.7995287698412699,
+      "balanced_LL_reduction": -0.8378232420618306,
+      "CI95": [
+        -1.10804231144467,
+        -0.4645819951972118
+      ],
+      "family95_interval": [
+        -1.2173997537915564,
+        -0.34528863332490134
+      ],
+      "comparisons_in_family": 8,
+      "bootstrap_draws": 2000,
+      "speaker_groups": 86,
+      "limitation": "Conditional on OOF predictions; no refit uncertainty or source-family dependence included."
+    }
+  ],
+  "limitations": [
+    "Removing short normals changes the test population; it is not padding removal or a model improvement.",
+    "Native duration and wrap repetition are linked; their separate causal effects require a same-waveform input intervention.",
+    "T has short-view training as well as original recordings. Original-duration counts do not measure all effective augmented training exposure.",
+    "Only36 of1156 nocodec normal waveforms are rejected at the full-DF EER threshold; tail-model feature tests have limited power.",
+    "The EER threshold is retrospective and must not be presented as a deployment threshold."
+  ]
+}

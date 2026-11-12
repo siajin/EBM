@@ -1,0 +1,151 @@
+{
+  "status": "concrete_proposal_not_implemented_or_trained",
+  "version": "20261111_r1",
+  "name": "OC plus speaker-conditioned positive BPL1 plus conservative duration-consistency BPL2",
+  "core_hypothesis": "Keep discrimination on original long-input OC; use speaker-matched cross-utterance normal positives for nuisance robustness and same-source nested positives for duration/repetition robustness without a large population of synthetic short OC inputs.",
+  "locked_for_first_comparison": {
+    "code_reference": "original240 architecture and OC semantics, git10f3bcd; common new runner for all arms, never compare a rewritten trainer causally to historical weights alone",
+    "OC_global_batch": 240,
+    "OC_per_gpu": {
+      "bona": 12,
+      "spoof": 108
+    },
+    "OC_input_samples": 64600,
+    "OC_short_source_policy": "Retain original wrap to64600 only in main OC/reference; do not remove repetition globally simultaneously with pair changes. This is a conservative experimental anchor, not a claim repetition is optimal.",
+    "OC_source_order": "Original class DistributedSampler/smallloader cycling and partial batches, same UID order in all arms. Do not switch to speaker-balanced OC batches.",
+    "OC_augmentation": "Original RawBoost0-8 and original order; codec off; no speed/tempo augmentation in first study",
+    "frontend": "FrozenXLSR300M",
+    "backend": "Original160dim and OC center; no projection, speaker classifier, EMA teacher or new inference module",
+    "optimizer": "Original backend then bona-only center Adam,2calls/logicalstep; lr1e-5; same scheduler andRNGstreams across arms",
+    "epochs_proposed": 50,
+    "new_training_now": false
+  },
+  "pair_math": {
+    "original_per_pair": "ell(u,v)=softplus(30*(1-cos(u,v)))-0.3",
+    "original_local_BPL": "mean of all12x12 long-normal x short-normal pairs",
+    "critical_correction": "Permuting the same two full sets leaves the all-pairs scalar unchanged. Define per-anchor selected pairs or masks/group-scoped BPL calls. Retain ell, change admissible pairs.",
+    "first_prototype_pair_count": "One positive counterpart per normal anchor for each active BPL branch; up to12BPL1 and12BPL2 pairs/GPU; normalize each loss by its own valid anchors. Not144independent source pairs.",
+    "partial_and_skipped_pairs": "Use global valid-count normalization across ranks; inactive examples remain in OC, never alter OC class quotas. No hidden duplication or substitute different-speaker pair for a missing same-speaker pair."
+  },
+  "BPL1": {
+    "positive_sources": "Same speaker, different original UID, both bonafide; no speaker-negative or spoof-positive pairs",
+    "duration_control": "Both network inputs64600 samples. Also match unique-content length U=min(original_samples,64600): min(Ui,Uj)/max(Ui,Uj)>=0.8, to limit repetition-degree confounding.",
+    "sampling": "For each OC bona anchor choose one eligible same-speaker peer with a separate deterministic RNG. Do not regroup OC anchors. Allow shared right-side peers across anchors only when necessary, record multiplicities.",
+    "augmentation": "Independent original RawBoost draws on the two inputs; no codec transformation",
+    "gradient": "Both sides receive gradient",
+    "normalization": "Mean over active anchors, not over speaker group cardinalities",
+    "if_no_peer": "Skip only BPL1 for that anchor; retain its OC and BPL2 eligibility",
+    "hypothesis": "Reduce within-speaker variation induced by utterance content, recording conditions and augmentation; not guaranteed to learn noise invariance or to suppress speaker identity.",
+    "risk": "Speaker-specific clusters/channel shortcuts; original common OC center provides cross-speaker classification constraint but no guarantee of invariance. Measure held-out-utterance speaker probes and cross-speaker normal geometry.",
+    "train_metadata_feasibility": "pair_feasibility.json:2579/2580haveeligiblepeer; one has none; median77peers;2557have>=12peers. Speech-content/VAD eligibility not yet tested."
+  },
+  "BPL2": {
+    "positive_sources": "Same bona original UID, same anchor source interval; never arbitrary different utterances solely because their durations differ",
+    "reference": "The long OC bona embedding already computed for64600samples; this reference can contain wrapping for naturally short sources.",
+    "unique_content_base": "U=min(original_samples,64600); use only the first unique source interval, never sample a student crop across an artificial wrap boundary.",
+    "longer_original_policy": "If U>=32000samples, draw r uniformly[0.8,0.9], make a contiguous nested crop of ceil(r*U) samples, randomly position it inside the unique interval. Student uses native actual length and proper frontend/backend masks; never wrap the student.",
+    "native_short_policy": "If U<32000samples, student is the entire unique native input, retention100%; no further synthetic shortening. A1.2s original remains1.2s as student and remains in fixed4.0375s OC reference.",
+    "augmentation_control": "Initial version crops the already-augmented OC first unique interval. This preserves overlapping augmented waveform samples exactly and isolates context/length more than independently reaugmenting the student; do not change the original OC augmentation order. Independent student augmentation is a later separate ablation.",
+    "speech_content_guard_proposed": "VAD used only to accept nested crops, never to trim audio or alter OC sampler: require >=80% of reference unique-interval voiced frames retained; if no eligible crop, skip that BPL2 crop. Geometric80-90% retention does not itself guarantee phonetic-information retention. Actual VAD acceptance rates require Train-only preflight.",
+    "gradient": "ell(stop_gradient(z_long),z_student). Original scalar formula is retained; reverse path changes. There is no independent frozen teacher: weights are shared, so student updates can still affect later long embeddings.",
+    "hypothesis": "Encourage naturally short/reduced-context bona to align with its long normal reference, reducing duration/repetition-conditioned score offsets while preserving long discrimination.",
+    "limits": [
+      "For U<cap the pair changes both effective duration and repetition; not pure periodicity isolation",
+      "Shortening cannot recover information absent from the student",
+      "Stop-gradient avoids direct long-side BPL2 gradient but does not guarantee no degradation",
+      "Positive-only consistency alone can contract representation; retain OC and test spoof separation"
+    ]
+  },
+  "final_objective": {
+    "after_warmup": "L_backend = L_OC +0.75L_BPL1 +0.25L_BPL2",
+    "coefficient_status": "Proposed conservative initial values, not validated optimum; sum equals original BPL coefficient1 but gradient magnitudes are not thereby equal.",
+    "center_step": "Retain original bona-only OC center update; no BPL update to center",
+    "common_warmup": "Epochs1-5allarms use original BPL144. Epochs6-10 linearly blend original BPL144 to each arm target; epochs11-50 use target. Common prefix from a newly audited checkpoint with full optimizer/sampler/RNG state; do not reuse failed mildv2 memory/no checkpoint."
+  },
+  "views_per_gpu": {
+    "main_OC_waves": 120,
+    "extra_BPL1_peer_waves_max": 12,
+    "extra_BPL2_student_waves_max": 12,
+    "candidate_total_waves_max": 144,
+    "total_two_gpu_max": 288,
+    "OC_logical_batch_stays": 240,
+    "note": "Extra views are not extra OC samples or optimizer steps. Historical implementation also forwards unused spoof short views; equalize the common runner and report actual waveforms/seconds/memory rather than call all these counts batch240."
+  },
+  "controlled_training_arms_proposed": [
+    {
+      "id": "A144",
+      "target_BPL": "Original144all-pairs",
+      "purpose": "Reproduced current reference with common runner"
+    },
+    {
+      "id": "A12",
+      "target_BPL": "Originalsameviews, one random normal counterpart per anchor,12pairs",
+      "purpose": "Control reduced pair count/weighting independently of speaker and duration design"
+    },
+    {
+      "id": "B",
+      "target_BPL": "0.75BPL1+0.25A12",
+      "purpose": "Replace only speaker branch slot"
+    },
+    {
+      "id": "C",
+      "target_BPL": "0.75A12+0.25BPL2",
+      "purpose": "Replace only duration branch slot"
+    },
+    {
+      "id": "D",
+      "target_BPL": "0.75BPL1+0.25BPL2",
+      "purpose": "Proposed final combined method"
+    }
+  ],
+  "hypothesis_tests": {
+    "H1": "B versusA12: normal perturbation sensitivity decreases without increased speaker/channel-specific failures; no claim from positive cosine alone.",
+    "H2": "C versusA12: native-short normal rejection and paired wrap/native gaps decrease, without raising A10/A11spoof misses.",
+    "interaction": "D improvement beyond individual replacements supports complementarity; if D only follows one branch, retain the simpler method.",
+    "BPL2_mechanism_followups": [
+      "Stop-gradient versus both-sided gradient at fixed crop and weights",
+      "Information-preserving80-90% versus one deliberately shorter setting, only as a separate controlled ablation",
+      "Same-speaker BPL1 versus different-speaker bona positives with matched durations/augmentation, if speaker leakage grows"
+    ],
+    "causal_training_origin": "Frozen repetition probes and length matching do not prove how a shortcut was learned. A separate class-duration/repetition randomized training study is needed for that claim."
+  },
+  "evaluation_proposed": {
+    "datasets": [
+      "19LA eval71237",
+      "21LA eval148176",
+      "21DF eval533928"
+    ],
+    "dev": "No new dev evaluation",
+    "checkpoints": "Save5,10,...50 before evaluation. Report minimum EER and epoch separately per dataset per user preference, also preset50. Target minima are retrospective/oracle results, not independent deployment model selection.",
+    "inputs": "Common fixed prefix64600cap; report both native-no-repeat/masked and fixed-wrap4 as prespecified separate policies for every model, no choosing per-model or per-length winners",
+    "official_scoring": "Each trained OCcenter cosine, common seed1729/batch8/original ASPnoise1e-5; mechanism probesnoise0 labeled separately",
+    "cuts": [
+      "original<=1,1-1.5,1.5-2,2-3,3-4.0375,>4.0375seconds; noEER where a class is absent",
+      "native-short versus duration-matched artificial-short",
+      "attackA10/A11 and length-matched A07/A08 controls",
+      "codec and speaker strata, bona FRR and spoof FAR separately",
+      "paired normal noise sensitivity, unit-embedding covariance/effective rank and two-class separation, not only loss or collapsed normal variance",
+      "Train-fit speaker/duration diagnostic probes split by UID before any augmentation, no same-source leakage"
+    ],
+    "error_thresholds": "For no-dev diagnostics use explicitly labeled native-eval EER point held fixed across paired input conditions; never claim deployment calibration. ROC-based per-bin EER/FRR-at-fixed-FAR also reported.",
+    "replication": "Seed1 exploratory screen; repeat selected arms under >=3matched seeds before generalization claims. Existing21LA repeatedly inspected; definitive confirmation requires a new untouched source.",
+    "pending_current_repetition_diagnostic_at_design": "running_full"
+  },
+  "execution_guards_proposed": [
+    "Current repetition experiment remains untouched",
+    "No new training or server/GPU job authorized by this design task",
+    "Actual Train pair/VAD acceptance preflight; never assume all gates feasible",
+    "Real spawn worker evaluation smoke with full module import path, not just parent/stub tests",
+    "Atomic CLS/TrainState before any evaluation to preserve completed training if evaluator fails",
+    "Unique result roots, immutable snapshots/hashes, bounded timeout, fail fast and no automatic retries"
+  ],
+  "cost_scope": {
+    "current_design_task_new_spending_ceiling_usd": 0,
+    "current_new_paid_resources": 0,
+    "current_new_training_steps": 0,
+    "current_new_background_jobs": 0,
+    "future_training": "Not launched. Estimate total all arms/seeds/evaluation and obtain approval if cumulative new cost could reach10USD before execution.",
+    "cleanup": "Only local derived metadata/spec artifacts created; no new long-running processes or paid resources."
+  },
+  "evidence_status": "This is a justified testable final candidate, not a trained winner. New full21LA repetition/dose experiment still pending; constants, stop-gradient, and crop/VAD gates are proposals."
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "path": "experience/05_residual_geometry/E068/code/artifacts/geometry_experiments/spoof_path_geometry.py",
+    "sha256": "68b33387b811feef61f734b1cbde154e41858ff66278f67360fedb58056b1abd",
+    "origin": "artifacts/geometry_experiments/spoof_path_geometry.py",
+    "kind": "explicit method source"
+  },
+  {
+    "path": "experience/05_residual_geometry/E068/code/artifacts/geometry_experiments/continuous_spoof_path_labels.py",
+    "sha256": "0bc1bc265e4b918635addc02cfeb945aea3aa1c9e5438bd77a6a8c62bb571d60",
+    "origin": "artifacts/geometry_experiments/continuous_spoof_path_labels.py",
+    "kind": "explicit method source"
+  }
+]

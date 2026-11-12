@@ -1,0 +1,93 @@
+{
+  "remote_root": "/home/mentee/results/analysis/EBM80_21DF_tail_train_context",
+  "file_inventory": [
+    {
+      "name": "summary.json",
+      "bytes": 1956,
+      "directory": false
+    },
+    {
+      "name": "sample_manifest.json",
+      "bytes": 192002,
+      "directory": false
+    }
+  ],
+  "aggregate_json": {
+    "summary.json": {
+      "population": {
+        "0": 22800,
+        "1": 2580
+      },
+      "sample_per_class": 1000,
+      "seed": 17,
+      "by_label": {
+        "spoof": {
+          "duration_s": {
+            "median": 3.22778125,
+            "mean": 3.4201816875
+          },
+          "rms_dbfs": {
+            "median": -18.303196600616815,
+            "mean": -18.44640572729858
+          },
+          "low_energy_fraction": {
+            "median": 0.5,
+            "mean": 0.5102948436043688
+          },
+          "edge_low_energy_fraction": {
+            "median": 0.33297787035556825,
+            "mean": 0.34142368083443797
+          },
+          "leading_s": {
+            "median": 0.48,
+            "mean": 0.6911999999999999
+          },
+          "trailing_s": {
+            "median": 0.332,
+            "mean": 0.345783
+          }
+        },
+        "bonafide": {
+          "duration_s": {
+            "median": 3.28084375,
+            "mean": 3.4185839999999996
+          },
+          "rms_dbfs": {
+            "median": -18.742186937874607,
+            "mean": -18.7714134881886
+          },
+          "low_energy_fraction": {
+            "median": 0.594059405940594,
+            "mean": 0.5931321520468775
+          },
+          "edge_low_energy_fraction": {
+            "median": 0.459784483793979,
+            "mean": 0.4642571427822863
+          },
+          "leading_s": {
+            "median": 1.0,
+            "mean": 1.0588400000000002
+          },
+          "trailing_s": {
+            "median": 0.3570625,
+            "mean": 0.41615599999999997
+          }
+        }
+      },
+      "univariate_descriptive_auc": {
+        "duration_s": 0.5257865,
+        "rms_dbfs": 0.45283300000000004,
+        "low_energy_fraction": 0.6960925000000001,
+        "edge_low_energy_fraction": 0.7041215000000001,
+        "leading_s": 0.6935605,
+        "trailing_s": 0.55614
+      },
+      "limitations": [
+        "Original raw training audio before random crops and codec augmentation; not the exact input stream seen in training.",
+        "Same 20 ms relative RMS proxy as 21DF analysis, evaluated on first 64,600 samples before padding.",
+        "These are label associations, not proof that a particular learned unit uses the cue."
+      ]
+    }
+  },
+  "method_documents": {}
+}

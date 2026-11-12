@@ -1,0 +1,56 @@
+{
+  "status": "pilot_and_analysis_complete",
+  "remote_root": "/home/mentee/analysis/ebm_positive_bpl_20261110_v1",
+  "training_updates_requested": 108,
+  "CUDA_VISIBLE_DEVICES": "0,1",
+  "policy": "matched joint duration x speaker x attack policy; bona fide loss only",
+  "source_repo_unchanged": true,
+  "existing_experiments_untouched": true,
+  "automation_unchanged": true,
+  "uploaded_files": {
+    "manifest.json": {
+      "bytes": 490998,
+      "sha256": "a4b9980535ab9a3b0ba9f8d116ffb38735f925176e682e65518ba08ffa535ca4"
+    },
+    "policy.json": {
+      "bytes": 298261,
+      "sha256": "06a03d3d568cbecba375a225e976117b26862c673cce8acab4da888dccbccfd4"
+    },
+    "protocol.json": {
+      "bytes": 2284,
+      "sha256": "65965eefd641d714f657b79855e27f36bed2cc7dd4c646cd0015bc742114075a"
+    },
+    "run.sh": {
+      "bytes": 848,
+      "sha256": "8a1c52ba96359441927ef394bc80eb276037a04e21e64226f2201c0b45690ee7"
+    },
+    "positive_bpl_pilot.py": {
+      "bytes": 13353,
+      "sha256": "a81902126fe17f9a78b02db7d8092dbe31d74c8bedf8345d0abf91d4ba133ba3"
+    }
+  },
+  "pilot_complete": true,
+  "analysis_complete": true,
+  "smoke_exit": 0,
+  "run_exit": 0,
+  "optimizer_updates_completed": 108,
+  "finished_KST": "2026-11-10T08:52:27+09:00",
+  "summary": {
+    "clean512_EER_initial": 48.046875,
+    "clean512_EER_final": 30.078125,
+    "noisy128_EER_initial": 59.375,
+    "noisy128_EER_final": 42.1875
+  },
+  "final_audit": "final_server_audit.json",
+  "full_50_epoch_training_started": false,
+  "augmentation_erratum": {
+    "finding": "Pilot RawBoost kind 8 differs from original TrainSet: LnL+SSI vs LnL+ISD.",
+    "pilot_source_sha256": "a81902126fe17f9a78b02db7d8092dbe31d74c8bedf8345d0abf91d4ba133ba3",
+    "original_bpl_and_network_unchanged": true,
+    "interpretation": "Pilot observations remain valid for its actual recipe, but not a strict original-RawBoost controlled comparison.",
+    "repository_implementation": "positive_bpl.rawboost reproduces original TrainSet kinds 0..8, including LnL+ISD for kind 8."
+  },
+  "strict_original_rawboost_control": false,
+  "scope_superseded_by": "artifacts/oc_bpl_matched_variable_20261110/state.json",
+  "scope_correction": "Final request retains OC+BPL losses and original centroid optimization; both classes use matched variable input. Earlier BPL-only results are not final-design evidence."
+}

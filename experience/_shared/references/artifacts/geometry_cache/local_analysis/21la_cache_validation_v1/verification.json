@@ -1,0 +1,62 @@
+{
+  "status": "pass",
+  "UTC": "2026-11-05T02:28:53.198978+00:00",
+  "dataset": "21LA_eval",
+  "rows": 148176,
+  "class_counts": {
+    "bonafide": 14816,
+    "spoof": 133360
+  },
+  "z_shape": [
+    148176,
+    160
+  ],
+  "h_shape": [
+    148176,
+    160
+  ],
+  "cache_fingerprint": "4110118cb92e35c171ef7b71194407b5a3400b5d3eedaeb2af9909c096997a29",
+  "checkpoint_sha256": "104873703a57cad98b686d770e0860e031a2cf9abef79b72668780c1660e0b24",
+  "file_hash_validation": {
+    "status": "pass",
+    "dataset": "21LA_eval",
+    "rows": 148176,
+    "cache_fingerprint": "4110118cb92e35c171ef7b71194407b5a3400b5d3eedaeb2af9909c096997a29",
+    "file_hashes_checked": true
+  },
+  "native_metrics_independent": {
+    "eer_percent": 1.0535392921415718,
+    "auroc": 0.997452883545861
+  },
+  "raw_forward_score_metrics": {
+    "eer_percent": 1.0535392921415718,
+    "auroc": 0.99745288531724
+  },
+  "V_fixed_threshold": 0.9883067190214369,
+  "V_fixed_21LA_errors": {
+    "bona_false_reject": 0.12945464362850972,
+    "spoof_false_accept": 0.0002924415116976605
+  },
+  "speaker_group_overlap_with_cached_sets": {
+    "T": 0,
+    "V": 0,
+    "DF_pilot": 67
+  },
+  "UID_overlap_with_cached_sets": {
+    "T": 0,
+    "V": 0,
+    "DF_pilot": 0
+  },
+  "source_family_map_resolved": false,
+  "reference_QC_errors": {
+    "z": 0.0,
+    "h": 0.0,
+    "score": 0.0
+  },
+  "direction_valid_rows": 148176,
+  "seed_rows_checked": 148176,
+  "new_training": false,
+  "new_inference": false,
+  "offline": true,
+  "elapsed_seconds": 8.969022999983281
+}

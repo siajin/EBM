@@ -1,0 +1,418 @@
+[
+  {
+    "basis": "original",
+    "dataset": "DF_pilot",
+    "action": "keep",
+    "top_EER": 3.6499999999999977,
+    "mean_random_EER": 3.368888888888889,
+    "effect_pp": -0.28111111111110887,
+    "CI95": [
+      -0.5879986094802716,
+      0.014352875594454672
+    ],
+    "CI975": [
+      -0.6258621688000396,
+      0.04918687414140776
+    ],
+    "mask_seed_resampling": true,
+    "draws": 10000,
+    "groups": 93,
+    "class_groups": [
+      62,
+      92
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "basis": "original",
+    "dataset": "DF_pilot",
+    "action": "drop",
+    "top_EER": 3.355555555555555,
+    "mean_random_EER": 3.359722222222222,
+    "effect_pp": -0.004166666666666874,
+    "CI95": [
+      -0.09665911117710116,
+      0.06625739409838487
+    ],
+    "CI975": [
+      -0.10935025977873628,
+      0.07857617797899878
+    ],
+    "mask_seed_resampling": true,
+    "draws": 10000,
+    "groups": 93,
+    "class_groups": [
+      62,
+      92
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "basis": "original",
+    "dataset": "21LA_pilot",
+    "action": "keep",
+    "top_EER": 0.8000000000000007,
+    "mean_random_EER": 0.8044444444444443,
+    "effect_pp": 0.004444444444443585,
+    "CI95": [
+      -0.06973406847838202,
+      0.04664208052727853
+    ],
+    "CI975": [
+      -0.08881122075037633,
+      0.05786067482519393
+    ],
+    "mask_seed_resampling": true,
+    "draws": 10000,
+    "groups": 67,
+    "class_groups": [
+      48,
+      67
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "basis": "original",
+    "dataset": "21LA_pilot",
+    "action": "drop",
+    "top_EER": 0.8000000000000007,
+    "mean_random_EER": 0.8000000000000007,
+    "effect_pp": 0.0,
+    "CI95": [
+      -0.038292532130291816,
+      0.03240641487920261
+    ],
+    "CI975": [
+      -0.04641630163867025,
+      0.0383175714668695
+    ],
+    "mask_seed_resampling": true,
+    "draws": 10000,
+    "groups": 67,
+    "class_groups": [
+      48,
+      67
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "basis": "511",
+    "dataset": "DF_pilot",
+    "action": "keep",
+    "top_EER": 3.172222222222222,
+    "mean_random_EER": 3.2566666666666664,
+    "effect_pp": 0.08444444444444432,
+    "CI95": [
+      -0.16411053762729697,
+      0.207568715498496
+    ],
+    "CI975": [
+      -0.18666038180412312,
+      0.23608121597954296
+    ],
+    "mask_seed_resampling": true,
+    "draws": 10000,
+    "groups": 93,
+    "class_groups": [
+      62,
+      92
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "basis": "511",
+    "dataset": "DF_pilot",
+    "action": "drop",
+    "top_EER": 3.200000000000003,
+    "mean_random_EER": 3.4027777777777772,
+    "effect_pp": -0.2027777777777744,
+    "CI95": [
+      -0.2642182423503348,
+      -0.026890303305991795
+    ],
+    "CI975": [
+      -0.28430660654212603,
+      -0.01080993714139174
+    ],
+    "mask_seed_resampling": true,
+    "draws": 10000,
+    "groups": 93,
+    "class_groups": [
+      62,
+      92
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "basis": "511",
+    "dataset": "21LA_pilot",
+    "action": "keep",
+    "top_EER": 0.8000000000000007,
+    "mean_random_EER": 0.8077777777777781,
+    "effect_pp": 0.007777777777777439,
+    "CI95": [
+      -0.027825645536048847,
+      0.05972097870141483
+    ],
+    "CI975": [
+      -0.03339525451734638,
+      0.06847395052206798
+    ],
+    "mask_seed_resampling": true,
+    "draws": 10000,
+    "groups": 67,
+    "class_groups": [
+      48,
+      67
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "basis": "511",
+    "dataset": "21LA_pilot",
+    "action": "drop",
+    "top_EER": 0.8499999999999952,
+    "mean_random_EER": 0.8000000000000007,
+    "effect_pp": 0.04999999999999449,
+    "CI95": [
+      -0.017400950077970295,
+      0.12874779101133899
+    ],
+    "CI975": [
+      -0.027057581666492258,
+      0.14269576797189223
+    ],
+    "mask_seed_resampling": true,
+    "draws": 10000,
+    "groups": 67,
+    "class_groups": [
+      48,
+      67
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "basis": "512",
+    "dataset": "DF_pilot",
+    "action": "keep",
+    "top_EER": 3.3055555555555554,
+    "mean_random_EER": 3.3625,
+    "effect_pp": 0.056944444444444464,
+    "CI95": [
+      -0.20271209125956802,
+      0.24960339503073936
+    ],
+    "CI975": [
+      -0.23704065491497942,
+      0.28041409650499594
+    ],
+    "mask_seed_resampling": true,
+    "draws": 10000,
+    "groups": 93,
+    "class_groups": [
+      62,
+      92
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "basis": "512",
+    "dataset": "DF_pilot",
+    "action": "drop",
+    "top_EER": 3.288888888888889,
+    "mean_random_EER": 3.3433333333333337,
+    "effect_pp": -0.05444444444444452,
+    "CI95": [
+      -0.16687612639810734,
+      0.041720819036670714
+    ],
+    "CI975": [
+      -0.1808979839320427,
+      0.05582460952074944
+    ],
+    "mask_seed_resampling": true,
+    "draws": 10000,
+    "groups": 93,
+    "class_groups": [
+      62,
+      92
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "basis": "512",
+    "dataset": "21LA_pilot",
+    "action": "keep",
+    "top_EER": 0.8000000000000007,
+    "mean_random_EER": 0.8074999999999999,
+    "effect_pp": 0.007499999999999174,
+    "CI95": [
+      -0.04655936361413754,
+      0.046761987652694674
+    ],
+    "CI975": [
+      -0.052911283199972625,
+      0.05767632273855597
+    ],
+    "mask_seed_resampling": true,
+    "draws": 10000,
+    "groups": 67,
+    "class_groups": [
+      48,
+      67
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "basis": "512",
+    "dataset": "21LA_pilot",
+    "action": "drop",
+    "top_EER": 0.8000000000000007,
+    "mean_random_EER": 0.8000000000000007,
+    "effect_pp": 0.0,
+    "CI95": [
+      -0.05607004380970239,
+      0.05178461386522308
+    ],
+    "CI975": [
+      -0.07286175532552018,
+      0.061109372861863166
+    ],
+    "mask_seed_resampling": true,
+    "draws": 10000,
+    "groups": 67,
+    "class_groups": [
+      48,
+      67
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "basis": "513",
+    "dataset": "DF_pilot",
+    "action": "keep",
+    "top_EER": 3.3499999999999974,
+    "mean_random_EER": 3.3841666666666663,
+    "effect_pp": 0.0341666666666689,
+    "CI95": [
+      -0.17396467214675498,
+      0.2019084470321858
+    ],
+    "CI975": [
+      -0.2011254002182125,
+      0.2271594970712408
+    ],
+    "mask_seed_resampling": true,
+    "draws": 10000,
+    "groups": 93,
+    "class_groups": [
+      62,
+      92
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "basis": "513",
+    "dataset": "DF_pilot",
+    "action": "drop",
+    "top_EER": 3.2499999999999973,
+    "mean_random_EER": 3.334166666666666,
+    "effect_pp": -0.08416666666666872,
+    "CI95": [
+      -0.23948291796969803,
+      -0.019604512518163177
+    ],
+    "CI975": [
+      -0.26024206033351494,
+      -0.006156216214039556
+    ],
+    "mask_seed_resampling": true,
+    "draws": 10000,
+    "groups": 93,
+    "class_groups": [
+      62,
+      92
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "basis": "513",
+    "dataset": "21LA_pilot",
+    "action": "keep",
+    "top_EER": 0.8000000000000007,
+    "mean_random_EER": 0.8050000000000003,
+    "effect_pp": 0.00499999999999956,
+    "CI95": [
+      -0.052369074542633454,
+      0.04960617326994268
+    ],
+    "CI975": [
+      -0.06162872006713198,
+      0.06006788835125276
+    ],
+    "mask_seed_resampling": true,
+    "draws": 10000,
+    "groups": 67,
+    "class_groups": [
+      48,
+      67
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "basis": "513",
+    "dataset": "21LA_pilot",
+    "action": "drop",
+    "top_EER": 0.8000000000000007,
+    "mean_random_EER": 0.8000000000000007,
+    "effect_pp": 0.0,
+    "CI95": [
+      -0.0779764314661197,
+      0.0723931101195599
+    ],
+    "CI975": [
+      -0.09266961914294827,
+      0.08789753231134763
+    ],
+    "mask_seed_resampling": true,
+    "draws": 10000,
+    "groups": 67,
+    "class_groups": [
+      48,
+      67
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "status": "exploratory_posthoc",
+  "checkpoint": "104873703a57cad98b686d770e0860e031a2cf9abef79b72668780c1660e0b24",
+  "question": "Does DF EER degradation come primarily from bona fide score shift?",
+  "primary_baseline": "19LA_eval",
+  "secondary_baseline": "21LA_eval",
+  "target": "DF_full=DF_pilot+DF_remaining",
+  "score": "native 160-dimensional cosine, higher=bona fide",
+  "bootstrap": {
+    "draws": 2000,
+    "seed": 2026110522,
+    "cluster": "source corpus x speaker",
+    "shared_ASV_speaker_weights_across_datasets": true,
+    "stratify_by_source": true,
+    "unresolved_source_families": true
+  },
+  "frozen_thresholds": [
+    "V bona 1st percentile",
+    "19LA nearest EER vertex (descriptive)"
+  ],
+  "no_new_fit": true,
+  "not_preregistered": true,
+  "not_a_training_causal_intervention": true,
+  "timestamp": "2026-11-06T09:47:13.659705+09:00"
+}

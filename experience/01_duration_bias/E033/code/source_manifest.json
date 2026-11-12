@@ -1,0 +1,14 @@
+[
+  {
+    "path": "experience/01_duration_bias/E033/code/EBM/tools/design_duration_sampling_policy.py",
+    "sha256": "268b99f612ce67a04c03871d8f22daf99e5b97e38da0f105fd713b0b543384df",
+    "origin": "EBM/tools/design_duration_sampling_policy.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/01_duration_bias/E033/code/EBM/tools/duration_sampling_policy.py",
+    "sha256": "6ae4a5efceb226ee97afcd8189836aa10ce0377a02ec51acfdbd4b3f514fadf7",
+    "origin": "EBM/tools/duration_sampling_policy.py",
+    "kind": "implementation / validation source"
+  }
+]

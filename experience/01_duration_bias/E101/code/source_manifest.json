@@ -1,0 +1,20 @@
+[
+  {
+    "path": "experience/01_duration_bias/E101/code/evalview_quiet_strict.py",
+    "sha256": "6c45396678fc41c5fee3ea962f6044e03bbbe4bf864971b2bd02298ffa86a11b",
+    "origin": "artifacts/github_archive_20261112/remote_source/historical_analysis/evalview_quiet_strict.py",
+    "kind": "actual historical analysis source"
+  },
+  {
+    "path": "experience/01_duration_bias/E101/code/native_quiet_repeat_check.py",
+    "sha256": "1c33ba698ab3e3ea507933ee8abf6060f6c2f7e4aba218e2e37e9e783f396157",
+    "origin": "artifacts/github_archive_20261112/remote_source/historical_analysis/native_quiet_repeat_check.py",
+    "kind": "actual historical analysis source"
+  },
+  {
+    "path": "experience/01_duration_bias/E101/code/verify_native_quiet_strict.py",
+    "sha256": "e678cd4829b25874f0dc35583f0d480012ecdb8d49f7496aa644a6c39be8b012",
+    "origin": "artifacts/github_archive_20261112/remote_source/historical_analysis/verify_native_quiet_strict.py",
+    "kind": "actual historical analysis source"
+  }
+]

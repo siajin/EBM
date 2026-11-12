@@ -1,0 +1,1240 @@
+[
+  {
+    "experiment_id": "E001",
+    "title": "배치 80·80epoch의 초기 반복 입력 학습",
+    "primary_theme": 3,
+    "primary_theme_title": "스푸프의 다양성보다 정상의 다양성이 EER에 더 영향을 끼친다는 가설에 대한 연구",
+    "secondary_themes": [
+      2
+    ],
+    "role": "기존 학습 모델·손실·입력 구성의 비교 배경",
+    "status": "학습 완료"
+  },
+  {
+    "experiment_id": "E002",
+    "title": "배치 160·50epoch·GPU 별 정상 쌍 학습",
+    "primary_theme": 3,
+    "primary_theme_title": "스푸프의 다양성보다 정상의 다양성이 EER에 더 영향을 끼친다는 가설에 대한 연구",
+    "secondary_themes": [
+      2
+    ],
+    "role": "기존 학습 모델·손실·입력 구성의 비교 배경",
+    "status": "학습 완료"
+  },
+  {
+    "experiment_id": "E003",
+    "title": "배치 160에서 두 GPU의 정상 특징을 공유하는 학습",
+    "primary_theme": 3,
+    "primary_theme_title": "스푸프의 다양성보다 정상의 다양성이 EER에 더 영향을 끼친다는 가설에 대한 연구",
+    "secondary_themes": [
+      2
+    ],
+    "role": "기존 학습 모델·손실·입력 구성의 비교 배경",
+    "status": "학습 완료"
+  },
+  {
+    "experiment_id": "E004",
+    "title": "전체 배치 320으로 늘린 실제 학습 시도",
+    "primary_theme": 3,
+    "primary_theme_title": "스푸프의 다양성보다 정상의 다양성이 EER에 더 영향을 끼친다는 가설에 대한 연구",
+    "secondary_themes": [],
+    "role": "실패 실행 이력—완료 EER의 근거로 사용하지 않음",
+    "status": "실패: 첫 배치 메모리 부족"
+  },
+  {
+    "experiment_id": "E005",
+    "title": "배치 240·원래 반복 입력·GPU 별 정상 쌍 학습",
+    "primary_theme": 2,
+    "primary_theme_title": "반복이 학습에 안 좋은 영향을 끼친다는 가설에 대한 연구",
+    "secondary_themes": [
+      1,
+      3
+    ],
+    "role": "기존 학습 모델·손실·입력 구성의 비교 배경",
+    "status": "학습 완료"
+  },
+  {
+    "experiment_id": "E006",
+    "title": "학습 길이 상한을 유지하면서 짧은 음성 반복을 제거한 학습(B)",
+    "primary_theme": 2,
+    "primary_theme_title": "반복이 학습에 안 좋은 영향을 끼친다는 가설에 대한 연구",
+    "secondary_themes": [
+      1,
+      3
+    ],
+    "role": "기존 학습 모델·손실·입력 구성의 비교 배경",
+    "status": "학습 50epoch 완료"
+  },
+  {
+    "experiment_id": "E007",
+    "title": "반복 없는 학습에서 긴 입력의 상한만 제거한 학습(C)",
+    "primary_theme": 1,
+    "primary_theme_title": "음성의 길이에 대한 편향을 줄이는 연구",
+    "secondary_themes": [
+      3
+    ],
+    "role": "기존 학습 모델·손실·입력 구성의 비교 배경",
+    "status": "학습 50epoch 완료"
+  },
+  {
+    "experiment_id": "E008",
+    "title": "기존 학습들의 배치·정상 쌍 수·학습 진행 량 비교",
+    "primary_theme": 3,
+    "primary_theme_title": "스푸프의 다양성보다 정상의 다양성이 EER에 더 영향을 끼친다는 가설에 대한 연구",
+    "secondary_themes": [
+      2
+    ],
+    "role": "배치·정상쌍 수·학습량의 간접 분석—다양성의 독립 개입 아님",
+    "status": "기록 분석 완료"
+  },
+  {
+    "experiment_id": "E009",
+    "title": "두 고정 50epoch 모델을 같은 비반복 입력으로 전체 평가",
+    "primary_theme": 2,
+    "primary_theme_title": "반복이 학습에 안 좋은 영향을 끼친다는 가설에 대한 연구",
+    "secondary_themes": [
+      1,
+      3
+    ],
+    "role": "완료된 입력·표현·점수 분석—해석은 실험별 제한을 따름",
+    "status": "평가 완료"
+  },
+  {
+    "experiment_id": "E010",
+    "title": "두 반복 제거 학습 모델의 모든 저장 epoch 평가와 최소 EER 비교",
+    "primary_theme": 2,
+    "primary_theme_title": "반복이 학습에 안 좋은 영향을 끼친다는 가설에 대한 연구",
+    "secondary_themes": [
+      1,
+      3
+    ],
+    "role": "완료된 입력·표현·점수 분석—해석은 실험별 제한을 따름",
+    "status": "평가 완료"
+  },
+  {
+    "experiment_id": "E011",
+    "title": "원음 길이별 오류와 임계값 민감도 분석",
+    "primary_theme": 1,
+    "primary_theme_title": "음성의 길이에 대한 편향을 줄이는 연구",
+    "secondary_themes": [
+      3
+    ],
+    "role": "완료된 입력·표현·점수 분석—해석은 실험별 제한을 따름",
+    "status": "기존 점수 분석 완료"
+  },
+  {
+    "experiment_id": "E012",
+    "title": "같은 768개 원음의 반복 여부를 두 모델에 교차 적용",
+    "primary_theme": 2,
+    "primary_theme_title": "반복이 학습에 안 좋은 영향을 끼친다는 가설에 대한 연구",
+    "secondary_themes": [
+      1,
+      5
+    ],
+    "role": "완료된 입력·표현·점수 분석—해석은 실험별 제한을 따름",
+    "status": "추론·분석 완료"
+  },
+  {
+    "experiment_id": "E013",
+    "title": "원래 배치 240 모델의 반복 구간과 오류 분포 조사",
+    "primary_theme": 2,
+    "primary_theme_title": "반복이 학습에 안 좋은 영향을 끼친다는 가설에 대한 연구",
+    "secondary_themes": [
+      1
+    ],
+    "role": "완료된 입력·표현·점수 분석—해석은 실험별 제한을 따름",
+    "status": "기존 기록 분석 완료"
+  },
+  {
+    "experiment_id": "E014",
+    "title": "개발 전체와 21LA 전체에서 반복/비반복 입력을 직접 교차 평가",
+    "primary_theme": 2,
+    "primary_theme_title": "반복이 학습에 안 좋은 영향을 끼친다는 가설에 대한 연구",
+    "secondary_themes": [
+      1,
+      3
+    ],
+    "role": "완료된 입력·표현·점수 분석—해석은 실험별 제한을 따름",
+    "status": "추론·독립 검산 완료"
+  },
+  {
+    "experiment_id": "E015",
+    "title": "자연적으로 2초 이하인 음성에서 오류 전이·임계값 이동·공격별 회복 분석",
+    "primary_theme": 2,
+    "primary_theme_title": "반복이 학습에 안 좋은 영향을 끼친다는 가설에 대한 연구",
+    "secondary_themes": [
+      1,
+      3
+    ],
+    "role": "완료된 입력·표현·점수 분석—해석은 실험별 제한을 따름",
+    "status": "E014 저장 점수 분석 완료"
+  },
+  {
+    "experiment_id": "E016",
+    "title": "긴 원음의 같은 1초/2초 구간에서 반복량·접합부·반사대조",
+    "primary_theme": 2,
+    "primary_theme_title": "반복이 학습에 안 좋은 영향을 끼친다는 가설에 대한 연구",
+    "secondary_themes": [
+      1,
+      5
+    ],
+    "role": "완료된 입력·표현·점수 분석—해석은 실험별 제한을 따름",
+    "status": "추론·분석 완료"
+  },
+  {
+    "experiment_id": "E017",
+    "title": "클래스별 길이 분포를 맞추되 공격·코덱 비율을 보존한 EER",
+    "primary_theme": 1,
+    "primary_theme_title": "음성의 길이에 대한 편향을 줄이는 연구",
+    "secondary_themes": [
+      3
+    ],
+    "role": "완료된 입력·표현·점수 분석—해석은 실험별 제한을 따름",
+    "status": "기존 점수 재가중 완료"
+  },
+  {
+    "experiment_id": "E018",
+    "title": "고정 모델에서 길이 정규화와 속도 변형 비교",
+    "primary_theme": 1,
+    "primary_theme_title": "음성의 길이에 대한 편향을 줄이는 연구",
+    "secondary_themes": [],
+    "role": "완료된 입력·표현·점수 분석—해석은 실험별 제한을 따름",
+    "status": "추론 완료"
+  },
+  {
+    "experiment_id": "E019",
+    "title": "같은 표본에서 두 속도 변형 알고리즘을 직접 비교",
+    "primary_theme": 1,
+    "primary_theme_title": "음성의 길이에 대한 편향을 줄이는 연구",
+    "secondary_themes": [],
+    "role": "완료된 입력·표현·점수 분석—해석은 실험별 제한을 따름",
+    "status": "추론 완료"
+  },
+  {
+    "experiment_id": "E020",
+    "title": "정상 두 묶음만 사용한 108회 양성쌍 손실의 단기 학습",
+    "primary_theme": 3,
+    "primary_theme_title": "스푸프의 다양성보다 정상의 다양성이 EER에 더 영향을 끼친다는 가설에 대한 연구",
+    "secondary_themes": [
+      2,
+      5
+    ],
+    "role": "양성쌍만 사용한 단기 학습—정식 손실·장기 학습과 구별",
+    "status": "단기 학습·진단 완료"
+  },
+  {
+    "experiment_id": "E021",
+    "title": "정상·위조 길이와 음성활동을 맞추고 독립 정상 묶음을 정렬한 학습",
+    "primary_theme": 1,
+    "primary_theme_title": "음성의 길이에 대한 편향을 줄이는 연구",
+    "secondary_themes": [
+      2,
+      3
+    ],
+    "role": "복합 가변길이 학습과 지정 체크포인트 평가—길이만의 효과 아님",
+    "status": "사용자 중단:20epoch 저장"
+  },
+  {
+    "experiment_id": "E022",
+    "title": "중 단 한 가변 길이 학습의 저장 20epoch를 21LA·DF 전체 평가",
+    "primary_theme": 1,
+    "primary_theme_title": "음성의 길이에 대한 편향을 줄이는 연구",
+    "secondary_themes": [
+      2,
+      3
+    ],
+    "role": "복합 가변길이 학습과 지정 체크포인트 평가—길이만의 효과 아님",
+    "status": "평가·검산 완료"
+  },
+  {
+    "experiment_id": "E023",
+    "title": "가변 길이 학습과 기존 모델의 21LA 길이·공격별 오류 재분석",
+    "primary_theme": 1,
+    "primary_theme_title": "음성의 길이에 대한 편향을 줄이는 연구",
+    "secondary_themes": [
+      2,
+      3
+    ],
+    "role": "복합 가변길이 학습과 지정 체크포인트 평가—길이만의 효과 아님",
+    "status": "기존 점수 분석 완료"
+  },
+  {
+    "experiment_id": "E024",
+    "title": "최대 20% 절단·0.8~1.2배 속도 변형의 학습 자료 정책과 실제 변형 캐시",
+    "primary_theme": 1,
+    "primary_theme_title": "음성의 길이에 대한 편향을 줄이는 연구",
+    "secondary_themes": [
+      2
+    ],
+    "role": "길이·활동·노출 분포의 정책 또는 데이터 검증—성능 개선과 구별",
+    "status": "정책·캐시생성 검증 완료"
+  },
+  {
+    "experiment_id": "E025",
+    "title": "완만한 변형 캐시를 원래 240 학습에 연결한 두 실행",
+    "primary_theme": 1,
+    "primary_theme_title": "음성의 길이에 대한 편향을 줄이는 연구",
+    "secondary_themes": [
+      2
+    ],
+    "role": "실패 실행 이력—완료 EER의 근거로 사용하지 않음",
+    "status": "1차 진입 실패·2차 평가 오류로 중단"
+  },
+  {
+    "experiment_id": "E026",
+    "title": "원음 2초 이하 정상에만 3.0275초·2초 손실을 더한 원래 240 학습",
+    "primary_theme": 1,
+    "primary_theme_title": "음성의 길이에 대한 편향을 줄이는 연구",
+    "secondary_themes": [
+      2,
+      3,
+      5
+    ],
+    "role": "진행 중 실험의 원래 기록—추가 길이 손실의 최종 효과 미확정",
+    "status": "학습 중: 첫 5epoch 평가 완료"
+  },
+  {
+    "experiment_id": "E027",
+    "title": "가변 길이 입력·마스크·기울기 계산의 실제 GPU 가능성 점검",
+    "primary_theme": 1,
+    "primary_theme_title": "음성의 길이에 대한 편향을 줄이는 연구",
+    "secondary_themes": [
+      2
+    ],
+    "role": "구현·특징 자료·저장 검증—가설 지지의 독립 성능 결과 아님",
+    "status": "구현 검증 완료·성능 학습 아님"
+  },
+  {
+    "experiment_id": "E028",
+    "title": "학습·개발·평가 자료의 원음 길이와 공격별 클래스 구성",
+    "primary_theme": 1,
+    "primary_theme_title": "음성의 길이에 대한 편향을 줄이는 연구",
+    "secondary_themes": [
+      2,
+      3
+    ],
+    "role": "완료된 입력·표현·점수 분석—해석은 실험별 제한을 따름",
+    "status": "메타데이터 분석 완료"
+  },
+  {
+    "experiment_id": "E029",
+    "title": "최대 20% 절단·0.8~1.2배 속도로 길이 분포를 맞출 수 있는 한계",
+    "primary_theme": 1,
+    "primary_theme_title": "음성의 길이에 대한 편향을 줄이는 연구",
+    "secondary_themes": [],
+    "role": "길이·활동·노출 분포의 정책 또는 데이터 검증—성능 개선과 구별",
+    "status": "메타데이터 최적화 완료·음성 변형 아님"
+  },
+  {
+    "experiment_id": "E030",
+    "title": "속도 변화 없이 길이 분포 100% 일치에 필요한 최소 절단 상한",
+    "primary_theme": 1,
+    "primary_theme_title": "음성의 길이에 대한 편향을 줄이는 연구",
+    "secondary_themes": [],
+    "role": "길이·활동·노출 분포의 정책 또는 데이터 검증—성능 개선과 구별",
+    "status": "메타데이터 계산·최적성 검증 완료"
+  },
+  {
+    "experiment_id": "E031",
+    "title": "겹치지 않는 분할로 길이를 맞추고 꼬리 손실을 0.5초 미만으로 제한",
+    "primary_theme": 1,
+    "primary_theme_title": "음성의 길이에 대한 편향을 줄이는 연구",
+    "secondary_themes": [],
+    "role": "길이·활동·노출 분포의 정책 또는 데이터 검증—성능 개선과 구별",
+    "status": "분할 계획·수학적 상한 검증 완료"
+  },
+  {
+    "experiment_id": "E032",
+    "title": "여러 목표 길이의 앞·뒤 구간 생성과 원음 우선 추출의 노출 분포",
+    "primary_theme": 1,
+    "primary_theme_title": "음성의 길이에 대한 편향을 줄이는 연구",
+    "secondary_themes": [],
+    "role": "길이·활동·노출 분포의 정책 또는 데이터 검증—성능 개선과 구별",
+    "status": "메타데이터 기대 분포 계산 완료"
+  },
+  {
+    "experiment_id": "E033",
+    "title": "학습 원음을 균등 선택하며 0.5~6초 길이 확률을 맞추는 초기 정책",
+    "primary_theme": 1,
+    "primary_theme_title": "음성의 길이에 대한 편향을 줄이는 연구",
+    "secondary_themes": [],
+    "role": "길이·활동·노출 분포의 정책 또는 데이터 검증—성능 개선과 구별",
+    "status": "정책 계산·구간 검증 완료; 최종 학습 안 아님"
+  },
+  {
+    "experiment_id": "E034",
+    "title": "140개 클래스·화자·공격 그룹의 0.5~4초 공동 길이 균형",
+    "primary_theme": 1,
+    "primary_theme_title": "음성의 길이에 대한 편향을 줄이는 연구",
+    "secondary_themes": [
+      3
+    ],
+    "role": "길이·활동·노출 분포의 정책 또는 데이터 검증—성능 개선과 구별",
+    "status": "정책 계산·검증 완료"
+  },
+  {
+    "experiment_id": "E035",
+    "title": "목표 길이 안에서 정상·위조의 음성활동 비율까지 맞추는 정책",
+    "primary_theme": 1,
+    "primary_theme_title": "음성의 길이에 대한 편향을 줄이는 연구",
+    "secondary_themes": [
+      2,
+      3
+    ],
+    "role": "길이·활동·노출 분포의 정책 또는 데이터 검증—성능 개선과 구별",
+    "status": "정책 생성·실제 파형 검증 완료"
+  },
+  {
+    "experiment_id": "E036",
+    "title": "구간만 직접 읽는 방식의 속도·발화량·원음 사용률 진단",
+    "primary_theme": 1,
+    "primary_theme_title": "음성의 길이에 대한 편향을 줄이는 연구",
+    "secondary_themes": [
+      2
+    ],
+    "role": "길이·활동·노출 분포의 정책 또는 데이터 검증—성능 개선과 구별",
+    "status": "실제 파형·로더진단완료"
+  },
+  {
+    "experiment_id": "E037",
+    "title": "매 epoch 모든 원음을 사용하면서 기존 기대 선택 비율을 유지하는 샘플러",
+    "primary_theme": 1,
+    "primary_theme_title": "음성의 길이에 대한 편향을 줄이는 연구",
+    "secondary_themes": [
+      2,
+      3
+    ],
+    "role": "길이·활동·노출 분포의 정책 또는 데이터 검증—성능 개선과 구별",
+    "status": "학습 자료 재생·검증 완료"
+  },
+  {
+    "experiment_id": "E038",
+    "title": "가변 길이 OC +BPL과 평가 중심·난수·저장의 실제 연결 검사",
+    "primary_theme": 1,
+    "primary_theme_title": "음성의 길이에 대한 편향을 줄이는 연구",
+    "secondary_themes": [
+      2
+    ],
+    "role": "구현·특징 자료·저장 검증—가설 지지의 독립 성능 결과 아님",
+    "status": "구현 검증 완료·장기 성능 실험 아님"
+  },
+  {
+    "experiment_id": "E039",
+    "title": "고정 모델의 정규화 전후 특징 추출·전체 평가 캐시 구축",
+    "primary_theme": 5,
+    "primary_theme_title": "잔여 방향에 대한 연구",
+    "secondary_themes": [],
+    "role": "구현·특징 자료·저장 검증—가설 지지의 독립 성능 결과 아님",
+    "status": "추출·검증 완료"
+  },
+  {
+    "experiment_id": "E040",
+    "title": "초기 개발 자료에서 점수·크기·옆 방향 특징을 읽는 분류기 비교",
+    "primary_theme": 4,
+    "primary_theme_title": "코사인 유사도 외에 벡터의 norm도 중요한 정보인지에 대한 연구",
+    "secondary_themes": [
+      1,
+      5
+    ],
+    "role": "벡터 크기·정규화 전 통계·방향×스케일의 정보 진단",
+    "status": "추가 분류기 학습·평가 완료"
+  },
+  {
+    "experiment_id": "E041",
+    "title": "초기 학습 자료 분류기와 선택 좌표 분류기의 DF 전이 평가",
+    "primary_theme": 4,
+    "primary_theme_title": "코사인 유사도 외에 벡터의 norm도 중요한 정보인지에 대한 연구",
+    "secondary_themes": [
+      1,
+      5
+    ],
+    "role": "벡터 크기·정규화 전 통계·방향×스케일의 정보 진단",
+    "status": "추가 분류기·전이 평가 완료"
+  },
+  {
+    "experiment_id": "E042",
+    "title": "원래 코사인을 유지한 방향 잔차와 공분산 거리의 전이 대조",
+    "primary_theme": 5,
+    "primary_theme_title": "잔여 방향에 대한 연구",
+    "secondary_themes": [],
+    "role": "완료된 입력·표현·점수 분석—해석은 실험별 제한을 따름",
+    "status": "추가 분류기·캐시 평가 완료"
+  },
+  {
+    "experiment_id": "E043",
+    "title": "DF 안에서 점수·크기를 통제한 잔여 방향의 판별 정보",
+    "primary_theme": 5,
+    "primary_theme_title": "잔여 방향에 대한 연구",
+    "secondary_themes": [
+      3,
+      4
+    ],
+    "role": "평가자료 내부 교차검증—학습자료에서 새 출처로의 전이와 구별",
+    "status": "추가 분류기·내부 교차검증 완료"
+  },
+  {
+    "experiment_id": "E044",
+    "title": "기존 코사인에서 좌표를 제거하거나 1~80개만 남기는 실험",
+    "primary_theme": 5,
+    "primary_theme_title": "잔여 방향에 대한 연구",
+    "secondary_themes": [],
+    "role": "완료된 입력·표현·점수 분석—해석은 실험별 제한을 따름",
+    "status": "캐시 점수 개입 완료"
+  },
+  {
+    "experiment_id": "E045",
+    "title": "LayerNorm 전후 특징·평균·표준편차를 읽는 내부 분류기",
+    "primary_theme": 4,
+    "primary_theme_title": "코사인 유사도 외에 벡터의 norm도 중요한 정보인지에 대한 연구",
+    "secondary_themes": [
+      1,
+      5
+    ],
+    "role": "평가자료 내부 교차검증—학습자료에서 새 출처로의 전이와 구별",
+    "status": "추가 분류기·내부 교차검증 완료"
+  },
+  {
+    "experiment_id": "E046",
+    "title": "정상 기준 밖의 방향 군집과 출처·코덱·길이의 연관",
+    "primary_theme": 5,
+    "primary_theme_title": "잔여 방향에 대한 연구",
+    "secondary_themes": [
+      3
+    ],
+    "role": "완료된 입력·표현·점수 분석—해석은 실험별 제한을 따름",
+    "status": "캐시 군집 분석 완료"
+  },
+  {
+    "experiment_id": "E047",
+    "title": "좌표 선택의 전체 169조건과 회전 좌표계 대조",
+    "primary_theme": 5,
+    "primary_theme_title": "잔여 방향에 대한 연구",
+    "secondary_themes": [],
+    "role": "완료된 입력·표현·점수 분석—해석은 실험별 제한을 따름",
+    "status": "캐시 점수 개입 완료"
+  },
+  {
+    "experiment_id": "E048",
+    "title": "같은 화자·코덱·점수·크기의 정상/위조 방향 분포 매칭",
+    "primary_theme": 5,
+    "primary_theme_title": "잔여 방향에 대한 연구",
+    "secondary_themes": [
+      3
+    ],
+    "role": "같은 출발 조건의 비교 가능성 점검—표본 부족 제한 포함",
+    "status": "계산 완료·표본 부족으로 주가 설 판정 불가"
+  },
+  {
+    "experiment_id": "E049",
+    "title": "학습 정상 공분산으로 거리 방향을 바꾸되 정상 기준 벡터는 고정",
+    "primary_theme": 5,
+    "primary_theme_title": "잔여 방향에 대한 연구",
+    "secondary_themes": [
+      4
+    ],
+    "role": "완료된 입력·표현·점수 분석—해석은 실험별 제한을 따름",
+    "status": "캐시거리 평가 완료"
+  },
+  {
+    "experiment_id": "E050",
+    "title": "방향 벡터 전체의 조건별 분산과 길이·패딩 연관",
+    "primary_theme": 5,
+    "primary_theme_title": "잔여 방향에 대한 연구",
+    "secondary_themes": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "role": "완료된 입력·표현·점수 분석—해석은 실험별 제한을 따름",
+    "status": "캐시 통계 완료"
+  },
+  {
+    "experiment_id": "E051",
+    "title": "같은 정상 기준 각도에서 손실이 구별하지 않는 방향의 수학 검사",
+    "primary_theme": 5,
+    "primary_theme_title": "잔여 방향에 대한 연구",
+    "secondary_themes": [
+      3,
+      4
+    ],
+    "role": "수학적 손실 불변성 확인—새 손실의 성능 효과 아님",
+    "status": "합성 수치·미분 검사 완료"
+  },
+  {
+    "experiment_id": "E052",
+    "title": "고정 특징 위에서 정적·입력별 좌표 가중치와 같은 크기 신경망 학습",
+    "primary_theme": 5,
+    "primary_theme_title": "잔여 방향에 대한 연구",
+    "secondary_themes": [
+      3,
+      4
+    ],
+    "role": "완료된 입력·표현·점수 분석—해석은 실험별 제한을 따름",
+    "status": "추가 모듈 학습·전이 평가 완료"
+  },
+  {
+    "experiment_id": "E053",
+    "title": "정상·위조 라벨로 대각 거리 가중치만 학습하는 대조",
+    "primary_theme": 5,
+    "primary_theme_title": "잔여 방향에 대한 연구",
+    "secondary_themes": [
+      3,
+      4
+    ],
+    "role": "완료된 입력·표현·점수 분석—해석은 실험별 제한을 따름",
+    "status": "추가 모듈 학습·전이 평가 완료"
+  },
+  {
+    "experiment_id": "E054",
+    "title": "원래 점수에 단조인 기본 식과 방향/잡음 잔차의 학습 자료 →평가 전이",
+    "primary_theme": 5,
+    "primary_theme_title": "잔여 방향에 대한 연구",
+    "secondary_themes": [
+      4
+    ],
+    "role": "완료된 입력·표현·점수 분석—해석은 실험별 제한을 따름",
+    "status": "추가 분류기 학습·전이 평가 완료"
+  },
+  {
+    "experiment_id": "E055",
+    "title": "두 평가 자료 내부의 방향·정규화 전 특징·같은 차원 잡음 대조 9 종",
+    "primary_theme": 5,
+    "primary_theme_title": "잔여 방향에 대한 연구",
+    "secondary_themes": [
+      3,
+      4
+    ],
+    "role": "평가자료 내부 교차검증—학습자료에서 새 출처로의 전이와 구별",
+    "status": "추가 분류기·내부 교차검증 완료"
+  },
+  {
+    "experiment_id": "E056",
+    "title": "개발에서 고른 고정 후처리를 전체 자료로 확장 평가",
+    "primary_theme": 5,
+    "primary_theme_title": "잔여 방향에 대한 연구",
+    "secondary_themes": [],
+    "role": "완료된 입력·표현·점수 분석—해석은 실험별 제한을 따름",
+    "status": "추출·적용 평가 완료"
+  },
+  {
+    "experiment_id": "E057",
+    "title": "기존 모델의 층 가중치·최종 시간 가중치를 균등하게 바꾸는 개입",
+    "primary_theme": 5,
+    "primary_theme_title": "잔여 방향에 대한 연구",
+    "secondary_themes": [
+      4
+    ],
+    "role": "완료된 입력·표현·점수 분석—해석은 실험별 제한을 따름",
+    "status": "실제 추론 완료"
+  },
+  {
+    "experiment_id": "E058",
+    "title": "같은 음성의 백색잡음 20/10dB와 Opus32kbps 재압축 개입",
+    "primary_theme": 5,
+    "primary_theme_title": "잔여 방향에 대한 연구",
+    "secondary_themes": [
+      4
+    ],
+    "role": "완료된 입력·표현·점수 분석—해석은 실험별 제한을 따름",
+    "status": "실제 추론·전처리 검수 완료"
+  },
+  {
+    "experiment_id": "E059",
+    "title": "기존 OC gradient·방향 정규화·정규화 전 특징 복원·변형 반응의 네 후속 분석",
+    "primary_theme": 4,
+    "primary_theme_title": "코사인 유사도 외에 벡터의 norm도 중요한 정보인지에 대한 연구",
+    "secondary_themes": [
+      1,
+      3,
+      5
+    ],
+    "role": "벡터 크기·정규화 전 통계·방향×스케일의 정보 진단",
+    "status": "캐시 계산·검산 완료"
+  },
+  {
+    "experiment_id": "E060",
+    "title": "정상 점수와 위조 점수의 데이터셋을 따로 교체하는 교차 평가",
+    "primary_theme": 3,
+    "primary_theme_title": "스푸프의 다양성보다 정상의 다양성이 EER에 더 영향을 끼친다는 가설에 대한 연구",
+    "secondary_themes": [
+      1,
+      5
+    ],
+    "role": "정상 일반화·지지 범위에 관한 진단—학습 다양성의 독립 개입 아님",
+    "status": "캐시교차 평가·재현 완료"
+  },
+  {
+    "experiment_id": "E061",
+    "title": "정상 음성의 출처 차이가 코덱·반복 없는 부분에서도 남는 지 조사",
+    "primary_theme": 3,
+    "primary_theme_title": "스푸프의 다양성보다 정상의 다양성이 EER에 더 영향을 끼친다는 가설에 대한 연구",
+    "secondary_themes": [
+      1,
+      5
+    ],
+    "role": "정상 일반화·지지 범위에 관한 진단—학습 다양성의 독립 개입 아님",
+    "status": "기존 특징·점수 분석 완료"
+  },
+  {
+    "experiment_id": "E062",
+    "title": "정상 도메인 오류와 연결되는 실제 음향 특성 48개 측정",
+    "primary_theme": 3,
+    "primary_theme_title": "스푸프의 다양성보다 정상의 다양성이 EER에 더 영향을 끼친다는 가설에 대한 연구",
+    "secondary_themes": [],
+    "role": "정상 일반화·지지 범위에 관한 진단—학습 다양성의 독립 개입 아님",
+    "status": "서버 원음 측정 완료"
+  },
+  {
+    "experiment_id": "E063",
+    "title": "출처·길이를 통제한 음향 특징 블록별 정상 오류 예측",
+    "primary_theme": 3,
+    "primary_theme_title": "스푸프의 다양성보다 정상의 다양성이 EER에 더 영향을 끼친다는 가설에 대한 연구",
+    "secondary_themes": [],
+    "role": "정상 일반화·지지 범위에 관한 진단—학습 다양성의 독립 개입 아님",
+    "status": "추가 진단 분류기 교차검증 완료"
+  },
+  {
+    "experiment_id": "E064",
+    "title": "정상 예시를 더 잘 대표하는 중심·이동·정규화 점수 7 종",
+    "primary_theme": 3,
+    "primary_theme_title": "스푸프의 다양성보다 정상의 다양성이 EER에 더 영향을 끼친다는 가설에 대한 연구",
+    "secondary_themes": [
+      5
+    ],
+    "role": "정상 일반화·지지 범위에 관한 진단—학습 다양성의 독립 개입 아님",
+    "status": "정상만 이용한 기준 추정·평가 완료"
+  },
+  {
+    "experiment_id": "E065",
+    "title": "틀린 정상 특징이 학습 위조 또는 평가 정상의 어디에 가까운지 조사",
+    "primary_theme": 3,
+    "primary_theme_title": "스푸프의 다양성보다 정상의 다양성이 EER에 더 영향을 끼친다는 가설에 대한 연구",
+    "secondary_themes": [
+      5
+    ],
+    "role": "정상 일반화·지지 범위에 관한 진단—학습 다양성의 독립 개입 아님",
+    "status": "최근접 참조 분석 완료"
+  },
+  {
+    "experiment_id": "E066",
+    "title": "DF 자체 EER 부근 오류 꼬리와 길이·최근접·음향 특성 재검토",
+    "primary_theme": 3,
+    "primary_theme_title": "스푸프의 다양성보다 정상의 다양성이 EER에 더 영향을 끼친다는 가설에 대한 연구",
+    "secondary_themes": [
+      1
+    ],
+    "role": "정상 일반화·지지 범위에 관한 진단—학습 다양성의 독립 개입 아님",
+    "status": "기존 점수·특징 재분석 완료"
+  },
+  {
+    "experiment_id": "E067",
+    "title": "원음 길이별 정상 평균 기준과 점수 보정·무작위 중심 대조",
+    "primary_theme": 1,
+    "primary_theme_title": "음성의 길이에 대한 편향을 줄이는 연구",
+    "secondary_themes": [
+      2,
+      3,
+      5
+    ],
+    "role": "완료된 입력·표현·점수 분석—해석은 실험별 제한을 따름",
+    "status": "캐시 점수 평가·독립 검산 완료"
+  },
+  {
+    "experiment_id": "E068",
+    "title": "위조 특징의 주축과 두 위조 사이 연속 경로의 정상 최근접 진입",
+    "primary_theme": 5,
+    "primary_theme_title": "잔여 방향에 대한 연구",
+    "secondary_themes": [
+      3
+    ],
+    "role": "고차원 경로·밀도 분석—실제 음성 생성의 인과 실험 아님",
+    "status": "기하 분석·연속 검산 완료"
+  },
+  {
+    "experiment_id": "E069",
+    "title": "위조 연결 경로 주변의 정상·위조 밀도와 빈 구간",
+    "primary_theme": 5,
+    "primary_theme_title": "잔여 방향에 대한 연구",
+    "secondary_themes": [
+      3
+    ],
+    "role": "고차원 경로·밀도 분석—실제 음성 생성의 인과 실험 아님",
+    "status": "기하 밀도 분석 완료"
+  },
+  {
+    "experiment_id": "E070",
+    "title": "같은 변형 전 점수 표본의 전체 가능 매칭과 이미 저장된 변형 반응의 범위",
+    "primary_theme": 5,
+    "primary_theme_title": "잔여 방향에 대한 연구",
+    "secondary_themes": [],
+    "role": "같은 출발 조건의 비교 가능성 점검—표본 부족 제한 포함",
+    "status": "기존캐시매칭·산술 검증 완료"
+  },
+  {
+    "experiment_id": "E071",
+    "title": "출처별 같은 원음의 순환 반복·반사채움·비반복과 긴 원음 절단 대조",
+    "primary_theme": 2,
+    "primary_theme_title": "반복이 학습에 안 좋은 영향을 끼친다는 가설에 대한 연구",
+    "secondary_themes": [
+      1,
+      5
+    ],
+    "role": "완료된 입력·표현·점수 분석—해석은 실험별 제한을 따름",
+    "status": "실제 추론·독립 검수 완료"
+  },
+  {
+    "experiment_id": "E072",
+    "title": "특징 복제의 표준편차 배율과 평균·표준편차 경로 교체",
+    "primary_theme": 2,
+    "primary_theme_title": "반복이 학습에 안 좋은 영향을 끼친다는 가설에 대한 연구",
+    "secondary_themes": [
+      1,
+      4,
+      5
+    ],
+    "role": "완료된 입력·표현·점수 분석—해석은 실험별 제한을 따름",
+    "status": "실제 내부 개입·수학 검수 완료"
+  },
+  {
+    "experiment_id": "E073",
+    "title": "파형을 먼저 반복하는 경우와 추출한 특징을 뒤에서 반복하는 경우의 8조건",
+    "primary_theme": 2,
+    "primary_theme_title": "반복이 학습에 안 좋은 영향을 끼친다는 가설에 대한 연구",
+    "secondary_themes": [
+      1,
+      5
+    ],
+    "role": "완료된 입력·표현·점수 분석—해석은 실험별 제한을 따름",
+    "status": "실제 내부 개입·검산 완료"
+  },
+  {
+    "experiment_id": "E074",
+    "title": "틀린 정상의 옆 방향이 학습 정상 주축에 집중되는지 분석",
+    "primary_theme": 5,
+    "primary_theme_title": "잔여 방향에 대한 연구",
+    "secondary_themes": [
+      3,
+      4
+    ],
+    "role": "완료된 입력·표현·점수 분석—해석은 실험별 제한을 따름",
+    "status": "기존캐시 통계·독립 검수 완료"
+  },
+  {
+    "experiment_id": "E075",
+    "title": "학습 정상이 드물게 차지하는 방향 축부터 통째로 제거",
+    "primary_theme": 5,
+    "primary_theme_title": "잔여 방향에 대한 연구",
+    "secondary_themes": [
+      1,
+      3,
+      4
+    ],
+    "role": "고정 특징의 방향 삭제 개입—재학습 성능과 구별",
+    "status": "기존캐시 점수개입·독립 검수 완료"
+  },
+  {
+    "experiment_id": "E076",
+    "title": "저점유 방향 제거 152~158개를 한 축씩 늘리는 정밀 비교",
+    "primary_theme": 5,
+    "primary_theme_title": "잔여 방향에 대한 연구",
+    "secondary_themes": [
+      1,
+      3,
+      4
+    ],
+    "role": "고정 특징의 방향 삭제 개입—재학습 성능과 구별",
+    "status": "기존캐시 점수개입·독립 검수 완료"
+  },
+  {
+    "experiment_id": "E077",
+    "title": "공개 예시 음성 네 개의 비음성 구간·0 값·파형 측정",
+    "primary_theme": 1,
+    "primary_theme_title": "음성의 길이에 대한 편향을 줄이는 연구",
+    "secondary_themes": [],
+    "role": "예시 또는 표현 분포의 기술—인과·모집단 성능 검정 아님",
+    "status": "예시 측정 완료·모집단 실험 아님"
+  },
+  {
+    "experiment_id": "E078",
+    "title": "화자 별다른 정상 발화 정렬과 같은 원음의 보수적 길이 일관성 결합 안",
+    "primary_theme": 1,
+    "primary_theme_title": "음성의 길이에 대한 편향을 줄이는 연구",
+    "secondary_themes": [
+      3,
+      5
+    ],
+    "role": "미실행 설계—결과로 사용하지 않음",
+    "status": "설계·메타데이터 가능성 점검만; 학습 미실행"
+  },
+  {
+    "experiment_id": "E079",
+    "title": "원음 길이에 따라 5초/4초 또는 4초/3초를 정렬하는 보류 안",
+    "primary_theme": 1,
+    "primary_theme_title": "음성의 길이에 대한 편향을 줄이는 연구",
+    "secondary_themes": [
+      5
+    ],
+    "role": "미실행 설계—결과로 사용하지 않음",
+    "status": "코드 초안·CPU 검사만; 실행 보류"
+  },
+  {
+    "experiment_id": "E080",
+    "title": "4초·3초·2초 삼중 조합과 추가 학습 아이디어의 미실행 설계",
+    "primary_theme": 1,
+    "primary_theme_title": "음성의 길이에 대한 편향을 줄이는 연구",
+    "secondary_themes": [
+      5
+    ],
+    "role": "미실행 설계—결과로 사용하지 않음",
+    "status": "설계만; 성능 실험 미실행"
+  },
+  {
+    "experiment_id": "E081",
+    "title": "네 모델·전체 체크포인트의 반복/비반복 공통 평가 준비와 실행 전 취소",
+    "primary_theme": 2,
+    "primary_theme_title": "반복이 학습에 안 좋은 영향을 끼친다는 가설에 대한 연구",
+    "secondary_themes": [
+      1
+    ],
+    "role": "실행 전 취소된 추가 평가—점수 없음",
+    "status": "검사·분석 재현만 완료; 추가 GPU 평가 취소"
+  },
+  {
+    "experiment_id": "E082",
+    "title": "2019 LA 학습 음성의 XLS-R 마지막 층 전체 특징 직접 저장",
+    "primary_theme": 5,
+    "primary_theme_title": "잔여 방향에 대한 연구",
+    "secondary_themes": [],
+    "role": "구현·특징 자료·저장 검증—가설 지지의 독립 성능 결과 아님",
+    "status": "실제 추출·수신 완료"
+  },
+  {
+    "experiment_id": "E083",
+    "title": "원래 160차원 관계를 보존하거나 왜곡을 밝힌 2차원·구면 시각화",
+    "primary_theme": 5,
+    "primary_theme_title": "잔여 방향에 대한 연구",
+    "secondary_themes": [],
+    "role": "예시 또는 표현 분포의 기술—인과·모집단 성능 검정 아님",
+    "status": "보조 기하 분석·그림 검증"
+  },
+  {
+    "experiment_id": "E084",
+    "title": "학습·분산 기울기·저장·worker 오류의 실행 전 통합 검증",
+    "primary_theme": 1,
+    "primary_theme_title": "음성의 길이에 대한 편향을 줄이는 연구",
+    "secondary_themes": [
+      2
+    ],
+    "role": "구현·특징 자료·저장 검증—가설 지지의 독립 성능 결과 아님",
+    "status": "여러 버전의 구현 검증 완료"
+  },
+  {
+    "experiment_id": "E085",
+    "title": "기존 변형 결과에서 정상 안정성과 위조의 정상 방향 이동을 따로 검토",
+    "primary_theme": 5,
+    "primary_theme_title": "잔여 방향에 대한 연구",
+    "secondary_themes": [
+      3
+    ],
+    "role": "완료된 입력·표현·점수 분석—해석은 실험별 제한을 따름",
+    "status": "기존 반응 점수의 탐색적 재분석 완료"
+  },
+  {
+    "experiment_id": "E086",
+    "title": "이전 80epoch 모델의 정상 기준 각도와 160차원 분포",
+    "primary_theme": 3,
+    "primary_theme_title": "스푸프의 다양성보다 정상의 다양성이 EER에 더 영향을 끼친다는 가설에 대한 연구",
+    "secondary_themes": [
+      5
+    ],
+    "role": "예시 또는 표현 분포의 기술—인과·모집단 성능 검정 아님",
+    "status": "기존 실제 결과 확인·문서화 완료"
+  },
+  {
+    "experiment_id": "E087",
+    "title": "특징 추출 단계별 분리와 같은 원음의 긴·짧은 특징 비교",
+    "primary_theme": 5,
+    "primary_theme_title": "잔여 방향에 대한 연구",
+    "secondary_themes": [
+      3,
+      4
+    ],
+    "role": "완료된 입력·표현·점수 분석—해석은 실험별 제한을 따름",
+    "status": "기존 실제 결과 확인·문서화 완료"
+  },
+  {
+    "experiment_id": "E088",
+    "title": "동일 음성의 다섯 시간 위치·두 길이 절단 평가",
+    "primary_theme": 1,
+    "primary_theme_title": "음성의 길이에 대한 편향을 줄이는 연구",
+    "secondary_themes": [
+      2
+    ],
+    "role": "완료된 입력·표현·점수 분석—해석은 실험별 제한을 따름",
+    "status": "기존 실제 결과 확인·문서화 완료"
+  },
+  {
+    "experiment_id": "E089",
+    "title": "정상 특징으로 여러 평균 기준 벡터를 만든 초기 실험",
+    "primary_theme": 3,
+    "primary_theme_title": "스푸프의 다양성보다 정상의 다양성이 EER에 더 영향을 끼친다는 가설에 대한 연구",
+    "secondary_themes": [
+      5
+    ],
+    "role": "정상 일반화·지지 범위에 관한 진단—학습 다양성의 독립 개입 아님",
+    "status": "기존 실제 결과 확인·문서화 완료"
+  },
+  {
+    "experiment_id": "E090",
+    "title": "낮은 정상 점수 꼬리의 출처·코덱·길이·음향·화자 진단",
+    "primary_theme": 3,
+    "primary_theme_title": "스푸프의 다양성보다 정상의 다양성이 EER에 더 영향을 끼친다는 가설에 대한 연구",
+    "secondary_themes": [
+      1,
+      5
+    ],
+    "role": "정상 일반화·지지 범위에 관한 진단—학습 다양성의 독립 개입 아님",
+    "status": "기존 실제 결과 확인·문서화 완료"
+  },
+  {
+    "experiment_id": "E091",
+    "title": "파형 크기·반복·0 채움·반사·가장자리 절단의 초기 교차 개입",
+    "primary_theme": 2,
+    "primary_theme_title": "반복이 학습에 안 좋은 영향을 끼친다는 가설에 대한 연구",
+    "secondary_themes": [],
+    "role": "완료된 입력·표현·점수 분석—해석은 실험별 제한을 따름",
+    "status": "기존 실제 결과 확인·문서화 완료"
+  },
+  {
+    "experiment_id": "E092",
+    "title": "저에너지 가장자리 제거 후 반복·0 채움 위치를 달리한 대조",
+    "primary_theme": 2,
+    "primary_theme_title": "반복이 학습에 안 좋은 영향을 끼친다는 가설에 대한 연구",
+    "secondary_themes": [],
+    "role": "완료된 입력·표현·점수 분석—해석은 실험별 제한을 따름",
+    "status": "기존 실제 결과 확인·문서화 완료"
+  },
+  {
+    "experiment_id": "E093",
+    "title": "학습 원음의 저에너지·음량 분포와 클래스 단서의 초기 조사",
+    "primary_theme": 1,
+    "primary_theme_title": "음성의 길이에 대한 편향을 줄이는 연구",
+    "secondary_themes": [
+      2,
+      3
+    ],
+    "role": "완료된 입력·표현·점수 분석—해석은 실험별 제한을 따름",
+    "status": "기존 실제 결과 확인·문서화 완료"
+  },
+  {
+    "experiment_id": "E094",
+    "title": "저에너지 구간의 길이·에너지를 유지한 미세 파형 구조 개입",
+    "primary_theme": 1,
+    "primary_theme_title": "음성의 길이에 대한 편향을 줄이는 연구",
+    "secondary_themes": [
+      2,
+      3,
+      5
+    ],
+    "role": "완료된 입력·표현·점수 분석—해석은 실험별 제한을 따름",
+    "status": "기존 실제 결과 확인·문서화 완료"
+  },
+  {
+    "experiment_id": "E095",
+    "title": "이전 모델에서 특징 복제와 통계 요약의 길이 배율을 분리",
+    "primary_theme": 2,
+    "primary_theme_title": "반복이 학습에 안 좋은 영향을 끼친다는 가설에 대한 연구",
+    "secondary_themes": [
+      1,
+      4,
+      5
+    ],
+    "role": "완료된 입력·표현·점수 분석—해석은 실험별 제한을 따름",
+    "status": "기존 실제 결과 확인·문서화 완료"
+  },
+  {
+    "experiment_id": "E096",
+    "title": "단순 길이·저에너지·에너지·스펙트럼 단서를 읽는 분류기의 전이",
+    "primary_theme": 3,
+    "primary_theme_title": "스푸프의 다양성보다 정상의 다양성이 EER에 더 영향을 끼친다는 가설에 대한 연구",
+    "secondary_themes": [
+      1
+    ],
+    "role": "정상 일반화·지지 범위에 관한 진단—학습 다양성의 독립 개입 아님",
+    "status": "기존 실제 결과 확인·문서화 완료"
+  },
+  {
+    "experiment_id": "E097",
+    "title": "같은 본문·총길이·에너지에서 앞뒤 저에너지 배치만 바꾼 실험",
+    "primary_theme": 1,
+    "primary_theme_title": "음성의 길이에 대한 편향을 줄이는 연구",
+    "secondary_themes": [
+      2,
+      3,
+      5
+    ],
+    "role": "길이·위치·저에너지 정의를 분리한 개입 또는 관찰 대조",
+    "status": "기존 실제 결과 확인·문서화 완료"
+  },
+  {
+    "experiment_id": "E098",
+    "title": "저에너지 파형의 에너지·스펙트럼·위치 요인과 진폭 용량 비교",
+    "primary_theme": 1,
+    "primary_theme_title": "음성의 길이에 대한 편향을 줄이는 연구",
+    "secondary_themes": [
+      2,
+      5
+    ],
+    "role": "길이·위치·저에너지 정의를 분리한 개입 또는 관찰 대조",
+    "status": "기존 실제 결과 확인·문서화 완료"
+  },
+  {
+    "experiment_id": "E099",
+    "title": "다른 출처·라벨의 저에너지 프레임을 이식한 실험",
+    "primary_theme": 3,
+    "primary_theme_title": "스푸프의 다양성보다 정상의 다양성이 EER에 더 영향을 끼친다는 가설에 대한 연구",
+    "secondary_themes": [
+      5
+    ],
+    "role": "정상 일반화·지지 범위에 관한 진단—학습 다양성의 독립 개입 아님",
+    "status": "기존 실제 결과 확인·문서화 완료"
+  },
+  {
+    "experiment_id": "E100",
+    "title": "원음 전체를 보존하고 앞 또는 뒤에만 저에너지를 추가한 엄격 대조",
+    "primary_theme": 1,
+    "primary_theme_title": "음성의 길이에 대한 편향을 줄이는 연구",
+    "secondary_themes": [
+      2,
+      3,
+      5
+    ],
+    "role": "길이·위치·저에너지 정의를 분리한 개입 또는 관찰 대조",
+    "status": "기존 실제 결과 확인·문서화 완료"
+  },
+  {
+    "experiment_id": "E101",
+    "title": "엄격 원음 추가 실험의 고정 평가 입력·반복 재현·경험적 정상 기준 대조",
+    "primary_theme": 1,
+    "primary_theme_title": "음성의 길이에 대한 편향을 줄이는 연구",
+    "secondary_themes": [
+      2,
+      5
+    ],
+    "role": "길이·위치·저에너지 정의를 분리한 개입 또는 관찰 대조",
+    "status": "기존 실제 결과 확인·문서화 완료"
+  },
+  {
+    "experiment_id": "E102",
+    "title": "ASVspoof 출처만 남긴 자연 길이·자체 파형·제공자 효과 재검토",
+    "primary_theme": 1,
+    "primary_theme_title": "음성의 길이에 대한 편향을 줄이는 연구",
+    "secondary_themes": [
+      2,
+      5
+    ],
+    "role": "길이·위치·저에너지 정의를 분리한 개입 또는 관찰 대조",
+    "status": "기존 실제 결과 확인·문서화 완료"
+  },
+  {
+    "experiment_id": "E103",
+    "title": "자연적인 앞 저에너지 길이를 읽는 특징 방향: −40dB 정의",
+    "primary_theme": 1,
+    "primary_theme_title": "음성의 길이에 대한 편향을 줄이는 연구",
+    "secondary_themes": [
+      3,
+      4,
+      5
+    ],
+    "role": "길이·위치·저에너지 정의를 분리한 개입 또는 관찰 대조",
+    "status": "기존 실제 결과 확인·문서화 완료"
+  },
+  {
+    "experiment_id": "E104",
+    "title": "자연적인 앞 저에너지 길이를 읽는 특징 방향: −20dB와 안정성",
+    "primary_theme": 1,
+    "primary_theme_title": "음성의 길이에 대한 편향을 줄이는 연구",
+    "secondary_themes": [
+      3,
+      4,
+      5
+    ],
+    "role": "길이·위치·저에너지 정의를 분리한 개입 또는 관찰 대조",
+    "status": "기존 실제 결과 확인·문서화 완료"
+  },
+  {
+    "experiment_id": "E105",
+    "title": "앞 저에너지의 존재·지속 길이 규칙과 모델 점수의 관계",
+    "primary_theme": 1,
+    "primary_theme_title": "음성의 길이에 대한 편향을 줄이는 연구",
+    "secondary_themes": [
+      2,
+      3
+    ],
+    "role": "길이·위치·저에너지 정의를 분리한 개입 또는 관찰 대조",
+    "status": "기존 실제 결과 확인·문서화 완료"
+  },
+  {
+    "experiment_id": "E106",
+    "title": "앞 저에너지 100ms 이하·500ms 이상인 자연 표본의 양 클래스 평가",
+    "primary_theme": 1,
+    "primary_theme_title": "음성의 길이에 대한 편향을 줄이는 연구",
+    "secondary_themes": [
+      2,
+      3
+    ],
+    "role": "길이·위치·저에너지 정의를 분리한 개입 또는 관찰 대조",
+    "status": "기존 실제 결과 확인·문서화 완료"
+  },
+  {
+    "experiment_id": "E107",
+    "title": "고정 BPL 학습 모델의 실제 증강 쌍·저에너지 이식 반응 검토",
+    "primary_theme": 3,
+    "primary_theme_title": "스푸프의 다양성보다 정상의 다양성이 EER에 더 영향을 끼친다는 가설에 대한 연구",
+    "secondary_themes": [
+      1,
+      2,
+      5
+    ],
+    "role": "정상 일반화·지지 범위에 관한 진단—학습 다양성의 독립 개입 아님",
+    "status": "기존 실제 결과 확인·문서화 완료"
+  },
+  {
+    "experiment_id": "E108",
+    "title": "저에너지 시간 위치와 나머지 XLS-R 특징을 교체·제외한 내부 개입",
+    "primary_theme": 5,
+    "primary_theme_title": "잔여 방향에 대한 연구",
+    "secondary_themes": [
+      2,
+      3,
+      4
+    ],
+    "role": "완료된 입력·표현·점수 분석—해석은 실험별 제한을 따름",
+    "status": "기존 실제 결과 확인·문서화 완료"
+  },
+  {
+    "experiment_id": "E109",
+    "title": "같은 저에너지 내부 개입을 다섯 저장 모델에 반복한 대조",
+    "primary_theme": 2,
+    "primary_theme_title": "반복이 학습에 안 좋은 영향을 끼친다는 가설에 대한 연구",
+    "secondary_themes": [
+      3,
+      5
+    ],
+    "role": "완료된 입력·표현·점수 분석—해석은 실험별 제한을 따름",
+    "status": "기존 실제 결과 확인·문서화 완료"
+  },
+  {
+    "experiment_id": "E110",
+    "title": "원음 전체와 실제 긴·짧은 증강 입력의 저에너지 위치 분포 전수 조사",
+    "primary_theme": 1,
+    "primary_theme_title": "음성의 길이에 대한 편향을 줄이는 연구",
+    "secondary_themes": [
+      2,
+      3
+    ],
+    "role": "길이·위치·저에너지 정의를 분리한 개입 또는 관찰 대조",
+    "status": "기존 실제 결과 확인·문서화 완료"
+  }
+]

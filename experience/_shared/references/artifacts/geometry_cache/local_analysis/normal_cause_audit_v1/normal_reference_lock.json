@@ -1,0 +1,16 @@
+{
+  "methods": [
+    "native",
+    "T_three_prototypes",
+    "DF_one_global_normal_center",
+    "DF_source_normal_center",
+    "DF_source_translation",
+    "DF_source_normal_score_standardization",
+    "DF_three_normal_prototypes"
+  ],
+  "selection": false,
+  "fit_uses_only_normal_labels": true,
+  "folds": "identical saved DF 5-fold source x speaker folds",
+  "source_aware_methods_require_source_metadata": true,
+  "explanation": "Test sufficiency of normal-reference coverage, source mean shift, and normal scalar calibration. Not a causal test of acoustic recording origin."
+}

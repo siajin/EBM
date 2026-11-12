@@ -1,0 +1,55 @@
+{
+  "version": "cache-hypotheses-fast-v2",
+  "registered_KST": "2026-11-06T12:42:19.305969+09:00",
+  "checkpoint": "104873703a57cad98b686d770e0860e031a2cf9abef79b72668780c1660e0b24",
+  "datasets": [
+    "T",
+    "V",
+    "DF_pilot",
+    "21LA_pilot"
+  ],
+  "conditions": [
+    "R2-00",
+    "R3-noise20",
+    "R3-noise10",
+    "R3-Opus32k_recompression"
+  ],
+  "readout_variants": [
+    "scalar",
+    "direction_linear",
+    "direction_mlp",
+    "direction_h"
+  ],
+  "seeds": [
+    101,
+    102,
+    103
+  ],
+  "bootstrap_draws": 2000,
+  "bootstrap_seed": 20261106,
+  "new_detector_or_head_fits": 0,
+  "new_audio_forwards": 0,
+  "CV4_excluded": true,
+  "H3": "Class-balanced loss and gradients at clean cached vectors; gradients of existing heads; OC azimuth invariance.",
+  "H4": "Fixed radius bins; log chord versus log native radius and log full-vector change with class/source strata; speaker-cluster intervals.",
+  "H5": "Recover fixed LayerNorm affine coefficients from T cache only; verify reconstruction on V and both pilots; decompose saved h readouts without refitting.",
+  "H1": "Saved native-trained held-out-speaker scalar/direction probes applied to existing paired perturbation caches; compare advantage retention.",
+  "radius_bin_edges": [
+    0,
+    0.05,
+    0.1,
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1.000001
+  ],
+  "confidence_scope": "Exploratory individual 95% intervals, conditional on saved fits; no multiple-comparison or refit uncertainty claim.",
+  "limitations": [
+    "Existing DF5x3 source-class coverage limitation retained.",
+    "DF/LA shared speakers and unresolved source families.",
+    "No gain from a new loss, new gate, or nuisance-removal model is tested.",
+    "Fixed-layer coefficient recovery is a numerical identity measurement, not a supervised classifier fit.",
+    "Large residual-angle change can be geometric amplification without float precision error."
+  ]
+}

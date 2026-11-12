@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "rank": 0,
+  "GPU": "NVIDIA TITAN RTX",
+  "worst_case_physical_microbatch": 8,
+  "logical_batch": 120,
+  "bonafide": 12,
+  "spoof": 108,
+  "full_BPL_pairs": 144,
+  "stats": {
+    "oc_long": 10.208285331726074,
+    "oc_short": 9.623183250427246,
+    "bpl": 2.1930418014526367,
+    "padding": 0.0,
+    "active_pairs": 0,
+    "loss1": 12.401327133178711,
+    "loss2": 100.03008651733398
+  },
+  "two_Adam_updates_verified": true,
+  "frozen_frontend_unchanged": true,
+  "mask_solo_batch_embedding_max_error": 1.430511474609375e-06,
+  "peak_allocated_MiB": 3268.55419921875,
+  "peak_reserved_MiB": 5016.0,
+  "frontend_commit": "1a640f32ac3e39899438a2931f9924c02f080a54",
+  "torch_version": "2.6.0+cu124"
+}

@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "rows": 71237,
+  "bonafide": 7355,
+  "spoof": 63882,
+  "eer_percent": 2.4373062834601296,
+  "epoch": 5,
+  "independent_EER_error_pp": 0.0,
+  "scores_sha256": "cd6af62b0b31cea5fb78c007f755f2ae5aab4b912a3326fbc184179d4417967c",
+  "scope": "completed current19LA stage only; no new inference; training unchanged"
+}

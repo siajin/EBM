@@ -1,0 +1,22 @@
+[
+  {
+    "file": "bonafide_p226_247.wav",
+    "url": "https://nii-yamagishilab.github.io/samples-xin/samples-asvspoof2019/sample-human/p226_247.wav",
+    "sha256": "e736cc64e59e927a19c60520e1abac5f138590611d3cced18cb906861e956f65"
+  },
+  {
+    "file": "tts_A16_p226_c0022.wav",
+    "url": "https://nii-yamagishilab.github.io/samples-xin/samples-asvspoof2019/sample-US_1_R/p226_c0022.wav",
+    "sha256": "6f4130c4564b63289b39aae14ddc6578ef65d392444a302b57bf539c922d09b1"
+  },
+  {
+    "file": "vc_A19_p226_p281_394.wav",
+    "url": "https://nii-yamagishilab.github.io/samples-xin/samples-asvspoof2019/sample-VC_5/p226_p281_394.wav",
+    "sha256": "213047dc5c94a74e6511904c19f12bd46210dc7322c55c947f1378665c65788a"
+  },
+  {
+    "file": "bonafide_source_p281_394.wav",
+    "url": "https://nii-yamagishilab.github.io/samples-xin/samples-asvspoof2019/sample-human/p281_394.wav",
+    "sha256": "ac93f3daf71a8c03be10337ee5735257dc81d772c94b88f22ee92735f0e1889c"
+  }
+]

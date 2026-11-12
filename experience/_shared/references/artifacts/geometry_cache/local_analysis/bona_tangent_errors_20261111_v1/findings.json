@@ -1,0 +1,19 @@
+{
+  "status": "complete_and_independently_checked",
+  "question": "Do erroneous bona fide utterances concentrate along particular residual directions?",
+  "scope": "Existing local batch160 fixed-epoch50 embeddings, checkpoint 104873703a57cad98b686d770e0860e031a2cf9abef79b72668780c1660e0b24. Not current short32 batch240, legacy240, or B50.",
+  "answer": "Yes for the severe DF bona fide errors, especially along Train PC1; not a universal pattern across benchmarks. 21LA error normals are not more concentrated in the Train dominant subspace.",
+  "method": "Train-only centered residual covariance; primary top-8 basis; per-utterance projected energy divided by residual energy; primary threshold 0.5093649528766109 chosen on V only. No fitted classifier or model updates.",
+  "full_eval_summary": [
+    {"dataset": "DF", "bona_n": 14869, "error_n": 2955, "PC1_share_error_percent": 65.235425, "PC1_share_accepted_percent": 18.048595, "top8_share_error_percent": 76.409797, "top8_share_accepted_percent": 65.981943, "adjusted_top8_difference_pp": 5.018603, "speaker_cluster_CI95_pp": [2.290253, 7.487976], "adjusted_error_coverage_percent": 98.477157},
+    {"dataset": "21LA", "bona_n": 14816, "error_n": 246, "PC1_share_error_percent": 10.843480, "PC1_share_accepted_percent": 9.723496, "top8_share_error_percent": 55.527727, "top8_share_accepted_percent": 62.125649, "adjusted_top8_difference_pp": -5.127441, "speaker_cluster_CI95_pp": [-6.844184, -3.071037], "adjusted_error_coverage_percent": 100}
+  ],
+  "adjustment": "Error-weighted within duration x source x codec common-support cells; bootstrap resamples speaker groups. Stricter speaker-matched sensitivity retains DF 43.1% and 21LA 82.1% of error normals and preserves the signs. This is partial matching, not causal adjustment.",
+  "historical_operating_threshold_check": "At pre-existing threshold 0.9883067, DF full adjusted top8 gap remains +5.05pp with CI [1.51,8.00]; 21LA gap is -1.76pp with CI [-3.66,0.13], so evidence does not support greater Train-direction concentration there. The historical sensitivity was disclosed after primary computation.",
+  "important_caveat": "2506/2955 severe DF errors have negative cosine. Restricting to nonnegative scores weakens the adjusted top8 gap to +1.99pp, CI [-0.72,4.69]. Thus much of the overall signal is associated with major OOD direction shifts, not established as a small correctable tangent expansion.",
+  "direction_concentration": "DF full error R=0.904 versus accepted R=0.847; 21LA error R=0.810 versus accepted R=0.879. Equal-sized subsamples preserve this descriptive ordering.",
+  "decision_implication": "DTRS has a DF-specific geometric motivation but these caches do not justify a general efficacy claim or copying paper hyperparameters. Earlier broad DTRS-first recommendation is qualified. Fixed embeddings cannot determine whether suppressing a direction during training improves generalization.",
+  "validation": "58 consumed cache files match original catalog hashes before/after; scores recomputed within 5.6e-16; independent SVD/projector and scalar stratified aggregation checks pass; figures inspected for clipping and agreement with data.",
+  "protection": {"remote_connections": 0, "GPU_inferences": 0, "model_updates": 0, "current_training_operations": 0, "new_spend_usd": 0, "existing_python_sources_preserved": 110, "Q_embeddings_opened": false},
+  "cleanup": "Both local foreground analysis processes exited. No background or paid resources were created. Initial plot-only failure is documented in analysis_notes.json and fixed for zero-error groups."
+}

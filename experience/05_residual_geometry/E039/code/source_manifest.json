@@ -1,0 +1,20 @@
+[
+  {
+    "path": "experience/05_residual_geometry/E039/code/artifacts/geometry_experiments/frozen_r1_extract.py",
+    "sha256": "4afa0106008524fb40cd7a44c1caee7e8a9e5a2240ae0f56a2bc8f135f05b8e7",
+    "origin": "artifacts/geometry_experiments/frozen_r1_extract.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/05_residual_geometry/E039/code/artifacts/geometry_experiments/la21_extract.py",
+    "sha256": "7e0612b2809842c7df9ff5202c9dc706ff213107a5320229f7fa064ed8d097e2",
+    "origin": "artifacts/geometry_experiments/la21_extract.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/05_residual_geometry/E039/code/artifacts/geometry_experiments/geometry_cache.py",
+    "sha256": "f2015759a68fafffd53807c118bb2c1cd219c3090aaedcdb2849f9852c27984f",
+    "origin": "artifacts/geometry_experiments/geometry_cache.py",
+    "kind": "implementation / validation source"
+  }
+]

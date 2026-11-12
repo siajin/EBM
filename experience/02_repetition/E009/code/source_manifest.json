@@ -1,0 +1,14 @@
+[
+  {
+    "path": "experience/02_repetition/E009/code/artifacts/ebm_git_private_20261106/evaluate_B_final.py",
+    "sha256": "65c089cb30333d9ec5af699f79f8e9baefd0727da40149bebfc7e170285ab63b",
+    "origin": "artifacts/ebm_git_private_20261106/evaluate_B_final.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/02_repetition/E009/code/artifacts/ebm_git_private_20261106/render_B_final_analysis.py",
+    "sha256": "9540e7d05d954e509b06e68b288a92a30303e42e9800a4cb949dbbc41742fffc",
+    "origin": "artifacts/ebm_git_private_20261106/render_B_final_analysis.py",
+    "kind": "implementation / validation source"
+  }
+]

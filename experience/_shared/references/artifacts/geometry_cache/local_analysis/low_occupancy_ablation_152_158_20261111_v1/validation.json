@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "DF_total": 533928,
+  "DF_normal": 14869,
+  "DF_spoof": 519059,
+  "all_UIDs_unique": true,
+  "saved_basis_refitted": false,
+  "old_k0_k152_k158_reproduced": true,
+  "independent_full_EER_max_error_percentage_points": 0.0,
+  "explicit_projection_samples": 128,
+  "explicit_projection_max_score_error": 3.3306690738754696e-16,
+  "cache_and_basis_hashes_unchanged": 32,
+  "existing_python_sources_unchanged": 123,
+  "V_checks": {
+    "max_baseline_score_error": 4.440892098500626e-16,
+    "max_explicit_projection_score_error": 1.1102230246251565e-16,
+    "without_renormalization_OC_numerator_unchanged": true,
+    "all_score_signs_preserved": true
+  },
+  "DF_checks": {
+    "max_baseline_score_error": 5.551115123125783e-16,
+    "max_explicit_projection_score_error": 2.220446049250313e-16,
+    "without_renormalization_OC_numerator_unchanged": true,
+    "all_score_signs_preserved": true
+  }
+}

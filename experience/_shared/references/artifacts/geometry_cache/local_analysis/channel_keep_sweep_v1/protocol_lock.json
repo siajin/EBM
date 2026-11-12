@@ -1,0 +1,46 @@
+{
+  "version": "channel_keep_sweep_v1",
+  "created_utc": "2026-11-05T00:58:07.232656+00:00",
+  "status": "exploratory_followup_of_observed_DF_pilot",
+  "checkpoint_sha256": "104873703a57cad98b686d770e0860e031a2cf9abef79b72668780c1660e0b24",
+  "script_sha256": "64002defd47693d9ea94ed72a57cb8d7b8e1d10a77d944dbb12cb34d9d348f8b",
+  "prior_masks_sha256": "734beec841b5b1e128fd9814fb903ccf63f103fe0c250cf51aa5f71a8ea2ea64",
+  "dependency_sha256": {
+    "geometry_cache.py": "70ccbd8bae462fdb753db84191a128fde008b865f9402789171dda1995c44c26",
+    "cached_core_diagnostics.py": "0284aab32cc9976e2262927cd005ca3b4ba24f8435e67e24de60665367032085",
+    "fast_analyze.py": "7b06092ea697e8289e9c5baf06b935e733ef6169b9a89f678892b13dee26b942",
+    "audit_cached_core_results.py": "d898526fdfc0916b9057a6d11005813cdeedcbce99119ffcac097f0f4dc1d878"
+  },
+  "keep_counts": [
+    80,
+    70,
+    60,
+    50,
+    40,
+    30,
+    20,
+    10
+  ],
+  "baseline": "native all160, original archived cosine",
+  "families": {
+    "top": "T-Fisher ranking first k coordinates",
+    "bottom": "T-Fisher ranking last k; continues previous drop-top experiment",
+    "random": "last k of original seed200..219 permutations, nested across k; all20 reported"
+  },
+  "score": "cosine(z[kept],c[kept]), separately re-normalize both, no added norm feature",
+  "fit_or_selection_on_DF": false,
+  "probe_fit": false,
+  "EBM_retrained": false,
+  "GPU_inference_runs": 0,
+  "Q_opened": false,
+  "intervals": "DF top/bottom impairment vs native; paired source-prefixed speaker bootstrap2000 seed7301; pointwise95 only",
+  "random_spread": "mask design variability, not a sampling CI",
+  "threshold": "existing native V threshold, never selected anew on DF",
+  "limits": [
+    "fixed already-observed20000-row DF pilot",
+    "family dependencies unresolved",
+    "no simultaneous or noninferiority claim",
+    "160-dimension encoder and LayerNorm still computed before masking",
+    "no minimum dimension or best DF mask selection"
+  ]
+}

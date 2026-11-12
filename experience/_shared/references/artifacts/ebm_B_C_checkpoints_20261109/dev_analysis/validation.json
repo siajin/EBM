@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "historical_B50_max_score_error": 0.0,
+  "AUROC_pair_rank_check": true,
+  "EER_sorted_group_check_all20": true,
+  "same_final_rejected_normal": [
+    "LA_D_6451106"
+  ],
+  "source_rows": 24844,
+  "chart_payload_matches_reviewed_EER_values": true,
+  "chart_offline_validation": "passed via Windows interpreter routing",
+  "chart_rendering": "not inspected"
+}

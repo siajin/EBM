@@ -1,0 +1,20 @@
+[
+  {
+    "path": "experience/01_duration_bias/E038/code/EBM/positive_bpl.py",
+    "sha256": "f9912467f3cbec576d92823b4eefab986b55b34d5fa2eff5de063ba58fa624ae",
+    "origin": "EBM/positive_bpl.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/01_duration_bias/E038/code/EBM/controlled_data_loaders.py",
+    "sha256": "7fb4b01d64b572edea180bad6acdb584a125f04c13a46b9b972991e6d2bd1b05",
+    "origin": "EBM/controlled_data_loaders.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/01_duration_bias/E038/code/EBM/tests/test_positive_bpl.py",
+    "sha256": "eace03cdf239579d232153f64c0dde88d037b8025842f0d7e8420fe273185601",
+    "origin": "EBM/tests/test_positive_bpl.py",
+    "kind": "implementation / validation source"
+  }
+]

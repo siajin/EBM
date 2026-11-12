@@ -1,0 +1,14 @@
+[
+  {
+    "model": "B",
+    "tangent_top2_energy_percent": 66.82867408621131,
+    "total_projected_unit_energy_percent": 97.49609091207829,
+    "fit": "uncentered SVD of within-model tangent residuals, all768 selected cases x2 inputs; descriptive, not training PCA"
+  },
+  {
+    "model": "legacy240",
+    "tangent_top2_energy_percent": 73.77589518632338,
+    "total_projected_unit_energy_percent": 97.62749518787042,
+    "fit": "uncentered SVD of within-model tangent residuals, all768 selected cases x2 inputs; descriptive, not training PCA"
+  }
+]

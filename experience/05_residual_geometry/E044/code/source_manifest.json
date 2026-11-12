@@ -1,0 +1,20 @@
+[
+  {
+    "path": "experience/05_residual_geometry/E044/code/artifacts/geometry_experiments/channel_keep_one.py",
+    "sha256": "074ee37ababd9f3a33752c5d1d0030f5e0411c33dccb90bce217ed874c824734",
+    "origin": "artifacts/geometry_experiments/channel_keep_one.py",
+    "kind": "explicit method source"
+  },
+  {
+    "path": "experience/05_residual_geometry/E044/code/artifacts/geometry_experiments/channel_keep_sweep.py",
+    "sha256": "64002defd47693d9ea94ed72a57cb8d7b8e1d10a77d944dbb12cb34d9d348f8b",
+    "origin": "artifacts/geometry_experiments/channel_keep_sweep.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/05_residual_geometry/E044/code/artifacts/geometry_experiments/channel_keep_tiny_sweep.py",
+    "sha256": "5accfb9973f1c7cdce448a99bd17c8dc837b867367bc0a6aa5d75806706b70a8",
+    "origin": "artifacts/geometry_experiments/channel_keep_tiny_sweep.py",
+    "kind": "implementation / validation source"
+  }
+]

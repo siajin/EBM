@@ -1,0 +1,82 @@
+{
+  "dev": {
+    "B": {
+      "EER_percent": 0.03924646781789942,
+      "dev_threshold": -0.8357445001602173,
+      "normal_reject_percent": 0.03924646781789639,
+      "spoof_accept_percent": 0.040365984930032295,
+      "N": 24844,
+      "bonafide": 2548,
+      "spoof": 22296
+    },
+    "legacy240": {
+      "EER_percent": 0.31397174254317317,
+      "dev_threshold": 0.9927266836166382,
+      "normal_reject_percent": 0.3139717425431711,
+      "spoof_accept_percent": 0.3139576605669178,
+      "N": 24844,
+      "bonafide": 2548,
+      "spoof": 22296
+    }
+  },
+  "19LA": {
+    "B": {
+      "EER_percent": 0.679809653297081,
+      "dev_threshold": -0.8357445001602173,
+      "normal_reject_percent": 0.013596193065941536,
+      "spoof_accept_percent": 8.864781941705019,
+      "N": 71237,
+      "bonafide": 7355,
+      "spoof": 63882
+    },
+    "legacy240": {
+      "EER_percent": 1.128484024473142,
+      "dev_threshold": 0.9927266836166382,
+      "normal_reject_percent": 0.8293677770224337,
+      "spoof_accept_percent": 9.857236780313704,
+      "N": 71237,
+      "bonafide": 7355,
+      "spoof": 63882
+    }
+  },
+  "21LA": {
+    "B": {
+      "EER_percent": 4.792116630669552,
+      "dev_threshold": -0.8357445001602173,
+      "normal_reject_percent": 4.893358531317495,
+      "spoof_accept_percent": 4.738302339532094,
+      "N": 148176,
+      "bonafide": 14816,
+      "spoof": 133360
+    },
+    "legacy240": {
+      "EER_percent": 6.68871490280778,
+      "dev_threshold": 0.9927266836166382,
+      "normal_reject_percent": 4.765118790496761,
+      "spoof_accept_percent": 9.691811637672465,
+      "N": 148176,
+      "bonafide": 14816,
+      "spoof": 133360
+    }
+  },
+  "21DF": {
+    "B": {
+      "EER_percent": 2.7237877463178406,
+      "dev_threshold": -0.8357445001602173,
+      "normal_reject_percent": 2.9793530163427264,
+      "spoof_accept_percent": 2.3602326517794703,
+      "N": 533928,
+      "bonafide": 14869,
+      "spoof": 519059
+    },
+    "legacy240": {
+      "EER_percent": 8.877530432443336,
+      "dev_threshold": 0.9927266836166382,
+      "normal_reject_percent": 18.293093012307484,
+      "spoof_accept_percent": 3.903024511664378,
+      "N": 533928,
+      "bonafide": 14869,
+      "spoof": 519059
+    }
+  }
+}

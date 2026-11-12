@@ -1,0 +1,13 @@
+{
+  "status": "execution_held_by_user",
+  "training_started": false,
+  "gpu_smoke_started": false,
+  "queue_registered": false,
+  "remote_root_created": false,
+  "model": "OC +0.5existingBPL +0.5conditionalBPL2",
+  "BPL1": false,
+  "repeat": true,
+  "length_policy": ">64600:80000/64600; <=64600:64600/48440",
+  "local_tests": 4,
+  "existing_repetition_diagnostic": "unchanged; this hold applies to the new training experiment"
+}

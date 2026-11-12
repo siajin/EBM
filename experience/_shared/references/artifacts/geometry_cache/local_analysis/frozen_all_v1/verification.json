@@ -1,0 +1,4485 @@
+{
+  "status": "pass_within_completed_scope",
+  "checked_metric_rows": 950,
+  "maximum_independent_metric_error": 4.884981308350689e-15,
+  "checks": 1075,
+  "completed_markers": [
+    "f1_complete.json",
+    "f2_complete.json",
+    "f3_complete.json",
+    "f4_complete.json",
+    "heads_complete.json",
+    "N0_complete.json"
+  ],
+  "details": [
+    {
+      "name": "weighted_full_tied_ROC",
+      "status": "pass"
+    },
+    {
+      "name": "weighted_full_tied_ROC",
+      "status": "pass"
+    },
+    {
+      "name": "weighted_full_tied_ROC",
+      "status": "pass"
+    },
+    {
+      "name": "weighted_full_tied_ROC",
+      "status": "pass"
+    },
+    {
+      "name": "weighted_full_tied_ROC",
+      "status": "pass"
+    },
+    {
+      "name": "weighted_full_tied_ROC",
+      "status": "pass"
+    },
+    {
+      "name": "weighted_full_tied_ROC",
+      "status": "pass"
+    },
+    {
+      "name": "weighted_full_tied_ROC",
+      "status": "pass"
+    },
+    {
+      "name": "weighted_full_tied_ROC",
+      "status": "pass"
+    },
+    {
+      "name": "weighted_full_tied_ROC",
+      "status": "pass"
+    },
+    {
+      "name": "weighted_full_tied_ROC",
+      "status": "pass"
+    },
+    {
+      "name": "weighted_full_tied_ROC",
+      "status": "pass"
+    },
+    {
+      "name": "weighted_full_tied_ROC",
+      "status": "pass"
+    },
+    {
+      "name": "weighted_full_tied_ROC",
+      "status": "pass"
+    },
+    {
+      "name": "weighted_full_tied_ROC",
+      "status": "pass"
+    },
+    {
+      "name": "weighted_full_tied_ROC",
+      "status": "pass"
+    },
+    {
+      "name": "weighted_full_tied_ROC",
+      "status": "pass"
+    },
+    {
+      "name": "weighted_full_tied_ROC",
+      "status": "pass"
+    },
+    {
+      "name": "weighted_full_tied_ROC",
+      "status": "pass"
+    },
+    {
+      "name": "weighted_full_tied_ROC",
+      "status": "pass"
+    },
+    {
+      "name": "weighted_full_tied_ROC",
+      "status": "pass"
+    },
+    {
+      "name": "weighted_full_tied_ROC",
+      "status": "pass"
+    },
+    {
+      "name": "weighted_full_tied_ROC",
+      "status": "pass"
+    },
+    {
+      "name": "weighted_full_tied_ROC",
+      "status": "pass"
+    },
+    {
+      "name": "weighted_full_tied_ROC",
+      "status": "pass"
+    },
+    {
+      "name": "weighted_full_tied_ROC",
+      "status": "pass"
+    },
+    {
+      "name": "weighted_full_tied_ROC",
+      "status": "pass"
+    },
+    {
+      "name": "weighted_full_tied_ROC",
+      "status": "pass"
+    },
+    {
+      "name": "weighted_full_tied_ROC",
+      "status": "pass"
+    },
+    {
+      "name": "weighted_full_tied_ROC",
+      "status": "pass"
+    },
+    {
+      "name": "weighted_full_tied_ROC",
+      "status": "pass"
+    },
+    {
+      "name": "weighted_full_tied_ROC",
+      "status": "pass"
+    },
+    {
+      "name": "default_evaluation_equal_sizes",
+      "status": "pass"
+    },
+    {
+      "name": "head_source_unchanged",
+      "status": "pass"
+    },
+    {
+      "name": "V_epoch0_and_selection",
+      "status": "pass",
+      "model": "static",
+      "seed": 101
+    },
+    {
+      "name": "head_UID_order",
+      "status": "pass"
+    },
+    {
+      "name": "independent_numpy_head_score",
+      "status": "pass",
+      "maximum_error": 4.440892098500626e-16,
+      "model": "static",
+      "seed": 101,
+      "dataset": "V"
+    },
+    {
+      "name": "head_UID_order",
+      "status": "pass"
+    },
+    {
+      "name": "independent_numpy_head_score",
+      "status": "pass",
+      "maximum_error": 4.440892098500626e-16,
+      "model": "static",
+      "seed": 101,
+      "dataset": "DF_pilot"
+    },
+    {
+      "name": "head_UID_order",
+      "status": "pass"
+    },
+    {
+      "name": "independent_numpy_head_score",
+      "status": "pass",
+      "maximum_error": 4.440892098500626e-16,
+      "model": "static",
+      "seed": 101,
+      "dataset": "21LA_pilot"
+    },
+    {
+      "name": "V_epoch0_and_selection",
+      "status": "pass",
+      "model": "static",
+      "seed": 102
+    },
+    {
+      "name": "head_UID_order",
+      "status": "pass"
+    },
+    {
+      "name": "independent_numpy_head_score",
+      "status": "pass",
+      "maximum_error": 4.440892098500626e-16,
+      "model": "static",
+      "seed": 102,
+      "dataset": "V"
+    },
+    {
+      "name": "head_UID_order",
+      "status": "pass"
+    },
+    {
+      "name": "independent_numpy_head_score",
+      "status": "pass",
+      "maximum_error": 4.440892098500626e-16,
+      "model": "static",
+      "seed": 102,
+      "dataset": "DF_pilot"
+    },
+    {
+      "name": "head_UID_order",
+      "status": "pass"
+    },
+    {
+      "name": "independent_numpy_head_score",
+      "status": "pass",
+      "maximum_error": 4.440892098500626e-16,
+      "model": "static",
+      "seed": 102,
+      "dataset": "21LA_pilot"
+    },
+    {
+      "name": "V_epoch0_and_selection",
+      "status": "pass",
+      "model": "static",
+      "seed": 103
+    },
+    {
+      "name": "head_UID_order",
+      "status": "pass"
+    },
+    {
+      "name": "independent_numpy_head_score",
+      "status": "pass",
+      "maximum_error": 4.440892098500626e-16,
+      "model": "static",
+      "seed": 103,
+      "dataset": "V"
+    },
+    {
+      "name": "head_UID_order",
+      "status": "pass"
+    },
+    {
+      "name": "independent_numpy_head_score",
+      "status": "pass",
+      "maximum_error": 4.440892098500626e-16,
+      "model": "static",
+      "seed": 103,
+      "dataset": "DF_pilot"
+    },
+    {
+      "name": "head_UID_order",
+      "status": "pass"
+    },
+    {
+      "name": "independent_numpy_head_score",
+      "status": "pass",
+      "maximum_error": 4.440892098500626e-16,
+      "model": "static",
+      "seed": 103,
+      "dataset": "21LA_pilot"
+    },
+    {
+      "name": "V_epoch0_and_selection",
+      "status": "pass",
+      "model": "dynamic",
+      "seed": 101
+    },
+    {
+      "name": "head_UID_order",
+      "status": "pass"
+    },
+    {
+      "name": "independent_numpy_head_score",
+      "status": "pass",
+      "maximum_error": 4.440892098500626e-16,
+      "model": "dynamic",
+      "seed": 101,
+      "dataset": "V"
+    },
+    {
+      "name": "head_UID_order",
+      "status": "pass"
+    },
+    {
+      "name": "independent_numpy_head_score",
+      "status": "pass",
+      "maximum_error": 5.551115123125783e-16,
+      "model": "dynamic",
+      "seed": 101,
+      "dataset": "DF_pilot"
+    },
+    {
+      "name": "head_UID_order",
+      "status": "pass"
+    },
+    {
+      "name": "independent_numpy_head_score",
+      "status": "pass",
+      "maximum_error": 5.551115123125783e-16,
+      "model": "dynamic",
+      "seed": 101,
+      "dataset": "21LA_pilot"
+    },
+    {
+      "name": "V_epoch0_and_selection",
+      "status": "pass",
+      "model": "dynamic",
+      "seed": 102
+    },
+    {
+      "name": "head_UID_order",
+      "status": "pass"
+    },
+    {
+      "name": "independent_numpy_head_score",
+      "status": "pass",
+      "maximum_error": 4.440892098500626e-16,
+      "model": "dynamic",
+      "seed": 102,
+      "dataset": "V"
+    },
+    {
+      "name": "head_UID_order",
+      "status": "pass"
+    },
+    {
+      "name": "independent_numpy_head_score",
+      "status": "pass",
+      "maximum_error": 4.440892098500626e-16,
+      "model": "dynamic",
+      "seed": 102,
+      "dataset": "DF_pilot"
+    },
+    {
+      "name": "head_UID_order",
+      "status": "pass"
+    },
+    {
+      "name": "independent_numpy_head_score",
+      "status": "pass",
+      "maximum_error": 5.551115123125783e-16,
+      "model": "dynamic",
+      "seed": 102,
+      "dataset": "21LA_pilot"
+    },
+    {
+      "name": "V_epoch0_and_selection",
+      "status": "pass",
+      "model": "dynamic",
+      "seed": 103
+    },
+    {
+      "name": "head_UID_order",
+      "status": "pass"
+    },
+    {
+      "name": "independent_numpy_head_score",
+      "status": "pass",
+      "maximum_error": 4.440892098500626e-16,
+      "model": "dynamic",
+      "seed": 103,
+      "dataset": "V"
+    },
+    {
+      "name": "head_UID_order",
+      "status": "pass"
+    },
+    {
+      "name": "independent_numpy_head_score",
+      "status": "pass",
+      "maximum_error": 4.440892098500626e-16,
+      "model": "dynamic",
+      "seed": 103,
+      "dataset": "DF_pilot"
+    },
+    {
+      "name": "head_UID_order",
+      "status": "pass"
+    },
+    {
+      "name": "independent_numpy_head_score",
+      "status": "pass",
+      "maximum_error": 4.440892098500626e-16,
+      "model": "dynamic",
+      "seed": 103,
+      "dataset": "21LA_pilot"
+    },
+    {
+      "name": "V_epoch0_and_selection",
+      "status": "pass",
+      "model": "mlp",
+      "seed": 101
+    },
+    {
+      "name": "head_UID_order",
+      "status": "pass"
+    },
+    {
+      "name": "independent_numpy_head_score",
+      "status": "pass",
+      "maximum_error": 4.440892098500626e-16,
+      "model": "mlp",
+      "seed": 101,
+      "dataset": "V"
+    },
+    {
+      "name": "head_UID_order",
+      "status": "pass"
+    },
+    {
+      "name": "independent_numpy_head_score",
+      "status": "pass",
+      "maximum_error": 4.440892098500626e-16,
+      "model": "mlp",
+      "seed": 101,
+      "dataset": "DF_pilot"
+    },
+    {
+      "name": "head_UID_order",
+      "status": "pass"
+    },
+    {
+      "name": "independent_numpy_head_score",
+      "status": "pass",
+      "maximum_error": 4.440892098500626e-16,
+      "model": "mlp",
+      "seed": 101,
+      "dataset": "21LA_pilot"
+    },
+    {
+      "name": "V_epoch0_and_selection",
+      "status": "pass",
+      "model": "mlp",
+      "seed": 102
+    },
+    {
+      "name": "head_UID_order",
+      "status": "pass"
+    },
+    {
+      "name": "independent_numpy_head_score",
+      "status": "pass",
+      "maximum_error": 4.440892098500626e-16,
+      "model": "mlp",
+      "seed": 102,
+      "dataset": "V"
+    },
+    {
+      "name": "head_UID_order",
+      "status": "pass"
+    },
+    {
+      "name": "independent_numpy_head_score",
+      "status": "pass",
+      "maximum_error": 4.440892098500626e-16,
+      "model": "mlp",
+      "seed": 102,
+      "dataset": "DF_pilot"
+    },
+    {
+      "name": "head_UID_order",
+      "status": "pass"
+    },
+    {
+      "name": "independent_numpy_head_score",
+      "status": "pass",
+      "maximum_error": 5.551115123125783e-16,
+      "model": "mlp",
+      "seed": 102,
+      "dataset": "21LA_pilot"
+    },
+    {
+      "name": "V_epoch0_and_selection",
+      "status": "pass",
+      "model": "mlp",
+      "seed": 103
+    },
+    {
+      "name": "head_UID_order",
+      "status": "pass"
+    },
+    {
+      "name": "independent_numpy_head_score",
+      "status": "pass",
+      "maximum_error": 5.551115123125783e-16,
+      "model": "mlp",
+      "seed": 103,
+      "dataset": "V"
+    },
+    {
+      "name": "head_UID_order",
+      "status": "pass"
+    },
+    {
+      "name": "independent_numpy_head_score",
+      "status": "pass",
+      "maximum_error": 4.440892098500626e-16,
+      "model": "mlp",
+      "seed": 103,
+      "dataset": "DF_pilot"
+    },
+    {
+      "name": "head_UID_order",
+      "status": "pass"
+    },
+    {
+      "name": "independent_numpy_head_score",
+      "status": "pass",
+      "maximum_error": 4.440892098500626e-16,
+      "model": "mlp",
+      "seed": 103,
+      "dataset": "21LA_pilot"
+    },
+    {
+      "name": "V_epoch0_and_selection",
+      "status": "pass",
+      "model": "metric",
+      "seed": 101
+    },
+    {
+      "name": "head_UID_order",
+      "status": "pass"
+    },
+    {
+      "name": "independent_numpy_head_score",
+      "status": "pass",
+      "maximum_error": 6.661338147750939e-16,
+      "model": "metric",
+      "seed": 101,
+      "dataset": "V"
+    },
+    {
+      "name": "head_UID_order",
+      "status": "pass"
+    },
+    {
+      "name": "independent_numpy_head_score",
+      "status": "pass",
+      "maximum_error": 6.661338147750939e-16,
+      "model": "metric",
+      "seed": 101,
+      "dataset": "DF_pilot"
+    },
+    {
+      "name": "head_UID_order",
+      "status": "pass"
+    },
+    {
+      "name": "independent_numpy_head_score",
+      "status": "pass",
+      "maximum_error": 8.881784197001252e-16,
+      "model": "metric",
+      "seed": 101,
+      "dataset": "21LA_pilot"
+    },
+    {
+      "name": "V_epoch0_and_selection",
+      "status": "pass",
+      "model": "metric",
+      "seed": 102
+    },
+    {
+      "name": "head_UID_order",
+      "status": "pass"
+    },
+    {
+      "name": "independent_numpy_head_score",
+      "status": "pass",
+      "maximum_error": 6.661338147750939e-16,
+      "model": "metric",
+      "seed": 102,
+      "dataset": "V"
+    },
+    {
+      "name": "head_UID_order",
+      "status": "pass"
+    },
+    {
+      "name": "independent_numpy_head_score",
+      "status": "pass",
+      "maximum_error": 6.661338147750939e-16,
+      "model": "metric",
+      "seed": 102,
+      "dataset": "DF_pilot"
+    },
+    {
+      "name": "head_UID_order",
+      "status": "pass"
+    },
+    {
+      "name": "independent_numpy_head_score",
+      "status": "pass",
+      "maximum_error": 8.881784197001252e-16,
+      "model": "metric",
+      "seed": 102,
+      "dataset": "21LA_pilot"
+    },
+    {
+      "name": "V_epoch0_and_selection",
+      "status": "pass",
+      "model": "metric",
+      "seed": 103
+    },
+    {
+      "name": "head_UID_order",
+      "status": "pass"
+    },
+    {
+      "name": "independent_numpy_head_score",
+      "status": "pass",
+      "maximum_error": 6.661338147750939e-16,
+      "model": "metric",
+      "seed": 103,
+      "dataset": "V"
+    },
+    {
+      "name": "head_UID_order",
+      "status": "pass"
+    },
+    {
+      "name": "independent_numpy_head_score",
+      "status": "pass",
+      "maximum_error": 6.661338147750939e-16,
+      "model": "metric",
+      "seed": 103,
+      "dataset": "DF_pilot"
+    },
+    {
+      "name": "head_UID_order",
+      "status": "pass"
+    },
+    {
+      "name": "independent_numpy_head_score",
+      "status": "pass",
+      "maximum_error": 8.881784197001252e-16,
+      "model": "metric",
+      "seed": 103,
+      "dataset": "21LA_pilot"
+    },
+    {
+      "name": "P1_P2_five_comparisons_per_dataset",
+      "status": "pass"
+    },
+    {
+      "name": "F2_no_replacement",
+      "status": "pass"
+    },
+    {
+      "name": "F2_class_and_scalar_calipers",
+      "status": "pass"
+    },
+    {
+      "name": "F2_matching_cells",
+      "status": "pass"
+    },
+    {
+      "name": "F2_low_overlap_not_negative_evidence",
+      "status": "pass"
+    },
+    {
+      "name": "F2_no_replacement",
+      "status": "pass"
+    },
+    {
+      "name": "F2_class_and_scalar_calipers",
+      "status": "pass"
+    },
+    {
+      "name": "F2_matching_cells",
+      "status": "pass"
+    },
+    {
+      "name": "F2_low_overlap_not_negative_evidence",
+      "status": "pass"
+    },
+    {
+      "name": "F2_no_replacement",
+      "status": "pass"
+    },
+    {
+      "name": "F2_class_and_scalar_calipers",
+      "status": "pass"
+    },
+    {
+      "name": "F2_matching_cells",
+      "status": "pass"
+    },
+    {
+      "name": "F2_low_overlap_not_negative_evidence",
+      "status": "pass"
+    },
+    {
+      "name": "F2_no_replacement",
+      "status": "pass"
+    },
+    {
+      "name": "F2_class_and_scalar_calipers",
+      "status": "pass"
+    },
+    {
+      "name": "F2_matching_cells",
+      "status": "pass"
+    },
+    {
+      "name": "F2_low_overlap_not_negative_evidence",
+      "status": "pass"
+    },
+    {
+      "name": "F3_V_ties_identity",
+      "status": "pass"
+    },
+    {
+      "name": "F4_ANOVA_decomposition",
+      "status": "pass"
+    },
+    {
+      "name": "F4_ANOVA_decomposition",
+      "status": "pass"
+    },
+    {
+      "name": "F4_ANOVA_decomposition",
+      "status": "pass"
+    },
+    {
+      "name": "F4_ANOVA_decomposition",
+      "status": "pass"
+    },
+    {
+      "name": "F4_ANOVA_decomposition",
+      "status": "pass"
+    },
+    {
+      "name": "F4_ANOVA_decomposition",
+      "status": "pass"
+    },
+    {
+      "name": "F4_ANOVA_decomposition",
+      "status": "pass"
+    },
+    {
+      "name": "F4_ANOVA_decomposition",
+      "status": "pass"
+    },
+    {
+      "name": "F4_ANOVA_decomposition",
+      "status": "pass"
+    },
+    {
+      "name": "F4_ANOVA_decomposition",
+      "status": "pass"
+    },
+    {
+      "name": "F4_ANOVA_decomposition",
+      "status": "pass"
+    },
+    {
+      "name": "F4_ANOVA_decomposition",
+      "status": "pass"
+    },
+    {
+      "name": "F4_ANOVA_decomposition",
+      "status": "pass"
+    },
+    {
+      "name": "F4_ANOVA_decomposition",
+      "status": "pass"
+    },
+    {
+      "name": "F4_ANOVA_decomposition",
+      "status": "pass"
+    },
+    {
+      "name": "F4_ANOVA_decomposition",
+      "status": "pass"
+    },
+    {
+      "name": "F4_ANOVA_decomposition",
+      "status": "pass"
+    },
+    {
+      "name": "F4_ANOVA_decomposition",
+      "status": "pass"
+    },
+    {
+      "name": "F4_ANOVA_decomposition",
+      "status": "pass"
+    },
+    {
+      "name": "F4_ANOVA_decomposition",
+      "status": "pass"
+    },
+    {
+      "name": "F4_ANOVA_decomposition",
+      "status": "pass"
+    },
+    {
+      "name": "F4_ANOVA_decomposition",
+      "status": "pass"
+    },
+    {
+      "name": "F4_ANOVA_decomposition",
+      "status": "pass"
+    },
+    {
+      "name": "F4_ANOVA_decomposition",
+      "status": "pass"
+    },
+    {
+      "name": "F4_ANOVA_decomposition",
+      "status": "pass"
+    },
+    {
+      "name": "F4_ANOVA_decomposition",
+      "status": "pass"
+    },
+    {
+      "name": "F4_ANOVA_decomposition",
+      "status": "pass"
+    },
+    {
+      "name": "F4_ANOVA_decomposition",
+      "status": "pass"
+    },
+    {
+      "name": "orthogonal_basis",
+      "status": "pass"
+    },
+    {
+      "name": "F1_complete_panel_count",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_complete_panel_count",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_complete_panel_count",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "orthogonal_basis",
+      "status": "pass"
+    },
+    {
+      "name": "F1_complete_panel_count",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_complete_panel_count",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_complete_panel_count",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "orthogonal_basis",
+      "status": "pass"
+    },
+    {
+      "name": "F1_complete_panel_count",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_complete_panel_count",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_complete_panel_count",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "orthogonal_basis",
+      "status": "pass"
+    },
+    {
+      "name": "F1_complete_panel_count",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_complete_panel_count",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_complete_panel_count",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_zero_mask_score",
+      "status": "pass"
+    },
+    {
+      "name": "F1_all_basis_primary_intervals",
+      "status": "pass"
+    }
+  ],
+  "remaining_work_is_not_claimed_complete": true
+}

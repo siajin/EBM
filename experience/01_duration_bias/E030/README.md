@@ -1,0 +1,59 @@
+# E030. 속도 변화 없이 길이 분포 100% 일치에 필요한 최소 절단 상한
+
+**실행 상태:** 메타데이터 계산·최적성 검증 완료
+
+이 문서의 상태는 2026-11-12 출판 검토 기준이다. 기존 문서·state의 시점별 상태와 충돌하면 실제 완료표식과 본문 최신 보완을 우선한다.
+
+## 가설
+
+속도 변화 없이 정확히 같은 길이 분포를 얻으려면20%보다 큰 최악 절단율이 필요할 수 있다.
+
+## 그렇게 설계한 이유
+
+속도는 그대로 두고 원음 일부를 자르는 것만으로 정확한 공통 길이 분포를 만들 때 필요한 최악 절단율을 구한다.
+
+대조와 통제의 근거: 절단 상한은 모든 원음을 그만큼 자른다는 뜻이 아니다. 다섯 자료를 하나의 공통 분포로 맞춘 것도 아니다.
+
+## 모델·데이터·표본
+
+[E029](../E029/README.md)와 같은 다섯 자료의 원음 길이. 클래스 안에서 원음별 확률 유지, 출력 길이는 확률적 선택을 허용한다.
+
+## 실험 내용과 상세 절차
+
+1. 두 클래스의 정렬된 길이 분위수 함수 Q1(q), Q0(q)의 모든 정수 공통 확률 경계 구간을 순회한다.
+2. 필요 절단 상한을 max_q[1 −min(Q1, Q0)/max(Q1, Q0)]로 계산한다.
+3. 그 정확한 유리수 경계에서 최대 유량이 100%에 도달하는지,0.0001%p 줄이면 실패하는지 별도 매칭 구현으로 검증한다.
+
+## 측정과 검증
+
+정확 상한·병 목 분위수 원음 길이·매칭 증명서·올림 상한의 가능성을 보고한다.
+
+## 결과
+
+학습 자료 52.110285%, 개발 45.579097%,19LA 53.583100%,21LA 55%, DF 54.148472%였다.21LA 병 목은 1.6초 정상과 0.72초 위조 분위수다.
+
+## 해석·실패한 부분·한계
+
+평가 정답을 사용한 이론적 가능성이다. 실제 이 정도 절단 후 탐지 성능·언어 정보가 보존된다는 뜻은 아니다.
+
+## 배운 점
+
+수학적 병목을 확인했다. 최악 상한은 모든 원음을 같은 비율로 자른다는 뜻이 아니다.
+
+## 실험 코드
+
+- [artifacts/duration_matching_20261109/minimum_crop.py](code/artifacts/duration_matching_20261109/minimum_crop.py)
+
+코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+
+## 설정·결과·검산 근거
+
+- [artifacts/duration_matching_20261109/minimum_crop.py](../../_shared/workspace/artifacts/duration_matching_20261109/minimum_crop.py)
+- [artifacts/duration_matching_20261109/minimum_crop_100pct.csv](../../_shared/references/artifacts/duration_matching_20261109/minimum_crop_100pct.csv)
+- [artifacts/duration_matching_20261109/minimum_crop_validation.json](../../_shared/references/artifacts/duration_matching_20261109/minimum_crop_validation.json)
+
+## 연결
+
+다른 관련 가설: 주 가설에서만 분류한다.
+
+[가설 목록으로](../README.md) · [전체 실험 목록](../../README.md)

@@ -1,0 +1,13 @@
+{
+  "source": "/home/mentee/results/run_logs/EBM_e50_bs240_lr1e5_20261102_142835.log",
+  "sha256": "aefdee17a61b8081466729010d840de166580d021f194091eab2e2a133915f1c",
+  "verified_epoch": 50,
+  "final_EER_percent": {
+    "19LA": 0.5710401087693906,
+    "21LA": 1.0527894420393238,
+    "21DF": 3.477032752706973
+  },
+  "source_bytes": 8092461,
+  "extraction": "last EER outputs after last training [50/50] marker",
+  "repeated_rank_values_agree": true
+}

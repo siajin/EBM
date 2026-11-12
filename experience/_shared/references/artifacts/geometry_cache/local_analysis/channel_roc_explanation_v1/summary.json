@@ -1,0 +1,113 @@
+{
+  "status": "complete_descriptive",
+  "model_metrics": [
+    {
+      "case": "native",
+      "eer_percent": 3.3499999999999974,
+      "auroc": 0.9959428333333332
+    },
+    {
+      "case": "keep_bottom2",
+      "eer_percent": 2.922222222222222,
+      "auroc": 0.9876594722222221
+    }
+  ],
+  "matched_ROC_points": [
+    {
+      "case": "native",
+      "bona_false_reject_cap_percent": 0.5,
+      "minimum_spoof_false_accept_percent": 7.794444444444444,
+      "scope": "empirical DF ROC description, not an operating threshold chosen for deployment"
+    },
+    {
+      "case": "native",
+      "bona_false_reject_cap_percent": 1.0,
+      "minimum_spoof_false_accept_percent": 6.105555555555556,
+      "scope": "empirical DF ROC description, not an operating threshold chosen for deployment"
+    },
+    {
+      "case": "native",
+      "bona_false_reject_cap_percent": 2.0,
+      "minimum_spoof_false_accept_percent": 4.483333333333333,
+      "scope": "empirical DF ROC description, not an operating threshold chosen for deployment"
+    },
+    {
+      "case": "native",
+      "bona_false_reject_cap_percent": 3.0,
+      "minimum_spoof_false_accept_percent": 3.5111111111111115,
+      "scope": "empirical DF ROC description, not an operating threshold chosen for deployment"
+    },
+    {
+      "case": "native",
+      "bona_false_reject_cap_percent": 3.5000000000000004,
+      "minimum_spoof_false_accept_percent": 3.272222222222222,
+      "scope": "empirical DF ROC description, not an operating threshold chosen for deployment"
+    },
+    {
+      "case": "native",
+      "bona_false_reject_cap_percent": 5.0,
+      "minimum_spoof_false_accept_percent": 2.322222222222222,
+      "scope": "empirical DF ROC description, not an operating threshold chosen for deployment"
+    },
+    {
+      "case": "native",
+      "bona_false_reject_cap_percent": 10.0,
+      "minimum_spoof_false_accept_percent": 1.0888888888888888,
+      "scope": "empirical DF ROC description, not an operating threshold chosen for deployment"
+    },
+    {
+      "case": "keep_bottom2",
+      "bona_false_reject_cap_percent": 0.5,
+      "minimum_spoof_false_accept_percent": 87.00555555555556,
+      "scope": "empirical DF ROC description, not an operating threshold chosen for deployment"
+    },
+    {
+      "case": "keep_bottom2",
+      "bona_false_reject_cap_percent": 1.0,
+      "minimum_spoof_false_accept_percent": 15.811111111111112,
+      "scope": "empirical DF ROC description, not an operating threshold chosen for deployment"
+    },
+    {
+      "case": "keep_bottom2",
+      "bona_false_reject_cap_percent": 2.0,
+      "minimum_spoof_false_accept_percent": 4.022222222222222,
+      "scope": "empirical DF ROC description, not an operating threshold chosen for deployment"
+    },
+    {
+      "case": "keep_bottom2",
+      "bona_false_reject_cap_percent": 3.0,
+      "minimum_spoof_false_accept_percent": 2.888888888888889,
+      "scope": "empirical DF ROC description, not an operating threshold chosen for deployment"
+    },
+    {
+      "case": "keep_bottom2",
+      "bona_false_reject_cap_percent": 3.5000000000000004,
+      "minimum_spoof_false_accept_percent": 2.677777777777778,
+      "scope": "empirical DF ROC description, not an operating threshold chosen for deployment"
+    },
+    {
+      "case": "keep_bottom2",
+      "bona_false_reject_cap_percent": 5.0,
+      "minimum_spoof_false_accept_percent": 1.7611111111111113,
+      "scope": "empirical DF ROC description, not an operating threshold chosen for deployment"
+    },
+    {
+      "case": "keep_bottom2",
+      "bona_false_reject_cap_percent": 10.0,
+      "minimum_spoof_false_accept_percent": 0.8833333333333334,
+      "scope": "empirical DF ROC description, not an operating threshold chosen for deployment"
+    }
+  ],
+  "bona_spoof_pairs": 36000000,
+  "both_correct": 35493249,
+  "native_wrong_two_correct": 62492,
+  "native_correct_two_wrong": 360693,
+  "both_wrong": 83566,
+  "ties": [
+    0,
+    0
+  ],
+  "pair_count_is_not_independent_sample_size": true,
+  "interpretation": "ROC curves cross; lower EER does not imply better full ROC or lower error at every target",
+  "cause_not_identified": "No causal attribution to codec/source/noise from this descriptive comparison"
+}

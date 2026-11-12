@@ -1,0 +1,14 @@
+[
+  {
+    "path": "experience/02_repetition/E012/code/geometry_B_intervention.py",
+    "sha256": "3655181374618647c9d861f37689a224cf6dae2bce727364561f2d870d1c148a",
+    "origin": "artifacts/github_archive_20261112/remote_source/historical_analysis/geometry_B_intervention.py",
+    "kind": "actual historical analysis source"
+  },
+  {
+    "path": "experience/02_repetition/E012/code/artifacts/ebm_git_private_20261106/render_B_final_analysis.py",
+    "sha256": "9540e7d05d954e509b06e68b288a92a30303e42e9800a4cb949dbbc41742fffc",
+    "origin": "artifacts/ebm_git_private_20261106/render_B_final_analysis.py",
+    "kind": "implementation / validation source"
+  }
+]

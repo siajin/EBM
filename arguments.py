@@ -11,7 +11,7 @@ def get_args():
     system_args = {
         # expeirment info
         'project'       : 'CM',
-        'name'          : 'EBM_e50_bs240_lr1e5_B_zeropad_short303',
+        'name'          : 'EBM_e50_bs240_lr1e5_C_nativeLong_short303',
         'tags'          : ['LA'],
         'description'   : '',
         # log
@@ -61,10 +61,21 @@ def get_args():
         'loss_weight'       : [1,1,1,1,1],
         'use_class_weight'  : True,
 
+        # Only BPL pair selection changes; OC training is always retained.
+        'bpl_pairing'          : 'legacy_long_short',
+        'short32_bpl'          : False,  # Opt-in native<=2s bona-only BPL3/2; no default change.
+        'duration_policy_path' : None,
+        'activity_policy_path' : None,
+        'matched_source_sampling': 'replacement',
+        'bpl_pair_size'        : 12,
+        'bpl_steps_per_epoch'  : 108,
+        'evaluation_mode'      : 'controlled_oc',
+        'evaluation_seed'      : 1729,
+
         # data processing
-        # B: cap long at 404 frames and short at 303; never repeat audio.
+        # C: use the full long view; keep short at 303 and never repeat audio.
         'native_length'       : True,
-        'cap_long'            : True,
+        'cap_long'            : False,
         'micro_batch_size'    : 8,
         'eval_batch_size'     : 8,
         'short_oc_weight'     : 0.0,

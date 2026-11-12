@@ -1,0 +1,46 @@
+{
+  "name": "positive_only_bpl_variable_natural_pairs_pilot_v1",
+  "seed": 1,
+  "steps": 108,
+  "diagnostic_steps": [
+    27,
+    54,
+    108
+  ],
+  "pair_groups_per_gpu": [
+    12,
+    12
+  ],
+  "positive_pairs_per_gpu": 144,
+  "GPUs": 2,
+  "lr": 1e-05,
+  "weight_decay": 0.0001,
+  "alpha": 30.0,
+  "micro_batch_size": 8,
+  "frontend_revision": "1a640f32ac3e39899438a2931f9924c02f080a54",
+  "rawboost": true,
+  "rawboost_policy": "existing random kinds 0..8; codec and ACN not used",
+  "noise_snr_db": 20.0,
+  "port": 29661,
+  "policy_sha256": "06a03d3d568cbecba375a225e976117b26862c673cce8acab4da888dccbccfd4",
+  "manifest_sha256": "a4b9980535ab9a3b0ba9f8d116ffb38735f925176e682e65518ba08ffa535ca4",
+  "server_code_commit": "cf199af03044c40837c08ce31d633e2c048bde08",
+  "training": "bona fide only; two independently drawn groups with replacement; no waveform concatenation, no OC, CE, negative term, or centroid update",
+  "initialization": "fresh backend seed 1, fixed pretrained XLS-R; no B/C warm start",
+  "selection": "locked Train joint distribution policy; source and crop draws independent within and between groups; duplicate source draws are recorded",
+  "diagnostic_selection": "dev 2 classes x 4 original-duration bands x 64, UID SHA with speaker round robin; full original waveform, no fixed cap",
+  "reference_selection": "256 fixed distinct Train bona fide originals sampled by the joint policy source weights, one fixed crop each",
+  "score": "cosine to normalized mean of current normalized reference embeddings; recomputed per checkpoint, not learned via classification",
+  "evaluation_pooling_noise_std": 0.0,
+  "training_pooling_noise_std": 1e-05,
+  "limits": [
+    "108-step pilot, not the previous full 50-epoch run",
+    "dev subset EER is stratified diagnostic, not full official dev or target EER",
+    "RawBoost retained, so any noise improvement is not attributable to cross-utterance BPL alone",
+    "reduced noise sensitivity must be assessed alongside collapse metrics and detection scores"
+  ],
+  "hypotheses": [
+    "positive-only cross-utterance alignment may reduce controlled-noise sensitivity",
+    "diagnose whether any reduction preserves discriminative geometry or only collapses embeddings"
+  ]
+}

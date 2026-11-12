@@ -1,0 +1,28 @@
+{
+  "threshold": -0.9156411641342407,
+  "normal_false_reject_percent": 3.3499999999999974,
+  "spoof_false_accept_percent": 3.35,
+  "groups": [
+    {
+      "source": "all",
+      "n": 67,
+      "T_nearest_normal_percent": 0.0,
+      "DF_nearest_normal_percent": 67.16417910447761,
+      "DF_mean5_normal_percent": 52.23880597014925
+    },
+    {
+      "source": "vcc2018",
+      "n": 65,
+      "T_nearest_normal_percent": 0.0,
+      "DF_nearest_normal_percent": 67.6923076923077,
+      "DF_mean5_normal_percent": 53.84615384615385
+    },
+    {
+      "source": "vcc2020",
+      "n": 2,
+      "T_nearest_normal_percent": 0.0,
+      "DF_nearest_normal_percent": 50.0,
+      "DF_mean5_normal_percent": 0.0
+    }
+  ]
+}

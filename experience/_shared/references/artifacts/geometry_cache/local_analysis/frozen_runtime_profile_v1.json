@@ -1,0 +1,128 @@
+{
+  "scope": "runtime calibration only; synthetic vectors for heads; previously saved scores for timing weighted EER; no research fit or new inference",
+  "original_model_loaded": false,
+  "real_embedding_head_training": false,
+  "GPU_used": false,
+  "python": "3.13.5",
+  "dtype": "float64",
+  "CPU_threads": 2,
+  "seed": 7302,
+  "head_epoch_profiles": [
+    {
+      "kind": "static",
+      "epochs": 10,
+      "steps_per_epoch": 162,
+      "V_rows_per_epoch": 14983,
+      "seconds": 2.014980900014052,
+      "seconds_per_epoch": 0.20149809000140523,
+      "seconds_for_80_epochs_one_seed": 16.119847200112417
+    },
+    {
+      "kind": "dynamic",
+      "epochs": 10,
+      "steps_per_epoch": 162,
+      "V_rows_per_epoch": 14983,
+      "seconds": 3.1604615000251215,
+      "seconds_per_epoch": 0.3160461500025121,
+      "seconds_for_80_epochs_one_seed": 25.283692000200972
+    },
+    {
+      "kind": "MLP",
+      "epochs": 10,
+      "steps_per_epoch": 162,
+      "V_rows_per_epoch": 14983,
+      "seconds": 3.016219299985096,
+      "seconds_per_epoch": 0.30162192999850956,
+      "seconds_for_80_epochs_one_seed": 24.129754399880767
+    },
+    {
+      "kind": "metric",
+      "epochs": 10,
+      "steps_per_epoch": 162,
+      "V_rows_per_epoch": 14983,
+      "seconds": 1.5306569999956992,
+      "seconds_per_epoch": 0.15306569999956993,
+      "seconds_for_80_epochs_one_seed": 12.245255999965593
+    }
+  ],
+  "weighted_EER_profile": {
+    "rows": 20000,
+    "draws": 1000,
+    "seconds": 0.228908599994611,
+    "seconds_per_10000_per_score": 2.28908599994611
+  },
+  "profile_recovery": "Head timings were captured from stdout of completed per-head measurements. A subsequent local import failed before JSON was written. Only the bootstrap timing was rerun after adding the existing analysis folder to the module search path; head timings were not repeated.",
+  "probe_epoch_profiles": [
+    {
+      "kind": "P3_scalar",
+      "input_dimensions": 3,
+      "hidden_size": 0,
+      "epochs": 10,
+      "steps_per_epoch": 67,
+      "train_rows": 10667,
+      "V_rows_per_epoch": 5333,
+      "seconds": 0.4334590000216849,
+      "seconds_for_80_epochs_inner_fit": 3.4676720001734793,
+      "approximation": "BCE scalar/linear/MLP timing surrogate, not implemented experimental probe or convergence measurement"
+    },
+    {
+      "kind": "P3_direction_linear",
+      "input_dimensions": 163,
+      "hidden_size": 0,
+      "epochs": 10,
+      "steps_per_epoch": 67,
+      "train_rows": 10667,
+      "V_rows_per_epoch": 5333,
+      "seconds": 0.521794400003273,
+      "seconds_for_80_epochs_inner_fit": 4.174355200026184,
+      "approximation": "BCE scalar/linear/MLP timing surrogate, not implemented experimental probe or convergence measurement"
+    },
+    {
+      "kind": "P3_direction_MLP",
+      "input_dimensions": 163,
+      "hidden_size": 16,
+      "epochs": 10,
+      "steps_per_epoch": 67,
+      "train_rows": 10667,
+      "V_rows_per_epoch": 5333,
+      "seconds": 0.8583248000068124,
+      "seconds_for_80_epochs_inner_fit": 6.8665984000544995,
+      "approximation": "BCE scalar/linear/MLP timing surrogate, not implemented experimental probe or convergence measurement"
+    },
+    {
+      "kind": "P4_h_linear",
+      "input_dimensions": 323,
+      "hidden_size": 0,
+      "epochs": 10,
+      "steps_per_epoch": 67,
+      "train_rows": 10667,
+      "V_rows_per_epoch": 5333,
+      "seconds": 0.5358224999799859,
+      "seconds_for_80_epochs_inner_fit": 4.286579999839887,
+      "approximation": "BCE scalar/linear/MLP timing surrogate, not implemented experimental probe or convergence measurement"
+    }
+  ],
+  "derived_compute_only_projections": {
+    "P1_3_heads_3_seeds_80_epochs_training_seconds": 196.59988080058247,
+    "P2_metric_3_seeds_80_epochs_training_seconds": 36.73576799989678,
+    "P1_P2_all_12_fits_80_epochs_training_seconds": 233.33564880047925,
+    "F1_primary_43_scores_10000_EER_seconds": 98.43069799768273,
+    "F1_primary_plus3_rotations_172_scores_10000_EER_seconds": 393.7227919907309,
+    "F1_all_298_scores_10000_EER_seconds": 682.1476279839408,
+    "P3_transfer_6cases_2ridge_3seeds_80epochs_surrogate_seconds": 420.9666890581208,
+    "P3_nested_6cases_2ridge_3seeds_80epochs_surrogate_seconds": 3261.192560295936,
+    "P4_nested_4increments_2ridge_3seeds_80epochs_surrogate_seconds": 1927.0416357489164,
+    "Q_inference_seconds_at_32_17_per_second": 306.55601506732285,
+    "DF_missing_inference_seconds_at_33_42_per_second": 15376.26021379873,
+    "R2_2000_4_full_passes_seconds": 239.3527531296015,
+    "R2_20000_4_full_passes_seconds": 2393.527531296015,
+    "R3_2000_3_new_conditions_seconds": 179.51456484720111,
+    "R3_20000_3_new_conditions_seconds": 1795.1456484720113
+  },
+  "projection_limits": [
+    "Synthetic operation timing is not a measured experimental convergence or end-to-end runtime.",
+    "Nested counts assume both P3 linear and MLP cases separately (scalar duplicated); sharing reduces work. P4 base reused.",
+    "GPU throughput is historical aggregate throughput of both assigned GPUs; do not double it. Model load, QC, I/O, codec conversion and implementation are extra.",
+    "F1 primary 25% interval costs differ from all-fraction/all-score intervals."
+  ]
+}

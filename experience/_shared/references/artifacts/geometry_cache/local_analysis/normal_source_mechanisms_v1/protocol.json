@@ -1,0 +1,11 @@
+{
+  "status": "posthoc_exploratory",
+  "timestamp": "2026-11-05T22:28:05.724042+09:00",
+  "checkpoint": "104873703a57cad98b686d770e0860e031a2cf9abef79b72668780c1660e0b24",
+  "excludes_silence_as_explanation": true,
+  "threshold": 0.8619597055730815,
+  "primary_contrast": "DF normals: corpus gap after nocodec/no-repeat-padding restrictions",
+  "no_new_model_or_fit": true,
+  "geometry_scope": "h is final backend linear output before LayerNorm, z after LayerNorm; neither is raw SSL encoder output",
+  "warning": "Restricted groups differ in speakers/content/duration; this is not a causal removal effect."
+}

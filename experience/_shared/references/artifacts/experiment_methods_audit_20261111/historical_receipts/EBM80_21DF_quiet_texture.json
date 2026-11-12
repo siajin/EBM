@@ -1,0 +1,288 @@
+{
+  "remote_root": "/home/mentee/results/analysis/EBM80_21DF_quiet_texture",
+  "file_inventory": [
+    {
+      "name": "quiet_texture.png",
+      "bytes": 112271,
+      "directory": false
+    },
+    {
+      "name": "shard_1.npz",
+      "bytes": 27270,
+      "directory": false
+    },
+    {
+      "name": "shard_0.npz",
+      "bytes": 27675,
+      "directory": false
+    },
+    {
+      "name": "summary.json",
+      "bytes": 7228,
+      "directory": false
+    },
+    {
+      "name": "sample_manifest.json",
+      "bytes": 146131,
+      "directory": false
+    },
+    {
+      "name": "quiet_texture_scores.npz",
+      "bytes": 51892,
+      "directory": false
+    },
+    {
+      "name": "provenance.json",
+      "bytes": 1084,
+      "directory": false
+    },
+    {
+      "name": "quiet_texture.pdf",
+      "bytes": 18626,
+      "directory": false
+    }
+  ],
+  "aggregate_json": {
+    "summary.json": {
+      "provenance": {
+        "per_class": 1000,
+        "batch_size": 4,
+        "seed": 1,
+        "cpu": false,
+        "out": "/results/analysis/EBM80_21DF_quiet_texture",
+        "workers": 2,
+        "plm_path": "/home/mentee/.cache/huggingface/hub/models--facebook--wav2vec2-xls-r-300m/snapshots/1a640f32ac3e39899438a2931f9924c02f080a54",
+        "checkpoint": "/home/mentee/results/CM/LA/EBM/model/BestCLS_80_21DF.pt",
+        "checkpoint_sha256": "30043199664bc84da780654e01fd430235f647b894e7832a52f777c7fee5939a",
+        "protocol_sha256": "70e0e7d5964562cb0166e79143f73beaeaf77ee18e799fa4156355a57006d800",
+        "population": {
+          "0": 519059,
+          "1": 14869
+        },
+        "torch_version": "2.6.0+cu124",
+        "sampling": "uniform random within label, without replacement",
+        "crop_samples": 64600,
+        "sample_rate": 16000,
+        "embedding": "after layer_norm, L2 normalized",
+        "source_sha256": {
+          "model/b_linear.py": "c2cbcf898f1905c9c6ee8b20ef4514c4af7cb343abbf35e2dbd1fd526ad3459f",
+          "model/loss.py": "164be4161b57a7899ef7b289e005ab80d12da373922d57e9e021844ea828b1ac",
+          "train.py": "b7b98a182a4946c479f477b7110e1c4a49be53ee6b6e89ef1b4bc4785374873f"
+        }
+      },
+      "overall": {
+        "baseline": {
+          "sample_eer_pct": 2.0000000000000018,
+          "bona_tail_n": 163,
+          "bona_mean_score": 0.8780089020729065,
+          "spoof_mean_score": -0.9406262040138245,
+          "bona_mean_delta": 0.0,
+          "spoof_mean_delta": 0.0,
+          "bona_mean_absolute_delta": 0.0,
+          "spoof_mean_absolute_delta": 0.0,
+          "bona_reject_at_baseline_threshold_n": 21,
+          "spoof_accept_at_baseline_threshold_n": 20
+        },
+        "zero_edges_40dB": {
+          "sample_eer_pct": 1.9000000000000017,
+          "bona_tail_n": 186,
+          "bona_mean_score": 0.8648186326026917,
+          "spoof_mean_score": -0.9469782114028931,
+          "bona_mean_delta": -0.01319029089063406,
+          "spoof_mean_delta": -0.006351985037326813,
+          "bona_mean_absolute_delta": 0.01945107989013195,
+          "spoof_mean_absolute_delta": 0.007750854827463627,
+          "bona_reject_at_baseline_threshold_n": 21,
+          "spoof_accept_at_baseline_threshold_n": 14
+        },
+        "permute_edges_40dB": {
+          "sample_eer_pct": 1.8000000000000016,
+          "bona_tail_n": 191,
+          "bona_mean_score": 0.8530380725860596,
+          "spoof_mean_score": -0.9460092186927795,
+          "bona_mean_delta": -0.024970799684524536,
+          "spoof_mean_delta": -0.005383021663874388,
+          "bona_mean_absolute_delta": 0.03245938941836357,
+          "spoof_mean_absolute_delta": 0.007772041019052267,
+          "bona_reject_at_baseline_threshold_n": 25,
+          "spoof_accept_at_baseline_threshold_n": 12
+        },
+        "rms_matched_noise_edges_40dB": {
+          "sample_eer_pct": 1.7999999999999998,
+          "bona_tail_n": 191,
+          "bona_mean_score": 0.8513606190681458,
+          "spoof_mean_score": -0.9460511207580566,
+          "bona_mean_delta": -0.02664831094443798,
+          "spoof_mean_delta": -0.0054249633103609085,
+          "bona_mean_absolute_delta": 0.03235657513141632,
+          "spoof_mean_absolute_delta": 0.0075337253510952,
+          "bona_reject_at_baseline_threshold_n": 26,
+          "spoof_accept_at_baseline_threshold_n": 12
+        },
+        "permute_edges_20dB": {
+          "sample_eer_pct": 1.9000000000000017,
+          "bona_tail_n": 277,
+          "bona_mean_score": 0.7819262146949768,
+          "spoof_mean_score": -0.9534063339233398,
+          "bona_mean_delta": -0.09608274698257446,
+          "spoof_mean_delta": -0.012780115008354187,
+          "bona_mean_absolute_delta": 0.09877484291791916,
+          "spoof_mean_absolute_delta": 0.013865407556295395,
+          "bona_reject_at_baseline_threshold_n": 42,
+          "spoof_accept_at_baseline_threshold_n": 10
+        }
+      },
+      "by_source": {
+        "baseline": {
+          "asvspoof": {
+            "bona_n": 525,
+            "bona_tail_n": 3,
+            "bona_mean_delta": 0.0
+          },
+          "vcc2018": {
+            "bona_n": 246,
+            "bona_tail_n": 124,
+            "bona_mean_delta": 0.0
+          },
+          "vcc2020": {
+            "bona_n": 229,
+            "bona_tail_n": 36,
+            "bona_mean_delta": 0.0
+          }
+        },
+        "zero_edges_40dB": {
+          "asvspoof": {
+            "bona_n": 525,
+            "bona_tail_n": 10,
+            "bona_mean_delta": -0.012305855751037598
+          },
+          "vcc2018": {
+            "bona_n": 246,
+            "bona_tail_n": 132,
+            "bona_mean_delta": -0.012118533253669739
+          },
+          "vcc2020": {
+            "bona_n": 229,
+            "bona_tail_n": 44,
+            "bona_mean_delta": -0.016369249671697617
+          }
+        },
+        "permute_edges_40dB": {
+          "asvspoof": {
+            "bona_n": 525,
+            "bona_tail_n": 17,
+            "bona_mean_delta": -0.02476554550230503
+          },
+          "vcc2018": {
+            "bona_n": 246,
+            "bona_tail_n": 130,
+            "bona_mean_delta": -0.030870992690324783
+          },
+          "vcc2020": {
+            "bona_n": 229,
+            "bona_tail_n": 44,
+            "bona_mean_delta": -0.019103173166513443
+          }
+        },
+        "rms_matched_noise_edges_40dB": {
+          "asvspoof": {
+            "bona_n": 525,
+            "bona_tail_n": 18,
+            "bona_mean_delta": -0.024553341791033745
+          },
+          "vcc2018": {
+            "bona_n": 246,
+            "bona_tail_n": 131,
+            "bona_mean_delta": -0.03643837571144104
+          },
+          "vcc2020": {
+            "bona_n": 229,
+            "bona_tail_n": 42,
+            "bona_mean_delta": -0.02093435451388359
+          }
+        },
+        "permute_edges_20dB": {
+          "asvspoof": {
+            "bona_n": 525,
+            "bona_tail_n": 79,
+            "bona_mean_delta": -0.10491852462291718
+          },
+          "vcc2018": {
+            "bona_n": 246,
+            "bona_tail_n": 143,
+            "bona_mean_delta": -0.10625285655260086
+          },
+          "vcc2020": {
+            "bona_n": 229,
+            "bona_tail_n": 55,
+            "bona_mean_delta": -0.06490100175142288
+          }
+        }
+      },
+      "selected_fraction": {
+        "40dB": {
+          "bonafide": {
+            "affected_n": 956,
+            "median_fraction": 0.1238390092879257,
+            "mean_fraction": 0.18063653250773992
+          },
+          "spoof": {
+            "affected_n": 881,
+            "median_fraction": 0.039628482972136225,
+            "mean_fraction": 0.05388854489164086
+          }
+        },
+        "20dB": {
+          "bonafide": {
+            "affected_n": 997,
+            "median_fraction": 0.20804953560371517,
+            "mean_fraction": 0.25974179566563466
+          },
+          "spoof": {
+            "affected_n": 989,
+            "median_fraction": 0.058823529411764705,
+            "mean_fraction": 0.08152755417956656
+          }
+        }
+      },
+      "energy_preservation_max_error": 2.433956898875711e-13,
+      "permutation_mean_max_error": 0.0,
+      "baseline_reproduction_max_error": 7.078051567077637e-06,
+      "limitations": [
+        "Only leading/trailing regions below the relative frame-RMS threshold are modified; no duration or padding changes.",
+        "40dB below peak-frame RMS is a stricter low-energy proxy, not certified speech/non-speech annotation.",
+        "Within-frame permutation preserves sample histogram, frame RMS, mean, duration and placement, but changes temporal/spectral texture.",
+        "RMS-matched white noise preserves per-frame energy but changes waveform statistics and can be out of distribution.",
+        "Frozen model sensitivity does not prove that the cue is spurious; genuine synthesis artifacts can occur in low-energy regions.",
+        "Same balanced evaluation sample, not official full-set EER; no training or source modifications."
+      ]
+    },
+    "provenance.json": {
+      "per_class": 1000,
+      "batch_size": 4,
+      "seed": 1,
+      "cpu": false,
+      "out": "/results/analysis/EBM80_21DF_quiet_texture",
+      "workers": 2,
+      "plm_path": "/home/mentee/.cache/huggingface/hub/models--facebook--wav2vec2-xls-r-300m/snapshots/1a640f32ac3e39899438a2931f9924c02f080a54",
+      "checkpoint": "/home/mentee/results/CM/LA/EBM/model/BestCLS_80_21DF.pt",
+      "checkpoint_sha256": "30043199664bc84da780654e01fd430235f647b894e7832a52f777c7fee5939a",
+      "protocol_sha256": "70e0e7d5964562cb0166e79143f73beaeaf77ee18e799fa4156355a57006d800",
+      "population": {
+        "0": 519059,
+        "1": 14869
+      },
+      "torch_version": "2.6.0+cu124",
+      "sampling": "uniform random within label, without replacement",
+      "crop_samples": 64600,
+      "sample_rate": 16000,
+      "embedding": "after layer_norm, L2 normalized",
+      "source_sha256": {
+        "model/b_linear.py": "c2cbcf898f1905c9c6ee8b20ef4514c4af7cb343abbf35e2dbd1fd526ad3459f",
+        "model/loss.py": "164be4161b57a7899ef7b289e005ab80d12da373922d57e9e021844ea828b1ac",
+        "train.py": "b7b98a182a4946c479f477b7110e1c4a49be53ee6b6e89ef1b4bc4785374873f"
+      }
+    }
+  },
+  "method_documents": {}
+}

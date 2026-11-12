@@ -1,0 +1,2075 @@
+{
+  "scope": "TRAIN policy + exact production sampler replay; not generated waveform measurements, not model performance",
+  "cache_status_at_analysis": "waiting for existing DF evaluation and comparison; no speech cache yet",
+  "policy_sha256": "d42b72f72696c3e68d540579e871d5c69a49ba6e79a75f6910af56286912522b",
+  "protocol_sha256": "65a289e4009400b42bb4f1e47ac60938d93f7f595452d1f220d35defc3de8ab8",
+  "original": [
+    {
+      "label": 1,
+      "originals": 2580,
+      "mean_seconds": 3.388754820736434,
+      "median_seconds": 3.24003125,
+      "under2_percent": 4.224806201550388,
+      "under1_5_percent": 0.3488372093023256,
+      "hours": 2.4286076215277776,
+      "min_seconds": 1.362375,
+      "max_seconds": 11.129375
+    },
+    {
+      "label": 0,
+      "originals": 22800,
+      "mean_seconds": 3.430018851425439,
+      "median_seconds": 3.1970625000000004,
+      "under2_percent": 14.065789473684209,
+      "under1_5_percent": 4.074561403508771,
+      "hours": 21.723452725694447,
+      "min_seconds": 0.6524375,
+      "max_seconds": 13.1879375
+    }
+  ],
+  "expected": [
+    {
+      "label": 1,
+      "mean_seconds": 3.4033242791207674,
+      "under2_percent": 8.907894736842106,
+      "under1_5_percent": 1.5891472868217058,
+      "min_seconds": 0.9110625,
+      "max_seconds": 12.115
+    },
+    {
+      "label": 0,
+      "mean_seconds": 3.4005763416080166,
+      "under2_percent": 8.93421052631579,
+      "under1_5_percent": 1.6154630762953897,
+      "min_seconds": 0.6524375,
+      "max_seconds": 12.115
+    }
+  ],
+  "operations": [
+    {
+      "label": 1,
+      "cache_variants": 21499,
+      "source_single_variant_percent": 0.0,
+      "variants_per_source_median": 9.0,
+      "variants_per_source_max": 10,
+      "effective_variants_per_source_median": 7.840170613693222,
+      "slowed_percent": 46.26897184822521,
+      "sped_up_percent": 53.7047123623011,
+      "identity_rate_percent": 0.02631578947368421,
+      "cropped_percent": 1.4433904528763772,
+      "mean_crop_percent": 0.048731239987722455,
+      "maximum_crop_percent": 19.75410588127351,
+      "rate_min": 0.8578235817410541,
+      "rate_max": 1.2,
+      "mean_rate": 1.0186464257181875
+    },
+    {
+      "label": 0,
+      "cache_variants": 25081,
+      "source_single_variant_percent": 89.99561403508773,
+      "variants_per_source_median": 1.0,
+      "variants_per_source_max": 2,
+      "effective_variants_per_source_median": 1.0,
+      "slowed_percent": 53.7047123623011,
+      "sped_up_percent": 46.26897184822521,
+      "identity_rate_percent": 0.02631578947368421,
+      "cropped_percent": 0.0,
+      "mean_crop_percent": 0.0,
+      "maximum_crop_percent": 0.0,
+      "rate_min": 0.8,
+      "rate_max": 1.165740860108301,
+      "mean_rate": 0.9859485326243393
+    }
+  ],
+  "before_similarity": {
+    "bin_seconds": 0.1,
+    "overlap_percent": 79.64698082413484,
+    "KS": 0.12562729498173358,
+    "W1_seconds": 0.3536334262163662,
+    "JS_divergence_bits": 0.06287445442254647
+  },
+  "expected_similarity": [
+    {
+      "bin_seconds": 0.05,
+      "overlap_percent": 99.9736842105015,
+      "KS": 0.00030701754386062985,
+      "W1_seconds": 0.0027479375127404523,
+      "JS_divergence_bits": 0.0002631578947369256
+    },
+    {
+      "bin_seconds": 0.1,
+      "overlap_percent": 99.97368421050167,
+      "KS": 0.00030701754386062985,
+      "W1_seconds": 0.0027479375127404523,
+      "JS_divergence_bits": 0.00026315789473694326
+    },
+    {
+      "bin_seconds": 0.25,
+      "overlap_percent": 99.97368421050167,
+      "KS": 0.00030701754386062985,
+      "W1_seconds": 0.0027479375127404523,
+      "JS_divergence_bits": 0.0002631578947369003
+    }
+  ],
+  "epoch1_OC_similarity": {
+    "bin_seconds": 0.1,
+    "overlap_percent": 99.30555555554086,
+    "KS": 0.0015003429355533449,
+    "W1_seconds": 0.00412712995124067,
+    "JS_divergence_bits": 0.0010624590038786357
+  },
+  "cumulative20_OC_similarity": {
+    "0.05": {
+      "bin_seconds": 0.05,
+      "overlap_percent": 99.68921467772999,
+      "KS": 0.0006322873822551256,
+      "W1_seconds": 0.003017815638960683,
+      "JS_divergence_bits": 0.00036074352376854634
+    },
+    "0.1": {
+      "bin_seconds": 0.1,
+      "overlap_percent": 99.78416495207857,
+      "KS": 0.0006322873822551256,
+      "W1_seconds": 0.003017815638960683,
+      "JS_divergence_bits": 0.00032641153541613485
+    },
+    "0.25": {
+      "bin_seconds": 0.25,
+      "overlap_percent": 99.88511659817657,
+      "KS": 0.0006322873822551256,
+      "W1_seconds": 0.003017815638960683,
+      "JS_divergence_bits": 0.00027941058162731723
+    }
+  },
+  "bank_maximum_original_timeline_coverage": {
+    "1": {
+      "UIDs": 2580,
+      "total_original_seconds": 8742.9874375,
+      "unique_retained_seconds": 8742.580375,
+      "duration_weighted_retention_percent": 99.99534412575896,
+      "mean_per_UID_retention_percent": 99.98951728595685,
+      "worst_UID_retention_percent": 96.0308267997149,
+      "UIDs_with_unseen_samples": 34
+    },
+    "0": {
+      "UIDs": 22800,
+      "total_original_seconds": 78204.4298125,
+      "unique_retained_seconds": 78204.4298125,
+      "duration_weighted_retention_percent": 100.0,
+      "mean_per_UID_retention_percent": 100.0,
+      "worst_UID_retention_percent": 100.0,
+      "UIDs_with_unseen_samples": 0
+    }
+  },
+  "epoch_results": [
+    {
+      "epoch": 1,
+      "retained": [
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.0819375,
+          "duration_weighted_retention_percent": 99.97820539016415,
+          "mean_per_UID_retention_percent": 99.95105530565922,
+          "worst_UID_retention_percent": 80.53032388292503,
+          "UIDs_with_unseen_samples": 37
+        },
+        {
+          "UIDs": 22800,
+          "total_original_seconds": 78204.4298125,
+          "unique_retained_seconds": 78204.4298125,
+          "duration_weighted_retention_percent": 100.0,
+          "mean_per_UID_retention_percent": 100.0,
+          "worst_UID_retention_percent": 100.0,
+          "UIDs_with_unseen_samples": 0
+        },
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.094875,
+          "duration_weighted_retention_percent": 99.97835336590005,
+          "mean_per_UID_retention_percent": 99.95138661010073,
+          "worst_UID_retention_percent": 82.01211120286264,
+          "UIDs_with_unseen_samples": 38
+        }
+      ],
+      "cumulative_retained": [
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.0819375,
+          "duration_weighted_retention_percent": 99.97820539016415,
+          "mean_per_UID_retention_percent": 99.95105530565922,
+          "worst_UID_retention_percent": 80.53032388292503,
+          "UIDs_with_unseen_samples": 37
+        },
+        {
+          "UIDs": 22800,
+          "total_original_seconds": 78204.4298125,
+          "unique_retained_seconds": 78204.4298125,
+          "duration_weighted_retention_percent": 100.0,
+          "mean_per_UID_retention_percent": 100.0,
+          "worst_UID_retention_percent": 100.0,
+          "UIDs_with_unseen_samples": 0
+        },
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.094875,
+          "duration_weighted_retention_percent": 99.97835336590005,
+          "mean_per_UID_retention_percent": 99.95138661010073,
+          "worst_UID_retention_percent": 82.01211120286264,
+          "UIDs_with_unseen_samples": 38
+        }
+      ],
+      "cumulative_unique_variants": [
+        2592,
+        22820,
+        2591
+      ],
+      "OC_length_similarity": {
+        "bin_seconds": 0.1,
+        "overlap_percent": 99.30555555554086,
+        "KS": 0.0015003429355533449,
+        "W1_seconds": 0.00412712995124067,
+        "JS_divergence_bits": 0.0010624590038786357
+      },
+      "OC_plus_BPL_bona_retention": {
+        "UIDs": 2580,
+        "total_original_seconds": 8742.9874375,
+        "unique_retained_seconds": 8741.692375,
+        "duration_weighted_retention_percent": 99.98518741437915,
+        "mean_per_UID_retention_percent": 99.9664612238997,
+        "worst_UID_retention_percent": 85.931931575196,
+        "UIDs_with_unseen_samples": 36
+      }
+    },
+    {
+      "epoch": 2,
+      "retained": [
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.0385,
+          "duration_weighted_retention_percent": 99.97770856341803,
+          "mean_per_UID_retention_percent": 99.94975252084224,
+          "worst_UID_retention_percent": 80.53032388292503,
+          "UIDs_with_unseen_samples": 37
+        },
+        {
+          "UIDs": 22800,
+          "total_original_seconds": 78204.4298125,
+          "unique_retained_seconds": 78204.4298125,
+          "duration_weighted_retention_percent": 100.0,
+          "mean_per_UID_retention_percent": 100.0,
+          "worst_UID_retention_percent": 100.0,
+          "UIDs_with_unseen_samples": 0
+        },
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.1246875,
+          "duration_weighted_retention_percent": 99.97869435346539,
+          "mean_per_UID_retention_percent": 99.95217589288131,
+          "worst_UID_retention_percent": 82.01211120286264,
+          "UIDs_with_unseen_samples": 37
+        }
+      ],
+      "cumulative_retained": [
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.5431875,
+          "duration_weighted_retention_percent": 99.98348104683525,
+          "mean_per_UID_retention_percent": 99.96269249281855,
+          "worst_UID_retention_percent": 80.53032388292503,
+          "UIDs_with_unseen_samples": 36
+        },
+        {
+          "UIDs": 22800,
+          "total_original_seconds": 78204.4298125,
+          "unique_retained_seconds": 78204.4298125,
+          "duration_weighted_retention_percent": 100.0,
+          "mean_per_UID_retention_percent": 100.0,
+          "worst_UID_retention_percent": 100.0,
+          "UIDs_with_unseen_samples": 0
+        },
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.4688125,
+          "duration_weighted_retention_percent": 99.9826303650685,
+          "mean_per_UID_retention_percent": 99.96082430145113,
+          "worst_UID_retention_percent": 82.01211120286264,
+          "UIDs_with_unseen_samples": 36
+        }
+      ],
+      "cumulative_unique_variants": [
+        4803,
+        23638,
+        4796
+      ],
+      "OC_length_similarity": {
+        "bin_seconds": 0.1,
+        "overlap_percent": 99.21553497940707,
+        "KS": 0.0024434156379312677,
+        "W1_seconds": 0.0034532080547559204,
+        "JS_divergence_bits": 0.0011780355333882615
+      },
+      "OC_plus_BPL_bona_retention": {
+        "UIDs": 2580,
+        "total_original_seconds": 8742.9874375,
+        "unique_retained_seconds": 8741.559375,
+        "duration_weighted_retention_percent": 99.98366619521978,
+        "mean_per_UID_retention_percent": 99.96342599571413,
+        "worst_UID_retention_percent": 85.6824661439772,
+        "UIDs_with_unseen_samples": 36
+      }
+    },
+    {
+      "epoch": 3,
+      "retained": [
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.0674375,
+          "duration_weighted_retention_percent": 99.97803954296258,
+          "mean_per_UID_retention_percent": 99.95060591888563,
+          "worst_UID_retention_percent": 80.2458941187265,
+          "UIDs_with_unseen_samples": 38
+        },
+        {
+          "UIDs": 22800,
+          "total_original_seconds": 78204.4298125,
+          "unique_retained_seconds": 78204.4298125,
+          "duration_weighted_retention_percent": 100.0,
+          "mean_per_UID_retention_percent": 100.0,
+          "worst_UID_retention_percent": 100.0,
+          "UIDs_with_unseen_samples": 0
+        },
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.175125,
+          "duration_weighted_retention_percent": 99.97927124437778,
+          "mean_per_UID_retention_percent": 99.95355337237012,
+          "worst_UID_retention_percent": 81.92494724286632,
+          "UIDs_with_unseen_samples": 37
+        }
+      ],
+      "cumulative_retained": [
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.7523125,
+          "duration_weighted_retention_percent": 99.98587296380295,
+          "mean_per_UID_retention_percent": 99.96797727868463,
+          "worst_UID_retention_percent": 81.65886778603542,
+          "UIDs_with_unseen_samples": 36
+        },
+        {
+          "UIDs": 22800,
+          "total_original_seconds": 78204.4298125,
+          "unique_retained_seconds": 78204.4298125,
+          "duration_weighted_retention_percent": 100.0,
+          "mean_per_UID_retention_percent": 100.0,
+          "worst_UID_retention_percent": 100.0,
+          "UIDs_with_unseen_samples": 0
+        },
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.72475,
+          "duration_weighted_retention_percent": 99.9855577111482,
+          "mean_per_UID_retention_percent": 99.96750956189052,
+          "worst_UID_retention_percent": 83.3562712175429,
+          "UIDs_with_unseen_samples": 36
+        }
+      ],
+      "cumulative_unique_variants": [
+        6713,
+        24023,
+        6662
+      ],
+      "OC_length_similarity": {
+        "bin_seconds": 0.1,
+        "overlap_percent": 99.15980795609201,
+        "KS": 0.0016289437586231026,
+        "W1_seconds": 0.003666655950040319,
+        "JS_divergence_bits": 0.0013419868085225177
+      },
+      "OC_plus_BPL_bona_retention": {
+        "UIDs": 2580,
+        "total_original_seconds": 8742.9874375,
+        "unique_retained_seconds": 8741.6395,
+        "duration_weighted_retention_percent": 99.98458264398026,
+        "mean_per_UID_retention_percent": 99.96525538986957,
+        "worst_UID_retention_percent": 84.4572896596018,
+        "UIDs_with_unseen_samples": 37
+      }
+    },
+    {
+      "epoch": 4,
+      "retained": [
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.12325,
+          "duration_weighted_retention_percent": 99.97867791171694,
+          "mean_per_UID_retention_percent": 99.95212516371512,
+          "worst_UID_retention_percent": 82.01211120286264,
+          "UIDs_with_unseen_samples": 36
+        },
+        {
+          "UIDs": 22800,
+          "total_original_seconds": 78204.4298125,
+          "unique_retained_seconds": 78204.4298125,
+          "duration_weighted_retention_percent": 100.0,
+          "mean_per_UID_retention_percent": 100.0,
+          "worst_UID_retention_percent": 100.0,
+          "UIDs_with_unseen_samples": 0
+        },
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.07225,
+          "duration_weighted_retention_percent": 99.9780945870769,
+          "mean_per_UID_retention_percent": 99.95071780518823,
+          "worst_UID_retention_percent": 80.97990641343242,
+          "UIDs_with_unseen_samples": 39
+        }
+      ],
+      "cumulative_retained": [
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8742.0471875,
+          "duration_weighted_retention_percent": 99.98924566680758,
+          "mean_per_UID_retention_percent": 99.97577123369012,
+          "worst_UID_retention_percent": 87.3015873015873,
+          "UIDs_with_unseen_samples": 35
+        },
+        {
+          "UIDs": 22800,
+          "total_original_seconds": 78204.4298125,
+          "unique_retained_seconds": 78204.4298125,
+          "duration_weighted_retention_percent": 100.0,
+          "mean_per_UID_retention_percent": 100.0,
+          "worst_UID_retention_percent": 100.0,
+          "UIDs_with_unseen_samples": 0
+        },
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8742.150875,
+          "duration_weighted_retention_percent": 99.99043161727064,
+          "mean_per_UID_retention_percent": 99.97900728282231,
+          "worst_UID_retention_percent": 95.55190917557319,
+          "UIDs_with_unseen_samples": 36
+        }
+      ],
+      "cumulative_unique_variants": [
+        8355,
+        24258,
+        8319
+      ],
+      "OC_length_similarity": {
+        "bin_seconds": 0.1,
+        "overlap_percent": 99.2584019204234,
+        "KS": 0.0012431412894245986,
+        "W1_seconds": 0.003820931391400142,
+        "JS_divergence_bits": 0.0011208734236863747
+      },
+      "OC_plus_BPL_bona_retention": {
+        "UIDs": 2580,
+        "total_original_seconds": 8742.9874375,
+        "unique_retained_seconds": 8741.8681875,
+        "duration_weighted_retention_percent": 99.98719831169836,
+        "mean_per_UID_retention_percent": 99.97136178025775,
+        "worst_UID_retention_percent": 82.97843905915894,
+        "UIDs_with_unseen_samples": 36
+      }
+    },
+    {
+      "epoch": 5,
+      "retained": [
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.109875,
+          "duration_weighted_retention_percent": 99.97852493197065,
+          "mean_per_UID_retention_percent": 99.95166975306364,
+          "worst_UID_retention_percent": 80.53032388292503,
+          "UIDs_with_unseen_samples": 35
+        },
+        {
+          "UIDs": 22800,
+          "total_original_seconds": 78204.4298125,
+          "unique_retained_seconds": 78204.4298125,
+          "duration_weighted_retention_percent": 100.0,
+          "mean_per_UID_retention_percent": 100.0,
+          "worst_UID_retention_percent": 100.0,
+          "UIDs_with_unseen_samples": 0
+        },
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.186125,
+          "duration_weighted_retention_percent": 99.97939705949624,
+          "mean_per_UID_retention_percent": 99.95378791253306,
+          "worst_UID_retention_percent": 83.42049729332966,
+          "UIDs_with_unseen_samples": 37
+        }
+      ],
+      "cumulative_retained": [
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8742.1341875,
+          "duration_weighted_retention_percent": 99.9902407500171,
+          "mean_per_UID_retention_percent": 99.97805605147924,
+          "worst_UID_retention_percent": 87.3015873015873,
+          "UIDs_with_unseen_samples": 34
+        },
+        {
+          "UIDs": 22800,
+          "total_original_seconds": 78204.4298125,
+          "unique_retained_seconds": 78204.4298125,
+          "duration_weighted_retention_percent": 100.0,
+          "mean_per_UID_retention_percent": 100.0,
+          "worst_UID_retention_percent": 100.0,
+          "UIDs_with_unseen_samples": 0
+        },
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8742.2598125,
+          "duration_weighted_retention_percent": 99.9916776158584,
+          "mean_per_UID_retention_percent": 99.98159885155971,
+          "worst_UID_retention_percent": 95.55190917557319,
+          "UIDs_with_unseen_samples": 36
+        }
+      ],
+      "cumulative_unique_variants": [
+        9754,
+        24390,
+        9768
+      ],
+      "OC_length_similarity": {
+        "bin_seconds": 0.1,
+        "overlap_percent": 99.24125514401948,
+        "KS": 0.0022290809327150662,
+        "W1_seconds": 0.003753844628666556,
+        "JS_divergence_bits": 0.0010836016457584855
+      },
+      "OC_plus_BPL_bona_retention": {
+        "UIDs": 2580,
+        "total_original_seconds": 8742.9874375,
+        "unique_retained_seconds": 8741.6658125,
+        "duration_weighted_retention_percent": 99.98488359946245,
+        "mean_per_UID_retention_percent": 99.96583436044259,
+        "worst_UID_retention_percent": 83.42049729332966,
+        "UIDs_with_unseen_samples": 34
+      }
+    },
+    {
+      "epoch": 6,
+      "retained": [
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.132,
+          "duration_weighted_retention_percent": 99.9787779919248,
+          "mean_per_UID_retention_percent": 99.95234274820699,
+          "worst_UID_retention_percent": 83.42049729332966,
+          "UIDs_with_unseen_samples": 37
+        },
+        {
+          "UIDs": 22800,
+          "total_original_seconds": 78204.4298125,
+          "unique_retained_seconds": 78204.4298125,
+          "duration_weighted_retention_percent": 100.0,
+          "mean_per_UID_retention_percent": 100.0,
+          "worst_UID_retention_percent": 100.0,
+          "UIDs_with_unseen_samples": 0
+        },
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.052875,
+          "duration_weighted_retention_percent": 99.97787298090236,
+          "mean_per_UID_retention_percent": 99.95018007414114,
+          "worst_UID_retention_percent": 80.53032388292503,
+          "UIDs_with_unseen_samples": 38
+        }
+      ],
+      "cumulative_retained": [
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8742.176875,
+          "duration_weighted_retention_percent": 99.99072899845969,
+          "mean_per_UID_retention_percent": 99.97914387832547,
+          "worst_UID_retention_percent": 87.78787044682998,
+          "UIDs_with_unseen_samples": 34
+        },
+        {
+          "UIDs": 22800,
+          "total_original_seconds": 78204.4298125,
+          "unique_retained_seconds": 78204.4298125,
+          "duration_weighted_retention_percent": 100.0,
+          "mean_per_UID_retention_percent": 100.0,
+          "worst_UID_retention_percent": 100.0,
+          "UIDs_with_unseen_samples": 0
+        },
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8742.321625,
+          "duration_weighted_retention_percent": 99.99238461104102,
+          "mean_per_UID_retention_percent": 99.98317837229926,
+          "worst_UID_retention_percent": 96.0308267997149,
+          "UIDs_with_unseen_samples": 35
+        }
+      ],
+      "cumulative_unique_variants": [
+        10961,
+        24478,
+        11002
+      ],
+      "OC_length_similarity": {
+        "bin_seconds": 0.1,
+        "overlap_percent": 99.22839506171542,
+        "KS": 0.001457475994546903,
+        "W1_seconds": 0.0032299945345640457,
+        "JS_divergence_bits": 0.0010597554126179445
+      },
+      "OC_plus_BPL_bona_retention": {
+        "UIDs": 2580,
+        "total_original_seconds": 8742.9874375,
+        "unique_retained_seconds": 8741.5503125,
+        "duration_weighted_retention_percent": 99.9835625407188,
+        "mean_per_UID_retention_percent": 99.96278145836264,
+        "worst_UID_retention_percent": 83.42049729332966,
+        "UIDs_with_unseen_samples": 35
+      }
+    },
+    {
+      "epoch": 7,
+      "retained": [
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.104625,
+          "duration_weighted_retention_percent": 99.97846488384594,
+          "mean_per_UID_retention_percent": 99.95173408171446,
+          "worst_UID_retention_percent": 83.42049729332966,
+          "UIDs_with_unseen_samples": 37
+        },
+        {
+          "UIDs": 22800,
+          "total_original_seconds": 78204.4298125,
+          "unique_retained_seconds": 78204.4298125,
+          "duration_weighted_retention_percent": 100.0,
+          "mean_per_UID_retention_percent": 100.0,
+          "worst_UID_retention_percent": 100.0,
+          "UIDs_with_unseen_samples": 0
+        },
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.0504375,
+          "duration_weighted_retention_percent": 99.97784510141588,
+          "mean_per_UID_retention_percent": 99.95013381308999,
+          "worst_UID_retention_percent": 80.41104688503532,
+          "UIDs_with_unseen_samples": 37
+        }
+      ],
+      "cumulative_retained": [
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8742.2033125,
+          "duration_weighted_retention_percent": 99.99103138365913,
+          "mean_per_UID_retention_percent": 99.97981966071399,
+          "worst_UID_retention_percent": 87.78787044682998,
+          "UIDs_with_unseen_samples": 34
+        },
+        {
+          "UIDs": 22800,
+          "total_original_seconds": 78204.4298125,
+          "unique_retained_seconds": 78204.4298125,
+          "duration_weighted_retention_percent": 100.0,
+          "mean_per_UID_retention_percent": 100.0,
+          "worst_UID_retention_percent": 100.0,
+          "UIDs_with_unseen_samples": 0
+        },
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8742.376125,
+          "duration_weighted_retention_percent": 99.99300796776423,
+          "mean_per_UID_retention_percent": 99.98457583241044,
+          "worst_UID_retention_percent": 96.0308267997149,
+          "UIDs_with_unseen_samples": 35
+        }
+      ],
+      "cumulative_unique_variants": [
+        12032,
+        24566,
+        12110
+      ],
+      "OC_length_similarity": {
+        "bin_seconds": 0.1,
+        "overlap_percent": 99.24982853222112,
+        "KS": 0.00222908093285773,
+        "W1_seconds": 0.004363715277897228,
+        "JS_divergence_bits": 0.0011553827138203114
+      },
+      "OC_plus_BPL_bona_retention": {
+        "UIDs": 2580,
+        "total_original_seconds": 8742.9874375,
+        "unique_retained_seconds": 8741.4471875,
+        "duration_weighted_retention_percent": 99.98238302398339,
+        "mean_per_UID_retention_percent": 99.96039590949441,
+        "worst_UID_retention_percent": 83.42049729332966,
+        "UIDs_with_unseen_samples": 36
+      }
+    },
+    {
+      "epoch": 8,
+      "retained": [
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.117875,
+          "duration_weighted_retention_percent": 99.97861643387498,
+          "mean_per_UID_retention_percent": 99.9519963591226,
+          "worst_UID_retention_percent": 80.33305807872281,
+          "UIDs_with_unseen_samples": 36
+        },
+        {
+          "UIDs": 22800,
+          "total_original_seconds": 78204.4298125,
+          "unique_retained_seconds": 78204.4298125,
+          "duration_weighted_retention_percent": 100.0,
+          "mean_per_UID_retention_percent": 100.0,
+          "worst_UID_retention_percent": 100.0,
+          "UIDs_with_unseen_samples": 0
+        },
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.1751875,
+          "duration_weighted_retention_percent": 99.97927195923641,
+          "mean_per_UID_retention_percent": 99.9534784161216,
+          "worst_UID_retention_percent": 80.33305807872281,
+          "UIDs_with_unseen_samples": 37
+        }
+      ],
+      "cumulative_retained": [
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8742.344125,
+          "duration_weighted_retention_percent": 99.99264196014693,
+          "mean_per_UID_retention_percent": 99.98370555732612,
+          "worst_UID_retention_percent": 95.72896596017983,
+          "UIDs_with_unseen_samples": 34
+        },
+        {
+          "UIDs": 22800,
+          "total_original_seconds": 78204.4298125,
+          "unique_retained_seconds": 78204.4298125,
+          "duration_weighted_retention_percent": 100.0,
+          "mean_per_UID_retention_percent": 100.0,
+          "worst_UID_retention_percent": 100.0,
+          "UIDs_with_unseen_samples": 0
+        },
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8742.4185625,
+          "duration_weighted_retention_percent": 99.9934933567723,
+          "mean_per_UID_retention_percent": 99.98557887574259,
+          "worst_UID_retention_percent": 96.0308267997149,
+          "UIDs_with_unseen_samples": 34
+        }
+      ],
+      "cumulative_unique_variants": [
+        13002,
+        24638,
+        13070
+      ],
+      "OC_length_similarity": {
+        "bin_seconds": 0.1,
+        "overlap_percent": 99.16409465019211,
+        "KS": 0.002014746227773423,
+        "W1_seconds": 0.004231888717511957,
+        "JS_divergence_bits": 0.0010634497231926806
+      },
+      "OC_plus_BPL_bona_retention": {
+        "UIDs": 2580,
+        "total_original_seconds": 8742.9874375,
+        "unique_retained_seconds": 8741.5418125,
+        "duration_weighted_retention_percent": 99.98346531994545,
+        "mean_per_UID_retention_percent": 99.96247733317279,
+        "worst_UID_retention_percent": 80.33305807872281,
+        "UIDs_with_unseen_samples": 35
+      }
+    },
+    {
+      "epoch": 9,
+      "retained": [
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.0008125,
+          "duration_weighted_retention_percent": 99.97727750366563,
+          "mean_per_UID_retention_percent": 99.94869497487451,
+          "worst_UID_retention_percent": 80.41104688503532,
+          "UIDs_with_unseen_samples": 38
+        },
+        {
+          "UIDs": 22800,
+          "total_original_seconds": 78204.4298125,
+          "unique_retained_seconds": 78204.4298125,
+          "duration_weighted_retention_percent": 100.0,
+          "mean_per_UID_retention_percent": 100.0,
+          "worst_UID_retention_percent": 100.0,
+          "UIDs_with_unseen_samples": 0
+        },
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.0604375,
+          "duration_weighted_retention_percent": 99.9779594787963,
+          "mean_per_UID_retention_percent": 99.95040113215497,
+          "worst_UID_retention_percent": 80.2458941187265,
+          "UIDs_with_unseen_samples": 38
+        }
+      ],
+      "cumulative_retained": [
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8742.40325,
+          "duration_weighted_retention_percent": 99.99331821640857,
+          "mean_per_UID_retention_percent": 99.98517275851547,
+          "worst_UID_retention_percent": 95.72896596017983,
+          "UIDs_with_unseen_samples": 34
+        },
+        {
+          "UIDs": 22800,
+          "total_original_seconds": 78204.4298125,
+          "unique_retained_seconds": 78204.4298125,
+          "duration_weighted_retention_percent": 100.0,
+          "mean_per_UID_retention_percent": 100.0,
+          "worst_UID_retention_percent": 100.0,
+          "UIDs_with_unseen_samples": 0
+        },
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8742.4408125,
+          "duration_weighted_retention_percent": 99.99374784644371,
+          "mean_per_UID_retention_percent": 99.98609857178462,
+          "worst_UID_retention_percent": 96.0308267997149,
+          "UIDs_with_unseen_samples": 34
+        }
+      ],
+      "cumulative_unique_variants": [
+        13809,
+        24680,
+        13891
+      ],
+      "OC_length_similarity": {
+        "bin_seconds": 0.1,
+        "overlap_percent": 99.33127572014993,
+        "KS": 0.001971879286764844,
+        "W1_seconds": 0.004360789609161827,
+        "JS_divergence_bits": 0.0008891256839349917
+      },
+      "OC_plus_BPL_bona_retention": {
+        "UIDs": 2580,
+        "total_original_seconds": 8742.9874375,
+        "unique_retained_seconds": 8741.6400625,
+        "duration_weighted_retention_percent": 99.98458907770791,
+        "mean_per_UID_retention_percent": 99.9652698479142,
+        "worst_UID_retention_percent": 80.41104688503532,
+        "UIDs_with_unseen_samples": 35
+      }
+    },
+    {
+      "epoch": 10,
+      "retained": [
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.1175,
+          "duration_weighted_retention_percent": 99.97861214472321,
+          "mean_per_UID_retention_percent": 99.9519145263356,
+          "worst_UID_retention_percent": 80.33305807872281,
+          "UIDs_with_unseen_samples": 38
+        },
+        {
+          "UIDs": 22800,
+          "total_original_seconds": 78204.4298125,
+          "unique_retained_seconds": 78204.4298125,
+          "duration_weighted_retention_percent": 100.0,
+          "mean_per_UID_retention_percent": 100.0,
+          "worst_UID_retention_percent": 100.0,
+          "UIDs_with_unseen_samples": 0
+        },
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.124,
+          "duration_weighted_retention_percent": 99.97868649002048,
+          "mean_per_UID_retention_percent": 99.95206698817869,
+          "worst_UID_retention_percent": 80.2458941187265,
+          "UIDs_with_unseen_samples": 37
+        }
+      ],
+      "cumulative_retained": [
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8742.4428125,
+          "duration_weighted_retention_percent": 99.99377072191979,
+          "mean_per_UID_retention_percent": 99.98608744786569,
+          "worst_UID_retention_percent": 95.72896596017983,
+          "UIDs_with_unseen_samples": 34
+        },
+        {
+          "UIDs": 22800,
+          "total_original_seconds": 78204.4298125,
+          "unique_retained_seconds": 78204.4298125,
+          "duration_weighted_retention_percent": 100.0,
+          "mean_per_UID_retention_percent": 100.0,
+          "worst_UID_retention_percent": 100.0,
+          "UIDs_with_unseen_samples": 0
+        },
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8742.47975,
+          "duration_weighted_retention_percent": 99.99419320336865,
+          "mean_per_UID_retention_percent": 99.98705006128571,
+          "worst_UID_retention_percent": 96.0308267997149,
+          "UIDs_with_unseen_samples": 34
+        }
+      ],
+      "cumulative_unique_variants": [
+        14543,
+        24718,
+        14639
+      ],
+      "OC_length_similarity": {
+        "bin_seconds": 0.1,
+        "overlap_percent": 99.23696844991917,
+        "KS": 0.0011145404664012967,
+        "W1_seconds": 0.0028320285708448136,
+        "JS_divergence_bits": 0.0010650913733137222
+      },
+      "OC_plus_BPL_bona_retention": {
+        "UIDs": 2580,
+        "total_original_seconds": 8742.9874375,
+        "unique_retained_seconds": 8741.764125,
+        "duration_weighted_retention_percent": 99.98600807208354,
+        "mean_per_UID_retention_percent": 99.96834083402017,
+        "worst_UID_retention_percent": 83.61546685673557,
+        "UIDs_with_unseen_samples": 36
+      }
+    },
+    {
+      "epoch": 11,
+      "retained": [
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.1414375,
+          "duration_weighted_retention_percent": 99.97888593557755,
+          "mean_per_UID_retention_percent": 99.95260240051721,
+          "worst_UID_retention_percent": 80.53032388292503,
+          "UIDs_with_unseen_samples": 38
+        },
+        {
+          "UIDs": 22800,
+          "total_original_seconds": 78204.4298125,
+          "unique_retained_seconds": 78204.4298125,
+          "duration_weighted_retention_percent": 100.0,
+          "mean_per_UID_retention_percent": 100.0,
+          "worst_UID_retention_percent": 100.0,
+          "UIDs_with_unseen_samples": 0
+        },
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.111125,
+          "duration_weighted_retention_percent": 99.97853922914321,
+          "mean_per_UID_retention_percent": 99.9517193011983,
+          "worst_UID_retention_percent": 80.2458941187265,
+          "UIDs_with_unseen_samples": 37
+        }
+      ],
+      "cumulative_retained": [
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8742.4754375,
+          "duration_weighted_retention_percent": 99.99414387812335,
+          "mean_per_UID_retention_percent": 99.98684912517338,
+          "worst_UID_retention_percent": 95.72896596017983,
+          "UIDs_with_unseen_samples": 34
+        },
+        {
+          "UIDs": 22800,
+          "total_original_seconds": 78204.4298125,
+          "unique_retained_seconds": 78204.4298125,
+          "duration_weighted_retention_percent": 100.0,
+          "mean_per_UID_retention_percent": 100.0,
+          "worst_UID_retention_percent": 100.0,
+          "UIDs_with_unseen_samples": 0
+        },
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8742.4854375,
+          "duration_weighted_retention_percent": 99.99425825550375,
+          "mean_per_UID_retention_percent": 99.98718384791107,
+          "worst_UID_retention_percent": 96.0308267997149,
+          "UIDs_with_unseen_samples": 34
+        }
+      ],
+      "cumulative_unique_variants": [
+        15208,
+        24759,
+        15304
+      ],
+      "OC_length_similarity": {
+        "bin_seconds": 0.1,
+        "overlap_percent": 99.24125514402114,
+        "KS": 0.0017575445815506963,
+        "W1_seconds": 0.004011555319746201,
+        "JS_divergence_bits": 0.0009831865683674168
+      },
+      "OC_plus_BPL_bona_retention": {
+        "UIDs": 2580,
+        "total_original_seconds": 8742.9874375,
+        "unique_retained_seconds": 8741.603375,
+        "duration_weighted_retention_percent": 99.98416945569356,
+        "mean_per_UID_retention_percent": 99.96395412374495,
+        "worst_UID_retention_percent": 81.65886778603542,
+        "UIDs_with_unseen_samples": 37
+      }
+    },
+    {
+      "epoch": 12,
+      "retained": [
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.1385,
+          "duration_weighted_retention_percent": 99.97885233722207,
+          "mean_per_UID_retention_percent": 99.9524703149352,
+          "worst_UID_retention_percent": 81.62865288667142,
+          "UIDs_with_unseen_samples": 37
+        },
+        {
+          "UIDs": 22800,
+          "total_original_seconds": 78204.4298125,
+          "unique_retained_seconds": 78204.4298125,
+          "duration_weighted_retention_percent": 100.0,
+          "mean_per_UID_retention_percent": 100.0,
+          "worst_UID_retention_percent": 100.0,
+          "UIDs_with_unseen_samples": 0
+        },
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.1661875,
+          "duration_weighted_retention_percent": 99.97916901959405,
+          "mean_per_UID_retention_percent": 99.95318868490155,
+          "worst_UID_retention_percent": 83.2094687586017,
+          "UIDs_with_unseen_samples": 39
+        }
+      ],
+      "cumulative_retained": [
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8742.4785,
+          "duration_weighted_retention_percent": 99.9941789061961,
+          "mean_per_UID_retention_percent": 99.98692396471743,
+          "worst_UID_retention_percent": 95.72896596017983,
+          "UIDs_with_unseen_samples": 34
+        },
+        {
+          "UIDs": 22800,
+          "total_original_seconds": 78204.4298125,
+          "unique_retained_seconds": 78204.4298125,
+          "duration_weighted_retention_percent": 100.0,
+          "mean_per_UID_retention_percent": 100.0,
+          "worst_UID_retention_percent": 100.0,
+          "UIDs_with_unseen_samples": 0
+        },
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8742.486125,
+          "duration_weighted_retention_percent": 99.99426611894866,
+          "mean_per_UID_retention_percent": 99.98719876435055,
+          "worst_UID_retention_percent": 96.0308267997149,
+          "UIDs_with_unseen_samples": 34
+        }
+      ],
+      "cumulative_unique_variants": [
+        15807,
+        24791,
+        15862
+      ],
+      "OC_length_similarity": {
+        "bin_seconds": 0.1,
+        "overlap_percent": 99.20696159120548,
+        "KS": 0.0024434156379180005,
+        "W1_seconds": 0.004670939964967554,
+        "JS_divergence_bits": 0.0009478596066468357
+      },
+      "OC_plus_BPL_bona_retention": {
+        "UIDs": 2580,
+        "total_original_seconds": 8742.9874375,
+        "unique_retained_seconds": 8741.5693125,
+        "duration_weighted_retention_percent": 99.98377985774157,
+        "mean_per_UID_retention_percent": 99.96324487622844,
+        "worst_UID_retention_percent": 83.61546685673557,
+        "UIDs_with_unseen_samples": 37
+      }
+    },
+    {
+      "epoch": 13,
+      "retained": [
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.047875,
+          "duration_weighted_retention_percent": 99.97781579221216,
+          "mean_per_UID_retention_percent": 99.9500265569642,
+          "worst_UID_retention_percent": 80.33305807872281,
+          "UIDs_with_unseen_samples": 37
+        },
+        {
+          "UIDs": 22800,
+          "total_original_seconds": 78204.4298125,
+          "unique_retained_seconds": 78204.4298125,
+          "duration_weighted_retention_percent": 100.0,
+          "mean_per_UID_retention_percent": 100.0,
+          "worst_UID_retention_percent": 100.0,
+          "UIDs_with_unseen_samples": 0
+        },
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.099375,
+          "duration_weighted_retention_percent": 99.97840483572124,
+          "mean_per_UID_retention_percent": 99.95149152422675,
+          "worst_UID_retention_percent": 82.01211120286264,
+          "UIDs_with_unseen_samples": 37
+        }
+      ],
+      "cumulative_retained": [
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8742.4838125,
+          "duration_weighted_retention_percent": 99.99423966917944,
+          "mean_per_UID_retention_percent": 99.9870543350737,
+          "worst_UID_retention_percent": 95.72896596017983,
+          "UIDs_with_unseen_samples": 34
+        },
+        {
+          "UIDs": 22800,
+          "total_original_seconds": 78204.4298125,
+          "unique_retained_seconds": 78204.4298125,
+          "duration_weighted_retention_percent": 100.0,
+          "mean_per_UID_retention_percent": 100.0,
+          "worst_UID_retention_percent": 100.0,
+          "UIDs_with_unseen_samples": 0
+        },
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8742.528375,
+          "duration_weighted_retention_percent": 99.99474936338086,
+          "mean_per_UID_retention_percent": 99.98824040306022,
+          "worst_UID_retention_percent": 96.0308267997149,
+          "UIDs_with_unseen_samples": 34
+        }
+      ],
+      "cumulative_unique_variants": [
+        16302,
+        24819,
+        16366
+      ],
+      "OC_length_similarity": {
+        "bin_seconds": 0.1,
+        "overlap_percent": 99.23268175581387,
+        "KS": 0.0011574074074821028,
+        "W1_seconds": 0.003183004329639371,
+        "JS_divergence_bits": 0.0011614888137367703
+      },
+      "OC_plus_BPL_bona_retention": {
+        "UIDs": 2580,
+        "total_original_seconds": 8742.9874375,
+        "unique_retained_seconds": 8741.827625,
+        "duration_weighted_retention_percent": 99.9867343684491,
+        "mean_per_UID_retention_percent": 99.97056809639118,
+        "worst_UID_retention_percent": 90.81999201738437,
+        "UIDs_with_unseen_samples": 36
+      }
+    },
+    {
+      "epoch": 14,
+      "retained": [
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.107125,
+          "duration_weighted_retention_percent": 99.97849347819104,
+          "mean_per_UID_retention_percent": 99.95167224354684,
+          "worst_UID_retention_percent": 80.33305807872281,
+          "UIDs_with_unseen_samples": 40
+        },
+        {
+          "UIDs": 22800,
+          "total_original_seconds": 78204.4298125,
+          "unique_retained_seconds": 78204.4298125,
+          "duration_weighted_retention_percent": 100.0,
+          "mean_per_UID_retention_percent": 100.0,
+          "worst_UID_retention_percent": 100.0,
+          "UIDs_with_unseen_samples": 0
+        },
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.0551875,
+          "duration_weighted_retention_percent": 99.97789943067157,
+          "mean_per_UID_retention_percent": 99.95025352180058,
+          "worst_UID_retention_percent": 80.97990641343242,
+          "UIDs_with_unseen_samples": 37
+        }
+      ],
+      "cumulative_retained": [
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8742.4863125,
+          "duration_weighted_retention_percent": 99.99426826352455,
+          "mean_per_UID_retention_percent": 99.98711562178131,
+          "worst_UID_retention_percent": 95.72896596017983,
+          "UIDs_with_unseen_samples": 34
+        },
+        {
+          "UIDs": 22800,
+          "total_original_seconds": 78204.4298125,
+          "unique_retained_seconds": 78204.4298125,
+          "duration_weighted_retention_percent": 100.0,
+          "mean_per_UID_retention_percent": 100.0,
+          "worst_UID_retention_percent": 100.0,
+          "UIDs_with_unseen_samples": 0
+        },
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8742.5285,
+          "duration_weighted_retention_percent": 99.99475079309812,
+          "mean_per_UID_retention_percent": 99.98824311514012,
+          "worst_UID_retention_percent": 96.0308267997149,
+          "UIDs_with_unseen_samples": 34
+        }
+      ],
+      "cumulative_unique_variants": [
+        16757,
+        24836,
+        16848
+      ],
+      "OC_length_similarity": {
+        "bin_seconds": 0.1,
+        "overlap_percent": 99.2584019204232,
+        "KS": 0.002186213991827113,
+        "W1_seconds": 0.006065658757842329,
+        "JS_divergence_bits": 0.0009475503550268698
+      },
+      "OC_plus_BPL_bona_retention": {
+        "UIDs": 2580,
+        "total_original_seconds": 8742.9874375,
+        "unique_retained_seconds": 8741.55275,
+        "duration_weighted_retention_percent": 99.98359042020527,
+        "mean_per_UID_retention_percent": 99.96292852332994,
+        "worst_UID_retention_percent": 81.62675474814203,
+        "UIDs_with_unseen_samples": 36
+      }
+    },
+    {
+      "epoch": 15,
+      "retained": [
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.1781875,
+          "duration_weighted_retention_percent": 99.97930627245054,
+          "mean_per_UID_retention_percent": 99.95367402854963,
+          "worst_UID_retention_percent": 83.2094687586017,
+          "UIDs_with_unseen_samples": 37
+        },
+        {
+          "UIDs": 22800,
+          "total_original_seconds": 78204.4298125,
+          "unique_retained_seconds": 78204.4298125,
+          "duration_weighted_retention_percent": 100.0,
+          "mean_per_UID_retention_percent": 100.0,
+          "worst_UID_retention_percent": 100.0,
+          "UIDs_with_unseen_samples": 0
+        },
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.035125,
+          "duration_weighted_retention_percent": 99.97766996105214,
+          "mean_per_UID_retention_percent": 99.949731414418,
+          "worst_UID_retention_percent": 81.00498930862437,
+          "UIDs_with_unseen_samples": 36
+        }
+      ],
+      "cumulative_retained": [
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8742.4863125,
+          "duration_weighted_retention_percent": 99.99426826352455,
+          "mean_per_UID_retention_percent": 99.98711562178131,
+          "worst_UID_retention_percent": 95.72896596017983,
+          "UIDs_with_unseen_samples": 34
+        },
+        {
+          "UIDs": 22800,
+          "total_original_seconds": 78204.4298125,
+          "unique_retained_seconds": 78204.4298125,
+          "duration_weighted_retention_percent": 100.0,
+          "mean_per_UID_retention_percent": 100.0,
+          "worst_UID_retention_percent": 100.0,
+          "UIDs_with_unseen_samples": 0
+        },
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8742.5556875,
+          "duration_weighted_retention_percent": 99.99506175660109,
+          "mean_per_UID_retention_percent": 99.98892747996115,
+          "worst_UID_retention_percent": 96.0308267997149,
+          "UIDs_with_unseen_samples": 34
+        }
+      ],
+      "cumulative_unique_variants": [
+        17152,
+        24856,
+        17257
+      ],
+      "OC_length_similarity": {
+        "bin_seconds": 0.1,
+        "overlap_percent": 99.23268175581735,
+        "KS": 0.002186213991720809,
+        "W1_seconds": 0.003378627614842182,
+        "JS_divergence_bits": 0.0010556868481951362
+      },
+      "OC_plus_BPL_bona_retention": {
+        "UIDs": 2580,
+        "total_original_seconds": 8742.9874375,
+        "unique_retained_seconds": 8741.5756875,
+        "duration_weighted_retention_percent": 99.98385277332157,
+        "mean_per_UID_retention_percent": 99.963634506829,
+        "worst_UID_retention_percent": 83.2094687586017,
+        "UIDs_with_unseen_samples": 35
+      }
+    },
+    {
+      "epoch": 16,
+      "retained": [
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.0170625,
+          "duration_weighted_retention_percent": 99.9774633669088,
+          "mean_per_UID_retention_percent": 99.9492412009516,
+          "worst_UID_retention_percent": 80.41104688503532,
+          "UIDs_with_unseen_samples": 37
+        },
+        {
+          "UIDs": 22800,
+          "total_original_seconds": 78204.4298125,
+          "unique_retained_seconds": 78204.4298125,
+          "duration_weighted_retention_percent": 100.0,
+          "mean_per_UID_retention_percent": 100.0,
+          "worst_UID_retention_percent": 100.0,
+          "UIDs_with_unseen_samples": 0
+        },
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.0790625,
+          "duration_weighted_retention_percent": 99.97817250666729,
+          "mean_per_UID_retention_percent": 99.95085244622054,
+          "worst_UID_retention_percent": 80.33305807872281,
+          "UIDs_with_unseen_samples": 36
+        }
+      ],
+      "cumulative_retained": [
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8742.50425,
+          "duration_weighted_retention_percent": 99.99447342795064,
+          "mean_per_UID_retention_percent": 99.98759098498016,
+          "worst_UID_retention_percent": 95.72896596017983,
+          "UIDs_with_unseen_samples": 34
+        },
+        {
+          "UIDs": 22800,
+          "total_original_seconds": 78204.4298125,
+          "unique_retained_seconds": 78204.4298125,
+          "duration_weighted_retention_percent": 100.0,
+          "mean_per_UID_retention_percent": 100.0,
+          "worst_UID_retention_percent": 100.0,
+          "UIDs_with_unseen_samples": 0
+        },
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8742.5556875,
+          "duration_weighted_retention_percent": 99.99506175660109,
+          "mean_per_UID_retention_percent": 99.98892747996115,
+          "worst_UID_retention_percent": 96.0308267997149,
+          "UIDs_with_unseen_samples": 34
+        }
+      ],
+      "cumulative_unique_variants": [
+        17504,
+        24873,
+        17605
+      ],
+      "OC_length_similarity": {
+        "bin_seconds": 0.1,
+        "overlap_percent": 99.14266117968545,
+        "KS": 0.0014146090535291922,
+        "W1_seconds": 0.004097843792956835,
+        "JS_divergence_bits": 0.001121790897711729
+      },
+      "OC_plus_BPL_bona_retention": {
+        "UIDs": 2580,
+        "total_original_seconds": 8742.9874375,
+        "unique_retained_seconds": 8741.7635,
+        "duration_weighted_retention_percent": 99.98600092349727,
+        "mean_per_UID_retention_percent": 99.96880180601201,
+        "worst_UID_retention_percent": 90.09542159831177,
+        "UIDs_with_unseen_samples": 36
+      }
+    },
+    {
+      "epoch": 17,
+      "retained": [
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.035875,
+          "duration_weighted_retention_percent": 99.97767853935568,
+          "mean_per_UID_retention_percent": 99.94973918498633,
+          "worst_UID_retention_percent": 80.33305807872281,
+          "UIDs_with_unseen_samples": 38
+        },
+        {
+          "UIDs": 22800,
+          "total_original_seconds": 78204.4298125,
+          "unique_retained_seconds": 78204.4298125,
+          "duration_weighted_retention_percent": 100.0,
+          "mean_per_UID_retention_percent": 100.0,
+          "worst_UID_retention_percent": 100.0,
+          "UIDs_with_unseen_samples": 0
+        },
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.0875,
+          "duration_weighted_retention_percent": 99.978269012582,
+          "mean_per_UID_retention_percent": 99.95104524874003,
+          "worst_UID_retention_percent": 80.53032388292503,
+          "UIDs_with_unseen_samples": 38
+        }
+      ],
+      "cumulative_retained": [
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8742.505,
+          "duration_weighted_retention_percent": 99.99448200625417,
+          "mean_per_UID_retention_percent": 99.98761036234231,
+          "worst_UID_retention_percent": 95.72896596017983,
+          "UIDs_with_unseen_samples": 34
+        },
+        {
+          "UIDs": 22800,
+          "total_original_seconds": 78204.4298125,
+          "unique_retained_seconds": 78204.4298125,
+          "duration_weighted_retention_percent": 100.0,
+          "mean_per_UID_retention_percent": 100.0,
+          "worst_UID_retention_percent": 100.0,
+          "UIDs_with_unseen_samples": 0
+        },
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8742.5556875,
+          "duration_weighted_retention_percent": 99.99506175660109,
+          "mean_per_UID_retention_percent": 99.98892747996115,
+          "worst_UID_retention_percent": 96.0308267997149,
+          "UIDs_with_unseen_samples": 34
+        }
+      ],
+      "cumulative_unique_variants": [
+        17819,
+        24887,
+        17927
+      ],
+      "OC_length_similarity": {
+        "bin_seconds": 0.1,
+        "overlap_percent": 99.16409465019464,
+        "KS": 0.001800411522676404,
+        "W1_seconds": 0.003721383637781438,
+        "JS_divergence_bits": 0.0011511901169470326
+      },
+      "OC_plus_BPL_bona_retention": {
+        "UIDs": 2580,
+        "total_original_seconds": 8742.9874375,
+        "unique_retained_seconds": 8741.6928125,
+        "duration_weighted_retention_percent": 99.98519241838954,
+        "mean_per_UID_retention_percent": 99.96703374675563,
+        "worst_UID_retention_percent": 88.95770254151756,
+        "UIDs_with_unseen_samples": 37
+      }
+    },
+    {
+      "epoch": 18,
+      "retained": [
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.1473125,
+          "duration_weighted_retention_percent": 99.97895313228854,
+          "mean_per_UID_retention_percent": 99.95276416320503,
+          "worst_UID_retention_percent": 83.2094687586017,
+          "UIDs_with_unseen_samples": 37
+        },
+        {
+          "UIDs": 22800,
+          "total_original_seconds": 78204.4298125,
+          "unique_retained_seconds": 78204.4298125,
+          "duration_weighted_retention_percent": 100.0,
+          "mean_per_UID_retention_percent": 100.0,
+          "worst_UID_retention_percent": 100.0,
+          "UIDs_with_unseen_samples": 0
+        },
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.0554375,
+          "duration_weighted_retention_percent": 99.97790229010609,
+          "mean_per_UID_retention_percent": 99.95032196384092,
+          "worst_UID_retention_percent": 83.2094687586017,
+          "UIDs_with_unseen_samples": 39
+        }
+      ],
+      "cumulative_retained": [
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8742.505,
+          "duration_weighted_retention_percent": 99.99448200625417,
+          "mean_per_UID_retention_percent": 99.98761036234231,
+          "worst_UID_retention_percent": 95.72896596017983,
+          "UIDs_with_unseen_samples": 34
+        },
+        {
+          "UIDs": 22800,
+          "total_original_seconds": 78204.4298125,
+          "unique_retained_seconds": 78204.4298125,
+          "duration_weighted_retention_percent": 100.0,
+          "mean_per_UID_retention_percent": 100.0,
+          "worst_UID_retention_percent": 100.0,
+          "UIDs_with_unseen_samples": 0
+        },
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8742.55975,
+          "duration_weighted_retention_percent": 99.99510822241187,
+          "mean_per_UID_retention_percent": 99.98902188901194,
+          "worst_UID_retention_percent": 96.0308267997149,
+          "UIDs_with_unseen_samples": 34
+        }
+      ],
+      "cumulative_unique_variants": [
+        18092,
+        24898,
+        18244
+      ],
+      "OC_length_similarity": {
+        "bin_seconds": 0.1,
+        "overlap_percent": 99.27983539093361,
+        "KS": 0.0015003429355306963,
+        "W1_seconds": 0.005835991083786884,
+        "JS_divergence_bits": 0.0009987956008289838
+      },
+      "OC_plus_BPL_bona_retention": {
+        "UIDs": 2580,
+        "total_original_seconds": 8742.9874375,
+        "unique_retained_seconds": 8741.6535625,
+        "duration_weighted_retention_percent": 99.98474348717146,
+        "mean_per_UID_retention_percent": 99.9655226801246,
+        "worst_UID_retention_percent": 83.2094687586017,
+        "UIDs_with_unseen_samples": 37
+      }
+    },
+    {
+      "epoch": 19,
+      "retained": [
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.1440625,
+          "duration_weighted_retention_percent": 99.9789159596399,
+          "mean_per_UID_retention_percent": 99.95261761658583,
+          "worst_UID_retention_percent": 80.97990641343242,
+          "UIDs_with_unseen_samples": 37
+        },
+        {
+          "UIDs": 22800,
+          "total_original_seconds": 78204.4298125,
+          "unique_retained_seconds": 78204.4298125,
+          "duration_weighted_retention_percent": 100.0,
+          "mean_per_UID_retention_percent": 100.0,
+          "worst_UID_retention_percent": 100.0,
+          "UIDs_with_unseen_samples": 0
+        },
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.1691875,
+          "duration_weighted_retention_percent": 99.97920333280817,
+          "mean_per_UID_retention_percent": 99.95346915845522,
+          "worst_UID_retention_percent": 85.13903055567874,
+          "UIDs_with_unseen_samples": 37
+        }
+      ],
+      "cumulative_retained": [
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8742.522625,
+          "duration_weighted_retention_percent": 99.99468359638713,
+          "mean_per_UID_retention_percent": 99.9881117951599,
+          "worst_UID_retention_percent": 96.0308267997149,
+          "UIDs_with_unseen_samples": 34
+        },
+        {
+          "UIDs": 22800,
+          "total_original_seconds": 78204.4298125,
+          "unique_retained_seconds": 78204.4298125,
+          "duration_weighted_retention_percent": 100.0,
+          "mean_per_UID_retention_percent": 100.0,
+          "worst_UID_retention_percent": 100.0,
+          "UIDs_with_unseen_samples": 0
+        },
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8742.5604375,
+          "duration_weighted_retention_percent": 99.99511608585678,
+          "mean_per_UID_retention_percent": 99.98903977910044,
+          "worst_UID_retention_percent": 96.0308267997149,
+          "UIDs_with_unseen_samples": 34
+        }
+      ],
+      "cumulative_unique_variants": [
+        18315,
+        24908,
+        18490
+      ],
+      "OC_length_similarity": {
+        "bin_seconds": 0.1,
+        "overlap_percent": 99.24125514402058,
+        "KS": 0.00132887517142799,
+        "W1_seconds": 0.0031174580976146603,
+        "JS_divergence_bits": 0.001037896484733247
+      },
+      "OC_plus_BPL_bona_retention": {
+        "UIDs": 2580,
+        "total_original_seconds": 8742.9874375,
+        "unique_retained_seconds": 8741.67925,
+        "duration_weighted_retention_percent": 99.98503729406737,
+        "mean_per_UID_retention_percent": 99.96619442469432,
+        "worst_UID_retention_percent": 86.20812544547398,
+        "UIDs_with_unseen_samples": 35
+      }
+    },
+    {
+      "epoch": 20,
+      "retained": [
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.043625,
+          "duration_weighted_retention_percent": 99.97776718182548,
+          "mean_per_UID_retention_percent": 99.95001793834585,
+          "worst_UID_retention_percent": 80.53032388292503,
+          "UIDs_with_unseen_samples": 40
+        },
+        {
+          "UIDs": 22800,
+          "total_original_seconds": 78204.4298125,
+          "unique_retained_seconds": 78204.4298125,
+          "duration_weighted_retention_percent": 100.0,
+          "mean_per_UID_retention_percent": 100.0,
+          "worst_UID_retention_percent": 100.0,
+          "UIDs_with_unseen_samples": 0
+        },
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8741.0573125,
+          "duration_weighted_retention_percent": 99.97792373586492,
+          "mean_per_UID_retention_percent": 99.95037680905097,
+          "worst_UID_retention_percent": 80.2458941187265,
+          "UIDs_with_unseen_samples": 35
+        }
+      ],
+      "cumulative_retained": [
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8742.522625,
+          "duration_weighted_retention_percent": 99.99468359638713,
+          "mean_per_UID_retention_percent": 99.9881117951599,
+          "worst_UID_retention_percent": 96.0308267997149,
+          "UIDs_with_unseen_samples": 34
+        },
+        {
+          "UIDs": 22800,
+          "total_original_seconds": 78204.4298125,
+          "unique_retained_seconds": 78204.4298125,
+          "duration_weighted_retention_percent": 100.0,
+          "mean_per_UID_retention_percent": 100.0,
+          "worst_UID_retention_percent": 100.0,
+          "UIDs_with_unseen_samples": 0
+        },
+        {
+          "UIDs": 2580,
+          "total_original_seconds": 8742.9874375,
+          "unique_retained_seconds": 8742.5604375,
+          "duration_weighted_retention_percent": 99.99511608585678,
+          "mean_per_UID_retention_percent": 99.98903977910044,
+          "worst_UID_retention_percent": 96.0308267997149,
+          "UIDs_with_unseen_samples": 34
+        }
+      ],
+      "cumulative_unique_variants": [
+        18554,
+        24910,
+        18700
+      ],
+      "OC_length_similarity": {
+        "bin_seconds": 0.1,
+        "overlap_percent": 99.12980109737966,
+        "KS": 0.002529149519942875,
+        "W1_seconds": 0.005068212020012736,
+        "JS_divergence_bits": 0.0010561828709562792
+      },
+      "OC_plus_BPL_bona_retention": {
+        "UIDs": 2580,
+        "total_original_seconds": 8742.9874375,
+        "unique_retained_seconds": 8741.47375,
+        "duration_weighted_retention_percent": 99.98268683890008,
+        "mean_per_UID_retention_percent": 99.96089773834858,
+        "worst_UID_retention_percent": 81.65886778603542,
+        "UIDs_with_unseen_samples": 35
+      }
+    }
+  ],
+  "cumulative20_bona_OC_BPL_retention": {
+    "UIDs": 2580,
+    "total_original_seconds": 8742.9874375,
+    "unique_retained_seconds": 8742.5699375,
+    "duration_weighted_retention_percent": 99.99522474436816,
+    "mean_per_UID_retention_percent": 99.98925647296787,
+    "worst_UID_retention_percent": 96.0308267997149,
+    "UIDs_with_unseen_samples": 34
+  },
+  "total_original_UIDs": 25380,
+  "total_cached_variants": 46580,
+  "training_input_visits_per_epoch": 28512,
+  "OC_visits_per_epoch": 25920,
+  "extra_BPL_visits_per_epoch": 2592,
+  "training_input_visits20": 570240,
+  "OC_bona_spoof_per_epoch": [
+    2592,
+    23328
+  ],
+  "BPL_right_bona_per_epoch": 2592,
+  "observed_BPL_same_UID_pairs": 267,
+  "BPL_pairs20": 622080,
+  "BPL_same_UID_pair_percent": 0.04292052469135803,
+  "speaker_results": [
+    {
+      "speaker": "LA_0079",
+      "bonafide_originals": 127,
+      "spoof_originals": 1116,
+      "before_overlap_percent": 58.362261168966924,
+      "after_overlap_percent": 63.21437642875289,
+      "after_KS": 0.21840515903255042,
+      "after_W1_seconds": 0.48278999334949635
+    },
+    {
+      "speaker": "LA_0080",
+      "bonafide_originals": 127,
+      "spoof_originals": 1116,
+      "before_overlap_percent": 53.472045832980406,
+      "after_overlap_percent": 62.04751889035922,
+      "after_KS": 0.34118618237237475,
+      "after_W1_seconds": 0.7618924667356854
+    },
+    {
+      "speaker": "LA_0081",
+      "bonafide_originals": 127,
+      "spoof_originals": 1116,
+      "before_overlap_percent": 51.845737024807704,
+      "after_overlap_percent": 65.97937213962285,
+      "after_KS": 0.14986735529027295,
+      "after_W1_seconds": 0.3259323109468615
+    },
+    {
+      "speaker": "LA_0082",
+      "bonafide_originals": 132,
+      "spoof_originals": 1176,
+      "before_overlap_percent": 68.5837971552264,
+      "after_overlap_percent": 70.45562411010941,
+      "after_KS": 0.18143166357451357,
+      "after_W1_seconds": 0.2990141286681653
+    },
+    {
+      "speaker": "LA_0083",
+      "bonafide_originals": 132,
+      "spoof_originals": 1176,
+      "before_overlap_percent": 56.94959802102774,
+      "after_overlap_percent": 60.4823747680899,
+      "after_KS": 0.332714904143464,
+      "after_W1_seconds": 0.614619130835176
+    },
+    {
+      "speaker": "LA_0084",
+      "bonafide_originals": 127,
+      "spoof_originals": 1116,
+      "before_overlap_percent": 58.36790562470154,
+      "after_overlap_percent": 61.72195262519337,
+      "after_KS": 0.3453983574633697,
+      "after_W1_seconds": 0.8617268877050119
+    },
+    {
+      "speaker": "LA_0085",
+      "bonafide_originals": 127,
+      "spoof_originals": 1116,
+      "before_overlap_percent": 59.74444726667294,
+      "after_overlap_percent": 69.0350951462142,
+      "after_KS": 0.15059407896593305,
+      "after_W1_seconds": 0.286071589326506
+    },
+    {
+      "speaker": "LA_0086",
+      "bonafide_originals": 127,
+      "spoof_originals": 1116,
+      "before_overlap_percent": 64.20568396692398,
+      "after_overlap_percent": 64.18190833797696,
+      "after_KS": 0.29914204272853456,
+      "after_W1_seconds": 0.6044188594265487
+    },
+    {
+      "speaker": "LA_0087",
+      "bonafide_originals": 127,
+      "spoof_originals": 1116,
+      "before_overlap_percent": 46.175881240651016,
+      "after_overlap_percent": 52.271745757961654,
+      "after_KS": 0.457518415036835,
+      "after_W1_seconds": 1.0682722950988528
+    },
+    {
+      "speaker": "LA_0088",
+      "bonafide_originals": 127,
+      "spoof_originals": 1116,
+      "before_overlap_percent": 53.46428470634741,
+      "after_overlap_percent": 64.47599432666577,
+      "after_KS": 0.16498744108599916,
+      "after_W1_seconds": 0.4035979947884406
+    },
+    {
+      "speaker": "LA_0089",
+      "bonafide_originals": 132,
+      "spoof_originals": 1176,
+      "before_overlap_percent": 69.38775510204141,
+      "after_overlap_percent": 76.1291215050614,
+      "after_KS": 0.15197897340753785,
+      "after_W1_seconds": 0.2827793648861648
+    },
+    {
+      "speaker": "LA_0090",
+      "bonafide_originals": 127,
+      "spoof_originals": 1116,
+      "before_overlap_percent": 61.19154460531176,
+      "after_overlap_percent": 71.62427089712078,
+      "after_KS": 0.13604549431320626,
+      "after_W1_seconds": 0.15922127856589102
+    },
+    {
+      "speaker": "LA_0091",
+      "bonafide_originals": 127,
+      "spoof_originals": 1116,
+      "before_overlap_percent": 62.38887477774961,
+      "after_overlap_percent": 71.44798010526246,
+      "after_KS": 0.2202325515762234,
+      "after_W1_seconds": 0.4168569277127461
+    },
+    {
+      "speaker": "LA_0092",
+      "bonafide_originals": 132,
+      "spoof_originals": 1176,
+      "before_overlap_percent": 61.30952380952495,
+      "after_overlap_percent": 70.0347450096101,
+      "after_KS": 0.2453617810760551,
+      "after_W1_seconds": 0.4103670156365625
+    },
+    {
+      "speaker": "LA_0093",
+      "bonafide_originals": 132,
+      "spoof_originals": 1176,
+      "before_overlap_percent": 57.854050711194716,
+      "after_overlap_percent": 75.51793444650599,
+      "after_KS": 0.18124491423362432,
+      "after_W1_seconds": 0.32590255513217603
+    },
+    {
+      "speaker": "LA_0094",
+      "bonafide_originals": 132,
+      "spoof_originals": 1176,
+      "before_overlap_percent": 64.16202844774301,
+      "after_overlap_percent": 64.53308596165759,
+      "after_KS": 0.25688002473717203,
+      "after_W1_seconds": 0.44928070544158677
+    },
+    {
+      "speaker": "LA_0095",
+      "bonafide_originals": 132,
+      "spoof_originals": 1176,
+      "before_overlap_percent": 74.4666048237479,
+      "after_overlap_percent": 69.51485668263051,
+      "after_KS": 0.17346938775510928,
+      "after_W1_seconds": 0.21878494090979195
+    },
+    {
+      "speaker": "LA_0096",
+      "bonafide_originals": 132,
+      "spoof_originals": 1176,
+      "before_overlap_percent": 68.32096474953696,
+      "after_overlap_percent": 79.95516388373576,
+      "after_KS": 0.07854050711192412,
+      "after_W1_seconds": 0.19726707671425864
+    },
+    {
+      "speaker": "LA_0097",
+      "bonafide_originals": 127,
+      "spoof_originals": 1116,
+      "before_overlap_percent": 48.69824739649579,
+      "after_overlap_percent": 42.68483459447614,
+      "after_KS": 0.5315101741314532,
+      "after_W1_seconds": 1.8532862560449674
+    },
+    {
+      "speaker": "LA_0098",
+      "bonafide_originals": 127,
+      "spoof_originals": 1116,
+      "before_overlap_percent": 67.08082860610152,
+      "after_overlap_percent": 72.13896650015525,
+      "after_KS": 0.214263539638197,
+      "after_W1_seconds": 0.5330184596634374
+    }
+  ],
+  "attack_results": [
+    {
+      "attack": "A01",
+      "originals": 3800,
+      "before_overlap_percent": 59.582415340679574,
+      "after_overlap_percent": 73.81752345981414,
+      "after_KS": 0.2610964912280074,
+      "after_W1_seconds": 0.5805624435177944
+    },
+    {
+      "attack": "A02",
+      "originals": 3800,
+      "before_overlap_percent": 74.01019991840562,
+      "after_overlap_percent": 74.69757241940407,
+      "after_KS": 0.25412280701761697,
+      "after_W1_seconds": 0.6077728252500545
+    },
+    {
+      "attack": "A03",
+      "originals": 3800,
+      "before_overlap_percent": 73.95369237046366,
+      "after_overlap_percent": 86.19716442268397,
+      "after_KS": 0.09916666666659879,
+      "after_W1_seconds": 0.1883251032740675
+    },
+    {
+      "attack": "A04",
+      "originals": 3800,
+      "before_overlap_percent": 67.75234598123485,
+      "after_overlap_percent": 83.4973480212167,
+      "after_KS": 0.1520614035087074,
+      "after_W1_seconds": 0.28523282333728756
+    },
+    {
+      "attack": "A05",
+      "originals": 3800,
+      "before_overlap_percent": 84.89024887801384,
+      "after_overlap_percent": 83.78967768256196,
+      "after_KS": 0.13868421052638216,
+      "after_W1_seconds": 0.2681757537740725
+    },
+    {
+      "attack": "A06",
+      "originals": 3800,
+      "before_overlap_percent": 84.52855977152672,
+      "after_overlap_percent": 84.25316197468783,
+      "after_KS": 0.13346491228076762,
+      "after_W1_seconds": 0.2635084989546093
+    }
+  ],
+  "transform_parameter_diagnostic": {
+    "speed_bin_width": 0.01,
+    "speed_histogram_overlap_percent": 75.84281925743082,
+    "oracle_rate_bin_balanced_accuracy_percent": 62.07859037128459,
+    "meaning": "Oracle known transformation rate, binned likelihood diagnostic only; does not show an audio model can recover the rate."
+  },
+  "speaker_max_delta20_pp": 0.014385242942747956,
+  "attack_max_delta20_pp": 0.014574759945132354,
+  "speech_activity": "Not matched; new transformed speech activity and acoustic distortion unmeasured until audio cache exists.",
+  "cost": {
+    "new_paid_resource_ceiling_USD": 0,
+    "GPU_updates": 0,
+    "experiment_changed": false
+  }
+}

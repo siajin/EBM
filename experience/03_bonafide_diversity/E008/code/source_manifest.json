@@ -1,0 +1,26 @@
+[
+  {
+    "path": "experience/03_bonafide_diversity/E008/code/artifacts/analysis/plot_ebm_all_runs_20261104.py",
+    "sha256": "03e96de159051c72bdaebe0635f30188c117a8e371503681c6cddfc38950bb38",
+    "origin": "artifacts/analysis/plot_ebm_all_runs_20261104.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/03_bonafide_diversity/E008/code/artifacts/analysis/plot_ebm_bpl_comparison.py",
+    "sha256": "65202a9f1a6a5d1f5fff4663263dfe345377757d5acf7e33eeb725666c3f2929",
+    "origin": "artifacts/analysis/plot_ebm_bpl_comparison.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/03_bonafide_diversity/E008/code/artifacts/analysis/plot_ebm_diagnosis_20261104.py",
+    "sha256": "0dd94960a836d29852c76d77c047ef4f8f7f700cfeede917d2e1d332f1724325",
+    "origin": "artifacts/analysis/plot_ebm_diagnosis_20261104.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/03_bonafide_diversity/E008/code/artifacts/analysis/plot_ebm_three_runs_paper.py",
+    "sha256": "f8c88ccff41b838cea1760a41443812905a1a1ec72c05d2463b967350e857e78",
+    "origin": "artifacts/analysis/plot_ebm_three_runs_paper.py",
+    "kind": "implementation / validation source"
+  }
+]

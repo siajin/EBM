@@ -1,0 +1,125 @@
+{
+  "status": "exploratory_posthoc_interpretation",
+  "DF_n": 20000,
+  "cache_fingerprint": "1b0a7488e72f4ec277c88575c51ce983bc9879e9ed092249938eb3c84fc69bae",
+  "script_sha256": "17925b709b245e2d0a1db766c30317076f47baeba9c0cdeb4fec9a89b91c5035",
+  "uncertainty_note": "Paired source-speaker bootstrap 2000, 95%; source families unresolved. Posthoc six-candidate panel, no multiplicity correction. Not an independent confirmatory test.",
+  "metric_contrasts": [
+    {
+      "baseline": "native_cosine",
+      "candidate": "E_diagonal_0.01",
+      "delta_EER_pp": 0.30000000000000027,
+      "CI95": [
+        0.0679892752132567,
+        0.3861796833229717
+      ],
+      "dependency_groups": 93,
+      "class_contributing_groups": [
+        62,
+        92
+      ],
+      "adequate_group_count": true,
+      "status": "exploratory_pilot_speaker_only_families_unresolved"
+    },
+    {
+      "baseline": "native_cosine",
+      "candidate": "E_diagonal_0.1",
+      "delta_EER_pp": 0.29444444444444207,
+      "CI95": [
+        0.0537275704326351,
+        0.37376514633268143
+      ],
+      "dependency_groups": 93,
+      "class_contributing_groups": [
+        62,
+        92
+      ],
+      "adequate_group_count": true,
+      "status": "exploratory_pilot_speaker_only_families_unresolved"
+    },
+    {
+      "baseline": "native_cosine",
+      "candidate": "E_diagonal_0.5",
+      "delta_EER_pp": 0.1722222222222194,
+      "CI95": [
+        0.018053227471421043,
+        0.2783494783656733
+      ],
+      "dependency_groups": 93,
+      "class_contributing_groups": [
+        62,
+        92
+      ],
+      "adequate_group_count": true,
+      "status": "exploratory_pilot_speaker_only_families_unresolved"
+    },
+    {
+      "baseline": "native_cosine",
+      "candidate": "E_full_0.01",
+      "delta_EER_pp": 0.20000000000000018,
+      "CI95": [
+        -0.052892079246162516,
+        0.28264998011635817
+      ],
+      "dependency_groups": 93,
+      "class_contributing_groups": [
+        62,
+        92
+      ],
+      "adequate_group_count": true,
+      "status": "exploratory_pilot_speaker_only_families_unresolved"
+    },
+    {
+      "baseline": "native_cosine",
+      "candidate": "E_full_0.1",
+      "delta_EER_pp": 0.20000000000000018,
+      "CI95": [
+        -0.04277459218515032,
+        0.3007999490975236
+      ],
+      "dependency_groups": 93,
+      "class_contributing_groups": [
+        62,
+        92
+      ],
+      "adequate_group_count": true,
+      "status": "exploratory_pilot_speaker_only_families_unresolved"
+    },
+    {
+      "baseline": "native_cosine",
+      "candidate": "E_full_0.5",
+      "delta_EER_pp": 0.26666666666666394,
+      "CI95": [
+        0.021198328244492037,
+        0.34968647259077584
+      ],
+      "dependency_groups": 93,
+      "class_contributing_groups": [
+        62,
+        92
+      ],
+      "adequate_group_count": true,
+      "status": "exploratory_pilot_speaker_only_families_unresolved"
+    }
+  ],
+  "probe_diagnostic": {
+    "C0_adjacent_probability_decreases_tol1e8": 2124,
+    "C0_max_accumulated_probability_reversal": 0.00038682181510141245,
+    "C0_uses_spline_not_monotonic_calibration": true,
+    "V_fixed_native_threshold": {
+      "threshold": 0.9883067190214367,
+      "V_bona_false_reject": 0.009622501850481125,
+      "V_spoof_false_accept": 0.0
+    },
+    "T_bona_cosine_quantiles": {
+      "0.05": 0.9974468584480889,
+      "0.5": 0.9982548740505728,
+      "0.95": 0.9986487578611256
+    },
+    "DF_bona_cosine_quantiles": {
+      "0.05": -0.8844729989262359,
+      "0.5": 0.9961037169706539,
+      "0.95": 0.9983099422448866
+    }
+  }
+}

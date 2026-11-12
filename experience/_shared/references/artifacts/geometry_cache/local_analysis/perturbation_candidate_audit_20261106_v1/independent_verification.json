@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "independently_recomputed_scalar_checks": 156,
+  "max_error": 1.509903313490213e-14,
+  "matching_constraints_and_unique_IDs_checked": true,
+  "all_input_hashes_unchanged": true,
+  "symmetric_spherical_score_identity_cases": 100,
+  "not_verified": [
+    "bootstrap intervals not independently rerun",
+    "source-family mapping unresolved",
+    "no response classifier transfer tested"
+  ]
+}

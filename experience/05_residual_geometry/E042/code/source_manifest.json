@@ -1,0 +1,20 @@
+[
+  {
+    "path": "experience/05_residual_geometry/E042/code/artifacts/geometry_experiments/validate_native_preserving.py",
+    "sha256": "08465dedf64a7738be34dccbc40f72b48548422ce868a9d60e84fa71497c09a3",
+    "origin": "artifacts/geometry_experiments/validate_native_preserving.py",
+    "kind": "explicit method source"
+  },
+  {
+    "path": "experience/05_residual_geometry/E042/code/artifacts/geometry_experiments/plot_native_preserving.py",
+    "sha256": "587e4186fec07f7746cf6cde0fc07099632909a7cb9d87aee24292d25a86b5f3",
+    "origin": "artifacts/geometry_experiments/plot_native_preserving.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/05_residual_geometry/E042/code/artifacts/geometry_experiments/verify_native_preserving_math.py",
+    "sha256": "a8caeec748b62ea53d33958e0bc7dbf34bb81d3af9cdba3d3c5307b54a59cd85",
+    "origin": "artifacts/geometry_experiments/verify_native_preserving_math.py",
+    "kind": "implementation / validation source"
+  }
+]

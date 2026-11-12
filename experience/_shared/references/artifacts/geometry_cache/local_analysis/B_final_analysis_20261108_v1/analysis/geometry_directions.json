@@ -1,0 +1,45 @@
+[
+  {
+    "model": "B",
+    "input": "native",
+    "normal_N": 32,
+    "spoof_N": 32,
+    "normal_error_N": 4,
+    "residual_mean_normal_spoof_cosine": 0.615507183081384,
+    "normal_R": 0.7489612827078771,
+    "spoof_R": 0.8976345594745901,
+    "wrong_normal_vs_spoof_residual_mean_cosine": 0.796448281539076
+  },
+  {
+    "model": "B",
+    "input": "wrap",
+    "normal_N": 32,
+    "spoof_N": 32,
+    "normal_error_N": 0,
+    "residual_mean_normal_spoof_cosine": 0.4356230651952441,
+    "normal_R": 0.7574322761297272,
+    "spoof_R": 0.8388025042004225
+  },
+  {
+    "model": "legacy240",
+    "input": "native",
+    "normal_N": 32,
+    "spoof_N": 32,
+    "normal_error_N": 1,
+    "residual_mean_normal_spoof_cosine": 0.9026059065846584,
+    "normal_R": 0.8690118370450003,
+    "spoof_R": 0.7937125751824063,
+    "wrong_normal_vs_spoof_residual_mean_cosine": 0.7690737276667508
+  },
+  {
+    "model": "legacy240",
+    "input": "wrap",
+    "normal_N": 32,
+    "spoof_N": 32,
+    "normal_error_N": 18,
+    "residual_mean_normal_spoof_cosine": 0.8846579359213488,
+    "normal_R": 0.809549053520562,
+    "spoof_R": 0.883505180347565,
+    "wrong_normal_vs_spoof_residual_mean_cosine": 0.8842422959470301
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "scope": "exploratory geometry, not acoustic causality",
+  "metric": "cosine distance of complete160-dimensional z",
+  "reference_balancing": "same number of T/DF training examples per class, metadata-only SHA256 order",
+  "variants": [
+    "nearest1",
+    "mean5"
+  ],
+  "new_EBM_fit": false,
+  "DF_fold_scope": "same saved source x speaker5 folds; target-domain labeled training examples are used only within their training fold"
+}

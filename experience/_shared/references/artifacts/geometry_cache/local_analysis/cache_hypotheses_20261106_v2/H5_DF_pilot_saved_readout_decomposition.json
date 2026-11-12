@@ -1,0 +1,47 @@
+{
+  "dataset": "DF_pilot",
+  "seed": 101,
+  "maximum_saved_native_logit_error": 0.0,
+  "h_reconstructed_logit_max_error": 1.899118856840687e-06,
+  "h_decomposition_logit_max_error": 1.8991188532879733e-06,
+  "decomposition": "existing scalar+direction terms + mean(h)*sum(w_h/std_h) + scale(h)*q(z) dot (w_h/std_h) - scaler offset",
+  "metrics": [
+    {
+      "case": "saved_h",
+      "n": 20000,
+      "n_bona": 2000,
+      "n_spoof": 18000,
+      "eer_percent": 1.9499999999999962,
+      "auroc": 0.9981766666666666,
+      "balanced_logloss": 0.055026521437617534
+    },
+    {
+      "case": "reconstructed_h",
+      "n": 20000,
+      "n_bona": 2000,
+      "n_spoof": 18000,
+      "eer_percent": 1.9499999999999962,
+      "auroc": 0.9981766666666666,
+      "balanced_logloss": 0.055026521257140505
+    },
+    {
+      "case": "scale_fixed_to_outer_train_mean",
+      "n": 20000,
+      "n_bona": 2000,
+      "n_spoof": 18000,
+      "eer_percent": 2.0499999999999963,
+      "auroc": 0.9952894999999999,
+      "balanced_logloss": 0.0910645966337212
+    },
+    {
+      "case": "mean_fixed_to_outer_train_mean",
+      "n": 20000,
+      "n_bona": 2000,
+      "n_spoof": 18000,
+      "eer_percent": 1.9333333333333333,
+      "auroc": 0.9981755,
+      "balanced_logloss": 0.055014238721791245
+    }
+  ],
+  "limitation": "Input interventions of a fixed trained readout; their metric changes are not performance of refitted alternatives or proof of LayerNorm causality."
+}

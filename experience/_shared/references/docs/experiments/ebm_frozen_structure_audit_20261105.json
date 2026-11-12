@@ -1,0 +1,58 @@
+{
+  "audit_UTC": "2026-11-04 23:53:28",
+  "audit_KST": "2026-11-05 08:53:28",
+  "mode": "read_only_source_AST_and_local_cache_metadata",
+  "reference_archive": "/home/mentee/results/CM/LA/EBM_e50_bs160_lr1e5/backup/scripts",
+  "reference_checkpoint": "/home/mentee/results/CM/LA/EBM_e50_bs160_lr1e5/model/BestCLS_50_21DF.pt",
+  "source_audio_or_original_code_downloaded": false,
+  "new_EBM_training_or_inference_started": false,
+  "source_hashes": {
+    "model/b_linear.py": {"archive": "c2cbcf898f1905c9c6ee8b20ef4514c4af7cb343abbf35e2dbd1fd526ad3459f", "current_matches": true},
+    "model/loss.py": {"archive": "164be4161b57a7899ef7b289e005ab80d12da373922d57e9e021844ea828b1ac", "current_matches": true},
+    "train.py": {"archive": "b7b98a182a4946c479f477b7110e1c4a49be53ee6b6e89ef1b4bc4785374873f", "current_matches": true},
+    "data_loaders.py": {"archive": "e46ae2e171df2ecf7665baf84ce38661fe92fd277dc8c1bd2d92470b39ad3556", "current_matches": true},
+    "arguments.py": {"archive": "567cc9b95a69dda73052100ecd4d76fbf420d1abf46e5d09ef208577953552e3", "current": "ae67b680671afadb1fad9f0d6a724cfdc49496500941661b03f71efe26cf954a", "current_matches": false}
+  },
+  "code_locations": {
+    "classifier_init": "model/b_linear.py:11",
+    "classifier_forward": "model/b_linear.py:24",
+    "bridge_init": "model/b_linear.py:50",
+    "bridge_forward": "model/b_linear.py:75",
+    "positionwise_feedforward": "model/b_linear.py:106",
+    "ASP_init": "model/b_linear.py:121",
+    "ASP_forward": "model/b_linear.py:134",
+    "BPL": "model/loss.py:12",
+    "OC": "model/loss.py:41",
+    "training_freeze_branch": "train.py:54",
+    "classifier_update": "train.py:129",
+    "centroid_update": "train.py:136",
+    "evaluation": "train.py:210",
+    "training_augmentation": "data_loaders.py:103",
+    "evaluation_dataset": "data_loaders.py:197"
+  },
+  "key_findings": [
+    "Layer attention is scalar per hidden layer and utterance, not a gate for each final embedding channel",
+    "Temporal attention is one scalar per frame, broadcast across 128 channels",
+    "Each hidden layer has an independent 1024-to-128-to-128 feedforward projection",
+    "ASP std is the sample std of already weighted features plus explicit random noise; it is not the conventional weighted variance",
+    "ASP torch.randn is unconditional in eval mode; fixed per-utterance seed is required",
+    "Original training enables class weights: bona 5 and spoof 5/9 at sampling ratio 1:9",
+    "Original data loader uses nominal codec probability .8 and RawBoost augmentation choices independently for long and short views",
+    "Cached h and z are long-view last-linear and last-LayerNorm outputs; short and earlier representations are absent",
+    "The source assigns param.require_grad, a misspelled attribute; the effective <=150 frontend freeze is instead provided by torch.set_grad_enabled(False)",
+    "Classifier and centroid use two separate optimizer steps; centroid step uses bona only",
+    "The cached epoch50 model has a frozen frontend but trained bridge, pooling, final linear, LayerNorm and centroid"
+  ],
+  "cache_audit": {
+    "canonical_speaker_overlap_counts": {"T_V": 0, "T_DF": 0, "V_DF": 0},
+    "source_family_mapping_complete": false,
+    "padding_nonzero_counts": {"T": 18609, "V": 10561, "DF_pilot": 15452},
+    "h_population_variance_minimum": {"T": 0.0004800521771259452, "V": 0.00045568452465025096, "DF_pilot": 0.000217715846934433},
+    "frontend_commit": "1a640f32ac3e39899438a2931f9924c02f080a54",
+    "historical_frontend_weight_bit_hash_verified": false
+  },
+  "local_versions": {"python": "3.13.5", "numpy": "2.1.3", "scipy": "1.15.3", "pandas": "2.2.3", "pyarrow": "25.0.0", "scikit_learn": "1.6.1", "torch": "2.13.0"},
+  "cached_server_torch": "2.6.0+cu124",
+  "server_assigned_GPUs": {"host_indices": [6,7], "memory_each_MiB": 6, "utilization_each_percent": 0},
+  "active_user_compute_processes_at_check": []
+}

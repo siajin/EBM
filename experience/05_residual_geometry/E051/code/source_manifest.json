@@ -1,0 +1,14 @@
+[
+  {
+    "path": "experience/05_residual_geometry/E051/code/docs/experiments/verify_spec_math.py",
+    "sha256": "c73f4b83bdb1bd72f66a7ac19eb9a012004d0f778c4fa1b5609973f4eda1b303",
+    "origin": "docs/experiments/verify_spec_math.py",
+    "kind": "explicit method source"
+  },
+  {
+    "path": "experience/05_residual_geometry/E051/code/artifacts/geometry_experiments/verify_native_preserving_math.py",
+    "sha256": "a8caeec748b62ea53d33958e0bc7dbf34bb81d3af9cdba3d3c5307b54a59cd85",
+    "origin": "artifacts/geometry_experiments/verify_native_preserving_math.py",
+    "kind": "implementation / validation source"
+  }
+]

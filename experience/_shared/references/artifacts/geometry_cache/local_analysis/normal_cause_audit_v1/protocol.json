@@ -1,0 +1,30 @@
+{
+  "status": "posthoc_exploratory",
+  "created_epoch": 1793886350.7568033,
+  "question": "Which acoustic properties track normal-domain failures?",
+  "original_audio_stays_on_server": true,
+  "CPU_only": true,
+  "no_silence_distribution_features": true,
+  "sample_selection": "All DF nocodec normals; 200 normal pilot IDs per corpus; 400 nocodec spoof IDs per corpus; 26 T normal IDs per speaker, all metadata-only SHA256 order",
+  "rows": 3419,
+  "counts": "{('DF', 'asvspoof', 0): 400, ('DF', 'asvspoof', 1): 574, ('DF', 'vcc2018', 0): 400, ('DF', 'vcc2018', 1): 599, ('DF', 'vcc2020', 0): 400, ('DF', 'vcc2020', 1): 526, ('T', 'T', 1): 520}",
+  "selected_ids_sha256": "54dd7df949cadcb9b875bee38f40320eeea422f518130112ecc53069556f6172",
+  "feature_blocks": [
+    "level",
+    "spectrum",
+    "cepstrum",
+    "periodicity_pitch",
+    "spectral_time_variation"
+  ],
+  "analyses": [
+    "Within-source and within-speaker feature/score association",
+    "Grouped OOF acoustic blocks beyond source+duration",
+    "Existing paired R3 noise/Opus score changes by source",
+    "Original-family/codec pairing if official mapping resolves"
+  ],
+  "causal_limits": "Observational feature associations cannot uniquely distinguish channel, phonetic content and vocal production. Existing paired R3 estimates only its actual transformations.",
+  "container_mount_namespace": "mnt:[4026534296]",
+  "server_PID": 599215,
+  "final_feature_script_sha256": "ea7a86dc3d0d65053b6382a23e770369df850b205ac54bfae41cae91845cab0b",
+  "successful_feature_attempt": "normal_acoustic_features_v2.py; PID623784; synthetic_QC pass;3419/3419 records"
+}

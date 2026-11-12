@@ -1,0 +1,20 @@
+[
+  {
+    "path": "experience/03_bonafide_diversity/E090/code/tail_diagnosis_21df.py",
+    "sha256": "859e9da4b2db8992706130ea536fbe449fa8e944854ee44764434163b66b0e05",
+    "origin": "artifacts/github_archive_20261112/remote_source/historical_analysis/tail_diagnosis_21df.py",
+    "kind": "actual historical analysis source"
+  },
+  {
+    "path": "experience/03_bonafide_diversity/E090/code/tail_factors_21df.py",
+    "sha256": "51b09c76ff02594f013b2e07eebbdedcea48cc79f7e6909b8e5ac6cf0e3a7cad",
+    "origin": "artifacts/github_archive_20261112/remote_source/historical_analysis/tail_factors_21df.py",
+    "kind": "actual historical analysis source"
+  },
+  {
+    "path": "experience/03_bonafide_diversity/E090/code/tail_source_followup.py",
+    "sha256": "42241151cda281094d183e9a013fafb1c59b48b096b29c2434a89783b8174987",
+    "origin": "artifacts/github_archive_20261112/remote_source/historical_analysis/tail_source_followup.py",
+    "kind": "actual historical analysis source"
+  }
+]

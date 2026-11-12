@@ -1,0 +1,32 @@
+{
+  "modified_since_this_revision_started": [
+    "EBM\\data_loaders.py",
+    "EBM\\main.py",
+    "EBM\\native_steps.py",
+    "EBM\\short32_bpl.py",
+    "EBM\\tests\\test_short32_bpl.py",
+    "EBM\\tools\\validate_short32.py"
+  ],
+  "verified_unchanged_since_this_revision_started": [
+    "EBM/model/loss.py",
+    "EBM/model/b_linear.py",
+    "EBM/train.py",
+    "EBM/arguments.py",
+    "EBM/conditional_bpl2.py",
+    "EBM/conditional_bpl2_steps.py",
+    "EBM/tools/train_conditional_bpl2.py",
+    "EBM/controlled_data_loaders.py",
+    "EBM/positive_bpl.py"
+  ],
+  "new_code": [
+    "EBM/short32_original240.py",
+    "EBM/baseline240_source/main.py",
+    "EBM/baseline240_source/train.py",
+    "EBM/baseline240_source/data_loaders.py",
+    "EBM/baseline240_source/model/b_linear.py",
+    "EBM/baseline240_source/model/loss.py",
+    "EBM/baseline240_source/manifest.json"
+  ],
+  "review": "EBM/SHORT32_ORIGINAL240.md",
+  "important": "Existing unrelated uncommitted work preserved; this is not a claim that full git diff belongs to this task."
+}

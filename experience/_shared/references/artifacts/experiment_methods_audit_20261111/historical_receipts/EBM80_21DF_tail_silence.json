@@ -1,0 +1,323 @@
+{
+  "remote_root": "/home/mentee/results/analysis/EBM80_21DF_tail_silence",
+  "file_inventory": [
+    {
+      "name": "independent_eer_check.json",
+      "bytes": 1207,
+      "directory": false
+    },
+    {
+      "name": "silence_context.pdf",
+      "bytes": 19638,
+      "directory": false
+    },
+    {
+      "name": "silence_context.png",
+      "bytes": 125601,
+      "directory": false
+    },
+    {
+      "name": "silence_scores.npz",
+      "bytes": 47625,
+      "directory": false
+    },
+    {
+      "name": "interpretation_ko_20261022.md",
+      "bytes": 5534,
+      "directory": false
+    },
+    {
+      "name": "shard_1.npz",
+      "bytes": 27314,
+      "directory": false
+    },
+    {
+      "name": "shard_0.npz",
+      "bytes": 27571,
+      "directory": false
+    },
+    {
+      "name": "summary.json",
+      "bytes": 6031,
+      "directory": false
+    },
+    {
+      "name": "sample_manifest.json",
+      "bytes": 146131,
+      "directory": false
+    },
+    {
+      "name": "provenance.json",
+      "bytes": 1083,
+      "directory": false
+    }
+  ],
+  "aggregate_json": {
+    "independent_eer_check.json": {
+      "EBM80_21DF_tail_interventions": {
+        "wrap_baseline": {
+          "equal_error_count_per_class": 20,
+          "sample_eer_pct": 2.0
+        },
+        "gain_x0p25": {
+          "equal_error_count_per_class": 38,
+          "sample_eer_pct": 3.8
+        },
+        "zero_padding": {
+          "equal_error_count_per_class": 29,
+          "sample_eer_pct": 2.9
+        },
+        "reflect_padding": {
+          "equal_error_count_per_class": 69,
+          "sample_eer_pct": 6.9
+        },
+        "trim_edges_then_wrap": {
+          "equal_error_count_per_class": 33,
+          "sample_eer_pct": 3.3
+        },
+        "native_no_padding": {
+          "equal_error_count_per_class": 59,
+          "sample_eer_pct": 5.9
+        }
+      },
+      "EBM80_21DF_tail_silence": {
+        "wrap_baseline": {
+          "equal_error_count_per_class": 20,
+          "sample_eer_pct": 2.0
+        },
+        "trim_then_wrap": {
+          "equal_error_count_per_class": 33,
+          "sample_eer_pct": 3.3
+        },
+        "trim_then_zero_right": {
+          "equal_error_count_per_class": 38,
+          "sample_eer_pct": 3.8
+        },
+        "trim_then_zero_center": {
+          "equal_error_count_per_class": 34,
+          "sample_eer_pct": 3.4
+        },
+        "zero_original_edge_positions": {
+          "equal_error_count_per_class": 23,
+          "sample_eer_pct": 2.3
+        }
+      }
+    },
+    "summary.json": {
+      "provenance": {
+        "per_class": 1000,
+        "batch_size": 4,
+        "seed": 1,
+        "cpu": false,
+        "out": "/results/analysis/EBM80_21DF_tail_silence",
+        "workers": 2,
+        "plm_path": "/home/mentee/.cache/huggingface/hub/models--facebook--wav2vec2-xls-r-300m/snapshots/1a640f32ac3e39899438a2931f9924c02f080a54",
+        "checkpoint": "/home/mentee/results/CM/LA/EBM/model/BestCLS_80_21DF.pt",
+        "checkpoint_sha256": "30043199664bc84da780654e01fd430235f647b894e7832a52f777c7fee5939a",
+        "protocol_sha256": "70e0e7d5964562cb0166e79143f73beaeaf77ee18e799fa4156355a57006d800",
+        "population": {
+          "0": 519059,
+          "1": 14869
+        },
+        "torch_version": "2.6.0+cu124",
+        "sampling": "uniform random within label, without replacement",
+        "crop_samples": 64600,
+        "sample_rate": 16000,
+        "embedding": "after layer_norm, L2 normalized",
+        "source_sha256": {
+          "model/b_linear.py": "c2cbcf898f1905c9c6ee8b20ef4514c4af7cb343abbf35e2dbd1fd526ad3459f",
+          "model/loss.py": "164be4161b57a7899ef7b289e005ab80d12da373922d57e9e021844ea828b1ac",
+          "train.py": "b7b98a182a4946c479f477b7110e1c4a49be53ee6b6e89ef1b4bc4785374873f"
+        }
+      },
+      "baseline_max_error": 1.0624527931213379e-05,
+      "trim_max_error": 1.1019408702850342e-05,
+      "baseline_sample_eer_threshold": -0.5619228482246399,
+      "overall": {
+        "wrap_baseline": {
+          "sample_eer_pct": 2.0000000000000018,
+          "bona_below09_n": 163,
+          "spoof_above02_n": 7,
+          "bona_mean_score": 0.8780089020729065,
+          "bona_median_score": 0.989412784576416,
+          "spoof_mean_score": -0.9406262040138245,
+          "bona_reject_at_baseline_threshold_n": 20,
+          "spoof_accept_at_baseline_threshold_n": 20,
+          "recovery_of_trim_induced_tail_n": 745
+        },
+        "trim_then_wrap": {
+          "sample_eer_pct": 3.3000000000000003,
+          "bona_below09_n": 908,
+          "spoof_above02_n": 3,
+          "bona_mean_score": -0.06385473161935806,
+          "bona_median_score": -0.20726805925369263,
+          "spoof_mean_score": -0.9662244915962219,
+          "bona_reject_at_baseline_threshold_n": 347,
+          "spoof_accept_at_baseline_threshold_n": 4,
+          "recovery_of_trim_induced_tail_n": 0
+        },
+        "trim_then_zero_right": {
+          "sample_eer_pct": 3.8,
+          "bona_below09_n": 201,
+          "spoof_above02_n": 47,
+          "bona_mean_score": 0.8908559083938599,
+          "bona_median_score": 0.9625328183174133,
+          "spoof_mean_score": -0.8453727960586548,
+          "bona_reject_at_baseline_threshold_n": 10,
+          "spoof_accept_at_baseline_threshold_n": 86,
+          "recovery_of_trim_induced_tail_n": 639
+        },
+        "trim_then_zero_center": {
+          "sample_eer_pct": 3.4000000000000004,
+          "bona_below09_n": 257,
+          "spoof_above02_n": 27,
+          "bona_mean_score": 0.8423978686332703,
+          "bona_median_score": 0.9617185592651367,
+          "spoof_mean_score": -0.9030608534812927,
+          "bona_reject_at_baseline_threshold_n": 19,
+          "spoof_accept_at_baseline_threshold_n": 44,
+          "recovery_of_trim_induced_tail_n": 589
+        },
+        "zero_original_edge_positions": {
+          "sample_eer_pct": 2.300000000000002,
+          "bona_below09_n": 354,
+          "spoof_above02_n": 5,
+          "bona_mean_score": 0.7258971929550171,
+          "bona_median_score": 0.9508386254310608,
+          "spoof_mean_score": -0.9598277807235718,
+          "bona_reject_at_baseline_threshold_n": 62,
+          "spoof_accept_at_baseline_threshold_n": 8,
+          "recovery_of_trim_induced_tail_n": 554
+        }
+      },
+      "by_source": {
+        "wrap_baseline": {
+          "asvspoof": {
+            "n": 525,
+            "tail_n": 3,
+            "mean_score": 0.9900630116462708
+          },
+          "vcc2018": {
+            "n": 246,
+            "tail_n": 124,
+            "mean_score": 0.6091315746307373
+          },
+          "vcc2020": {
+            "n": 229,
+            "tail_n": 36,
+            "mean_score": 0.9099540710449219
+          }
+        },
+        "trim_then_wrap": {
+          "asvspoof": {
+            "n": 525,
+            "tail_n": 481,
+            "mean_score": -0.11719740927219391
+          },
+          "vcc2018": {
+            "n": 246,
+            "tail_n": 231,
+            "mean_score": -0.17556817829608917
+          },
+          "vcc2020": {
+            "n": 229,
+            "tail_n": 196,
+            "mean_score": 0.178444042801857
+          }
+        },
+        "trim_then_zero_right": {
+          "asvspoof": {
+            "n": 525,
+            "tail_n": 66,
+            "mean_score": 0.9348771572113037
+          },
+          "vcc2018": {
+            "n": 246,
+            "tail_n": 100,
+            "mean_score": 0.765002965927124
+          },
+          "vcc2020": {
+            "n": 229,
+            "tail_n": 35,
+            "mean_score": 0.9251294732093811
+          }
+        },
+        "trim_then_zero_center": {
+          "asvspoof": {
+            "n": 525,
+            "tail_n": 115,
+            "mean_score": 0.8801994323730469
+          },
+          "vcc2018": {
+            "n": 246,
+            "tail_n": 105,
+            "mean_score": 0.7032226324081421
+          },
+          "vcc2020": {
+            "n": 229,
+            "tail_n": 37,
+            "mean_score": 0.905241847038269
+          }
+        },
+        "zero_original_edge_positions": {
+          "asvspoof": {
+            "n": 525,
+            "tail_n": 111,
+            "mean_score": 0.8647721409797668
+          },
+          "vcc2018": {
+            "n": 246,
+            "tail_n": 165,
+            "mean_score": 0.3744276165962219
+          },
+          "vcc2020": {
+            "n": 229,
+            "tail_n": 78,
+            "mean_score": 0.7850772142410278
+          }
+        }
+      },
+      "bonafide_edge_removed_fraction": {
+        "median": 0.3621775025799794,
+        "min": 0.0,
+        "max": 0.8090277777777778
+      },
+      "limitations": [
+        "Edge detector is relative frame RMS, not VAD; quiet speech may be removed.",
+        "Trim then wrap and trim then zero share the same retained waveform and total model input length, but differ in filler and repetition.",
+        "Zero-original-edge-positions preserves original cycle length and placement while replacing low-energy content with exact zeros.",
+        "This establishes frozen-model input sensitivity, not the unique training cause or efficacy of retrained multi-centroid methods.",
+        "EER is exploratory on 1000+1000 sampled trials; a change in training-margin count need not be an equivalent detection-error change."
+      ]
+    },
+    "provenance.json": {
+      "per_class": 1000,
+      "batch_size": 4,
+      "seed": 1,
+      "cpu": false,
+      "out": "/results/analysis/EBM80_21DF_tail_silence",
+      "workers": 2,
+      "plm_path": "/home/mentee/.cache/huggingface/hub/models--facebook--wav2vec2-xls-r-300m/snapshots/1a640f32ac3e39899438a2931f9924c02f080a54",
+      "checkpoint": "/home/mentee/results/CM/LA/EBM/model/BestCLS_80_21DF.pt",
+      "checkpoint_sha256": "30043199664bc84da780654e01fd430235f647b894e7832a52f777c7fee5939a",
+      "protocol_sha256": "70e0e7d5964562cb0166e79143f73beaeaf77ee18e799fa4156355a57006d800",
+      "population": {
+        "0": 519059,
+        "1": 14869
+      },
+      "torch_version": "2.6.0+cu124",
+      "sampling": "uniform random within label, without replacement",
+      "crop_samples": 64600,
+      "sample_rate": 16000,
+      "embedding": "after layer_norm, L2 normalized",
+      "source_sha256": {
+        "model/b_linear.py": "c2cbcf898f1905c9c6ee8b20ef4514c4af7cb343abbf35e2dbd1fd526ad3459f",
+        "model/loss.py": "164be4161b57a7899ef7b289e005ab80d12da373922d57e9e021844ea828b1ac",
+        "train.py": "b7b98a182a4946c479f477b7110e1c4a49be53ee6b6e89ef1b4bc4785374873f"
+      }
+    }
+  },
+  "method_documents": {
+    "interpretation_ko_20261022.md": "**EBM epoch80 꼬리 원인 분석과 다중 센트로이드 설계 판단**\n\n현재 가장 강하게 확인된 현상은 저에너지 구간과 반복 패딩 구조에 대한 모델의 민감성이다. 출처·화자에 따라 달라지는 음향 특성도 남는다. 이를 모두 음질 문제나 본질적인 bonafide 하위 군집으로 해석해서는 안 된다.\n\n분석 모델은 BestCLS_80_21DF.pt다. 같은 21DF eval 표본 bonafide 1,000개와 spoof 1,000개에 입력 변형을 적용했다. 꼬리는 학습 중심과의 코사인 < 0.9로 정의했으며, 분류 오류를 뜻하지 않는다. 아래 EER는 이 2,000개 표본의 탐색적 수치다.\n\n| 입력 조건 | bonafide 꼬리 수 | 표본 EER |\n|---|---:|---:|\n| 기존 반복 패딩 | 163 | 2.0% |\n| 0 패딩 | 81 | 2.9% |\n| 패딩 없이 원래 길이 | 52 | 5.9% |\n| 앞뒤 저에너지 구간 제거 후 반복 | 908 | 3.3% |\n| 동일하게 남긴 발화 뒤에 0 채우기 | 201 | 3.8% |\n| 동일하게 남긴 발화 양옆에 0 채우기 | 257 | 3.4% |\n| 원래 길이·배치 유지, 저에너지 가장자리만 0으로 교체 | 354 | 2.3% |\n\n패딩이 필요한 기존 꼬리 128개 중 112개(87.5%)가 패딩을 없애면 코사인 0.9 이상으로 회복했다. 그러나 spoof도 중심에 가까워져 EER는 악화됐다. 따라서 꼬리가 줄었다는 사실로 좋은 전처리나 다중 중심을 선택할 수 없다. 패딩 제거는 반복뿐 아니라 길이와 풀링 통계도 바꾸므로 순수한 반복 효과로만 해석하지 않는다.\n\n저에너지 구간을 제거한 뒤 남은 발화와 전체 입력 길이를 동일하게 유지하고 채움 방식을 바꾸면 꼬리가 908개에서 201개로 달라졌다. 원래 시간 배치를 유지하고 가장자리 신호만 정확한 0으로 바꾸어도 354개가 됐다. 이 모델은 발화 자체뿐 아니라 낮은 에너지 구간의 존재, 신호 내용, 시간적 구성에 민감하다. 저에너지 경계는 20ms 상대 RMS 기준으로 정했으므로 정확한 VAD 무음과 같지 않으며 작은 발화 성분도 제거될 수 있다.\n\n학습 원본의 정답 연관도 확인했다. ASVspoof2019 LA train에서 bonafide/spoof 각 1,000개를 뽑아 같은 기준으로 측정했을 때, 앞뒤 저에너지 구간 비율의 중앙값은 46.0% 대 33.3%, 앞 구간 길이는 1.00초 대 0.48초였다. 이는 모델이 지름길 단서를 배웠다는 가설과 일치한다. 원본 분석은 랜덤 자르기와 코덱 증강 전이며 실제 학습 입력 전체를 재현한 것은 아니다. 특정 증강 제거 또는 특정 손실이 원인인지는 재학습 대조가 필요하다.\n\n출처별 기존 꼬리는 ASVspoof 3/525(0.6%), VCC2018 124/246(50.4%), VCC2020 36/229(15.7%)였다. VCC2SM3 화자는 4.0375초보다 긴 표본도 11/11이 꼬리였으며, 같은 출처의 다른 화자는 그 길이 구간에서 19/65(29.2%)였다. 길이만으로 설명되지 않는 차이가 남지만, 목소리·내용·녹음·전처리가 얽혀 있어 화자 자체의 인과 효과로 단정할 수 없다.\n\n**추천 센트로이드 기준은 입력 변형에도 유지되는 bonafide 음향 특성이다.**\n\n1. 학습 bonafide의 발화 구간에서 고정 SSL 특징을 추출하고, 여러 crop·저에너지 문맥 변형에서도 비슷하게 유지되는 표현을 기준으로 군집 후보를 만든다. 화자 ID는 초기 화자별 평균을 만들거나 같은 화자가 학습·검증에 겹치지 않게 나누는 데 활용할 수 있다. 음색과 녹음 특성을 분리할 수 있다고 미리 가정하지 않는다.\n2. 이 군집에 대응하는 학습 bonafide의 160차원 임베딩 평균을 정규화하여 각 중심을 초기화하고, 표현과 중심을 함께 재학습한다. 현재 평가셋의 꼬리 끝이나 VCC 출처 라벨을 이용해 중심을 정하지 않는다.\n3. K=1, 2, 4를 같은 학습·전처리 조건에서 비교한다. 최적 K나 좌표가 지금 분석으로 정해진 것은 아니다. 새로운 화자, 서로 다른 길이, 원본과 저에너지 문맥 변형, spoof 오수락을 함께 평가한다.\n4. 기존 BPL의 모든 bonafide 간 쌍을 당기는 방식은 하위 군집을 다시 합칠 수 있다. 다중 중심 실험에서는 같은 발화의 두 view 간 일관성을 우선 검증하고, 손실 변경 효과와 중심 수 효과를 구분한다.\n\n길이·패딩·저에너지 비율은 현재 모델의 취약성을 드러내는 지표로 활용하는 것이 적절하다. 이를 곧바로 서로 다른 중심의 정체성으로 고정하면 지름길 의존을 유지할 위험이 있다. 코덱만으로 나누거나 MOS 고/저로 나누는 설계의 우선순위는 낮다. 이번 분석은 MOS를 측정하지 않았다.\n\n원인 가설과 설계 후보를 정할 근거는 확보했으나, 다중 센트로이드 재학습의 성능 개선은 아직 검증하지 않았다. 표본 EER는 별도의 직접 오류 개수 계산으로 모두 교차 확인했고, 기준 점수 재현 오차는 약 1.1e-5 이하였다. GPU 추론은 기존 컨테이너에서 GPU 두 장을 사용했고 모두 정상 종료했다.\n\n관련 1차 문헌: Müller et al., Speech is Silver, Silence is Golden (2021), https://www.isca-archive.org/asvspoof_2021/muller21_asvspoof.pdf\n\n서버 산출물:\n- /results/analysis/EBM80_21DF_tail_interventions\n- /results/analysis/EBM80_21DF_tail_silence\n- /results/analysis/EBM80_21DF_tail_factors_v2\n- /results/analysis/EBM80_21DF_tail_train_context\n"
+  }
+}

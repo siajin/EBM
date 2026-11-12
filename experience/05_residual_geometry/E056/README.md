@@ -1,0 +1,59 @@
+# E056. 개발에서 고른 고정 후처리를 전체 자료로 확장 평가
+
+**실행 상태:** 추출·적용 평가 완료
+
+이 문서의 상태는 2026-11-12 출판 검토 기준이다. 기존 문서·state의 시점별 상태와 충돌하면 실제 완료표식과 본문 최신 보완을 우선한다.
+
+## 가설
+
+개발에서 잠근 후처리를 전체 평가로 확장하면 진단2만개의 결론이 유지되는지 볼 수 있다.
+
+## 그렇게 설계한 이유
+
+진단 2만 개에 한정된 후처리 결과를 더 큰 동일 모델 평가에서 확인한다.
+
+대조와 통제의 근거: 개발 나머지 특징 추출은 추가 모듈 fit과 일부 시간이 겹쳤지만 결과를 선택에 사용하지 않았다. 특징 추출 시각과 모델 적용 시각을 구별해 기록 정정했다.
+
+## 모델·데이터·표본
+
+E052/E053에서 학습 자료·개발로 선택한 모듈. 개발 나머지 9,861·19LA 71,237·DF 전체 533,928·21LA 전체 148,176.
+
+## 실험 내용과 상세 절차
+
+1. 필요한 원래 모델 특징을 동일 전처리·revision·난수 조건으로 추출한다. 이미 있는 DF 진단과 나머지는 겹치지 않게 합친다.
+2. 추가 모듈은 다시 학습·설정 선택하지 않고 각 seed의 고정 가중치를 적용한다.
+3. 새 자료의 결과로 후처리 모델을 다시 고르지 않고 모든 선택된 정적/입력별/잔차 신경망/거리/기준 점수를 보고한다.
+
+## 측정과 검증
+
+전체 coverage·독립 ROC·seed 별 EER/LL. seed 예측 앙상블이 아닌 지표 평균이다.
+
+## 결과
+
+DF 전체 기준 3.241828%, 입력별 가중치 3.245296%, 잔차 신경망 3.295339%.19LA 기준 0.435177%, 입력별 0.444570%.21LA 기준과 입력별은 1.053539%로 같았다.
+
+## 해석·실패한 부분·한계
+
+진단 부분 집합을 포함한 전체 평가이므로 독립 재현으로 세지 않는다. 작은 차이를 후속 새 주 모델 선택 근거로 사용하지 않는다.
+
+## 배운 점
+
+전체DF에서도 입력별 가중치가 개선하지 못했다. 진단 표본을 포함한 전체를 독립 재현으로 세지 않는다.
+
+## 실험 코드
+
+- [artifacts/geometry_experiments/frozen_expansion_evaluate.py](code/artifacts/geometry_experiments/frozen_expansion_evaluate.py)
+
+코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+
+## 설정·결과·검산 근거
+
+- [docs/experiments/ebm_frozen_all_results_20261105.md](../../_shared/references/docs/experiments/ebm_frozen_all_results_20261105.md)
+- [artifacts/geometry_experiments/frozen_expansion_evaluate.py](../../_shared/workspace/artifacts/geometry_experiments/frozen_expansion_evaluate.py)
+- [artifacts/geometry_cache/local_analysis/frozen_all_v1/all_experiments_complete.json](../../_shared/references/artifacts/geometry_cache/local_analysis/frozen_all_v1/all_experiments_complete.json)
+
+## 연결
+
+다른 관련 가설: 주 가설에서만 분류한다.
+
+[가설 목록으로](../README.md) · [전체 실험 목록](../../README.md)

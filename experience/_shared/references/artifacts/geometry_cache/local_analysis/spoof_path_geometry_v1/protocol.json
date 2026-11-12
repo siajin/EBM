@@ -1,0 +1,28 @@
+{
+  "created_utc": "2026-11-05T12:29:08.974460+00:00",
+  "seed": 11052026,
+  "CPU_threads": 2,
+  "datasets": [
+    "T",
+    "V",
+    "DF_pilot",
+    "21LA_pilot"
+  ],
+  "representations": [
+    "unit_z",
+    "residual_u"
+  ],
+  "edges_per_type_target": 600,
+  "interior_fraction": [
+    0.1,
+    0.9
+  ],
+  "normal_neighborhood": "per bona 1st and 5th other bona Euclidean distances in the same representation",
+  "path_types": [
+    "Euclidean chord",
+    "shortest great-circle arc"
+  ],
+  "controlled_residual_path": "also reconstruct full unit embedding at mean endpoint cosine; endpoint delta s reported",
+  "scope": "descriptive cached geometry; earlier benchmark observations; no independent confirmatory test or causal claim",
+  "source_script_sha256": "68b33387b811feef61f734b1cbde154e41858ff66278f67360fedb58056b1abd"
+}

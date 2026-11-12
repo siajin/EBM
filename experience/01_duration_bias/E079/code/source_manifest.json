@@ -1,0 +1,20 @@
+[
+  {
+    "path": "experience/01_duration_bias/E079/code/EBM/conditional_bpl2.py",
+    "sha256": "9b85981af242ea4e973066ce7e15be755d42540b72323ec6b32645d3daf3df77",
+    "origin": "EBM/conditional_bpl2.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/01_duration_bias/E079/code/EBM/conditional_bpl2_steps.py",
+    "sha256": "61170035a5a5e60f51b01f3d48dd4ec5f19d2bedb30065cd681491e3cc26f2cf",
+    "origin": "EBM/conditional_bpl2_steps.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/01_duration_bias/E079/code/EBM/tests/test_conditional_bpl2.py",
+    "sha256": "dbddd91e64c6d3b83225399114052de4940efc49ca520ad7bbc810c286ecef7f",
+    "origin": "EBM/tests/test_conditional_bpl2.py",
+    "kind": "explicit method source"
+  }
+]

@@ -1,0 +1,17 @@
+model,condition,threshold_policy,needs_repeat,n,errors,error_percent
+legacy240,native,fixed_native_dev,False,3211,330,10.277172220492059
+legacy240,native,fixed_native_dev,True,11605,376,3.239982766049117
+legacy240,native,condition_matched_dev,False,3211,330,10.277172220492059
+legacy240,native,condition_matched_dev,True,11605,376,3.239982766049117
+legacy240,wrap4,fixed_native_dev,False,3211,330,10.277172220492059
+legacy240,wrap4,fixed_native_dev,True,11605,984,8.479103834554072
+legacy240,wrap4,condition_matched_dev,False,3211,11,0.3425724073497353
+legacy240,wrap4,condition_matched_dev,True,11605,90,0.7755277897457992
+B,native,fixed_native_dev,False,3211,109,3.3945811273746496
+B,native,fixed_native_dev,True,11605,616,5.308056872037914
+B,native,condition_matched_dev,False,3211,109,3.3945811273746496
+B,native,condition_matched_dev,True,11605,616,5.308056872037914
+B,wrap4,fixed_native_dev,False,3211,109,3.3945811273746496
+B,wrap4,fixed_native_dev,True,11605,454,3.912106850495476
+B,wrap4,condition_matched_dev,False,3211,439,13.671753347866709
+B,wrap4,condition_matched_dev,True,11605,1689,14.554071520896164

@@ -1,0 +1,60 @@
+# E077. 공개 예시 음성 네 개의 비음성 구간·0 값·파형 측정
+
+**실행 상태:** 예시 측정 완료·모집단 실험 아님
+
+이 문서의 상태는 2026-11-12 출판 검토 기준이다. 기존 문서·state의 시점별 상태와 충돌하면 실제 완료표식과 본문 최신 보완을 우선한다.
+
+## 가설
+
+공개예시의 실제무음·정확한0·저에너지 구간은 서로 다른 개념일 수 있다.
+
+## 그렇게 설계한 이유
+
+음성 밖의 작은 파형이 정확한 0 인지, 음성활동 판정과 어떻게 다른지 예시로 확인한다.
+
+대조와 통제의 근거: 이 예시 분석과 나중에 사용자가 제외한‘무음 분포가 오류 원인인가’가설은 다르다. 이 자료로 새 무음 제거 학습을 하지 않았다.
+
+## 모델·데이터·표본
+
+공개 ASVspoof 예시의 정상 p226_247·합성 A16 p226_c0022·변환 A19 p226_p281_394·원본 정상 p281_394 네 파일. 전체 학습/평가의 표본이 아니다.
+
+## 실험 내용과 상세 절차
+
+1. 16kHz 모노 PCM16의 전체 샘플 수·길이·WAV 청크·SHA256을 기록한다.
+2. WebRTC VAD mode2·10ms 프레임으로 앞/뒤 비음성 구간과 비율을 측정하고 mode0/1/3 민감도도 저장한다.
+3. 정확한 0샘플 비율·비음성 구간 RMS dBFS를 계산하고 한 정상 파일 0.04~0.09초 800샘플을 확대해 비 0 비율과최솟값/최댓 값을 확인한다.
+
+## 측정과 검증
+
+파일별 활동/0 값/음량과 구간 좌표·VADmode 민감도.
+
+## 결과
+
+예시 정상 p226_247의 VAD 비음성 49.5894%지만 정확한 0은 전체 0.5471%였다. 확대 구간의 비 0 비율 99.875%. ‘비음성’과‘배열 0’은 같지 않다.
+
+## 해석·실패한 부분·한계
+
+네 공개 예시로 클래스 전체 차이·특정 공격 원인·모델 성능을 주장하지 않는다. 파일 URL은 저장된 sources.json에 있으며 이번에 새로 다운로드하지 않았다.
+
+## 배운 점
+
+네예시는 정의를 확인하는 사례다. 청각평가·모집단 통계·학습일반화로 확대하면 안 된다.
+
+## 실험 코드
+
+- [artifacts/silence_analysis/analyze_silence.py](code/artifacts/silence_analysis/analyze_silence.py)
+
+코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+
+## 설정·결과·검산 근거
+
+- [artifacts/silence_analysis/sources.json](../../_shared/references/artifacts/silence_analysis/sources.json)
+- [artifacts/silence_analysis/measurements.json](../../_shared/references/artifacts/silence_analysis/measurements.json)
+- [artifacts/silence_analysis/zoom_measurements.json](../../_shared/references/artifacts/silence_analysis/zoom_measurements.json)
+- [artifacts/silence_analysis/vad_intervals.csv](../../_shared/references/artifacts/silence_analysis/vad_intervals.csv)
+
+## 연결
+
+다른 관련 가설: 주 가설에서만 분류한다.
+
+[가설 목록으로](../README.md) · [전체 실험 목록](../../README.md)

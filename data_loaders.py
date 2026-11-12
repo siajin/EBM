@@ -95,6 +95,9 @@ def collate_eval(rows):
 
 
 def get_loaders(args, train_db, val_db, eval_db):
+    if args.get('bpl_pairing', 'legacy_long_short') != 'legacy_long_short':
+        from positive_bpl import get_loaders as matched_loaders
+        return matched_loaders(args, train_db, val_db, eval_db)
     train_set = TrainSet(args, train_db)
     sampler = BalancedLengthBatchSampler(train_set,args)
     train_loader = DataLoader(train_set, batch_sampler=sampler,
@@ -102,7 +105,8 @@ def get_loaders(args, train_db, val_db, eval_db):
         collate_fn=partial(collate_train,short_size=args['num_train_frames_short']*160-40,
             include_wrapped=bool(args.get('short_oc_weight',0.) or args.get('padding_loss_weight',0.))))
     def evaluation_loader(items):
-        dataset = EnrollmentSet(args,items)
+        # Fix dev/target input to B's cap so only training long context changes.
+        dataset = EnrollmentSet(dict(args,cap_long=True),items)
         return DataLoader(dataset,batch_size=args.get('eval_batch_size',8),
             sampler=ExactDistributedEvalSampler(dataset,args),num_workers=args['num_workers'],
             collate_fn=collate_eval,pin_memory=False)
@@ -253,4 +257,3 @@ class EnrollmentSet(Dataset):
                 audio = audio[:self.crop_size]
 
         return audio, item.type, item.label, index
-    

@@ -1,0 +1,11 @@
+{
+  "EER_percent": 5.427399287107404,
+  "n": 533928,
+  "bonafide": 14869,
+  "spoof": 519059,
+  "phase": "21DF",
+  "epoch": 25,
+  "checkpoint_sha256": "53c6e963d76608a8b2490f531834822ace79832c315af0a15ec2ed1b77b7e8be",
+  "evaluation_protocol": "controlled_oc_v1",
+  "optimizer_updates": 0
+}

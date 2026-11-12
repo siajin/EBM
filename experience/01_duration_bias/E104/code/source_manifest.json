@@ -1,0 +1,14 @@
+[
+  {
+    "path": "experience/01_duration_bias/E104/code/natural_lowenergy_axis_db20.py",
+    "sha256": "5174cbbca92226bed5944506fe962785e91bb8c5dc0f944c15b31b3484a13b93",
+    "origin": "artifacts/github_archive_20261112/remote_source/historical_analysis/natural_lowenergy_axis_db20.py",
+    "kind": "actual historical analysis source"
+  },
+  {
+    "path": "experience/01_duration_bias/E104/code/verify_natural_lowenergy_axis.py",
+    "sha256": "1d9c8dd43390125dc89e9edc1a379856cc09be4c976a7acfb47a9f5ea9941078",
+    "origin": "artifacts/github_archive_20261112/remote_source/historical_analysis/verify_natural_lowenergy_axis.py",
+    "kind": "actual historical analysis source"
+  }
+]

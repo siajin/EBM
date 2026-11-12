@@ -1,0 +1,39 @@
+{
+  "source_sha_match": true,
+  "train_original_count": 25380,
+  "target_is_feasible_under_fixed_original_marginals": true,
+  "maximum_class_length_difference": 7.613076835610855e-13,
+  "expected_train_length_overlap_percent": 99.99999999978779,
+  "group_marginals": [
+    {
+      "class": "bonafide",
+      "dimension": "speaker_group",
+      "exact_original_marginal_preserved": true
+    },
+    {
+      "class": "bonafide",
+      "dimension": "attack_id",
+      "exact_original_marginal_preserved": true
+    },
+    {
+      "class": "spoof",
+      "dimension": "speaker_group",
+      "exact_original_marginal_preserved": true
+    },
+    {
+      "class": "spoof",
+      "dimension": "attack_id",
+      "exact_original_marginal_preserved": true
+    }
+  ],
+  "runtime_crops_checked": 4000,
+  "anchors_seen": {
+    "front": 1935,
+    "back": 2065
+  },
+  "short_source_rejected": true,
+  "mean_selected_seconds": 2.34,
+  "training_loop_modified": false,
+  "training_started": false,
+  "heldout_data_used_to_choose_or_fit_policy": false
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "path": "experience/01_duration_bias/E019/code/EBM/tools/diagnose_speed_atempo.py",
+    "sha256": "153ddf74c90328694130d6ee63d8923334419ae1bc2747bd720eaa1395d2b331",
+    "origin": "EBM/tools/diagnose_speed_atempo.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/01_duration_bias/E019/code/artifacts/speed_duration_feasibility_20261109/write_report.py",
+    "sha256": "e3ba59ab246fdf62e127b84faaf634293615f8b021d5f5cda6f5b1b902eb3d2a",
+    "origin": "artifacts/speed_duration_feasibility_20261109/write_report.py",
+    "kind": "explicit method source"
+  }
+]

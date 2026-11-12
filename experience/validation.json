@@ -1,0 +1,77 @@
+{
+  "status": "passed",
+  "records": 113,
+  "hypothesis_groups": 6,
+  "python_files_parsed": 1313,
+  "local_markdown_links_checked": 3625,
+  "source_files_unchanged": 1416,
+  "code_manifest_hashes_verified": 737,
+  "secret_pattern_findings": 0,
+  "new_training_or_inference": 0,
+  "spending_ceiling_usd": 0,
+  "short25_independent_audit": {
+    "21LA": {
+      "n": 148176,
+      "class_counts": [
+        14816,
+        133360
+      ],
+      "EER_percent": 11.308488302339532,
+      "difference_percent_points": 0.0,
+      "scores_sha256": "87140f0714d192b85b319b0b8edceae3b907f6ab3eac85c26e66c0f642cb2abf",
+      "unique_uid_and_complete_indices": true,
+      "finite_scores": true,
+      "input_cap_verified": true
+    },
+    "21DF": {
+      "n": 533928,
+      "class_counts": [
+        14869,
+        519059
+      ],
+      "EER_percent": 5.427399287107404,
+      "difference_percent_points": 0.0,
+      "scores_sha256": "4918452cdc936680db84993f2e1f2b2f71b5f6cec351a52969375e0702f0357b",
+      "unique_uid_and_complete_indices": true,
+      "finite_scores": true,
+      "input_cap_verified": true
+    }
+  },
+  "BC_minima_from_actual_metrics": {
+    "B": {
+      "19LA": {
+        "EER_percent": 0.46227056424201773,
+        "epoch": 45,
+        "candidates": 10
+      },
+      "21LA": {
+        "EER_percent": 3.7594492440604754,
+        "epoch": 45,
+        "candidates": 10
+      },
+      "21DF": {
+        "EER_percent": 2.084874571255635,
+        "epoch": 5,
+        "candidates": 10
+      }
+    },
+    "C": {
+      "19LA": {
+        "EER_percent": 0.4884004884004884,
+        "epoch": 40,
+        "candidates": 10
+      },
+      "21LA": {
+        "EER_percent": 4.622075584883023,
+        "epoch": 30,
+        "candidates": 10
+      },
+      "21DF": {
+        "EER_percent": 2.152549132179579,
+        "epoch": 5,
+        "candidates": 10
+      }
+    }
+  },
+  "errors": []
+}

@@ -1,0 +1,17 @@
+﻿mode,target_seconds,bona_spoof_speaker_overlap_percent
+original_uniform,0.5,99.66707466357255
+original_uniform,1.0,99.66707466355592
+original_uniform,1.5,99.66707466349332
+original_uniform,2.0,99.66707466337593
+original_uniform,2.5,99.66707466325602
+original_uniform,3.0,99.66707466308053
+original_uniform,3.5,99.66707466281665
+original_uniform,4.0,99.66707466275581
+speaker_matched,0.5,100.00000000009899
+speaker_matched,1.0,100.00000000009423
+speaker_matched,1.5,100.00000000006293
+speaker_matched,2.0,99.99999999995381
+speaker_matched,2.5,99.99999999979018
+speaker_matched,3.0,99.99999999952153
+speaker_matched,3.5,99.99999999907064
+speaker_matched,4.0,99.99999999891463

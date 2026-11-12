@@ -1,0 +1,42 @@
+{
+  "status": "training_running",
+  "latest_user_choice": "2026-11-11: 학습 돌려봐",
+  "short_original_criterion_samples_le": 32000,
+  "sr": 16000,
+  "OC": "Original fixed64600 input and original normal/spoof class quota, unchanged",
+  "L43": "Existing BPL4/3:64600 x48440views, all bonafide pair combinations in the applicable normal group",
+  "L32": "Only original<=32000 bonafide sources;48440 x32000views, existing all-pairs BPL semantics, not new12x12x12 tensor and not silently changed to same-UID diagonal",
+  "repeat": "User-selected wrap repetition to each fixed target, including2s target when original<2s",
+  "weights_based_on_previous_user_choice": {
+    "short_group": "OC +0.5L43 +0.5L32",
+    "other_group": "OC +1.0L43"
+  },
+  "pair_function": "Original softplus(30*(1-cos))-0.3, mean over valid pairs; new L32 uses symmetric gradient like existing BPL, no extra stop-gradient modification in this candidate",
+  "batching_proposal": "Original two class DataLoaders and DistributedSamplers unchanged; no replacement loader/batch format/rebucketing",
+  "extra_losses": [
+    "No L42",
+    "No three-way loss",
+    "No BPL1"
+  ],
+  "relation_to_previous_candidate": "A separate updated candidate; old5/4-4/3 local code draft is held and does not implement this new32design. Do not run it as the new candidate.",
+  "remaining_before_any_execution": [],
+  "new_model_training_started": true,
+  "new_gpu_job_started": true,
+  "new_queue_registered": false,
+  "implementation": "EBM/short32_original240.py",
+  "validation": "artifacts\\short32_robustness_20261111\\final\\validation.json",
+  "validation_tests": 54,
+  "batching_implementation": "Frozen original TrainSet/get_loaders/ModelTrainer.train called directly; eligibility mapped read-only from source headers and pure sampler schedule",
+  "mixed_objective": "OC+L43 -(K/(2N))*L43_eligible_rows +(K/(2N))*L32; N=allbona, K=original<=32000bona",
+  "extra_view_rng": "Separate reproducible fork_rng for2s frontend/backend; original4/3/center/worker RNG preserved",
+  "review": "EBM/SHORT32_ORIGINAL240.md",
+  "checkpoint_policy": "every5/final: atomic CLS+TrainState, safe readback, hash/size verification, last-written commit marker before any eval",
+  "evaluation_schedule": "save->19LA at each5/final; after training, each saved epoch21LA->21DF; no dev",
+  "failure_policy": "coordinated save failures halt all ranks before eval/next epoch; caught eval failures recorded and other stages continue; partial evaluation explicitly marked incomplete",
+  "training_hold_released_by_user": true,
+  "training_state": "artifacts\\short32_train_20261111_v2\\state.json",
+  "training_root": "/home/mentee/analysis/ebm_short32_original240_e50_20261111_v2",
+  "server_validation_tests": 57,
+  "actual2GPU_smoke": "passed fullgraph3steps, save/readback,64trial19LA/21LA/DF; unchanged frontend",
+  "prior_v1_failure": "CPU test reference Git cwd only; no model training; preserved"
+}

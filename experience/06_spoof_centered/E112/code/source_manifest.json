@@ -1,0 +1,56 @@
+[
+  {
+    "path": "experience/06_spoof_centered/E112/code/EBM/role_lifecycle.py",
+    "sha256": "bfb317758d9984183430fd2d405bcb6ae18002840932953f1b991bc430f51adb",
+    "origin": "EBM/role_lifecycle.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/06_spoof_centered/E112/code/EBM/role_runtime.py",
+    "sha256": "862335ac29e0746830f31deeccbf07c497b957f0df67b07b818bd58384a0129a",
+    "origin": "EBM/role_runtime.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/06_spoof_centered/E112/code/EBM/tools/train_role_experiment.py",
+    "sha256": "47051c6be59cc4136ae4fe5349f4e7a735a136e6627f0d67d7f65a8c329745c0",
+    "origin": "EBM/tools/train_role_experiment.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/06_spoof_centered/E112/code/EBM/tests/test_role_code_audit.py",
+    "sha256": "c6b2eb57c30ef5026611d83d7aecec7c903d000e346425168b14d1ac3f3bfae6",
+    "origin": "EBM/tests/test_role_code_audit.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/06_spoof_centered/E112/code/artifacts/reverse_ebm_code_audit_20261112/before/role_lifecycle.py",
+    "sha256": "e8ebdaf1eedf609c69e0d8f34a6ca2bb1d9d36d09b70cc33095d9f62f0c521f2",
+    "origin": "artifacts/reverse_ebm_code_audit_20261112/before/role_lifecycle.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/06_spoof_centered/E112/code/artifacts/reverse_ebm_code_audit_20261112/before/role_model.py",
+    "sha256": "576d963df66076a548526430571f33f09195ff74960f10e08369edfa9cb138f1",
+    "origin": "artifacts/reverse_ebm_code_audit_20261112/before/role_model.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/06_spoof_centered/E112/code/artifacts/reverse_ebm_code_audit_20261112/before/role_objectives.py",
+    "sha256": "b029ac84d908b7dc9a52f337b132e618a80a88e8945a9a9772a8408383eff396",
+    "origin": "artifacts/reverse_ebm_code_audit_20261112/before/role_objectives.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/06_spoof_centered/E112/code/artifacts/reverse_ebm_code_audit_20261112/before/role_runtime.py",
+    "sha256": "49f3251cd9a27ab26bca192911b749da98d29305183ff5adbe660cb0caff5006",
+    "origin": "artifacts/reverse_ebm_code_audit_20261112/before/role_runtime.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/06_spoof_centered/E112/code/artifacts/reverse_ebm_code_audit_20261112/before/role_training.py",
+    "sha256": "df1c5e80c157000504eb3dae84870ff1f8f5934748b41c69a14d4e397bffaeef",
+    "origin": "artifacts/reverse_ebm_code_audit_20261112/before/role_training.py",
+    "kind": "implementation / validation source"
+  }
+]

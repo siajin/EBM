@@ -1,0 +1,588 @@
+{
+  "version": "frozen-model-spec-v1.2-size-matched-21LA",
+  "scope": "Frozen EBM F0-F4/P1-P4/R1-R3 execution authorized on2026-11-05; native-only substeps counted complete separately",
+  "original_EBM_parameters_frozen": true,
+  "centroid_frozen": true,
+  "reference_checkpoint_sha256": "104873703a57cad98b686d770e0860e031a2cf9abef79b72668780c1660e0b24",
+  "classes": {
+    "bonafide": 1,
+    "spoof": 0,
+    "higher_score": "bonafide"
+  },
+  "architecture": {
+    "hidden_layers": 25,
+    "SSL_hidden_size": 1024,
+    "aggregation_size": 128,
+    "embedding_size": 160,
+    "LayerNorm_eps": 1e-12,
+    "ASP_noise_std": 1e-05,
+    "head_hidden_size": 16,
+    "final_channel_dynamic_attention_in_original_model": false
+  },
+  "original_training": {
+    "epochs": 50,
+    "T_0": 150,
+    "rand_seed": 1,
+    "frontend_no_grad_for_epoch_leq_T0": true,
+    "class_weights_enabled": true,
+    "bonafide_sampling_fraction": 0.1,
+    "spoof_sampling_fraction": 0.9,
+    "bonafide_class_weight": 5.0,
+    "spoof_class_weight": 0.5555555555555556,
+    "OC_alpha": 20.0,
+    "r_real": 0.9,
+    "r_fake": 0.2,
+    "BPL_alpha": 30.0,
+    "long_samples": 64600,
+    "short_samples": 48440,
+    "nominal_codec_augmentation_probability_per_view": 0.8,
+    "rawboost_augtype_choices": 9,
+    "original_two_view_BPL_reproducible_from_current_cache": false
+  },
+  "cache": {
+    "T_rows": 25380,
+    "V_rows": 14983,
+    "DF_pilot_rows": 20000,
+    "DF_full_eval_rows": 533928,
+    "Q_cached": false,
+    "R19_cached": false,
+    "R21LA_cached": true,
+    "DF_full_cached": false,
+    "R21LA_alias": "21LA_eval",
+    "R21LA_rows": 148176,
+    "R21LA_bonafide": 14816,
+    "R21LA_spoof": 133360,
+    "R21LA_fingerprint": "4110118cb92e35c171ef7b71194407b5a3400b5d3eedaeb2af9909c096997a29",
+    "R21LA_DF_shared_speaker_groups": 67,
+    "features": [
+      "long_view_h_pre_LayerNorm",
+      "long_view_z_post_LayerNorm",
+      "normalized_centroid",
+      "scores",
+      "metadata"
+    ],
+    "short_view_cached": false,
+    "pooled_256_features_cached": false,
+    "SSL_hidden_states_cached": false,
+    "T_V_fingerprint": "686e593443178bb89241e48ab9a148e1f248f2025140f379d564c19a75198b4b",
+    "DF_fingerprint": "1b0a7488e72f4ec277c88575c51ce983bc9879e9ed092249938eb3c84fc69bae"
+  },
+  "experiment_ids": {
+    "F0": "weighted loss invariance and geometric identities",
+    "F1": "native masked-cosine channel intervention",
+    "F2": "scalar-matched residual-direction distributions",
+    "F3": "center-fixed covariance metrics",
+    "F4": "source, codec, duration and padding diagnostics",
+    "P1": "frozen-vector static gate, dynamic gate and residual MLP",
+    "P2": "supervised diagonal metric on frozen vectors",
+    "P3": "monotonic-scalar directional information probes",
+    "P4": "pre/post LayerNorm diagnostic features",
+    "R1": "new dataset or missing DF rows, same checkpoint",
+    "R2": "original layer/time attention ablation with new inference",
+    "R3": "paired input-perturbation robustness with new inference"
+  },
+  "fit_routes": {
+    "transfer": {
+      "fit": "T",
+      "select": "V",
+      "evaluate": "DF_pilot",
+      "additional_evaluate": [
+        "21LA_pilot"
+      ],
+      "independent_confirmation": false,
+      "final_supplementary_evaluate": [
+        "21LA_eval"
+      ]
+    },
+    "within_DF_diagnostic": {
+      "outer_group_folds": 5,
+      "inner_group_folds": 3,
+      "outer_seed": 11,
+      "inner_seed": 12,
+      "group": "source_corpus::speaker",
+      "may_be_reported_as_T_to_DF_transfer": false,
+      "dataset": "DF_pilot",
+      "rows": 20000
+    },
+    "within_21LA_diagnostic": {
+      "outer_group_folds": 5,
+      "inner_group_folds": 3,
+      "outer_seed": 11,
+      "inner_seed": 12,
+      "group": "asvspoof::speaker",
+      "may_be_reported_as_T_to_DF_transfer": false,
+      "dataset": "21LA_pilot",
+      "rows": 20000,
+      "stratify": "class (source constant)"
+    }
+  },
+  "F1": {
+    "fractions": [
+      0.05,
+      0.1,
+      0.25,
+      0.5
+    ],
+    "dimensions": [
+      8,
+      16,
+      40,
+      80
+    ],
+    "random_mask_seeds": [
+      200,
+      201,
+      202,
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      210,
+      211,
+      212,
+      213,
+      214,
+      215,
+      216,
+      217,
+      218,
+      219
+    ],
+    "mask_both_embedding_and_centroid": true,
+    "Fisher_input": "post-LN raw z before L2 normalization; sample variance ddof=1",
+    "primary_fraction": 0.25,
+    "main_score_conditions": 169,
+    "rotation_control_seeds": [
+      511,
+      512,
+      513
+    ],
+    "rotation_control_main_fraction_only": true
+  },
+  "F2": {
+    "primary_match_same_speaker_group": true,
+    "primary_match_same_codec": true,
+    "score_caliper": 0.02,
+    "lognorm_caliper": 0.002,
+    "sensitivity_score_caliper": 0.05,
+    "sensitivity_lognorm_caliper": 0.005,
+    "without_replacement": true,
+    "order_seed": 17,
+    "minimum_pairs": 200,
+    "minimum_speaker_groups": 10,
+    "MMD_bandwidth_T_balanced_rows": 1000,
+    "bandwidth_hash_key": "F2-bandwidth|1701|UID",
+    "exact_conditional_independence_claim": false,
+    "LA_match_same_transmission": true
+  },
+  "F3": {
+    "gamma_candidates": [
+      0.01,
+      0.1,
+      0.5,
+      1.0
+    ],
+    "metric_modes": [
+      "identity",
+      "diagonal",
+      "full"
+    ],
+    "center": "original normalized learned centroid",
+    "covariance_fit": "T bonafide normalized z",
+    "selection": "V EER; ties prefer larger gamma"
+  },
+  "posthoc_training": {
+    "seeds": [
+      101,
+      102,
+      103
+    ],
+    "batch_size": 160,
+    "bonafide_per_batch": 16,
+    "spoof_per_batch": 144,
+    "steps_per_epoch": 162,
+    "maximum_epochs": 80,
+    "patience_epochs": 10,
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0,
+    "explicit_regularizer": 0.01,
+    "selection": "V class-balanced logloss using frozen native T calibration; epoch 0 included; ties within 1e-8 choose earlier epoch",
+    "gate_function": "1 + 0.5*tanh(F(unit_z))",
+    "MLP_function": "unit_z + 0.5/sqrt(160)*tanh(F(unit_z))",
+    "static_parameters": 160,
+    "dynamic_parameters": 5296,
+    "MLP_parameters": 5296,
+    "centroid_update": false,
+    "original_BPL_term": false,
+    "fit_classifier_or_frontend": false,
+    "probability_calibration": {
+      "slope": 8.710543812499347,
+      "intercept": -0.7151751091389169
+    }
+  },
+  "statistics": {
+    "bootstrap_group": "dependency_group / source-speaker; source-family map unresolved",
+    "paired_bootstrap_draws": 10000,
+    "bootstrap_seed": 7301,
+    "head_primary_comparisons": 5,
+    "head_primary_eval": "DF_pilot",
+    "additional_eval_21LA": "21LA_pilot20k primary workload; full cache optional final supplement; shared speakers and prior observations",
+    "head_individual_CI_level_for_family95": 0.99,
+    "F1_primary_comparisons": 2,
+    "F1_individual_CI_level_for_family95": 0.975,
+    "prior_research_history_FWER_controlled": false
+  },
+  "status": {
+    "F0": "complete: structural identities, class-weighted OC invariance and gradient checks; not an empirical information-loss proof",
+    "F1": "partial: T/V/DF drop8/16/40/80 and keep80..1 top/bottom/random sweeps verified; specified rotated-basis and joint mask-bootstrap panel not_run; 21LA_pilot not_run",
+    "F2": "partial: DF source-codec matching106 pairs and same-speaker18 pairs described; specified primary matching coverage/moments/MMD not_run; 21LA_pilot not_run",
+    "F3": "partial: T-fit covariance metrics and DF evaluation verified; statistical gain not established; 21LA_pilot transfer not_run",
+    "F4": "partial: DF K4 associations and metadata-control probes done; vector eta2 and new condition-error panel not_run; 21LA_pilot not_run",
+    "P1": "not_run: no actual-data static/dynamic gate or matched MLP fit under this spec",
+    "P2": "not_run: supervised diagonal metric not fitted; covariance metric F3 is a different experiment",
+    "P3": "partial: T/V bounded linear residual and DF-internal nested spline-linear probes done; new monotonic/nonlinear probe and 21LA_pilot not_run",
+    "P4": "partial: DF-internal h/z and h-stat linear probes done; scalar+u increments with dimension-matched noise controls and 21LA_pilot not_run",
+    "R1": "partial: 21LA full eval cache and native metrics complete; Q/R19/full-DF feature expansion and new-head full-LA final evaluation not_run",
+    "R2": "not_run: original layer/time attention inference ablation not performed",
+    "R3": "not_run: paired input noise/codec perturbation not performed"
+  },
+  "reused_completed_diagnostic": {
+    "run": "cached_core_v1",
+    "completed_KST": "2026-11-05 09:06",
+    "output_audit_status": "pass",
+    "same_as_new_spec_all_conditions": false,
+    "new_training_or_inference_for_this_document": false
+  },
+  "analysis_data_plan": {
+    "version": "size_matched_eval_v1",
+    "date_KST": "2026-11-05",
+    "scope": "cached experiments; metadata-only sample lock; no new score experiment or training",
+    "raw_cache_catalog_unchanged": true,
+    "raw_21LA_alias": "21LA_eval",
+    "default_evaluation": [
+      "DF_pilot",
+      "21LA_pilot"
+    ],
+    "primary_benchmark": "DF_pilot",
+    "full_21LA_role": "optional final supplementary evaluation of V-locked methods; overlaps pilot; not independent confirmation",
+    "source_data_counts": {
+      "T": {
+        "bonafide": 2580,
+        "spoof": 22800,
+        "total": 25380
+      },
+      "V": {
+        "bonafide": 1351,
+        "spoof": 13632,
+        "total": 14983
+      },
+      "DF_pilot": {
+        "bonafide": 2000,
+        "spoof": 18000,
+        "total": 20000
+      },
+      "21LA_pilot": {
+        "bonafide": 2000,
+        "spoof": 18000,
+        "total": 20000
+      },
+      "21LA_eval": {
+        "bonafide": 14816,
+        "spoof": 133360,
+        "total": 148176
+      }
+    },
+    "unique_default_utterances": 80363,
+    "small_panels": {
+      "DF_small": {
+        "bonafide": 200,
+        "spoof": 1800,
+        "total": 2000,
+        "parent": "DF_pilot"
+      },
+      "21LA_small": {
+        "bonafide": 200,
+        "spoof": 1800,
+        "total": 2000,
+        "parent": "21LA_pilot"
+      }
+    },
+    "manifest_lock": "artifacts/geometry_cache/analysis_manifests/frozen_data_sizes_v1/lock.json",
+    "views": {
+      "21LA_pilot": {
+        "source_alias": "21LA_eval",
+        "parent_view": null,
+        "manifest": "artifacts/geometry_cache/analysis_manifests/frozen_data_sizes_v1/21LA_pilot.parquet",
+        "sha256": "2153631a6337ebfc5f68a754596d89785e23a7ed800b7b72eb4c17ae06bfa619",
+        "source_cache_fingerprint": "4110118cb92e35c171ef7b71194407b5a3400b5d3eedaeb2af9909c096997a29",
+        "selection_hash_prefix": "21LA-pilot-20261105-v1|",
+        "rows": 20000,
+        "class_counts": {
+          "0": 18000,
+          "1": 2000
+        },
+        "speaker_groups": 67
+      },
+      "21LA_small": {
+        "source_alias": "21LA_eval",
+        "parent_view": "21LA_pilot",
+        "manifest": "artifacts/geometry_cache/analysis_manifests/frozen_data_sizes_v1/21LA_small.parquet",
+        "sha256": "99e57dc69ba7cbd0555967492db67f52a90f9b30f5b41f3ad63051476420267b",
+        "source_cache_fingerprint": "4110118cb92e35c171ef7b71194407b5a3400b5d3eedaeb2af9909c096997a29",
+        "selection_hash_prefix": "21LA-small-20261105-v1|",
+        "rows": 2000,
+        "class_counts": {
+          "0": 1800,
+          "1": 200
+        },
+        "speaker_groups": 61
+      },
+      "DF_small": {
+        "source_alias": "DF_pilot",
+        "parent_view": null,
+        "manifest": "artifacts/geometry_cache/analysis_manifests/frozen_data_sizes_v1/DF_small.parquet",
+        "sha256": "0197d737f3bf312407cedc433c00c2433010dae07877aab05ddfae050593a3fd",
+        "source_cache_fingerprint": "1b0a7488e72f4ec277c88575c51ce983bc9879e9ed092249938eb3c84fc69bae",
+        "selection_hash_prefix": "DF-small-20261105-v1|",
+        "rows": 2000,
+        "class_counts": {
+          "0": 1800,
+          "1": 200
+        },
+        "speaker_groups": 76
+      }
+    },
+    "selection_uses_scores_or_embeddings": false,
+    "resample_after_results": false,
+    "within_dataset_CV": {
+      "datasets": [
+        "DF_pilot",
+        "21LA_pilot"
+      ],
+      "outer_folds": 5,
+      "inner_folds": 3,
+      "separate_fits": true,
+      "pooled_40000_fit": false,
+      "outer_seed": 11,
+      "inner_seed": 12
+    },
+    "experiment_sizes": {
+      "F0": {
+        "synthetic_rows": 160
+      },
+      "F1": {
+        "ranking_T": 25380,
+        "selection_V": 14983,
+        "DF_eval": 20000,
+        "LA_eval": 20000
+      },
+      "F2": {
+        "T_bandwidth_bonafide": 500,
+        "T_bandwidth_spoof": 500,
+        "DF_pool": 20000,
+        "LA_pool": 20000,
+        "maximum_pairs_per_dataset": 2000,
+        "minimum_pairs": 200,
+        "minimum_groups": 10,
+        "LA_matching_strata": [
+          "speaker_group",
+          "codec",
+          "transmission"
+        ]
+      },
+      "F3": {
+        "T_bonafide_covariance": 2580,
+        "selection_V": 14983,
+        "DF_eval": 20000,
+        "LA_eval": 20000
+      },
+      "F4": {
+        "DF_diagnostic": 20000,
+        "LA_diagnostic": 20000
+      },
+      "P1_P2_P3_transfer": {
+        "fit_T": 25380,
+        "select_V": 14983,
+        "DF_eval": 20000,
+        "LA_eval": 20000,
+        "refit_per_eval_dataset": false
+      },
+      "P3_internal_P4": {
+        "DF_separate_CV_rows": 20000,
+        "LA_separate_CV_rows": 20000
+      },
+      "R1": {
+        "LA_final_supplement_rows": 148176,
+        "requires_new_LA_forward": false
+      },
+      "R2_R3": {
+        "DF_initial": 2000,
+        "LA_initial": 2000,
+        "DF_expanded": 20000,
+        "LA_expanded": 20000,
+        "R2_conditions": 4,
+        "R3_new_conditions": 3,
+        "V_preprocessing_QC": {
+          "bonafide": 32,
+          "spoof": 96,
+          "total": 128,
+          "selection_hash_prefix": "V-QC-20261105-v1|",
+          "ID_lock_required_before_forward": true
+        }
+      }
+    },
+    "optional_Q_confirmation": {
+      "total": 9861,
+      "bonafide": 1197,
+      "spoof": 8664,
+      "cached": false,
+      "role": "all Q rows after extraction; not part of current cached default panel"
+    }
+  },
+  "progress_checklist": {
+    "date_KST": "2026-11-05",
+    "scope": "current direction/channel study, not all earlier lab training runs",
+    "evidence_basis": "completed result markers, verification reports, cache catalog and sample lock",
+    "new_performance_experiments_for_status_update": false,
+    "preparation": {
+      "architecture_audit": true,
+      "T_V_DF_cache": true,
+      "21LA_full_cache": true,
+      "equal_20k_sample_lock": true,
+      "small_2k_sample_lock": true,
+      "experiment_specification_and_math_checks": true
+    },
+    "experiment_completion_state": {
+      "F0": "complete",
+      "F1": "partial",
+      "F2": "partial",
+      "F3": "partial",
+      "F4": "partial",
+      "P1": "not_run",
+      "P2": "not_run",
+      "P3": "partial",
+      "P4": "partial",
+      "R1": "partial",
+      "R2": "not_run",
+      "R3": "not_run"
+    },
+    "new_equal_size_panel": {
+      "DF_pilot": {
+        "rows": 20000,
+        "native_and_related_diagnostics_available": true,
+        "all_current_spec_conditions_complete": false
+      },
+      "21LA_pilot": {
+        "rows": 20000,
+        "sample_locked": true,
+        "native_baseline_evaluated": false,
+        "new_F_or_P_performance_experiments": false
+      },
+      "21LA_eval": {
+        "rows": 148176,
+        "native_baseline_evaluated": true,
+        "new_gate_or_metric_evaluation": false
+      }
+    },
+    "coupled_retraining_of_proposed_attention_or_direction_loss": false,
+    "evidence_files": [
+      "artifacts/geometry_cache/local_analysis/native_preserving_v1/summary.json",
+      "artifacts/geometry_cache/local_analysis/cached_core_v1/output_audit.json",
+      "artifacts/geometry_cache/local_analysis/channel_keep_sweep_v1/verification.json",
+      "artifacts/geometry_cache/local_analysis/channel_keep_tiny_v1/verification.json",
+      "artifacts/geometry_cache/local_analysis/channel_keep_one_v3/verification.json",
+      "artifacts/geometry_cache/local_analysis/21la_cache_validation_v1/verification.json",
+      "artifacts/geometry_cache/analysis_manifests/frozen_data_sizes_v1/lock.json"
+    ],
+    "historical_snapshot_superseded_by": "execution_progress_v1"
+  },
+  "execution_progress_v1": {
+    "updated_KST": "2026-11-05 23:24 KST",
+    "output": "artifacts/geometry_cache/local_analysis/frozen_all_v1",
+    "experiments": [
+      {
+        "id": "F0",
+        "state": "완료",
+        "scope": "기존 항등식·weighted OC·gradient 검수 완료",
+        "remaining": "없음"
+      },
+      {
+        "id": "F1",
+        "state": "완료",
+        "scope": "명세의169조건 및 회전 좌표3개 계산·통계 실행",
+        "remaining": "없음"
+      },
+      {
+        "id": "F2",
+        "state": "완료",
+        "scope": "주 matching DF27쌍/9그룹,21LA10쌍/6그룹; 넓은 caliper 민감도·MMD·방향 moment 포함",
+        "remaining": "표본 기준 미달이므로 결론은 판정 불가; 실행 실패와 구분"
+      },
+      {
+        "id": "F3",
+        "state": "완료",
+        "scope": "T 정상 covariance·V 선택·두2만 개 평가 및 CI; V 선택은 양쪽 metric 모두identity",
+        "remaining": "없음"
+      },
+      {
+        "id": "F4",
+        "state": "완료",
+        "scope": "두 평가셋의 class별 vector eta²·padding/duration·조건별 native 오류",
+        "remaining": "없음"
+      },
+      {
+        "id": "P1",
+        "state": "완료",
+        "scope": "static/dynamic/동일 크기MLP×seed3; T학습/V선택·gate개입·두 평가셋 및 전체21LA 보조 평가",
+        "remaining": "없음"
+      },
+      {
+        "id": "P2",
+        "state": "완료",
+        "scope": "supervised diagonal metric×seed3; V에서는epoch0 identity가 선택됨",
+        "remaining": "없음"
+      },
+      {
+        "id": "P3",
+        "state": "완료",
+        "scope": "T/V 전이 평가 완료; 새 단조 scalar·linear/MLP direction/noise와 데이터셋별5×3 grouped CV",
+        "remaining": "없음"
+      },
+      {
+        "id": "P4",
+        "state": "완료",
+        "scope": "P3과 같은fold에서 h-stat/h160 증분 및2/160차원 noise 대조",
+        "remaining": "없음"
+      },
+      {
+        "id": "R1",
+        "state": "완료",
+        "scope": "21LA 전체 native 평가 완료; Q·19LA·DF 전체 확장",
+        "remaining": "없음"
+      },
+      {
+        "id": "R2",
+        "state": "완료",
+        "scope": "두2만 개(각처음2천 개)의4조건 sidecar와 native대응 검사;R1 종료 후 실행",
+        "remaining": "없음"
+      },
+      {
+        "id": "R3",
+        "state": "완료",
+        "scope": "V-QC128 ID잠금, 같은base noise20/10dB·Opus32k 재압축의 두2만 개 작업",
+        "remaining": "없음"
+      }
+    ],
+    "native_evaluations_complete": [
+      "DF_pilot20k",
+      "21LA_pilot20k",
+      "21LA_full"
+    ],
+    "EBM_joint_retraining": false,
+    "all_experiments_completed": true
+  }
+}

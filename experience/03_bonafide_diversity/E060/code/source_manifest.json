@@ -1,0 +1,14 @@
+[
+  {
+    "path": "experience/03_bonafide_diversity/E060/code/artifacts/geometry_experiments/test_bonafide_domain_shift.py",
+    "sha256": "564aea9a9296180b6c616fc052660c625d5e30411a4ca21f6ab223a5029ad20a",
+    "origin": "artifacts/geometry_experiments/test_bonafide_domain_shift.py",
+    "kind": "explicit method source"
+  },
+  {
+    "path": "experience/03_bonafide_diversity/E060/code/artifacts/geometry_experiments/evaluate_19la_to_21la_cross.py",
+    "sha256": "33603ea04f291c1456821bbda933fa6452466b0c2b3deec1d396e4ab19f6b251",
+    "origin": "artifacts/geometry_experiments/evaluate_19la_to_21la_cross.py",
+    "kind": "explicit method source"
+  }
+]

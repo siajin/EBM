@@ -1,0 +1,57 @@
+{
+  "scope": "read-only code audit; no source edits or new server/learning actions",
+  "policy_sha256": "06a03d3d568cbecba375a225e976117b26862c673cce8acab4da888dccbccfd4",
+  "derived_policy_metrics": {
+    "mean_crop_seconds": 1.7,
+    "fraction_le_1_5": 0.6,
+    "independent_BPL_pairs_fraction_at_least_one_le_1_5": 0.84,
+    "random_microbatch_8": {
+      "expected_max_seconds": 2.986702515550755,
+      "long_run_waveform_valid_to_padded_ratio": 0.5691895966031675,
+      "assumption": "independent length draws from validated common target; not a measured GPU speed"
+    }
+  },
+  "source_coverage_expectations": {
+    "1": {
+      "originals": 2580,
+      "OC_draws_per_epoch": 2592,
+      "expected_OC_unique_per_epoch": 1635.453848903902,
+      "expected_OC_fraction": 0.6338968406604272,
+      "expected_unique_including_right_BPL": 2234.19467169132
+    },
+    "0": {
+      "originals": 22800,
+      "OC_draws_per_epoch": 23328,
+      "expected_OC_unique_per_epoch": 14604.4920766708,
+      "expected_OC_fraction": 0.6405478980995964
+    }
+  },
+  "coverage_formula": "sum_over_speakers n_s*(1-(1-common_target_share_s/n_s)^draws); expectation, not observed training coverage",
+  "synthetic_pooling_check": {
+    "class": "unmodified SelfWeightedPooling",
+    "setup": "constant repeated +/- patterns, uniform attention and noise disabled to isolate time scaling",
+    "frames": [
+      24,
+      192
+    ],
+    "short_std_over_long_std": 8.150753021240234,
+    "interpretation": "pooling exposes a length-dependent statistic; does not prove downstream EER loss"
+  },
+  "runtime_review": {
+    "frozen_XLSR_calls_per_matched_logical_batch": 36,
+    "waveforms_encoded_per_rank_per_logical_batch": 276,
+    "existing_replay_design": true,
+    "full_audio_decoded_before_crop": true
+  },
+  "unmeasured": [
+    "full50epoch EER",
+    "per-length EER",
+    "crop speech/silence fraction",
+    "OC/BPL gradient ratio",
+    "actual padding-related GPU throughput loss"
+  ],
+  "references": [
+    "https://arxiv.org/abs/2309.08279",
+    "https://huggingface.co/docs/transformers/main_classes/model"
+  ]
+}

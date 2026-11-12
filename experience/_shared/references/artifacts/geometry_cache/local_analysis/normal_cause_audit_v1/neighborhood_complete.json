@@ -1,0 +1,164 @@
+{
+  "status": "complete_exploratory",
+  "balanced_T_per_class": 2580,
+  "balanced_DF_per_class_by_fold": [
+    1579,
+    1549,
+    1659,
+    1638,
+    1575
+  ],
+  "metrics": [
+    {
+      "reference": "T_reference",
+      "rule": "nearest1",
+      "eer_percent": 3.049999999999997,
+      "auroc": 0.9963813611111111
+    },
+    {
+      "reference": "T_reference",
+      "rule": "mean5",
+      "eer_percent": 3.138888888888889,
+      "auroc": 0.9962542222222224
+    },
+    {
+      "reference": "DF_internal_OOF_reference",
+      "rule": "nearest1",
+      "eer_percent": 1.749999999999996,
+      "auroc": 0.9926737777777779
+    },
+    {
+      "reference": "DF_internal_OOF_reference",
+      "rule": "mean5",
+      "eer_percent": 1.8055555555555554,
+      "auroc": 0.9962084722222223
+    }
+  ],
+  "normal_groups": [
+    {
+      "reference": "T_reference",
+      "source": "asvspoof",
+      "native_rejected": false,
+      "n": 1032,
+      "nearest_normal_percent": 100.0,
+      "mean5_normal_percent": 100.0,
+      "median_nearest_bona_distance": 0.0003878175598788225,
+      "median_nearest_spoof_distance": 1.7080058558971323
+    },
+    {
+      "reference": "T_reference",
+      "source": "asvspoof",
+      "native_rejected": true,
+      "n": 6,
+      "nearest_normal_percent": 100.0,
+      "mean5_normal_percent": 100.0,
+      "median_nearest_bona_distance": 0.17791814111836596,
+      "median_nearest_spoof_distance": 1.453388557978569
+    },
+    {
+      "reference": "T_reference",
+      "source": "vcc2018",
+      "native_rejected": false,
+      "n": 189,
+      "nearest_normal_percent": 100.0,
+      "mean5_normal_percent": 100.0,
+      "median_nearest_bona_distance": 0.014498740654419584,
+      "median_nearest_spoof_distance": 1.651511397661101
+    },
+    {
+      "reference": "T_reference",
+      "source": "vcc2018",
+      "native_rejected": true,
+      "n": 334,
+      "nearest_normal_percent": 29.94011976047904,
+      "mean5_normal_percent": 29.94011976047904,
+      "median_nearest_bona_distance": 1.4517926011369793,
+      "median_nearest_spoof_distance": 0.08235303814839395
+    },
+    {
+      "reference": "T_reference",
+      "source": "vcc2020",
+      "native_rejected": false,
+      "n": 285,
+      "nearest_normal_percent": 100.0,
+      "mean5_normal_percent": 100.0,
+      "median_nearest_bona_distance": 0.0036644483916307147,
+      "median_nearest_spoof_distance": 1.6860889740348486
+    },
+    {
+      "reference": "T_reference",
+      "source": "vcc2020",
+      "native_rejected": true,
+      "n": 154,
+      "nearest_normal_percent": 44.15584415584416,
+      "mean5_normal_percent": 43.506493506493506,
+      "median_nearest_bona_distance": 0.736283815318858,
+      "median_nearest_spoof_distance": 0.4752043323288522
+    },
+    {
+      "reference": "DF_internal_OOF_reference",
+      "source": "asvspoof",
+      "native_rejected": false,
+      "n": 1032,
+      "nearest_normal_percent": 100.0,
+      "mean5_normal_percent": 100.0,
+      "median_nearest_bona_distance": 0.0004024124412800867,
+      "median_nearest_spoof_distance": 0.020671342538241988
+    },
+    {
+      "reference": "DF_internal_OOF_reference",
+      "source": "asvspoof",
+      "native_rejected": true,
+      "n": 6,
+      "nearest_normal_percent": 83.33333333333334,
+      "mean5_normal_percent": 100.0,
+      "median_nearest_bona_distance": 0.06240380660513456,
+      "median_nearest_spoof_distance": 0.17085451043751054
+    },
+    {
+      "reference": "DF_internal_OOF_reference",
+      "source": "vcc2018",
+      "native_rejected": false,
+      "n": 189,
+      "nearest_normal_percent": 100.0,
+      "mean5_normal_percent": 100.0,
+      "median_nearest_bona_distance": 0.0069153935983420345,
+      "median_nearest_spoof_distance": 0.027278117680075376
+    },
+    {
+      "reference": "DF_internal_OOF_reference",
+      "source": "vcc2018",
+      "native_rejected": true,
+      "n": 334,
+      "nearest_normal_percent": 90.11976047904191,
+      "mean5_normal_percent": 87.12574850299401,
+      "median_nearest_bona_distance": 0.030479297204376643,
+      "median_nearest_spoof_distance": 0.05207206962884675
+    },
+    {
+      "reference": "DF_internal_OOF_reference",
+      "source": "vcc2020",
+      "native_rejected": false,
+      "n": 285,
+      "nearest_normal_percent": 100.0,
+      "mean5_normal_percent": 100.0,
+      "median_nearest_bona_distance": 0.002835656902706485,
+      "median_nearest_spoof_distance": 0.027804751982367426
+    },
+    {
+      "reference": "DF_internal_OOF_reference",
+      "source": "vcc2020",
+      "native_rejected": true,
+      "n": 154,
+      "nearest_normal_percent": 96.75324675324676,
+      "mean5_normal_percent": 98.05194805194806,
+      "median_nearest_bona_distance": 0.039087118590191705,
+      "median_nearest_spoof_distance": 0.09639079689033403
+    }
+  ],
+  "limitations": [
+    "Nearest-neighbor rule is a diagnostic with fixed k=1/5, not a selected detector.",
+    "T support and DF-internal support use different labeled domains and cannot be read as a deployment gain.",
+    "These backend z vectors do not isolate the pretrained encoder or any physical acoustic factor."
+  ]
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "path": "experience/01_duration_bias/E105/code/asv_quiet_presence_hypothesis.py",
+    "sha256": "c03c10863de95db7fc20fabd2961797b54de3110ff4e8178d320f5de7798ec68",
+    "origin": "artifacts/github_archive_20261112/remote_source/historical_analysis/asv_quiet_presence_hypothesis.py",
+    "kind": "actual historical analysis source"
+  },
+  {
+    "path": "experience/01_duration_bias/E105/code/asv_train_presence_context.py",
+    "sha256": "e91c76bdce4d07955182bffad07c54466b50c39ce2e70d943c15850d89ad1728",
+    "origin": "artifacts/github_archive_20261112/remote_source/historical_analysis/asv_train_presence_context.py",
+    "kind": "actual historical analysis source"
+  }
+]

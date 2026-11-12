@@ -1,0 +1,41 @@
+{
+  "status": "passed",
+  "originals": 25380,
+  "variants": 46580,
+  "policy_sha256": "d42b72f72696c3e68d540579e871d5c69a49ba6e79a75f6910af56286912522b",
+  "cache_index_sha256": "a4eacc80749b72e8c0587da38a5a944c5beeb2c9eb02c6209aa8f6219e9f3d87",
+  "bytes": 10205612268,
+  "seconds": 646.2718415260315,
+  "SoX": "sox:      SoX v14.4.2",
+  "synthetic_pitch_tests": [
+    {
+      "rate": 0.8,
+      "samples": 60000,
+      "peak_Hz": 440.0
+    },
+    {
+      "rate": 0.912345,
+      "samples": 52612,
+      "peak_Hz": 440.05169923211434
+    },
+    {
+      "rate": 1.0,
+      "samples": 48000,
+      "peak_Hz": 440.0
+    },
+    {
+      "rate": 1.12345,
+      "samples": 42726,
+      "peak_Hz": 440.01310677339325
+    },
+    {
+      "rate": 1.2,
+      "samples": 40000,
+      "peak_Hz": 440.0
+    }
+  ],
+  "maximum_crop_fraction": 0.2,
+  "no_manual_output_repeat_pad_trim": true,
+  "all_measured_lengths_equal_policy": true,
+  "optimizer_updates": 0
+}

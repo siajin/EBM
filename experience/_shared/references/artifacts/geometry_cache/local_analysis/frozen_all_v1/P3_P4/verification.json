@@ -1,0 +1,9 @@
+{
+  "status": "pass",
+  "checks": 1944,
+  "metrics_checked": 84,
+  "max_independent_OOF_score_error": 1.0658141036401503e-14,
+  "all_scalers_train_fold_only": true,
+  "outer_test_not_used_for_ridge_epoch": true,
+  "original_EBM_training": false
+}

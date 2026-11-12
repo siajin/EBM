@@ -1,0 +1,254 @@
+{
+  "prepared_KST": "2026-11-09T11:22:33",
+  "root": "/home/mentee/analysis/ebm_B_C_checkpoints_20261109",
+  "commit": "cf199af03044c40837c08ce31d633e2c048bde08",
+  "source_hashes": {
+    "arguments.py": "04cb0de70213c95307797843975828f9bb4cff97d7fa699973d6d5c553a9b72a",
+    "data_loaders.py": "78e21a420f894de1523a1a53516b776be8e8d9e4c023c2b3535b0234e58c8e00",
+    "data_processing/__init__.py": "e90c884ba77e163b8c8377f3fa9ab5442f279c16f726e2fc939c57468733816e",
+    "data_processing/augmentation/augmentation.py": "82c7ebd4fd24fb58f7021b82101233edb185d6684eb85c5026febd2f17d32faa",
+    "data_processing/augmentation/codec_aug.py": "4dbb894e994af786926cc5bdcfead9e1a3cf742bfc15a0a9ea62b7a9803f828e",
+    "data_processing/augmentation/raw_boost.py": "e8a8944850f4305a042fceceb8daf7fdb52b627f7874206284ce88f7b220d33f",
+    "data_processing/augmentation/wav_read_functions.py": "d81e376dd4fb060aef00208380fb429ca63841b6d7975f31fc012c0eae903cc4",
+    "dataset/ASVspoof2019_la_eval.py": "843642f72871b89781ede23998c9456b21b0415bbeae340bbe8d0c36beea2c35",
+    "dataset/ASVspoof2019_la_train.py": "bd98462e9e3f6da6f1e9a4f439761d4ec67ca625cd82aa7fcd6b07412953da2b",
+    "dataset/ASVspoof2021_df_eval.py": "422b4e0cf14ae1232e8ba918141d36c68b9057c311bafb6c541c7a80e942c4a7",
+    "dataset/ASVspoof2021_la_eval.py": "18c2a1a19d00d2e6eaf417ad3f0707434516f66e999cb013f62968b266e0f235",
+    "dataset/__init__.py": "3534dcaa88978f59714243b6f0e64bfb2f57f0c58fb4e1511234ea8ee70723dd",
+    "logger/__init__.py": "ceaf8c7f0f309f2489a88b7376bef13952d3a735a1b2b393a34797f796d21c3d",
+    "logger/interface.py": "8b1c23931a24a9e1967a6ec479e2a8c81cee13c8efc9458fd044ba6af936848e",
+    "logger/local.py": "5969fca176044b3dd741a5e7e9589e9cec3e332968afc5dfca1e8187e717e66c",
+    "logger/logger.py": "3cf192ae21f819e9dbf48b8e16dc42f49dce1894ac0e4c16f2b3e8865d56ca25",
+    "logger/neptune.py": "a5905325f55b7ecf31a01f84814e33cee777e0baa976a57d760b5c4ca723f9db",
+    "logger/wandb.py": "42c293e802b03fcc7d4764643cec147d8d6f8dfa7c0e4530c6eb3ad9fc0eadba",
+    "main.py": "9fcefc4fbb4aa05bd98f9dc8c4b8d9d1cef1ba14cb16eb2671b4bfef6509bed2",
+    "model/__init__.py": "357dae54f8602f4fbbd07a9d6cc4d80126c7d7950f36ebdeccd511aabb2c1f56",
+    "model/b_linear.py": "d96cec48857eca7e4b6cfc38c1f5bc682d29b659d9768f52fe521c2a5519ef92",
+    "model/loss.py": "479cf7a2ea0b28200da0ede1c14f434c7918b630b86554c2ab2f47ead7463715",
+    "native_steps.py": "1d74f16d97c476527aa84e7ad5f594320a4bc68a8aacbc852f046e5132a1caa8",
+    "scheduler/cosine_warmup.py": "ce81225049a4a31864752d6377e08ddb1f86a55f3e3a3860bd6fdb0ecb760d19",
+    "scheduler/steplr.py": "7d3e1c96134c5f36588def6b08b643e74e9bc72bf809f71f98cf2e518026ffd1",
+    "train.py": "b963db06fbded0459ebfc1e9fd78e7eaf1ed9d7cd9d6bd4ca97b8c794cfd642a",
+    "utils/__init__.py": "a17c6a58fe56069f873f8d22bae35354b4e3fd42b1b2cf330713a41c05a038fd",
+    "utils/ddp_util.py": "e3533ad2c29d166dbfabb486ab942ca999b63d8e8f77eed19ee87f38c7bd0b70",
+    "utils/get_threshold.py": "040adf607c2b62473ed42790e7c33d36305e58341614e3ef87ddbc852cfa0b83"
+  },
+  "checkpoints": {
+    "B_e5": {
+      "path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_B_zeropad_short303/model/CLS_5.pt",
+      "bytes": 15040274,
+      "sha256": "2fb5dc3891b140e7ddd2cfae131c75b24280963f48e3bd239e76d26288037a8a",
+      "TrainState_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_B_zeropad_short303/model/TrainState_5.pt",
+      "TrainState_sha256": "1248df116d39257811f629ce2896af104781b0dc3b3b88670f4ef721213ff57c"
+    },
+    "B_e10": {
+      "path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_B_zeropad_short303/model/CLS_10.pt",
+      "bytes": 15045708,
+      "sha256": "6edceb41f45da57e9308090ae344241756b0ccfb2eaaf7fa993b9dce2275edf0",
+      "TrainState_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_B_zeropad_short303/model/TrainState_10.pt",
+      "TrainState_sha256": "2d4af55445d058ee1ade5bd61dda57c1290c8437e4073afe01cb222d311c07eb"
+    },
+    "B_e15": {
+      "path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_B_zeropad_short303/model/CLS_15.pt",
+      "bytes": 15045708,
+      "sha256": "03207d1057c7e3042095d950082bed18539c71dc9d91c9465f907653c374edd3",
+      "TrainState_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_B_zeropad_short303/model/TrainState_15.pt",
+      "TrainState_sha256": "cc28079ddf282cf21c83f02679336aaa6795d5f4287b36ba7856c56818dab473"
+    },
+    "B_e20": {
+      "path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_B_zeropad_short303/model/CLS_20.pt",
+      "bytes": 15045708,
+      "sha256": "bc1e27344df9cf8ac98d74ae8fc52d57f2261d23ed0ee39d855a1c44f1aece82",
+      "TrainState_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_B_zeropad_short303/model/TrainState_20.pt",
+      "TrainState_sha256": "4038b5aaa17abee43bca64ccdd28e737f0eb27f9bc3bed3f1f4a13f27c94ae09"
+    },
+    "B_e25": {
+      "path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_B_zeropad_short303/model/CLS_25.pt",
+      "bytes": 15045708,
+      "sha256": "caf712bf50906ab46b32bc7c464cf736bdae1efe686b06fb1dea48b46724bf29",
+      "TrainState_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_B_zeropad_short303/model/TrainState_25.pt",
+      "TrainState_sha256": "03eb6ee84c696ca7c3389b5a16f252924b9507d7dd12524ddbbfd3c3e2dca693"
+    },
+    "B_e30": {
+      "path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_B_zeropad_short303/model/CLS_30.pt",
+      "bytes": 15045708,
+      "sha256": "44a9948a8388076127bb3f8f378d72dc9825dbecdc49d036e9cda022faa5650e",
+      "TrainState_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_B_zeropad_short303/model/TrainState_30.pt",
+      "TrainState_sha256": "0846df74465e61865abdc5c341fa456541c7f6deb3bfa3ef5c0e4855fd64b699"
+    },
+    "B_e35": {
+      "path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_B_zeropad_short303/model/CLS_35.pt",
+      "bytes": 15045708,
+      "sha256": "150b531ae443c0f6e1f57122e01c1ccdb32596af28ade5b82b28eeca0a91bd16",
+      "TrainState_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_B_zeropad_short303/model/TrainState_35.pt",
+      "TrainState_sha256": "ba36912e3b3b85eff8af82bbd16ed1de7b7bdad562be41bf3e2cf65acc298171"
+    },
+    "B_e40": {
+      "path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_B_zeropad_short303/model/CLS_40.pt",
+      "bytes": 15045708,
+      "sha256": "e5afff37dbfb3ef1e03b79208275925b430a87793a644c23f69d7cb1be405e2c",
+      "TrainState_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_B_zeropad_short303/model/TrainState_40.pt",
+      "TrainState_sha256": "03e0ccee4f6d11478fd4f95060415785ce0593558d9bb926779a9b16a2263f1f"
+    },
+    "B_e45": {
+      "path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_B_zeropad_short303/model/CLS_45.pt",
+      "bytes": 15045708,
+      "sha256": "baf9e8f4dbb6edb33d5ed6e1f3e7ee7ea7208daefc67bea2ffb50f3cd109dcac",
+      "TrainState_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_B_zeropad_short303/model/TrainState_45.pt",
+      "TrainState_sha256": "8c17665235c78c1b0a67f7ed889b03e8dfefc0e4cc61e8be44d425c44cb87aa1"
+    },
+    "B_e50": {
+      "path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_B_zeropad_short303/model/CLS_50.pt",
+      "bytes": 15045708,
+      "sha256": "63ed02a1baef97efa9c8b701814dcccebf3360d441782abe9688d8edb3cdf457",
+      "TrainState_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_B_zeropad_short303/model/TrainState_50.pt",
+      "TrainState_sha256": "3b1fe8ac2ec67e680ac582365e40cd6f34451a42484858f847f55e41a1b1cba0"
+    },
+    "C_e5": {
+      "path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_C_nativeLong_short303/model/CLS_5.pt",
+      "bytes": 15040274,
+      "sha256": "a610824d61f929f044b14464a5827ce1a7866b2fbbc8c0d1afd8eed5d6f91b53",
+      "TrainState_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_C_nativeLong_short303/model/TrainState_5.pt",
+      "TrainState_sha256": "31b7935e7c98cfc87357e125398f01bdee66addb353d7f33ea51a5cd7308bb25"
+    },
+    "C_e10": {
+      "path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_C_nativeLong_short303/model/CLS_10.pt",
+      "bytes": 15045708,
+      "sha256": "d7ef24f65122355271cc2e19dc551f7ec295bbd95a9a9492276bfaa26ceb3d60",
+      "TrainState_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_C_nativeLong_short303/model/TrainState_10.pt",
+      "TrainState_sha256": "7370d2ba08f26d732fd2dac15154243ed305cf17212c58d51d571f5b00126a5f"
+    },
+    "C_e15": {
+      "path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_C_nativeLong_short303/model/CLS_15.pt",
+      "bytes": 15045708,
+      "sha256": "ebc27c8c30d81d0204e63b2919c979623788c39023938f1c6f92e5197af6bf21",
+      "TrainState_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_C_nativeLong_short303/model/TrainState_15.pt",
+      "TrainState_sha256": "b3736e0d08e966aa0461c2460440ce20b17391a769336e5da892f90a98a24e88"
+    },
+    "C_e20": {
+      "path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_C_nativeLong_short303/model/CLS_20.pt",
+      "bytes": 15045708,
+      "sha256": "12357fa385a86d3bae00fa3d750694a26d64e210a916b1716ca7c5e264ea8bdc",
+      "TrainState_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_C_nativeLong_short303/model/TrainState_20.pt",
+      "TrainState_sha256": "e827426e4ce34991419672651fff0adc61ef8ab9381415bdd3c538dffb5c8d52"
+    },
+    "C_e25": {
+      "path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_C_nativeLong_short303/model/CLS_25.pt",
+      "bytes": 15045708,
+      "sha256": "5543b4c33cea3081aa6f8ec648ced10a25c94f865fc9f7abe47dabf93ea32f0f",
+      "TrainState_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_C_nativeLong_short303/model/TrainState_25.pt",
+      "TrainState_sha256": "7b037838887863313e853b81002b46a4930a5fab8520a4da270f7360954b81ae"
+    },
+    "C_e30": {
+      "path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_C_nativeLong_short303/model/CLS_30.pt",
+      "bytes": 15045708,
+      "sha256": "9fcc64acc2359366cde579940db3b8c841a4430dc226c336d709891657d8266f",
+      "TrainState_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_C_nativeLong_short303/model/TrainState_30.pt",
+      "TrainState_sha256": "17a40ec2548e2545a4be0cdc2e11fddb90a511d4541b50fc863db425c714e158"
+    },
+    "C_e35": {
+      "path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_C_nativeLong_short303/model/CLS_35.pt",
+      "bytes": 15045708,
+      "sha256": "b102b4da3b43fd6b9f60719541a05cb2773300acdb0ab5a580850f5c2bd5a6bf",
+      "TrainState_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_C_nativeLong_short303/model/TrainState_35.pt",
+      "TrainState_sha256": "a32b0fc4b4cbe794c2fe2c1ddd0624410590267b221b0a71f11b747ec78c0cb6"
+    },
+    "C_e40": {
+      "path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_C_nativeLong_short303/model/CLS_40.pt",
+      "bytes": 15045708,
+      "sha256": "8875839faf79d86887090ffeebd6c9001e23244ca5530e24bc8a7f75ea0f7de4",
+      "TrainState_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_C_nativeLong_short303/model/TrainState_40.pt",
+      "TrainState_sha256": "2c10b132df82bf80c6af839e044e028e712e07b12a4b8573472e50a5afb1f758"
+    },
+    "C_e45": {
+      "path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_C_nativeLong_short303/model/CLS_45.pt",
+      "bytes": 15045708,
+      "sha256": "5628251b203c3ada4db860b0d39328665df199a9b0e6da5373850be08368c9ce",
+      "TrainState_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_C_nativeLong_short303/model/TrainState_45.pt",
+      "TrainState_sha256": "35a4be4289734663efe9e7e9a6f4cf87fddcb03f45bfe33c1eea6a660727deba"
+    },
+    "C_e50": {
+      "path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_C_nativeLong_short303/model/CLS_50.pt",
+      "bytes": 15045708,
+      "sha256": "dcf7e141a35eb2d19adfa8a1ec36bf89d9a557c5b8ece4344939809c1aa1fa3d",
+      "TrainState_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_C_nativeLong_short303/model/TrainState_50.pt",
+      "TrainState_sha256": "6dc0d45cf402d1cb00a2085d7c9c98f2891df5c610344b9e8b59a641b57d0d20"
+    }
+  },
+  "epochs": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50
+  ],
+  "models": [
+    "B_e5",
+    "B_e10",
+    "B_e15",
+    "B_e20",
+    "B_e25",
+    "B_e30",
+    "B_e35",
+    "B_e40",
+    "B_e45",
+    "B_e50",
+    "C_e5",
+    "C_e10",
+    "C_e15",
+    "C_e20",
+    "C_e25",
+    "C_e30",
+    "C_e35",
+    "C_e40",
+    "C_e45",
+    "C_e50"
+  ],
+  "phases": [
+    "dev",
+    "19LA",
+    "21LA",
+    "21DF"
+  ],
+  "phase_counts": {
+    "dev": 24844,
+    "19LA": 71237,
+    "21LA": 148176,
+    "21DF": 533928
+  },
+  "protocol": {
+    "max_samples": 64600,
+    "native_nonrepeating_input": true,
+    "masks": true,
+    "batch_per_rank": 8,
+    "pooling_noise_std": 1e-05,
+    "paired_common_RNG": true,
+    "CUDA_VISIBLE_DEVICES": "0,1",
+    "hidden_states_saved": false,
+    "no_target_checkpoint_selection": true
+  },
+  "gpu_before_launch": "6, 0\n6, 0",
+  "protected_checkpoints": {
+    "B_CLS50": {
+      "path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_B_zeropad_short303/model/CLS_50.pt",
+      "bytes": 15045708,
+      "sha256": "63ed02a1baef97efa9c8b701814dcccebf3360d441782abe9688d8edb3cdf457"
+    },
+    "B_TrainState50": {
+      "path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_B_zeropad_short303/model/TrainState_50.pt",
+      "bytes": 45167594,
+      "sha256": "3b1fe8ac2ec67e680ac582365e40cd6f34451a42484858f847f55e41a1b1cba0"
+    },
+    "legacy240_CLS50": {
+      "path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5/model/BestCLS_50_21DF.pt",
+      "bytes": 15053782,
+      "sha256": "84a828eeda71d74212178dc2c2f02e72f8bb79b3573354f6cd9ca181a376d19e"
+    }
+  },
+  "evaluator_sha256": "961ece4a5ba570bab91bfee45a6992e1767174f22cfaa94861c7e755e1a2230e"
+}

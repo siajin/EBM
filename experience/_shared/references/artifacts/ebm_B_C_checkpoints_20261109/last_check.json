@@ -1,0 +1,533 @@
+{
+  "checked_KST": "2026-11-09T20:51:48",
+  "root": "/home/mentee/analysis/ebm_B_C_checkpoints_20261109",
+  "claim": true,
+  "started.txt": "2026-11-09T02:22:34+00:00",
+  "smoke.exit": "0",
+  "run.exit": "0",
+  "finished.txt": "2026-11-09T11:11:34+00:00",
+  "smoke_parent_pid.txt": "1651232",
+  "parent_pid.txt": "1651335",
+  "smoke_complete.json": {
+    "status": "passed",
+    "rank_rows": 24,
+    "historical_epoch50_max_errors": [
+      0.0,
+      0.0
+    ]
+  },
+  "complete.json": {
+    "status": "evaluation_complete_analysis_pending",
+    "phase_counts": {
+      "dev": 24844,
+      "19LA": 71237,
+      "21LA": 148176,
+      "21DF": 533928
+    },
+    "protocol": "B/C epochs5,10,15,20,25,30,35,40,45,50; common B cap/masks/batch8; pooling noise1e-5; common RNG",
+    "no_target_checkpoint_selection": true,
+    "thresholds_selected_on_dev_only": true
+  },
+  "progress_rank0.json": {
+    "phase": "21DF",
+    "rows": 266808,
+    "expected_rank_rows": 266964,
+    "elapsed_seconds": 23639.80949640274,
+    "updated_unix": 1794222649.9277108,
+    "smoke": false
+  },
+  "progress_rank1.json": {
+    "phase": "21DF",
+    "rows": 266808,
+    "expected_rank_rows": 266964,
+    "elapsed_seconds": 19592.478097200394,
+    "updated_unix": 1794218377.6065729,
+    "smoke": false
+  },
+  "progress_rank0_smoke.json": {
+    "phase": "dev",
+    "rows": 8,
+    "expected_rank_rows": 24,
+    "elapsed_seconds": 7.278505563735962,
+    "updated_unix": 1794190978.8458652,
+    "smoke": true
+  },
+  "progress_rank1_smoke.json": {
+    "phase": "dev",
+    "rows": 8,
+    "expected_rank_rows": 24,
+    "elapsed_seconds": 7.418340682983398,
+    "updated_unix": 1794190978.8482404,
+    "smoke": true
+  },
+  "QC_rank0_smoke.json": {
+    "checkpoints": {
+      "B_e5": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 540
+      },
+      "B_e10": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 1080
+      },
+      "B_e15": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 1620
+      },
+      "B_e20": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 2160
+      },
+      "B_e25": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 2700
+      },
+      "B_e30": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 3240
+      },
+      "B_e35": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 3780
+      },
+      "B_e40": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 4320
+      },
+      "B_e45": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 4860
+      },
+      "B_e50": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 5400
+      },
+      "C_e5": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 540
+      },
+      "C_e10": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 1080
+      },
+      "C_e15": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 1620
+      },
+      "C_e20": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 2160
+      },
+      "C_e25": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 2700
+      },
+      "C_e30": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 3240
+      },
+      "C_e35": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 3780
+      },
+      "C_e40": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 4320
+      },
+      "C_e45": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 4860
+      },
+      "C_e50": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 5400
+      }
+    },
+    "frontend_revision": "1a640f32ac3e39899438a2931f9924c02f080a54",
+    "batch_single_score_error": 7.152557373046875e-07,
+    "builtin_forward_score_error": 0.0,
+    "input_matches_source_EnrollmentSet": true,
+    "full_evaluation_pooling_noise_std": 1e-05
+  },
+  "QC_rank1_smoke.json": {
+    "checkpoints": {
+      "B_e5": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 540
+      },
+      "B_e10": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 1080
+      },
+      "B_e15": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 1620
+      },
+      "B_e20": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 2160
+      },
+      "B_e25": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 2700
+      },
+      "B_e30": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 3240
+      },
+      "B_e35": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 3780
+      },
+      "B_e40": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 4320
+      },
+      "B_e45": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 4860
+      },
+      "B_e50": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 5400
+      },
+      "C_e5": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 540
+      },
+      "C_e10": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 1080
+      },
+      "C_e15": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 1620
+      },
+      "C_e20": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 2160
+      },
+      "C_e25": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 2700
+      },
+      "C_e30": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 3240
+      },
+      "C_e35": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 3780
+      },
+      "C_e40": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 4320
+      },
+      "C_e45": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 4860
+      },
+      "C_e50": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 5400
+      }
+    },
+    "frontend_revision": "1a640f32ac3e39899438a2931f9924c02f080a54",
+    "batch_single_score_error": 7.152557373046875e-07,
+    "builtin_forward_score_error": 0.0,
+    "input_matches_source_EnrollmentSet": true,
+    "full_evaluation_pooling_noise_std": 1e-05
+  },
+  "QC_rank0_full.json": {
+    "checkpoints": {
+      "B_e5": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 540
+      },
+      "B_e10": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 1080
+      },
+      "B_e15": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 1620
+      },
+      "B_e20": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 2160
+      },
+      "B_e25": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 2700
+      },
+      "B_e30": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 3240
+      },
+      "B_e35": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 3780
+      },
+      "B_e40": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 4320
+      },
+      "B_e45": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 4860
+      },
+      "B_e50": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 5400
+      },
+      "C_e5": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 540
+      },
+      "C_e10": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 1080
+      },
+      "C_e15": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 1620
+      },
+      "C_e20": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 2160
+      },
+      "C_e25": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 2700
+      },
+      "C_e30": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 3240
+      },
+      "C_e35": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 3780
+      },
+      "C_e40": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 4320
+      },
+      "C_e45": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 4860
+      },
+      "C_e50": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 5400
+      }
+    },
+    "frontend_revision": "1a640f32ac3e39899438a2931f9924c02f080a54",
+    "batch_single_score_error": 7.152557373046875e-07,
+    "builtin_forward_score_error": 0.0,
+    "input_matches_source_EnrollmentSet": true,
+    "full_evaluation_pooling_noise_std": 1e-05
+  },
+  "QC_rank1_full.json": {
+    "checkpoints": {
+      "B_e5": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 540
+      },
+      "B_e10": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 1080
+      },
+      "B_e15": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 1620
+      },
+      "B_e20": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 2160
+      },
+      "B_e25": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 2700
+      },
+      "B_e30": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 3240
+      },
+      "B_e35": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 3780
+      },
+      "B_e40": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 4320
+      },
+      "B_e45": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 4860
+      },
+      "B_e50": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 5400
+      },
+      "C_e5": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 540
+      },
+      "C_e10": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 1080
+      },
+      "C_e15": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 1620
+      },
+      "C_e20": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 2160
+      },
+      "C_e25": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 2700
+      },
+      "C_e30": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 3240
+      },
+      "C_e35": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 3780
+      },
+      "C_e40": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 4320
+      },
+      "C_e45": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 4860
+      },
+      "C_e50": {
+        "strict_load": true,
+        "matches_training_state": true,
+        "Adam_steps": 5400
+      }
+    },
+    "frontend_revision": "1a640f32ac3e39899438a2931f9924c02f080a54",
+    "batch_single_score_error": 7.152557373046875e-07,
+    "builtin_forward_score_error": 0.0,
+    "input_matches_source_EnrollmentSet": true,
+    "full_evaluation_pooling_noise_std": 1e-05
+  },
+  "smoke.log_tail": [
+    "19LA+Codec train #bonafide & #spoofed: 2580 / 22800",
+    "19LA dev #bonafide & #spoofed: 2548 / 22296",
+    "19LA+Codec train #bonafide & #spoofed: 2580 / 22800",
+    "19LA dev #bonafide & #spoofed: 2548 / 22296"
+  ],
+  "smoke.log_errors": [],
+  "eval.log_tail": [
+    "19LA+Codec train #bonafide & #spoofed: 2580 / 22800",
+    "19LA dev #bonafide & #spoofed: 2548 / 22296",
+    "19LA+Codec train #bonafide & #spoofed: 2580 / 22800",
+    "19LA dev #bonafide & #spoofed: 2548 / 22296",
+    "19LA eval #bonafide & #spoofed: 7355 / 63882",
+    "19LA eval #bonafide & #spoofed: 7355 / 63882",
+    "21LA eval #bonafide & #spoofed: 14816 / 133360",
+    "21LA eval #bonafide & #spoofed: 14816 / 133360",
+    "21DF eval #bonafide & #spoofed: 14869 / 519059",
+    "21DF eval #bonafide & #spoofed: 14869 / 519059"
+  ],
+  "eval.log_errors": [],
+  "done_files": [
+    "done_19LA_rank0.json",
+    "done_21DF_rank1.json",
+    "done_dev_rank1.json",
+    "done_dev_rank0.json",
+    "done_dev_rank1_smoke.json",
+    "done_21LA_rank1.json",
+    "done_dev_rank0_smoke.json",
+    "done_21LA_rank0.json",
+    "done_21DF_rank0.json",
+    "done_19LA_rank1.json"
+  ],
+  "GPU6_7": "6, 0\n6, 0",
+  "processes": []
+}

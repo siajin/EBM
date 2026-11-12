@@ -1,0 +1,68 @@
+{
+  "status": "installed",
+  "root": "/home/mentee/code/EBM",
+  "backup_root": "/home/mentee/analysis/ebm_native_short303_patch_20261106_2005_03/before",
+  "files": {
+    "arguments.py": {
+      "before_lines": 83,
+      "after_lines": 90,
+      "added_lines": 8,
+      "removed_lines": 1,
+      "sha256": "48cf0fc693f4f065958765067863e11350b5f79f4452988c006639b03ed6b2f8"
+    },
+    "data_loaders.py": {
+      "before_lines": 219,
+      "after_lines": 246,
+      "added_lines": 114,
+      "removed_lines": 87,
+      "sha256": "f0eab7591b452f2fee2d6f05941a6708088625bd44a4be88fd3e6565703b842a"
+    },
+    "model/b_linear.py": {
+      "before_lines": 175,
+      "after_lines": 196,
+      "added_lines": 34,
+      "removed_lines": 13,
+      "sha256": "d96cec48857eca7e4b6cfc38c1f5bc682d29b659d9768f52fe521c2a5519ef92"
+    },
+    "model/loss.py": {
+      "before_lines": 62,
+      "after_lines": 62,
+      "added_lines": 2,
+      "removed_lines": 2,
+      "sha256": "479cf7a2ea0b28200da0ede1c14f434c7918b630b86554c2ab2f47ead7463715"
+    },
+    "main.py": {
+      "before_lines": 187,
+      "after_lines": 197,
+      "added_lines": 16,
+      "removed_lines": 6,
+      "sha256": "9fcefc4fbb4aa05bd98f9dc8c4b8d9d1cef1ba14cb16eb2671b4bfef6509bed2"
+    },
+    "train.py": {
+      "before_lines": 288,
+      "after_lines": 82,
+      "added_lines": 67,
+      "removed_lines": 273,
+      "sha256": "b963db06fbded0459ebfc1e9fd78e7eaf1ed9d7cd9d6bd4ca97b8c794cfd642a"
+    },
+    "logger/local.py": {
+      "before_lines": 98,
+      "after_lines": 98,
+      "added_lines": 1,
+      "removed_lines": 1,
+      "sha256": "5969fca176044b3dd741a5e7e9589e9cec3e332968afc5dfca1e8187e717e66c"
+    },
+    "native_steps.py": {
+      "before_lines": 0,
+      "after_lines": 131,
+      "added_lines": 131,
+      "removed_lines": 0,
+      "sha256": "1d74f16d97c476527aa84e7ad5f594320a4bc68a8aacbc852f046e5132a1caa8"
+    }
+  },
+  "unrelated_python_files_preserved": 21,
+  "bpl_matches_github_AST": true,
+  "codec_probability_and_calls_preserved": true,
+  "existing_data_paths_and_user_dataset_edits_preserved": true,
+  "full_training_launched": false
+}

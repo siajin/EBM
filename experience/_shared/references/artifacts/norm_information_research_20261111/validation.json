@@ -1,0 +1,682 @@
+{
+  "status": "passed",
+  "checked_at": "2026-11-11T16:45:53.371381+09:00",
+  "report_sha256": "bb575799de8a64058d1937f910bedc42ddd2d73984de79b141ea40fe57524041",
+  "checks": [
+    {
+      "name": "completed_DF_pilot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "prediction_population_DF_pilot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "speaker_group_count_DF_pilot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "three_saved_seeds_DF_pilot_direction_linear",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_metrics_DF_pilot_direction_linear_101",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_metrics_DF_pilot_direction_linear_102",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_metrics_DF_pilot_direction_linear_103",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "three_saved_seeds_DF_pilot_direction_hstat",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_metrics_DF_pilot_direction_hstat_101",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_metrics_DF_pilot_direction_hstat_102",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_metrics_DF_pilot_direction_hstat_103",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "three_saved_seeds_DF_pilot_direction_noise2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_metrics_DF_pilot_direction_noise2_101",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_metrics_DF_pilot_direction_noise2_102",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_metrics_DF_pilot_direction_noise2_103",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "three_saved_seeds_DF_pilot_direction_h",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_metrics_DF_pilot_direction_h_101",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_metrics_DF_pilot_direction_h_102",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_metrics_DF_pilot_direction_h_103",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "three_saved_seeds_DF_pilot_direction_noise160",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_metrics_DF_pilot_direction_noise160_101",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_metrics_DF_pilot_direction_noise160_102",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_metrics_DF_pilot_direction_noise160_103",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "completed_21LA_pilot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "prediction_population_21LA_pilot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "speaker_group_count_21LA_pilot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "three_saved_seeds_21LA_pilot_direction_linear",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_metrics_21LA_pilot_direction_linear_101",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_metrics_21LA_pilot_direction_linear_102",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_metrics_21LA_pilot_direction_linear_103",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "three_saved_seeds_21LA_pilot_direction_hstat",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_metrics_21LA_pilot_direction_hstat_101",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_metrics_21LA_pilot_direction_hstat_102",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_metrics_21LA_pilot_direction_hstat_103",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "three_saved_seeds_21LA_pilot_direction_noise2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_metrics_21LA_pilot_direction_noise2_101",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_metrics_21LA_pilot_direction_noise2_102",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_metrics_21LA_pilot_direction_noise2_103",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "three_saved_seeds_21LA_pilot_direction_h",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_metrics_21LA_pilot_direction_h_101",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_metrics_21LA_pilot_direction_h_102",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_metrics_21LA_pilot_direction_h_103",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "three_saved_seeds_21LA_pilot_direction_noise160",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_metrics_21LA_pilot_direction_noise160_101",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_metrics_21LA_pilot_direction_noise160_102",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_metrics_21LA_pilot_direction_noise160_103",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_fold_controls_verified",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reconstruction_completed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_decomposition_independent_verification",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "positive_stat_LL_interval_direction_linear",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "positive_stat_LL_interval_direction_noise2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "full_vector_positive_LL_interval_DF_pilot_direction_linear",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "full_vector_positive_LL_interval_DF_pilot_direction_noise160",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "full_vector_positive_LL_interval_21LA_pilot_direction_linear",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "full_vector_positive_LL_interval_21LA_pilot_direction_noise160",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "saved_head_reproduced_DF_pilot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "scale_fixed_LL_worse_DF_pilot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mean_fixed_much_smaller_LL_change_DF_pilot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "saved_head_reproduced_21LA_pilot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "scale_fixed_LL_worse_21LA_pilot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mean_fixed_much_smaller_LL_change_21LA_pilot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved_ebm_five_research_themes_20261111.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved_ebm_completed_evidence_interpretation_20261111.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved_ebm_duration_bias_research_20261111.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_preserved_artifacts/geometry_cache/local_analysis/frozen_all_v1/P3_P4/B/DF_pilot/complete.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_preserved_artifacts/geometry_cache/local_analysis/frozen_all_v1/P3_P4/B/DF_pilot/metrics.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_preserved_artifacts/geometry_cache/local_analysis/frozen_all_v1/P3_P4/B/DF_pilot/paired_effects.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_preserved_artifacts/geometry_cache/local_analysis/frozen_all_v1/P3_P4/B/DF_pilot/predictions.parquet",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_preserved_artifacts/geometry_cache/local_analysis/frozen_all_v1/P3_P4/B/21LA_pilot/complete.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_preserved_artifacts/geometry_cache/local_analysis/frozen_all_v1/P3_P4/B/21LA_pilot/metrics.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_preserved_artifacts/geometry_cache/local_analysis/frozen_all_v1/P3_P4/B/21LA_pilot/paired_effects.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_preserved_artifacts/geometry_cache/local_analysis/frozen_all_v1/P3_P4/B/21LA_pilot/predictions.parquet",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_preserved_artifacts/geometry_cache/local_analysis/frozen_all_v1/P3_P4/verification.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_preserved_artifacts/geometry_cache/local_analysis/cache_hypotheses_20261106_v2/H5_LN_reconstruction.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_preserved_artifacts/geometry_cache/local_analysis/cache_hypotheses_20261106_v2/H5_DF_pilot_saved_readout_decomposition.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_preserved_artifacts/geometry_cache/local_analysis/cache_hypotheses_20261106_v2/H5_21LA_pilot_saved_readout_decomposition.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_preserved_artifacts/geometry_cache/local_analysis/cache_hypotheses_20261106_v2/independent_verification.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_preserved_artifacts/geometry_cache/local_analysis/frozen_all_v1/source_snapshot/frozen_probes.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_preserved_docs/experiments/ebm_condition_audit_20261105.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "markdown_table_row_79",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "markdown_table_row_80",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "markdown_table_row_81",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "markdown_table_row_82",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "markdown_table_row_83",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "markdown_table_row_84",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "markdown_table_row_85",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "markdown_table_row_86",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "markdown_table_row_87",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "markdown_table_row_88",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "markdown_table_row_89",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "markdown_table_row_90",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "markdown_table_row_91",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "markdown_table_row_92",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "markdown_table_row_93",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "markdown_table_row_94",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "markdown_table_row_95",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "markdown_table_row_96",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "markdown_table_row_97",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "markdown_table_row_98",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "markdown_table_row_99",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "markdown_table_row_100",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "markdown_table_row_101",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "markdown_table_row_102",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "markdown_table_row_103",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "markdown_table_row_104",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "markdown_table_row_105",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "markdown_table_row_106",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "markdown_table_row_107",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "markdown_table_row_108",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "markdown_table_row_109",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "five_tables_well_formed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_control_characters",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_../../artifacts/geometry_cache/local_analysis/frozen_all_v1/source_snapshot/frozen_probes.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_../../artifacts/geometry_cache/local_analysis/frozen_all_v1/P3_P4/verification.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_../../docs/experiments/ebm_condition_audit_20261105.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_../../artifacts/geometry_cache/local_analysis/frozen_all_v1/P3_P4/B/21LA_pilot/metrics.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_../../artifacts/geometry_cache/local_analysis/frozen_all_v1/P3_P4/B/21LA_pilot/paired_effects.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_../../artifacts/geometry_cache/local_analysis/frozen_all_v1/P3_P4/B/DF_pilot/paired_effects.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_../../artifacts/geometry_cache/local_analysis/frozen_all_v1/P3_P4/B/DF_pilot/metrics.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_../../artifacts/geometry_cache/local_analysis/frozen_all_v1/P3_P4/B/DF_pilot/paired_effects.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_../../artifacts/geometry_cache/local_analysis/frozen_all_v1/P3_P4/B/21LA_pilot/paired_effects.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_../../artifacts/geometry_cache/local_analysis/cache_hypotheses_20261106_v2/H5_LN_reconstruction.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_../../artifacts/geometry_cache/local_analysis/cache_hypotheses_20261106_v2/H5_DF_pilot_saved_readout_decomposition.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_../../artifacts/geometry_cache/local_analysis/cache_hypotheses_20261106_v2/H5_21LA_pilot_saved_readout_decomposition.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_../../artifacts/geometry_cache/local_analysis/cache_hypotheses_20261106_v2/independent_verification.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_ebm_five_research_themes_20261111.md#theme4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_../../artifacts/norm_information_research_20261111/plan.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_../../artifacts/norm_information_research_20261111/sources.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_../../artifacts/norm_information_research_20261111/validation.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "core_tables_written",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "plain_utf8_no_private_ids",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "norm_not_confounded_in_conclusion",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "fixed_head_limits_explicit",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "check_count": 133,
+  "independently_recomputed_metric_pairs": 30,
+  "maximum_EER_difference_pp": 0.0,
+  "maximum_logloss_difference": 3.011479954295737e-15,
+  "source_count": 15,
+  "new_audio_inference": 0,
+  "new_model_fits": 0,
+  "remote_queries": 0,
+  "spending_ceiling_usd": 0,
+  "resources_left_running": 0
+}

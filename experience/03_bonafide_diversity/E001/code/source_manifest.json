@@ -1,0 +1,182 @@
+[
+  {
+    "path": "experience/03_bonafide_diversity/E001/code/snapshots/EBM/arguments.py",
+    "sha256": "e21d954bb152cc9730755378ebf654ac5a4d7d5648e559fcf67cbf5eaa61c39e",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/EBM/arguments.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/03_bonafide_diversity/E001/code/snapshots/EBM/data_loaders.py",
+    "sha256": "e46ae2e171df2ecf7665baf84ce38661fe92fd277dc8c1bd2d92470b39ad3556",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/EBM/data_loaders.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/03_bonafide_diversity/E001/code/snapshots/EBM/docker_build.sh",
+    "sha256": "cd244e9001469cd3ab14707f468f310255b5325719891ce83d85d34ec6e079d8",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/EBM/docker_build.sh",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/03_bonafide_diversity/E001/code/snapshots/EBM/docker_run.sh",
+    "sha256": "cc5a923c65bcc4109e3dd62d5d0368fd3a6488c2deb593742badf805d7895ab2",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/EBM/docker_run.sh",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/03_bonafide_diversity/E001/code/snapshots/EBM/main.py",
+    "sha256": "f23483e1a8d1bf98edfcd934e9c373821635b9226240677bb38644809a9c0326",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/EBM/main.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/03_bonafide_diversity/E001/code/snapshots/EBM/train.py",
+    "sha256": "b7b98a182a4946c479f477b7110e1c4a49be53ee6b6e89ef1b4bc4785374873f",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/EBM/train.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/03_bonafide_diversity/E001/code/snapshots/EBM/dataset/ASVspoof2019_la_eval.py",
+    "sha256": "843642f72871b89781ede23998c9456b21b0415bbeae340bbe8d0c36beea2c35",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/EBM/dataset/ASVspoof2019_la_eval.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/03_bonafide_diversity/E001/code/snapshots/EBM/dataset/ASVspoof2019_la_train.py",
+    "sha256": "bd98462e9e3f6da6f1e9a4f439761d4ec67ca625cd82aa7fcd6b07412953da2b",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/EBM/dataset/ASVspoof2019_la_train.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/03_bonafide_diversity/E001/code/snapshots/EBM/dataset/ASVspoof2021_df_eval.py",
+    "sha256": "422b4e0cf14ae1232e8ba918141d36c68b9057c311bafb6c541c7a80e942c4a7",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/EBM/dataset/ASVspoof2021_df_eval.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/03_bonafide_diversity/E001/code/snapshots/EBM/dataset/ASVspoof2021_la_eval.py",
+    "sha256": "18c2a1a19d00d2e6eaf417ad3f0707434516f66e999cb013f62968b266e0f235",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/EBM/dataset/ASVspoof2021_la_eval.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/03_bonafide_diversity/E001/code/snapshots/EBM/dataset/__init__.py",
+    "sha256": "3534dcaa88978f59714243b6f0e64bfb2f57f0c58fb4e1511234ea8ee70723dd",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/EBM/dataset/__init__.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/03_bonafide_diversity/E001/code/snapshots/EBM/data_processing/__init__.py",
+    "sha256": "e90c884ba77e163b8c8377f3fa9ab5442f279c16f726e2fc939c57468733816e",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/EBM/data_processing/__init__.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/03_bonafide_diversity/E001/code/snapshots/EBM/logger/interface.py",
+    "sha256": "8b1c23931a24a9e1967a6ec479e2a8c81cee13c8efc9458fd044ba6af936848e",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/EBM/logger/interface.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/03_bonafide_diversity/E001/code/snapshots/EBM/logger/local.py",
+    "sha256": "fbbce7ae888ec3be63e6320668dac9792f4d14d394b1a402afde1e124aee1871",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/EBM/logger/local.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/03_bonafide_diversity/E001/code/snapshots/EBM/logger/logger.py",
+    "sha256": "3cf192ae21f819e9dbf48b8e16dc42f49dce1894ac0e4c16f2b3e8865d56ca25",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/EBM/logger/logger.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/03_bonafide_diversity/E001/code/snapshots/EBM/logger/neptune.py",
+    "sha256": "a5905325f55b7ecf31a01f84814e33cee777e0baa976a57d760b5c4ca723f9db",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/EBM/logger/neptune.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/03_bonafide_diversity/E001/code/snapshots/EBM/logger/wandb.py",
+    "sha256": "42c293e802b03fcc7d4764643cec147d8d6f8dfa7c0e4530c6eb3ad9fc0eadba",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/EBM/logger/wandb.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/03_bonafide_diversity/E001/code/snapshots/EBM/logger/__init__.py",
+    "sha256": "ceaf8c7f0f309f2489a88b7376bef13952d3a735a1b2b393a34797f796d21c3d",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/EBM/logger/__init__.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/03_bonafide_diversity/E001/code/snapshots/EBM/model/b_linear.py",
+    "sha256": "c2cbcf898f1905c9c6ee8b20ef4514c4af7cb343abbf35e2dbd1fd526ad3459f",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/EBM/model/b_linear.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/03_bonafide_diversity/E001/code/snapshots/EBM/model/loss.py",
+    "sha256": "164be4161b57a7899ef7b289e005ab80d12da373922d57e9e021844ea828b1ac",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/EBM/model/loss.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/03_bonafide_diversity/E001/code/snapshots/EBM/model/__init__.py",
+    "sha256": "357dae54f8602f4fbbd07a9d6cc4d80126c7d7950f36ebdeccd511aabb2c1f56",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/EBM/model/__init__.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/03_bonafide_diversity/E001/code/snapshots/EBM/scheduler/cosine_warmup.py",
+    "sha256": "ce81225049a4a31864752d6377e08ddb1f86a55f3e3a3860bd6fdb0ecb760d19",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/EBM/scheduler/cosine_warmup.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/03_bonafide_diversity/E001/code/snapshots/EBM/scheduler/steplr.py",
+    "sha256": "7d3e1c96134c5f36588def6b08b643e74e9bc72bf809f71f98cf2e518026ffd1",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/EBM/scheduler/steplr.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/03_bonafide_diversity/E001/code/snapshots/EBM/utils/ddp_util.py",
+    "sha256": "e3533ad2c29d166dbfabb486ab942ca999b63d8e8f77eed19ee87f38c7bd0b70",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/EBM/utils/ddp_util.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/03_bonafide_diversity/E001/code/snapshots/EBM/utils/get_threshold.py",
+    "sha256": "040adf607c2b62473ed42790e7c33d36305e58341614e3ef87ddbc852cfa0b83",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/EBM/utils/get_threshold.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/03_bonafide_diversity/E001/code/snapshots/EBM/utils/__init__.py",
+    "sha256": "a17c6a58fe56069f873f8d22bae35354b4e3fd42b1b2cf330713a41c05a038fd",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/EBM/utils/__init__.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/03_bonafide_diversity/E001/code/snapshots/EBM/data_processing/augmentation/augmentation.py",
+    "sha256": "82c7ebd4fd24fb58f7021b82101233edb185d6684eb85c5026febd2f17d32faa",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/EBM/data_processing/augmentation/augmentation.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/03_bonafide_diversity/E001/code/snapshots/EBM/data_processing/augmentation/codec_aug.py",
+    "sha256": "4dbb894e994af786926cc5bdcfead9e1a3cf742bfc15a0a9ea62b7a9803f828e",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/EBM/data_processing/augmentation/codec_aug.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/03_bonafide_diversity/E001/code/snapshots/EBM/data_processing/augmentation/raw_boost.py",
+    "sha256": "e8a8944850f4305a042fceceb8daf7fdb52b627f7874206284ce88f7b220d33f",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/EBM/data_processing/augmentation/raw_boost.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/03_bonafide_diversity/E001/code/snapshots/EBM/data_processing/augmentation/wav_read_functions.py",
+    "sha256": "d81e376dd4fb060aef00208380fb429ca63841b6d7975f31fc012c0eae903cc4",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/EBM/data_processing/augmentation/wav_read_functions.py",
+    "kind": "actual frozen training source"
+  }
+]

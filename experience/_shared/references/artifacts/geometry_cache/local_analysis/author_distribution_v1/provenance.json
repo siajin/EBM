@@ -1,0 +1,114 @@
+{
+  "cache_validation": {
+    "status": "pass",
+    "dataset": "DF_pilot",
+    "rows": 20000,
+    "cache_fingerprint": "1b0a7488e72f4ec277c88575c51ce983bc9879e9ed092249938eb3c84fc69bae",
+    "file_hashes_checked": true
+  },
+  "checkpoint": "104873703a57cad98b686d770e0860e031a2cf9abef79b72668780c1660e0b24",
+  "cache_fingerprint": "1b0a7488e72f4ec277c88575c51ce983bc9879e9ed092249938eb3c84fc69bae",
+  "script_sha256": "1125e13e86409e8dd9f1b58c94e3d5fde31e16391816f845cc6e957337d31d53",
+  "mask_file_sha256": "734beec841b5b1e128fd9814fb903ccf63f103fe0c250cf51aa5f71a8ea2ea64",
+  "score_file_sha256": "950496ca978d457ded7bf1b8ecc633f7c8dcb2368b3176e958cf9ec97e84b92d",
+  "pair": {
+    "coordinates": [
+      113,
+      95
+    ],
+    "all_samples": 20000,
+    "score_reconstruction_max_error": 3.3306690738754696e-16,
+    "class_means": {
+      "0": [
+        -0.5256008887985113,
+        -0.69436804867541
+      ],
+      "1": [
+        1.0411656059772358,
+        1.0846656750493349
+      ]
+    }
+  },
+  "projection": {
+    "display_rows": 4000,
+    "class_counts": {
+      "normal": 2000,
+      "spoof": 2000
+    },
+    "sample_seed": 20261105,
+    "PCA_fit_population": "same 4000 balanced display rows, after L2 normalisation",
+    "PCA_dimensions": 50,
+    "PCA_variance_ratios": [
+      0.9391410968536514,
+      0.037301149629317326,
+      0.007292940964023327,
+      0.0031706629054919556,
+      0.0011357525517487598,
+      0.00075517828345049,
+      0.0006699615005480095,
+      0.0006415303390943061,
+      0.000558600517670084,
+      0.00047610099520638044,
+      0.00043553537211999624,
+      0.0004147867435091401,
+      0.00037948347397597664,
+      0.00035525008411063305,
+      0.0003173302009575069,
+      0.0003068164618688555,
+      0.0002848623464052711,
+      0.000276811442151968,
+      0.0002646154820449756,
+      0.0002523738585617017,
+      0.00024112566206835543,
+      0.0002221118492088495,
+      0.0002202265064233469,
+      0.0002073765074455669,
+      0.00018839734880271558,
+      0.0001760847088150494,
+      0.00017170780024768607,
+      0.00016419119334352286,
+      0.00015480541418808107,
+      0.00015164363933942585,
+      0.00014738894269687868,
+      0.00014160765855072112,
+      0.00013697437550489207,
+      0.00013518039061491586,
+      0.00012487415747023927,
+      0.00011912019747585863,
+      0.00011379217602622422,
+      0.000108224226806204,
+      0.00010496929496038728,
+      0.00010150855981765263,
+      9.75238385576934e-05,
+      9.136163479329686e-05,
+      8.995948714524668e-05,
+      8.644651281713442e-05,
+      8.332888074048857e-05,
+      7.95242857893323e-05,
+      7.619224470537813e-05,
+      7.454514665811598e-05,
+      7.188467953618864e-05,
+      7.053314915106973e-05
+    ],
+    "TSNE": {
+      "perplexity": 40,
+      "seed": 20261105,
+      "max_iter": 1000,
+      "init": "pca",
+      "learning_rate": "auto",
+      "input": "50 PCA axes from unit-normalised 160D z",
+      "KL_divergence": 1.3895492553710938
+    },
+    "labels_used_for_projection": false,
+    "labels_used_for_balanced_display_sampling": true
+  },
+  "new_EBM_inference": false,
+  "new_classifier_training": false,
+  "elapsed_seconds": 84.8095424999774,
+  "output_png_sha256": {
+    "01_selected_two_coordinates.png": "96b3d5e96ab9ca64d6def9e56d12a5e99db5a0a63e7c186742f22b3ab1b9b7b3",
+    "02_full160_pca_tsne.png": "3f30567d69d7a2b6a26e72537b0857d83c4e79991a08d15a07a284878185760e"
+  },
+  "layout_revision": "Moved notes below axes; shared legend above data; equal geometric axis scale. Projection points unchanged.",
+  "projection_points_sha256": "86dddf663c4c289d6fc2b4468856ef2bdd83277dd026c192b934d163fc3e0e62"
+}

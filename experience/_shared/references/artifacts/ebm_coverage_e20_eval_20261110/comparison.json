@@ -1,0 +1,184 @@
+{
+  "status": "complete",
+  "fixed_checkpoint_epoch": 20,
+  "checkpoint_sha256": "80efcd90df0f2762a27ac2fb10a5d454740e18979f7ecc7df4b9c0062f9d4701",
+  "same_epoch_comparison": [
+    {
+      "phase": "19LA",
+      "epoch": 20,
+      "B_EER_percent": 0.49466203312357154,
+      "C_EER_percent": 0.7952161798315643,
+      "coverage_EER_percent": 2.7081180927334776,
+      "role": "19LA monitored before stopping"
+    },
+    {
+      "phase": "21LA",
+      "epoch": 20,
+      "B_EER_percent": 4.792116630669552,
+      "C_EER_percent": 5.707108578284343,
+      "coverage_EER_percent": 8.908218356328735,
+      "role": "Post-stop target evaluation"
+    },
+    {
+      "phase": "21DF",
+      "epoch": 20,
+      "B_EER_percent": 2.2059318044253096,
+      "C_EER_percent": 2.3269890375949953,
+      "coverage_EER_percent": 2.286636626538441,
+      "role": "Post-stop target evaluation"
+    }
+  ],
+  "fixed50_reference": [
+    {
+      "phase": "19LA",
+      "epoch": 50,
+      "legacy240_EER_percent": 1.128484024473142,
+      "B_EER_percent": 0.679809653297081,
+      "C_EER_percent": 0.5846363018354839,
+      "comparability": "Same input/score policy; epoch differs from coverage20"
+    },
+    {
+      "phase": "21LA",
+      "epoch": 50,
+      "legacy240_EER_percent": 6.68871490280778,
+      "B_EER_percent": 4.792116630669552,
+      "C_EER_percent": 5.163467306538692,
+      "comparability": "Same input/score policy; epoch differs from coverage20"
+    },
+    {
+      "phase": "21DF",
+      "epoch": 50,
+      "legacy240_EER_percent": 8.877530432443336,
+      "B_EER_percent": 2.7237877463178406,
+      "C_EER_percent": 2.881368014040793,
+      "comparability": "Same input/score policy; epoch differs from coverage20"
+    }
+  ],
+  "historical_repeating_reference": [
+    {
+      "phase": "19LA",
+      "epoch": 50,
+      "legacy240_EER_percent": 0.5710401087693906,
+      "comparability": "Historical repeating-input pipeline; epoch and evaluation differ"
+    },
+    {
+      "phase": "21LA",
+      "epoch": 50,
+      "legacy240_EER_percent": 1.0527894420393238,
+      "comparability": "Historical repeating-input pipeline; epoch and evaluation differ"
+    },
+    {
+      "phase": "21DF",
+      "epoch": 50,
+      "legacy240_EER_percent": 3.477032752706973,
+      "comparability": "Historical repeating-input pipeline; epoch and evaluation differ"
+    }
+  ],
+  "differences": [
+    {
+      "phase": "19LA",
+      "reference_model": "B",
+      "epoch": 20,
+      "coverage_minus_reference_percentage_points": 2.213456059609906,
+      "relative_change_percent": 447.4683544303798
+    },
+    {
+      "phase": "19LA",
+      "reference_model": "C",
+      "epoch": 20,
+      "coverage_minus_reference_percentage_points": 1.9129019129019134,
+      "relative_change_percent": 240.55118110236228
+    },
+    {
+      "phase": "21LA",
+      "reference_model": "B",
+      "epoch": 20,
+      "coverage_minus_reference_percentage_points": 4.116101725659183,
+      "relative_change_percent": 85.89318755967096
+    },
+    {
+      "phase": "21LA",
+      "reference_model": "C",
+      "epoch": 20,
+      "coverage_minus_reference_percentage_points": 3.2011097780443922,
+      "relative_change_percent": 56.089869925108424
+    },
+    {
+      "phase": "21DF",
+      "reference_model": "B",
+      "epoch": 20,
+      "coverage_minus_reference_percentage_points": 0.08070482211313124,
+      "relative_change_percent": 3.658536585366323
+    },
+    {
+      "phase": "21DF",
+      "reference_model": "C",
+      "epoch": 20,
+      "coverage_minus_reference_percentage_points": -0.040352411056554516,
+      "relative_change_percent": -1.7341040462425128
+    }
+  ],
+  "score_validation": [
+    {
+      "phase": "21LA",
+      "rows": 148176,
+      "bonafide": 14816,
+      "spoof": 133360,
+      "independently_recomputed_EER_percent": 8.908218356328735,
+      "matches_evaluation_metric": true,
+      "rank_score_proofs": [
+        {
+          "rank": 0,
+          "rows": 74088,
+          "score_sha256": "cc3d896839eca598528fd87c8537c99ac82226b542d574f1d5fa9c6a64e1646f"
+        },
+        {
+          "rank": 1,
+          "rows": 74088,
+          "score_sha256": "82e33e3b8bfff259f94029756b39aefc9d0e51335b899f8a20e9564c54c631fe"
+        }
+      ]
+    },
+    {
+      "phase": "21DF",
+      "rows": 533928,
+      "bonafide": 14869,
+      "spoof": 519059,
+      "independently_recomputed_EER_percent": 2.286636626538441,
+      "matches_evaluation_metric": true,
+      "rank_score_proofs": [
+        {
+          "rank": 0,
+          "rows": 266964,
+          "score_sha256": "9cb07bad506be6438fcdfe4801caa792c7f025af5fd0736aa2bf58eb185a18fd"
+        },
+        {
+          "rank": 1,
+          "rows": 266964,
+          "score_sha256": "fe73ecb06889761db8d940eb4530fc6c197140084765f0efc979b0f0f5b9f3cb"
+        }
+      ]
+    }
+  ],
+  "optimizer_updates": 0,
+  "protocol": {
+    "common": "front64600 cap, no repeat, masks, batch8/rank, trained OC cosine, ASP noise1e-5",
+    "coverage_rng": "evaluation_seed1729 plus stream525252 and rank",
+    "BC_rng": "20261107 plus rank and phase stream; different random execution",
+    "EER": "full ROC tie-group linear crossing; percent; higher score means bonafide"
+  },
+  "interpretation_limits": [
+    "Same-epoch input and score policy match, but saved B/C evaluation RNG differs.",
+    "Baseline240 fixed50 and B/C fixed50 are references, not epoch-matched controls.",
+    "Historical repeating-input scores must not be mixed into the main comparison.",
+    "The user stopped training after observing19LA; epoch20 was explicitly chosen before21LA/DF results.",
+    "Several training input and pairing choices change together; no single-factor causal attribution.",
+    "Single training seed; no statistical significance claim."
+  ],
+  "sources": {
+    "/home/mentee/analysis/ebm_B_final_eval_20261107_215451/metrics.json": "d27d9ed064d306db26d35923e74215b7377840adf5fe6231bebad921b0a1623d",
+    "/home/mentee/analysis/ebm_B_C_checkpoints_20261109/metrics.json": "d3db24ac710dcdba7db848dff74f60af3a5b223fc69c166c58609ab401eb2888",
+    "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_OC_BPL_coverage_activity_20261110_mid19LA/text/19LA/scores_20.txt": "5d2f4628b6b3e2f619d2c362dea999e504d4297cbc9f9cf63a33fea7062760a8"
+  },
+  "finished_KST": "2026-11-11T03:17:12.776982+09:00"
+}

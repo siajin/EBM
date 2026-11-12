@@ -1,0 +1,14 @@
+[
+  {
+    "path": "experience/01_duration_bias/E037/code/EBM/positive_bpl.py",
+    "sha256": "f9912467f3cbec576d92823b4eefab986b55b34d5fa2eff5de063ba58fa624ae",
+    "origin": "EBM/positive_bpl.py",
+    "kind": "explicit method source"
+  },
+  {
+    "path": "experience/01_duration_bias/E037/code/EBM/tools/validate_source_coverage.py",
+    "sha256": "de6bf1cde1a5e512a22f340202039c8d1912becae20eb32d24cfa243de0b178d",
+    "origin": "EBM/tools/validate_source_coverage.py",
+    "kind": "implementation / validation source"
+  }
+]

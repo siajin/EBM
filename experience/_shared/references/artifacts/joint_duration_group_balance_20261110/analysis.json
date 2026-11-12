@@ -1,0 +1,338 @@
+{
+  "source": {
+    "path": "artifacts\\geometry_cache\\runs\\20261105_fast_p0_01\\686e593443178bb8\\extract\\scores.parquet",
+    "sha256": "66a58119b774c089829deb36b4a135e9b5e91d9d18e6e1e09809f20100179598"
+  },
+  "scope": "Train only; no audio access, model training, or loader edits",
+  "dimensions": "protocol speaker and attack; Train corpus is ASVspoof only; no room/microphone identity inferred",
+  "previous_6_second_target_fully_group_balanced_feasible": false,
+  "group_count": 140,
+  "speakers_per_class": 20,
+  "bonafide_speakers_without_6_second_original": 11,
+  "maximum_length_available_in_every_group_seconds": 4.1755625,
+  "availability": [
+    {
+      "target_seconds": 0.5,
+      "old_requested_at_or_above_fraction": 1.0,
+      "minimum_group_available_fraction": 1.0,
+      "limiting_group": {
+        "label": 0,
+        "speaker": "LA_0079",
+        "attack": "A01",
+        "eligible_originals": 186,
+        "originals": 186,
+        "available_fraction": 1.0
+      }
+    },
+    {
+      "target_seconds": 1.0,
+      "old_requested_at_or_above_fraction": 0.95,
+      "minimum_group_available_fraction": 0.9183673469387755,
+      "limiting_group": {
+        "label": 0,
+        "speaker": "LA_0094",
+        "attack": "A01",
+        "eligible_originals": 180,
+        "originals": 196,
+        "available_fraction": 0.9183673469387755
+      }
+    },
+    {
+      "target_seconds": 1.5,
+      "old_requested_at_or_above_fraction": 0.85,
+      "minimum_group_available_fraction": 0.7193877551020408,
+      "limiting_group": {
+        "label": 0,
+        "speaker": "LA_0094",
+        "attack": "A01",
+        "eligible_originals": 141,
+        "originals": 196,
+        "available_fraction": 0.7193877551020408
+      }
+    },
+    {
+      "target_seconds": 2.0,
+      "old_requested_at_or_above_fraction": 0.7,
+      "minimum_group_available_fraction": 0.44387755102040816,
+      "limiting_group": {
+        "label": 0,
+        "speaker": "LA_0093",
+        "attack": "A01",
+        "eligible_originals": 87,
+        "originals": 196,
+        "available_fraction": 0.44387755102040816
+      }
+    },
+    {
+      "target_seconds": 2.5,
+      "old_requested_at_or_above_fraction": 0.49999999999999994,
+      "minimum_group_available_fraction": 0.21428571428571427,
+      "limiting_group": {
+        "label": 0,
+        "speaker": "LA_0093",
+        "attack": "A01",
+        "eligible_originals": 42,
+        "originals": 196,
+        "available_fraction": 0.21428571428571427
+      }
+    },
+    {
+      "target_seconds": 3.0,
+      "old_requested_at_or_above_fraction": 0.31999999999999995,
+      "minimum_group_available_fraction": 0.14285714285714285,
+      "limiting_group": {
+        "label": 0,
+        "speaker": "LA_0093",
+        "attack": "A01",
+        "eligible_originals": 28,
+        "originals": 196,
+        "available_fraction": 0.14285714285714285
+      }
+    },
+    {
+      "target_seconds": 3.5,
+      "old_requested_at_or_above_fraction": 0.16999999999999998,
+      "minimum_group_available_fraction": 0.08661417322834646,
+      "limiting_group": {
+        "label": 1,
+        "speaker": "LA_0087",
+        "attack": "bonafide",
+        "eligible_originals": 11,
+        "originals": 127,
+        "available_fraction": 0.08661417322834646
+      }
+    },
+    {
+      "target_seconds": 4.0,
+      "old_requested_at_or_above_fraction": 0.09,
+      "minimum_group_available_fraction": 0.015748031496062992,
+      "limiting_group": {
+        "label": 1,
+        "speaker": "LA_0087",
+        "attack": "bonafide",
+        "eligible_originals": 2,
+        "originals": 127,
+        "available_fraction": 0.015748031496062992
+      }
+    },
+    {
+      "target_seconds": 4.5,
+      "old_requested_at_or_above_fraction": 0.05,
+      "minimum_group_available_fraction": 0.0,
+      "limiting_group": {
+        "label": 1,
+        "speaker": "LA_0087",
+        "attack": "bonafide",
+        "eligible_originals": 0,
+        "originals": 127,
+        "available_fraction": 0.0
+      }
+    },
+    {
+      "target_seconds": 5.0,
+      "old_requested_at_or_above_fraction": 0.03,
+      "minimum_group_available_fraction": 0.0,
+      "limiting_group": {
+        "label": 1,
+        "speaker": "LA_0080",
+        "attack": "bonafide",
+        "eligible_originals": 0,
+        "originals": 127,
+        "available_fraction": 0.0
+      }
+    },
+    {
+      "target_seconds": 5.5,
+      "old_requested_at_or_above_fraction": 0.015,
+      "minimum_group_available_fraction": 0.0,
+      "limiting_group": {
+        "label": 1,
+        "speaker": "LA_0080",
+        "attack": "bonafide",
+        "eligible_originals": 0,
+        "originals": 127,
+        "available_fraction": 0.0
+      }
+    },
+    {
+      "target_seconds": 6.0,
+      "old_requested_at_or_above_fraction": 0.005,
+      "minimum_group_available_fraction": 0.0,
+      "limiting_group": {
+        "label": 0,
+        "speaker": "LA_0089",
+        "attack": "A05",
+        "eligible_originals": 0,
+        "originals": 196,
+        "available_fraction": 0.0
+      }
+    }
+  ],
+  "closest_downward_reallocation_probabilities": [
+    0.08163265306122447,
+    0.19897959183673475,
+    0.2755102040816326,
+    0.22959183673469388,
+    0.07142857142857142,
+    0.056242969628796394,
+    0.07086614173228346,
+    0.015748031496062992,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "minimum_under2_fraction_if_fixed_original_within_every_group": 0.5561224489795918,
+  "proposed_target_seconds": [
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0,
+    3.5,
+    4.0
+  ],
+  "proposed_target_probabilities": [
+    0.1,
+    0.2,
+    0.3,
+    0.2,
+    0.08,
+    0.05,
+    0.06,
+    0.01
+  ],
+  "proposed_under2_fraction": 0.6000000000000001,
+  "proposed_mean_seconds": 1.7,
+  "matching_modes": {
+    "original_uniform": "Each original retains 1/N in class; every speaker x attack cell has the shared duration target; original cross-label speaker differences remain.",
+    "speaker_matched": "Common speaker target is the mean of original class speaker mixtures; originals remain uniform within speaker; each speaker x attack cell has the shared duration target."
+  },
+  "speaker_matching_min_original_weight_multiplier": 0.9959658281917417,
+  "speaker_matching_max_original_weight_multiplier": 1.004066985645933,
+  "speaker_matching_max_relative_original_weight_change_percent": 0.40669856459329967,
+  "original_speaker_crossclass_overlap_percent": 99.66707466340267,
+  "maximum_per_cell_length_error": 9.975631432013188e-13,
+  "independent_transport_LPs_passed": 140,
+  "validation": [
+    {
+      "mode": "original_uniform",
+      "label": 1,
+      "duration_matches_target": true,
+      "speaker_duration_factorizes": true,
+      "attack_duration_factorizes": true
+    },
+    {
+      "mode": "original_uniform",
+      "label": 0,
+      "duration_matches_target": true,
+      "speaker_duration_factorizes": true,
+      "attack_duration_factorizes": true
+    },
+    {
+      "mode": "speaker_matched",
+      "label": 1,
+      "duration_matches_target": true,
+      "speaker_duration_factorizes": true,
+      "attack_duration_factorizes": true
+    },
+    {
+      "mode": "speaker_matched",
+      "label": 0,
+      "duration_matches_target": true,
+      "speaker_duration_factorizes": true,
+      "attack_duration_factorizes": true
+    }
+  ],
+  "crossclass_speaker_overlap_by_length": [
+    {
+      "mode": "original_uniform",
+      "target_seconds": 0.5,
+      "bona_spoof_speaker_overlap_percent": 99.66707466357255
+    },
+    {
+      "mode": "original_uniform",
+      "target_seconds": 1.0,
+      "bona_spoof_speaker_overlap_percent": 99.66707466355592
+    },
+    {
+      "mode": "original_uniform",
+      "target_seconds": 1.5,
+      "bona_spoof_speaker_overlap_percent": 99.66707466349332
+    },
+    {
+      "mode": "original_uniform",
+      "target_seconds": 2.0,
+      "bona_spoof_speaker_overlap_percent": 99.66707466337593
+    },
+    {
+      "mode": "original_uniform",
+      "target_seconds": 2.5,
+      "bona_spoof_speaker_overlap_percent": 99.66707466325602
+    },
+    {
+      "mode": "original_uniform",
+      "target_seconds": 3.0,
+      "bona_spoof_speaker_overlap_percent": 99.66707466308053
+    },
+    {
+      "mode": "original_uniform",
+      "target_seconds": 3.5,
+      "bona_spoof_speaker_overlap_percent": 99.66707466281665
+    },
+    {
+      "mode": "original_uniform",
+      "target_seconds": 4.0,
+      "bona_spoof_speaker_overlap_percent": 99.66707466275581
+    },
+    {
+      "mode": "speaker_matched",
+      "target_seconds": 0.5,
+      "bona_spoof_speaker_overlap_percent": 100.00000000009899
+    },
+    {
+      "mode": "speaker_matched",
+      "target_seconds": 1.0,
+      "bona_spoof_speaker_overlap_percent": 100.00000000009423
+    },
+    {
+      "mode": "speaker_matched",
+      "target_seconds": 1.5,
+      "bona_spoof_speaker_overlap_percent": 100.00000000006293
+    },
+    {
+      "mode": "speaker_matched",
+      "target_seconds": 2.0,
+      "bona_spoof_speaker_overlap_percent": 99.99999999995381
+    },
+    {
+      "mode": "speaker_matched",
+      "target_seconds": 2.5,
+      "bona_spoof_speaker_overlap_percent": 99.99999999979018
+    },
+    {
+      "mode": "speaker_matched",
+      "target_seconds": 3.0,
+      "bona_spoof_speaker_overlap_percent": 99.99999999952153
+    },
+    {
+      "mode": "speaker_matched",
+      "target_seconds": 3.5,
+      "bona_spoof_speaker_overlap_percent": 99.99999999907064
+    },
+    {
+      "mode": "speaker_matched",
+      "target_seconds": 4.0,
+      "bona_spoof_speaker_overlap_percent": 99.99999999891463
+    }
+  ],
+  "limitations": [
+    "Protocol group balance does not guarantee acoustic shortcut removal.",
+    "Uniform original probabilities and exactly equal cross-label speaker marginals cannot both hold because original marginals differ.",
+    "Target matches are expectations, not guarantees within a single mini-batch or epoch.",
+    "Longest conditional cells still rely on a small number of originals; group balance does not create new independent source diversity.",
+    "No heldout metadata or performance was used to fit these kernels."
+  ],
+  "solver_documentation": "https://docs.scipy.org/doc/scipy/reference/optimize.linprog-highs.html"
+}

@@ -1,0 +1,63 @@
+{
+  "status": "pass",
+  "cases": {
+    "fixed_two_views": {
+      "measured_steps": 2,
+      "two_gpu_step_mean_seconds": 9.65355641907081,
+      "two_gpu_step_range_seconds": [
+        9.645456958562136,
+        9.661655879579484
+      ],
+      "max_allocated_MiB": 1939.603515625
+    },
+    "native_two_views": {
+      "measured_steps": 2,
+      "two_gpu_step_mean_seconds": 10.180409960448742,
+      "two_gpu_step_range_seconds": [
+        10.156789251603186,
+        10.204030669294298
+      ],
+      "max_allocated_MiB": 3315.0224609375
+    },
+    "native_three_views": {
+      "measured_steps": 2,
+      "two_gpu_step_mean_seconds": 14.610350682400167,
+      "two_gpu_step_range_seconds": [
+        14.573705216869712,
+        14.646996147930622
+      ],
+      "max_allocated_MiB": 3315.095703125
+    },
+    "worst_train_three_views": {
+      "measured_steps": 1,
+      "two_gpu_step_mean_seconds": 23.81533799599856,
+      "two_gpu_step_range_seconds": [
+        23.81533799599856,
+        23.81533799599856
+      ],
+      "max_allocated_MiB": 3315.095703125
+    }
+  },
+  "native_length_time_increase_percent_same_cache_mode": 5.457610837982174,
+  "auxiliary_branch_time_increase_percent": 43.514364737391766,
+  "candidate_time_increase_percent_same_cache_mode": 51.346820261360904,
+  "worst_eval_max_allocated_MiB": 5747.0517578125,
+  "worst_eval_seconds_per_clip": 29.312,
+  "worst_eval_batch": 8,
+  "codec_actual_calls": [
+    0,
+    0
+  ],
+  "runtime_assertions_pass": true,
+  "frontend_work_proxy_range": [
+    2.616957566643076,
+    2.6756886560422184
+  ],
+  "qualifications": [
+    "Timing fixed_two uses new gradient cache, not original full-graph training wall time",
+    "Three trials per quantile cohort: first warmup, next two measurements; not an epoch throughput estimate",
+    "Worst-train stress repeats true-label longest train normal/spoof clips; not an accuracy evaluation",
+    "Forward-sample proxy is not FLOPs or runtime; attention additionally depends on squared frame length",
+    "No50epoch training or performance-improvement claim"
+  ]
+}

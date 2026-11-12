@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "N": 768,
+  "metadata_only_locked_selection": true,
+  "selected_sha256": "367e0d589ef4d442e22c10d5f30c679a70f0023987a7eca109dcfa7b4bf81dd4",
+  "long_control_identical_embeddings": true,
+  "noise_std": 0.0,
+  "score_identity_max_error": 2.222600519186102e-07,
+  "angle_identity_max_error_degrees": 0.0002589936681109961,
+  "interpretation": "diagnostic cohort; same-content policy intervention changes context length too; axes within each model only"
+}

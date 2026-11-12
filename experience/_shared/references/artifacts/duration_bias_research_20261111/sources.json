@@ -1,0 +1,157 @@
+[
+  {
+    "path": "EBM/SHORT32_ORIGINAL240.md",
+    "kind": "file",
+    "sha256": "5a1f9cc558a8c8cced84bd2ccd8638b4c7d7fe9cdebf7715c0257bad1b583e8e"
+  },
+  {
+    "path": "artifacts/ebm_B_C_checkpoints_20261109/completed_B_C_dataset_minima.json",
+    "kind": "file",
+    "sha256": "fc76d155f97e7f7e25f2fedda84ca154754d0ba1666a903262ae834312acd6d0"
+  },
+  {
+    "path": "artifacts/ebm_B_C_checkpoints_20261109/dataset_minimum_comparison_pending_DF.json",
+    "kind": "file",
+    "sha256": "135bd67a6b6925b9684ca975d8a1f58b4f4629deebb9713311a3e446b788b666"
+  },
+  {
+    "path": "artifacts/ebm_B_C_checkpoints_20261109/metrics.json",
+    "kind": "file",
+    "sha256": "d3db24ac710dcdba7db848dff74f60af3a5b223fc69c166c58609ab401eb2888"
+  },
+  {
+    "path": "artifacts/ebm_C_20261108/metadata_validation.json",
+    "kind": "file",
+    "sha256": "8ddddcbf630996279445ce4d38296c283a213653a86d04805bbccf6a8ec60cee"
+  },
+  {
+    "path": "artifacts/ebm_coverage_e20_eval_20261110/comparison.json",
+    "kind": "file",
+    "sha256": "0ea149ea7be48d75e1ed0779289e94f8cd5a841a94219613b66061f7ff6f7ef9"
+  },
+  {
+    "path": "artifacts/ebm_coverage_e50_mid19LA_20261110/experiment.json",
+    "kind": "file",
+    "sha256": "67b8cf2e2c8cdb3025a2272a59573ee4c931e9e82e86aef96455b5d61369ba6b"
+  },
+  {
+    "path": "artifacts/ebm_coverage_e50_mid19LA_20261110/user_stop_20261110.json",
+    "kind": "file",
+    "sha256": "c7456b95e015402341e2940ad01b18f012876ea9ff702f5736ad857cedbebb50"
+  },
+  {
+    "path": "artifacts/geometry_cache/local_analysis/B_final_analysis_20261108_v1/analysis/geometry_statistics.json",
+    "kind": "file",
+    "sha256": "211f898de59f7d840a06835f08d662a914edb156686ec71e88b5471bc162f37e"
+  },
+  {
+    "path": "artifacts/geometry_cache/local_analysis/padding_causal_20261106_v1/frontend_context/group_effects.csv",
+    "kind": "file",
+    "sha256": "8b89532b1bae9f98845af1d233067603c026d4e6df3958f1df37a88b41bf040d"
+  },
+  {
+    "path": "artifacts/geometry_cache/local_analysis/padding_causal_20261106_v1/pooling_mechanism/summary.json",
+    "kind": "file",
+    "sha256": "e1de5c2129a0091448d8d1a5840a017e05ad1eec1a502fc41f517d28d5e64e1f"
+  },
+  {
+    "path": "artifacts/joint_activity_balance_20261110",
+    "kind": "directory",
+    "sha256": null
+  },
+  {
+    "path": "artifacts/mild_duration_baseline240_20261111_v2/user_stop_20261111_0956.json",
+    "kind": "file",
+    "sha256": "ad2fd44635a0a03b1b5693dca2cab746f389e1bd08bdb2155388230fec31302f"
+  },
+  {
+    "path": "artifacts/mild_duration_data_analysis_20261111/shortness_comparison.json",
+    "kind": "file",
+    "sha256": "11656299e05e33b9a9d999c1efa26e066bf4306422ed96c99feafe4b9ff6749b"
+  },
+  {
+    "path": "artifacts/paired_min_eer_20261111/current_eval5_validation.json",
+    "kind": "file",
+    "sha256": "602e87d61a0adb3aa6305de8fd72bcb450e8e74d0652a76ba3b8351def42fc62"
+  },
+  {
+    "path": "artifacts/repetition_shortcut_20261111/duration_matched_attack_codec_preserved_eer.csv",
+    "kind": "file",
+    "sha256": "46f6d2480eca0efd3e8fa07b347199571603c5c4e3862144f8f8d0fdb1fd2698"
+  },
+  {
+    "path": "artifacts/repetition_shortcut_20261111/original_length_distribution.csv",
+    "kind": "file",
+    "sha256": "1ece15a135ff813c25e6c766349146860664c4bc67ce8b7413c4b91da22576cc"
+  },
+  {
+    "path": "artifacts/repetition_shortcut_20261111/reviewed_analysis/dose_effects.csv",
+    "kind": "file",
+    "sha256": "3df37798ad23d71522325152dc64ea0c284ea5596161840c536d01f8e03c7743"
+  },
+  {
+    "path": "artifacts/repetition_shortcut_20261111/reviewed_analysis/independent_full_eer.csv",
+    "kind": "file",
+    "sha256": "317de17e3b9ac0ed5c8baa71eefd82fca6c87b3583a64c8cdcae359586311739"
+  },
+  {
+    "path": "artifacts/repetition_shortcut_20261111/reviewed_analysis/interpretation.json",
+    "kind": "file",
+    "sha256": "faa21ab56e3ebad32c748770d5b4f7116bc40ab4dbed70ea076d3d164cebf512"
+  },
+  {
+    "path": "artifacts/repetition_shortcut_20261111/reviewed_analysis/natural_smoothing_controls.csv",
+    "kind": "file",
+    "sha256": "bd26ee9fd385f1716464619d160079ace7fa978c666147494f734b0efeb95d52"
+  },
+  {
+    "path": "artifacts/repetition_shortcut_20261111/reviewed_analysis/operating_points_21LA.csv",
+    "kind": "file",
+    "sha256": "24aee3cb44e7ca1d9eed40cec2c910fd305220c935aa2a7e049bfcfb81a7ba63"
+  },
+  {
+    "path": "artifacts/repetition_shortcut_20261111/reviewed_analysis/validation.json",
+    "kind": "file",
+    "sha256": "986922732b14f4d6ac2837c8a8dbc527013954d62f3a68ed82860194f5fce118"
+  },
+  {
+    "path": "artifacts/repetition_shortcut_20261111/reviewed_analysis/weighted_eer_21LA.csv",
+    "kind": "file",
+    "sha256": "8220e25db177c0e90e430fe7b73351fbbeeee66f0d9cc97ca7d624b4854803b1"
+  },
+  {
+    "path": "artifacts/repetition_shortcut_20261111/training_original_lengths.csv",
+    "kind": "file",
+    "sha256": "b139af0f36f25e752e1d028787976123eae56b401683fbf9c2f474a1844b1021"
+  },
+  {
+    "path": "artifacts/source_coverage_20261110",
+    "kind": "directory",
+    "sha256": null
+  },
+  {
+    "path": "artifacts/train_crop_io_activity_20261110/results/activity_by_length_role.csv",
+    "kind": "file",
+    "sha256": "f1c1695866489a7d8d7a03b023fc785b3ce75def1625c7b38ae429289b96cce9"
+  },
+  {
+    "path": "docs/experiments/ebm_B_C_all_checkpoint_evaluation_20261109.md",
+    "kind": "file",
+    "sha256": "2a6b26ece444efb2d7696fdf19e972232be08ece7b21143c804cbccfd396132c"
+  },
+  {
+    "path": "docs/experiments/ebm_B_final_results_20261108.md",
+    "kind": "file",
+    "sha256": "94f6a2802dcdee080e0dde0dfdcf4248ec2c02f6d91b68411abdcaa2ff89593a"
+  },
+  {
+    "path": "docs/experiments/ebm_duration_conditioned_centroids_results_20261106.md",
+    "kind": "file",
+    "sha256": "cef39f93b146541f264695aa60984bafbe6840df13805a1e45b23b8b910a4d19"
+  },
+  {
+    "path": "docs/experiments/ebm_padding_context_mechanism_20261106.md",
+    "kind": "file",
+    "sha256": "a11a4c6e024b0aef01e00c1674e751f8d17e086192b7c4b5b552047bfe1f1b13"
+  }
+]

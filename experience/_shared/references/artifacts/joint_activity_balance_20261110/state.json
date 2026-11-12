@@ -1,0 +1,49 @@
+{
+  "status": "complete",
+  "remote_root": "/home/mentee/analysis/ebm_activity_joint_20261110_v5",
+  "dev_used": false,
+  "eval_used": false,
+  "model_training": false,
+  "live_server_repo_changed": false,
+  "latest_remote_root": "/home/mentee/analysis/ebm_activity_joint_20261110_v5",
+  "candidate_originals": 25380,
+  "candidates": 734966,
+  "unit_tests_last_passed": 22,
+  "activity_scope": "class-global within length; source/speaker/attack marginals retained",
+  "within_speaker_activity_guaranteed": false,
+  "finished_at": "2026-11-10T02:36:15+00:00",
+  "exits": {
+    "unit": 0,
+    "fit": 0,
+    "preflight": 0,
+    "validation": 0,
+    "loader": 0,
+    "run": 0
+  },
+  "unit_tests_passed": 22,
+  "originals": 25380,
+  "actual_raw_VAD_checks": 1010,
+  "source_probabilities_exactly_unchanged": true,
+  "epoch1_UID_sequences_exactly_equal": true,
+  "augmentation_seed_sequences_exactly_equal": true,
+  "policy_sha256": "0c0064b434fd6011b5c6ff5ba9a419c1fe769b9015fc7e59a6ccbeb126074a53",
+  "candidate_diversity": {
+    "median_effective_candidates_before": 13.868808745713617,
+    "median_effective_candidates_after": 12.786579554692347,
+    "fraction_effective_candidates_below2_before": 0.0,
+    "fraction_effective_candidates_below2_after": 0.0036643026004728133,
+    "per_original_length_TV_median": 0.03876271617757301
+  },
+  "old_checkpoints_unchanged": true,
+  "CUDA_initialized": false,
+  "source_files_verified": 38,
+  "continuous_activity_distribution_equal": false,
+  "prior_attempts": {
+    "v1_v2": "per-speaker numeric refinement attempts, superseded",
+    "v3": "per-speaker joint constraints unsupported for some groups; superseded by class-global scope",
+    "v4": "global LP feasibility check time limit; infeasibility was not established",
+    "v5": "global iterative fit and all validation passed"
+  },
+  "model_optimizer_updates": 0,
+  "activity_arrays_remain_on_server": true
+}

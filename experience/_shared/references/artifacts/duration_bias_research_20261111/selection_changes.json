@@ -1,0 +1,79 @@
+{
+  "retained": [
+    {
+      "experiment": "Same-file native/repeat comparison",
+      "supports": "Direct input-processing score movement; finite diagnostic sample."
+    },
+    {
+      "experiment": "336-source repetition-dose intervention",
+      "supports": "Movement occurs without additional unique content."
+    },
+    {
+      "experiment": "336-source shortening EER and within-model native/repeat controls",
+      "supports": "Both models degrade with reduced head content; repetition partly mitigates original-model EER degradation. Cross-model differences alone do not isolate repetition."
+    },
+    {
+      "experiment": "Seam smoothing with controls",
+      "supports": "This smoothing treatment does not remove most movement; not a claim of zero seam contribution."
+    },
+    {
+      "experiment": "Class-conditional source duration counts",
+      "supports": "Observed duration-label association, not training causality."
+    },
+    {
+      "experiment": "Full21LA two-model paired input evaluation",
+      "supports": "Model-specific input response and contrary evidence against universal repetition harm."
+    },
+    {
+      "experiment": "B same-file sensitivity comparison",
+      "supports": "Spoof sensitivity reduction with nonuniform normal response; not a clean training ablation."
+    },
+    {
+      "experiment": "B/C ten-checkpoint minimum EER comparison",
+      "supports": "Removing training-long cap did not improve observed minima in this run."
+    }
+  ],
+  "removed_from_argument": [
+    {
+      "experiment": "Length/activity/coverage combined training",
+      "reason": "Multiple simultaneous changes and no target multi-checkpoint minima; cannot identify the cause of poorer results."
+    },
+    {
+      "experiment": "Mild speed/crop training",
+      "reason": "No completed EER; execution failure is not method-performance evidence."
+    },
+    {
+      "experiment": "Ongoing conditional3s/2s training",
+      "reason": "Only interim19LA available; final target benefit unestablished."
+    },
+    {
+      "experiment": "Detailed feature duplication/context/mean-std decomposition",
+      "reason": "Different baseline model and selected cohort; unnecessary for the narrower directly established claim."
+    },
+    {
+      "experiment": "Duration reweighting/IPF",
+      "reason": "Changes evaluation composition, does not establish the training cause; unnecessary to demonstrate raw class-length association."
+    },
+    {
+      "experiment": "Historical original/B/C minima mixed across evaluation input policies",
+      "reason": "Not a common-input ranking; full paired input study and matched B/C minima provide clearer comparisons."
+    },
+    {
+      "experiment": "Duration centroids, speed-algorithm pilot, early VAD counts",
+      "reason": "Peripheral or insufficient to establish the proposed mechanism or successful remedy."
+    }
+  ],
+  "conclusions_removed": [
+    "Repetition is universally harmful.",
+    "Length imbalance caused the learned repetition response.",
+    "Removing the4s crop caused the degradation.",
+    "Information loss from aggressive cropping is the established main cause.",
+    "Current auxiliary alignment is an effective remedy."
+  ],
+  "contrary_results_preserved": [
+    "Repetition improves original full21LA EER.",
+    "Normal sensitivity is not uniformly improved by B.",
+    "At fixed50, C is better on19LA despite worse observed minima."
+  ],
+  "historical_sources_deleted": false
+}

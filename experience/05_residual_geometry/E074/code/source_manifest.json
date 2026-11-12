@@ -1,0 +1,14 @@
+[
+  {
+    "path": "experience/05_residual_geometry/E074/code/EBM/tools/analyze_bona_tangent_errors.py",
+    "sha256": "54f929fc34ce5659f433a8acf58d69584356333cb4b9ec1f25e87521672e9f3a",
+    "origin": "EBM/tools/analyze_bona_tangent_errors.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/05_residual_geometry/E074/code/EBM/tools/verify_bona_tangent_errors.py",
+    "sha256": "7c402547f86646045e70dde6568aac36ab3b2b9e2721d8fa6226406ea1240472",
+    "origin": "EBM/tools/verify_bona_tangent_errors.py",
+    "kind": "implementation / validation source"
+  }
+]

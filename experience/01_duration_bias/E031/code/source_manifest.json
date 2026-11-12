@@ -1,0 +1,20 @@
+[
+  {
+    "path": "experience/01_duration_bias/E031/code/EBM/tools/optimize_duration_partitions.py",
+    "sha256": "e788545fd80296e74389c4ec0161ca85d6b0312f1777d6cb5b037320efbbd0e7",
+    "origin": "EBM/tools/optimize_duration_partitions.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/01_duration_bias/E031/code/EBM/tools/validate_duration_partitions.py",
+    "sha256": "63ca322d188a14627eda960a8c401715dc531fe492872840e69c80c7815aead8",
+    "origin": "EBM/tools/validate_duration_partitions.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/01_duration_bias/E031/code/EBM/tools/compact_duration_partitions.py",
+    "sha256": "2d9ed9b0861b8f8f0f13ca7997c226ed7e8462dccc476599a73417e83fa10fe1",
+    "origin": "EBM/tools/compact_duration_partitions.py",
+    "kind": "implementation / validation source"
+  }
+]

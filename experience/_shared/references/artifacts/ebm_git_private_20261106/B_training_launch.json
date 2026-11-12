@@ -1,0 +1,13 @@
+{
+  "status": "launch_requested",
+  "branch": "train/ebm-B-zeropad-e50-bs240-20261106",
+  "commit": "2c2c6ff65bbadf33b811983f7c648c97fffb81a1",
+  "condition": "B",
+  "experiment_name": "EBM_e50_bs240_lr1e5_B_zeropad_short303",
+  "root": "/home/mentee/analysis/ebm_train_B_20261106_213627",
+  "host_result_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_B_zeropad_short303",
+  "host_gpu_readback_before_launch": "GPU-d8118e86-4eef-270b-852a-e68c7db79c03, 6, 0\nGPU-4cdadb7a-af20-71bc-e551-59c88cb35b17, 6, 0",
+  "existing_screen": "352153.exp:0",
+  "CUDA_VISIBLE_DEVICES": "0,1",
+  "baseline_training_started": false
+}

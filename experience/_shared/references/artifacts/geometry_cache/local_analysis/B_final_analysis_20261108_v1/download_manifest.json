@@ -1,0 +1,49 @@
+{
+  "root": "/home/mentee/analysis/ebm_B_final_eval_20261107_215451",
+  "files": {
+    "metrics.json": {
+      "bytes": 3319,
+      "sha256": "d27d9ed064d306db26d35923e74215b7377840adf5fe6231bebad921b0a1623d"
+    },
+    "complete.json": {
+      "bytes": 362,
+      "sha256": "1fb3142e23e0eeb5824d4e8590d795482565c7d7f1594f5c5d4b5b7a94eb0424"
+    },
+    "training_audit.json": {
+      "bytes": 3008,
+      "sha256": "48c98d034e0312d0c4658ebbc30741a0499bbeeed0945885d95920e3007eed36"
+    },
+    "training_history.json": {
+      "bytes": 408493,
+      "sha256": "3579efcf30cc40d3b8051bbccd16cd8fb6b206cf94974df8ac7fc620d2544ddb"
+    },
+    "training_loss_identity_audit.json": {
+      "bytes": 7857,
+      "sha256": "35f7f8b4a847ce30bcdea6e1dc3b290116d7c3de67a78c3f80836afc7ffb4711"
+    },
+    "QC_rank0_full.json": {
+      "bytes": 490,
+      "sha256": "bb8e30c5e48655dbfac22714a0a73f32a972b91c884159b6e6bf0dbc74dc71ac"
+    },
+    "QC_rank1_full.json": {
+      "bytes": 490,
+      "sha256": "bb8e30c5e48655dbfac22714a0a73f32a972b91c884159b6e6bf0dbc74dc71ac"
+    },
+    "paired_scores_dev.parquet": {
+      "bytes": 970972,
+      "sha256": "b5d3fb215407618cd1b08c1005333f6b09c3b588083b9d9f568f96b70223aeb9"
+    },
+    "paired_scores_19LA.parquet": {
+      "bytes": 2891681,
+      "sha256": "45ca0bb7f845d8599c8437e5f54966cdc621e1c4a3dced2f03f1ba8a99b0bd92"
+    },
+    "paired_scores_21LA.parquet": {
+      "bytes": 4905554,
+      "sha256": "03c25f3764932664d3351cd3cf915b817a8d66aaddc879e61aadb75fa0af285e"
+    },
+    "paired_scores_21DF.parquet": {
+      "bytes": 14595198,
+      "sha256": "ac8705c3d9a4a9382fd1fac796e27e869f4d2324cdfffddbd13176c625c4cf51"
+    }
+  }
+}

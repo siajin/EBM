@@ -1,0 +1,22 @@
+{
+  "scope": "posthoc descriptive explanation of already observed DF scores",
+  "script_sha256": "231d847787fee3a8fa6445b31ffa85517024c5d928f4122f27fd38df8e05da54",
+  "predictions_sha256": "950496ca978d457ded7bf1b8ecc633f7c8dcb2368b3176e958cf9ec97e84b92d",
+  "models": [
+    "native",
+    "keep_bottom2"
+  ],
+  "targets_bona_false_reject": [
+    0.005,
+    0.01,
+    0.02,
+    0.03,
+    0.035,
+    0.05,
+    0.1
+  ],
+  "not_deployment_threshold_selection": true,
+  "new_inference": false,
+  "new_training": false,
+  "pair_counts_are_not_independent_samples": true
+}

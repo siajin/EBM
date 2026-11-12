@@ -1,0 +1,33 @@
+{
+  "first_epoch_all_UIDs_seen": {
+    "bona_OC": 8,
+    "bona_OC_plus_BPL": 5,
+    "spoof_OC": 12
+  },
+  "reader_speedup": 1.594201248883953,
+  "IO_time_reduction": 0.37272662363044406,
+  "coverage_summary": [
+    {
+      "population": "bona_OC",
+      "epoch_unique_min": 0.6170542635658914,
+      "epoch_unique_mean": 0.6327751937984496,
+      "epoch_unique_max": 0.6476744186046511,
+      "original_time_mean": 0.38926458554115934
+    },
+    {
+      "population": "bona_OC_plus_BPL",
+      "epoch_unique_min": 0.8511627906976744,
+      "epoch_unique_mean": 0.8661395348837209,
+      "epoch_unique_max": 0.8821705426356589,
+      "original_time_mean": 0.6209778564033308
+    },
+    {
+      "population": "spoof_OC",
+      "epoch_unique_min": 0.6364473684210527,
+      "epoch_unique_mean": 0.6403298245614034,
+      "epoch_unique_max": 0.6443421052631579,
+      "original_time_mean": 0.38846195064124395
+    }
+  ],
+  "independent_checks": "row/UID uniqueness, role counts, all50epoch draw totals and VAD frame bounds reconciled"
+}

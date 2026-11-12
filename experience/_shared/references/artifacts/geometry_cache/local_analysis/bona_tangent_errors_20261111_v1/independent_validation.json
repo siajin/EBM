@@ -1,0 +1,619 @@
+{
+  "status": "pass",
+  "independent_scalar_checks": [
+    {
+      "dataset": "V",
+      "unique_UIDs": true,
+      "independent_adjusted_delta_error": null,
+      "energy_ratio_identity": "pass",
+      "sum_PC_fraction_identity": "pass"
+    },
+    {
+      "dataset": "DF_pilot",
+      "unique_UIDs": true,
+      "independent_adjusted_delta_error": 0.0,
+      "energy_ratio_identity": "pass",
+      "sum_PC_fraction_identity": "pass"
+    },
+    {
+      "dataset": "21LA_pilot",
+      "unique_UIDs": true,
+      "independent_adjusted_delta_error": 5.551115123125783e-17,
+      "energy_ratio_identity": "pass",
+      "sum_PC_fraction_identity": "pass"
+    },
+    {
+      "dataset": "19LA_eval",
+      "unique_UIDs": true,
+      "independent_adjusted_delta_error": 2.7755575615628914e-17,
+      "energy_ratio_identity": "pass",
+      "sum_PC_fraction_identity": "pass"
+    },
+    {
+      "dataset": "DF_full",
+      "unique_UIDs": true,
+      "independent_adjusted_delta_error": 6.938893903907228e-18,
+      "energy_ratio_identity": "pass",
+      "sum_PC_fraction_identity": "pass"
+    },
+    {
+      "dataset": "21LA_eval",
+      "unique_UIDs": true,
+      "independent_adjusted_delta_error": 5.551115123125783e-17,
+      "energy_ratio_identity": "pass",
+      "sum_PC_fraction_identity": "pass"
+    }
+  ],
+  "historical_threshold_sensitivity": [
+    {
+      "dataset": "V",
+      "threshold": 0.9883067,
+      "bona_n": 1351,
+      "errors": 13,
+      "error_percent": 0.9622501850481125,
+      "rho8_error": 0.49969353504818426,
+      "rho8_accepted": 0.6787748156832019,
+      "duration_source_codec_adjusted": {
+        "status": "ok",
+        "delta_rho": -0.18280509582122798,
+        "CI95": [
+          -0.32917586667463694,
+          0.061763526900301124
+        ],
+        "error_n_supported": 13,
+        "accepted_n_supported": 1338,
+        "error_coverage": 1.0,
+        "strata": 5,
+        "speaker_groups": 10,
+        "error_speaker_groups": 6,
+        "bootstrap_draws_valid": 2000,
+        "sparse_warning": true
+      },
+      "speaker_duration_source_codec_adjusted": {
+        "status": "ok",
+        "delta_rho": -0.16427842958351066,
+        "CI95": [
+          -0.28919992561374946,
+          0.03168519108717781
+        ],
+        "error_n_supported": 13,
+        "accepted_n_supported": 274,
+        "error_coverage": 1.0,
+        "strata": 8,
+        "speaker_groups": 6,
+        "error_speaker_groups": 6,
+        "bootstrap_draws_valid": 2000,
+        "sparse_warning": true
+      }
+    },
+    {
+      "dataset": "DF_pilot",
+      "threshold": 0.9883067,
+      "bona_n": 2000,
+      "errors": 780,
+      "error_percent": 39.0,
+      "rho8_error": 0.7011721570516107,
+      "rho8_accepted": 0.6680129562404445,
+      "duration_source_codec_adjusted": {
+        "status": "ok",
+        "delta_rho": 0.027006755541592733,
+        "CI95": [
+          -0.014906656252675435,
+          0.06139427680130067
+        ],
+        "error_n_supported": 353,
+        "accepted_n_supported": 584,
+        "error_coverage": 0.45256410256410257,
+        "strata": 44,
+        "speaker_groups": 86,
+        "error_speaker_groups": 33,
+        "bootstrap_draws_valid": 2000,
+        "sparse_warning": false
+      },
+      "speaker_duration_source_codec_adjusted": {
+        "status": "ok",
+        "delta_rho": 0.002356775854596156,
+        "CI95": [
+          -0.07223115343763178,
+          0.053309540363485335
+        ],
+        "error_n_supported": 24,
+        "accepted_n_supported": 46,
+        "error_coverage": 0.03076923076923077,
+        "strata": 18,
+        "speaker_groups": 10,
+        "error_speaker_groups": 10,
+        "bootstrap_draws_valid": 2000,
+        "sparse_warning": false
+      }
+    },
+    {
+      "dataset": "21LA_pilot",
+      "threshold": 0.9883067,
+      "bona_n": 2000,
+      "errors": 248,
+      "error_percent": 12.4,
+      "rho8_error": 0.5847571093433921,
+      "rho8_accepted": 0.6257922909622994,
+      "duration_source_codec_adjusted": {
+        "status": "ok",
+        "delta_rho": -0.009293775996076864,
+        "CI95": [
+          -0.031077553989663612,
+          0.01363421886520783
+        ],
+        "error_n_supported": 245,
+        "accepted_n_supported": 1304,
+        "error_coverage": 0.9879032258064516,
+        "strata": 24,
+        "speaker_groups": 67,
+        "error_speaker_groups": 50,
+        "bootstrap_draws_valid": 2000,
+        "sparse_warning": false
+      },
+      "speaker_duration_source_codec_adjusted": {
+        "status": "ok",
+        "delta_rho": 0.002623499668690889,
+        "CI95": [
+          -0.02457737799163813,
+          0.02933469697130662
+        ],
+        "error_n_supported": 76,
+        "accepted_n_supported": 148,
+        "error_coverage": 0.3064516129032258,
+        "strata": 44,
+        "speaker_groups": 24,
+        "error_speaker_groups": 24,
+        "bootstrap_draws_valid": 2000,
+        "sparse_warning": false
+      }
+    },
+    {
+      "dataset": "19LA_eval",
+      "threshold": 0.9883067,
+      "bona_n": 7355,
+      "errors": 96,
+      "error_percent": 1.3052345343303875,
+      "rho8_error": 0.5172477776612098,
+      "rho8_accepted": 0.6612427600977184,
+      "duration_source_codec_adjusted": {
+        "status": "ok",
+        "delta_rho": -0.13176085717594857,
+        "CI95": [
+          -0.23202661116586654,
+          0.07725509294982674
+        ],
+        "error_n_supported": 94,
+        "accepted_n_supported": 7258,
+        "error_coverage": 0.9791666666666666,
+        "strata": 5,
+        "speaker_groups": 67,
+        "error_speaker_groups": 18,
+        "bootstrap_draws_valid": 2000,
+        "sparse_warning": false
+      },
+      "speaker_duration_source_codec_adjusted": {
+        "status": "ok",
+        "delta_rho": -0.1137692103269477,
+        "CI95": [
+          -0.20158622069385085,
+          0.06425387882531992
+        ],
+        "error_n_supported": 94,
+        "accepted_n_supported": 846,
+        "error_coverage": 0.9791666666666666,
+        "strata": 26,
+        "speaker_groups": 18,
+        "error_speaker_groups": 18,
+        "bootstrap_draws_valid": 2000,
+        "sparse_warning": false
+      }
+    },
+    {
+      "dataset": "DF_full",
+      "threshold": 0.9883067,
+      "bona_n": 14869,
+      "errors": 5703,
+      "error_percent": 38.35496670926088,
+      "rho8_error": 0.7027957237311778,
+      "rho8_accepted": 0.6666980309499054,
+      "duration_source_codec_adjusted": {
+        "status": "ok",
+        "delta_rho": 0.05045539221306083,
+        "CI95": [
+          0.01510735849632462,
+          0.07996133598158608
+        ],
+        "error_n_supported": 5270,
+        "accepted_n_supported": 8138,
+        "error_coverage": 0.924075048220235,
+        "strata": 114,
+        "speaker_groups": 93,
+        "error_speaker_groups": 47,
+        "bootstrap_draws_valid": 2000,
+        "sparse_warning": false
+      },
+      "speaker_duration_source_codec_adjusted": {
+        "status": "ok",
+        "delta_rho": 0.03190657455829595,
+        "CI95": [
+          0.008946665241610181,
+          0.05674030194254385
+        ],
+        "error_n_supported": 1081,
+        "accepted_n_supported": 1373,
+        "error_coverage": 0.1895493599859723,
+        "strata": 271,
+        "speaker_groups": 33,
+        "error_speaker_groups": 33,
+        "bootstrap_draws_valid": 2000,
+        "sparse_warning": false
+      }
+    },
+    {
+      "dataset": "21LA_eval",
+      "threshold": 0.9883067,
+      "bona_n": 14816,
+      "errors": 1918,
+      "error_percent": 12.945464362850972,
+      "rho8_error": 0.5822574630592002,
+      "rho8_accepted": 0.6257974503055012,
+      "duration_source_codec_adjusted": {
+        "status": "ok",
+        "delta_rho": -0.017639615724276327,
+        "CI95": [
+          -0.03656663903893541,
+          0.0013079739059668383
+        ],
+        "error_n_supported": 1917,
+        "accepted_n_supported": 11766,
+        "error_coverage": 0.9994786235662148,
+        "strata": 33,
+        "speaker_groups": 67,
+        "error_speaker_groups": 65,
+        "bootstrap_draws_valid": 2000,
+        "sparse_warning": false
+      },
+      "speaker_duration_source_codec_adjusted": {
+        "status": "ok",
+        "delta_rho": -0.020415965351932654,
+        "CI95": [
+          -0.03539487087190744,
+          -0.005200560378822738
+        ],
+        "error_n_supported": 1486,
+        "accepted_n_supported": 3676,
+        "error_coverage": 0.7747653806047967,
+        "strata": 333,
+        "speaker_groups": 64,
+        "error_speaker_groups": 64,
+        "bootstrap_draws_valid": 2000,
+        "sparse_warning": false
+      }
+    }
+  ],
+  "score_sign_sensitivity": [
+    {
+      "dataset": "V",
+      "subgroup": "score_nonnegative",
+      "bona_n": 1351,
+      "errors": 0,
+      "rho8_error": null,
+      "rho8_accepted": 0.6770516057289049,
+      "adjusted": {
+        "status": "no_error_or_accepted",
+        "error_coverage": 0
+      }
+    },
+    {
+      "dataset": "V",
+      "subgroup": "score_negative",
+      "bona_n": 0,
+      "errors": 0,
+      "rho8_error": null,
+      "rho8_accepted": null,
+      "adjusted": {
+        "status": "empty"
+      }
+    },
+    {
+      "dataset": "DF_pilot",
+      "subgroup": "score_nonnegative",
+      "bona_n": 1684,
+      "errors": 60,
+      "rho8_error": 0.7064234580443226,
+      "rho8_accepted": 0.660269075779859,
+      "adjusted": {
+        "status": "ok",
+        "delta_rho": 0.027005026852065312,
+        "CI95": [
+          -0.011171969029568832,
+          0.06884030904947266
+        ],
+        "error_n_supported": 48,
+        "accepted_n_supported": 253,
+        "error_coverage": 0.8,
+        "strata": 28,
+        "speaker_groups": 26,
+        "error_speaker_groups": 19,
+        "bootstrap_draws_valid": 2000,
+        "sparse_warning": false
+      }
+    },
+    {
+      "dataset": "DF_pilot",
+      "subgroup": "score_negative",
+      "bona_n": 316,
+      "errors": 316,
+      "rho8_error": 0.7823661473558489,
+      "rho8_accepted": null,
+      "adjusted": {
+        "status": "no_error_or_accepted",
+        "error_coverage": 0
+      }
+    },
+    {
+      "dataset": "21LA_pilot",
+      "subgroup": "score_nonnegative",
+      "bona_n": 1984,
+      "errors": 9,
+      "rho8_error": 0.5793842807406097,
+      "rho8_accepted": 0.6216485256095537,
+      "adjusted": {
+        "status": "ok",
+        "delta_rho": -0.022956805146055408,
+        "CI95": [
+          -0.0867760777440516,
+          0.10142413411062992
+        ],
+        "error_n_supported": 9,
+        "accepted_n_supported": 465,
+        "error_coverage": 1.0,
+        "strata": 6,
+        "speaker_groups": 62,
+        "error_speaker_groups": 6,
+        "bootstrap_draws_valid": 1996,
+        "sparse_warning": true
+      }
+    },
+    {
+      "dataset": "21LA_pilot",
+      "subgroup": "score_negative",
+      "bona_n": 16,
+      "errors": 16,
+      "rho8_error": 0.5273475173484725,
+      "rho8_accepted": null,
+      "adjusted": {
+        "status": "no_error_or_accepted",
+        "error_coverage": 0
+      }
+    },
+    {
+      "dataset": "19LA_eval",
+      "subgroup": "score_nonnegative",
+      "bona_n": 7348,
+      "errors": 3,
+      "rho8_error": 0.6373956819124126,
+      "rho8_accepted": 0.6592265639654495,
+      "adjusted": {
+        "status": "ok",
+        "delta_rho": 0.015828707768756185,
+        "CI95": [
+          -0.26630581525105657,
+          0.18952391689146042
+        ],
+        "error_n_supported": 3,
+        "accepted_n_supported": 5530,
+        "error_coverage": 1.0,
+        "strata": 3,
+        "speaker_groups": 67,
+        "error_speaker_groups": 3,
+        "bootstrap_draws_valid": 1894,
+        "sparse_warning": true
+      }
+    },
+    {
+      "dataset": "19LA_eval",
+      "subgroup": "score_negative",
+      "bona_n": 7,
+      "errors": 7,
+      "rho8_error": 0.8122404046928816,
+      "rho8_accepted": null,
+      "adjusted": {
+        "status": "no_error_or_accepted",
+        "error_coverage": 0
+      }
+    },
+    {
+      "dataset": "DF_full",
+      "subgroup": "score_nonnegative",
+      "bona_n": 12363,
+      "errors": 449,
+      "rho8_error": 0.70162008948547,
+      "rho8_accepted": 0.6598194279960824,
+      "adjusted": {
+        "status": "ok",
+        "delta_rho": 0.019887684341284198,
+        "CI95": [
+          -0.007206210616830431,
+          0.04692365841447793
+        ],
+        "error_n_supported": 449,
+        "accepted_n_supported": 4682,
+        "error_coverage": 1.0,
+        "strata": 87,
+        "speaker_groups": 83,
+        "error_speaker_groups": 25,
+        "bootstrap_draws_valid": 2000,
+        "sparse_warning": false
+      }
+    },
+    {
+      "dataset": "DF_full",
+      "subgroup": "score_negative",
+      "bona_n": 2506,
+      "errors": 2506,
+      "rho8_error": 0.7752921304075976,
+      "rho8_accepted": null,
+      "adjusted": {
+        "status": "no_error_or_accepted",
+        "error_coverage": 0
+      }
+    },
+    {
+      "dataset": "21LA_eval",
+      "subgroup": "score_nonnegative",
+      "bona_n": 14638,
+      "errors": 68,
+      "rho8_error": 0.5649490627025479,
+      "rho8_accepted": 0.6212564942183235,
+      "adjusted": {
+        "status": "ok",
+        "delta_rho": -0.034184343873156615,
+        "CI95": [
+          -0.06541975833846822,
+          0.004642953433245859
+        ],
+        "error_n_supported": 68,
+        "accepted_n_supported": 6380,
+        "error_coverage": 1.0,
+        "strata": 13,
+        "speaker_groups": 67,
+        "error_speaker_groups": 28,
+        "bootstrap_draws_valid": 2000,
+        "sparse_warning": false
+      }
+    },
+    {
+      "dataset": "21LA_eval",
+      "subgroup": "score_negative",
+      "bona_n": 178,
+      "errors": 178,
+      "rho8_error": 0.5515824222649012,
+      "rho8_accepted": null,
+      "adjusted": {
+        "status": "no_error_or_accepted",
+        "error_coverage": 0
+      }
+    }
+  ],
+  "PC1_adjusted": [
+    {
+      "dataset": "V",
+      "PC1_error": null,
+      "PC1_accepted": 0.10238612601690339,
+      "adjusted": {
+        "status": "no_error_or_accepted",
+        "error_coverage": 0
+      }
+    },
+    {
+      "dataset": "DF_pilot",
+      "PC1_error": 0.6602499865978317,
+      "PC1_accepted": 0.1886545813790788,
+      "adjusted": {
+        "status": "ok",
+        "delta_rho": 0.16315494580558326,
+        "CI95": [
+          0.10990737254358515,
+          0.21431738583833748
+        ],
+        "error_n_supported": 218,
+        "accepted_n_supported": 405,
+        "error_coverage": 0.5797872340425532,
+        "strata": 44,
+        "speaker_groups": 26,
+        "error_speaker_groups": 23,
+        "bootstrap_draws_valid": 2000,
+        "sparse_warning": false
+      }
+    },
+    {
+      "dataset": "21LA_pilot",
+      "PC1_error": 0.09202775825988359,
+      "PC1_accepted": 0.09862101903156671,
+      "adjusted": {
+        "status": "ok",
+        "delta_rho": -0.001291816579395385,
+        "CI95": [
+          -0.05437118790938078,
+          0.07378183264682416
+        ],
+        "error_n_supported": 25,
+        "accepted_n_supported": 1053,
+        "error_coverage": 1.0,
+        "strata": 15,
+        "speaker_groups": 67,
+        "error_speaker_groups": 16,
+        "bootstrap_draws_valid": 2000,
+        "sparse_warning": false
+      }
+    },
+    {
+      "dataset": "19LA_eval",
+      "PC1_error": 0.6735980440292544,
+      "PC1_accepted": 0.11128498257553304,
+      "adjusted": {
+        "status": "ok",
+        "delta_rho": 0.5352799843825103,
+        "CI95": [
+          0.2671094289187107,
+          0.6433659610858741
+        ],
+        "error_n_supported": 9,
+        "accepted_n_supported": 5789,
+        "error_coverage": 0.9,
+        "strata": 4,
+        "speaker_groups": 67,
+        "error_speaker_groups": 5,
+        "bootstrap_draws_valid": 1987,
+        "sparse_warning": true
+      }
+    },
+    {
+      "dataset": "DF_full",
+      "PC1_error": 0.6523542502838624,
+      "PC1_accepted": 0.180485946282123,
+      "adjusted": {
+        "status": "ok",
+        "delta_rho": 0.1769656085610957,
+        "CI95": [
+          0.11798039899401082,
+          0.2251759707541195
+        ],
+        "error_n_supported": 2910,
+        "accepted_n_supported": 5167,
+        "error_coverage": 0.9847715736040609,
+        "strata": 99,
+        "speaker_groups": 88,
+        "error_speaker_groups": 26,
+        "bootstrap_draws_valid": 2000,
+        "sparse_warning": false
+      }
+    },
+    {
+      "dataset": "21LA_eval",
+      "PC1_error": 0.10843479769060281,
+      "PC1_accepted": 0.09723496118472752,
+      "adjusted": {
+        "status": "ok",
+        "delta_rho": 0.01553098828646684,
+        "CI95": [
+          -0.0030726828508536013,
+          0.037956434907724386
+        ],
+        "error_n_supported": 246,
+        "accepted_n_supported": 12072,
+        "error_coverage": 1.0,
+        "strata": 29,
+        "speaker_groups": 67,
+        "error_speaker_groups": 47,
+        "bootstrap_draws_valid": 2000,
+        "sparse_warning": false
+      }
+    }
+  ],
+  "consumed_input_hashes_unchanged": 58,
+  "sensitivity_status": "Historical threshold check added after primary result; no target tuning",
+  "resource_use": "local CPU only; no GPU, network, model updates or remote operations"
+}

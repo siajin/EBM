@@ -1,0 +1,30 @@
+[
+  {
+    "dataset": "DF_pilot",
+    "condition": "primary",
+    "pairs": 27,
+    "speaker_groups": 9,
+    "status": "inconclusive_low_overlap"
+  },
+  {
+    "dataset": "DF_pilot",
+    "condition": "wide_sensitivity",
+    "pairs": 58,
+    "speaker_groups": 15,
+    "status": "inconclusive_low_overlap"
+  },
+  {
+    "dataset": "21LA_pilot",
+    "condition": "primary",
+    "pairs": 10,
+    "speaker_groups": 6,
+    "status": "inconclusive_low_overlap"
+  },
+  {
+    "dataset": "21LA_pilot",
+    "condition": "wide_sensitivity",
+    "pairs": 21,
+    "speaker_groups": 14,
+    "status": "inconclusive_low_overlap"
+  }
+]

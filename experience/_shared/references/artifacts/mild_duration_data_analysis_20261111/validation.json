@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "draws": 570240,
+  "epochs": 20,
+  "source_coverage_each_epoch": [
+    2580,
+    22800,
+    2580
+  ],
+  "sampler_code_matches_frozen_snapshot": true,
+  "policy_probability_sums": true,
+  "chart_histograms_cover_all_observations": true,
+  "raw_audio_read": false,
+  "GPU_used": false,
+  "chart_payloads_checked": 5,
+  "chart_javascript_syntax_checked": true,
+  "chart_rendering": "not inspected",
+  "shortness_analysis": "shortness_comparison.json",
+  "joint_diagnostics": "joint_diagnostics.json",
+  "audio_activity_and_quality": "not measured; generated speech cache does not exist yet",
+  "local_environment_repair": "Sampler replay uses exact pure NumPy code without unused PyTorch base to avoid Windows OpenMP runtime collision.",
+  "configuration_or_running_experiment_changed": false
+}

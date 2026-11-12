@@ -1,0 +1,16 @@
+{
+  "first_attempt": "synthetic 300-Hz tone produced subharmonic estimate before any corpus descriptors were computed",
+  "correction": "first local trough of cumulative-normalized difference instead of global ACF peak",
+  "synthetic_tones_checked_Hz": [
+    65,
+    80,
+    100,
+    150,
+    200,
+    300,
+    400,
+    480
+  ],
+  "server_PID": 623784,
+  "model_outputs_changed": false
+}

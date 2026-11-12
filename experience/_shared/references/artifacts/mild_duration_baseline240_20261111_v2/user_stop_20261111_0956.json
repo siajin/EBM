@@ -1,0 +1,54 @@
+{
+  "status": "failed_entry_to_first_intermediate_eval_user_terminated",
+  "user_authorization": "explicit stop failed job then start repetition probe",
+  "error": "ModuleNotFoundError: controlled_data_loaders in spawned evaluation workers; parent/ranks stayed alive, no GPU compute",
+  "pipeline_exit": "143",
+  "last_progress": [
+    {
+      "epoch": 5,
+      "batch": 100,
+      "batches": 108,
+      "values": {
+        "oc": 0.8203837275505066,
+        "bpl": 0.6418371200561523,
+        "loss1": 1.462220847606659,
+        "loss2": 1.354034423828125,
+        "positive_pairs": 144,
+        "optimizer_steps": 2,
+        "center_updates": 1
+      },
+      "updated_unix": 1794355414.7628922,
+      "smoke": false
+    },
+    {
+      "epoch": 5,
+      "batch": 100,
+      "batches": 108,
+      "values": {
+        "oc": 0.7571998238563538,
+        "bpl": 0.7041763067245483,
+        "loss1": 1.461376130580902,
+        "loss2": 1.6357171535491943,
+        "positive_pairs": 144,
+        "optimizer_steps": 2,
+        "center_updates": 1
+      },
+      "updated_unix": 1794355414.7634258,
+      "smoke": false
+    }
+  ],
+  "training_complete": false,
+  "checkpoint_files": [],
+  "preservation": {
+    "source_sha256": {
+      "n": 62,
+      "unchanged": true
+    },
+    "baseline_source_sha256": {
+      "n": 38,
+      "unchanged": true
+    }
+  },
+  "training_restarted": false,
+  "time_unix": 1794358656.5124693
+}

@@ -1,0 +1,527 @@
+{
+  "status": "passed",
+  "checked_at": "2026-11-11T16:41:49.334031+09:00",
+  "report_sha256": "7f5ca92ea261f5084f3cf9756847c20d196cbabd20de76e30902d20c6bdeb67a",
+  "archive_sha256": "2a2800c32d889ca28ca9d3ce254cf879521e7684a86c9f4f8ee22c41709ebc1e",
+  "checks": [
+    {
+      "name": "matched_natural_21LA_1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "matched_natural_21LA_0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "matched_natural_21DF_1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "matched_natural_21DF_0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "dose_source_count_1_repeat2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "dose_source_count_1_repeat3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "dose_source_count_1_repeat4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "dose_source_count_2_repeat2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "dose_source_count_2_repeat3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "dose_source_count_2_repeat4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "seam_rescue_small_at_both_lengths",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "full_evaluation_denominator_legacy240",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "full_evaluation_denominator_B",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "fixed_threshold_normal_error_counts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "fixed_threshold_spoof_error_counts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "matched_threshold_normal_error_count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "B_C_source_order_and_short_input_control",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "B_minimum_better_on_each_dataset",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "fixed50_exception_retained",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "prior_full_narrative_preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved_ebm_completed_evidence_interpretation_20261111.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved_ebm_five_research_themes_20261111.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_unchanged_artifacts/geometry_cache/local_analysis/B_final_analysis_20261108_v1/analysis/geometry_statistics.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_unchanged_artifacts/repetition_shortcut_20261111/reviewed_analysis/dose_effects.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_unchanged_artifacts/repetition_shortcut_20261111/reviewed_analysis/interpretation.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_unchanged_artifacts/repetition_shortcut_20261111/training_original_lengths.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_unchanged_artifacts/repetition_shortcut_20261111/original_length_distribution.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_unchanged_artifacts/repetition_shortcut_20261111/reviewed_analysis/independent_full_eer.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_unchanged_artifacts/repetition_shortcut_20261111/reviewed_analysis/operating_points_21LA.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_unchanged_artifacts/ebm_B_C_checkpoints_20261109/metrics.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_unchanged_artifacts/ebm_C_20261108/metadata_validation.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_unchanged_artifacts/crop_repetition_eer_20261111/requested_comparison.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_unchanged_artifacts/crop_repetition_eer_20261111/within_model_contrasts.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_unchanged_docs/experiments/ebm_B_final_results_20261108.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_unchanged_artifacts/repetition_shortcut_20261111/reviewed_analysis/natural_smoothing_controls.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_unchanged_docs/experiments/ebm_shortening_vs_repetition_eer_20261111.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_36",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_37",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_38",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_39",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_40",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_41",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_42",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_43",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_44",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_45",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_46",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_47",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_48",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_49",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_50",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_51",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_52",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_53",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_54",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_55",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_56",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_57",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_58",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_59",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_60",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_61",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_62",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_63",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_64",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_65",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_66",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_67",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_68",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_69",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_70",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_71",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_72",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_73",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_74",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_75",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_../../artifacts/geometry_cache/local_analysis/B_final_analysis_20261108_v1/analysis/geometry_statistics.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_../../docs/experiments/ebm_B_final_results_20261108.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_../../artifacts/repetition_shortcut_20261111/reviewed_analysis/dose_effects.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_../../artifacts/repetition_shortcut_20261111/reviewed_analysis/interpretation.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_../../artifacts/repetition_shortcut_20261111/reviewed_analysis/natural_smoothing_controls.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_../../artifacts/crop_repetition_eer_20261111/requested_comparison.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_../../artifacts/crop_repetition_eer_20261111/within_model_contrasts.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_../../docs/experiments/ebm_shortening_vs_repetition_eer_20261111.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_../../artifacts/repetition_shortcut_20261111/training_original_lengths.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_../../artifacts/repetition_shortcut_20261111/original_length_distribution.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_../../artifacts/repetition_shortcut_20261111/reviewed_analysis/independent_full_eer.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_../../artifacts/repetition_shortcut_20261111/reviewed_analysis/operating_points_21LA.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_../../artifacts/geometry_cache/local_analysis/B_final_analysis_20261108_v1/analysis/geometry_statistics.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_../../artifacts/ebm_C_20261108/metadata_validation.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_../../artifacts/ebm_B_C_checkpoints_20261109/metrics.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_ebm_completed_evidence_interpretation_20261111.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_ebm_five_research_themes_20261111.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_../../artifacts/duration_bias_research_20261111/duration_bias_full_evidence_before_selection.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_../../artifacts/duration_bias_research_20261111/selection_changes.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_../../artifacts/duration_bias_research_20261111/selected_validation.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "seven_focused_tables",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_incomplete_learning_result_used",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_seven_tables_in_final_document",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shortening_and_repetition_directions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "opposite_results_and_causal_limits_explicit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "plain_utf8",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "check_count": 102,
+  "table_count": 7,
+  "source_count": 14,
+  "new_training": false,
+  "new_audio_inference": false,
+  "remote_queries": false,
+  "active_training_modified": false,
+  "spending_ceiling_usd": 0,
+  "resources_left_running": 0
+}

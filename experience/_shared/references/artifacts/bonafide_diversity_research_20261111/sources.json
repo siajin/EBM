@@ -1,0 +1,54 @@
+[
+  {
+    "path": "artifacts/geometry_cache/local_analysis/bonafide_cross_recheck_20261106_v1/protocol.json",
+    "sha256": "fca2b057f1dd016e70ddcaca198b17712600913fe9fbe67efe88d361919ab277"
+  },
+  {
+    "path": "artifacts/geometry_cache/local_analysis/bonafide_cross_recheck_20261106_v1/verification.json",
+    "sha256": "8bee326fad8cd836d65e6b79e9192b78e6475e5728a75d9d280c7649692a51b4"
+  },
+  {
+    "path": "artifacts/geometry_cache/local_analysis/bonafide_cross_recheck_20261106_v1/independent_verification.json",
+    "sha256": "95937c953eeeefa4c174b0bceccb5c62e7c1191f1c9f0b60d77e8608a9ad13bb"
+  },
+  {
+    "path": "artifacts/geometry_cache/local_analysis/bonafide_cross_recheck_20261106_v1/recheck_summary.json",
+    "sha256": "5fec19fee7ef5f494fabb6d6f6ae25196eea25c4b965f111e28de7cb2f3d6c32"
+  },
+  {
+    "path": "artifacts/geometry_cache/local_analysis/bonafide_cross_recheck_20261106_v1/complete",
+    "sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354"
+  },
+  {
+    "path": "artifacts/geometry_cache/local_analysis/bonafide_cross_recheck_20261106_v1/class_replacement_eer.csv",
+    "sha256": "f46632b7621936000cc2c626de90e3bae06622a6843149eb56892009690d35c6"
+  },
+  {
+    "path": "artifacts/geometry_cache/local_analysis/bonafide_cross_recheck_20261106_v1/paired_contrasts.csv",
+    "sha256": "49effe423939809f893a2d283424a7a3c215a293966072783b80313fb9e1d030"
+  },
+  {
+    "path": "artifacts/geometry_cache/local_analysis/bonafide_cross_recheck_20261106_v1/codec_sensitivity.csv",
+    "sha256": "256e901a10d8ea31d25df79a0690f2798bdfc3b032c163f0207859be23909721"
+  },
+  {
+    "path": "artifacts/geometry_cache/local_analysis/bonafide_cross_recheck_20261106_v1/duration_sensitivity.json",
+    "sha256": "4ee1be6cafd26d90acf1769c2f6ddab07ae2b9e66e877db279e8c4354cff8321"
+  },
+  {
+    "path": "artifacts/geometry_cache/local_analysis/bonafide_cross_recheck_20261106_v1/source_cross_matrix.csv",
+    "sha256": "0b5e64f59ce29fc6eb46acef2d6b4cfc803dc902f051c06909c9458103927ed2"
+  },
+  {
+    "path": "artifacts/geometry_cache/local_analysis/bonafide_cross_recheck_20261106_v1/same_source_attack_control.csv",
+    "sha256": "8e0753c23943cefb4989b32b4e8b2f5409928ade04dc2b0b70af91db28225df9"
+  },
+  {
+    "path": "artifacts/geometry_cache/local_analysis/bonafide_cross_recheck_20261106_v1/V_spoof_FAR1_operating.csv",
+    "sha256": "5c14694e34fcdbe5861b8f456207c5b5b4a49cdfe6945cf04293012d70f83fa7"
+  },
+  {
+    "path": "artifacts/geometry_cache/local_analysis/bonafide_cross_recheck_20261106_v1/cluster_bootstrap_draws.npz",
+    "sha256": "e738e21c513ea1dbb7e9904e630925fbe318f9cc12b8a95c56649b4e978fe46e"
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "rows": 296352,
+  "scope": "completed noise0 legacy240/B50 derived results; not new benchmark inference",
+  "validated": [
+    "full UID/index coverage",
+    "identity long scores",
+    "independent ROC",
+    "IPF with actual metadata",
+    "length EER",
+    "paired error reconciliation",
+    "JSON/CSV serialization"
+  ],
+  "maximum_error_previous_independent_eer_pp": 0.0,
+  "optimizer_updates": 0
+}

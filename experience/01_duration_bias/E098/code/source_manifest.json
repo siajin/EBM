@@ -1,0 +1,20 @@
+[
+  {
+    "path": "experience/01_duration_bias/E098/code/cue_factor_audit.py",
+    "sha256": "9378826a691a4ab1acad15bd9fa76641000e1bd07379f90b8db20f1cbef66c0f",
+    "origin": "artifacts/github_archive_20261112/remote_source/historical_analysis/cue_factor_audit.py",
+    "kind": "actual historical analysis source"
+  },
+  {
+    "path": "experience/01_duration_bias/E098/code/cue_gain_followup.py",
+    "sha256": "bb9601c3dc85960d052b1de25ead06cb49a3f67568d5f5b0fe3abb28d0ee0d65",
+    "origin": "artifacts/github_archive_20261112/remote_source/historical_analysis/cue_gain_followup.py",
+    "kind": "actual historical analysis source"
+  },
+  {
+    "path": "experience/01_duration_bias/E098/code/analyze_cue_factor_audit.py",
+    "sha256": "6a0214f10c1d830d1438c844c26d453811af1f66be8e99d7605a09d595300ed5",
+    "origin": "artifacts/github_archive_20261112/remote_source/historical_analysis/analyze_cue_factor_audit.py",
+    "kind": "actual historical analysis source"
+  }
+]

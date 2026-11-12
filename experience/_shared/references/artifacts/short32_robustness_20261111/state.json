@@ -1,0 +1,43 @@
+{
+  "status": "robustness_implemented_CPU_validation_complete_training_held",
+  "validation": "final/validation.json",
+  "tests_run": 54,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "spending_ceiling_usd": 0,
+  "spent_usd": 0,
+  "new_experiment_training_started": false,
+  "new_experiment_optimizer_updates": 0,
+  "scratch_CPU_updates_only": true,
+  "GPU_job_started": false,
+  "server_accessed": false,
+  "queue_registered": false,
+  "automatic_training_retry": false,
+  "checkpoint_policy": "every5/final: atomic CLS+TrainState, safe readback, hash/size verification, last-written commit marker before any eval",
+  "training_state": "model, Adam, scheduler, epoch, filtered args, baseline source manifest, frontend revision and per-rank Python/NumPy/Torch/CUDA RNG",
+  "evaluation_schedule": "save->19LA at each5/final; after training, each saved epoch21LA->21DF; no dev",
+  "failure_policy": "coordinated save failures halt all ranks before eval/next epoch; caught eval failures recorded and other stages continue; partial evaluation explicitly marked incomplete",
+  "original_training": "Frozen two DataLoaders, TrainSet/get_loaders and exact ModelTrainer.train unchanged",
+  "cleanup": "All local test processes exited0; synthetic DataLoader/DDP workers joined and TemporaryDirectory contexts closed; no persistent jobs",
+  "limitations": [
+    "Actual lab audio and XLS-R/GPU integration/memory/speed untested",
+    "Hard process/driver failures cannot be recovered by Python exception coordination",
+    "No actual EER experiment was performed"
+  ],
+  "source_sha256": {
+    "short32_bpl.py": "e3737dd41e8480d831d397b11e0f32a5f44cc68d001126ba6c02fb97e62f0209",
+    "short32_original240.py": "9377b0a428c434cf43e4f07fbfe9b600a30863ce041ad1f1e06e0e94ea333022",
+    "short32_lifecycle.py": "7d1fa2ec64b445dcf59cd8c740310c427206f7f985b8d7ba9fe1b3479a024d5c",
+    "native_steps.py": "72aac33f4a9745b4f29c6d25514df38edf4c83ec791b6928c36510d3e70f1c24",
+    "data_loaders.py": "106809812cfcc113ff49952f9fb75eb99119ef8cf1a851052dc6e75e69b3b04b",
+    "arguments.py": "ae263994c057d2a6254c0b3cff8324852d66bbf0a5bd320f9e217663b58bfb00",
+    "main.py": "ab8afc783038ed0d7d3aa00f45eb4f5ad6947ed9b363d786b64de2e2e04e5dea",
+    "train.py": "18670b0a5e09f8e9069550ae7426f5af8b4a9e416633e7f5d8de8937f4022fb0",
+    "data_processing/__init__.py": "cf46131b1390c1c8fef4eaffcaeea84965ff70b093b49a2dbe1c95b9a9dd6d9a",
+    "model/loss.py": "b3c282817cf7a2781fab2881cf1508ca862710245002c78e5a5ad2708815f7bb",
+    "tests/test_short32_bpl.py": "84481a633295aa770dbc931a60f45aed941213c505daa9b6b40e84e6a007db5a",
+    "tests/test_short32_lifecycle.py": "5b3f039376396e68ecdf5e7597b86e0975d874593ec5d8e5da4876edbd3fcd5f",
+    "tools/validate_short32.py": "72696ddbfea40b0bce87597f593bf8b614ff007f1c97bb4ca4ead852e97944a0"
+  }
+}

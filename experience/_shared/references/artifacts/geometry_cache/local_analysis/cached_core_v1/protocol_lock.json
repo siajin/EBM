@@ -1,0 +1,123 @@
+{
+  "version": "cached_core_v1",
+  "created_utc": "2026-11-05T00:00:45.267608+00:00",
+  "status": "exploratory_followup_of_already_observed_DF_pilot",
+  "datasets": [
+    "T",
+    "V",
+    "DF_pilot"
+  ],
+  "checkpoint_sha256": "104873703a57cad98b686d770e0860e031a2cf9abef79b72668780c1660e0b24",
+  "GPU_inference_runs": 0,
+  "EBM_retrained": false,
+  "Q_opened": false,
+  "direction": {
+    "main": "DF-internal speaker-disjoint nested 5 outer x 3 inner CV; not T->DF transfer",
+    "cases": [
+      "scalar",
+      "direction",
+      "noise",
+      "metadata",
+      "metadata_direction",
+      "preLN_h",
+      "postLN_z",
+      "preLN_stats"
+    ],
+    "C_grid": [
+      0.01,
+      0.1,
+      1.0,
+      10.0
+    ],
+    "selection": "inner OOF balanced logloss, smallest C on ties",
+    "outer_seed": 11,
+    "inner_seed": 101,
+    "scalar": "train-fold quantile cubic spline(s), log(norm_z), direction_valid",
+    "metadata": "scalar + train-fold onehot(source_corpus,codec) + log(duration) + padding_fraction",
+    "noise": "ID-stable seed601 Gaussian unit vectors projected perpendicular to c; dimension160",
+    "fit_scope": "all preprocessing, C selection and classifier fitting exclude each outer held speaker",
+    "matching": {
+      "main_strata": [
+        "source_corpus",
+        "codec"
+      ],
+      "calipers_abs_s_abs_lognorm": [
+        [
+          0.005,
+          0.001
+        ],
+        [
+          0.01,
+          0.002
+        ],
+        [
+          0.02,
+          0.004
+        ]
+      ],
+      "primary_caliper": [
+        0.01,
+        0.002
+      ],
+      "replacement": false,
+      "order": "SHA256 bona ID then nearest caliper-scaled distance, stable spoof ID ties",
+      "extra": "same source x codec x speaker using primary calipers",
+      "use": "descriptive direction comparison; evaluate already-held-out CV predictions on matched rows",
+      "not_claimed": "exact conditional independence test or population performance"
+    }
+  },
+  "channel": {
+    "ranking": "T-only attack-macro Fisher(z), same as earlier ranking",
+    "drop_counts": [
+      8,
+      16,
+      40,
+      80
+    ],
+    "random_masks": "20 nested permutations, seeds200..219",
+    "score": "cosine(mask*z, mask*c), re-normalize both; no probe refit",
+    "main": "drop40 vs native and random drop40 distribution",
+    "no_test_selection": true
+  },
+  "LayerNorm": {
+    "main": "scalar+h vs scalar+z, identical 160 appended features and nested L2 grid",
+    "extra": "scalar+mean(h)+log(std(h))",
+    "centroid_on_h": false,
+    "meaning": "readability under these probes, not information-theoretic loss"
+  },
+  "conditions": {
+    "clusters": "spherical kmeans K4; T balanced2500/class; 5 starts501..505, choose T objective",
+    "comparisons": [
+      "class",
+      "source_corpus",
+      "codec",
+      "T-duration-quintile",
+      "T-padding-bins"
+    ],
+    "within_class": true,
+    "descriptive_only": true
+  },
+  "uncertainty": {
+    "paired_cluster_bootstrap": 2000,
+    "seed": 7301,
+    "group": "source-prefixed speaker; original utterance families unresolved",
+    "CI": "individual95%; family99% for five primary comparisons",
+    "CV_limit": "bootstrap conditions on saved OOF predictions, not full nested model refits",
+    "random_mask_spread": "design variability; not a sampling confidence interval"
+  },
+  "primary_comparisons": [
+    "scalar vs direction logloss",
+    "noise vs direction logloss",
+    "metadata vs metadata_direction logloss",
+    "postLN_z vs preLN_h logloss",
+    "native vs drop40 EER impairment"
+  ],
+  "limits": [
+    "fixed 20000-row pilot, not full DF",
+    "historically observed benchmark",
+    "source-family dependencies unresolved",
+    "linear probes do not exhaust information",
+    "channel intervention is at embedding level, not an acoustic causal intervention"
+  ],
+  "script_sha256": "a6a6de9c1086121131ccd5086d5a44fe5f950a8a8f1e0b54095a3484986c8250"
+}

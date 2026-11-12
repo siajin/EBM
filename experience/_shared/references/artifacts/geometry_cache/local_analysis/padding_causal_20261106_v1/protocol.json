@@ -1,0 +1,152 @@
+{
+  "status": "locked_before_new_forward",
+  "created_epoch": 1793948162.6602507,
+  "reference_chat": "01a1abcd-37ab-73b3-9e02-3b493a9315ea",
+  "question": "Whether identical-content padding intervention changes the adverse normal movement, and whether artificial shortening reproduces source-specific failure",
+  "N_selected": 471,
+  "counts": [
+    {
+      "source_corpus": "asvspoof",
+      "y": 0,
+      "duration_bin": "2to4",
+      "n": 20
+    },
+    {
+      "source_corpus": "asvspoof",
+      "y": 0,
+      "duration_bin": "long",
+      "n": 16
+    },
+    {
+      "source_corpus": "asvspoof",
+      "y": 0,
+      "duration_bin": "under2",
+      "n": 20
+    },
+    {
+      "source_corpus": "asvspoof",
+      "y": 1,
+      "duration_bin": "2to4",
+      "n": 40
+    },
+    {
+      "source_corpus": "asvspoof",
+      "y": 1,
+      "duration_bin": "long",
+      "n": 32
+    },
+    {
+      "source_corpus": "asvspoof",
+      "y": 1,
+      "duration_bin": "under2",
+      "n": 13
+    },
+    {
+      "source_corpus": "vcc2018",
+      "y": 0,
+      "duration_bin": "2to4",
+      "n": 20
+    },
+    {
+      "source_corpus": "vcc2018",
+      "y": 0,
+      "duration_bin": "long",
+      "n": 16
+    },
+    {
+      "source_corpus": "vcc2018",
+      "y": 0,
+      "duration_bin": "under2",
+      "n": 20
+    },
+    {
+      "source_corpus": "vcc2018",
+      "y": 1,
+      "duration_bin": "2to4",
+      "n": 40
+    },
+    {
+      "source_corpus": "vcc2018",
+      "y": 1,
+      "duration_bin": "long",
+      "n": 32
+    },
+    {
+      "source_corpus": "vcc2018",
+      "y": 1,
+      "duration_bin": "under2",
+      "n": 40
+    },
+    {
+      "source_corpus": "vcc2020",
+      "y": 0,
+      "duration_bin": "2to4",
+      "n": 20
+    },
+    {
+      "source_corpus": "vcc2020",
+      "y": 0,
+      "duration_bin": "long",
+      "n": 16
+    },
+    {
+      "source_corpus": "vcc2020",
+      "y": 0,
+      "duration_bin": "under2",
+      "n": 20
+    },
+    {
+      "source_corpus": "vcc2020",
+      "y": 1,
+      "duration_bin": "2to4",
+      "n": 40
+    },
+    {
+      "source_corpus": "vcc2020",
+      "y": 1,
+      "duration_bin": "long",
+      "n": 32
+    },
+    {
+      "source_corpus": "vcc2020",
+      "y": 1,
+      "duration_bin": "under2",
+      "n": 34
+    }
+  ],
+  "source_fingerprints": {
+    "DF_pilot": "1b0a7488e72f4ec277c88575c51ce983bc9879e9ed092249938eb3c84fc69bae",
+    "DF_remaining": "096bc3b970f331819fb5709862e59a9dff07b6a1a9a27c47fb5d6e99ce23ba4d"
+  },
+  "selected_sha256": "7ed80c3fa4638e82bdd5e159ca06ee4d950eaf9aacb549126da2a44f01ca0af9",
+  "selection": "nocodec only, metadata source x class x original duration, UID hash round-robin across speakers; no score or embedding based selection",
+  "conditions": [
+    "native_wrap",
+    "native_reflect",
+    "native_original",
+    "for long originals only: first/last1.5s and2s each wrap/reflect/original"
+  ],
+  "content_control": "same exact waveform within each padding comparison; no gain normalization, added silence, silence trimming or speech-rate change",
+  "primary_family": {
+    "comparisons": 12,
+    "targets": [
+      "short normals original-minus-wrap angle, each3sources",
+      "short normals reflect-minus-wrap angle, each3sources",
+      "long normals cropped2s-wrap-minus-native angle averaged head/tail, each3sources",
+      "long normals cropped2s-original-minus-cropped2s-wrap angle averaged head/tail, each3sources"
+    ],
+    "CI": "source x speaker cluster paired bootstrap5000; individual95% and Bonferroni family95%; no independent source-family assumption"
+  },
+  "secondary": "1.5s dose; spoof score/error changes; original 160D tangent directions; derived frontend temporal-mean cosine movement only",
+  "diagnostic_error_threshold": -0.9145589682336335,
+  "threshold_scope": "retrospective full-DF native EER point, fixed across conditions; not deployment threshold",
+  "limits": [
+    "Previously inspected DF; new controlled forward is exploratory, not unseen confirmatory benchmark",
+    "unpadding also changes total context length; cannot uniquely attribute to periodicity alone",
+    "reflection reverses repeated audio; mechanistic sensitivity control, not recommended deployment",
+    "cropping removes phonetic content; two fixed windows averaged per utterance, never independent utterances",
+    "selected strata are not population proportions; no full-DF performance claim",
+    "no retraining, no silence-distribution hypothesis, no canceled DF4x3 CV"
+  ],
+  "source_code_sha256": "e0c38c32503619895dc64a1113dfbdca08e93056687dae108606537832f4416a"
+}

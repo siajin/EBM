@@ -1,0 +1,139 @@
+{
+  "user_explicit_immediate_stop_authorized": true,
+  "reason": "User requested stop now because EER remains higher than existing B/C.",
+  "root": "/home/mentee/analysis/ebm_coverage_e50_20261110_v2_mid19LA",
+  "signal": "SIGTERM",
+  "verified_job_pgid": 1019828,
+  "verified_group_members": [
+    {
+      "pid": 1019828,
+      "ppid": 352729,
+      "pgid": 1019828,
+      "args": "bash /home/mentee/analysis/ebm_coverage_e50_20261110_v2_mid19LA/pipeline.sh"
+    },
+    {
+      "pid": 1020855,
+      "ppid": 1019828,
+      "pgid": 1019828,
+      "args": "python -u tools/train_coverage_experiment.py /home/mentee/analysis/ebm_coverage_e50_20261110_v2_mid19LA"
+    },
+    {
+      "pid": 1020868,
+      "ppid": 1020855,
+      "pgid": 1019828,
+      "args": "/usr/bin/python -c from multiprocessing.resource_tracker import main;main(3)"
+    },
+    {
+      "pid": 1020869,
+      "ppid": 1020855,
+      "pgid": 1019828,
+      "args": "/usr/bin/python -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=4, pipe_handle=6) --multiprocessing-fork"
+    },
+    {
+      "pid": 1020870,
+      "ppid": 1020855,
+      "pgid": 1019828,
+      "args": "/usr/bin/python -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=4, pipe_handle=8) --multiprocessing-fork"
+    },
+    {
+      "pid": 1428148,
+      "ppid": 1020869,
+      "pgid": 1019828,
+      "args": "/usr/bin/python -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=4, pipe_handle=80) --multiprocessing-fork"
+    },
+    {
+      "pid": 1428149,
+      "ppid": 1020870,
+      "pgid": 1019828,
+      "args": "/usr/bin/python -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=4, pipe_handle=69) --multiprocessing-fork"
+    },
+    {
+      "pid": 1428170,
+      "ppid": 1020870,
+      "pgid": 1019828,
+      "args": "/usr/bin/python -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=4, pipe_handle=73) --multiprocessing-fork"
+    },
+    {
+      "pid": 1428171,
+      "ppid": 1020869,
+      "pgid": 1019828,
+      "args": "/usr/bin/python -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=4, pipe_handle=84) --multiprocessing-fork"
+    },
+    {
+      "pid": 1428226,
+      "ppid": 1020869,
+      "pgid": 1019828,
+      "args": "/usr/bin/python -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=4, pipe_handle=88) --multiprocessing-fork"
+    },
+    {
+      "pid": 1428227,
+      "ppid": 1020870,
+      "pgid": 1019828,
+      "args": "/usr/bin/python -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=4, pipe_handle=77) --multiprocessing-fork"
+    },
+    {
+      "pid": 1428295,
+      "ppid": 1020870,
+      "pgid": 1019828,
+      "args": "/usr/bin/python -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=4, pipe_handle=81) --multiprocessing-fork"
+    },
+    {
+      "pid": 1428296,
+      "ppid": 1020869,
+      "pgid": 1019828,
+      "args": "/usr/bin/python -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=4, pipe_handle=101) --multiprocessing-fork"
+    }
+  ],
+  "stopped_KST": "2026-11-10T22:34:41.126142+09:00",
+  "training_progress_before_stop": {
+    "epoch": 21,
+    "batch": 30,
+    "batches_per_epoch": 108,
+    "logical_batches": 2190,
+    "training_percent": 40.55555555555556
+  },
+  "19LA_EER_log": "[5] 19LA/EER: 2.6220218527910837\n[10] 19LA/EER: 2.9272721580413887\n[15] 19LA/EER: 2.9617106540183467\n[20] 19LA/EER: 2.7081180927334776\n",
+  "checkpoints_preserved": [
+    {
+      "name": "CLS_15.pt",
+      "bytes": 15045708
+    },
+    {
+      "name": "CLS_5.pt",
+      "bytes": 15040274
+    },
+    {
+      "name": "CLS_10.pt",
+      "bytes": 15045708
+    },
+    {
+      "name": "TrainState_5.pt",
+      "bytes": 45167758
+    },
+    {
+      "name": "TrainState_20.pt",
+      "bytes": 45168490
+    },
+    {
+      "name": "TrainState_10.pt",
+      "bytes": 45168490
+    },
+    {
+      "name": "TrainState_15.pt",
+      "bytes": 45168490
+    },
+    {
+      "name": "CLS_20.pt",
+      "bytes": 15045708
+    }
+  ],
+  "all_existing_results_preserved": true,
+  "code_and_configuration_changed": false,
+  "queued_final_comparison_cancelled": true,
+  "all_verified_processes_stopped": true,
+  "shell_process_survives": true,
+  "foreground_after_stop": "352729  352729",
+  "gpu_after_stop": "6, 6, 0\n7, 6, 0",
+  "manual_exit_code": 143,
+  "exit_code_meaning": "User-authorized SIGTERM, not a training error; exit markers written by stop controller."
+}

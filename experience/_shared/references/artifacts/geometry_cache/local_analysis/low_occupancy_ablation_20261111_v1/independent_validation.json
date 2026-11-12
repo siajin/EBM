@@ -1,0 +1,72 @@
+{
+  "status": "passed",
+  "independent_tie_aware_EER_max_error_percentage_points": 3.552713678800501e-15,
+  "explicit_vector_projection_max_score_error": 3.3306690738754696e-16,
+  "all_primary_rows_metrics_verified": [
+    {
+      "dataset": "19LA",
+      "n": 71237,
+      "normal_n": 7355,
+      "k_conditions": 14
+    },
+    {
+      "dataset": "21LA",
+      "n": 148176,
+      "normal_n": 14816,
+      "k_conditions": 14
+    },
+    {
+      "dataset": "DF",
+      "n": 533928,
+      "normal_n": 14869,
+      "k_conditions": 14
+    }
+  ],
+  "direct_raw_embedding_sample_checks": [
+    {
+      "dataset": "19LA",
+      "sample_n": 128,
+      "k": [
+        0,
+        1,
+        16,
+        64,
+        128,
+        158
+      ]
+    },
+    {
+      "dataset": "21LA",
+      "sample_n": 128,
+      "k": [
+        0,
+        1,
+        16,
+        64,
+        128,
+        158
+      ]
+    },
+    {
+      "dataset": "DF",
+      "sample_n": 128,
+      "k": [
+        0,
+        1,
+        16,
+        64,
+        128,
+        158
+      ]
+    }
+  ],
+  "boundary_cases": [
+    "perfect",
+    "fully tied",
+    "reversed",
+    "all tangent axes removed gives sign-only ties"
+  ],
+  "source_and_cache_hashes_unchanged": true,
+  "training_modified": false,
+  "new_spend_usd": 0
+}

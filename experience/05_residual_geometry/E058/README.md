@@ -1,0 +1,60 @@
+# E058. 같은 음성의 백색잡음 20/10dB와 Opus32kbps 재압축 개입
+
+**실행 상태:** 실제 추론·전처리 검수 완료
+
+이 문서의 상태는 2026-11-12 출판 검토 기준이다. 기존 문서·state의 시점별 상태와 충돌하면 실제 완료표식과 본문 최신 보완을 우선한다.
+
+## 가설
+
+같은 원음의 잡음·재압축 반응은 고정모델의 강건성 한계를 드러낼 수 있다.
+
+## 그렇게 설계한 이유
+
+고정 표현·읽기 모듈이 동일 음성의 음향 변형에 얼마나 민감한지 본다.
+
+대조와 통제의 근거: 잡음/재압축은 같은 원음의 반복 측정이다. 이미 압축된 원음에 추가 재압축일 수 있고 새 clean 원본을 얻은 것이 아니다.
+
+## 모델·데이터·표본
+
+[E057](../E057/README.md)과 같은 DF/21LA 진단 각 20,000. 개발 선택 부분 정상 32 +위조 96 =128개를 전처리 QC에 먼저 고정했다.
+
+## 실험 내용과 상세 절차
+
+1. 원음 전체 RMS를 계산하고 발화 ID 해시로 고정한 표준 정규 잡음 파형 한 개를 20/10dB SNR에 각각 재스케일한다. 같은 base 잡음을 써 강도만 바꾼다.
+2. 별도 조건은 FFmpeg libopus32kbps·CBR·voip·Ogg 인코딩 후 16kHz 모노 float32로 복호화한다. 디코더 pre-skip을 따르고 맞춤 lag 최적화는 하지 않는다.
+3. 코덱 결과의 끝 길이만 원음 전체 길이에 맞춰 절단 또는 0 채움한 뒤 원래 앞 64,600/순환 반복 전처리를 한다. 잡음은 clipping·peak 정규화를 하지 않는다.
+4. QC128개에서 실제 SNR 오차 1e-3dB·코덱 상관 lag16샘플 이하를 검사한다. 모델 가중치·발화별 pooling 난수를 고정해 추론한다.
+
+## 측정과 검증
+
+조건별 EER/AUROC·점수/방향/gate 변화·개발 임계값 오류. 파형·가중치·지연·길이 검산.
+
+## 결과
+
+DF 기준 3.35%→20dB4.20%,10dB6.60%, Opus3.194444%.21LA 기준 0.8%→1.30/1.755556/0.711111%.
+
+## 해석·실패한 부분·한계
+
+고정 모델 민감도다. 잡음 증강이나 코덱 일관성 손실로 재학습한 효과를 측정하지 않았다. 코덱 EER 하락은 모든 음성의 무해성을 의미하지 않는다.
+
+## 배운 점
+
+잡음은 악화했고Opus는 일부EER이 내려갔다. 평균 성능 변화가 모든 음성의 무해성이나 증강학습 효과를 뜻하지 않는다.
+
+## 실험 코드
+
+- [artifacts/geometry_experiments/frozen_r23.py](code/artifacts/geometry_experiments/frozen_r23.py)
+
+코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+
+## 설정·결과·검산 근거
+
+- [artifacts/geometry_experiments/frozen_r23.py](../../_shared/workspace/artifacts/geometry_experiments/frozen_r23.py)
+- [docs/experiments/ebm_frozen_all_results_20261105.md](../../_shared/references/docs/experiments/ebm_frozen_all_results_20261105.md)
+- [docs/experiments/ebm_cache_hypotheses_20261106.md](../../_shared/references/docs/experiments/ebm_cache_hypotheses_20261106.md)
+
+## 연결
+
+다른 관련 가설: [코사인 외 norm과 정규화 전 통계](../../04_norm_information/README.md)
+
+[가설 목록으로](../README.md) · [전체 실험 목록](../../README.md)

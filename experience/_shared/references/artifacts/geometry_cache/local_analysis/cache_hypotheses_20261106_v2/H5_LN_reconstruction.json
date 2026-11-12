@@ -1,0 +1,38 @@
+{
+  "status": "complete",
+  "estimated_from": "T h/z pairs only, no class labels",
+  "affine_parameters": 320,
+  "minimum_abs_gamma": 0.9879133066622494,
+  "checks": [
+    {
+      "dataset": "T",
+      "rows": 25380,
+      "z_affine_max_abs_error": 4.879050470307789e-07,
+      "h_reconstruction_max_abs_error": 1.031710556986809e-07,
+      "h_reconstruction_relative_RMS": 6.40703223319978e-08
+    },
+    {
+      "dataset": "V",
+      "rows": 14983,
+      "z_affine_max_abs_error": 4.6613944482132297e-07,
+      "h_reconstruction_max_abs_error": 1.2174347929772011e-07,
+      "h_reconstruction_relative_RMS": 6.3559953831739e-08
+    },
+    {
+      "dataset": "DF_pilot",
+      "rows": 20000,
+      "z_affine_max_abs_error": 6.502816001230372e-07,
+      "h_reconstruction_max_abs_error": 1.284107979948601e-07,
+      "h_reconstruction_relative_RMS": 6.35874230644695e-08
+    },
+    {
+      "dataset": "21LA_pilot",
+      "rows": 20000,
+      "z_affine_max_abs_error": 5.738058699300552e-07,
+      "h_reconstruction_max_abs_error": 1.1738071997724475e-07,
+      "h_reconstruction_relative_RMS": 6.473037177155476e-08
+    }
+  ],
+  "identity": "h_j=mean(h)+sqrt(var(h)+epsilon)*(z_j-beta_j)/gamma_j",
+  "interpretation": "Reconstruction availability and multiplicative interaction; does not establish why a restricted probe improved."
+}

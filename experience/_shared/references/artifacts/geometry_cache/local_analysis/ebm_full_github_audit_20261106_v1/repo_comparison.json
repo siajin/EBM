@@ -1,0 +1,552 @@
+{
+  "status": "complete",
+  "revision": "16f9cba7ced226fbe31fb3f217cfafbc6e801075",
+  "upstream_file_count": 34,
+  "identical": 25,
+  "changed": 9,
+  "missing": 0,
+  "files": [
+    {
+      "path": ".gitignore",
+      "status": "identical",
+      "upstream_sha256": "71f1b8e00126beb171be5f10d7af656853df3ad955524363817f25e97a31954e",
+      "current_sha256": "71f1b8e00126beb171be5f10d7af656853df3ad955524363817f25e97a31954e"
+    },
+    {
+      "path": "Dockerfile",
+      "status": "identical",
+      "upstream_sha256": "e8f7adfa82a915ac0883974e8d9546394429a9c97ce5e08c7fbfef1bbf65516b",
+      "current_sha256": "e8f7adfa82a915ac0883974e8d9546394429a9c97ce5e08c7fbfef1bbf65516b"
+    },
+    {
+      "path": "LICENSE",
+      "status": "identical",
+      "upstream_sha256": "e850eabeb4ee31872aadd4f95cb4cc5cf1dcc2af25c3e9170bed6f6e527e08dd",
+      "current_sha256": "e850eabeb4ee31872aadd4f95cb4cc5cf1dcc2af25c3e9170bed6f6e527e08dd"
+    },
+    {
+      "path": "README.md",
+      "status": "identical",
+      "upstream_sha256": "eaa6fdba1977afdbed3ecf2f9545776d581f7d892d0bc93f221485525bbe6295",
+      "current_sha256": "eaa6fdba1977afdbed3ecf2f9545776d581f7d892d0bc93f221485525bbe6295"
+    },
+    {
+      "path": "arguments.py",
+      "status": "changed",
+      "upstream_sha256": "0aca08732ac85065d149928c66f62f4019dd8c4cdc9d9ad341955bb14f8a2b42",
+      "current_sha256": "48cf0fc693f4f065958765067863e11350b5f79f4452988c006639b03ed6b2f8",
+      "changed_symbols": {
+        "get_args": {
+          "upstream_line": 4,
+          "current_line": 4
+        }
+      },
+      "upstream_lines": 83,
+      "current_lines": 90,
+      "python_AST_equal": false
+    },
+    {
+      "path": "data_loaders.py",
+      "status": "changed",
+      "upstream_sha256": "e46ae2e171df2ecf7665baf84ce38661fe92fd277dc8c1bd2d92470b39ad3556",
+      "current_sha256": "383753eb4baf88b338c073115ed7aa5a10b1320745fe4fde81060e7649b68479",
+      "changed_symbols": {
+        "BalancedLengthBatchSampler": {
+          "upstream_line": null,
+          "current_line": 24
+        },
+        "BalancedLengthBatchSampler.__init__": {
+          "upstream_line": null,
+          "current_line": 26
+        },
+        "BalancedLengthBatchSampler.__iter__": {
+          "upstream_line": null,
+          "current_line": 47
+        },
+        "BalancedLengthBatchSampler.__len__": {
+          "upstream_line": null,
+          "current_line": 44
+        },
+        "BalancedLengthBatchSampler.set_epoch": {
+          "upstream_line": null,
+          "current_line": 41
+        },
+        "EnrollmentSet": {
+          "upstream_line": 197,
+          "current_line": 220
+        },
+        "EnrollmentSet.__getitem__": {
+          "upstream_line": 206,
+          "current_line": 230
+        },
+        "EnrollmentSet.__init__": {
+          "upstream_line": 198,
+          "current_line": 221
+        },
+        "ExactDistributedEvalSampler": {
+          "upstream_line": null,
+          "current_line": 65
+        },
+        "ExactDistributedEvalSampler.__init__": {
+          "upstream_line": null,
+          "current_line": 67
+        },
+        "ExactDistributedEvalSampler.__iter__": {
+          "upstream_line": null,
+          "current_line": 70
+        },
+        "ExactDistributedEvalSampler.__len__": {
+          "upstream_line": null,
+          "current_line": 73
+        },
+        "TrainSet": {
+          "upstream_line": 92,
+          "current_line": 110
+        },
+        "TrainSet.__getitem__": {
+          "upstream_line": 103,
+          "current_line": 122
+        },
+        "TrainSet.__init__": {
+          "upstream_line": 93,
+          "current_line": 111
+        },
+        "collate_eval": {
+          "upstream_line": null,
+          "current_line": 87
+        },
+        "collate_train": {
+          "upstream_line": null,
+          "current_line": 77
+        },
+        "get_loaders": {
+          "upstream_line": 22,
+          "current_line": 94
+        }
+      },
+      "upstream_lines": 219,
+      "current_lines": 246,
+      "python_AST_equal": false
+    },
+    {
+      "path": "data_processing/__init__.py",
+      "status": "identical",
+      "upstream_sha256": "e90c884ba77e163b8c8377f3fa9ab5442f279c16f726e2fc939c57468733816e",
+      "current_sha256": "e90c884ba77e163b8c8377f3fa9ab5442f279c16f726e2fc939c57468733816e"
+    },
+    {
+      "path": "data_processing/augmentation/augmentation.py",
+      "status": "identical",
+      "upstream_sha256": "82c7ebd4fd24fb58f7021b82101233edb185d6684eb85c5026febd2f17d32faa",
+      "current_sha256": "82c7ebd4fd24fb58f7021b82101233edb185d6684eb85c5026febd2f17d32faa"
+    },
+    {
+      "path": "data_processing/augmentation/codec_aug.py",
+      "status": "identical",
+      "upstream_sha256": "4dbb894e994af786926cc5bdcfead9e1a3cf742bfc15a0a9ea62b7a9803f828e",
+      "current_sha256": "4dbb894e994af786926cc5bdcfead9e1a3cf742bfc15a0a9ea62b7a9803f828e"
+    },
+    {
+      "path": "data_processing/augmentation/raw_boost.py",
+      "status": "identical",
+      "upstream_sha256": "e8a8944850f4305a042fceceb8daf7fdb52b627f7874206284ce88f7b220d33f",
+      "current_sha256": "e8a8944850f4305a042fceceb8daf7fdb52b627f7874206284ce88f7b220d33f"
+    },
+    {
+      "path": "data_processing/augmentation/wav_read_functions.py",
+      "status": "identical",
+      "upstream_sha256": "d81e376dd4fb060aef00208380fb429ca63841b6d7975f31fc012c0eae903cc4",
+      "current_sha256": "d81e376dd4fb060aef00208380fb429ca63841b6d7975f31fc012c0eae903cc4"
+    },
+    {
+      "path": "dataset/ASVspoof2019_la_eval.py",
+      "status": "identical",
+      "upstream_sha256": "843642f72871b89781ede23998c9456b21b0415bbeae340bbe8d0c36beea2c35",
+      "current_sha256": "843642f72871b89781ede23998c9456b21b0415bbeae340bbe8d0c36beea2c35"
+    },
+    {
+      "path": "dataset/ASVspoof2019_la_train.py",
+      "status": "changed",
+      "upstream_sha256": "7aa1151b49f19de4a43af041ba120d7748e4cef3d75b9ff731f8db42ff77aae3",
+      "current_sha256": "bd98462e9e3f6da6f1e9a4f439761d4ec67ca625cd82aa7fcd6b07412953da2b",
+      "changed_symbols": {
+        "ASVspoof2019_LA_Train": {
+          "upstream_line": 17,
+          "current_line": 17
+        },
+        "ASVspoof2019_LA_Train.__init__": {
+          "upstream_line": 18,
+          "current_line": 18
+        }
+      },
+      "upstream_lines": 69,
+      "current_lines": 69,
+      "python_AST_equal": false
+    },
+    {
+      "path": "dataset/ASVspoof2021_df_eval.py",
+      "status": "changed",
+      "upstream_sha256": "83f19cb0dd61b018b72846bbc953d411c2fafe5cd20bfba187370aed0fe52cee",
+      "current_sha256": "422b4e0cf14ae1232e8ba918141d36c68b9057c311bafb6c541c7a80e942c4a7",
+      "changed_symbols": {
+        "ASVspoof2021_DF_Eval": {
+          "upstream_line": 10,
+          "current_line": 10
+        },
+        "ASVspoof2021_DF_Eval.__init__": {
+          "upstream_line": 11,
+          "current_line": 11
+        }
+      },
+      "upstream_lines": 32,
+      "current_lines": 32,
+      "python_AST_equal": false
+    },
+    {
+      "path": "dataset/ASVspoof2021_la_eval.py",
+      "status": "identical",
+      "upstream_sha256": "18c2a1a19d00d2e6eaf417ad3f0707434516f66e999cb013f62968b266e0f235",
+      "current_sha256": "18c2a1a19d00d2e6eaf417ad3f0707434516f66e999cb013f62968b266e0f235"
+    },
+    {
+      "path": "dataset/__init__.py",
+      "status": "identical",
+      "upstream_sha256": "3534dcaa88978f59714243b6f0e64bfb2f57f0c58fb4e1511234ea8ee70723dd",
+      "current_sha256": "3534dcaa88978f59714243b6f0e64bfb2f57f0c58fb4e1511234ea8ee70723dd"
+    },
+    {
+      "path": "docker_build.sh",
+      "status": "identical",
+      "upstream_sha256": "cd244e9001469cd3ab14707f468f310255b5325719891ce83d85d34ec6e079d8",
+      "current_sha256": "cd244e9001469cd3ab14707f468f310255b5325719891ce83d85d34ec6e079d8"
+    },
+    {
+      "path": "docker_run.sh",
+      "status": "identical",
+      "upstream_sha256": "cc5a923c65bcc4109e3dd62d5d0368fd3a6488c2deb593742badf805d7895ab2",
+      "current_sha256": "cc5a923c65bcc4109e3dd62d5d0368fd3a6488c2deb593742badf805d7895ab2"
+    },
+    {
+      "path": "logger/__init__.py",
+      "status": "identical",
+      "upstream_sha256": "ceaf8c7f0f309f2489a88b7376bef13952d3a735a1b2b393a34797f796d21c3d",
+      "current_sha256": "ceaf8c7f0f309f2489a88b7376bef13952d3a735a1b2b393a34797f796d21c3d"
+    },
+    {
+      "path": "logger/interface.py",
+      "status": "identical",
+      "upstream_sha256": "8b1c23931a24a9e1967a6ec479e2a8c81cee13c8efc9458fd044ba6af936848e",
+      "current_sha256": "8b1c23931a24a9e1967a6ec479e2a8c81cee13c8efc9458fd044ba6af936848e"
+    },
+    {
+      "path": "logger/local.py",
+      "status": "changed",
+      "upstream_sha256": "fbbce7ae888ec3be63e6320668dac9792f4d14d394b1a402afde1e124aee1871",
+      "current_sha256": "5969fca176044b3dd741a5e7e9589e9cec3e332968afc5dfca1e8187e717e66c",
+      "changed_symbols": {
+        "LocalLogger": {
+          "upstream_line": 10,
+          "current_line": 10
+        },
+        "LocalLogger.__init__": {
+          "upstream_line": 15,
+          "current_line": 15
+        }
+      },
+      "upstream_lines": 98,
+      "current_lines": 98,
+      "python_AST_equal": false
+    },
+    {
+      "path": "logger/logger.py",
+      "status": "identical",
+      "upstream_sha256": "3cf192ae21f819e9dbf48b8e16dc42f49dce1894ac0e4c16f2b3e8865d56ca25",
+      "current_sha256": "3cf192ae21f819e9dbf48b8e16dc42f49dce1894ac0e4c16f2b3e8865d56ca25"
+    },
+    {
+      "path": "logger/neptune.py",
+      "status": "identical",
+      "upstream_sha256": "a5905325f55b7ecf31a01f84814e33cee777e0baa976a57d760b5c4ca723f9db",
+      "current_sha256": "a5905325f55b7ecf31a01f84814e33cee777e0baa976a57d760b5c4ca723f9db"
+    },
+    {
+      "path": "logger/wandb.py",
+      "status": "identical",
+      "upstream_sha256": "42c293e802b03fcc7d4764643cec147d8d6f8dfa7c0e4530c6eb3ad9fc0eadba",
+      "current_sha256": "42c293e802b03fcc7d4764643cec147d8d6f8dfa7c0e4530c6eb3ad9fc0eadba"
+    },
+    {
+      "path": "main.py",
+      "status": "changed",
+      "upstream_sha256": "be501be08193494f48abed295754c73e452f0201351a982c7c47c8c8fc0f256e",
+      "current_sha256": "9fcefc4fbb4aa05bd98f9dc8c4b8d9d1cef1ba14cb16eb2671b4bfef6509bed2",
+      "changed_symbols": {
+        "run": {
+          "upstream_line": 45,
+          "current_line": 47
+        },
+        "set_experiment_environment": {
+          "upstream_line": 28,
+          "current_line": 28
+        }
+      },
+      "upstream_lines": 186,
+      "current_lines": 197,
+      "python_AST_equal": false
+    },
+    {
+      "path": "model/__init__.py",
+      "status": "identical",
+      "upstream_sha256": "357dae54f8602f4fbbd07a9d6cc4d80126c7d7950f36ebdeccd511aabb2c1f56",
+      "current_sha256": "357dae54f8602f4fbbd07a9d6cc4d80126c7d7950f36ebdeccd511aabb2c1f56"
+    },
+    {
+      "path": "model/b_linear.py",
+      "status": "changed",
+      "upstream_sha256": "c2cbcf898f1905c9c6ee8b20ef4514c4af7cb343abbf35e2dbd1fd526ad3459f",
+      "current_sha256": "d96cec48857eca7e4b6cfc38c1f5bc682d29b659d9768f52fe521c2a5519ef92",
+      "changed_symbols": {
+        "B_Linear": {
+          "upstream_line": 10,
+          "current_line": 10
+        },
+        "B_Linear.forward": {
+          "upstream_line": 24,
+          "current_line": 24
+        },
+        "Bridge_module": {
+          "upstream_line": 49,
+          "current_line": 52
+        },
+        "Bridge_module.forward": {
+          "upstream_line": 75,
+          "current_line": 78
+        },
+        "SelfWeightedPooling": {
+          "upstream_line": 120,
+          "current_line": 123
+        },
+        "SelfWeightedPooling.forward": {
+          "upstream_line": 134,
+          "current_line": 137
+        }
+      },
+      "upstream_lines": 175,
+      "current_lines": 196,
+      "python_AST_equal": false
+    },
+    {
+      "path": "model/loss.py",
+      "status": "changed",
+      "upstream_sha256": "164be4161b57a7899ef7b289e005ab80d12da373922d57e9e021844ea828b1ac",
+      "current_sha256": "479cf7a2ea0b28200da0ede1c14f434c7918b630b86554c2ab2f47ead7463715",
+      "changed_symbols": {
+        "OCSoftmax": {
+          "upstream_line": 26,
+          "current_line": 26
+        },
+        "OCSoftmax.forward": {
+          "upstream_line": 41,
+          "current_line": 41
+        }
+      },
+      "upstream_lines": 62,
+      "current_lines": 62,
+      "python_AST_equal": false
+    },
+    {
+      "path": "scheduler/cosine_warmup.py",
+      "status": "identical",
+      "upstream_sha256": "ce81225049a4a31864752d6377e08ddb1f86a55f3e3a3860bd6fdb0ecb760d19",
+      "current_sha256": "ce81225049a4a31864752d6377e08ddb1f86a55f3e3a3860bd6fdb0ecb760d19"
+    },
+    {
+      "path": "scheduler/steplr.py",
+      "status": "identical",
+      "upstream_sha256": "7d3e1c96134c5f36588def6b08b643e74e9bc72bf809f71f98cf2e518026ffd1",
+      "current_sha256": "7d3e1c96134c5f36588def6b08b643e74e9bc72bf809f71f98cf2e518026ffd1"
+    },
+    {
+      "path": "train.py",
+      "status": "changed",
+      "upstream_sha256": "b7b98a182a4946c479f477b7110e1c4a49be53ee6b6e89ef1b4bc4785374873f",
+      "current_sha256": "b963db06fbded0459ebfc1e9fd78e7eaf1ed9d7cd9d6bd4ca97b8c794cfd642a",
+      "changed_symbols": {
+        "ModelTrainer": {
+          "upstream_line": 14,
+          "current_line": 9
+        },
+        "ModelTrainer._synchronize": {
+          "upstream_line": 286,
+          "current_line": 80
+        },
+        "ModelTrainer.calculate_EER": {
+          "upstream_line": 274,
+          "current_line": 69
+        },
+        "ModelTrainer.evaluation": {
+          "upstream_line": 165,
+          "current_line": 40
+        },
+        "ModelTrainer.run": {
+          "upstream_line": 34,
+          "current_line": 13
+        },
+        "ModelTrainer.save_best_model": {
+          "upstream_line": 196,
+          "current_line": null
+        },
+        "ModelTrainer.test": {
+          "upstream_line": 210,
+          "current_line": 44
+        },
+        "ModelTrainer.train": {
+          "upstream_line": 54,
+          "current_line": 26
+        }
+      },
+      "upstream_lines": 288,
+      "current_lines": 82,
+      "python_AST_equal": false
+    },
+    {
+      "path": "utils/__init__.py",
+      "status": "identical",
+      "upstream_sha256": "a17c6a58fe56069f873f8d22bae35354b4e3fd42b1b2cf330713a41c05a038fd",
+      "current_sha256": "a17c6a58fe56069f873f8d22bae35354b4e3fd42b1b2cf330713a41c05a038fd"
+    },
+    {
+      "path": "utils/ddp_util.py",
+      "status": "identical",
+      "upstream_sha256": "e3533ad2c29d166dbfabb486ab942ca999b63d8e8f77eed19ee87f38c7bd0b70",
+      "current_sha256": "e3533ad2c29d166dbfabb486ab942ca999b63d8e8f77eed19ee87f38c7bd0b70"
+    },
+    {
+      "path": "utils/get_threshold.py",
+      "status": "identical",
+      "upstream_sha256": "040adf607c2b62473ed42790e7c33d36305e58341614e3ef87ddbc852cfa0b83",
+      "current_sha256": "040adf607c2b62473ed42790e7c33d36305e58341614e3ef87ddbc852cfa0b83"
+    }
+  ],
+  "extra_local_files": [
+    "native_steps.py",
+    "arguments.py.bak.20261020_145252",
+    "arguments.py.bak.20261030_180015"
+  ],
+  "config_differences": [
+    {
+      "key": "batch_size",
+      "status": "changed",
+      "upstream": 40,
+      "current": 240
+    },
+    {
+      "key": "epoch",
+      "status": "changed",
+      "upstream": 150,
+      "current": 50
+    },
+    {
+      "key": "eval_batch_size",
+      "status": "added",
+      "current": 8
+    },
+    {
+      "key": "lr",
+      "status": "changed",
+      "upstream": 1e-06,
+      "current": 1e-05
+    },
+    {
+      "key": "lr_min",
+      "status": "changed",
+      "upstream": 1e-06,
+      "current": 1e-05
+    },
+    {
+      "key": "micro_batch_size",
+      "status": "added",
+      "current": 8
+    },
+    {
+      "key": "name",
+      "status": "changed",
+      "upstream": "EBM",
+      "current": "EBM_e50_bs240_lr1e5_native_short303_pair"
+    },
+    {
+      "key": "native_length",
+      "status": "added",
+      "current": true
+    },
+    {
+      "key": "padding_loss_weight",
+      "status": "added",
+      "current": 0.1
+    },
+    {
+      "key": "short_oc_weight",
+      "status": "added",
+      "current": 0.25
+    }
+  ],
+  "codec_before": {
+    "active_convert_call_lines": [
+      133,
+      177
+    ],
+    "probability_assignment_lines": [
+      117
+    ],
+    "sha256": "f0eab7591b452f2fee2d6f05941a6708088625bd44a4be88fd3e6565703b842a"
+  },
+  "codec_after": {
+    "active_convert_call_lines": [],
+    "probability_assignment_lines": [
+      117
+    ],
+    "sha256": "383753eb4baf88b338c073115ed7aa5a10b1320745fe4fde81060e7649b68479"
+  },
+  "codec_fix": "Commented both codec conditional blocks; probability and codec implementation untouched",
+  "codec_before_sha256": "f0eab7591b452f2fee2d6f05941a6708088625bd44a4be88fd3e6565703b842a",
+  "final_current_hashes": {
+    "docker_build.sh": "cd244e9001469cd3ab14707f468f310255b5325719891ce83d85d34ec6e079d8",
+    "native_steps.py": "1d74f16d97c476527aa84e7ad5f594320a4bc68a8aacbc852f046e5132a1caa8",
+    "arguments.py": "48cf0fc693f4f065958765067863e11350b5f79f4452988c006639b03ed6b2f8",
+    "README.md": "eaa6fdba1977afdbed3ecf2f9545776d581f7d892d0bc93f221485525bbe6295",
+    "docker_run.sh": "cc5a923c65bcc4109e3dd62d5d0368fd3a6488c2deb593742badf805d7895ab2",
+    "Dockerfile": "e8f7adfa82a915ac0883974e8d9546394429a9c97ce5e08c7fbfef1bbf65516b",
+    "data_loaders.py": "383753eb4baf88b338c073115ed7aa5a10b1320745fe4fde81060e7649b68479",
+    ".gitignore": "71f1b8e00126beb171be5f10d7af656853df3ad955524363817f25e97a31954e",
+    "LICENSE": "e850eabeb4ee31872aadd4f95cb4cc5cf1dcc2af25c3e9170bed6f6e527e08dd",
+    "arguments.py.bak.20261020_145252": "e21d954bb152cc9730755378ebf654ac5a4d7d5648e559fcf67cbf5eaa61c39e",
+    "main.py": "9fcefc4fbb4aa05bd98f9dc8c4b8d9d1cef1ba14cb16eb2671b4bfef6509bed2",
+    "train.py": "b963db06fbded0459ebfc1e9fd78e7eaf1ed9d7cd9d6bd4ca97b8c794cfd642a",
+    "arguments.py.bak.20261030_180015": "567cc9b95a69dda73052100ecd4d76fbf420d1abf46e5d09ef208577953552e3",
+    "model/loss.py": "479cf7a2ea0b28200da0ede1c14f434c7918b630b86554c2ab2f47ead7463715",
+    "model/b_linear.py": "d96cec48857eca7e4b6cfc38c1f5bc682d29b659d9768f52fe521c2a5519ef92",
+    "model/__init__.py": "357dae54f8602f4fbbd07a9d6cc4d80126c7d7950f36ebdeccd511aabb2c1f56",
+    "logger/wandb.py": "42c293e802b03fcc7d4764643cec147d8d6f8dfa7c0e4530c6eb3ad9fc0eadba",
+    "logger/neptune.py": "a5905325f55b7ecf31a01f84814e33cee777e0baa976a57d760b5c4ca723f9db",
+    "logger/logger.py": "3cf192ae21f819e9dbf48b8e16dc42f49dce1894ac0e4c16f2b3e8865d56ca25",
+    "logger/interface.py": "8b1c23931a24a9e1967a6ec479e2a8c81cee13c8efc9458fd044ba6af936848e",
+    "logger/__init__.py": "ceaf8c7f0f309f2489a88b7376bef13952d3a735a1b2b393a34797f796d21c3d",
+    "logger/local.py": "5969fca176044b3dd741a5e7e9589e9cec3e332968afc5dfca1e8187e717e66c",
+    "scheduler/steplr.py": "7d3e1c96134c5f36588def6b08b643e74e9bc72bf809f71f98cf2e518026ffd1",
+    "scheduler/cosine_warmup.py": "ce81225049a4a31864752d6377e08ddb1f86a55f3e3a3860bd6fdb0ecb760d19",
+    "data_processing/__init__.py": "e90c884ba77e163b8c8377f3fa9ab5442f279c16f726e2fc939c57468733816e",
+    "data_processing/augmentation/codec_aug.py": "4dbb894e994af786926cc5bdcfead9e1a3cf742bfc15a0a9ea62b7a9803f828e",
+    "data_processing/augmentation/raw_boost.py": "e8a8944850f4305a042fceceb8daf7fdb52b627f7874206284ce88f7b220d33f",
+    "data_processing/augmentation/augmentation.py": "82c7ebd4fd24fb58f7021b82101233edb185d6684eb85c5026febd2f17d32faa",
+    "data_processing/augmentation/wav_read_functions.py": "d81e376dd4fb060aef00208380fb429ca63841b6d7975f31fc012c0eae903cc4",
+    "dataset/ASVspoof2019_la_eval.py": "843642f72871b89781ede23998c9456b21b0415bbeae340bbe8d0c36beea2c35",
+    "dataset/ASVspoof2021_df_eval.py": "422b4e0cf14ae1232e8ba918141d36c68b9057c311bafb6c541c7a80e942c4a7",
+    "dataset/ASVspoof2021_la_eval.py": "18c2a1a19d00d2e6eaf417ad3f0707434516f66e999cb013f62968b266e0f235",
+    "dataset/ASVspoof2019_la_train.py": "bd98462e9e3f6da6f1e9a4f439761d4ec67ca625cd82aa7fcd6b07412953da2b",
+    "dataset/__init__.py": "3534dcaa88978f59714243b6f0e64bfb2f57f0c58fb4e1511234ea8ee70723dd",
+    "utils/__init__.py": "a17c6a58fe56069f873f8d22bae35354b4e3fd42b1b2cf330713a41c05a038fd",
+    "utils/get_threshold.py": "040adf607c2b62473ed42790e7c33d36305e58341614e3ef87ddbc852cfa0b83",
+    "utils/ddp_util.py": "e3533ad2c29d166dbfabb486ab942ca999b63d8e8f77eed19ee87f38c7bd0b70"
+  },
+  "non_codec_files_unchanged_during_audit": true
+}

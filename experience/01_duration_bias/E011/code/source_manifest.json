@@ -1,0 +1,14 @@
+[
+  {
+    "path": "experience/01_duration_bias/E011/code/artifacts/ebm_git_private_20261106/render_B_final_analysis.py",
+    "sha256": "9540e7d05d954e509b06e68b288a92a30303e42e9800a4cb949dbbc41742fffc",
+    "origin": "artifacts/ebm_git_private_20261106/render_B_final_analysis.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/01_duration_bias/E011/code/EBM/tools/evaluate_B_C_checkpoints.py",
+    "sha256": "961ece4a5ba570bab91bfee45a6992e1767174f22cfaa94861c7e755e1a2230e",
+    "origin": "EBM/tools/evaluate_B_C_checkpoints.py",
+    "kind": "implementation / validation source"
+  }
+]

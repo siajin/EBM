@@ -1,0 +1,28 @@
+{
+  "scope": "Analyze saved21LA scores by original duration, class and model; main comparison coverage20 versus B20/C20; best-checkpoint B45/C30 and legacy24050 as labelled references. No inference or training.",
+  "spending_ceiling_USD": 0,
+  "new_paid_resources": false,
+  "remote_changes": false,
+  "thresholds": "Per-model global21LA EER operating point for retrospective diagnosis, plus native dev thresholds for references when available; no per-bin threshold for primary error rates.",
+  "bins_seconds": [
+    "<=1",
+    "(1,2]",
+    "(2,3]",
+    "(3,4.0375]",
+    ">4.0375"
+  ],
+  "checks": [
+    "Source SHA and fullUID/index/class/length alignment",
+    "Global EER independently reproduces saved metric",
+    "Class-specific denominators and error contributions reconcile",
+    "Per-binEER separate from global-thresholdFRR/FAR",
+    "Attack/codec crosscuts if available"
+  ],
+  "cleanup": "No GPU jobs, services or remote files created; closeSSH and retain derived score/metadata artifacts locally within authorized20261105 scope.",
+  "status": "complete",
+  "spending_actual_USD": 0,
+  "checks_completed": true,
+  "cleanup_completed": "No remote files/jobs created. SSH clients closed. Public-key download helper interrupted after redundant retrieval stalled; metadata obtained through boundedread-onlySSH instead. No remaining task helper process.",
+  "figure_check": "Rendered scientificPNG inspected: legends, percentages, Korean labels and bothclassaxes visible; no clipping.",
+  "analysis_script": "EBM/tools/analyze_coverage20_length_shortcut.py"
+}

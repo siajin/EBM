@@ -1,0 +1,303 @@
+{
+  "remote_root": "/home/mentee/results/analysis/EBM80_21DF_pooling_audit",
+  "file_inventory": [
+    {
+      "name": "pooling_audit.png",
+      "bytes": 112697,
+      "directory": false
+    },
+    {
+      "name": "pooling_audit.pdf",
+      "bytes": 18755,
+      "directory": false
+    },
+    {
+      "name": "shard_1.npz",
+      "bytes": 22335,
+      "directory": false
+    },
+    {
+      "name": "shard_0.npz",
+      "bytes": 22609,
+      "directory": false
+    },
+    {
+      "name": "summary.json",
+      "bytes": 7262,
+      "directory": false
+    },
+    {
+      "name": "sample_manifest.json",
+      "bytes": 146131,
+      "directory": false
+    },
+    {
+      "name": "provenance.json",
+      "bytes": 1084,
+      "directory": false
+    },
+    {
+      "name": "pooling_scores.npz",
+      "bytes": 42345,
+      "directory": false
+    }
+  ],
+  "aggregate_json": {
+    "summary.json": {
+      "provenance": {
+        "per_class": 1000,
+        "batch_size": 4,
+        "seed": 1,
+        "cpu": false,
+        "out": "/results/analysis/EBM80_21DF_pooling_audit",
+        "workers": 2,
+        "plm_path": "/home/mentee/.cache/huggingface/hub/models--facebook--wav2vec2-xls-r-300m/snapshots/1a640f32ac3e39899438a2931f9924c02f080a54",
+        "checkpoint": "/home/mentee/results/CM/LA/EBM/model/BestCLS_80_21DF.pt",
+        "checkpoint_sha256": "30043199664bc84da780654e01fd430235f647b894e7832a52f777c7fee5939a",
+        "protocol_sha256": "70e0e7d5964562cb0166e79143f73beaeaf77ee18e799fa4156355a57006d800",
+        "population": {
+          "0": 519059,
+          "1": 14869
+        },
+        "torch_version": "2.6.0+cu124",
+        "sampling": "uniform random within label, without replacement",
+        "crop_samples": 64600,
+        "sample_rate": 16000,
+        "embedding": "after layer_norm, L2 normalized",
+        "source_sha256": {
+          "model/b_linear.py": "c2cbcf898f1905c9c6ee8b20ef4514c4af7cb343abbf35e2dbd1fd526ad3459f",
+          "model/loss.py": "164be4161b57a7899ef7b289e005ab80d12da373922d57e9e021844ea828b1ac",
+          "train.py": "b7b98a182a4946c479f477b7110e1c4a49be53ee6b6e89ef1b4bc4785374873f"
+        }
+      },
+      "reference_frames": 201,
+      "overall": {
+        "baseline_fixed": {
+          "sample_eer_pct": 2.0000000000000018,
+          "bonafide_tail_n": 163,
+          "bona_mean_delta": 0.0,
+          "bona_median_delta": 0.0,
+          "spoof_mean_delta": 0.0,
+          "tail_mean_delta": 0.0,
+          "original_tail_recovered_n": 0
+        },
+        "duplicate_final_features": {
+          "sample_eer_pct": 2.0000000000000018,
+          "bonafide_tail_n": 163,
+          "bona_mean_delta": -0.00014411208394449204,
+          "bona_median_delta": 2.9802322387695312e-08,
+          "spoof_mean_delta": -0.00013461986964102834,
+          "tail_mean_delta": -0.0008962822030298412,
+          "original_tail_recovered_n": 0
+        },
+        "duplicate_all_SSL_features": {
+          "sample_eer_pct": 2.0000000000000018,
+          "bonafide_tail_n": 162,
+          "bona_mean_delta": 6.0785630921600387e-05,
+          "bona_median_delta": 8.553266525268555e-06,
+          "spoof_mean_delta": -9.665439574746415e-05,
+          "tail_mean_delta": 0.00020523989223875105,
+          "original_tail_recovered_n": 1
+        },
+        "native_length": {
+          "sample_eer_pct": 5.900000000000006,
+          "bonafide_tail_n": 52,
+          "bona_mean_delta": 0.08785691857337952,
+          "bona_median_delta": 0.000986337661743164,
+          "spoof_mean_delta": 0.2684378921985626,
+          "tail_mean_delta": 0.5091148614883423,
+          "original_tail_recovered_n": 112
+        },
+        "native_scale_final_std": {
+          "sample_eer_pct": 5.900000000000006,
+          "bonafide_tail_n": 52,
+          "bona_mean_delta": 0.08785083144903183,
+          "bona_median_delta": 0.0009885132312774658,
+          "spoof_mean_delta": 0.26801860332489014,
+          "tail_mean_delta": 0.5090773701667786,
+          "original_tail_recovered_n": 112
+        },
+        "native_scale_all_std": {
+          "sample_eer_pct": 5.900000000000006,
+          "bonafide_tail_n": 52,
+          "bona_mean_delta": 0.08787025511264801,
+          "bona_median_delta": 0.0009888708591461182,
+          "spoof_mean_delta": 0.26837190985679626,
+          "tail_mean_delta": 0.5091812014579773,
+          "original_tail_recovered_n": 112
+        }
+      },
+      "source": {
+        "baseline_fixed": {
+          "asvspoof": {
+            "bona_n": 525,
+            "spoof_n": 124,
+            "bona_tail_n": 3,
+            "sample_eer_pct": 0.8064516129032258
+          },
+          "vcc2018": {
+            "bona_n": 246,
+            "spoof_n": 351,
+            "bona_tail_n": 124,
+            "sample_eer_pct": 0.8130081300813052
+          },
+          "vcc2020": {
+            "bona_n": 229,
+            "spoof_n": 525,
+            "bona_tail_n": 36,
+            "sample_eer_pct": 1.1428571428571428
+          }
+        },
+        "duplicate_final_features": {
+          "asvspoof": {
+            "bona_n": 525,
+            "spoof_n": 124,
+            "bona_tail_n": 3,
+            "sample_eer_pct": 0.8064516129032258
+          },
+          "vcc2018": {
+            "bona_n": 246,
+            "spoof_n": 351,
+            "bona_tail_n": 124,
+            "sample_eer_pct": 0.8130081300813052
+          },
+          "vcc2020": {
+            "bona_n": 229,
+            "spoof_n": 525,
+            "bona_tail_n": 36,
+            "sample_eer_pct": 1.1428571428571428
+          }
+        },
+        "duplicate_all_SSL_features": {
+          "asvspoof": {
+            "bona_n": 525,
+            "spoof_n": 124,
+            "bona_tail_n": 3,
+            "sample_eer_pct": 0.8064516129032258
+          },
+          "vcc2018": {
+            "bona_n": 246,
+            "spoof_n": 351,
+            "bona_tail_n": 123,
+            "sample_eer_pct": 0.8130081300813052
+          },
+          "vcc2020": {
+            "bona_n": 229,
+            "spoof_n": 525,
+            "bona_tail_n": 36,
+            "sample_eer_pct": 1.1428571428571428
+          }
+        },
+        "native_length": {
+          "asvspoof": {
+            "bona_n": 525,
+            "spoof_n": 124,
+            "bona_tail_n": 2,
+            "sample_eer_pct": 4.0000000000000036
+          },
+          "vcc2018": {
+            "bona_n": 246,
+            "spoof_n": 351,
+            "bona_tail_n": 44,
+            "sample_eer_pct": 4.273504273504273
+          },
+          "vcc2020": {
+            "bona_n": 229,
+            "spoof_n": 525,
+            "bona_tail_n": 6,
+            "sample_eer_pct": 5.2401746724890845
+          }
+        },
+        "native_scale_final_std": {
+          "asvspoof": {
+            "bona_n": 525,
+            "spoof_n": 124,
+            "bona_tail_n": 2,
+            "sample_eer_pct": 4.0000000000000036
+          },
+          "vcc2018": {
+            "bona_n": 246,
+            "spoof_n": 351,
+            "bona_tail_n": 44,
+            "sample_eer_pct": 4.273504273504273
+          },
+          "vcc2020": {
+            "bona_n": 229,
+            "spoof_n": 525,
+            "bona_tail_n": 6,
+            "sample_eer_pct": 5.2401746724890845
+          }
+        },
+        "native_scale_all_std": {
+          "asvspoof": {
+            "bona_n": 525,
+            "spoof_n": 124,
+            "bona_tail_n": 2,
+            "sample_eer_pct": 4.0000000000000036
+          },
+          "vcc2018": {
+            "bona_n": 246,
+            "spoof_n": 351,
+            "bona_tail_n": 44,
+            "sample_eer_pct": 4.273504273504273
+          },
+          "vcc2020": {
+            "bona_n": 229,
+            "spoof_n": 525,
+            "bona_tail_n": 6,
+            "sample_eer_pct": 5.2401746724890845
+          }
+        }
+      },
+      "std_ratio_mean": 0.4993761687576771,
+      "mean_branch_maxdiff": 1.7881393432617188e-07,
+      "duplication_vs_explicit_std_scaling_max_score_diff": 2.384185791015625e-07,
+      "baseline_reproduction_max_error": 7.078051567077637e-06,
+      "native_reproduction_max_error": 1.0281801223754883e-05,
+      "native_scale_change_short": {
+        "native_scale_final_std": {
+          "bona_mean_delta_vs_native": -8.548376172257122e-06,
+          "spoof_mean_delta_vs_native": -0.0005403259419836104
+        },
+        "native_scale_all_std": {
+          "bona_mean_delta_vs_native": 1.869592051662039e-05,
+          "spoof_mean_delta_vs_native": -8.503085700795054e-05
+        }
+      },
+      "limitations": [
+        "Frozen old epoch80 model, same 1000 bonafide and 1000 spoof evaluation sample.",
+        "Feature duplication bypasses waveform and SSL context changes; it isolates downstream pooling sensitivity.",
+        "Std length scaling preserves the original reference-length formula and is not canonical weighted standard deviation.",
+        "Pooling noise disabled to isolate the deterministic calculation; original outputs reproduced within reported error.",
+        "No retraining; scores after intervention do not establish performance of a newly trained architecture."
+      ]
+    },
+    "provenance.json": {
+      "per_class": 1000,
+      "batch_size": 4,
+      "seed": 1,
+      "cpu": false,
+      "out": "/results/analysis/EBM80_21DF_pooling_audit",
+      "workers": 2,
+      "plm_path": "/home/mentee/.cache/huggingface/hub/models--facebook--wav2vec2-xls-r-300m/snapshots/1a640f32ac3e39899438a2931f9924c02f080a54",
+      "checkpoint": "/home/mentee/results/CM/LA/EBM/model/BestCLS_80_21DF.pt",
+      "checkpoint_sha256": "30043199664bc84da780654e01fd430235f647b894e7832a52f777c7fee5939a",
+      "protocol_sha256": "70e0e7d5964562cb0166e79143f73beaeaf77ee18e799fa4156355a57006d800",
+      "population": {
+        "0": 519059,
+        "1": 14869
+      },
+      "torch_version": "2.6.0+cu124",
+      "sampling": "uniform random within label, without replacement",
+      "crop_samples": 64600,
+      "sample_rate": 16000,
+      "embedding": "after layer_norm, L2 normalized",
+      "source_sha256": {
+        "model/b_linear.py": "c2cbcf898f1905c9c6ee8b20ef4514c4af7cb343abbf35e2dbd1fd526ad3459f",
+        "model/loss.py": "164be4161b57a7899ef7b289e005ab80d12da373922d57e9e021844ea828b1ac",
+        "train.py": "b7b98a182a4946c479f477b7110e1c4a49be53ee6b6e89ef1b4bc4785374873f"
+      }
+    }
+  },
+  "method_documents": {}
+}

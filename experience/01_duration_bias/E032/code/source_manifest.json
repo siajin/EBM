@@ -1,0 +1,26 @@
+[
+  {
+    "path": "experience/01_duration_bias/E032/code/EBM/tools/bidirectional_audio_segments.py",
+    "sha256": "38be09d048000db04f7b7b2679c6f36529faa513db31eb1ab8e32fd8c66b216c",
+    "origin": "EBM/tools/bidirectional_audio_segments.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/01_duration_bias/E032/code/EBM/tools/analyze_segment_length_histograms.py",
+    "sha256": "fa7453c79b81f1e14417b291c0d7fbb3c7bed06627fb8eb2363f9a279539fc2e",
+    "origin": "EBM/tools/analyze_segment_length_histograms.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/01_duration_bias/E032/code/EBM/tools/analyze_original_first_length_sampling.py",
+    "sha256": "e0a8dcc3bcc0245e2e8d64bc9def287af20916d1e23237cc6a4049cbd72902f2",
+    "origin": "EBM/tools/analyze_original_first_length_sampling.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/01_duration_bias/E032/code/EBM/tools/analyze_segment_group_shifts.py",
+    "sha256": "dd6f3d84e4376c545c6f252a98bbcb19bb1eff1b4cce7e1c11118b4ef2c13cab",
+    "origin": "EBM/tools/analyze_segment_group_shifts.py",
+    "kind": "implementation / validation source"
+  }
+]

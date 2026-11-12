@@ -1,0 +1,14 @@
+{
+  "repository": "https://github.com/siajin/EBM",
+  "visibility": "private",
+  "commit": "0b860798c87daef8ea47cd24f15c8aaecb9a8c7e",
+  "local_checkout": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\EBM",
+  "server_checkout": "/home/mentee/code/EBM",
+  "branch": "main",
+  "upstream": "https://github.com/kimho1wq/EBM",
+  "deploy_key_id": 168993478,
+  "server_private_key_exported": false,
+  "both_worktrees_clean": true,
+  "training_started": false,
+  "original_license_and_history_retained": true
+}

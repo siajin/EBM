@@ -1,0 +1,7 @@
+bona_dataset,spoof_dataset,eer_percent
+19LA_eval,19LA_eval,0.43517735825428133
+19LA_eval,DF_asvspoof,0.3737001733102253
+DF_asvspoof,19LA_eval,0.47431201277355123
+DF_asvspoof,DF_asvspoof,0.3588063258232236
+19LA_eval,19LA_eval_19LA_attack_prior,0.43517735825473375
+19LA_eval,DF_asvspoof_19LA_attack_prior,0.3742305303767487

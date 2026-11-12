@@ -1,0 +1,26 @@
+{
+  "spec_version": "frozen-model-spec-v1.2-size-matched-21LA",
+  "script_sha256": "9964e7c794c6e61941c8d09f332a69eeda68b8fb31a463f2d1c3bacbdbcb4003",
+  "seeds": [
+    101,
+    102,
+    103
+  ],
+  "fit": "T",
+  "select": "V",
+  "evaluate": [
+    "DF_pilot",
+    "21LA_pilot"
+  ],
+  "all_original_EBM_parameters_frozen": true,
+  "centroid_frozen": true,
+  "epoch0_included": true,
+  "maximum_epochs": 80,
+  "patience": 10,
+  "learning_rate": 0.001,
+  "regularizer": 0.01,
+  "calibration": [
+    8.710543812499347,
+    -0.7151751091389169
+  ]
+}

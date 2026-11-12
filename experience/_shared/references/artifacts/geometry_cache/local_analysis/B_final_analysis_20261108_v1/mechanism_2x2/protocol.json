@@ -1,0 +1,44 @@
+{
+  "status": "locked_before_intervention",
+  "selection_seed": "EBM-B-mechanism-20261107-v1",
+  "selection_fields_only": [
+    "phase",
+    "uid",
+    "speaker",
+    "label",
+    "original_samples"
+  ],
+  "selection": "phase x class x prespecified original length bin, max32 each, UID SHA256 and speaker round-robin",
+  "N": 768,
+  "bins_samples": [
+    0,
+    32000,
+    48440,
+    64600
+  ],
+  "quota": 32,
+  "selected_sha256": "367e0d589ef4d442e22c10d5f30c679a70f0023987a7eca109dcfa7b4bf81dd4",
+  "source_parquet_hashes": {
+    "19LA": "45ca0bb7f845d8599c8437e5f54966cdc621e1c4a3dced2f03f1ba8a99b0bd92",
+    "21LA": "03c25f3764932664d3351cd3cf915b817a8d66aaddc879e61aadb75fa0af285e",
+    "21DF": "ac8705c3d9a4a9382fd1fac796e27e869f4d2324cdfffddbd13176c625c4cf51"
+  },
+  "noise_std": 0.0,
+  "noise_scope": "diagnostic only; full benchmark retained1e-5",
+  "models": [
+    "B",
+    "legacy240"
+  ],
+  "inputs": [
+    "native",
+    "wrap"
+  ],
+  "input_content": "same original first64600 samples; wrap only when shorter",
+  "no_op_control": "original_samples>=64600 gives identical input in both policies",
+  "limits": [
+    "balanced diagnostic subset, not target population proportions",
+    "input policy changes length and context too",
+    "learned latent axes differ across models",
+    "no new training"
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "version": "native_preserving_v1",
+  "profile_time_utc": "2026-11-04T22:52:16.155192+00:00",
+  "script_sha256": "08465dedf64a7738be34dccbc40f72b48548422ce868a9d60e84fa71497c09a3",
+  "DF_was_already_observed": true,
+  "independent_confirmatory_test": false,
+  "EBM_retraining": false,
+  "Q_opened": false,
+  "fit_split": "T",
+  "selection_and_threshold_split": "V",
+  "evaluation_split": "DF_pilot",
+  "native_control": "positive affine logistic calibration on T; use unsaturated logits for ranking metrics",
+  "metric_logloss_note": "Metrics share the native T-fitted calibration; E probability calibration was not separately fitted",
+  "direction_score": "s + epsilon*tanh(logistic_direction_decision(u)/2), native coefficient fixed to 1",
+  "C_grid": [
+    0.01,
+    0.1,
+    1,
+    10
+  ],
+  "epsilon_grid": [
+    0.0,
+    0.01,
+    0.03,
+    0.1
+  ],
+  "metric_gamma_grid": [
+    0.01,
+    0.1,
+    0.5,
+    1.0
+  ],
+  "residual_selection": "minimum V balanced logloss, 1e-12 ties prefer epsilon=0 then smaller C",
+  "metric_selection": "minimum V EER, ties prefer gamma=1",
+  "contrasts": [
+    [
+      "native_cosine",
+      "E_diagonal_0.01"
+    ],
+    [
+      "native_cosine",
+      "E_diagonal_0.1"
+    ],
+    [
+      "native_cosine",
+      "E_diagonal_0.5"
+    ],
+    [
+      "native_cosine",
+      "E_full_0.01"
+    ],
+    [
+      "native_cosine",
+      "E_full_0.1"
+    ],
+    [
+      "native_cosine",
+      "E_full_0.5"
+    ],
+    [
+      "native_cosine",
+      "native_plus_direction"
+    ],
+    [
+      "native_cosine",
+      "native_plus_noise"
+    ],
+    [
+      "native_plus_noise",
+      "native_plus_direction"
+    ]
+  ],
+  "family_comparisons": 9,
+  "bootstrap_draws": 10000,
+  "random_seed": 7301,
+  "bootstrap_scope": "paired source-speaker clusters; source-family dependence unresolved",
+  "multiplicity_scope": "current 9 comparisons only; prior DF-driven research choices not controlled"
+}

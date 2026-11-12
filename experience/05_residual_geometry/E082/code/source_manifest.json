@@ -1,0 +1,14 @@
+[
+  {
+    "path": "experience/05_residual_geometry/E082/code/artifacts/geometry_experiments/xlsr_last_layer_extract.py",
+    "sha256": "264ef9acfea7b2d6a74c1fb2e088106c3b2b3c1a280db2ff54fb30706477e205",
+    "origin": "artifacts/geometry_experiments/xlsr_last_layer_extract.py",
+    "kind": "explicit method source"
+  },
+  {
+    "path": "experience/05_residual_geometry/E082/code/artifacts/geometry_experiments/receive_xlsr_last_layer.py",
+    "sha256": "65b848289d3fc581a65b4952873bba5b7894bff2fdb543f74fcfaca9a02782d9",
+    "origin": "artifacts/geometry_experiments/receive_xlsr_last_layer.py",
+    "kind": "explicit method source"
+  }
+]

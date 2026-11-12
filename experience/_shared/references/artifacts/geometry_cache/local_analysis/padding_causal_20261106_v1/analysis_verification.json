@@ -1,0 +1,31 @@
+{
+  "status": "pass",
+  "N_utterances": 471,
+  "N_forward_outputs": 3141,
+  "input_SHA256_checked": true,
+  "native_cache_max_errors": {
+    "h": 0.0,
+    "z": 0.0,
+    "score": 2.220446049250313e-16
+  },
+  "native_score_max_error": 3.3306690738754696e-16,
+  "long_noop_max_delta_score": 0.0,
+  "primary_contrasts": 12,
+  "same_utterance_head_tail_not_counted_independently": true,
+  "silence_distribution_excluded": true,
+  "no_classifier_training": true,
+  "bootstrap_groups": "speaker within each source; original-family dependence unresolved",
+  "figure_review": {
+    "status": "pass",
+    "images": [
+      "01_same_waveform_padding.png",
+      "02_primary_contrasts.png",
+      "03_identical_feature_duplication.png",
+      "04_frontend_context_localization.png"
+    ],
+    "repairs": [
+      "missing minus glyph replaced with ASCII minus",
+      "duplication figure explicitly states negative mechanistic result"
+    ]
+  }
+}

@@ -1,0 +1,760 @@
+{
+  "status": "passed",
+  "checked_at": "2026-11-11T16:43:21.202199+09:00",
+  "report_sha256": "71728c7e698892022d068c78bf769de4ebf246cc27d89f4038904c9f2102d8a8",
+  "source_count": 13,
+  "checks": [
+    {
+      "name": "completed_original_analysis",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_validation_passes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "fixed_model_identity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "DF_union_validated",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "point_matrix_19LA_eval_19LA_eval_19LA_eval",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "point_matrix_19LA_eval_DF_full_19LA_eval",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "point_matrix_19LA_eval_19LA_eval_DF_full",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "point_matrix_19LA_eval_DF_full_DF_full",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "point_matrix_21LA_eval_21LA_eval_21LA_eval",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "point_matrix_21LA_eval_DF_full_21LA_eval",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "point_matrix_21LA_eval_21LA_eval_DF_full",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "point_matrix_21LA_eval_DF_full_DF_full",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "delta_arithmetic_19LA_eval_normal_swap_with_baseline_spoof",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "saved_draws_19LA_eval_normal_swap_with_baseline_spoof",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "interval_19LA_eval_normal_swap_with_baseline_spoof_ci95_lower",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "interval_19LA_eval_normal_swap_with_baseline_spoof_ci95_upper",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "interval_19LA_eval_normal_swap_with_baseline_spoof_ci98_75_lower",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "interval_19LA_eval_normal_swap_with_baseline_spoof_ci98_75_upper",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "delta_arithmetic_19LA_eval_normal_swap_with_DF_spoof",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "saved_draws_19LA_eval_normal_swap_with_DF_spoof",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "interval_19LA_eval_normal_swap_with_DF_spoof_ci95_lower",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "interval_19LA_eval_normal_swap_with_DF_spoof_ci95_upper",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "interval_19LA_eval_normal_swap_with_DF_spoof_ci98_75_lower",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "interval_19LA_eval_normal_swap_with_DF_spoof_ci98_75_upper",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "delta_arithmetic_19LA_eval_spoof_swap_with_baseline_normal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "saved_draws_19LA_eval_spoof_swap_with_baseline_normal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "interval_19LA_eval_spoof_swap_with_baseline_normal_ci95_lower",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "interval_19LA_eval_spoof_swap_with_baseline_normal_ci95_upper",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "interval_19LA_eval_spoof_swap_with_baseline_normal_ci98_75_lower",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "interval_19LA_eval_spoof_swap_with_baseline_normal_ci98_75_upper",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "delta_arithmetic_19LA_eval_spoof_swap_with_DF_normal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "saved_draws_19LA_eval_spoof_swap_with_DF_normal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "interval_19LA_eval_spoof_swap_with_DF_normal_ci95_lower",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "interval_19LA_eval_spoof_swap_with_DF_normal_ci95_upper",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "interval_19LA_eval_spoof_swap_with_DF_normal_ci98_75_lower",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "interval_19LA_eval_spoof_swap_with_DF_normal_ci98_75_upper",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "normal_swaps_worsen_19LA_eval",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "spoof_swaps_improve_19LA_eval",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "delta_arithmetic_21LA_eval_normal_swap_with_baseline_spoof",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "saved_draws_21LA_eval_normal_swap_with_baseline_spoof",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "interval_21LA_eval_normal_swap_with_baseline_spoof_ci95_lower",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "interval_21LA_eval_normal_swap_with_baseline_spoof_ci95_upper",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "interval_21LA_eval_normal_swap_with_baseline_spoof_ci98_75_lower",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "interval_21LA_eval_normal_swap_with_baseline_spoof_ci98_75_upper",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "delta_arithmetic_21LA_eval_normal_swap_with_DF_spoof",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "saved_draws_21LA_eval_normal_swap_with_DF_spoof",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "interval_21LA_eval_normal_swap_with_DF_spoof_ci95_lower",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "interval_21LA_eval_normal_swap_with_DF_spoof_ci95_upper",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "interval_21LA_eval_normal_swap_with_DF_spoof_ci98_75_lower",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "interval_21LA_eval_normal_swap_with_DF_spoof_ci98_75_upper",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "delta_arithmetic_21LA_eval_spoof_swap_with_baseline_normal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "saved_draws_21LA_eval_spoof_swap_with_baseline_normal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "interval_21LA_eval_spoof_swap_with_baseline_normal_ci95_lower",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "interval_21LA_eval_spoof_swap_with_baseline_normal_ci95_upper",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "interval_21LA_eval_spoof_swap_with_baseline_normal_ci98_75_lower",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "interval_21LA_eval_spoof_swap_with_baseline_normal_ci98_75_upper",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "delta_arithmetic_21LA_eval_spoof_swap_with_DF_normal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "saved_draws_21LA_eval_spoof_swap_with_DF_normal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "interval_21LA_eval_spoof_swap_with_DF_normal_ci95_lower",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "interval_21LA_eval_spoof_swap_with_DF_normal_ci95_upper",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "interval_21LA_eval_spoof_swap_with_DF_normal_ci98_75_lower",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "interval_21LA_eval_spoof_swap_with_DF_normal_ci98_75_upper",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "normal_swaps_worsen_21LA_eval",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "spoof_swaps_improve_21LA_eval",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sensitivity_preserves_normal_direction_전체 원래 구성",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sensitivity_preserves_spoof_direction_전체 원래 구성",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sensitivity_preserves_normal_direction_DF의 추가 코덱 없는 부분만 사용",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sensitivity_preserves_spoof_direction_DF의 추가 코덱 없는 부분만 사용",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sensitivity_preserves_normal_direction_클래스별 원음 길이 비중을 19LA에 맞춤",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sensitivity_preserves_spoof_direction_클래스별 원음 길이 비중을 19LA에 맞춤",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "duration_support_not_dropped",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_normal_counts_sum",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "individual_attack_counterexample_preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "fixed_operating_point_counterexample",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "existing_document_preserved_ebm_five_research_themes_20261111.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "existing_document_preserved_ebm_completed_evidence_interpretation_20261111.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "existing_document_preserved_ebm_duration_bias_research_20261111.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_unchanged_protocol.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_unchanged_verification.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_unchanged_independent_verification.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_unchanged_recheck_summary.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_unchanged_complete",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_unchanged_class_replacement_eer.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_unchanged_paired_contrasts.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_unchanged_codec_sensitivity.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_unchanged_duration_sensitivity.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_unchanged_source_cross_matrix.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_unchanged_same_source_attack_control.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_unchanged_V_spoof_FAR1_operating.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_unchanged_cluster_bootstrap_draws.npz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_90",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_91",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_92",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_93",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_94",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_95",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_96",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_97",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_98",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_99",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_100",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_101",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_102",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_103",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link_104",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_105",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_106",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_107",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_108",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_109",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_110",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_111",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_112",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_113",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_114",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_115",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_116",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_117",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_118",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_119",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_120",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_121",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_122",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_123",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_124",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_125",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_126",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_127",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_128",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_129",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_130",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_131",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_132",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_133",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_134",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_135",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_136",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_137",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_138",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "table_columns_139",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_unexplained_internal_experiment_ids",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "training_causality_not_claimed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "counterevidence_and_interaction_explicit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "readable_utf8",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "check_count": 144,
+  "table_count": 7,
+  "current_verification_scope": "Archived metric/cell reconciliation, contrast arithmetic and percentile recomputation from stored2000 bootstrap draws. Original waveforms/ROC fitting/bootstrap sampling were not rerun.",
+  "archived_original_validation": {
+    "status": "pass",
+    "independent_random_weighted_ROC_checks": 320,
+    "tied_scores_included": true,
+    "all_bootstrap_intervals_recomputed": true,
+    "source_counts_reconciled_at_all_thresholds": true,
+    "normal_errors_at_DF_nearest_EER": {
+      "total": 482,
+      "by_corpus": {
+        "vcc2018": 451,
+        "vcc2020": 31
+      }
+    },
+    "shared_attack_EER_worsened": 4,
+    "shared_attacks_total": 13,
+    "caveat": "Aggregate spoof shift is favorable; this does not imply every individual attack improves."
+  },
+  "new_training": false,
+  "new_audio_inference": false,
+  "remote_queries": false,
+  "spending_ceiling_usd": 0,
+  "resources_left_running": 0,
+  "excluded_from_proof": [
+    "batch-size/BPL changes",
+    "positive-only pilot training",
+    "nearest-neighbor geometry",
+    "centroid replacement",
+    "failed/ongoing training"
+  ]
+}

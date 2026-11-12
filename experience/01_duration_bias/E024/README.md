@@ -1,0 +1,63 @@
+# E024. 최대 20% 절단·0.8~1.2배 속도 변형의 학습 자료 정책과 실제 변형 캐시
+
+**실행 상태:** 정책·캐시생성 검증 완료
+
+이 문서의 상태는 2026-11-12 출판 검토 기준이다. 기존 문서·state의 시점별 상태와 충돌하면 실제 완료표식과 본문 최신 보완을 우선한다.
+
+## 가설
+
+원음80% 이상을 남기고0.8~1.2배만 바꿔도 클래스 길이 분포를 거의 맞출 수 있다.
+
+## 그렇게 설계한 이유
+
+강한 짧은 조각 대신 원음 대부분을 남기는 완만한 변형으로 클래스 길이를 맞출 수 있는지 확인한다.
+
+대조와 통제의 근거: 원음의 최소 80% 구간 보존은 이 변형 생성 단계의 조건이다. 뒤의 원래 240 고정 길이 입력 절단·반복 후에도 80%가 신경망에 들어간다는 보장이 아니다.
+
+## 모델·데이터·표본
+
+학습 자료 25,380개만 정책 추정·캐시 생성에 사용한다. 정상 21,499 변형 +위조 25,081 변형 =46,580개, 약 10.2GB. 개발·평가를 정책 선택에 사용하지 않는다.
+
+## 실험 내용과 상세 절차
+
+1. 각 원음의 가능한 출력 길이 [2D/3,1.25D]와 원음별 선택 확률을 보존하는 최적 매칭 정책을 사용한다.
+2. 목표 N_out에 대해 rate =clip(D/N_out,0.8,1.2), 남길 길이 =min(D,max(ceil(0.8D),round(N_out×rate)))로 정한다. 다시 남길 길이/N_out를 허용 범위에 제한하고 정수 반올림 출력 길이를 계산한다.
+3. 잘라 낼 필요가 있으면 원음의 연속 구간을 유지하고, SoX tempo -s(음성용 WSOLA)로 음높이를 유지한 속도 변형을 한다. 변형 단계에서 명시적 반복·0 채움·무음 제거를 하지 않는다.
+4. 모든 변형의 실제 길이·유한 값·원음 header·SHA를 검사한다. 원음 선택과 변형 선택의 확률을 분리하고 기대 길이 분포를 계산한다.
+
+## 측정과 검증
+
+클래스별 출력 길이·변형율·절단율·내용 시간 사용률·길이 분포 겹침·KS·Wasserstein 거리. 캐시전수 46,580개 검증과 합성 음 길이·음높이 점검.
+
+## 결과
+
+기대 0.05초 bin 겹침 99.973684%. 원래 ≤2초 비율 정상 4.2248%/위조 14.0658%가 기대 8.9079%/8.9342%로 가까워졌다. 실제 캐시 검증 완료이며 성능 EER은 아니다.
+
+## 해석·실패한 부분·한계
+
+초기 분석의 ‘캐시대기’는 분석 당시 기록이고 이후 캐시는 생성됐다. 표본별 속도 변형 흔적·음소보존·위조 단서 보존의 완전 동일성은 입증하지 않았다.
+
+## 배운 점
+
+캐시와 분포는 검증됐지만 이후 고정crop·반복 후 입력의80% 보존까지 보장한 것은 아니다. 데이터 검증과 성능 검증을 구분한다.
+
+## 실험 코드
+
+- [EBM/mild_duration.py](code/EBM/mild_duration.py)
+- [EBM/tools/build_mild_duration_policy.py](code/EBM/tools/build_mild_duration_policy.py)
+- [EBM/tools/prepare_mild_audio.py](code/EBM/tools/prepare_mild_audio.py)
+
+코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+
+## 설정·결과·검산 근거
+
+- [EBM/mild_duration.py](../../../mild_duration.py)
+- [artifacts/mild_duration_data_analysis_20261111/summary.json](../../_shared/references/artifacts/mild_duration_data_analysis_20261111/summary.json)
+- [artifacts/mild_duration_data_analysis_20261111/validation.json](../../_shared/references/artifacts/mild_duration_data_analysis_20261111/validation.json)
+- [artifacts/mild_duration_baseline240_20261111_v2/cache_complete.json](../../_shared/references/artifacts/mild_duration_baseline240_20261111_v2/cache_complete.json)
+
+## 연결
+
+다른 관련 가설: [반복 입력과 학습·추론의 상호작용](../../02_repetition/README.md)
+
+[가설 목록으로](../README.md) · [전체 실험 목록](../../README.md)

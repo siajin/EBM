@@ -1,0 +1,69 @@
+{
+  "scope": "retrospective dataset-specific minima among recorded checkpoints; different datasets may choose different epochs; historical legacy uses repeated input, B/C use common nonrepeating input",
+  "paper_2025_EER_percent": {
+    "19LA": 0.26,
+    "21LA": 1.21,
+    "21DF": 1.89
+  },
+  "legacy240": {
+    "19LA": {
+      "epoch": 25,
+      "EER_percent": 0.217539089065842
+    },
+    "21LA": {
+      "epoch": 50,
+      "EER_percent": 1.0527894420393238
+    },
+    "21DF": {
+      "epoch": 15,
+      "EER_percent": 2.396259384895441
+    }
+  },
+  "B": {
+    "19LA": {
+      "epoch": 45,
+      "EER_percent": 0.46227056424201773
+    },
+    "21LA": {
+      "epoch": 45,
+      "EER_percent": 3.7594492440604754
+    },
+    "21DF": null
+  },
+  "C": {
+    "19LA": {
+      "epoch": 40,
+      "EER_percent": 0.4884004884004884
+    },
+    "21LA": {
+      "epoch": 30,
+      "EER_percent": 4.622075584883023
+    },
+    "21DF": null
+  },
+  "coverage": {
+    "legacy_epochs": [
+      15,
+      20,
+      25,
+      30,
+      35,
+      40,
+      45,
+      50
+    ],
+    "B_C_epochs": [
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40,
+      45,
+      50
+    ]
+  },
+  "DF_status": "B/C all-checkpoint evaluation still running; previous B50 DF score is not an all-checkpoint minimum"
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "path": "experience/03_bonafide_diversity/E020/code/snapshots/ebm_positive_bpl_20261110_v1/positive_bpl_pilot.py",
+    "sha256": "a81902126fe17f9a78b02db7d8092dbe31d74c8bedf8345d0abf91d4ba133ba3",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_positive_bpl_20261110_v1/positive_bpl_pilot.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/03_bonafide_diversity/E020/code/EBM/tools/positive_bpl_pilot.py",
+    "sha256": "a81902126fe17f9a78b02db7d8092dbe31d74c8bedf8345d0abf91d4ba133ba3",
+    "origin": "EBM/tools/positive_bpl_pilot.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/03_bonafide_diversity/E020/code/EBM/tools/analyze_positive_bpl_pilot.py",
+    "sha256": "ed12837a19e1c7a29fb3ed1c194174b1a3fb4d54384f6189f8a8ddbc6c627922",
+    "origin": "EBM/tools/analyze_positive_bpl_pilot.py",
+    "kind": "implementation / validation source"
+  }
+]

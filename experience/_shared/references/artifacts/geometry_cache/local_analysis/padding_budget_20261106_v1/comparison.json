@@ -1,0 +1,269 @@
+{
+  "status": "pass",
+  "source_fingerprint": "686e593443178bb89241e48ab9a148e1f248f2025140f379d564c19a75198b4b",
+  "unique_utterances": 25380,
+  "scheduled_occurrences": 25920,
+  "sampling_duplicates": {
+    "bonafide": 12,
+    "spoof": 528
+  },
+  "seed": 20261106,
+  "global_batch": 160,
+  "local_batch": 80,
+  "world_size": 2,
+  "schedule": "random pools32 steps, class-wise length sort, match class length ranks, shuffle step order",
+  "comparison": "Exactly the same utterance occurrences and batches for old and new conditions",
+  "unit": "16kHz waveform samples, before augmentation; long full original, short min(original,48440)",
+  "denominator": "Sum of allocated waveform samples for each method; combined is sum of both views, not mean of percentages",
+  "primary": {
+    "long": {
+      "old_wrap": {
+        "total_samples": 1674432000,
+        "real_samples": 1285517053,
+        "extension_samples": 388914947,
+        "extension_occurrences": 19011
+      },
+      "new_zero": {
+        "total_samples": 1535786880,
+        "real_samples": 1421112150,
+        "extension_samples": 114674730,
+        "extension_occurrences": 25583
+      },
+      "old_extension_percent": 23.226679076845162,
+      "new_extension_percent": 7.466838758252708,
+      "extension_fraction_drop_pp": 15.759840318592456,
+      "added_samples_reduction_percent": 70.51418802888026,
+      "total_input_samples_reduction_percent": 8.280128425639266,
+      "old_added_seconds_per_utterance": 0.9377771677276234,
+      "new_added_seconds_per_utterance": 0.27651121238425924,
+      "old_added_hours": 6.7519956076388885,
+      "new_added_hours": 1.9908807291666666,
+      "restored_original_hours": 2.354081545138889
+    },
+    "short": {
+      "old_wrap": {
+        "total_samples": 1255564800,
+        "real_samples": 1117032554,
+        "extension_samples": 138532246,
+        "extension_occurrences": 11567
+      },
+      "new_zero": {
+        "total_samples": 1177009440,
+        "real_samples": 1117032554,
+        "extension_samples": 59976886,
+        "extension_occurrences": 11437
+      },
+      "old_extension_percent": 11.033460479299833,
+      "new_extension_percent": 5.095701356481899,
+      "extension_fraction_drop_pp": 5.937759122817935,
+      "added_samples_reduction_percent": 56.70546913676691,
+      "total_input_samples_reduction_percent": 6.25657552680674,
+      "old_added_seconds_per_utterance": 0.3340380160108025,
+      "new_added_seconds_per_utterance": 0.1446201919367284,
+      "old_added_hours": 2.405073715277778,
+      "new_added_hours": 1.0412653819444444,
+      "restored_original_hours": 0.0
+    },
+    "combined": {
+      "old_wrap": {
+        "total_samples": 2929996800,
+        "real_samples": 2402549607,
+        "extension_samples": 527447193,
+        "extension_occurrences": 30578
+      },
+      "new_zero": {
+        "total_samples": 2712796320,
+        "real_samples": 2538144704,
+        "extension_samples": 174651616,
+        "extension_occurrences": 37020
+      },
+      "old_extension_percent": 18.001630343077508,
+      "new_extension_percent": 6.438065943704907,
+      "extension_fraction_drop_pp": 11.5635643993726,
+      "added_samples_reduction_percent": 66.88737406931276,
+      "total_input_samples_reduction_percent": 7.412993761631414,
+      "old_added_seconds_per_utterance": 1.271815183738426,
+      "new_added_seconds_per_utterance": 0.42113140432098767,
+      "old_added_hours": 9.157069322916666,
+      "new_added_hours": 3.0321461111111114,
+      "restored_original_hours": 2.354081545138889
+    }
+  },
+  "unique_each_once_old_reference": {
+    "long": {
+      "N": 25380,
+      "wrap_samples": 380925002,
+      "total_samples": 1639548000,
+      "wrap_percent": 23.23353765793987
+    },
+    "short": {
+      "N": 25380,
+      "wrap_samples": 135699976,
+      "total_samples": 1229407200,
+      "wrap_percent": 11.037838073504043
+    }
+  },
+  "batching_controls": {
+    "random": {
+      "long": {
+        "old_wrap": {
+          "total_samples": 1674432000,
+          "real_samples": 1285517053,
+          "extension_samples": 388914947,
+          "extension_occurrences": 19011
+        },
+        "new_zero": {
+          "total_samples": 3510565120,
+          "real_samples": 1421112150,
+          "extension_samples": 2089452970,
+          "extension_occurrences": 25596
+        },
+        "old_extension_percent": 23.226679076845162,
+        "new_extension_percent": 59.51899191660629,
+        "extension_fraction_drop_pp": -36.292312839761124,
+        "added_samples_reduction_percent": -437.2519071631361,
+        "total_input_samples_reduction_percent": -109.65707296563849,
+        "old_added_seconds_per_utterance": 0.9377771677276234,
+        "new_added_seconds_per_utterance": 5.038225718557099,
+        "old_added_hours": 6.7519956076388885,
+        "new_added_hours": 36.27522517361111,
+        "restored_original_hours": 2.354081545138889
+      },
+      "short": {
+        "old_wrap": {
+          "total_samples": 1255564800,
+          "real_samples": 1117032554,
+          "extension_samples": 138532246,
+          "extension_occurrences": 11567
+        },
+        "new_zero": {
+          "total_samples": 1255564800,
+          "real_samples": 1117032554,
+          "extension_samples": 138532246,
+          "extension_occurrences": 11567
+        },
+        "old_extension_percent": 11.033460479299833,
+        "new_extension_percent": 11.033460479299833,
+        "extension_fraction_drop_pp": 0.0,
+        "added_samples_reduction_percent": 0.0,
+        "total_input_samples_reduction_percent": 0.0,
+        "old_added_seconds_per_utterance": 0.3340380160108025,
+        "new_added_seconds_per_utterance": 0.3340380160108025,
+        "old_added_hours": 2.405073715277778,
+        "new_added_hours": 2.405073715277778,
+        "restored_original_hours": 0.0
+      },
+      "combined": {
+        "old_wrap": {
+          "total_samples": 2929996800,
+          "real_samples": 2402549607,
+          "extension_samples": 527447193,
+          "extension_occurrences": 30578
+        },
+        "new_zero": {
+          "total_samples": 4766129920,
+          "real_samples": 2538144704,
+          "extension_samples": 2227985216,
+          "extension_occurrences": 37163
+        },
+        "old_extension_percent": 18.001630343077508,
+        "new_extension_percent": 46.746212407067574,
+        "extension_fraction_drop_pp": -28.74458206399007,
+        "added_samples_reduction_percent": -322.40915215184395,
+        "total_input_samples_reduction_percent": -62.66672782714302,
+        "old_added_seconds_per_utterance": 1.271815183738426,
+        "new_added_seconds_per_utterance": 5.372263734567901,
+        "old_added_hours": 9.157069322916666,
+        "new_added_hours": 38.68029888888889,
+        "restored_original_hours": 2.354081545138889
+      }
+    },
+    "sorted": {
+      "long": {
+        "old_wrap": {
+          "total_samples": 1674432000,
+          "real_samples": 1285517053,
+          "extension_samples": 388914947,
+          "extension_occurrences": 19011
+        },
+        "new_zero": {
+          "total_samples": 1496424560,
+          "real_samples": 1421112150,
+          "extension_samples": 75312410,
+          "extension_occurrences": 25558
+        },
+        "old_extension_percent": 23.226679076845162,
+        "new_extension_percent": 5.032823706127892,
+        "extension_fraction_drop_pp": 18.193855370717273,
+        "added_samples_reduction_percent": 80.63524927983804,
+        "total_input_samples_reduction_percent": 10.63091484157016,
+        "old_added_seconds_per_utterance": 0.9377771677276234,
+        "new_added_seconds_per_utterance": 0.18159821084104938,
+        "old_added_hours": 6.7519956076388885,
+        "new_added_hours": 1.3075071180555555,
+        "restored_original_hours": 2.354081545138889
+      },
+      "short": {
+        "old_wrap": {
+          "total_samples": 1255564800,
+          "real_samples": 1117032554,
+          "extension_samples": 138532246,
+          "extension_occurrences": 11567
+        },
+        "new_zero": {
+          "total_samples": 1173168400,
+          "real_samples": 1117032554,
+          "extension_samples": 56135846,
+          "extension_occurrences": 11427
+        },
+        "old_extension_percent": 11.033460479299833,
+        "new_extension_percent": 4.784977672429636,
+        "extension_fraction_drop_pp": 6.248482806870198,
+        "added_samples_reduction_percent": 59.478137674891954,
+        "total_input_samples_reduction_percent": 6.56249681418275,
+        "old_added_seconds_per_utterance": 0.3340380160108025,
+        "new_added_seconds_per_utterance": 0.13535842496141975,
+        "old_added_hours": 2.405073715277778,
+        "new_added_hours": 0.9745806597222222,
+        "restored_original_hours": 0.0
+      },
+      "combined": {
+        "old_wrap": {
+          "total_samples": 2929996800,
+          "real_samples": 2402549607,
+          "extension_samples": 527447193,
+          "extension_occurrences": 30578
+        },
+        "new_zero": {
+          "total_samples": 2669592960,
+          "real_samples": 2538144704,
+          "extension_samples": 131448256,
+          "extension_occurrences": 36985
+        },
+        "old_extension_percent": 18.001630343077508,
+        "new_extension_percent": 4.92390630218024,
+        "extension_fraction_drop_pp": 13.077724040897268,
+        "added_samples_reduction_percent": 75.07840448399163,
+        "total_input_samples_reduction_percent": 8.887512778170947,
+        "old_added_seconds_per_utterance": 1.271815183738426,
+        "new_added_seconds_per_utterance": 0.31695663580246913,
+        "old_added_hours": 9.157069322916666,
+        "new_added_hours": 2.2820877777777775,
+        "restored_original_hours": 2.354081545138889
+      }
+    }
+  },
+  "verification": {
+    "status": "pass",
+    "scalar_vs_vector_exact": true,
+    "per_rank_class_ratio": true,
+    "total_sample_accounting_exact": true
+  },
+  "qualifications": [
+    "Packing simulation, not measured runtime or completed retraining",
+    "Codec augmentation may change actual lengths",
+    "Old long clips to64600; new long restores the entire original",
+    "Same25920occurrences as previous audit; additional sampling is not waveform wrap"
+  ],
+  "script_sha256": "9572f3844410f57a760f90909d170dc85e376ac997cfe90052f120a84b234948"
+}

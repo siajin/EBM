@@ -1,0 +1,27 @@
+{
+  "loss1": {
+    "first_steps_compared": 5,
+    "exactly_equal": true,
+    "max_abs_error": 0.0
+  },
+  "loss2": {
+    "first_steps_compared": 5,
+    "exactly_equal": true,
+    "max_abs_error": 0.0
+  },
+  "oc_long": {
+    "first_steps_compared": 5,
+    "exactly_equal": true,
+    "max_abs_error": 0.0
+  },
+  "oc_short": {
+    "first_steps_compared": 5,
+    "exactly_equal": true,
+    "max_abs_error": 0.0
+  },
+  "bpl": {
+    "first_steps_compared": 5,
+    "exactly_equal": true,
+    "max_abs_error": 0.0
+  }
+}

@@ -1,0 +1,186 @@
+[
+  {
+    "baseline": "scalar",
+    "candidate": "direction_linear",
+    "mean_delta_EER_pp": 1.0407407407407392,
+    "EER_CI95": [
+      0.5076693666769079,
+      1.7057679425241785
+    ],
+    "mean_balanced_LL_reduction": 0.09010441469670527,
+    "LL_CI95": [
+      0.06757880658926241,
+      0.11323576376394073
+    ],
+    "draws": 10000,
+    "groups": 93,
+    "class_groups": [
+      62,
+      92
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "baseline": "noise_linear",
+    "candidate": "direction_linear",
+    "mean_delta_EER_pp": 1.3759259259259256,
+    "EER_CI95": [
+      0.721601275955811,
+      2.1980064898253593
+    ],
+    "mean_balanced_LL_reduction": 0.09384071750774549,
+    "LL_CI95": [
+      0.0677778067024249,
+      0.11958282749884847
+    ],
+    "draws": 10000,
+    "groups": 93,
+    "class_groups": [
+      62,
+      92
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "baseline": "scalar",
+    "candidate": "direction_mlp",
+    "mean_delta_EER_pp": 1.6814814814814805,
+    "EER_CI95": [
+      1.1424201804988472,
+      2.247008517498083
+    ],
+    "mean_balanced_LL_reduction": 0.12343951651524748,
+    "LL_CI95": [
+      0.09448587653321121,
+      0.15279430690312765
+    ],
+    "draws": 10000,
+    "groups": 93,
+    "class_groups": [
+      62,
+      92
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "baseline": "noise_mlp",
+    "candidate": "direction_mlp",
+    "mean_delta_EER_pp": 1.653703703703705,
+    "EER_CI95": [
+      1.1457760546396942,
+      2.216469570884138
+    ],
+    "mean_balanced_LL_reduction": 0.12561945630592447,
+    "LL_CI95": [
+      0.09423597719912229,
+      0.15735771818667704
+    ],
+    "draws": 10000,
+    "groups": 93,
+    "class_groups": [
+      62,
+      92
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "baseline": "direction_linear",
+    "candidate": "direction_hstat",
+    "mean_delta_EER_pp": 0.06296296296296407,
+    "EER_CI95": [
+      -0.40601181420502164,
+      0.3143868723438322
+    ],
+    "mean_balanced_LL_reduction": 0.003192148014076019,
+    "LL_CI95": [
+      -0.003080748480072544,
+      0.010394060188512659
+    ],
+    "draws": 10000,
+    "groups": 93,
+    "class_groups": [
+      62,
+      92
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "baseline": "direction_noise2",
+    "candidate": "direction_hstat",
+    "mean_delta_EER_pp": 0.05370370370370411,
+    "EER_CI95": [
+      -0.3813147801917894,
+      0.3116857255801691
+    ],
+    "mean_balanced_LL_reduction": 0.0032725936566076566,
+    "LL_CI95": [
+      -0.003046463755789354,
+      0.010499766407116012
+    ],
+    "draws": 10000,
+    "groups": 93,
+    "class_groups": [
+      62,
+      92
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "baseline": "direction_linear",
+    "candidate": "direction_h",
+    "mean_delta_EER_pp": 0.3592592592592605,
+    "EER_CI95": [
+      -0.07738908512904655,
+      0.6400887029129511
+    ],
+    "mean_balanced_LL_reduction": 0.02867365808318813,
+    "LL_CI95": [
+      0.018993504698261044,
+      0.03891495615554644
+    ],
+    "draws": 10000,
+    "groups": 93,
+    "class_groups": [
+      62,
+      92
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "baseline": "direction_noise160",
+    "candidate": "direction_h",
+    "mean_delta_EER_pp": 1.6055555555555536,
+    "EER_CI95": [
+      0.817035071767534,
+      2.0940278601401188
+    ],
+    "mean_balanced_LL_reduction": 0.04674149125518603,
+    "LL_CI95": [
+      0.029276129694415797,
+      0.06697429635458593
+    ],
+    "draws": 10000,
+    "groups": 93,
+    "class_groups": [
+      62,
+      92
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  }
+]

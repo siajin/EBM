@@ -1,0 +1,87 @@
+{
+  "status": "training_complete_evaluation_preparing",
+  "training_run_exit": 0,
+  "epochs": 50,
+  "logical_batches": 5400,
+  "start": "2026-11-06T12:36:29+00:00",
+  "finish": "2026-11-07T07:22:40+00:00",
+  "training_elapsed_seconds": 67571.0,
+  "checkpoints": {
+    "B_CLS50": {
+      "path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_B_zeropad_short303/model/CLS_50.pt",
+      "bytes": 15045708,
+      "sha256": "63ed02a1baef97efa9c8b701814dcccebf3360d441782abe9688d8edb3cdf457"
+    },
+    "B_TrainState50": {
+      "path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_B_zeropad_short303/model/TrainState_50.pt",
+      "bytes": 45167594,
+      "sha256": "3b1fe8ac2ec67e680ac582365e40cd6f34451a42484858f847f55e41a1b1cba0"
+    },
+    "legacy240_CLS50": {
+      "path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5/model/BestCLS_50_21DF.pt",
+      "bytes": 15053782,
+      "sha256": "84a828eeda71d74212178dc2c2f02e72f8bb79b3573354f6cd9ca181a376d19e"
+    }
+  },
+  "metric_line_counts": {
+    "padding.txt": 5400,
+    "bpl.txt": 5400,
+    "oc_long.txt": 5400,
+    "active_pairs.txt": 5400,
+    "loss1.txt": 5400,
+    "loss2.txt": 5400,
+    "oc_short.txt": 5400,
+    "V/EER.txt": 9
+  },
+  "dev_EER_logged": [
+    "[5] V/EER: 0.10315751704341586",
+    "[10] V/EER: 0.03924646781789942",
+    "[15] V/EER: 0.03924646781789942",
+    "[20] V/EER: 0.03924646781789942",
+    "[25] V/EER: 0.03924646781789942",
+    "[30] V/EER: 0.03924646781789942",
+    "[35] V/EER: 0.03924646781789942",
+    "[40] V/EER: 0.03924646781789942",
+    "[45] V/EER: 0.03924646781789942"
+  ],
+  "missing_final_dev_log_recovered_by_independent_eval": true,
+  "historical_legacy_EER": {
+    "19LA": [
+      "[15] 19LA/EER: 0.299116247447392",
+      "[20] 19LA/EER: 0.2974187184256473",
+      "[25] 19LA/EER: 0.217539089065842",
+      "[30] 19LA/EER: 0.2911572719119949",
+      "[35] 19LA/EER: 0.3263086335826009",
+      "[40] 19LA/EER: 0.39428959894010074",
+      "[45] 19LA/EER: 0.6809323294329493",
+      "[50] 19LA/EER: 0.5710401087693906"
+    ],
+    "21LA": [
+      "[15] 21LA/EER: 1.3971382289379453",
+      "[20] 21LA/EER: 1.1300239952516618",
+      "[25] 21LA/EER: 1.3564787041553947",
+      "[30] 21LA/EER: 1.140658747300567",
+      "[35] 21LA/EER: 1.31673665270228",
+      "[40] 21LA/EER: 1.191511697582229",
+      "[45] 21LA/EER: 1.9235961123110106",
+      "[50] 21LA/EER: 1.0527894420393238"
+    ],
+    "21DF": [
+      "[15] 21DF/EER: 2.396259384895441",
+      "[20] 21DF/EER: 2.5758150806965148",
+      "[25] 21DF/EER: 2.8736617610750144",
+      "[30] 21DF/EER: 2.8490017511485086",
+      "[35] 21DF/EER: 2.5501917893897095",
+      "[40] 21DF/EER: 2.6484465156228496",
+      "[45] 21DF/EER: 2.8851973905148607"
+    ]
+  },
+  "evaluation_protocol": {
+    "input": "B max64600, no wrap, masks",
+    "models": "both fixed50 checkpoints",
+    "pooling_noise_std": 1e-05,
+    "paired_common_pooling_RNG": true,
+    "batch_per_rank": 8,
+    "threshold": "dev only, minimum absFPR-FNR then lowerFPR then higherthreshold"
+  }
+}

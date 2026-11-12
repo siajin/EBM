@@ -1,0 +1,14 @@
+[
+  {
+    "path": "experience/01_duration_bias/E027/code/artifacts/geometry_experiments/variable_length_sidecar.py",
+    "sha256": "8de8723544f0ef33ffa2c0ba96c26ba9450c1146e820201326680c5046a8d7f7",
+    "origin": "artifacts/geometry_experiments/variable_length_sidecar.py",
+    "kind": "explicit method source"
+  },
+  {
+    "path": "experience/01_duration_bias/E027/code/artifacts/geometry_experiments/variable_length_augmentation_sidecar.py",
+    "sha256": "67c60d6aaeac5d008f0df656b08b9264f7afcc9d2a290795fe017deb40d84304",
+    "origin": "artifacts/geometry_experiments/variable_length_augmentation_sidecar.py",
+    "kind": "explicit method source"
+  }
+]

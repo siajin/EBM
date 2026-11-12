@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "input_tests": 90,
+  "train_N": 25380,
+  "dev_N": 24844,
+  "class_length_counts": {
+    "1": {
+      "N": 2580,
+      "longer_than_B_cap": 576,
+      "max_samples": 178070,
+      "total_original_samples": 139887799,
+      "total_B_used_samples": 132948494
+    },
+    "0": {
+      "N": 22800,
+      "longer_than_B_cap": 6195,
+      "max_samples": 211007,
+      "total_original_samples": 1251270877,
+      "total_B_used_samples": 1125674504
+    }
+  },
+  "sampler_all50epochs_exactly_matches_B": true,
+  "sampler_hashes": {
+    "0": "81232be9032ec8ca569d8c19d559894a0de4a78f17d4f7b5c7e63bca81e1a656",
+    "1": "d442c190cd929945d70674d6c32db6eaa90a09a121a3866483071d52dde094f5"
+  },
+  "logical_steps_per_epoch": 108,
+  "Python_crop_and_augmentation_choice_RNG_same": true,
+  "noaug_short_exactly_matches_B": true,
+  "same_input_under_cap_exact": true,
+  "evaluation_fixed_B_input": true,
+  "codec_and_wrap_forbidden": true,
+  "training_manifest_sha256": "a5b03a05acebb85549f0f85aec6daffe8bc10b52be7d2a7c60ea00a82aa44a6c",
+  "longest_training_indices": {
+    "1": 2258,
+    "0": 13669
+  },
+  "RNG_limit": "NumPy RawBoost and CUDA random tensors change with long input shape; policy and seed unchanged"
+}

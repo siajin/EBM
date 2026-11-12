@@ -1,0 +1,79 @@
+[
+  {
+    "method": "native",
+    "eer_percent": 3.3499999999999974,
+    "auroc": 0.9959428333333332,
+    "native_minus_candidate_EER_pp": 0.0,
+    "paired_improvement_CI95": [
+      0.0,
+      0.0
+    ],
+    "interpretation": "Fixed original EBM"
+  },
+  {
+    "method": "T_three_prototypes",
+    "eer_percent": 3.049999999999997,
+    "auroc": 0.9963517222222221,
+    "native_minus_candidate_EER_pp": 0.30000000000000027,
+    "paired_improvement_CI95": [
+      0.08039459504470034,
+      0.4140068301698681
+    ],
+    "interpretation": "T-only normal prototype fit"
+  },
+  {
+    "method": "DF_one_global_normal_center",
+    "eer_percent": 3.144444444444444,
+    "auroc": 0.9955242499999999,
+    "native_minus_candidate_EER_pp": 0.2055555555555535,
+    "paired_improvement_CI95": [
+      -0.010125932654284407,
+      0.34115143541968274
+    ],
+    "interpretation": "DF internal normal-only5-fold diagnostic"
+  },
+  {
+    "method": "DF_source_normal_center",
+    "eer_percent": 3.200000000000003,
+    "auroc": 0.9886760555555555,
+    "native_minus_candidate_EER_pp": 0.14999999999999458,
+    "paired_improvement_CI95": [
+      -1.7747341825974257,
+      2.0677894100927636
+    ],
+    "interpretation": "DF internal normal-only5-fold diagnostic"
+  },
+  {
+    "method": "DF_source_translation",
+    "eer_percent": 5.000000000000004,
+    "auroc": 0.9824328055555556,
+    "native_minus_candidate_EER_pp": -1.650000000000007,
+    "paired_improvement_CI95": [
+      -4.134538140228384,
+      0.9211431735499371
+    ],
+    "interpretation": "DF internal normal-only5-fold diagnostic"
+  },
+  {
+    "method": "DF_source_normal_score_standardization",
+    "eer_percent": 3.600000000000003,
+    "auroc": 0.9836110277777778,
+    "native_minus_candidate_EER_pp": -0.2500000000000058,
+    "paired_improvement_CI95": [
+      -1.899159472581011,
+      1.7340145867640764
+    ],
+    "interpretation": "DF internal normal-only5-fold diagnostic"
+  },
+  {
+    "method": "DF_three_normal_prototypes",
+    "eer_percent": 12.5,
+    "auroc": 0.9097015277777778,
+    "native_minus_candidate_EER_pp": -9.150000000000002,
+    "paired_improvement_CI95": [
+      -12.167297868791113,
+      -6.174764602640078
+    ],
+    "interpretation": "DF internal normal-only5-fold diagnostic"
+  }
+]

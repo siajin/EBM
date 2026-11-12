@@ -1,0 +1,92 @@
+{
+  "sources": [
+    {
+      "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_fast_p0_01\\686e593443178bb8\\extract\\scores.parquet",
+      "sha256": "66a58119b774c089829deb36b4a135e9b5e91d9d18e6e1e09809f20100179598"
+    },
+    {
+      "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\Q\\c288fb7a7ab48dd3\\extract\\scores.parquet",
+      "sha256": "3c20ea01e4c91fcf046f81199b2b1d8a4337296b45c1e1eb5099763d3935971e"
+    },
+    {
+      "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\19LA_eval\\4b8955da49f12316\\extract\\scores.parquet",
+      "sha256": "badece9d259010576e48be7fdc3ef18fe187cfda532efabcca5f9aaaa645f317"
+    },
+    {
+      "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_21la_full_03\\4110118cb92e35c1\\extract\\scores.parquet",
+      "sha256": "96a86f82f705b73f5198a2bf1686491d4c2615052cf0cdc8d94cbe9e27f04cab"
+    },
+    {
+      "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_df_fast_01\\1b0a7488e72f4ec2\\extract\\scores.parquet",
+      "sha256": "f3fa30b26c232968b4203f8bbbb8fcbd3d0b45364fa14564a6e8198d7ca77a50"
+    },
+    {
+      "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\DF_remaining\\096bc3b970f33181\\extract\\scores.parquet",
+      "sha256": "71a760eb99941082b5fbcdb5a80f27839692cb68b5df00cab76ee1788a23291a"
+    }
+  ],
+  "optimality_certificates": {
+    "19LA_train": {
+      "flow_units": 980142,
+      "mincut_units": 980142,
+      "total_units": 980400,
+      "reachable_bonafide": 2580,
+      "reachable_spoof": 22794,
+      "unmatched_spoof_reachable": false,
+      "maxflow_equals_mincut": true
+    },
+    "19LA_dev": {
+      "flow_units": 14202552,
+      "mincut_units": 14202552,
+      "total_units": 14202552,
+      "reachable_bonafide": 0,
+      "reachable_spoof": 0,
+      "unmatched_spoof_reachable": false,
+      "maxflow_equals_mincut": true
+    },
+    "19LA_eval": {
+      "flow_units": 468029501,
+      "mincut_units": 468029501,
+      "total_units": 469852110,
+      "reachable_bonafide": 7327,
+      "reachable_spoof": 63391,
+      "unmatched_spoof_reachable": false,
+      "maxflow_equals_mincut": true
+    },
+    "21LA_eval": {
+      "flow_units": 122608025,
+      "mincut_units": 122608025,
+      "total_units": 123491360,
+      "reachable_bonafide": 14747,
+      "reachable_spoof": 131785,
+      "unmatched_spoof_reachable": false,
+      "maxflow_equals_mincut": true
+    },
+    "21DF_eval": {
+      "flow_units": 7717754450,
+      "mincut_units": 7717754450,
+      "total_units": 7717888271,
+      "reachable_bonafide": 14869,
+      "reachable_spoof": 519050,
+      "unmatched_spoof_reachable": false,
+      "maxflow_equals_mincut": true
+    }
+  },
+  "speed_rate": [
+    0.8,
+    1.2
+  ],
+  "crop_fraction": [
+    0,
+    0.2
+  ],
+  "duration_multiplier": [
+    0.6666666666666666,
+    1.25
+  ],
+  "maximum_overlap_definition": "1 - total variation; maximal shared probability mass, continuous duration, randomized per-utterance augmentation allowed",
+  "constraints": "Every utterance retains uniform within-class sampling weight. Both classes may transform. No removal or reweighting.",
+  "single_policy": "Conditional weighted-median target of the maximum-overlap randomized plan, one feasible transform per utterance; not claimed globally optimal.",
+  "units": "Lengths optimized as continuous seconds from exact 16 kHz source sample counts; waveform output rounding untested.",
+  "scope": "Within each dataset independently, using its class labels. Descriptive oracle feasibility, not a train-only deployment or a classification performance result."
+}

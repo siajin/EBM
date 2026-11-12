@@ -1,0 +1,334 @@
+{
+  "status": "complete_exploratory",
+  "normal_count": 14869,
+  "threshold": 0.8619597055730815,
+  "restrictions": [
+    {
+      "restriction": "all",
+      "source": "asvspoof",
+      "n": 7939,
+      "normal_false_rejects": 45,
+      "normal_false_reject_percent": 0.5668220178863836,
+      "median_score": 0.9975809711834095,
+      "median_duration": 3.288,
+      "n_speakers": 67,
+      "cluster95_low": 0.15756281833672495,
+      "cluster95_high": 1.12017966570818
+    },
+    {
+      "restriction": "all",
+      "source": "vcc2018",
+      "n": 3780,
+      "normal_false_rejects": 2480,
+      "normal_false_reject_percent": 65.60846560846561,
+      "median_score": 0.130807407251803,
+      "median_duration": 3.304,
+      "n_speakers": 12,
+      "cluster95_low": 57.46031746031746,
+      "cluster95_high": 74.23478835978834
+    },
+    {
+      "restriction": "all",
+      "source": "vcc2020",
+      "n": 3150,
+      "normal_false_rejects": 1183,
+      "normal_false_reject_percent": 37.55555555555556,
+      "median_score": 0.9589126338817531,
+      "median_duration": 3.417375,
+      "n_speakers": 14,
+      "cluster95_low": 25.327777777777776,
+      "cluster95_high": 49.778571428571425
+    },
+    {
+      "restriction": "nocodec",
+      "source": "asvspoof",
+      "n": 386,
+      "normal_false_rejects": 1,
+      "normal_false_reject_percent": 0.25906735751295334,
+      "median_score": 0.9980017017378865,
+      "median_duration": 3.33165625,
+      "n_speakers": 60,
+      "cluster95_low": 0.0,
+      "cluster95_high": 0.8265607472356397
+    },
+    {
+      "restriction": "nocodec",
+      "source": "vcc2018",
+      "n": 420,
+      "normal_false_rejects": 255,
+      "normal_false_reject_percent": 60.714285714285715,
+      "median_score": 0.5572362345098695,
+      "median_duration": 3.2805625,
+      "n_speakers": 12,
+      "cluster95_low": 53.095238095238095,
+      "cluster95_high": 69.52976190476187
+    },
+    {
+      "restriction": "nocodec",
+      "source": "vcc2020",
+      "n": 350,
+      "normal_false_rejects": 108,
+      "normal_false_reject_percent": 30.857142857142858,
+      "median_score": 0.9735197645195683,
+      "median_duration": 3.4046875,
+      "n_speakers": 14,
+      "cluster95_low": 19.714285714285715,
+      "cluster95_high": 42.285714285714285
+    },
+    {
+      "restriction": "no_repeat_padding",
+      "source": "asvspoof",
+      "n": 1789,
+      "normal_false_rejects": 34,
+      "normal_false_reject_percent": 1.9005030743432085,
+      "median_score": 0.9975602319833472,
+      "median_duration": 4.672,
+      "n_speakers": 50,
+      "cluster95_low": 0.1371744343636402,
+      "cluster95_high": 4.164499646159933
+    },
+    {
+      "restriction": "no_repeat_padding",
+      "source": "vcc2018",
+      "n": 1261,
+      "normal_false_rejects": 448,
+      "normal_false_reject_percent": 35.52735923869945,
+      "median_score": 0.9484632296146848,
+      "median_duration": 4.7401875,
+      "n_speakers": 12,
+      "cluster95_low": 22.62775491395611,
+      "cluster95_high": 50.37334707643731
+    },
+    {
+      "restriction": "no_repeat_padding",
+      "source": "vcc2020",
+      "n": 1054,
+      "normal_false_rejects": 85,
+      "normal_false_reject_percent": 8.064516129032258,
+      "median_score": 0.9938917632575701,
+      "median_duration": 5.0479375,
+      "n_speakers": 14,
+      "cluster95_low": 1.8190015417072378,
+      "cluster95_high": 19.177265599500473
+    },
+    {
+      "restriction": "nocodec_no_repeat_padding",
+      "source": "asvspoof",
+      "n": 88,
+      "normal_false_rejects": 1,
+      "normal_false_reject_percent": 1.1363636363636365,
+      "median_score": 0.9979890899750755,
+      "median_duration": 4.5916250000000005,
+      "n_speakers": 30,
+      "cluster95_low": 0.0,
+      "cluster95_high": 4.285714285714286
+    },
+    {
+      "restriction": "nocodec_no_repeat_padding",
+      "source": "vcc2018",
+      "n": 139,
+      "normal_false_rejects": 39,
+      "normal_false_reject_percent": 28.057553956834532,
+      "median_score": 0.9725173233235614,
+      "median_duration": 4.7401875,
+      "n_speakers": 12,
+      "cluster95_low": 16.3265306122449,
+      "cluster95_high": 43.796883773161134
+    },
+    {
+      "restriction": "nocodec_no_repeat_padding",
+      "source": "vcc2020",
+      "n": 116,
+      "normal_false_rejects": 4,
+      "normal_false_reject_percent": 3.4482758620689653,
+      "median_score": 0.9955231112234635,
+      "median_duration": 5.01859375,
+      "n_speakers": 14,
+      "cluster95_low": 0.0,
+      "cluster95_high": 9.420631665299423
+    },
+    {
+      "restriction": "duration_4p0375_to_6",
+      "source": "asvspoof",
+      "n": 1613,
+      "normal_false_rejects": 0,
+      "normal_false_reject_percent": 0.0,
+      "median_score": 0.9975946855993395,
+      "median_duration": 4.616,
+      "n_speakers": 49,
+      "cluster95_low": 0.0,
+      "cluster95_high": 0.0
+    },
+    {
+      "restriction": "duration_4p0375_to_6",
+      "source": "vcc2018",
+      "n": 1014,
+      "normal_false_rejects": 364,
+      "normal_false_reject_percent": 35.8974358974359,
+      "median_score": 0.9468079484039422,
+      "median_duration": 4.5389375,
+      "n_speakers": 12,
+      "cluster95_low": 23.59204268454242,
+      "cluster95_high": 51.0025733296425
+    },
+    {
+      "restriction": "duration_4p0375_to_6",
+      "source": "vcc2020",
+      "n": 865,
+      "normal_false_rejects": 63,
+      "normal_false_reject_percent": 7.283236994219653,
+      "median_score": 0.9923717337827375,
+      "median_duration": 4.856,
+      "n_speakers": 14,
+      "cluster95_low": 1.1533632855667675,
+      "cluster95_high": 16.447482525689843
+    },
+    {
+      "restriction": "nocodec_duration_4p0375_to_6",
+      "source": "asvspoof",
+      "n": 80,
+      "normal_false_rejects": 0,
+      "normal_false_reject_percent": 0.0,
+      "median_score": 0.9979717041282905,
+      "median_duration": 4.544874999999999,
+      "n_speakers": 29,
+      "cluster95_low": 0.0,
+      "cluster95_high": 0.0
+    },
+    {
+      "restriction": "nocodec_duration_4p0375_to_6",
+      "source": "vcc2018",
+      "n": 112,
+      "normal_false_rejects": 32,
+      "normal_false_reject_percent": 28.571428571428573,
+      "median_score": 0.9712412593841423,
+      "median_duration": 4.5156875,
+      "n_speakers": 12,
+      "cluster95_low": 17.271943573667713,
+      "cluster95_high": 44.03669724770642
+    },
+    {
+      "restriction": "nocodec_duration_4p0375_to_6",
+      "source": "vcc2020",
+      "n": 95,
+      "normal_false_rejects": 2,
+      "normal_false_reject_percent": 2.1052631578947367,
+      "median_score": 0.9946536028598931,
+      "median_duration": 4.828375,
+      "n_speakers": 14,
+      "cluster95_low": 0.0,
+      "cluster95_high": 7.144465894465886
+    }
+  ],
+  "speaker_ranges": [
+    {
+      "source": "asvspoof",
+      "n_speakers": 67,
+      "minimum_percent": 0.0,
+      "median_percent": 0.0,
+      "maximum_percent": 30.0
+    },
+    {
+      "source": "vcc2018",
+      "n_speakers": 12,
+      "minimum_percent": 44.44444444444444,
+      "median_percent": 60.7936507936508,
+      "maximum_percent": 98.4126984126984
+    },
+    {
+      "source": "vcc2020",
+      "n_speakers": 14,
+      "minimum_percent": 0.0,
+      "median_percent": 37.111111111111114,
+      "maximum_percent": 82.66666666666667
+    }
+  ],
+  "standardized": [
+    {
+      "source": "asvspoof",
+      "standardized_FR_percent": 0.5044136191677175,
+      "included_normals": 7930,
+      "common_cells": 58
+    },
+    {
+      "source": "vcc2018",
+      "standardized_FR_percent": 66.87229902887975,
+      "included_normals": 3775,
+      "common_cells": 58
+    },
+    {
+      "source": "vcc2020",
+      "standardized_FR_percent": 38.351898733680805,
+      "included_normals": 3150,
+      "common_cells": 58
+    }
+  ],
+  "geometry": {
+    "backend_h": {
+      "source_eta_squared": 0.6923263038952885,
+      "interpretation": "fraction of vector variance between source means; not causal contribution or classifier accuracy"
+    },
+    "centered_unit_backend_h": {
+      "source_eta_squared": 0.364199277401794,
+      "interpretation": "fraction of vector variance between source means; not causal contribution or classifier accuracy"
+    },
+    "unit_z": {
+      "source_eta_squared": 0.36359141215009094,
+      "interpretation": "fraction of vector variance between source means; not causal contribution or classifier accuracy"
+    }
+  },
+  "prior_probe_recheck": [
+    {
+      "variant": "direction_linear",
+      "seed": 101,
+      "eer_percent": 2.3
+    },
+    {
+      "variant": "direction_linear",
+      "seed": 102,
+      "eer_percent": 2.3055555555555554
+    },
+    {
+      "variant": "direction_linear",
+      "seed": 103,
+      "eer_percent": 2.3055555555555554
+    },
+    {
+      "variant": "direction_mlp",
+      "seed": 101,
+      "eer_percent": 1.7333333333333332
+    },
+    {
+      "variant": "direction_mlp",
+      "seed": 102,
+      "eer_percent": 1.6055555555555556
+    },
+    {
+      "variant": "direction_mlp",
+      "seed": 103,
+      "eer_percent": 1.6500000000000001
+    },
+    {
+      "variant": "direction_h",
+      "seed": 101,
+      "eer_percent": 1.95
+    },
+    {
+      "variant": "direction_h",
+      "seed": 102,
+      "eer_percent": 1.9833333333333334
+    },
+    {
+      "variant": "direction_h",
+      "seed": 103,
+      "eer_percent": 1.9
+    }
+  ],
+  "limitations": [
+    "No microphone, spectral envelope, pitch, accent, or resampling effect was causally isolated.",
+    "Backend h is not the SSL frontend; frontend-vs-backend localization remains unresolved.",
+    "Duration conditioning and no-padding restriction alter utterance and speaker mix.",
+    "Restricted subgroup bootstrap is conditional on observed speakers and unresolved families.",
+    "Probe improvements use DF-internal training and are not deployment generalization."
+  ]
+}

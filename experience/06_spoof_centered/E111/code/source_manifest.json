@@ -1,0 +1,44 @@
+[
+  {
+    "path": "experience/06_spoof_centered/E111/code/EBM/role_lifecycle.py",
+    "sha256": "bfb317758d9984183430fd2d405bcb6ae18002840932953f1b991bc430f51adb",
+    "origin": "EBM/role_lifecycle.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/06_spoof_centered/E111/code/EBM/role_model.py",
+    "sha256": "576d963df66076a548526430571f33f09195ff74960f10e08369edfa9cb138f1",
+    "origin": "EBM/role_model.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/06_spoof_centered/E111/code/EBM/role_objectives.py",
+    "sha256": "b029ac84d908b7dc9a52f337b132e618a80a88e8945a9a9772a8408383eff396",
+    "origin": "EBM/role_objectives.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/06_spoof_centered/E111/code/EBM/role_runtime.py",
+    "sha256": "862335ac29e0746830f31deeccbf07c497b957f0df67b07b818bd58384a0129a",
+    "origin": "EBM/role_runtime.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/06_spoof_centered/E111/code/EBM/role_training.py",
+    "sha256": "df1c5e80c157000504eb3dae84870ff1f8f5934748b41c69a14d4e397bffaeef",
+    "origin": "EBM/role_training.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/06_spoof_centered/E111/code/EBM/tools/train_role_experiment.py",
+    "sha256": "47051c6be59cc4136ae4fe5349f4e7a735a136e6627f0d67d7f65a8c329745c0",
+    "origin": "EBM/tools/train_role_experiment.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/06_spoof_centered/E111/code/EBM/tests/test_role_experiment.py",
+    "sha256": "92ba46769834f552cc745aaa05d77cffa9881ec59098eb425f52fd3d2a6dfa67",
+    "origin": "EBM/tests/test_role_experiment.py",
+    "kind": "implementation / validation source"
+  }
+]

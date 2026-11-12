@@ -1,0 +1,9 @@
+{
+  "status": "cancelled_before_evaluation_launch",
+  "reason": "User requested completed-experiments-only analysis",
+  "queue_pid": 2178277,
+  "cancelled_unix": 1794375184.8998415,
+  "training_untouched": true,
+  "new_GPU_evaluation_started": false,
+  "logs_and_payload_preserved": true
+}

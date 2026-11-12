@@ -1,0 +1,202 @@
+[
+  {
+    "dataset": "DF_pilot",
+    "variant": "direction_linear",
+    "condition": "R2-00",
+    "EER_advantage_pp": 1.0407407407407392,
+    "EER_advantage_CI95": [
+      0.5044617234357973,
+      1.7350723034576476
+    ],
+    "change_of_EER_advantage_CI95": [
+      0.0,
+      0.0
+    ],
+    "LL_advantage": 0.09010441469670527,
+    "LL_advantage_CI95": [
+      0.06733392693604312,
+      0.11331221434740518
+    ],
+    "change_of_LL_advantage_CI95": [
+      0.0,
+      0.0
+    ],
+    "draws": 2000,
+    "groups": 93
+  },
+  {
+    "dataset": "DF_pilot",
+    "variant": "direction_linear",
+    "condition": "R3-noise20",
+    "EER_advantage_pp": 0.9611111111111134,
+    "EER_advantage_CI95": [
+      0.20058290334512674,
+      1.6415202322386808
+    ],
+    "change_of_EER_advantage_CI95": [
+      -0.8015611406398667,
+      0.3456632769919106
+    ],
+    "LL_advantage": 0.06949076764610075,
+    "LL_advantage_CI95": [
+      0.05168566247820227,
+      0.08751110451873909
+    ],
+    "change_of_LL_advantage_CI95": [
+      -0.04207492729079853,
+      0.0004606844262663262
+    ],
+    "draws": 2000,
+    "groups": 93
+  },
+  {
+    "dataset": "DF_pilot",
+    "variant": "direction_linear",
+    "condition": "R3-noise10",
+    "EER_advantage_pp": 1.3777777777777782,
+    "EER_advantage_CI95": [
+      0.5430300327795632,
+      2.408691999542654
+    ],
+    "change_of_EER_advantage_CI95": [
+      -0.3161965388707074,
+      1.0766180578021147
+    ],
+    "LL_advantage": 0.0729816929949192,
+    "LL_advantage_CI95": [
+      0.042419878439974135,
+      0.10501078192842592
+    ],
+    "change_of_LL_advantage_CI95": [
+      -0.054850020850520834,
+      0.028091015023276628
+    ],
+    "draws": 2000,
+    "groups": 93
+  },
+  {
+    "dataset": "DF_pilot",
+    "variant": "direction_linear",
+    "condition": "R3-Opus32k_recompression",
+    "EER_advantage_pp": 0.8574074074074058,
+    "EER_advantage_CI95": [
+      0.23162160116079122,
+      1.549888209129875
+    ],
+    "change_of_EER_advantage_CI95": [
+      -0.5898637065211438,
+      0.11809601804460222
+    ],
+    "LL_advantage": 0.08853997177964212,
+    "LL_advantage_CI95": [
+      0.0633637497144004,
+      0.11353856725684305
+    ],
+    "change_of_LL_advantage_CI95": [
+      -0.009418049793328883,
+      0.0037332654228023504
+    ],
+    "draws": 2000,
+    "groups": 93
+  },
+  {
+    "dataset": "DF_pilot",
+    "variant": "direction_mlp",
+    "condition": "R2-00",
+    "EER_advantage_pp": 1.6814814814814805,
+    "EER_advantage_CI95": [
+      1.1014902846079984,
+      2.2505571604991776
+    ],
+    "change_of_EER_advantage_CI95": [
+      0.0,
+      0.0
+    ],
+    "LL_advantage": 0.12343951651524748,
+    "LL_advantage_CI95": [
+      0.09431730042928596,
+      0.15263836711427523
+    ],
+    "change_of_LL_advantage_CI95": [
+      0.0,
+      0.0
+    ],
+    "draws": 2000,
+    "groups": 93
+  },
+  {
+    "dataset": "DF_pilot",
+    "variant": "direction_mlp",
+    "condition": "R3-noise20",
+    "EER_advantage_pp": 1.3944444444444477,
+    "EER_advantage_CI95": [
+      0.6889396900205621,
+      2.004726859191911
+    ],
+    "change_of_EER_advantage_CI95": [
+      -1.1294273931344707,
+      0.25597686173645695
+    ],
+    "LL_advantage": 0.09090388804504818,
+    "LL_advantage_CI95": [
+      0.06186276711741229,
+      0.11665831196902664
+    ],
+    "change_of_LL_advantage_CI95": [
+      -0.06847706784641022,
+      -0.006912127549578545
+    ],
+    "draws": 2000,
+    "groups": 93
+  },
+  {
+    "dataset": "DF_pilot",
+    "variant": "direction_mlp",
+    "condition": "R3-noise10",
+    "EER_advantage_pp": 1.8685185185185185,
+    "EER_advantage_CI95": [
+      0.8297116969985548,
+      2.8862765181520675
+    ],
+    "change_of_EER_advantage_CI95": [
+      -0.885704188173219,
+      1.0662936140290757
+    ],
+    "LL_advantage": 0.11524799899899167,
+    "LL_advantage_CI95": [
+      0.08420713383862563,
+      0.14337616219557822
+    ],
+    "change_of_LL_advantage_CI95": [
+      -0.04548226668041895,
+      0.024580189321082673
+    ],
+    "draws": 2000,
+    "groups": 93
+  },
+  {
+    "dataset": "DF_pilot",
+    "variant": "direction_mlp",
+    "condition": "R3-Opus32k_recompression",
+    "EER_advantage_pp": 1.3870370370370357,
+    "EER_advantage_CI95": [
+      0.9338182625423498,
+      1.9132289476485957
+    ],
+    "change_of_EER_advantage_CI95": [
+      -0.5566212294154991,
+      0.0008635263583965386
+    ],
+    "LL_advantage": 0.11803691063357565,
+    "LL_advantage_CI95": [
+      0.08687759905631144,
+      0.1486824121191989
+    ],
+    "change_of_LL_advantage_CI95": [
+      -0.019187306264135225,
+      0.003445666140466845
+    ],
+    "draws": 2000,
+    "groups": 93
+  }
+]

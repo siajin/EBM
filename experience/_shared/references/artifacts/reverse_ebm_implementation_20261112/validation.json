@@ -1,0 +1,66 @@
+{
+  "status": "passed_local_implementation",
+  "new_tests": 32,
+  "existing_regression_tests": 46,
+  "total_tests": 78,
+  "test_logs": {
+    "role_tests_final.log": {
+      "tests": 32,
+      "seconds": 20.136,
+      "status": "passed"
+    },
+    "existing_regressions.log": {
+      "tests": 46,
+      "seconds": 53.474,
+      "status": "passed"
+    }
+  },
+  "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]",
+  "torch": "2.13.0+cpu",
+  "backend": "CPU/Gloo, two spawned processes",
+  "original_training_regression": "Exact loss1/loss2/parameter/Adam-state/scheduler identity on120/72/114 synthetic rows",
+  "original_sampler": "Actual original DistributedSampler and DataLoader:108 batches,1290bona/11616spoof visits per rank",
+  "complete_synthetic_flow": "108 optimizer logical batches -> role-aware atomic checkpoint -> all three evaluation stages",
+  "full_size_model": {
+    "status": "passed",
+    "seed": 1,
+    "actual_original240_dimensions": true,
+    "roles": [
+      {
+        "compact_label": 0,
+        "all_initial_tensors_identical": true,
+        "parameter_count": 3744384,
+        "backend_parameter_count": 3744224
+      },
+      {
+        "compact_label": 1,
+        "all_initial_tensors_identical": true,
+        "parameter_count": 3744384,
+        "backend_parameter_count": 3744224
+      }
+    ],
+    "optimizer_steps": 0,
+    "audio_inference": 0
+  },
+  "runtime_preflight": "passed, no launch/download",
+  "source_preservation": "source_preservation.json",
+  "spending_ceiling_usd": 0,
+  "new_spending_usd": 0,
+  "remote_calls": 0,
+  "real_dataset_training_runs": 0,
+  "real_audio_or_XLSR_inference_runs": 0,
+  "synthetic_CPU_optimizer_tests": true,
+  "new_remote_resources": 0,
+  "automatic_retries": 0,
+  "cleanup": "All foreground checks and spawned test ranks exited; TemporaryDirectory removed synthetic audio, checkpoint and rendezvous fixtures. No remote process, watcher or reservation was created.",
+  "pending": [
+    "Actual assigned two-GPU/CUDA/NCCL smoke with real audio and pinned cached XLS-R",
+    "GPU memory/runtime and target EER; no performance improvement claim"
+  ],
+  "theoretical_limits": [
+    "Alternating conditional objectives do not guarantee joint monotonic decrease or convergence",
+    "Bona repulsion from spoof center does not guarantee bona diversity",
+    "A single known-spoof center need not generalize to unseen attacks",
+    "Equal center objective multiplier does not equalize Adam updates or sample variance"
+  ]
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "path": "artifacts/geometry_cache/local_analysis/frozen_all_v1/P3_P4/B/DF_pilot/complete.json",
+    "sha256": "03c09b3bd4530b1f0dc1567bae3a0fc891dfaf4dc128fe1d81ab75e1ac302686"
+  },
+  {
+    "path": "artifacts/geometry_cache/local_analysis/frozen_all_v1/P3_P4/B/DF_pilot/metrics.csv",
+    "sha256": "dce09b54c366c386d0c347e39a4fcb68891c60c15d60c530dae3fbf6d494873c"
+  },
+  {
+    "path": "artifacts/geometry_cache/local_analysis/frozen_all_v1/P3_P4/B/DF_pilot/paired_effects.json",
+    "sha256": "8e6716ea90082ed54043be262fe77fcb44c4be67b6aecd1d92454ac48a53d090"
+  },
+  {
+    "path": "artifacts/geometry_cache/local_analysis/frozen_all_v1/P3_P4/B/DF_pilot/predictions.parquet",
+    "sha256": "9a49353ac10150566810184a5ed6cfc37d40eb0c3b23e90bc4900753ad639e18"
+  },
+  {
+    "path": "artifacts/geometry_cache/local_analysis/frozen_all_v1/P3_P4/B/21LA_pilot/complete.json",
+    "sha256": "2cbdde1f5f1cc0cd141c217ecd5d2591c9b84b394c6f51a1c32edeaf56a15cfc"
+  },
+  {
+    "path": "artifacts/geometry_cache/local_analysis/frozen_all_v1/P3_P4/B/21LA_pilot/metrics.csv",
+    "sha256": "2a7389efab349c2a3f6822778577d7826ecbbae4595e749df96dc30d4683b3c6"
+  },
+  {
+    "path": "artifacts/geometry_cache/local_analysis/frozen_all_v1/P3_P4/B/21LA_pilot/paired_effects.json",
+    "sha256": "1a58cfdaea3591a3c1646dec43a27910acb91d2c0f5e39779f3a5827fa8a188c"
+  },
+  {
+    "path": "artifacts/geometry_cache/local_analysis/frozen_all_v1/P3_P4/B/21LA_pilot/predictions.parquet",
+    "sha256": "23cf9844f0c7154f1bfc526098f233e020d1b8a5b25e6664f391019fc9528a0c"
+  },
+  {
+    "path": "artifacts/geometry_cache/local_analysis/frozen_all_v1/P3_P4/verification.json",
+    "sha256": "bc6a6dbe61bf8b164d208c584236073f66790a151dedd11c63bcb431639d86d7"
+  },
+  {
+    "path": "artifacts/geometry_cache/local_analysis/cache_hypotheses_20261106_v2/H5_LN_reconstruction.json",
+    "sha256": "1d3d2ae939444b7730a4a5939efede2062deb1c8559174435d7f8dd5704b1733"
+  },
+  {
+    "path": "artifacts/geometry_cache/local_analysis/cache_hypotheses_20261106_v2/H5_DF_pilot_saved_readout_decomposition.json",
+    "sha256": "c0f8c37fe1a4e9083f0ee9da247d1eb00ed77413e72a0df3870d184a799e2074"
+  },
+  {
+    "path": "artifacts/geometry_cache/local_analysis/cache_hypotheses_20261106_v2/H5_21LA_pilot_saved_readout_decomposition.json",
+    "sha256": "062c4e0e5c551ac3852087360c553ba395f419d4458141a2df55927b1787ff85"
+  },
+  {
+    "path": "artifacts/geometry_cache/local_analysis/cache_hypotheses_20261106_v2/independent_verification.json",
+    "sha256": "de8d74a2cd473b1a2ec2bbafdaf26eb2c8dd9c24cccd32db61501e78e6289b82"
+  },
+  {
+    "path": "artifacts/geometry_cache/local_analysis/frozen_all_v1/source_snapshot/frozen_probes.py",
+    "sha256": "5ec64d2ab84c9d91ebdc59de6aba4708589adea6d0cad2afe4b2988694514868"
+  },
+  {
+    "path": "docs/experiments/ebm_condition_audit_20261105.md",
+    "sha256": "696518eef50bb14bb87ddc775a815e6e5b075c3f23a7df6ee72f89cd1d0f2b14"
+  }
+]

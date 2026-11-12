@@ -1,0 +1,20 @@
+[
+  {
+    "case": "keep_top1",
+    "EER_impairment_pp": 11.47553999525279,
+    "CI95_pointwise": [
+      7.439907754070054,
+      15.277731852874346
+    ],
+    "dropped_replicates": 0
+  },
+  {
+    "case": "keep_bottom1",
+    "EER_impairment_pp": 0.9959389072757872,
+    "CI95_pointwise": [
+      -0.6281452821929844,
+      3.749061157265943
+    ],
+    "dropped_replicates": 0
+  }
+]

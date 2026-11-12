@@ -1,0 +1,63 @@
+# E080. 4초·3초·2초 삼중 조합과 추가 학습 아이디어의 미실행 설계
+
+**실행 상태:** 설계만; 성능 실험 미실행
+
+이 문서의 상태는 2026-11-12 출판 검토 기준이다. 기존 문서·state의 시점별 상태와 충돌하면 실제 완료표식과 본문 최신 보완을 우선한다.
+
+## 가설
+
+삼중조합·새방향손실·반응분류기가 기존쌍학습의 한계를 보완할 수 있다.
+
+## 그렇게 설계한 이유
+
+사용자와 논의했던 삼중 조합·새 attention/방향 손실을 실제로 실행한 방법과 구별한다.
+
+대조와 통제의 근거: 계획 JSON·수학 검사가 있다는 이유로 실제 음성 실험 완료로 세지 않는다.
+
+## 모델·데이터·표본
+
+실제 학습 자료·새 성능 결과 없음. 문서의 설계 범위만 기록한다.
+
+## 실험 내용과 상세 절차
+
+1. 정상 12개 씩의 4/3/2초 세 묶음을 12×12×12 삼중 조합으로 확장하는 안이 논의됐다.
+2. 후속 선택은 삼 중 텐 서 대신 원음 ≤2초 정상에만 기존 3초 ×2초 BPL 추가였으므로 삼중 손실은 구현·학습하지 않았다.
+3. 초기 전체 기하 명세의 새 channel-attention/새 방향 loss와 encoder 공동 학습도 고정 후처리 실험과 별개인 미실행 계획이다.
+4. DF 5×3 내부 분류의 출처 × 클래스 부족을 보완하는 4×3 분할은 메타데이터 후보만 만들었고 사용자 결정으로 새 분류기 학습을 취소했다.
+5. 변형 반응을 읽는 별도 미실행 안도 있었다. 내부층 가중치를 학습 값과 균등 값 사이에서 0/0.5/1 비율로 섞는 조건, 긴 원음에서 1.5/2/3초 앞·뒤 구간의 반복/비반복 점수 차이를 구하는 조건을 제안했다. 학습·개발 자료에서 변형 전 점수와 반응을 읽는 작은 분류기를 맞추고 독립 평가로 옮기는 안이다. 확대 추론과 추가 분류기 학습은 실행 하지 않았다.
+
+## 측정과 검증
+
+설계의 수 식·분할·미실행 상태. [E026](../E026/README.md)·[E052](../../05_residual_geometry/E052/README.md)~[E055](../../05_residual_geometry/E055/README.md)의 실제 방법과 대조한다.
+
+## 결과
+
+삼중 조합·새 공동 학습·DF 4×3 보완의 EER 결과 없음.
+
+## 해석·실패한 부분·한계
+
+후 보안과 진행 중 최종 안의 gradient·쌍 수·입력 정책을 합쳐 하나의 실험으로 기록하지 않는다.
+
+## 배운 점
+
+논의된후보와실행된방법을 구분해야 한다. 취소·미실행안에는 EER을 부여하지 않는다.
+
+## 실험 코드
+
+이 항목은 설계/예시/기존 기록 분석이다. 별도 실행 구현을 확보하지 못했거나 애초 구현하지 않았다. 아래 설정·설계·검산 근거를 보존했으며 실행 코드를 새로 꾸며 넣지 않았다.
+
+코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+
+## 설정·결과·검산 근거
+
+- [artifacts/bpl_three_view_design_20261111/selected_short32_plan.json](../../_shared/references/artifacts/bpl_three_view_design_20261111/selected_short32_plan.json)
+- [docs/experiments/ebm_embedding_geometry_protocol.json](../../_shared/references/docs/experiments/ebm_embedding_geometry_protocol.json)
+- [docs/experiments/ebm_condition_audit_20261105.md](../../_shared/references/docs/experiments/ebm_condition_audit_20261105.md)
+- [artifacts/geometry_cache/local_analysis/frozen_all_v1/CV4_coverage_candidate_v1/execution_decision.json](../../_shared/references/artifacts/geometry_cache/local_analysis/frozen_all_v1/CV4_coverage_candidate_v1/execution_decision.json)
+- [docs/experiments/ebm_perturbation_candidate_audit_and_plan_20261106.md](../../_shared/references/docs/experiments/ebm_perturbation_candidate_audit_and_plan_20261106.md)
+
+## 연결
+
+다른 관련 가설: [잔여 방향·좌표·거리·기하와 변형 반응](../../05_residual_geometry/README.md)
+
+[가설 목록으로](../README.md) · [전체 실험 목록](../../README.md)

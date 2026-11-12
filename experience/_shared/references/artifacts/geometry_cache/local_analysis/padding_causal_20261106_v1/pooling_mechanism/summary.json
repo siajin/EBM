@@ -1,0 +1,57 @@
+{
+  "duplication": {
+    "2": {
+      "mean_abs_score_change": 0.00023609897336193363,
+      "p95_abs_score_change": 0.0010714573513816855,
+      "max_abs_score_change": 0.01064713984737034,
+      "corrected_max_abs_score_change": 1.3592187496080932e-06
+    },
+    "4": {
+      "mean_abs_score_change": 0.0003502182790792583,
+      "p95_abs_score_change": 0.0016204659206836836,
+      "max_abs_score_change": 0.015953887447409082,
+      "corrected_max_abs_score_change": 1.2204328310241874e-06
+    }
+  },
+  "explicit_std_math_checks": [
+    {
+      "k": 2,
+      "observed_std_ratio": 0.49872934991536766,
+      "predicted_std_ratio": 0.4987293499153675,
+      "corrected_error": 6.938893903907228e-18
+    },
+    {
+      "k": 4,
+      "observed_std_ratio": 0.24904882343768703,
+      "predicted_std_ratio": 0.24904882343768703,
+      "corrected_error": 1.0408340855860843e-17
+    }
+  ],
+  "short_normal_pooled_stat_contributions": [
+    {
+      "source": "asvspoof",
+      "N": 53,
+      "wrap_score_mean": 0.9975209231744565,
+      "original_score_mean": 0.9978557918283135,
+      "mean_branch_score_contribution": 0.0003543619649289115,
+      "std_branch_score_contribution": -1.9493311072106636e-05
+    },
+    {
+      "source": "vcc2018",
+      "N": 80,
+      "wrap_score_mean": -0.3241431509637117,
+      "original_score_mean": 0.9381422645613368,
+      "mean_branch_score_contribution": 1.2616786882729407,
+      "std_branch_score_contribution": 0.0006067272521077758
+    },
+    {
+      "source": "vcc2020",
+      "N": 74,
+      "wrap_score_mean": 0.3059242023160929,
+      "original_score_mean": 0.9947003110856247,
+      "mean_branch_score_contribution": 0.6880141466396851,
+      "std_branch_score_contribution": 0.0007619621298466996
+    }
+  ],
+  "interpretation": "Nonstandard std scaling exists but does not explain the large waveform-padding shift in these tests; final mean feature change dominates."
+}

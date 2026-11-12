@@ -1,0 +1,2364 @@
+{
+  "status": "passed",
+  "checked_at": "2026-11-11T16:41:48.410502+09:00",
+  "checks": [
+    {
+      "name": "archived_score_hash_probe_rank0.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "archived_score_hash_probe_rank1.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "selection_hash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "raw_row_count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_conditions_complete",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "UID_selection_exact",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1598483",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_9531055",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1535024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_9186737",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_9524636",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_2383249",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1427387",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_4360605",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_2453268",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_3847948",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7785953",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_5511029",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1625602",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_8775705",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7680340",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_3103710",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_6910593",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_8756938",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_2555954",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_6865871",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1630393",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_3389976",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_4177452",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1316847",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_3121963",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_8567326",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7730576",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_9859662",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7457638",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_6080572",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_2335217",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_8099784",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_6544060",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_6782795",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_2214450",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_8600970",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_3263406",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_8377091",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_3780111",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_9379990",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_9936099",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_3423592",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_4578928",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_6445951",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_5601620",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_4557306",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7558754",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_3814978",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_2901664",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_8392316",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_6650456",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1919364",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1617340",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_9925836",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_8726266",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_3529882",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_8374722",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_2772070",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1614051",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1833791",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_6141059",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_2903960",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_3161975",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1341631",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_9894749",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_9644501",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_6097549",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_4138788",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_5728407",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1705442",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1217472",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_3245422",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1746400",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7798919",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7040270",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_3935421",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_6600869",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_5651687",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_3458797",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_3844223",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_6407202",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_4278298",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_3925687",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7059995",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_5250663",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_9403783",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7831791",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_4450116",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1776458",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1736131",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_6964290",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1279401",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_2841496",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_6878565",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_9147804",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1884391",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_5704537",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1993997",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_2868604",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_2400045",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_4808477",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_4107637",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_5321982",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_4480156",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_4629222",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_2337286",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_9837451",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_9477582",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_2968497",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1185869",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_4483852",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1563606",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_6885526",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_2820202",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_2213199",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_4759576",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_3760504",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_5192287",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_9902341",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_5660239",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_8257565",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_4050984",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_4946096",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_2852010",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_3850885",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_4352312",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1990744",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1210509",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_9281706",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_6884392",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7680975",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_2683035",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7840549",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_8296104",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7081554",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_8213731",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7966297",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_9401319",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1634444",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7861555",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_8307942",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_8496919",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7243731",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1822482",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_8367953",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1383889",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_5385958",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7774077",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_5010438",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7262134",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1494966",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_6733521",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1136854",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_4810307",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7003120",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1249036",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_3777192",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_5926981",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_5727244",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1713039",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_4552802",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_4729866",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7809500",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_9661791",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_9174736",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_8020255",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_3493380",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_6598006",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_5930572",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7837358",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_8890349",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_4699317",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_2017995",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_4163877",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_6892723",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_9605049",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_2420574",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_9405717",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_8179924",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_8640620",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_5645217",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1890464",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_4549402",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_2291007",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7245308",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_9382480",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_5360499",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_8506604",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_4497572",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_2936586",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_8171236",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_2209475",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7278530",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_3560109",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_8360042",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_5627595",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_6811649",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_2914889",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1073519",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_3982736",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_2487820",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_4729407",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_6035543",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_2545200",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_3020353",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_4397961",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_3182262",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_2489524",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_4284385",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_8828781",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_9991357",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7266042",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_6212428",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_3018139",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1806936",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7401436",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7481241",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_8481382",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_3938175",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_4232309",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_2939848",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1245559",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_6288361",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_8097271",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_4888977",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7942633",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7047424",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_8478986",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_4796715",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_9567627",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_9724967",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_6845802",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_8243278",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_9450664",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_6228467",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_6718800",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7336300",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_2570079",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_5121446",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_6028555",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_3184660",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_3055972",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_8822810",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_5252300",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_6317807",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_4111004",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_4647781",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_3196383",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_3933453",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7107242",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_9712629",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1715000",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7291803",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_8113262",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7747053",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_3896586",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1871524",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1685357",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_6789665",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_3313802",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_3981320",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7986880",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7944675",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_9081421",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_9096505",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7339178",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_2423743",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7900031",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_5634957",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7216223",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_2834810",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_5193919",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_6789338",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_8607461",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_2219605",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_6254871",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_8858063",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_9731115",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_4516828",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_2873522",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7688932",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_5746942",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_3509548",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_6534673",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7127083",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_6936337",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7261798",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_3165770",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_9376312",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_2307172",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_3291004",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_3072900",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7084111",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7297853",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_5645413",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_6048650",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_5442096",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_4804879",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_5299729",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_5535123",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_5115177",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_9352470",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_9648858",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1980197",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1943989",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_8663276",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_6108429",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_4744705",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_2932438",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_9178816",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_9395846",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_8104592",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_3221986",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_9374610",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7207844",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7479382",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_5229066",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_5289669",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_2525007",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_8913233",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1398413",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_3262640",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1455576",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_2353100",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1360140",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_5518526",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_9994658",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1675891",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_2433267",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_5936861",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_8972124",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_1899514",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_7498592",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_3028051",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_3430581",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metadata_LA_E_4840870",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "class_denominators",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_originals_long",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "spoof_attack_balance",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_op_wave_and_score",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "finite_scores",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "used_sample_lengths",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "ROC_control_0.0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "ROC_control_100.0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "ROC_control_50.0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_ROC_head_legacy240_4.0375_native",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_ROC_head_legacy240_4.0375_repeat4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_ROC_head_legacy240_2_native",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_ROC_head_legacy240_2_repeat4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_ROC_head_legacy240_1_native",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_ROC_head_legacy240_1_repeat4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_ROC_head_B_4.0375_native",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_ROC_head_B_4.0375_repeat4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_ROC_head_B_2_native",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_ROC_head_B_2_repeat4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_ROC_head_B_1_native",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_ROC_head_B_1_repeat4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_ROC_tail_legacy240_4.0375_native",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_ROC_tail_legacy240_4.0375_repeat4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_ROC_tail_legacy240_2_native",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_ROC_tail_legacy240_2_repeat4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_ROC_tail_legacy240_1_native",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_ROC_tail_legacy240_1_repeat4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_ROC_tail_B_4.0375_native",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_ROC_tail_B_4.0375_repeat4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_ROC_tail_B_2_native",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_ROC_tail_B_2_repeat4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_ROC_tail_B_1_native",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_ROC_tail_B_1_repeat4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_ROC_head_tail_score_mean_legacy240_4.0375_native",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_ROC_head_tail_score_mean_legacy240_4.0375_repeat4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_ROC_head_tail_score_mean_legacy240_2_native",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_ROC_head_tail_score_mean_legacy240_2_repeat4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_ROC_head_tail_score_mean_legacy240_1_native",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_ROC_head_tail_score_mean_legacy240_1_repeat4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_ROC_head_tail_score_mean_B_4.0375_native",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_ROC_head_tail_score_mean_B_4.0375_repeat4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_ROC_head_tail_score_mean_B_2_native",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_ROC_head_tail_score_mean_B_2_repeat4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_ROC_head_tail_score_mean_B_1_native",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_ROC_head_tail_score_mean_B_1_repeat4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "algebra_head_legacy240_2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "algebra_head_legacy240_1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "algebra_head_B_2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "algebra_head_B_1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "algebra_tail_legacy240_2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "algebra_tail_legacy240_1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "algebra_tail_B_2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "algebra_tail_B_1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "algebra_head_tail_score_mean_legacy240_2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "algebra_head_tail_score_mean_legacy240_1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "algebra_head_tail_score_mean_B_2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "algebra_head_tail_score_mean_B_1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "fixed_content_dose_ROC_legacy240_2_native",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "fixed_content_dose_ROC_legacy240_2_repeat2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "fixed_content_dose_ROC_legacy240_2_repeat3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "fixed_content_dose_ROC_legacy240_2_repeat4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "fixed_content_dose_ROC_legacy240_1_native",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "fixed_content_dose_ROC_legacy240_1_repeat2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "fixed_content_dose_ROC_legacy240_1_repeat3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "fixed_content_dose_ROC_legacy240_1_repeat4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "fixed_content_dose_ROC_B_2_native",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "fixed_content_dose_ROC_B_2_repeat2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "fixed_content_dose_ROC_B_2_repeat3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "fixed_content_dose_ROC_B_2_repeat4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "fixed_content_dose_ROC_B_1_native",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "fixed_content_dose_ROC_B_1_repeat2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "fixed_content_dose_ROC_B_1_repeat3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "fixed_content_dose_ROC_B_1_repeat4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "authored_tables_match_calculated_values",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_primary_value_4.0375_B_native_EER_percent",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_primary_value_4.0375_original_repeat4_EER_percent",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_primary_value_2_B_native_EER_percent",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_primary_value_2_original_repeat4_EER_percent",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_primary_value_1_B_native_EER_percent",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_primary_value_1_original_repeat4_EER_percent",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_table_columns_423",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_table_columns_424",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_table_columns_425",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_table_columns_426",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_table_columns_427",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_table_columns_428",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_table_columns_429",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_table_columns_430",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_table_columns_431",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_table_columns_432",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_table_columns_433",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_table_columns_434",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_table_columns_435",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_table_columns_436",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_table_columns_437",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_table_columns_438",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_table_columns_439",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_table_columns_440",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_table_columns_441",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_table_columns_442",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_table_columns_443",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_table_columns_444",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_table_columns_445",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_table_columns_446",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_table_columns_447",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_table_columns_448",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_table_columns_449",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_table_columns_450",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_table_columns_451",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_table_columns_452",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_table_columns_453",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_table_columns_454",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_table_columns_455",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_link_../../artifacts/crop_repetition_eer_20261111/requested_comparison.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_link_../../artifacts/crop_repetition_eer_20261111/within_model_contrasts.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_link_../../artifacts/crop_repetition_eer_20261111/metrics.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_link_../../artifacts/crop_repetition_eer_20261111/speaker_cluster_intervals.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_link_../../artifacts/crop_repetition_eer_20261111/fixed_content_repeat_dose.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_link_../../artifacts/repetition_shortcut_20261111/new_results/probe_rank0.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_link_../../artifacts/repetition_shortcut_20261111/new_results/probe_rank1.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_link_../../EBM/tools/probe_repetition_shortcut.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_link_../../artifacts/crop_repetition_eer_20261111/validation.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sample_and_checkpoint_limits_retained",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "check_count": 466,
+  "sources": [
+    {
+      "path": "artifacts\\repetition_shortcut_20261111\\new_results\\probe_rank0.csv",
+      "sha256": "a0196fa73a688d97c4ee87a8db2726591c6f10d253786d7c43a3bef8a5111414"
+    },
+    {
+      "path": "artifacts\\repetition_shortcut_20261111\\new_results\\probe_rank1.csv",
+      "sha256": "ce0b681ddf4fc2eb28f95d5cb4a0bea916827f3388353d85779caa45d9fd4655"
+    },
+    {
+      "path": "artifacts\\repetition_shortcut_20261111\\probe_selected.csv",
+      "sha256": "275dbad6116833097b8986c7d0213b20e4df2bab3c58ef228e8cbb3b0ee00735"
+    },
+    {
+      "path": "artifacts\\repetition_shortcut_20261111\\protocol.json",
+      "sha256": "f1e92a5b2170f7da50333f016c09baf46a83e2af33640346251596f1933f9201"
+    },
+    {
+      "path": "EBM\\tools\\probe_repetition_shortcut.py",
+      "sha256": "fa215831054a18746e1fff2d654451b671107d4aacd7ae391233b109c38b01a3"
+    }
+  ],
+  "report_sha256": "31a161a1ff22160b344441e5115b06f8b1adafafb6eae8a3cdd56f2fe4d89cda",
+  "new_training": false,
+  "new_audio_inference": false,
+  "spending_ceiling_usd": 0,
+  "resources_left_running": 0
+}

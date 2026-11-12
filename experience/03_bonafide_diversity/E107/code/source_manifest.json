@@ -1,0 +1,14 @@
+[
+  {
+    "path": "experience/03_bonafide_diversity/E107/code/bpl_frozen_audit_20261030_v1.py",
+    "sha256": "20d12bf9fb722247677800f34d58e59cb31961d8e3ab2b15e6466093252b7f69",
+    "origin": "artifacts/github_archive_20261112/remote_source/historical_analysis/bpl_frozen_audit_20261030_v1.py",
+    "kind": "actual historical analysis source"
+  },
+  {
+    "path": "experience/03_bonafide_diversity/E107/code/bpl_frozen_stats_20261030_v1.py",
+    "sha256": "7cc4b9bca56266a9aba377af2744b91441d949a5b33821843813aa56f99b99e7",
+    "origin": "artifacts/github_archive_20261112/remote_source/historical_analysis/bpl_frozen_stats_20261030_v1.py",
+    "kind": "actual historical analysis source"
+  }
+]

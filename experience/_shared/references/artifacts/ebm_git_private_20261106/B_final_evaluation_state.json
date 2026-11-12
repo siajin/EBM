@@ -1,0 +1,41 @@
+{
+  "stage": "complete_reported_schedule_deleted",
+  "root": "/home/mentee/analysis/ebm_B_final_eval_20261107_215451",
+  "models": [
+    "B_CLS50",
+    "legacy240_CLS50"
+  ],
+  "phases": [
+    "dev",
+    "19LA",
+    "21LA",
+    "21DF"
+  ],
+  "training_complete": true,
+  "evaluation_complete": true,
+  "analysis_complete": true,
+  "prevent_duplicate_launch": true,
+  "smoke_passed": true,
+  "full_QC_passed": true,
+  "evaluator_sha256": "65c089cb30333d9ec5af699f79f8e9baefd0727da40149bebfc7e170285ab63b",
+  "local_score_folder": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\B_final_analysis_20261108_v1",
+  "geometry_launch_requested": true,
+  "geometry_root": "/home/mentee/analysis/ebm_B_final_eval_20261107_215451/mechanism_2x2",
+  "geometry_complete": true,
+  "completed_KST": "2026-11-08T03:34:11+09:00",
+  "report": "docs/experiments/ebm_B_final_results_20261108.md",
+  "figures": "docs/experiments/figures/ebm_B_final_20261108",
+  "validation": "artifacts/geometry_cache/local_analysis/B_final_analysis_20261108_v1/analysis/final_validation.json",
+  "final_counts": {
+    "dev": 24844,
+    "19LA": 71237,
+    "21LA": 148176,
+    "21DF": 533928,
+    "diagnostic_cases": 768
+  },
+  "final_server_verification": "artifacts\\geometry_cache\\local_analysis\\B_final_analysis_20261108_v1\\final_server_verification.json",
+  "conclusion": "DF aggregate improvement; very-short bona fide remedy contradicted; repeat-only training causality not identified",
+  "automation_id": "ebm-b-6",
+  "automation_deleted": true,
+  "automation_deleted_KST": "2026-11-08T03:35:25+09:00"
+}

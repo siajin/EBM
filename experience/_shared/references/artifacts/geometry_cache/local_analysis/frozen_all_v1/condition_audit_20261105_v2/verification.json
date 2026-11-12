@@ -1,0 +1,8588 @@
+{
+  "status": "needs_qualification_source_class_coverage",
+  "KST": "2026-11-05T18:31:21.221928+09:00",
+  "checks": 2101,
+  "completed_fit_records_checked": 569,
+  "completed_outer_selections_checked": 80,
+  "scalers_sampled": 34,
+  "all_CV_partitions_checked": [
+    {
+      "dataset": "DF_pilot",
+      "outer_folds": 5,
+      "inner_folds": 3,
+      "locked_partitions": 20,
+      "completed_fits_checked": 279,
+      "source_class_cells": 6
+    },
+    {
+      "dataset": "21LA_pilot",
+      "outer_folds": 5,
+      "inner_folds": 3,
+      "locked_partitions": 20,
+      "completed_fits_checked": 290,
+      "source_class_cells": 2
+    }
+  ],
+  "coverage_issues": [
+    {
+      "dataset": "DF_pilot",
+      "outer_fold": 0,
+      "partition": "inner2_validation",
+      "missing_source_class_cells": [
+        [
+          "vcc2018",
+          0
+        ]
+      ]
+    },
+    {
+      "dataset": "DF_pilot",
+      "outer_fold": 1,
+      "partition": "inner2_validation",
+      "missing_source_class_cells": [
+        [
+          "vcc2018",
+          0
+        ],
+        [
+          "vcc2020",
+          0
+        ]
+      ]
+    },
+    {
+      "dataset": "DF_pilot",
+      "outer_fold": 2,
+      "partition": "outer_test",
+      "missing_source_class_cells": [
+        [
+          "vcc2018",
+          0
+        ]
+      ]
+    },
+    {
+      "dataset": "DF_pilot",
+      "outer_fold": 3,
+      "partition": "outer_test",
+      "missing_source_class_cells": [
+        [
+          "vcc2018",
+          0
+        ],
+        [
+          "vcc2020",
+          0
+        ]
+      ]
+    },
+    {
+      "dataset": "DF_pilot",
+      "outer_fold": 4,
+      "partition": "inner0_validation",
+      "missing_source_class_cells": [
+        [
+          "vcc2018",
+          0
+        ]
+      ]
+    },
+    {
+      "dataset": "DF_pilot",
+      "outer_fold": 4,
+      "partition": "inner1_train",
+      "missing_source_class_cells": [
+        [
+          "vcc2018",
+          0
+        ]
+      ]
+    },
+    {
+      "dataset": "DF_pilot",
+      "outer_fold": 4,
+      "partition": "inner2_validation",
+      "missing_source_class_cells": [
+        [
+          "vcc2018",
+          0
+        ]
+      ]
+    }
+  ],
+  "OC_signal": [
+    {
+      "dataset": "T",
+      "balanced_OC": 0.06742558389152457,
+      "theoretical_infimum_OC": 0.06346400554036193,
+      "bona_loss": 0.13188387051896944,
+      "spoof_loss": 0.0029672972640797123,
+      "spoof_loss_fraction": 0.02200423854581334,
+      "spoofs_above_margin": 5,
+      "spoof_rows": 22800,
+      "V_EER_zero": null
+    },
+    {
+      "dataset": "V",
+      "balanced_OC": 0.07521400251466619,
+      "theoretical_infimum_OC": 0.06346400554036193,
+      "bona_loss": 0.1504280008149578,
+      "spoof_loss": 4.214374575892032e-09,
+      "spoof_loss_fraction": 2.8015890891262297e-08,
+      "spoofs_above_margin": 0,
+      "spoof_rows": 13632,
+      "V_EER_zero": true
+    }
+  ],
+  "scope": "all existing completed fit signatures and partitions; scaler sampling; static checks for pending work",
+  "future_R2_R3_runtime_QC_not_yet_passed": true,
+  "no_experiments_stopped_or_restarted": true,
+  "no_training_or_audio_inference": true,
+  "details": [
+    {
+      "name": "UIDs_unique",
+      "status": "pass",
+      "dataset": "T",
+      "n": 25380
+    },
+    {
+      "name": "checkpoint_consistent",
+      "status": "pass"
+    },
+    {
+      "name": "UIDs_unique",
+      "status": "pass",
+      "dataset": "V",
+      "n": 14983
+    },
+    {
+      "name": "checkpoint_consistent",
+      "status": "pass"
+    },
+    {
+      "name": "UIDs_unique",
+      "status": "pass",
+      "dataset": "DF_pilot",
+      "n": 20000
+    },
+    {
+      "name": "checkpoint_consistent",
+      "status": "pass"
+    },
+    {
+      "name": "LA_view_hash_and_source",
+      "status": "pass"
+    },
+    {
+      "name": "UIDs_unique",
+      "status": "pass",
+      "dataset": "21LA_pilot",
+      "n": 20000
+    },
+    {
+      "name": "checkpoint_consistent",
+      "status": "pass"
+    },
+    {
+      "name": "no_exact_UID_leakage",
+      "status": "pass",
+      "pair": [
+        "T",
+        "V"
+      ]
+    },
+    {
+      "name": "no_exact_UID_leakage",
+      "status": "pass",
+      "pair": [
+        "DF_pilot",
+        "T"
+      ]
+    },
+    {
+      "name": "no_exact_UID_leakage",
+      "status": "pass",
+      "pair": [
+        "DF_pilot",
+        "V"
+      ]
+    },
+    {
+      "name": "no_exact_UID_leakage",
+      "status": "pass",
+      "pair": [
+        "21LA_pilot",
+        "T"
+      ]
+    },
+    {
+      "name": "no_exact_UID_leakage",
+      "status": "pass",
+      "pair": [
+        "21LA_pilot",
+        "V"
+      ]
+    },
+    {
+      "name": "no_exact_UID_leakage",
+      "status": "pass",
+      "pair": [
+        "21LA_pilot",
+        "DF_pilot"
+      ]
+    },
+    {
+      "name": "equal_primary_class_counts",
+      "status": "pass"
+    },
+    {
+      "name": "equal_primary_class_counts",
+      "status": "pass"
+    },
+    {
+      "name": "executed_source_unchanged",
+      "status": "pass",
+      "script": "frozen_heads.py"
+    },
+    {
+      "name": "executed_source_unchanged",
+      "status": "pass",
+      "script": "frozen_probes.py"
+    },
+    {
+      "name": "executed_source_unchanged",
+      "status": "pass",
+      "script": "frozen_n0.py"
+    },
+    {
+      "name": "executed_source_unchanged",
+      "status": "pass",
+      "script": "frozen_common.py"
+    },
+    {
+      "name": "shared_deterministic_sampler",
+      "status": "pass"
+    },
+    {
+      "name": "all_batches16B144S",
+      "status": "pass"
+    },
+    {
+      "name": "every_training_UID_seen",
+      "status": "pass"
+    },
+    {
+      "name": "shared_deterministic_sampler",
+      "status": "pass"
+    },
+    {
+      "name": "all_batches16B144S",
+      "status": "pass"
+    },
+    {
+      "name": "every_training_UID_seen",
+      "status": "pass"
+    },
+    {
+      "name": "shared_deterministic_sampler",
+      "status": "pass"
+    },
+    {
+      "name": "all_batches16B144S",
+      "status": "pass"
+    },
+    {
+      "name": "every_training_UID_seen",
+      "status": "pass"
+    },
+    {
+      "name": "shared_deterministic_sampler",
+      "status": "pass"
+    },
+    {
+      "name": "all_batches16B144S",
+      "status": "pass"
+    },
+    {
+      "name": "every_training_UID_seen",
+      "status": "pass"
+    },
+    {
+      "name": "shared_deterministic_sampler",
+      "status": "pass"
+    },
+    {
+      "name": "all_batches16B144S",
+      "status": "pass"
+    },
+    {
+      "name": "every_training_UID_seen",
+      "status": "pass"
+    },
+    {
+      "name": "shared_deterministic_sampler",
+      "status": "pass"
+    },
+    {
+      "name": "all_batches16B144S",
+      "status": "pass"
+    },
+    {
+      "name": "every_training_UID_seen",
+      "status": "pass"
+    },
+    {
+      "name": "shared_deterministic_sampler",
+      "status": "pass"
+    },
+    {
+      "name": "all_batches16B144S",
+      "status": "pass"
+    },
+    {
+      "name": "every_training_UID_seen",
+      "status": "pass"
+    },
+    {
+      "name": "shared_deterministic_sampler",
+      "status": "pass"
+    },
+    {
+      "name": "all_batches16B144S",
+      "status": "pass"
+    },
+    {
+      "name": "every_training_UID_seen",
+      "status": "pass"
+    },
+    {
+      "name": "shared_deterministic_sampler",
+      "status": "pass"
+    },
+    {
+      "name": "all_batches16B144S",
+      "status": "pass"
+    },
+    {
+      "name": "every_training_UID_seen",
+      "status": "pass"
+    },
+    {
+      "name": "weighted_OC_exact_balanced_mean",
+      "status": "pass"
+    },
+    {
+      "name": "head_capacity_and_identity",
+      "status": "pass",
+      "kind": "static"
+    },
+    {
+      "name": "centroid_is_nontrainable_buffer",
+      "status": "pass"
+    },
+    {
+      "name": "transformation_l2_bound",
+      "status": "pass"
+    },
+    {
+      "name": "head_capacity_and_identity",
+      "status": "pass",
+      "kind": "dynamic"
+    },
+    {
+      "name": "centroid_is_nontrainable_buffer",
+      "status": "pass"
+    },
+    {
+      "name": "transformation_l2_bound",
+      "status": "pass"
+    },
+    {
+      "name": "head_capacity_and_identity",
+      "status": "pass",
+      "kind": "mlp"
+    },
+    {
+      "name": "centroid_is_nontrainable_buffer",
+      "status": "pass"
+    },
+    {
+      "name": "transformation_l2_bound",
+      "status": "pass"
+    },
+    {
+      "name": "head_capacity_and_identity",
+      "status": "pass",
+      "kind": "metric"
+    },
+    {
+      "name": "centroid_is_nontrainable_buffer",
+      "status": "pass"
+    },
+    {
+      "name": "metric_PSD_trace_bound",
+      "status": "pass"
+    },
+    {
+      "name": "CV_UID_order",
+      "status": "pass"
+    },
+    {
+      "name": "outer_group_disjoint",
+      "status": "pass"
+    },
+    {
+      "name": "outer_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "outer_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_group_disjoint",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_group_disjoint",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_group_disjoint",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "outer_group_disjoint",
+      "status": "pass"
+    },
+    {
+      "name": "outer_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "outer_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_group_disjoint",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_group_disjoint",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_group_disjoint",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "outer_group_disjoint",
+      "status": "pass"
+    },
+    {
+      "name": "outer_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "outer_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_group_disjoint",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_group_disjoint",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_group_disjoint",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "outer_group_disjoint",
+      "status": "pass"
+    },
+    {
+      "name": "outer_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "outer_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_group_disjoint",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_group_disjoint",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_group_disjoint",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "outer_group_disjoint",
+      "status": "pass"
+    },
+    {
+      "name": "outer_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "outer_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_group_disjoint",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_group_disjoint",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_group_disjoint",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "one_outer_holdout_per_UID",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "scaler_train_rows_only",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "scaler_train_rows_only",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "scaler_train_rows_only",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "scaler_train_rows_only",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "scaler_train_rows_only",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "scaler_train_rows_only",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "scaler_train_rows_only",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "scaler_train_rows_only",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "scaler_train_rows_only",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "scaler_train_rows_only",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "scaler_train_rows_only",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "scaler_train_rows_only",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "scaler_train_rows_only",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "scaler_train_rows_only",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "scaler_train_rows_only",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "scaler_train_rows_only",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "CV_UID_order",
+      "status": "pass"
+    },
+    {
+      "name": "outer_group_disjoint",
+      "status": "pass"
+    },
+    {
+      "name": "outer_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "outer_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_group_disjoint",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_group_disjoint",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_group_disjoint",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "outer_group_disjoint",
+      "status": "pass"
+    },
+    {
+      "name": "outer_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "outer_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_group_disjoint",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_group_disjoint",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_group_disjoint",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "outer_group_disjoint",
+      "status": "pass"
+    },
+    {
+      "name": "outer_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "outer_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_group_disjoint",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_group_disjoint",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_group_disjoint",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "outer_group_disjoint",
+      "status": "pass"
+    },
+    {
+      "name": "outer_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "outer_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_group_disjoint",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_group_disjoint",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_group_disjoint",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "outer_group_disjoint",
+      "status": "pass"
+    },
+    {
+      "name": "outer_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "outer_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_group_disjoint",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_group_disjoint",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_group_disjoint",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "inner_binary_class_and_source_presence",
+      "status": "pass"
+    },
+    {
+      "name": "one_outer_holdout_per_UID",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "scaler_train_rows_only",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "scaler_train_rows_only",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "scaler_train_rows_only",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "scaler_train_rows_only",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "scaler_train_rows_only",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "scaler_train_rows_only",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "scaler_train_rows_only",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "scaler_train_rows_only",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "scaler_train_rows_only",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "scaler_train_rows_only",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "scaler_train_rows_only",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "scaler_train_rows_only",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "scaler_train_rows_only",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "scaler_train_rows_only",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "scaler_train_rows_only",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "scaler_train_rows_only",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "scaler_train_rows_only",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "scaler_train_rows_only",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "refit_exact_selected_epochs",
+      "status": "pass"
+    },
+    {
+      "name": "inner_only_epoch_ridge_choice",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "fit_rows_match_locked_fold",
+      "status": "pass"
+    },
+    {
+      "name": "recorded_hyperparameters",
+      "status": "pass"
+    },
+    {
+      "name": "epoch_budget",
+      "status": "pass"
+    },
+    {
+      "name": "saved_P3_choice_reproduced",
+      "status": "pass"
+    },
+    {
+      "name": "saved_P3_choice_reproduced",
+      "status": "pass"
+    },
+    {
+      "name": "saved_P3_choice_reproduced",
+      "status": "pass"
+    },
+    {
+      "name": "saved_P3_choice_reproduced",
+      "status": "pass"
+    },
+    {
+      "name": "saved_P3_choice_reproduced",
+      "status": "pass"
+    },
+    {
+      "name": "saved_P3_choice_reproduced",
+      "status": "pass"
+    },
+    {
+      "name": "saved_P3_choice_reproduced",
+      "status": "pass"
+    },
+    {
+      "name": "saved_P3_choice_reproduced",
+      "status": "pass"
+    },
+    {
+      "name": "saved_P3_choice_reproduced",
+      "status": "pass"
+    },
+    {
+      "name": "saved_P3_choice_reproduced",
+      "status": "pass"
+    },
+    {
+      "name": "saved_P3_choice_reproduced",
+      "status": "pass"
+    },
+    {
+      "name": "saved_P3_choice_reproduced",
+      "status": "pass"
+    },
+    {
+      "name": "saved_P3_choice_reproduced",
+      "status": "pass"
+    },
+    {
+      "name": "saved_P3_choice_reproduced",
+      "status": "pass"
+    },
+    {
+      "name": "saved_P3_choice_reproduced",
+      "status": "pass"
+    }
+  ],
+  "OC_infimum_space": "independent arbitrary unit embeddings per class; encoder attainability not established"
+}

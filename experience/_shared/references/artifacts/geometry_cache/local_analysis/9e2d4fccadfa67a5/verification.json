@@ -1,0 +1,75 @@
+{
+  "status": "pass",
+  "offline": true,
+  "GPU_inference_runs": 0,
+  "SSH_required": false,
+  "verified_utc": "2026-11-05T01:19:43.822890+00:00",
+  "cached_datasets": [
+    {
+      "dataset": "T",
+      "fingerprint": "686e593443178bb89241e48ab9a148e1f248f2025140f379d564c19a75198b4b",
+      "z_shape": [
+        25380,
+        160
+      ],
+      "h_shape": [
+        25380,
+        160
+      ],
+      "analysis_complete": true
+    },
+    {
+      "dataset": "V",
+      "fingerprint": "686e593443178bb89241e48ab9a148e1f248f2025140f379d564c19a75198b4b",
+      "z_shape": [
+        14983,
+        160
+      ],
+      "h_shape": [
+        14983,
+        160
+      ],
+      "analysis_complete": true
+    },
+    {
+      "dataset": "DF_pilot",
+      "fingerprint": "1b0a7488e72f4ec277c88575c51ce983bc9879e9ed092249938eb3c84fc69bae",
+      "z_shape": [
+        20000,
+        160
+      ],
+      "h_shape": [
+        20000,
+        160
+      ],
+      "analysis_complete": true
+    }
+  ],
+  "validation": [
+    {
+      "status": "pass",
+      "dataset": "T",
+      "rows": 25380,
+      "cache_fingerprint": "686e593443178bb89241e48ab9a148e1f248f2025140f379d564c19a75198b4b",
+      "file_hashes_checked": true
+    },
+    {
+      "status": "pass",
+      "dataset": "V",
+      "rows": 14983,
+      "cache_fingerprint": "686e593443178bb89241e48ab9a148e1f248f2025140f379d564c19a75198b4b",
+      "file_hashes_checked": true
+    },
+    {
+      "status": "pass",
+      "dataset": "DF_pilot",
+      "rows": 20000,
+      "cache_fingerprint": "1b0a7488e72f4ec277c88575c51ce983bc9879e9ed092249938eb3c84fc69bae",
+      "file_hashes_checked": true
+    }
+  ],
+  "not_available": [],
+  "metrics_recomputed": 43,
+  "metrics_file": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\9e2d4fccadfa67a5\\metrics.csv",
+  "scope": "T train diagnostic; V source-domain development; DF_pilot fixed 20000 sample; 21LA_eval full official eval when cached"
+}

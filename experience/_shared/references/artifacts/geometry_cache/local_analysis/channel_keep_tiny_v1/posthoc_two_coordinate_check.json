@@ -1,0 +1,12 @@
+{
+  "status": "pass",
+  "scope": "posthoc numerical verification only; no fitting or threshold selection",
+  "coordinates_zero_based": [
+    113,
+    95
+  ],
+  "formula": "cos(atan2(z[K][1],z[K][0])-atan2(c[K][1],c[K][0]))",
+  "max_angle_score_error": 4.440892098500626e-16,
+  "max_score_difference_bottom3_vs_bottom2": 1.5547620514820366,
+  "row_alignment_verified": true
+}

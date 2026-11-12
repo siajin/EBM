@@ -1,0 +1,20 @@
+{
+  "objective": "Create a separate Korean Markdown report using completed controls that support the bounded role of pre-normalization magnitude statistics and direction-scale interaction.",
+  "status": "complete",
+  "spending_ceiling_usd": 0,
+  "new_training": false,
+  "new_audio_inference": false,
+  "new_readout_fits": 0,
+  "remote_queries": false,
+  "parent_thread_changes": false,
+  "preserved_documents": {
+    "docs/experiments/ebm_five_research_themes_20261111.md": "88410d1036b50329f21a3033b7c328a66c97fcfff4635dadd3dad56a251c43d9",
+    "docs/experiments/ebm_completed_evidence_interpretation_20261111.md": "de7f78003a5bc97a7a4b7dd5a0ba06f11dd5b803caf15bfd71f10e37704697a1",
+    "docs/experiments/ebm_duration_bias_research_20261111.md": "7f5ca92ea261f5084f3cf9756847c20d196cbabd20de76e30902d20c6bdeb67a"
+  },
+  "cleanup": "Synchronous local documentation and saved-prediction arithmetic only; no background or paid resource.",
+  "resources_left_running": 0,
+  "selection_rule": "Keep completed controlled comparisons, use the metric actually supported, retain contrary EER outcomes, and do not equate joint mean/scale evidence with norm-only efficacy.",
+  "report": "docs\\experiments\\ebm_norm_information_research_20261111.md",
+  "validation_checks": 133
+}

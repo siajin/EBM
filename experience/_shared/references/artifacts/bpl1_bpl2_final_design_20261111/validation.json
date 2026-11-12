@@ -1,0 +1,42 @@
+{
+  "status": "design_artifacts_written",
+  "permutation_invariance": {
+    "original_12x12_bpl": 29.711611489784907,
+    "reordered_bpl": 29.711611489784907,
+    "absolute_difference": 0.0,
+    "paired_diagonal_12": 30.045881307655975,
+    "within_speaker_48": 29.879597342688047,
+    "all_pairs_permutation_invariant": true,
+    "conclusion": "Reordering alone cannot define BPL1/BPL2. Selection masks, group-scoped calls, or pair weighting must change."
+  },
+  "train_pair_feasibility": {
+    "normal_sources": 2580,
+    "speakers": 20,
+    "pair_rule": "same speaker, different UID, min(unique_cap_i,unique_cap_j)/max(...)>=0.8; input both wrap4.0375s; metadata only",
+    "at_least_one_peer": 2579,
+    "no_peer": 1,
+    "median_peers": 77.0,
+    "at_least12_peers": 2557,
+    "native_short_le2": 109,
+    "bpl2_short_original_policy": "If unique length<2s keep all unique content, no extra crop; original remains in OC and BPL sampling. Otherwise retain80-90% nested input.",
+    "cost_usd": 0,
+    "new_training_or_gpu_operations": 0
+  },
+  "new_training_started": false,
+  "new_gpu_job_started": false,
+  "live_experiment_modified": false,
+  "papers_read": "evidence_review.json",
+  "unverified_before_implementation": [
+    "VAD feasibility",
+    "gradient-flow implementation and valid-count DDP normalization",
+    "student masks/dropout/RNG preservation",
+    "actual fixed/masked forward equivalence and memory",
+    "accuracy effects and optimal coefficients"
+  ],
+  "source_hashes": {
+    "EBM\\model\\loss.py": "b3c282817cf7a2781fab2881cf1508ca862710245002c78e5a5ad2708815f7bb",
+    "artifacts\\repetition_shortcut_20261111\\findings.json": "74ebe9e5956bfe8f1dac878c372c6e306e43ec7c4e16a0de6a55c0f2ea6fd3d4",
+    "artifacts\\coverage20_length_shortcut_20261111\\analysis.json": "6583ccbc45b45a7b9a2d8cd0ac4ce3c9d038c8d3984e54ee81adfc74424e0af7",
+    "artifacts\\literature\\short_crop_hypothesis_20261111\\evidence_review.json": "0756d40c5e371e6f75dcaaca45505821e1b11769cf2a02af448cb57e5dcc4e3d"
+  }
+}

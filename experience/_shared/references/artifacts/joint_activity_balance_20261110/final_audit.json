@@ -1,0 +1,15 @@
+{
+  "legacy240_path": "84a828eeda71d74212178dc2c2f02e72f8bb79b3573354f6cd9ca181a376d19e",
+  "B_path": "63ed02a1baef97efa9c8b701814dcccebf3360d441782abe9688d8edb3cdf457",
+  "B_TrainState_path": "3b1fe8ac2ec67e680ac582365e40cd6f34451a42484858f847f55e41a1b1cba0",
+  "C_path": "dcf7e141a35eb2d19adfa8a1ec36bf89d9a557c5b8ece4344939809c1aa1fa3d",
+  "C_TrainState_path": "6dc0d45cf402d1cb00a2085d7c9c98f2891df5c610344b9e8b59a641b57d0d20",
+  "git_branch": "train/ebm-C-native-long-e50-bs240-20261108",
+  "git_commit": "cf199af03044c40837c08ce31d633e2c048bde08",
+  "git_status": "",
+  "foreground": "352729  352729",
+  "gpu": "6, 6, 0\n7, 6, 0",
+  "source_files_equal": 38,
+  "source_manifest": "v5_source_manifest.json",
+  "live_server_repo_changed": false
+}

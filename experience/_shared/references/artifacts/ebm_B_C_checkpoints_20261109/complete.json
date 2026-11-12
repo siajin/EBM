@@ -1,0 +1,12 @@
+{
+  "status": "evaluation_complete_analysis_pending",
+  "phase_counts": {
+    "dev": 24844,
+    "19LA": 71237,
+    "21LA": 148176,
+    "21DF": 533928
+  },
+  "protocol": "B/C epochs5,10,15,20,25,30,35,40,45,50; common B cap/masks/batch8; pooling noise1e-5; common RNG",
+  "no_target_checkpoint_selection": true,
+  "thresholds_selected_on_dev_only": true
+}

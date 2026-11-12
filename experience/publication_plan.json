@@ -1,0 +1,14 @@
+{
+  "objective": "Publish all recorded EBM training and experimental code plus detailed Korean hypothesis-grouped reports to the user's private siajin/EBM repository, including the default-branch README.",
+  "spending_ceiling_usd": 0,
+  "new_training": false,
+  "new_audio_inference": false,
+  "remote_mutations": false,
+  "automatic_compute_retries": 0,
+  "publication": "One reviewed archive commit based on the latest remote main; preserve existing branches and all local uncommitted files. Update main without force and verify remote contents.",
+  "evidence_priority": ["saved metrics and completion receipts", "frozen source and actual run configuration", "reviewed detailed experiment registry", "historical prose and plans"],
+  "deliverables": ["root README with EBM explanation, hypothesis links, concise final results", "experience/<hypothesis>/<experiment>/README.md and code", "source snapshots, source and evidence manifests", "coverage and validation report"],
+  "checks": ["account for every existing experiment ID and newer work", "review all per-experiment methods, observations and limitations", "distinguish failed, stopped, canceled, pilot, diagnostic and completed runs", "verify source provenance and hashes", "validate links and Python syntax", "scan publication payload for credentials, models, audio and feature arrays", "confirm remote main commit and representative files"],
+  "cleanup": "Read-only SSH/SFTP sessions close in finally blocks. Local synchronous packaging only. No new paid resources, GPU jobs, background processes or schedules. Preserve source workspace and publication receipts.",
+  "status": "auditing"
+}

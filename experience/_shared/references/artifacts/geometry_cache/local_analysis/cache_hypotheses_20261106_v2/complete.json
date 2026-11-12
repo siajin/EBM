@@ -1,0 +1,13 @@
+{
+  "status": "complete",
+  "finished_KST": "2026-11-06T12:42:52.397155+09:00",
+  "seconds": 33.15967520000413,
+  "hypotheses_checked": [
+    "H3",
+    "H4",
+    "H5",
+    "H1_partial"
+  ],
+  "new_head_fits": 0,
+  "new_audio_inference": 0
+}

@@ -1,0 +1,60 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "phase": "dev",
+      "N": 24844,
+      "unique_UID": true,
+      "full_indices": true,
+      "labels_match_expected_counts": true,
+      "scores_finite": true,
+      "caps_valid": true,
+      "independent_EER_matches_server": true,
+      "dev_threshold_only": true
+    },
+    {
+      "phase": "19LA",
+      "N": 71237,
+      "unique_UID": true,
+      "full_indices": true,
+      "labels_match_expected_counts": true,
+      "scores_finite": true,
+      "caps_valid": true,
+      "independent_EER_matches_server": true,
+      "dev_threshold_only": true
+    },
+    {
+      "phase": "21LA",
+      "N": 148176,
+      "unique_UID": true,
+      "full_indices": true,
+      "labels_match_expected_counts": true,
+      "scores_finite": true,
+      "caps_valid": true,
+      "independent_EER_matches_server": true,
+      "dev_threshold_only": true
+    },
+    {
+      "phase": "21DF",
+      "N": 533928,
+      "unique_UID": true,
+      "full_indices": true,
+      "labels_match_expected_counts": true,
+      "scores_finite": true,
+      "caps_valid": true,
+      "independent_EER_matches_server": true,
+      "dev_threshold_only": true
+    }
+  ],
+  "thresholds": {
+    "B": -0.8357445001602173,
+    "legacy240": 0.9927266836166382
+  },
+  "uncertainty": "paired protocol-speaker cluster bootstrap5000; primary six global class-error differences family corrected; bins exploratory",
+  "EER_uncertainty": "point estimates only; class error-difference intervals are not EER intervals",
+  "limits": [
+    "one trained seed",
+    "legacy/B training differences confounded",
+    "finite benchmark and protocol speakers, not all unseen sources"
+  ]
+}

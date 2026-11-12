@@ -1,0 +1,14 @@
+[
+  {
+    "path": "experience/01_duration_bias/E110/code/asv_quiet_bpl_distribution_20261030_v1.py",
+    "sha256": "927a81d7c00cccf8da2a7dfe43bcdaab44f23c0c6900d5fa4002c317d3e8d8c9",
+    "origin": "artifacts/github_archive_20261112/remote_source/historical_analysis/asv_quiet_bpl_distribution_20261030_v1.py",
+    "kind": "actual historical analysis source"
+  },
+  {
+    "path": "experience/01_duration_bias/E110/code/summarize_asv_quiet_bpl_distribution_20261030_v1.py",
+    "sha256": "6219ec019e5677905a3c8aaabb9ada79f5114b50ad47454fb75a357373f20503",
+    "origin": "artifacts/github_archive_20261112/remote_source/historical_analysis/summarize_asv_quiet_bpl_distribution_20261030_v1.py",
+    "kind": "actual historical analysis source"
+  }
+]

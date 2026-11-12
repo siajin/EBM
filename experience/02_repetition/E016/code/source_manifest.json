@@ -1,0 +1,14 @@
+[
+  {
+    "path": "experience/02_repetition/E016/code/EBM/tools/probe_repetition_shortcut.py",
+    "sha256": "fa215831054a18746e1fff2d654451b671107d4aacd7ae391233b109c38b01a3",
+    "origin": "EBM/tools/probe_repetition_shortcut.py",
+    "kind": "explicit method source"
+  },
+  {
+    "path": "experience/02_repetition/E016/code/EBM/tools/analyze_repetition_shortcut.py",
+    "sha256": "3b8a4b095aa412a7ee43f04fd0a391ac7f53163a968c4c53849b9359927d762d",
+    "origin": "EBM/tools/analyze_repetition_shortcut.py",
+    "kind": "implementation / validation source"
+  }
+]

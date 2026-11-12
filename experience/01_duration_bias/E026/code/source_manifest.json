@@ -1,0 +1,680 @@
+[
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/activity_policy.py",
+    "sha256": "8657f9614bc9dcde1b48c295402953bba34d300f1bb8137821f3a58d30f662a8",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/activity_policy.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/arguments.py",
+    "sha256": "ae263994c057d2a6254c0b3cff8324852d66bbf0a5bd320f9e217663b58bfb00",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/arguments.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/baseline240_mild.py",
+    "sha256": "aa74558586d30bf562ae576ec57c4fb76506140700ed2c604f9304107072c158",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/baseline240_mild.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/conditional_bpl2.py",
+    "sha256": "9b85981af242ea4e973066ce7e15be755d42540b72323ec6b32645d3daf3df77",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/conditional_bpl2.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/conditional_bpl2_steps.py",
+    "sha256": "61170035a5a5e60f51b01f3d48dd4ec5f19d2bedb30065cd681491e3cc26f2cf",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/conditional_bpl2_steps.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/controlled_data_loaders.py",
+    "sha256": "7fb4b01d64b572edea180bad6acdb584a125f04c13a46b9b972991e6d2bd1b05",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/controlled_data_loaders.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/data_loaders.py",
+    "sha256": "106809812cfcc113ff49952f9fb75eb99119ef8cf1a851052dc6e75e69b3b04b",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/data_loaders.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/final_audit.py",
+    "sha256": "1c32eeec2ce07b6982ab05753c17b30fc4cc41211c208dfb8bcba2ffe2163ec1",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/final_audit.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/main.py",
+    "sha256": "ab8afc783038ed0d7d3aa00f45eb4f5ad6947ed9b363d786b64de2e2e04e5dea",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/main.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/mild_duration.py",
+    "sha256": "6b424e30be60b64cf583bd7974506b3838a8fdb939cc1ad036bc397382fc8273",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/mild_duration.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/native_steps.py",
+    "sha256": "72aac33f4a9745b4f29c6d25514df38edf4c83ec791b6928c36510d3e70f1c24",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/native_steps.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/positive_bpl.py",
+    "sha256": "f9912467f3cbec576d92823b4eefab986b55b34d5fa2eff5de063ba58fa624ae",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/positive_bpl.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/short32_bpl.py",
+    "sha256": "e3737dd41e8480d831d397b11e0f32a5f44cc68d001126ba6c02fb97e62f0209",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/short32_bpl.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/short32_lifecycle.py",
+    "sha256": "7d1fa2ec64b445dcf59cd8c740310c427206f7f985b8d7ba9fe1b3479a024d5c",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/short32_lifecycle.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/short32_original240.py",
+    "sha256": "9377b0a428c434cf43e4f07fbfe9b600a30863ce041ad1f1e06e0e94ea333022",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/short32_original240.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/train.py",
+    "sha256": "18670b0a5e09f8e9069550ae7426f5af8b4a9e416633e7f5d8de8937f4022fb0",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/train.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/wait_and_launch.py",
+    "sha256": "c1a6cfe0c6dcffb968443aeaa1b41c5035a2440272f96a44e3e0c68f9cbd143e",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/wait_and_launch.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/baseline240_source/data_loaders.py",
+    "sha256": "411e294692207b8f434cc49769cbd052abb51316d4a17fe555c71459d7eea8f6",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/baseline240_source/data_loaders.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/baseline240_source/main.py",
+    "sha256": "f23483e1a8d1bf98edfcd934e9c373821635b9226240677bb38644809a9c0326",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/baseline240_source/main.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/baseline240_source/manifest.json",
+    "sha256": "82d7e9bf93eb5aa02dab528ff0d1b947f37b0b42956c51b92f1ad5e4cc3bd455",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/baseline240_source/manifest.json",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/baseline240_source/train.py",
+    "sha256": "b7b98a182a4946c479f477b7110e1c4a49be53ee6b6e89ef1b4bc4785374873f",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/baseline240_source/train.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/dataset/ASVspoof2019_la_eval.py",
+    "sha256": "cbd2cc71222959a90f3d2d0a3cb76de1f48c93413cdb082ceab1512e53663417",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/dataset/ASVspoof2019_la_eval.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/dataset/ASVspoof2019_la_train.py",
+    "sha256": "3da40334a3888b3cbd063ecdf3db44b9d232f43d7399f6caed2a02e52e5b3172",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/dataset/ASVspoof2019_la_train.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/dataset/ASVspoof2021_df_eval.py",
+    "sha256": "770441069170385d1d7a4bd99a993566aff6e70316a37a3b0605f7b0c6dd2043",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/dataset/ASVspoof2021_df_eval.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/dataset/ASVspoof2021_la_eval.py",
+    "sha256": "fd40380232d142855d967ceffba9d5775938c22f23e9b9ba6a610714a3f63f75",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/dataset/ASVspoof2021_la_eval.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/dataset/__init__.py",
+    "sha256": "4ee0d06be74e9cd8c6401ecfb4dbb1a2026deec84716928e96b5b1e9696705e2",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/dataset/__init__.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/data_processing/__init__.py",
+    "sha256": "cf46131b1390c1c8fef4eaffcaeea84965ff70b093b49a2dbe1c95b9a9dd6d9a",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/data_processing/__init__.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/logger/interface.py",
+    "sha256": "4104bafe47c69d70bb9da65c6d23e65aaf152b38428a5b4432ae8f98c3bc0326",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/logger/interface.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/logger/local.py",
+    "sha256": "090b65c516ebb76d172e6ecc082cb1f2889c9a4a33cc44219e6e1aaf000054be",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/logger/local.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/logger/logger.py",
+    "sha256": "0bc18ed05e7509c9bcecf49b02d4589e8d485e0b12f0541238d1880d2d15ba11",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/logger/logger.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/logger/neptune.py",
+    "sha256": "842fd2d97190c9b18725ec9c264abefb14b192eacaf89df84f63a159127c85a5",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/logger/neptune.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/logger/wandb.py",
+    "sha256": "d83280931a9b51c3c48a28400db34c66328349e16bcc28de63dccf3e85191096",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/logger/wandb.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/logger/__init__.py",
+    "sha256": "69a9ba3b2628685a3fa23102a50a860a1a7c5607a205507e22a62e3cb4e83b10",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/logger/__init__.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/model/b_linear.py",
+    "sha256": "73bd5e5676d4877a8a08f9fb82695b9fd7358d289a94a53b3203ab114920e5cb",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/model/b_linear.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/model/loss.py",
+    "sha256": "b3c282817cf7a2781fab2881cf1508ca862710245002c78e5a5ad2708815f7bb",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/model/loss.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/model/__init__.py",
+    "sha256": "8ac912160cfb7cdad15d5d54ff8dd051a69fa2fc50d433bdf51061ac50c33929",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/model/__init__.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/scheduler/cosine_warmup.py",
+    "sha256": "776ff35974b3cd1bce350ae5a46a528e882f0fbe5495b754ce376d5c7b6ee50a",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/scheduler/cosine_warmup.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/scheduler/steplr.py",
+    "sha256": "c04eb4fd9d016dde5dcca587aac9e1ef1cc83406381f7e173b57e75873a4e2b8",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/scheduler/steplr.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/tests/test_baseline240_mild.py",
+    "sha256": "82d81052736990dd254176fdb79d069c1623b0491f8d0cc67b3d0eeb8272aa72",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/tests/test_baseline240_mild.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/tests/test_conditional_bpl2.py",
+    "sha256": "dbddd91e64c6d3b83225399114052de4940efc49ca520ad7bbc810c286ecef7f",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/tests/test_conditional_bpl2.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/tests/test_positive_bpl.py",
+    "sha256": "ca43eafca1ca1e4800aa93038880a9939c31883dc5eeecd7efa0ce542cc5fec0",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/tests/test_positive_bpl.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/tests/test_short32_bpl.py",
+    "sha256": "4ea897b584fc1b9d377c3c4686c08676559a4c9c818876ba918edc81904367ec",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/tests/test_short32_bpl.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/tests/test_short32_lifecycle.py",
+    "sha256": "5b3f039376396e68ecdf5e7597b86e0975d874593ec5d8e5da4876edbd3fcd5f",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/tests/test_short32_lifecycle.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/tests/test_short32_runner.py",
+    "sha256": "666ff1ab6df61beb439ef647c5f8854097bed01ee30b50295cf2a84840142be8",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/tests/test_short32_runner.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/tools/run_short32_experiment.py",
+    "sha256": "e7833e1dac5ea0580c33c706d02927d849c84181d25c0de335f777e1d645e603",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/tools/run_short32_experiment.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/tools/train_baseline240_mild.py",
+    "sha256": "88f389157c8bb55dbb484461dfc71cab21abbb49292cb7d5acffdc7b7729e75e",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/tools/train_baseline240_mild.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/tools/validate_short32.py",
+    "sha256": "8e225456532920a518e6cb28f460f7d830b25d290a1470d546aabe497b50f95d",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/tools/validate_short32.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/utils/ddp_util.py",
+    "sha256": "43bece35fb033c9f373a631082ebb554f3b3e0f3b73e814957071929f03fac79",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/utils/ddp_util.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/utils/get_threshold.py",
+    "sha256": "f93382289fd71baed602188e1b83ee5f509e66f5507381e52d12e0bcc54e8054",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/utils/get_threshold.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/utils/__init__.py",
+    "sha256": "a63eda2c5181d9de31e02d71b95f2c77fd29800e3c1432b453b795ae617be7b9",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/utils/__init__.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/data_processing/augmentation/augmentation.py",
+    "sha256": "555c0f6be6e4638fea66eedb469f3aa2ba3ab8c171f024f24d49797a85cb1863",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/data_processing/augmentation/augmentation.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/data_processing/augmentation/codec_aug.py",
+    "sha256": "d94287e460ee1d10b7d1f2bfaaa27e638300b77e3cb50d6fd79222de5423ddcd",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/data_processing/augmentation/codec_aug.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/data_processing/augmentation/raw_boost.py",
+    "sha256": "75e2c3d2ce8da0b649dae3ffc2a69817017a5514c6ada2eda28a34eef9aa0739",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/data_processing/augmentation/raw_boost.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/data_processing/augmentation/wav_read_functions.py",
+    "sha256": "28cf65b66970a81f1e7e53a4e16c32cecfe85718722a8155c7e446a74869baeb",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/data_processing/augmentation/wav_read_functions.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/baseline240_source/model/b_linear.py",
+    "sha256": "c2cbcf898f1905c9c6ee8b20ef4514c4af7cb343abbf35e2dbd1fd526ad3459f",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/baseline240_source/model/b_linear.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v1/baseline240_source/model/loss.py",
+    "sha256": "164be4161b57a7899ef7b289e005ab80d12da373922d57e9e021844ea828b1ac",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v1/baseline240_source/model/loss.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/activity_policy.py",
+    "sha256": "8657f9614bc9dcde1b48c295402953bba34d300f1bb8137821f3a58d30f662a8",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/activity_policy.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/arguments.py",
+    "sha256": "ae263994c057d2a6254c0b3cff8324852d66bbf0a5bd320f9e217663b58bfb00",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/arguments.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/baseline240_mild.py",
+    "sha256": "aa74558586d30bf562ae576ec57c4fb76506140700ed2c604f9304107072c158",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/baseline240_mild.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/conditional_bpl2.py",
+    "sha256": "9b85981af242ea4e973066ce7e15be755d42540b72323ec6b32645d3daf3df77",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/conditional_bpl2.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/conditional_bpl2_steps.py",
+    "sha256": "61170035a5a5e60f51b01f3d48dd4ec5f19d2bedb30065cd681491e3cc26f2cf",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/conditional_bpl2_steps.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/controlled_data_loaders.py",
+    "sha256": "7fb4b01d64b572edea180bad6acdb584a125f04c13a46b9b972991e6d2bd1b05",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/controlled_data_loaders.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/data_loaders.py",
+    "sha256": "106809812cfcc113ff49952f9fb75eb99119ef8cf1a851052dc6e75e69b3b04b",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/data_loaders.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/main.py",
+    "sha256": "ab8afc783038ed0d7d3aa00f45eb4f5ad6947ed9b363d786b64de2e2e04e5dea",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/main.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/mild_duration.py",
+    "sha256": "6b424e30be60b64cf583bd7974506b3838a8fdb939cc1ad036bc397382fc8273",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/mild_duration.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/native_steps.py",
+    "sha256": "72aac33f4a9745b4f29c6d25514df38edf4c83ec791b6928c36510d3e70f1c24",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/native_steps.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/positive_bpl.py",
+    "sha256": "f9912467f3cbec576d92823b4eefab986b55b34d5fa2eff5de063ba58fa624ae",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/positive_bpl.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/short32_bpl.py",
+    "sha256": "e3737dd41e8480d831d397b11e0f32a5f44cc68d001126ba6c02fb97e62f0209",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/short32_bpl.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/short32_lifecycle.py",
+    "sha256": "7d1fa2ec64b445dcf59cd8c740310c427206f7f985b8d7ba9fe1b3479a024d5c",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/short32_lifecycle.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/short32_original240.py",
+    "sha256": "9377b0a428c434cf43e4f07fbfe9b600a30863ce041ad1f1e06e0e94ea333022",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/short32_original240.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/train.py",
+    "sha256": "18670b0a5e09f8e9069550ae7426f5af8b4a9e416633e7f5d8de8937f4022fb0",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/train.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/baseline240_source/data_loaders.py",
+    "sha256": "411e294692207b8f434cc49769cbd052abb51316d4a17fe555c71459d7eea8f6",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/baseline240_source/data_loaders.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/baseline240_source/main.py",
+    "sha256": "f23483e1a8d1bf98edfcd934e9c373821635b9226240677bb38644809a9c0326",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/baseline240_source/main.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/baseline240_source/manifest.json",
+    "sha256": "82d7e9bf93eb5aa02dab528ff0d1b947f37b0b42956c51b92f1ad5e4cc3bd455",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/baseline240_source/manifest.json",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/baseline240_source/train.py",
+    "sha256": "b7b98a182a4946c479f477b7110e1c4a49be53ee6b6e89ef1b4bc4785374873f",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/baseline240_source/train.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/dataset/ASVspoof2019_la_eval.py",
+    "sha256": "cbd2cc71222959a90f3d2d0a3cb76de1f48c93413cdb082ceab1512e53663417",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/dataset/ASVspoof2019_la_eval.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/dataset/ASVspoof2019_la_train.py",
+    "sha256": "3da40334a3888b3cbd063ecdf3db44b9d232f43d7399f6caed2a02e52e5b3172",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/dataset/ASVspoof2019_la_train.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/dataset/ASVspoof2021_df_eval.py",
+    "sha256": "770441069170385d1d7a4bd99a993566aff6e70316a37a3b0605f7b0c6dd2043",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/dataset/ASVspoof2021_df_eval.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/dataset/ASVspoof2021_la_eval.py",
+    "sha256": "fd40380232d142855d967ceffba9d5775938c22f23e9b9ba6a610714a3f63f75",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/dataset/ASVspoof2021_la_eval.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/dataset/__init__.py",
+    "sha256": "4ee0d06be74e9cd8c6401ecfb4dbb1a2026deec84716928e96b5b1e9696705e2",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/dataset/__init__.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/data_processing/__init__.py",
+    "sha256": "cf46131b1390c1c8fef4eaffcaeea84965ff70b093b49a2dbe1c95b9a9dd6d9a",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/data_processing/__init__.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/logger/interface.py",
+    "sha256": "4104bafe47c69d70bb9da65c6d23e65aaf152b38428a5b4432ae8f98c3bc0326",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/logger/interface.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/logger/local.py",
+    "sha256": "090b65c516ebb76d172e6ecc082cb1f2889c9a4a33cc44219e6e1aaf000054be",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/logger/local.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/logger/logger.py",
+    "sha256": "0bc18ed05e7509c9bcecf49b02d4589e8d485e0b12f0541238d1880d2d15ba11",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/logger/logger.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/logger/neptune.py",
+    "sha256": "842fd2d97190c9b18725ec9c264abefb14b192eacaf89df84f63a159127c85a5",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/logger/neptune.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/logger/wandb.py",
+    "sha256": "d83280931a9b51c3c48a28400db34c66328349e16bcc28de63dccf3e85191096",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/logger/wandb.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/logger/__init__.py",
+    "sha256": "69a9ba3b2628685a3fa23102a50a860a1a7c5607a205507e22a62e3cb4e83b10",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/logger/__init__.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/model/b_linear.py",
+    "sha256": "73bd5e5676d4877a8a08f9fb82695b9fd7358d289a94a53b3203ab114920e5cb",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/model/b_linear.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/model/loss.py",
+    "sha256": "b3c282817cf7a2781fab2881cf1508ca862710245002c78e5a5ad2708815f7bb",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/model/loss.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/model/__init__.py",
+    "sha256": "8ac912160cfb7cdad15d5d54ff8dd051a69fa2fc50d433bdf51061ac50c33929",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/model/__init__.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/scheduler/cosine_warmup.py",
+    "sha256": "776ff35974b3cd1bce350ae5a46a528e882f0fbe5495b754ce376d5c7b6ee50a",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/scheduler/cosine_warmup.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/scheduler/steplr.py",
+    "sha256": "c04eb4fd9d016dde5dcca587aac9e1ef1cc83406381f7e173b57e75873a4e2b8",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/scheduler/steplr.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/tests/test_baseline240_mild.py",
+    "sha256": "82d81052736990dd254176fdb79d069c1623b0491f8d0cc67b3d0eeb8272aa72",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/tests/test_baseline240_mild.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/tests/test_conditional_bpl2.py",
+    "sha256": "dbddd91e64c6d3b83225399114052de4940efc49ca520ad7bbc810c286ecef7f",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/tests/test_conditional_bpl2.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/tests/test_positive_bpl.py",
+    "sha256": "eace03cdf239579d232153f64c0dde88d037b8025842f0d7e8420fe273185601",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/tests/test_positive_bpl.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/tests/test_short32_bpl.py",
+    "sha256": "4ea897b584fc1b9d377c3c4686c08676559a4c9c818876ba918edc81904367ec",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/tests/test_short32_bpl.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/tests/test_short32_lifecycle.py",
+    "sha256": "5b3f039376396e68ecdf5e7597b86e0975d874593ec5d8e5da4876edbd3fcd5f",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/tests/test_short32_lifecycle.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/tests/test_short32_runner.py",
+    "sha256": "666ff1ab6df61beb439ef647c5f8854097bed01ee30b50295cf2a84840142be8",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/tests/test_short32_runner.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/tools/run_short32_experiment.py",
+    "sha256": "e7833e1dac5ea0580c33c706d02927d849c84181d25c0de335f777e1d645e603",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/tools/run_short32_experiment.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/tools/train_baseline240_mild.py",
+    "sha256": "88f389157c8bb55dbb484461dfc71cab21abbb49292cb7d5acffdc7b7729e75e",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/tools/train_baseline240_mild.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/tools/validate_short32.py",
+    "sha256": "8e225456532920a518e6cb28f460f7d830b25d290a1470d546aabe497b50f95d",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/tools/validate_short32.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/utils/ddp_util.py",
+    "sha256": "43bece35fb033c9f373a631082ebb554f3b3e0f3b73e814957071929f03fac79",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/utils/ddp_util.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/utils/get_threshold.py",
+    "sha256": "f93382289fd71baed602188e1b83ee5f509e66f5507381e52d12e0bcc54e8054",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/utils/get_threshold.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/utils/__init__.py",
+    "sha256": "a63eda2c5181d9de31e02d71b95f2c77fd29800e3c1432b453b795ae617be7b9",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/utils/__init__.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/data_processing/augmentation/augmentation.py",
+    "sha256": "555c0f6be6e4638fea66eedb469f3aa2ba3ab8c171f024f24d49797a85cb1863",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/data_processing/augmentation/augmentation.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/data_processing/augmentation/codec_aug.py",
+    "sha256": "d94287e460ee1d10b7d1f2bfaaa27e638300b77e3cb50d6fd79222de5423ddcd",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/data_processing/augmentation/codec_aug.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/data_processing/augmentation/raw_boost.py",
+    "sha256": "75e2c3d2ce8da0b649dae3ffc2a69817017a5514c6ada2eda28a34eef9aa0739",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/data_processing/augmentation/raw_boost.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/data_processing/augmentation/wav_read_functions.py",
+    "sha256": "28cf65b66970a81f1e7e53a4e16c32cecfe85718722a8155c7e446a74869baeb",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/data_processing/augmentation/wav_read_functions.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/baseline240_source/model/b_linear.py",
+    "sha256": "c2cbcf898f1905c9c6ee8b20ef4514c4af7cb343abbf35e2dbd1fd526ad3459f",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/baseline240_source/model/b_linear.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/snapshots/ebm_short32_original240_e50_20261111_v2/baseline240_source/model/loss.py",
+    "sha256": "164be4161b57a7899ef7b289e005ab80d12da373922d57e9e021844ea828b1ac",
+    "origin": "artifacts/github_archive_20261112/remote_source/training_snapshots/ebm_short32_original240_e50_20261111_v2/baseline240_source/model/loss.py",
+    "kind": "actual frozen training source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/EBM/tools/run_short32_experiment.py",
+    "sha256": "e7833e1dac5ea0580c33c706d02927d849c84181d25c0de335f777e1d645e603",
+    "origin": "EBM/tools/run_short32_experiment.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/EBM/short32_original240.py",
+    "sha256": "9377b0a428c434cf43e4f07fbfe9b600a30863ce041ad1f1e06e0e94ea333022",
+    "origin": "EBM/short32_original240.py",
+    "kind": "explicit method source"
+  },
+  {
+    "path": "experience/01_duration_bias/E026/code/EBM/short32_lifecycle.py",
+    "sha256": "7d1fa2ec64b445dcf59cd8c740310c427206f7f985b8d7ba9fe1b3479a024d5c",
+    "origin": "EBM/short32_lifecycle.py",
+    "kind": "explicit method source"
+  }
+]

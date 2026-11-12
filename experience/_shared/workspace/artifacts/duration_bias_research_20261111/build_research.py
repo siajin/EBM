@@ -1,0 +1,404 @@
+"""Existing-evidence narrative on duration bias. No model import, training or inference."""
+import csv
+import hashlib
+import json
+from pathlib import Path
+
+ROOT=Path(__file__).resolve().parents[2]
+OUT=Path(__file__).resolve().parent
+TARGET=ROOT/'docs/experiments/ebm_duration_bias_research_20261111.md'
+SOURCES=[]
+def read_json(p):
+    SOURCES.append(p)
+    return json.loads((ROOT/p).read_text(encoding='utf-8-sig'))
+def read_csv(p):
+    SOURCES.append(p)
+    return list(csv.DictReader((ROOT/p).open(encoding='utf-8-sig')))
+def source(p,label):
+    SOURCES.append(p)
+    return f'[{label}](../../{p})'
+def table(headers,rows):
+    return '\n'.join(['|'+'|'.join(headers)+'|','|'+'|'.join('---' for _ in headers)+'|']+['|'+'|'.join(map(str,r))+'|' for r in rows])
+def fmt(x,d=6):return f'{float(x):.{d}f}'
+def signed(x,d=4):return f'{float(x):+.{d}f}'.replace('-','−')
+
+geometry=read_json('artifacts/geometry_cache/local_analysis/B_final_analysis_20261108_v1/analysis/geometry_statistics.json')
+dose=read_csv('artifacts/repetition_shortcut_20261111/reviewed_analysis/dose_effects.csv')
+native_lengths=read_csv('artifacts/repetition_shortcut_20261111/original_length_distribution.csv')
+train_lengths=read_csv('artifacts/repetition_shortcut_20261111/training_original_lengths.csv')
+full_eer=read_csv('artifacts/repetition_shortcut_20261111/reviewed_analysis/independent_full_eer.csv')
+operating=read_csv('artifacts/repetition_shortcut_20261111/reviewed_analysis/operating_points_21LA.csv')
+weighted=read_csv('artifacts/repetition_shortcut_20261111/reviewed_analysis/weighted_eer_21LA.csv')
+bc=read_json('artifacts/ebm_B_C_checkpoints_20261109/metrics.json')
+minima=read_json('artifacts/ebm_B_C_checkpoints_20261109/completed_B_C_dataset_minima.json')
+legacy_min=read_json('artifacts/ebm_B_C_checkpoints_20261109/dataset_minimum_comparison_pending_DF.json')['legacy240']
+comparison=read_json('artifacts/ebm_coverage_e20_eval_20261110/comparison.json')
+interpretation=read_json('artifacts/repetition_shortcut_20261111/reviewed_analysis/interpretation.json')
+c_validation=read_json('artifacts/ebm_C_20261108/metadata_validation.json')
+
+baseline_short=[]
+for phase in ['21LA','21DF']:
+    for label in [1,0]:
+        r=next(r for r in geometry if r['model']=='legacy240' and r['phase']==phase and r['label']==label and r['length_bin']=='under2')
+        baseline_short.append([phase,'정상' if label else '위조',r['N'],fmt(r['native_mean_score'],4),fmt(r['wrap_mean_score'],4),signed(r['wrap_mean_score']-r['native_mean_score'])])
+baseline_short_table=table(['평가 자료','종류','원음 수','실제 길이 그대로의 평균 점수','4.0375초 반복 후 평균 점수','반복으로 생긴 변화'],baseline_short)
+
+dose_rows=[]
+for seconds in [1,2]:
+    for treatment,length in [('repeat2','2초'),('repeat3','3초'),('repeat4','4.0375초')]:
+        vals=[next(r for r in dose if r['model']=='legacy240' and r['label']==str(y) and r['crop_seconds']==str(seconds) and r['treatment']==treatment and r['control']=='native') for y in [1,0]]
+        dose_rows.append([f'{seconds}초',length,signed(vals[0]['mean_delta']),signed(vals[1]['mean_delta'])])
+dose_table=table(['고유한 음성 구간','반복 후 입력 길이','정상 평균 점수 변화','위조 평균 점수 변화'],dose_rows)
+
+dist=[]
+t={int(r['label']):r for r in train_lengths if r['threshold_samples']=='32000'}
+dist.append(['2019 LA 학습',f"{int(t[1]['le']):,}/{int(t[1]['n']):,}",fmt(t[1]['le_percent'],2)+'%',f"{int(t[0]['le']):,}/{int(t[0]['n']):,}",fmt(t[0]['le_percent'],2)+'%'])
+for phase,label in [('dev','2019 LA 개발'),('19LA','2019 LA 평가'),('21LA','2021 LA 평가'),('21DF','2021 DF 평가')]:
+    a={int(r['label']):r for r in native_lengths if r['phase']==phase}
+    dist.append([label,f"{int(a[1]['le2']):,}/{int(a[1]['n']):,}",fmt(a[1]['le2_percent'],2)+'%',f"{int(a[0]['le2']):,}/{int(a[0]['n']):,}",fmt(a[0]['le2_percent'],2)+'%'])
+dist_table=table(['자료','2초 이하 정상/전체 정상','정상 중 비율','2초 이하 위조/전체 위조','위조 중 비율'],dist)
+repeat=[]
+t={int(r['label']):r for r in train_lengths if r['threshold_samples']=='64600'}
+repeat.append(['2019 LA 학습',fmt(t[1]['below_percent'],2)+'%',fmt(t[0]['below_percent'],2)+'%'])
+t={int(r['label']):r for r in native_lengths if r['phase']=='21LA'}
+repeat.append(['2021 LA 평가',fmt(t[1]['wrap_long_percent'],2)+'%',fmt(t[0]['wrap_long_percent'],2)+'%'])
+repeat_table=table(['자료','정상에서 반복이 필요한 비율','위조에서 반복이 필요한 비율'],repeat)
+
+fixed50=[]
+for row in comparison['fixed50_reference']:
+    fixed50.append([row['phase'],fmt(row['legacy240_EER_percent'])+'%',fmt(row['B_EER_percent'])+'%',fmt(row['C_EER_percent'])+'%'])
+fixed50_table=table(['평가 자료','기준 반복 학습 모델','반복 제거형 B','긴 입력 상한 제거형 C'],fixed50)
+minimum_rows=[]
+for model,name in [('legacy240','기준 모델·과거 반복 평가'),('B','반복 제거형 B·비반복 평가'),('C','긴 입력 상한 제거형 C·비반복 평가')]:
+    values=legacy_min if model=='legacy240' else {d:minima[d][model] for d in ['19LA','21LA','21DF']}
+    minimum_rows.append([name]+[fmt(values[d]['EER_percent'])+f"% ({values[d]['epoch']}epoch)" for d in ['19LA','21LA','21DF']]+['15~50epoch의 8개' if model=='legacy240' else '5~50epoch의 10개'])
+minimum_table=table(['모델·평가입력','19LA 관측 최소','21LA 관측 최소','DF 관측 최소','후보'],minimum_rows)
+e20=table(['평가 자료','반복 제거형 B·20epoch','긴 입력 상한 제거형 C·20epoch','길이·활동 균형형·20epoch'],[[r['phase'],fmt(r['B_EER_percent'])+'%',fmt(r['C_EER_percent'])+'%',fmt(r['coverage_EER_percent'])+'%'] for r in comparison['same_epoch_comparison']])
+
+response=[]
+for phase in ['21LA','21DF']:
+    for y in [1,0]:
+        vals=[next(r for r in geometry if r['model']==m and r['phase']==phase and r['label']==y and r['length_bin']=='under2') for m in ['legacy240','B']]
+        response.append([phase,'정상' if y else '위조',fmt(vals[0]['mean_absolute_score_change'],4),fmt(vals[1]['mean_absolute_score_change'],4)])
+response_table=table(['평가 자료','2초 미만 종류','기준 모델의 평균 절대 이동','반복 제거형 B의 평균 절대 이동'],response)
+
+paired=[]
+for model,name in [('legacy240','기준 반복 학습 모델'),('B','반복 제거형 B')]:
+    vals={r['condition']:r for r in full_eer if r['model']==model and r['phase']=='21LA'}
+    paired.append([name,fmt(vals['native']['eer'])+'%',fmt(vals['wrap4']['eer'])+'%'])
+paired_table=table(['고정 50epoch 모델','21LA 비반복 평가','같은 원음의 반복 평가'],paired)
+
+body=f'''# 음성 길이 편향을 줄이기 위한 EBM 연구: 관찰, 원인 분석, 학습 결과와 개선 방향
+
+기존 실험을 종합하면, EBM은 같은 음성 내용이라도 길이를 맞추는 처리에 따라 정상·위조 점수가 크게 바뀐다. 이 민감성은 실제 데이터의 클래스별 길이 분포 차이와 만날 때 일반화 문제로 이어질 수 있다. 그러나 반복을 제거하거나 길이를 맞추는 것만으로 문제가 해결되지는 않았다. 특히 **4초 상한을 유지하는 것, 반복을 없애는 것, 긴 원음을 짧은 조각으로 많이 학습하는 것은 서로 다른 변경**이었다.
+
+현재 근거에 맞는 결론은 다음과 같다. **4.0375초의 기본 문맥은 우선 보존하고, 반복 처리와 길이별 클래스 노출을 한 번에 하나씩 바꾸면서, 같은 내용에 대한 표현의 안정성을 확인하는 방향이 타당하다.** 이는 다음 설계의 우선순위에 대한 판단이며 이미 성능 개선이 검증된 방법이라는 뜻은 아니다.
+
+이 문서는 2026-11-11에 정리한 기존 완료 자료를 사용했다. 새 학습·음성 추론·서버 상태 조회는 하지 않았다. 진행 중 실험의 수치는 당시 확보한 결과만 기록했다.
+
+## 1. 먼저 무엇을 길이라고 부르는지 구분한다
+
+**원음 길이**는 파일에 실제로 녹음된 길이다. **입력 길이**는 절단·반복 뒤 모델에 넣는 길이다. **고유한 내용의 길이**는 같은 내용을 되풀이한 시간을 제외한 범위다. 원음 1초를 네 번 붙이면 입력은 약 4초지만 새로운 음성 내용은 늘지 않는다.
+
+기존 EBM의 긴 입력은 정확히 64,600샘플, 즉 **4.0375초**다. 짧은 입력은 48,440샘플, 즉 **3.0275초**다. 긴 원음은 해당 길이의 구간을 사용하고, 부족하면 처음부터 순환 반복해 채웠다. 기준 모델의 긴·짧은 분기를 편의상 4초·3초라고 부를 때는 이 값들을 뜻한다. 반면 뒤의 반복량 진단에서 2초·3초는 정확히 32,000·48,000샘플이며 최대 길이만 4.0375초다. 데이터 조각 학습의 최대 4초도 정확히 64,000샘플이다.
+
+점수는 학습한 정상 기준 벡터와 음성 특징의 코사인 유사도다. −1~1 범위에서 **점수가 커지면 정상 방향, 작아지면 위조 방향**이다. 양수라고 자동으로 정상 판정을 받는 것은 아니다. 실제 판정은 별도 임계값에 달려 있다. **EER은 낮을수록 좋은 분리 성능**이다. 정상 점수 상승, 정상 오류 감소, 전체 EER 감소도 같은 뜻이 아니다.
+
+평가 자료의 약칭은 ASVspoof 2019 LA 공식 평가가 **19LA**, ASVspoof 2021 LA 공식 평가가 **21LA**, ASVspoof 2021 DF 공식 평가가 **DF**다. 학습에는 2019 LA의 별도 학습 분할을 사용한다. epoch은 해당 실행이 정한 학습 순회를 한 번 수행한 단위다. 길이가 다른 음성을 한 묶음으로 계산할 때 덧붙인 0은 실제 음성으로 계산하지 않도록 표시하며, 이 표시를 유효 길이 마스크라고 부른다. 코덱은 음성을 압축하고 다시 푸는 처리다.
+
+## 2. 출발점: 같은 원음의 길이 처리만 바꿔도 점수가 이동했다
+
+### 2.1 자연적으로 짧은 음성: 실제 길이와 반복 입력 비교
+
+먼저 이미 학습한 배치 240 EBM의 가중치를 고정했다. 19LA·21LA·DF에서 정상/위조와 네 원음 길이 구간별로 32개씩, 총 768개를 점수와 무관하게 골랐다. 각 파일을 ① 앞부분 최대 4.0375초, 짧으면 실제 길이 유지, ② 부족하면 순환 반복해 4.0375초로 만든 입력으로 각각 평가했다. 원음·모델은 같고 추론용 작은 잡음은 0으로 고정했다.
+
+그중 **2초 미만인 원음**의 결과는 다음과 같다. 각 행은 같은 32개 파일의 평균이다.
+
+{baseline_short_table}
+
+21LA 위조는 반복으로 평균 −1.0766, DF 위조는 −1.2737만큼 크게 위조 방향으로 갔다. 정상도 함께 위조 방향으로 갔지만 크기는 자료에 따라 달랐다. 특히 DF 정상은 0.9973→0.4269로 크게 이동했다. 따라서 이 현상을 “반복 때문에 정상만 나빠졌다”로 설명할 수 없다. **반복은 정상 오거부를 만들 수 있는 동시에, 위조를 더 쉽게 구분하는 단서로도 작용했다.**
+
+이는 시간에 따른 특징 위치 변화이며 실제 정답이 바뀌었다는 뜻은 아니다. 또한 반복 입력과 실제 길이 입력은 처리 문맥과 입력 길이가 함께 달라지므로, 이 비교만으로 반복의 주기성 하나를 원인으로 확정하지 않았다.
+
+근거: {source('artifacts/geometry_cache/local_analysis/B_final_analysis_20261108_v1/analysis/geometry_statistics.json','같은 원음의 점수·각도 통계')}, {source('docs/experiments/ebm_B_final_results_20261108.md','768개 진단의 표본·검산 방법')}.
+
+### 2.2 긴 원음을 짧게 만든 경우: 같은 내용의 반복량을 늘렸다
+
+다음에는 자연적으로 짧은 파일의 출처 차이를 줄이기 위해 21LA의 긴 원음 336개, 정상 128개·위조 208개를 골랐다. 각 원음의 앞·뒤에서 같은 1초 또는 2초 내용을 취한 뒤, 그 **동일한 구간**을 그대로 넣거나 2초·3초·4.0375초까지 반복했다. 앞·뒤 두 결과는 먼저 원음별로 평균했다. 두 구간을 독립 파일로 세지 않았다.
+
+아래 변화는 ‘같은 짧은 구간을 반복하지 않고 넣었을 때’를 기준으로 한 코사인 점수 차이다. 기준 모델은 앞 절과 같은 배치 240·50epoch다.
+
+{dose_table}
+
+정상 1초 구간은 2초 반복에서 −0.1522, 3초 반복에서 −0.4948, 4.0375초 반복에서 −0.8584로 이동했다. 위조의 이동은 더 컸다. 2초 구간을 2초로 만드는 조건은 파형이 같아 점수 차이가 정확히 0이었다.
+
+**새 내용을 추가하지 않고 반복량만 늘려도 큰 이동이 생겼다.** 따라서 “짧아서 원래 정보가 적다”는 설명만으로는 이 결과를 충분히 설명할 수 없다. 다만 반복량을 늘리면 길이·문맥·접합 횟수도 같이 달라진다. 또 긴 원음의 조각은 자연적으로 짧은 원음과 같은 모집단이 아니다.
+
+이 진단은 원음당 31조건, 총 10,416개 결과를 남겼고, 추론 잡음 0·동일 파형·고정 모델로 검산했다. 저장된 화자 재표집 구간은 탐색적 개별 95% 구간이며, 전체 비교를 보정한 확증 실험은 아니다.
+
+근거: {source('artifacts/repetition_shortcut_20261111/reviewed_analysis/dose_effects.csv','반복량별 두 클래스 점수 변화')}, {source('artifacts/repetition_shortcut_20261111/reviewed_analysis/validation.json','전체 점수·조건 수·독립 ROC 검산')}.
+
+## 3. 그 이동은 정말 반복 때문인가: 세 가지 대조로 범위를 좁혔다
+
+### 3.1 접합부의 튀는 파형 하나로 설명되는가
+
+반복한 음성은 원음 끝과 처음이 붙는 위치에서 불연속이 생길 수 있다. 그래서 접합 위치 양옆 80샘플 구간을 선형 보간해 완화했다. 같은 수의 일반 위치를 완화한 대조도 만들었다. 자연 4.0375초 음성의 해당 위치를 완화한 대조는 이 처리 자체의 영향을 확인하기 위해 넣었다.
+
+정상 1초 구간의 4.0375초 반복 하락 −0.8584 중 접합 완화가 회복한 평균은 +0.0326, 약 **3.80%**였다. 2초 구간은 −0.5035 중 +0.0383, 약 **7.61%**였다. 자연 음성의 위치를 완화하는 것 자체도 점수를 바꿨다. 따라서 이 비율을 정확한 ‘접합 원인의 기여율’로 부르지는 않는다.
+
+**접합을 완화해도 큰 이동이 대부분 남았다.** 접합부만 제거하면 문제가 해결된다는 가설은 지지되지 않았다. 순환 반복을 뒤집힌 파형으로 채우는 반사 처리도 안정적인 해결책이 아니었다.
+
+근거: {source('artifacts/repetition_shortcut_20261111/reviewed_analysis/interpretation.json','접합 완화의 회복량과 해석 범위')}, {source('artifacts/repetition_shortcut_20261111/reviewed_analysis/natural_smoothing_controls.csv','자연 음성에서의 처리 자체 효과')}.
+
+### 3.2 마지막 특징 요약에서 길이만 달라져서 생기는가
+
+별도의 배치 160·50epoch 기존 모델에서도 같은 문제를 분석했다. DF의 출처·클래스·길이를 나눈 471개, 정상 303개·위조 168개를 사용했다. 이 모델과 표본은 앞의 배치 240 실험과 다르므로 수치를 합치지 않는다.
+
+먼저 반복하지 않은 음성을 특징 추출기에 넣은 뒤, **추출된 동일 특징을 시간축에서 두 번·네 번 복제**했다. 이는 파형을 반복하지 않고 마지막 요약 계산의 길이 효과를 보는 대조다. 점수의 평균 절대 변화는 두 번 복제에서 **0.000236**, 네 번에서 **0.000350**이었다. 큰 파형 반복 효과를 설명하기에는 작았다.
+
+실제 파형 반복/비반복에서 최종 평균 특징과 표준편차 특징을 서로 교체한 분석에서는, 짧은 VCC2018 정상의 점수 이동 +1.262285 중 평균 특징을 교체하는 부분의 계산상 몫이 +1.261679였다. 이 수치는 내부 함수의 교체 분해이며 음향 원인의 인과 비율은 아니다. 그래도 단순한 표준편차의 길이 배율만을 주원인으로 보는 설명은 약해졌다.
+
+### 3.3 음성 특징 추출기가 반복 문맥을 직접 볼 때 달라지는가
+
+마지막으로 다음 두 경로를 비교했다.
+
+1. 파형을 4.0375초로 반복한 뒤 사전학습 음성 특징 추출기인 XLS-R에 넣는다.
+2. 실제 길이의 원음을 XLS-R에 넣은 뒤, 나온 특징을 반복·절단해 마지막 분류기에는 똑같이 **201프레임**을 넣는다.
+
+두 번째 경로는 마지막 분류기가 받는 길이는 같지만, XLS-R이 실제로 처리한 음성 문맥이 다르다. 짧은 VCC2018 정상의 정상 기준 각도는 첫 경로 **111.232°**, 두 번째 경로 **9.200°**였다. 각도가 작을수록 정상 기준에 가깝다. 원음이 긴 144개는 입력 자체가 같아 점수 차이가 0이었다.
+
+따라서 **파형 반복이 특징 추출기의 문맥 처리를 바꾸고, 그 변화가 최종 평균 특징과 점수로 이어지는 경로**가 관측됐다. 단순한 마지막 입력 길이 하나로 설명하기 어렵다. 다만 특징을 뒤에서 복제하는 방식도 실제 파형 반복의 완전한 동등물은 아니며, XLS-R의 특정 연산 하나 또는 반복 주기성만을 유일 원인으로 특정하지는 못했다.
+
+세 대조의 근거: {source('docs/experiments/ebm_padding_context_mechanism_20261106.md','471개 문맥·특징 복제·평균/표준편차 교체 실험')}, {source('artifacts/geometry_cache/local_analysis/padding_causal_20261106_v1/pooling_mechanism/summary.json','특징 복제의 실제 변화량')}, {source('artifacts/geometry_cache/local_analysis/padding_causal_20261106_v1/frontend_context/group_effects.csv','같은 201프레임에서의 문맥 대조')}.
+
+### 3.4 여기까지 확인한 것과 아직 확인하지 못한 것
+
+같은 내용의 반복이 출력에 영향을 준다는 것은 직접 확인했다. 하지만 **그 반응을 왜 학습하게 됐는지**는 별도 문제다. 짧은 위조가 많은 학습 분포, 정상끼리의 정렬 손실, 음성 증강, 학습 구현의 영향 중 어느 하나를 이 고정 모델 개입만으로 분리할 수는 없다.
+
+또한 정상 점수를 올리는 처리만으로는 충분하지 않았다. 앞의 471개에서 원음 그대로 입력하면 일부 정상이 구제됐지만 위조 점수도 올라, 표본 EER은 반복 **3.571429%→비반복 9.570957%**로 높아졌다. 이 값은 471개 층화 진단 표본의 결과이며 DF 전체 성능이 아니다.
+
+## 4. 실제 데이터에도 길이와 정답의 연관이 있었다
+
+### 4.1 짧은 원음의 비중은 클래스마다 달랐다
+
+파일 수가 다른 정상·위조는 각 클래스 안의 비율로 비교했다. 아래 경계는 모두 **2초 이하**다.
+
+{dist_table}
+
+학습 자료에서는 위조의 2초 이하 비중이 정상보다 약 3.33배, 21LA 평가에서는 약 9.57배였다. 반복을 없애 실제 길이를 드러내거나 짧은 구간을 많이 학습하면, 모델이 길이와 정답의 연관을 활용할 가능성이 있다. 그러나 이 분포 자체가 모델이 실제로 그 규칙을 사용했다는 증명은 아니다.
+
+경계도 주의해야 한다. 21LA에는 정확히 2초인 정상 64개·위조 497개가 있다. 따라서 2초 미만은 정상 507개·위조 48,696개, 2초 이하는 571개·49,193개다. 앞의 32개 진단은 2초 미만, 다음 전체 오류 분석은 2초 이하를 사용한다.
+
+### 4.2 ‘반복 여부’와 ‘많이 반복됨’은 다르다
+
+4.0375초보다 짧아 반복이 필요한 원음의 비율도 계산했다.
+
+{repeat_table}
+
+학습 자료에서는 반복이 필요한 원음 자체는 오히려 정상에 조금 더 많았다. 반면 아주 짧은 원음은 위조에 훨씬 많아 같은 목표 길이를 만들 때 반복의 정도가 달라질 수 있다. 21LA에서는 반복 필요 비율도 위조 쪽이 더 높았다. **학습과 평가의 연관 구조까지 완전히 같지 않았다.**
+
+따라서 “반복이 있으면 위조”라는 한 줄의 설명보다, 고유 길이·반복량·공격 종류·평가 출처의 조합을 보는 편이 타당하다. EER은 각 클래스 오류율로 계산하므로 위조 파일 수가 9배라는 이유만으로 기계적으로 나빠지는 지표도 아니다.
+
+근거: {source('artifacts/repetition_shortcut_20261111/training_original_lengths.csv','학습 원음의 길이별 정확한 분모')}, {source('artifacts/repetition_shortcut_20261111/original_length_distribution.csv','개발·세 평가 자료의 길이와 반복 필요 비율')}.
+
+### 4.3 길이 분포를 맞춰 다시 계산하면 설명이 끝나는가
+
+21LA에서 정상과 위조의 길이 분포를 맞추되 위조 공격·코덱 비율은 보존하는 가중치를 만들었다. 정상이 없는 1초 이하 위조 3,079개를 공통 비교에서 제외해 145,097개에서 계산했다. 음성을 다시 만들거나 모델을 학습한 것은 아니다.
+
+기준 모델의 비반복 EER은 공통 범위에서 **6.470629→3.799113%**로 낮아졌지만, 반복 제거형 B는 **4.844912→6.262632%**로 높아졌다. 짧은 위조가 많다는 사실이 모든 모델에서 같은 방향의 손해를 만들지는 않았다. 길이 구성과 모델의 반응이 함께 작용했다는 뜻이다.
+
+뒤에서 설명할 길이·활동 균형 학습도 공격·코덱 보존 길이 조정 후 EER이 **7.964363%**로 높게 남았다. 같은 재가중 분석의 B20은 **5.838071%**, C20은 **6.742913%**였다. 평가 길이 구성만 바꾸어도 그 학습의 열세가 사라진 것은 아니다. 재가중은 구간 안의 내용·출처·화자 차이까지 같게 만들지 않는다.
+
+근거: {source('artifacts/repetition_shortcut_20261111/reviewed_analysis/weighted_eer_21LA.csv','반복 진단 점수의 길이·공격·코덱 재가중')}, {source('artifacts/repetition_shortcut_20261111/duration_matched_attack_codec_preserved_eer.csv','지정 20epoch 등을 포함한 기존 점수의 같은 방식 분석')}.
+
+## 5. 그래서 어떤 학습을 비교했는가
+
+|구성|학습의 긴 입력|학습의 짧은 입력·정상쌍|반복|어떤 질문을 다루는가|
+|---|---|---|---|---|
+|기준 EBM·배치 240|앞 4.0375초|3.0275초 구간, 같은 정상 원음 목록의 전체 교차쌍|부족하면 사용|기존 처리 기준|
+|반복 제거형 B|최대 4.0375초 유지|최대 3.0275초 유지, 실제 길이·마스크|사용하지 않음|길이 상한을 유지하며 반복을 제거한 결과|
+|긴 입력 상한 제거형 C|원음 전체|B와 같은 최대 3.0275초|사용하지 않음|학습용 긴 입력의 4.0375초 상한을 없앤 결과|
+|길이·활동 균형형|0.5~4초 중 선택|같은 분포의 독립 정상 묶음과 전체 교차쌍|사용하지 않음|클래스·화자·공격의 길이와 발화 활동을 함께 맞춘 결과|
+|완만한 속도·절단 변형|변형 뒤 기준 EBM의 4.0375초 처리|변형 뒤 3.0275초 처리|기준 학습에서는 사용|내용 손실을 줄인 분포 조정 시도. 완료 EER 없음|
+
+기준 EBM의 분류 손실은 정상/위조를 구분하는 OCSoftmax다. BPL은 정상의 긴 입력 특징과 짧은 입력 특징을 가깝게 한다. 정상 12개씩이면 같은 원음 12쌍과 서로 다른 원음 132쌍, 총 144쌍을 계산한다. 기본 학습은 분류기 본체를 갱신한 뒤 정상 기준 벡터를 갱신하는 두 단계다.
+
+B는 이 손실·배치 크기·초기 seed·고정 특징 추출기를 유지했지만, 과거 기준 학습과 비교하면 샘플러·마스크·작은 묶음 계산 방식 등도 달라졌다. 과거 코덱 실제 실행 여부도 확정되지 않는다. 따라서 기준 모델과 B 차이를 반복 학습 하나의 효과로만 해석하지 않는다.
+
+반면 B와 C의 비교는 더 좁다. 원음 순서·샘플러·기본 설정·평가 입력은 같게 하고 **학습용 긴 입력의 상한만 바꿨다.** C도 짧은 입력의 절단을 없앤 것은 아니다. 긴 입력의 모양이 달라져 실제 잡음 배열까지 완전히 같지는 않다는 제한도 남는다.
+
+## 6. 반복을 제거하면 반복 영향과 EER이 함께 개선됐는가
+
+### 6.1 반복 민감성은 특히 위조에서 줄었지만, 정상 전체가 안정된 것은 아니다
+
+앞의 768개 진단에서 2초 미만 원음의 반복/비반복 점수 차이 절댓값을 비교했다. 각 칸은 같은 클래스 32개의 평균이다.
+
+{response_table}
+
+위조의 평균 절대 이동은 DF 1.2737→0.1780, 21LA 1.0766→0.1680으로 작아졌다. 하지만 정상의 21LA 이동은 0.0700→0.1009로 커졌다. DF 정상도 방향이 뒤집혔다. 기준 모델은 비반복에서 정상 점수가 0.9973이었지만, B는 **0.5355**였고 반복하면 오히려 **0.9868**로 올라갔다.
+
+따라서 “반복의 영향을 줄였다”는 말은 **일부 조건, 특히 짧은 위조의 민감성이 줄었다**는 범위로 써야 한다. 모든 짧은 정상에서 반복 의존성이 제거됐다고 쓰면 반대 근거를 놓친다. 전체 DF의 2초 미만 정상도 같은 비반복 평가·각 모델의 개발 임계값에서 거부가 기준 **155/1,368→B 355/1,368개**로 증가했다. 같은 길이의 위조 통과는 **14,432/115,447→1,994/115,447개**로 줄었다.
+
+근거: {source('artifacts/geometry_cache/local_analysis/B_final_analysis_20261108_v1/analysis/geometry_statistics.json','두 모델의 반복 민감성')}, {source('docs/experiments/ebm_B_final_results_20261108.md','길이별 두 클래스 오류와 임계값 민감도')}.
+
+### 6.2 기존에 기록된 최소 EER: 평가 조건까지 함께 읽는다
+
+사용자가 요청한 대로 20epoch 한 점이 아니라 **남아 있는 평가 기록 중 최소 EER과 그 epoch**를 먼저 제시한다.
+
+{minimum_table}
+
+기준 모델은 과거 순환 반복 평가, B/C는 공통 비반복 평가다. 따라서 이 표는 각 실행의 기록된 최선 성능을 보여 주지만 순수 학습 방법의 공정한 인과 순위표는 아니다. 자료마다 최적 epoch도 달라 한 모델이 세 최소값을 동시에 냈다고 해석하지 않는다.
+
+이 조건에서 B는 DF 최소 EER을 2.396259→2.084875%로 낮췄지만 19LA·21LA 최소값은 높아졌다. **전체 성능이 한 방향으로만 변한 결과는 아니었다.**
+
+### 6.3 같은 비반복 입력의 고정 50epoch 비교
+
+학습한 모델들을 모두 앞 4.0375초 상한·비반복·실제 길이 마스크·각자의 정상 기준 코사인으로 평가한 고정 50epoch 값도 확인했다.
+
+{fixed50_table}
+
+같은 비반복 평가에서는 B가 기준 모델보다 세 자료 모두 낮았다. 이는 B가 비반복 입력에 더 적합한 분리를 학습했다는 관측과 부합한다. 반면 기준 모델의 원래 반복 평가 50epoch는 19LA **0.571040%**, 21LA **1.052789%**, DF **3.477033%**였다. 이 과거 실제 처리와 비교하면 B는 DF에서 개선, 두 LA에서 악화다.
+
+즉 ‘전체 EER이 낮아졌다’ 또는 ‘전체 성능이 낮아졌다’는 한 문장만으로는 부족하다. **어떤 자료에서, 어떤 평가 입력과 비교했는지**가 결론을 바꾼다.
+
+### 6.4 같은 원음의 전체 반복/비반복 평가도 반응 방향이 달랐다
+
+별도 잡음 0 진단의 개발+21LA 전체에서 확인한 고정 50epoch 결과다. 위 정식 평가의 작은 잡음 1e-5 조건과는 구분한다.
+
+{paired_table}
+
+기준 모델의 원음 2초 이하에서 비반복 개발 임계값을 두 입력에 그대로 적용하면 정상 거부는 **27→88/571개**, 위조 통과는 **10,717→1/49,193개**였다. 반복 조건의 개발 임계값으로 다시 정하면 **34/571·451/49,193개**가 됐다. 점수 이동과 임계값 이동이 함께 중요했다.
+
+근거: {source('artifacts/ebm_B_C_checkpoints_20261109/metrics.json','B/C의 모든 저장 epoch 실제 지표')}, {source('artifacts/ebm_B_C_checkpoints_20261109/completed_B_C_dataset_minima.json','B/C 자료별 최소값')}, {source('artifacts/ebm_coverage_e20_eval_20261110/comparison.json','같은 입력 50epoch·과거 반복 평가 비교')}, {source('artifacts/repetition_shortcut_20261111/reviewed_analysis/independent_full_eer.csv','전체 반복 진단 EER')}, {source('artifacts/repetition_shortcut_20261111/reviewed_analysis/operating_points_21LA.csv','2초 이하 오류와 임계값')}.
+
+## 7. 길이와 발화 활동까지 맞춘 학습은 왜 다른 실험인가
+
+### 7.1 실제로 바꾼 것
+
+길이·활동 균형형은 학습 원음 25,380개를 사용했다. 입력 길이를 **0.5/1/1.5/2/2.5/3/3.5/4초**, 목표 확률을 **10/20/30/20/8/5/6/1%**로 정했다. 즉 **전체 선택 입력의 목표 80%가 2초 이하**였다. 4초 초과 입력을 학습하는 방식이 아니었다.
+
+정상/위조의 길이 분포뿐 아니라 20명 화자와 정상·6개 공격으로 나눈 140개 그룹의 길이 정책을 맞췄다. 20ms 프레임 자동 판정으로 측정한 음성활동 비율도 클래스 전체에서 맞췄다. 매 epoch 각 원음을 적어도 한 번 사용하고, 원래 선택 확률을 보존하도록 남는 횟수를 보정했다. 원음 100% 사용은 각 원음의 모든 시간 구간·긴 연속 내용 100% 사용과 다르다.
+
+분류 손실은 유지했지만 정상 정렬의 오른쪽 묶음은 독립적으로 골랐다. 원래 같은 원음 목록의 긴·짧은 입력 대응을 보장하는 방식과 달랐다. 따라서 입력 길이·발화량·표본 노출·정상쌍 구성이 함께 달라진 복합 학습이다. 여러 효과를 한 번에 분리해 검정한 실험이 아니다.
+
+근거: {source('artifacts/ebm_coverage_e50_mid19LA_20261110/experiment.json','실제 학습 설정')}, {source('artifacts/source_coverage_20261110','원음 전수 사용 검증')}, {source('artifacts/joint_activity_balance_20261110','길이·발화 활동 정책 검증')}.
+
+### 7.2 결과와 최소 EER의 적용 범위
+
+이 학습은 20epoch까지 완료한 뒤 사용자가 중단했다. 19LA의 5/10/15/20epoch EER은 **2.622022/2.927272/2.961711/2.708118%**로 관측 최소는 5epoch였다. 21LA·DF는 중단 후 지정한 **20epoch만** 전체 평가했다. 그 두 자료의 여러 epoch 최소값은 확보하지 않았다.
+
+따라서 아래는 최소값 표가 아니라 같은 20epoch를 비교하는 보조 표다.
+
+{e20}
+
+19LA·21LA에서는 B/C보다 높았고, DF에서는 B보다 조금 높고 C보다 조금 낮았다. “길이를 맞췄더니 모든 자료에서 나빠졌다”도 정확하지 않지만, **길이·활동 균형을 통해 LA 성능이 회복됐다는 근거는 없었다.** 50epoch를 완료한 실험으로 쓰지 않는다. 입력·점수 정책은 같지만 B/C 평가와 난수 실행은 달랐다는 제한도 남긴다.
+
+근거: {source('artifacts/ebm_coverage_e20_eval_20261110/comparison.json','지정 20epoch 전체 평가와 비교')}, {source('artifacts/ebm_coverage_e50_mid19LA_20261110/user_stop_20261110.json','학습 중단·저장 범위')}.
+
+## 8. 성능 저하는 4초 절단을 없앴기 때문인가
+
+**그것만으로 설명할 수 없다.** 실험을 다음과 같이 나누어야 한다.
+
+|비교|실제로 확인한 차이|결론|
+|---|---|---|
+|기준 모델→B|4.0375초 상한은 유지했지만 반복을 제거하고 학습 구현도 변경|LA 성능 저하는 긴 입력 상한 제거 없이도 발생했다|
+|B→C|학습 긴 입력만 원음 전체로 확장. 짧은 입력·평가 상한은 유지|상한을 없애는 것이 해결책이라는 근거는 없다. 세 자료의 관측 최소는 B가 더 낮았다|
+|B/C→길이·활동 균형형|최대 4초를 유지하면서 주로 0.5~2초 조각을 사용하고 다른 요소도 함께 변경|이 실험의 성능 저하를 4초 상한 제거 탓으로 볼 수 없다|
+
+B→C에서 4.0375초보다 긴 원음은 정상 **576개**, 위조 **6,195개**였다. C는 이 원음들의 긴 문맥을 더 썼다. 같은 평가를 한 50epoch에서 C는 B보다 19LA EER이 **0.679810→0.584636%**로 낮았지만, 21LA는 **4.792117→5.163467%**, DF는 **2.723788→2.881368%**로 높았다. 세 자료의 관측 최소값도 모두 B가 더 낮았다. 긴 원음을 더 쓰면 항상 이득이라는 결과는 아니다. 단일 학습 seed여서 작은 차이를 보편 법칙으로 만들지는 않는다.
+
+길이·활동 균형형에서는 오히려 **인위적으로 짧은 구간을 많이 만든 영향**을 먼저 의심할 이유가 있다. 긴 음성에서 0.5초·1초·1.5초를 뽑으면 원래 파일이 학습에 등장하더라도 남는 문맥과 발화 내용이 크게 달라진다. 자연적으로 짧은 발화의 특성을 그대로 늘린 것이라고 볼 수 없다. 앞의 반복량 실험도 같은 내용·서로 다른 문맥에 모델이 민감함을 보여 줬다.
+
+이 우려에는 보조 측정도 있다. 음성활동 정책을 맞추기 전 첫 순회의 0.5초 조각에서, 자동 판정상 실제 발화가 100ms 미만인 비율은 정상 **20.64%**, 위조 **12.07%**였다. 이는 조각 길이와 실제 발화 내용의 양이 같지 않다는 예다. 이후 활동 정책을 바꿨으므로 최종 학습에도 이 비율이 그대로 남았다는 뜻은 아니다. 자동 판정은 음소 정보량의 정답 측정도 아니다. {source('artifacts/train_crop_io_activity_20261110/results/activity_by_length_role.csv','초기 조각의 발화량 측정')}
+
+다만 ‘짧은 조각의 정보 손실이 원인’도 아직 확정은 아니다. 이 학습은 독립 정상 묶음, 노출 확률, 음성활동 정책을 함께 바꿨다. 평가 길이·공격·코덱 조정 후에도 B/C 대비 열세가 남은 점을 보면 평가 구성만의 설명 역시 충분하지 않다.
+
+현재의 가장 타당한 해석은 **고정 길이 처리에 적응한 분류 문제를, 실제 길이와 짧은 문맥을 직접 다루는 다른 문제로 바꾸면서 생긴 복합적인 일반화 저하**다. 그 안에서 길이 단서의 노출, 정보 감소, 정상쌍 정렬의 변화가 각각 어느 정도 기여했는지는 분리되지 않았다.
+
+근거: {source('artifacts/ebm_C_20261108/metadata_validation.json','B/C 원음 순서·상한·평가 통제와 실제 변경 범위')}, {source('artifacts/ebm_B_C_checkpoints_20261109/metrics.json','상한 유지·해제 모델의 전체 epoch 결과')}.
+
+## 9. 다른 보완 시도는 어느 단계까지 검증됐는가
+
+### 9.1 길이별 정상 기준 벡터 교체
+
+고정 모델의 정상 기준을 원음 길이에 따른 정상 평균으로 바꾼 실험에서 DF 전체 EER은 **3.241828→3.315623%**로 높아졌다. 길이에 따라 기준을 나누는 것만으로는 충분하지 않았다. 이는 고정 특징의 기준 교체 결과이며 길이 조건을 함께 학습한 모든 방법을 기각한 것은 아니다.
+
+### 9.2 내용 손실을 줄인 속도·절단 변형
+
+최대 20% 절단과 0.8~1.2배 속도 변형으로 원음의 최소 80% 구간을 남기는 학습용 캐시를 만들었다. 정수 샘플 경계를 포함한 기대 2초 이하 비중은 정상 **8.9123%**, 위조 **8.9386%**로 가까워졌다. 하지만 기준 EBM 방식으로 연결한 학습은 첫 실행의 진입 오류, 두 번째 실행의 5epoch 후 평가 모듈 오류로 끝나 **완료 EER가 없다.** 이 방법의 성능 실패·성공으로 해석할 수 없다. 이후 기준 4초 절단까지 적용하면 원음 80%가 최종 입력에 남는다는 보장도 아니다.
+
+고정 모델의 속도 변형 진단에서도 알고리즘에 따른 차이가 컸다. B의 정상 32개에서 원래 거부 2개, 0.8배 감속은 위상 보코더 방식 31개·FFmpeg 방식 2개였다. 따라서 길이를 맞추는 알고리즘의 흔적도 실험 변수가 된다. 이 소표본 진단을 속도 증강 학습 전체의 실패로 확대하지 않는다.
+
+### 9.3 원음 2초 이하 정상에만 추가 길이 정렬
+
+현재 원장에 기록된 후속 학습은 기준 배치 240의 데이터로더·반복·두 단계 학습을 유지하고, **원래 2초 이하인 정상 109개**가 배치에 있을 때만 기존 3.0275초 입력의 앞 2초로 추가 정렬 항을 만든 구성이다. 긴 원음을 새로 2초로 잘라 다량 추가한 구성과 다르다.
+
+추가 항 대상의 기존 4.0375초/3.0275초 행 가중치를 절반으로 줄이고 3.0275초/2초 정렬을 더한다. 대상이 K개면 K×K 전체 교차쌍이므로 같은 원음끼리만 비교하는 손실도 아니다. 기록상 첫 5epoch 19LA EER **2.437306%**만 검산됐고, 이 정리에 확보한 최종 21LA·DF 결과는 없다. 또한 기존 항의 가중치 감소와 새 항 추가를 함께 바꿔 두 효과가 독립적으로 분리된 구성은 아니다.
+
+근거: {source('docs/experiments/ebm_duration_conditioned_centroids_results_20261106.md','길이별 정상 기준 교체')}, {source('artifacts/mild_duration_data_analysis_20261111/shortness_comparison.json','완만한 변형의 길이 경계 포함 기대 비중')}, {source('artifacts/mild_duration_baseline240_20261111_v2/user_stop_20261111_0956.json','변형 학습의 오류·저장 결과 상태')}, {source('docs/experiments/ebm_B_C_all_checkpoint_evaluation_20261109.md','속도 변형 알고리즘 대조')}, {source('EBM/SHORT32_ORIGINAL240.md','원음 2초 이하 추가 항의 실제 구성')}, {source('artifacts/paired_min_eer_20261111/current_eval5_validation.json','확보된 첫 5epoch 결과 검산')}.
+
+## 10. 종합 결론: 무엇이 문제이고 어떻게 해결하는 편이 타당한가
+
+### 10.1 현재 근거가 지지하는 문제 정의
+
+기존 EBM의 길이 문제는 서로 이어진 세 단계로 정리할 수 있다.
+
+1. **입력 처리의 문제:** 같은 고유 음성도 반복량·처리 문맥에 따라 정상·위조 점수가 이동한다. 접합부나 마지막 요약 길이 하나로 설명되지 않고 특징 추출기에서부터 차이가 생긴다.
+2. **데이터 구성의 문제:** 원음 길이와 아주 짧은 음성의 비중이 클래스·자료마다 다르다. 처리 규칙이 그 차이를 표현에 드러내면 평가 출처가 바뀔 때 신뢰하기 어려운 단서가 될 수 있다.
+3. **해결 과정의 문제:** 반복을 없애거나 길이를 맞추는 과정에서 음성 내용·연속 문맥·정상쌍 관계까지 함께 바꾸면, 원래의 분리 단서도 약해지거나 다른 길이 의존성이 생길 수 있다.
+
+따라서 **반복 민감성을 줄이는 것과 정상·위조 분리력을 유지하는 것을 동시에 확인해야 한다.** 반복을 제거한 뒤 아주 짧은 위조에는 좋아지고 정상에는 나빠진 결과가 이 점을 보여 준다. 정상만 중심 쪽으로 이동했다는 그림이나 반복량별 점수 변화만으로 최종 성능 개선을 판단하지 않는다.
+
+### 10.2 기존 결과를 바탕으로 한 개선의 순서
+
+아래는 연구 설계 제안이다. 이번 정리에서 새 실험을 실행한 것은 아니다.
+
+**첫째, 기본 긴 입력의 4.0375초 상한을 우선 유지한다.** B/C 비교에서 상한 제거가 일관된 개선을 주지 않았고, 최대 4초를 유지한 균형 학습도 이미 LA에서 악화했다. 출발점을 안정적으로 고정한 뒤 다른 요인을 분리하는 편이 타당하다. 원음이 짧을 때 어떻게 채울지는 별도로 다룬다.
+
+**둘째, 같은 학습 코드에서 반복만 켜고 끄는 대조가 필요하다.** 과거 기준 모델과 B는 구현도 달랐다. 동일한 샘플러·증강 정책·분류 손실·정상쌍·학습량에서 처리 정책을 바꾸고, 두 학습 모델을 반복/비반복 입력 양쪽으로 평가해야 학습 효과와 평가 적응을 나눌 수 있다. 현재의 고정 모델 반복 실험은 이 학습 대조를 대신하지 못한다.
+
+**셋째, 클래스별 짧은 원음의 노출을 조절하되 긴 원음을 대량의 극단적으로 짧은 조각으로 바꾸지 않는다.** 자연적으로 짧은 정상의 수와 반복 노출량을 명시하고, 같은 길이에서도 정상·위조·공격·화자 구성이 비교 가능한지 확인한다. 현재 원장에서는 정상 109개만 2초 이하이므로 단순 반복 노출 증가가 과적합을 만들 가능성도 남는다. 원음 수, 고유 시간 사용량, 구간 안의 실제 발화량을 함께 측정해야 한다.
+
+**넷째, 분류의 기본 문맥을 보존하면서 제한적으로 길이 일관성을 학습한다.** 정상·위조 분류는 충분한 원래 문맥을 주 입력으로 유지하고, 같은 내용이 충분히 공유되는 길이 쌍을 보조적으로 비교하는 방향이다. 보조 항의 대상·가중치·같은 원음만의 쌍인지 전체 정상 교차쌍인지 명시해야 한다. 짧은 원음에 대한 현재 추가 항도 최종 독립 평가가 나오기 전에는 성공으로 부르지 않는다.
+
+**다섯째, 선택 기준을 전체 EER 하나와 길이별 오류 두 축으로 둔다.** 같은 평가 입력에서 최소 EER·선택 epoch·후보 수를 함께 보고하고, 2초 이하 정상 거부와 위조 통과가 어느 쪽으로 바뀌는지 따로 확인한다. 여러 임계값 규칙은 섞지 않는다. 반복 민감도가 작아져도 EER이 높아지거나 특정 길이의 정상 오류가 커지면 개선이라고 결론내리지 않는다.
+
+구체적으로는 다음처럼 한 가지씩 분리하는 비교가 현재의 미확정 부분을 줄인다. 이 표는 실행 결과가 아닌 제안이며, 현재 학습을 수정·중단하거나 취소한 평가를 재등록하라는 뜻이 아니다.
+
+|분리할 질문|유지할 조건|따로 바꿀 조건|무엇을 알 수 있는가|
+|---|---|---|---|
+|반복 학습 자체가 문제인가?|같은 코드·4.0375초 상한·원음 순서·손실·학습량|학습의 반복 켜기/끄기. 평가도 두 입력으로 교차|학습된 반복 의존성과 평가 입력 불일치를 분리|
+|길이 노출을 맞추는 것의 이득인가?|위 대조의 문맥·정상쌍·손실|원래 짧은 정상/위조의 선택 확률만 조절|짧은 구간 대량 생성과 원음 노출 균형을 분리|
+|현재 3초/2초 추가 항이 유효한가?|원래 데이터로더·분류 손실·대상 원음|기존 항 그대로 / 대상 기존 항만 절반 / 대상 기존 항 절반+추가 항|기존 정렬 약화와 새 길이 정렬의 효과를 분리|
+
+좋은 결과의 기준은 반복 처리 사이의 이동량 감소만이 아니다. **같은 조건의 EER이 낮아지고, 짧은 정상의 오류 감소가 위조 통과 증가와 맞바뀐 것만은 아닌지**까지 확인해야 한다. 새로운 평가 출처에 대한 개선을 주장하려면 여러 학습 초기값에서도 그 방향이 재현되는지 확인하는 단계가 남는다.
+
+### 10.3 연구의 결론 문장
+
+> 기존 EBM은 원음 길이와 반복 전처리에 따라 같은 음성의 표현을 다르게 처리하며, 그 반응은 실제 데이터의 클래스별 길이 차이와 결합한다. 반복 제거는 일부 민감성과 DF 성능을 개선했지만, 모든 짧은 정상과 LA의 분리 성능을 개선하지는 못했다. 학습 긴 입력의 4초 상한 제거도 일관된 해결책이 아니었고, 주로 2초 이하 조각을 쓰는 복합 균형 학습은 4초 상한을 유지했는데도 LA에서 악화했다. 따라서 다음 연구는 4초 기본 문맥을 우선 보존하면서 반복 처리·짧은 원음 노출·보조 정렬을 분리하고, 정상과 위조의 길이별 오류를 함께 줄이는 방향으로 진행하는 것이 타당하다.
+
+## 근거 범위와 재현 자료
+
+이 문서는 점수 변화→반복 문맥 대조→원자료 분포→학습 변경→성능 비교→원인 범위→개선 순서로 기존 결과를 엮었다. 고정 모델의 입력 개입, 데이터 재가중, 실제 재학습, 실패·진행 중 실행은 구분했다. 메타데이터만으로 모형의 학습 원인을 인과적으로 확정하지 않았다.
+
+- [다섯 연구 주제의 전체 기록](ebm_five_research_themes_20261111.md)
+- [110개 전체 실험 방법서](ebm_completed_evidence_interpretation_20261111.md)
+- [이 문서의 수치·조건·링크 검증](../../artifacts/duration_bias_research_20261111/validation.json)
+- [이 문서가 사용한 근거 파일 해시](../../artifacts/duration_bias_research_20261111/sources.json)
+'''
+
+TARGET.write_text(body,encoding='utf-8')
+manifest=[]
+for p in sorted(set(SOURCES)):
+    path=ROOT/p
+    assert path.exists(),p
+    manifest.append({'path':p,'kind':'file' if path.is_file() else 'directory','sha256':hashlib.sha256(path.read_bytes()).hexdigest() if path.is_file() else None})
+(OUT/'sources.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+plan={'objective':'Build a focused Korean research narrative: score shifts, repetition mechanisms, duration distributions, learning interventions, EER comparisons, 4-second-cap hypothesis and bounded conclusions.',
+      'new_training':False,'new_audio_inference':False,'remote_state_query':False,'active_training_changes':False,
+      'spending_ceiling_usd':0,'resource_cleanup':'Local synchronous documentation only; no new background process or paid resource.',
+      'comparison_policy':'Recorded minima first, fixed50 common-input comparison separately, coverage20 target results never described as target minima.',
+      'source_files':len(manifest),'status':'written_pending_validation'}
+plan['preserved_documents']={p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in ['docs/experiments/ebm_completed_evidence_interpretation_20261111.md','docs/experiments/ebm_five_research_themes_20261111.md']}
+(OUT/'plan.json').write_text(json.dumps(plan,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+print(json.dumps({'target':str(TARGET),'bytes':TARGET.stat().st_size,'sources':len(manifest)},ensure_ascii=False))

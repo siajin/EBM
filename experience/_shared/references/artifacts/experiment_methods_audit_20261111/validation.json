@@ -1,0 +1,458 @@
+{
+  "status": "passed",
+  "checked_at_local": "2026-11-11T15:32:31.667567+09:00",
+  "method_items": 110,
+  "source_files": 295,
+  "report_sha256": "de7f78003a5bc97a7a4b7dd5a0ba06f11dd5b803caf15bfd71f10e37704697a1",
+  "checks": [
+    {
+      "name": "110_contiguous_unique_items",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_method_fields_populated",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_110_body_sections_and_toc",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "internal_item_references_exist",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no_replacement_characters_or_non_korean_title",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_source_files_still_match_snapshot",
+      "passed": true,
+      "detail": 295
+    },
+    {
+      "name": "all_local_report_links_resolve",
+      "passed": true,
+      "detail": {
+        "links": 471,
+        "broken": []
+      }
+    },
+    {
+      "name": "folder_document_and_training_coverage",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_26_historical_server_folders_accounted_for",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "old_empty_folder_not_counted_as_finished_performance",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "minimum_19LA_B",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "minimum_in_report_19LA_B",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "minimum_19LA_C",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "minimum_in_report_19LA_C",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "minimum_21LA_B",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "minimum_in_report_21LA_B",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "minimum_21LA_C",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "minimum_in_report_21LA_C",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "minimum_21DF_B",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "minimum_in_report_21DF_B",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "minimum_21DF_C",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "minimum_in_report_21DF_C",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_epoch_table_B_5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_epoch_table_B_10",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_epoch_table_B_15",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_epoch_table_B_20",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_epoch_table_B_25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_epoch_table_B_30",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_epoch_table_B_35",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_epoch_table_B_40",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_epoch_table_B_45",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_epoch_table_B_50",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_epoch_table_C_5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_epoch_table_C_10",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_epoch_table_C_15",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_epoch_table_C_20",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_epoch_table_C_25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_epoch_table_C_30",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_epoch_table_C_35",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_epoch_table_C_40",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_epoch_table_C_45",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_epoch_table_C_50",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "legacy_minimum_uses_final_50epoch_LA_record",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "current19LA_rows_labels_indices",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "current19LA_independent_ROC",
+      "passed": true,
+      "detail": {
+        "recomputed": 2.4373062834601296,
+        "saved": 2.4373062834601296
+      }
+    },
+    {
+      "name": "current19LA_score_hash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "current_model_target_results_not_claimed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "336_sources_31_conditions_10416_rows",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_original_class_counts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "probe_2sec_repeat2_is_identity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "173020_sources_two_inputs_346040_rows",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "27406_long_noops",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "strict_vs_inclusive_2sec_denominators",
+      "passed": true,
+      "detail": "{(0, 'lt'): 48696, (0, 'le'): 49193, (1, 'le'): 571, (1, 'lt'): 507}"
+    },
+    {
+      "name": "all_298_coordinate_conditions_explicit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "conditional_loss_matches_documented_row_weights",
+      "passed": true,
+      "detail": 1.1102230246251565e-16
+    },
+    {
+      "name": "last_hidden_completed_not_pending",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "last_hidden_byte_count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "future_extra_evaluation_remains_cancelled",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unexecuted_designs_separated",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "failed_runs_have_no_performance",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "old_BPL_replication_completed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "old_56224_native_10320_input_records",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "check_count": 62,
+  "computed_B_C_minima": {
+    "19LA": {
+      "B": {
+        "eer_percent": 0.46227056424201773,
+        "epoch": 45,
+        "candidates": 10
+      },
+      "C": {
+        "eer_percent": 0.4884004884004884,
+        "epoch": 40,
+        "candidates": 10
+      }
+    },
+    "21LA": {
+      "B": {
+        "eer_percent": 3.7594492440604754,
+        "epoch": 45,
+        "candidates": 10
+      },
+      "C": {
+        "eer_percent": 4.622075584883023,
+        "epoch": 30,
+        "candidates": 10
+      }
+    },
+    "21DF": {
+      "B": {
+        "eer_percent": 2.084874571255635,
+        "epoch": 5,
+        "candidates": 10
+      },
+      "C": {
+        "eer_percent": 2.152549132179579,
+        "epoch": 5,
+        "candidates": 10
+      }
+    }
+  },
+  "current19LA_independent_eer_percent": 2.4373062834601296,
+  "historical_numeric_receipts": {
+    "E089_multicenter_mean_EER": {
+      "Learned OC": 1.850000000000001,
+      "K=1": 1.8000000000000014,
+      "K=2": 3.8000000000000016,
+      "K=3": 3.9500000000000015,
+      "K=4": 7.249999999999998,
+      "K=8": 10.75
+    },
+    "E100_primary": [
+      {
+        "family": "zero",
+        "label": "bonafide",
+        "contrast": "front_original",
+        "n": 1000,
+        "mean": 0.010258034743368626,
+        "median": -0.0026421844959259033,
+        "toward_n": 291
+      },
+      {
+        "family": "zero",
+        "label": "bonafide",
+        "contrast": "front_back",
+        "n": 1000,
+        "mean": 0.02009392699226737,
+        "median": 7.265806198120117e-05,
+        "toward_n": 495
+      },
+      {
+        "family": "zero",
+        "label": "spoof",
+        "contrast": "front_original",
+        "n": 1000,
+        "mean": -0.08585399894230068,
+        "median": -0.005713969469070435,
+        "toward_n": 95
+      },
+      {
+        "family": "zero",
+        "label": "spoof",
+        "contrast": "front_back",
+        "n": 1000,
+        "mean": 0.03261172301694751,
+        "median": 0.0006699860095977783,
+        "toward_n": 645
+      },
+      {
+        "family": "own40",
+        "label": "bonafide",
+        "contrast": "front_original",
+        "n": 933,
+        "mean": 0.016051614579184647,
+        "median": -0.001062631607055664,
+        "toward_n": 296
+      },
+      {
+        "family": "own40",
+        "label": "bonafide",
+        "contrast": "front_back",
+        "n": 933,
+        "mean": 0.026789177384822442,
+        "median": 0.0006347298622131348,
+        "toward_n": 565
+      },
+      {
+        "family": "own40",
+        "label": "spoof",
+        "contrast": "front_original",
+        "n": 882,
+        "mean": 0.016582351863223748,
+        "median": -0.002082228660583496,
+        "toward_n": 220
+      },
+      {
+        "family": "own40",
+        "label": "spoof",
+        "contrast": "front_back",
+        "n": 882,
+        "mean": 0.08135719509064611,
+        "median": 0.002241373062133789,
+        "toward_n": 693
+      }
+    ]
+  },
+  "new_training": false,
+  "new_audio_inference": false,
+  "active_training_modified": false,
+  "new_paid_resources": false,
+  "scope_limits": [
+    "Method documentation and arithmetic/metadata verification; not a rerun of all historical inference or bootstrap fits.",
+    "Some original-family dependencies and historical codec execution remain unresolved.",
+    "Source inventory coverage does not assert every raw file or log line was read anew."
+  ]
+}

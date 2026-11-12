@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "checks": {
+    "19LA": {
+      "B50_historical_scores_max_error": 0.0,
+      "metadata_exactly_matches_legacy_paired_reference": true,
+      "all21_EER_independent_check": true,
+      "full_UID_label_counts": true,
+      "all_scores_finite": true,
+      "finalized_shard_SHA_checked": true
+    },
+    "21LA": {
+      "B50_historical_scores_max_error": 0.0,
+      "metadata_exactly_matches_legacy_paired_reference": true,
+      "all21_EER_independent_check": true,
+      "full_UID_label_counts": true,
+      "all_scores_finite": true,
+      "finalized_shard_SHA_checked": true
+    }
+  },
+  "length_and_attack_totals_reconcile": true,
+  "paired_error_deltas_reconcile": true,
+  "chart_values_bound_directly_to_verified_metrics": true,
+  "historical_legacy_scope": "Original repeated-input pipeline, not controlled common-input reference",
+  "limitation": "Single model pair/seed; checkpoint outcomes correlated; no uncertainty intervals estimated; DF pending"
+}

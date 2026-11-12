@@ -1,0 +1,3182 @@
+{
+  "remote_root": "/home/mentee/results/analysis/EBM80_21DF_tail_factors_v2",
+  "file_inventory": [
+    {
+      "name": "summary.json",
+      "bytes": 76981,
+      "directory": false
+    }
+  ],
+  "aggregate_json": {
+    "summary.json": {
+      "tail_definition": "Bonafide cosine < 0.9; training margin, not decision error",
+      "cv_speaker_folds": 5,
+      "cv": {
+        "duration_only": {
+          "pooled_oof_auc": 0.6484230123652248,
+          "fold_auc": [
+            0.7247670807453417,
+            0.588264106583072,
+            0.7094815083393765,
+            0.6426822157434402,
+            0.7952380952380953
+          ]
+        },
+        "source_only": {
+          "pooled_oof_auc": 0.862069471014652,
+          "fold_auc": [
+            0.9241718426501035,
+            0.8428683385579938,
+            0.9187817258883249,
+            0.7737609329446062,
+            0.868109668109668
+          ]
+        },
+        "source_duration": {
+          "pooled_oof_auc": 0.896493465561346,
+          "fold_auc": [
+            0.9425465838509317,
+            0.851391065830721,
+            0.9549492385786802,
+            0.8149854227405248,
+            0.8802308802308803
+          ]
+        },
+        "source_codec_duration": {
+          "pooled_oof_auc": 0.9029179585284869,
+          "fold_auc": [
+            0.9528985507246378,
+            0.8516849529780564,
+            0.9630166787527193,
+            0.8290379008746356,
+            0.9033189033189033
+          ]
+        },
+        "duration_acoustic": {
+          "pooled_oof_auc": 0.8640778122274263,
+          "fold_auc": [
+            0.9091614906832298,
+            0.8185736677115987,
+            0.9129804205946339,
+            0.8193586005830904,
+            0.8378066378066379
+          ]
+        },
+        "source_codec_duration_acoustic": {
+          "pooled_oof_auc": 0.9030792122025053,
+          "fold_auc": [
+            0.9598861283643892,
+            0.8569749216300939,
+            0.9427121102248006,
+            0.8580758017492712,
+            0.8822510822510823
+          ]
+        },
+        "ssl_pca16": {
+          "pooled_oof_auc": 0.8572758390688334,
+          "fold_auc": [
+            0.9050207039337475,
+            0.8175940438871473,
+            0.8883248730964467,
+            0.7925364431486881,
+            0.8461760461760462
+          ]
+        },
+        "pool_pca16": {
+          "pooled_oof_auc": 0.9976398325893675,
+          "fold_auc": [
+            0.9976708074534162,
+            0.9998040752351097,
+            0.9996374184191443,
+            0.9928862973760932,
+            0.9994227994227994
+          ]
+        }
+      },
+      "source_duration": [
+        {
+          "source": "asvspoof",
+          "duration": "<=2",
+          "n": 12,
+          "tail_n": 0
+        },
+        {
+          "source": "asvspoof",
+          "duration": "2-3.03",
+          "n": 212,
+          "tail_n": 1
+        },
+        {
+          "source": "asvspoof",
+          "duration": "3.03-4.04",
+          "n": 181,
+          "tail_n": 0
+        },
+        {
+          "source": "asvspoof",
+          "duration": ">4.04",
+          "n": 120,
+          "tail_n": 2
+        },
+        {
+          "source": "vcc2018",
+          "duration": "<=2",
+          "n": 64,
+          "tail_n": 44
+        },
+        {
+          "source": "vcc2018",
+          "duration": "2-3.03",
+          "n": 55,
+          "tail_n": 34
+        },
+        {
+          "source": "vcc2018",
+          "duration": "3.03-4.04",
+          "n": 51,
+          "tail_n": 16
+        },
+        {
+          "source": "vcc2018",
+          "duration": ">4.04",
+          "n": 76,
+          "tail_n": 30
+        },
+        {
+          "source": "vcc2020",
+          "duration": "<=2",
+          "n": 22,
+          "tail_n": 8
+        },
+        {
+          "source": "vcc2020",
+          "duration": "2-3.03",
+          "n": 61,
+          "tail_n": 17
+        },
+        {
+          "source": "vcc2020",
+          "duration": "3.03-4.04",
+          "n": 67,
+          "tail_n": 8
+        },
+        {
+          "source": "vcc2020",
+          "duration": ">4.04",
+          "n": 79,
+          "tail_n": 3
+        }
+      ],
+      "speaker_duration_adjusted": [
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0001",
+          "n": 15,
+          "tail_n": 1,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 0.0,
+          "duration_bins": [
+            {
+              "duration": "<=2",
+              "n": 1,
+              "tail_n": 0,
+              "reference_n": 11,
+              "reference_tail_pct": 0.0
+            },
+            {
+              "duration": "2-3.03",
+              "n": 8,
+              "tail_n": 1,
+              "reference_n": 204,
+              "reference_tail_pct": 0.0
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 6,
+              "tail_n": 0,
+              "reference_n": 175,
+              "reference_tail_pct": 0.0
+            }
+          ]
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0003",
+          "n": 19,
+          "tail_n": 0,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 0.11128205128205129,
+          "duration_bins": [
+            {
+              "duration": "2-3.03",
+              "n": 12,
+              "tail_n": 0,
+              "reference_n": 200,
+              "reference_tail_pct": 0.5
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 4,
+              "tail_n": 0,
+              "reference_n": 177,
+              "reference_tail_pct": 0.0
+            },
+            {
+              "duration": ">4.04",
+              "n": 3,
+              "tail_n": 0,
+              "reference_n": 117,
+              "reference_tail_pct": 1.7094017094017095
+            }
+          ]
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0005",
+          "n": 13,
+          "tail_n": 0,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 0.053129074315514994,
+          "duration_bins": [
+            {
+              "duration": "2-3.03",
+              "n": 4,
+              "tail_n": 0,
+              "reference_n": 208,
+              "reference_tail_pct": 0.4807692307692308
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 7,
+              "tail_n": 0,
+              "reference_n": 174,
+              "reference_tail_pct": 0.0
+            },
+            {
+              "duration": ">4.04",
+              "n": 2,
+              "tail_n": 0,
+              "reference_n": 118,
+              "reference_tail_pct": 1.694915254237288
+            }
+          ]
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0008",
+          "n": 11,
+          "tail_n": 0,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 0.04950495049504951,
+          "duration_bins": [
+            {
+              "duration": "2-3.03",
+              "n": 10,
+              "tail_n": 0,
+              "reference_n": 202,
+              "reference_tail_pct": 0.49504950495049505
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 1,
+              "tail_n": 0,
+              "reference_n": 180,
+              "reference_tail_pct": 0.0
+            }
+          ]
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0013",
+          "n": 25,
+          "tail_n": 0,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 0.23132313231323132,
+          "duration_bins": [
+            {
+              "duration": "2-3.03",
+              "n": 10,
+              "tail_n": 0,
+              "reference_n": 202,
+              "reference_tail_pct": 0.49504950495049505
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 5,
+              "tail_n": 0,
+              "reference_n": 176,
+              "reference_tail_pct": 0.0
+            },
+            {
+              "duration": ">4.04",
+              "n": 10,
+              "tail_n": 0,
+              "reference_n": 110,
+              "reference_tail_pct": 1.8181818181818181
+            }
+          ]
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0015",
+          "n": 13,
+          "tail_n": 0,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 0.1716859716859717,
+          "duration_bins": [
+            {
+              "duration": "2-3.03",
+              "n": 2,
+              "tail_n": 0,
+              "reference_n": 210,
+              "reference_tail_pct": 0.4761904761904762
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 2,
+              "tail_n": 0,
+              "reference_n": 179,
+              "reference_tail_pct": 0.0
+            },
+            {
+              "duration": ">4.04",
+              "n": 9,
+              "tail_n": 0,
+              "reference_n": 111,
+              "reference_tail_pct": 1.8018018018018018
+            }
+          ]
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0016",
+          "n": 10,
+          "tail_n": 0,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 0.04433497536945813,
+          "duration_bins": [
+            {
+              "duration": "<=2",
+              "n": 1,
+              "tail_n": 0,
+              "reference_n": 11,
+              "reference_tail_pct": 0.0
+            },
+            {
+              "duration": "2-3.03",
+              "n": 9,
+              "tail_n": 0,
+              "reference_n": 203,
+              "reference_tail_pct": 0.49261083743842365
+            }
+          ]
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0018",
+          "n": 23,
+          "tail_n": 0,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 0.12617220801364024,
+          "duration_bins": [
+            {
+              "duration": "2-3.03",
+              "n": 8,
+              "tail_n": 0,
+              "reference_n": 204,
+              "reference_tail_pct": 0.49019607843137253
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 10,
+              "tail_n": 0,
+              "reference_n": 171,
+              "reference_tail_pct": 0.0
+            },
+            {
+              "duration": ">4.04",
+              "n": 5,
+              "tail_n": 0,
+              "reference_n": 115,
+              "reference_tail_pct": 1.7391304347826086
+            }
+          ]
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0021",
+          "n": 12,
+          "tail_n": 0,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 0.061141698058533755,
+          "duration_bins": [
+            {
+              "duration": "2-3.03",
+              "n": 9,
+              "tail_n": 0,
+              "reference_n": 203,
+              "reference_tail_pct": 0.49261083743842365
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 2,
+              "tail_n": 0,
+              "reference_n": 179,
+              "reference_tail_pct": 0.0
+            },
+            {
+              "duration": ">4.04",
+              "n": 1,
+              "tail_n": 0,
+              "reference_n": 119,
+              "reference_tail_pct": 1.680672268907563
+            }
+          ]
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0023",
+          "n": 16,
+          "tail_n": 0,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 0.024154589371980676,
+          "duration_bins": [
+            {
+              "duration": "2-3.03",
+              "n": 5,
+              "tail_n": 0,
+              "reference_n": 207,
+              "reference_tail_pct": 0.4830917874396135
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 11,
+              "tail_n": 0,
+              "reference_n": 170,
+              "reference_tail_pct": 0.0
+            }
+          ]
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0026",
+          "n": 15,
+          "tail_n": 0,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 0.10618729096989966,
+          "duration_bins": [
+            {
+              "duration": "<=2",
+              "n": 1,
+              "tail_n": 0,
+              "reference_n": 11,
+              "reference_tail_pct": 0.0
+            },
+            {
+              "duration": "2-3.03",
+              "n": 4,
+              "tail_n": 0,
+              "reference_n": 208,
+              "reference_tail_pct": 0.4807692307692308
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 5,
+              "tail_n": 0,
+              "reference_n": 176,
+              "reference_tail_pct": 0.0
+            },
+            {
+              "duration": ">4.04",
+              "n": 5,
+              "tail_n": 0,
+              "reference_n": 115,
+              "reference_tail_pct": 1.7391304347826086
+            }
+          ]
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0027",
+          "n": 11,
+          "tail_n": 0,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 0.14285714285714285,
+          "duration_bins": [
+            {
+              "duration": "3.03-4.04",
+              "n": 3,
+              "tail_n": 0,
+              "reference_n": 178,
+              "reference_tail_pct": 0.0
+            },
+            {
+              "duration": ">4.04",
+              "n": 8,
+              "tail_n": 0,
+              "reference_n": 112,
+              "reference_tail_pct": 1.7857142857142856
+            }
+          ]
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0028",
+          "n": 14,
+          "tail_n": 0,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 0.048252372070391694,
+          "duration_bins": [
+            {
+              "duration": "2-3.03",
+              "n": 3,
+              "tail_n": 0,
+              "reference_n": 209,
+              "reference_tail_pct": 0.4784688995215311
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 9,
+              "tail_n": 0,
+              "reference_n": 172,
+              "reference_tail_pct": 0.0
+            },
+            {
+              "duration": ">4.04",
+              "n": 2,
+              "tail_n": 0,
+              "reference_n": 118,
+              "reference_tail_pct": 1.694915254237288
+            }
+          ]
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0029",
+          "n": 12,
+          "tail_n": 0,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 0.048252372070391694,
+          "duration_bins": [
+            {
+              "duration": "2-3.03",
+              "n": 3,
+              "tail_n": 0,
+              "reference_n": 209,
+              "reference_tail_pct": 0.4784688995215311
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 7,
+              "tail_n": 0,
+              "reference_n": 174,
+              "reference_tail_pct": 0.0
+            },
+            {
+              "duration": ">4.04",
+              "n": 2,
+              "tail_n": 0,
+              "reference_n": 118,
+              "reference_tail_pct": 1.694915254237288
+            }
+          ]
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0030",
+          "n": 10,
+          "tail_n": 0,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 0.06080586080586081,
+          "duration_bins": [
+            {
+              "duration": "2-3.03",
+              "n": 2,
+              "tail_n": 0,
+              "reference_n": 210,
+              "reference_tail_pct": 0.4761904761904762
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 5,
+              "tail_n": 0,
+              "reference_n": 176,
+              "reference_tail_pct": 0.0
+            },
+            {
+              "duration": ">4.04",
+              "n": 3,
+              "tail_n": 0,
+              "reference_n": 117,
+              "reference_tail_pct": 1.7094017094017095
+            }
+          ]
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0032",
+          "n": 13,
+          "tail_n": 0,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 0.07051282051282051,
+          "duration_bins": [
+            {
+              "duration": "2-3.03",
+              "n": 4,
+              "tail_n": 0,
+              "reference_n": 208,
+              "reference_tail_pct": 0.4807692307692308
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 6,
+              "tail_n": 0,
+              "reference_n": 175,
+              "reference_tail_pct": 0.0
+            },
+            {
+              "duration": ">4.04",
+              "n": 3,
+              "tail_n": 0,
+              "reference_n": 117,
+              "reference_tail_pct": 1.7094017094017095
+            }
+          ]
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0036",
+          "n": 16,
+          "tail_n": 0,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 0.11478696741854635,
+          "duration_bins": [
+            {
+              "duration": "2-3.03",
+              "n": 2,
+              "tail_n": 0,
+              "reference_n": 210,
+              "reference_tail_pct": 0.4761904761904762
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 8,
+              "tail_n": 0,
+              "reference_n": 173,
+              "reference_tail_pct": 0.0
+            },
+            {
+              "duration": ">4.04",
+              "n": 6,
+              "tail_n": 0,
+              "reference_n": 114,
+              "reference_tail_pct": 1.7543859649122806
+            }
+          ]
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0039",
+          "n": 20,
+          "tail_n": 0,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 0.08717948717948718,
+          "duration_bins": [
+            {
+              "duration": "2-3.03",
+              "n": 17,
+              "tail_n": 0,
+              "reference_n": 195,
+              "reference_tail_pct": 0.5128205128205128
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 3,
+              "tail_n": 0,
+              "reference_n": 178,
+              "reference_tail_pct": 0.0
+            }
+          ]
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0040",
+          "n": 16,
+          "tail_n": 0,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 0.06080586080586081,
+          "duration_bins": [
+            {
+              "duration": "2-3.03",
+              "n": 2,
+              "tail_n": 0,
+              "reference_n": 210,
+              "reference_tail_pct": 0.4761904761904762
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 11,
+              "tail_n": 0,
+              "reference_n": 170,
+              "reference_tail_pct": 0.0
+            },
+            {
+              "duration": ">4.04",
+              "n": 3,
+              "tail_n": 0,
+              "reference_n": 117,
+              "reference_tail_pct": 1.7094017094017095
+            }
+          ]
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0042",
+          "n": 14,
+          "tail_n": 0,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 0.04950495049504951,
+          "duration_bins": [
+            {
+              "duration": "2-3.03",
+              "n": 10,
+              "tail_n": 0,
+              "reference_n": 202,
+              "reference_tail_pct": 0.49504950495049505
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 4,
+              "tail_n": 0,
+              "reference_n": 177,
+              "reference_tail_pct": 0.0
+            }
+          ]
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0043",
+          "n": 18,
+          "tail_n": 0,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 0.0715330908482796,
+          "duration_bins": [
+            {
+              "duration": "2-3.03",
+              "n": 11,
+              "tail_n": 0,
+              "reference_n": 201,
+              "reference_tail_pct": 0.4975124378109453
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 6,
+              "tail_n": 0,
+              "reference_n": 175,
+              "reference_tail_pct": 0.0
+            },
+            {
+              "duration": ">4.04",
+              "n": 1,
+              "tail_n": 0,
+              "reference_n": 119,
+              "reference_tail_pct": 1.680672268907563
+            }
+          ]
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0044",
+          "n": 10,
+          "tail_n": 0,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 0.019230769230769232,
+          "duration_bins": [
+            {
+              "duration": "2-3.03",
+              "n": 4,
+              "tail_n": 0,
+              "reference_n": 208,
+              "reference_tail_pct": 0.4807692307692308
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 6,
+              "tail_n": 0,
+              "reference_n": 175,
+              "reference_tail_pct": 0.0
+            }
+          ]
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0046",
+          "n": 23,
+          "tail_n": 0,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 0.1530200189019675,
+          "duration_bins": [
+            {
+              "duration": "2-3.03",
+              "n": 6,
+              "tail_n": 0,
+              "reference_n": 206,
+              "reference_tail_pct": 0.48543689320388345
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 10,
+              "tail_n": 0,
+              "reference_n": 171,
+              "reference_tail_pct": 0.0
+            },
+            {
+              "duration": ">4.04",
+              "n": 7,
+              "tail_n": 0,
+              "reference_n": 113,
+              "reference_tail_pct": 1.7699115044247788
+            }
+          ]
+        },
+        {
+          "source": "vcc2018",
+          "speaker": "VCC2SF1",
+          "n": 17,
+          "tail_n": 11,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 8.919767039557144,
+          "duration_bins": [
+            {
+              "duration": "<=2",
+              "n": 6,
+              "tail_n": 5,
+              "reference_n": 58,
+              "reference_tail_pct": 67.24137931034483
+            },
+            {
+              "duration": "2-3.03",
+              "n": 3,
+              "tail_n": 2,
+              "reference_n": 52,
+              "reference_tail_pct": 61.53846153846154
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 1,
+              "tail_n": 1,
+              "reference_n": 50,
+              "reference_tail_pct": 30.0
+            },
+            {
+              "duration": ">4.04",
+              "n": 7,
+              "tail_n": 3,
+              "reference_n": 69,
+              "reference_tail_pct": 39.130434782608695
+            }
+          ]
+        },
+        {
+          "source": "vcc2018",
+          "speaker": "VCC2SF2",
+          "n": 19,
+          "tail_n": 10,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 10.426904957385252,
+          "duration_bins": [
+            {
+              "duration": "<=2",
+              "n": 6,
+              "tail_n": 4,
+              "reference_n": 58,
+              "reference_tail_pct": 68.96551724137932
+            },
+            {
+              "duration": "2-3.03",
+              "n": 6,
+              "tail_n": 3,
+              "reference_n": 49,
+              "reference_tail_pct": 63.26530612244898
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 3,
+              "tail_n": 1,
+              "reference_n": 48,
+              "reference_tail_pct": 31.25
+            },
+            {
+              "duration": ">4.04",
+              "n": 4,
+              "tail_n": 2,
+              "reference_n": 72,
+              "reference_tail_pct": 38.88888888888889
+            }
+          ]
+        },
+        {
+          "source": "vcc2018",
+          "speaker": "VCC2SF3",
+          "n": 21,
+          "tail_n": 8,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 10.713093822172718,
+          "duration_bins": [
+            {
+              "duration": "<=2",
+              "n": 4,
+              "tail_n": 2,
+              "reference_n": 60,
+              "reference_tail_pct": 70.0
+            },
+            {
+              "duration": "2-3.03",
+              "n": 6,
+              "tail_n": 3,
+              "reference_n": 49,
+              "reference_tail_pct": 63.26530612244898
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 4,
+              "tail_n": 1,
+              "reference_n": 47,
+              "reference_tail_pct": 31.914893617021278
+            },
+            {
+              "duration": ">4.04",
+              "n": 7,
+              "tail_n": 2,
+              "reference_n": 69,
+              "reference_tail_pct": 40.57971014492754
+            }
+          ]
+        },
+        {
+          "source": "vcc2018",
+          "speaker": "VCC2SF4",
+          "n": 18,
+          "tail_n": 5,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 9.89697245700962,
+          "duration_bins": [
+            {
+              "duration": "<=2",
+              "n": 4,
+              "tail_n": 1,
+              "reference_n": 60,
+              "reference_tail_pct": 71.66666666666667
+            },
+            {
+              "duration": "2-3.03",
+              "n": 7,
+              "tail_n": 3,
+              "reference_n": 48,
+              "reference_tail_pct": 64.58333333333334
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 4,
+              "tail_n": 1,
+              "reference_n": 47,
+              "reference_tail_pct": 31.914893617021278
+            },
+            {
+              "duration": ">4.04",
+              "n": 3,
+              "tail_n": 0,
+              "reference_n": 73,
+              "reference_tail_pct": 41.0958904109589
+            }
+          ]
+        },
+        {
+          "source": "vcc2018",
+          "speaker": "VCC2SM1",
+          "n": 18,
+          "tail_n": 7,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 9.702602755999049,
+          "duration_bins": [
+            {
+              "duration": "<=2",
+              "n": 3,
+              "tail_n": 2,
+              "reference_n": 61,
+              "reference_tail_pct": 68.85245901639344
+            },
+            {
+              "duration": "2-3.03",
+              "n": 7,
+              "tail_n": 4,
+              "reference_n": 48,
+              "reference_tail_pct": 62.5
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 1,
+              "tail_n": 0,
+              "reference_n": 50,
+              "reference_tail_pct": 32.0
+            },
+            {
+              "duration": ">4.04",
+              "n": 7,
+              "tail_n": 1,
+              "reference_n": 69,
+              "reference_tail_pct": 42.028985507246375
+            }
+          ]
+        },
+        {
+          "source": "vcc2018",
+          "speaker": "VCC2SM2",
+          "n": 24,
+          "tail_n": 7,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 12.476394310584645,
+          "duration_bins": [
+            {
+              "duration": "<=2",
+              "n": 7,
+              "tail_n": 2,
+              "reference_n": 57,
+              "reference_tail_pct": 73.68421052631578
+            },
+            {
+              "duration": "2-3.03",
+              "n": 4,
+              "tail_n": 2,
+              "reference_n": 51,
+              "reference_tail_pct": 62.745098039215684
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 6,
+              "tail_n": 2,
+              "reference_n": 45,
+              "reference_tail_pct": 31.11111111111111
+            },
+            {
+              "duration": ">4.04",
+              "n": 7,
+              "tail_n": 1,
+              "reference_n": 69,
+              "reference_tail_pct": 42.028985507246375
+            }
+          ]
+        },
+        {
+          "source": "vcc2018",
+          "speaker": "VCC2SM3",
+          "n": 24,
+          "tail_n": 23,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 10.806421029950442,
+          "duration_bins": [
+            {
+              "duration": "<=2",
+              "n": 7,
+              "tail_n": 6,
+              "reference_n": 57,
+              "reference_tail_pct": 66.66666666666666
+            },
+            {
+              "duration": "2-3.03",
+              "n": 4,
+              "tail_n": 4,
+              "reference_n": 51,
+              "reference_tail_pct": 58.82352941176471
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 2,
+              "tail_n": 2,
+              "reference_n": 49,
+              "reference_tail_pct": 28.57142857142857
+            },
+            {
+              "duration": ">4.04",
+              "n": 11,
+              "tail_n": 11,
+              "reference_n": 65,
+              "reference_tail_pct": 29.230769230769234
+            }
+          ]
+        },
+        {
+          "source": "vcc2018",
+          "speaker": "VCC2SM4",
+          "n": 21,
+          "tail_n": 13,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 9.34945784683416,
+          "duration_bins": [
+            {
+              "duration": "<=2",
+              "n": 6,
+              "tail_n": 6,
+              "reference_n": 58,
+              "reference_tail_pct": 65.51724137931035
+            },
+            {
+              "duration": "2-3.03",
+              "n": 1,
+              "tail_n": 1,
+              "reference_n": 54,
+              "reference_tail_pct": 61.111111111111114
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 7,
+              "tail_n": 3,
+              "reference_n": 44,
+              "reference_tail_pct": 29.545454545454547
+            },
+            {
+              "duration": ">4.04",
+              "n": 7,
+              "tail_n": 3,
+              "reference_n": 69,
+              "reference_tail_pct": 39.130434782608695
+            }
+          ]
+        },
+        {
+          "source": "vcc2018",
+          "speaker": "VCC2TF1",
+          "n": 23,
+          "tail_n": 10,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 10.840262429494732,
+          "duration_bins": [
+            {
+              "duration": "<=2",
+              "n": 5,
+              "tail_n": 4,
+              "reference_n": 59,
+              "reference_tail_pct": 67.79661016949152
+            },
+            {
+              "duration": "2-3.03",
+              "n": 3,
+              "tail_n": 2,
+              "reference_n": 52,
+              "reference_tail_pct": 61.53846153846154
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 7,
+              "tail_n": 0,
+              "reference_n": 44,
+              "reference_tail_pct": 36.36363636363637
+            },
+            {
+              "duration": ">4.04",
+              "n": 8,
+              "tail_n": 4,
+              "reference_n": 68,
+              "reference_tail_pct": 38.23529411764706
+            }
+          ]
+        },
+        {
+          "source": "vcc2018",
+          "speaker": "VCC2TF2",
+          "n": 21,
+          "tail_n": 8,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 11.08534744785662,
+          "duration_bins": [
+            {
+              "duration": "<=2",
+              "n": 6,
+              "tail_n": 4,
+              "reference_n": 58,
+              "reference_tail_pct": 68.96551724137932
+            },
+            {
+              "duration": "2-3.03",
+              "n": 5,
+              "tail_n": 3,
+              "reference_n": 50,
+              "reference_tail_pct": 62.0
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 4,
+              "tail_n": 0,
+              "reference_n": 47,
+              "reference_tail_pct": 34.04255319148936
+            },
+            {
+              "duration": ">4.04",
+              "n": 6,
+              "tail_n": 1,
+              "reference_n": 70,
+              "reference_tail_pct": 41.42857142857143
+            }
+          ]
+        },
+        {
+          "source": "vcc2018",
+          "speaker": "VCC2TM1",
+          "n": 22,
+          "tail_n": 15,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 9.989503779528194,
+          "duration_bins": [
+            {
+              "duration": "<=2",
+              "n": 3,
+              "tail_n": 2,
+              "reference_n": 61,
+              "reference_tail_pct": 68.85245901639344
+            },
+            {
+              "duration": "2-3.03",
+              "n": 8,
+              "tail_n": 7,
+              "reference_n": 47,
+              "reference_tail_pct": 57.446808510638306
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 9,
+              "tail_n": 4,
+              "reference_n": 42,
+              "reference_tail_pct": 28.57142857142857
+            },
+            {
+              "duration": ">4.04",
+              "n": 2,
+              "tail_n": 2,
+              "reference_n": 74,
+              "reference_tail_pct": 37.83783783783784
+            }
+          ]
+        },
+        {
+          "source": "vcc2018",
+          "speaker": "VCC2TM2",
+          "n": 18,
+          "tail_n": 7,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 9.27727455716586,
+          "duration_bins": [
+            {
+              "duration": "<=2",
+              "n": 7,
+              "tail_n": 6,
+              "reference_n": 57,
+              "reference_tail_pct": 66.66666666666666
+            },
+            {
+              "duration": "2-3.03",
+              "n": 1,
+              "tail_n": 0,
+              "reference_n": 54,
+              "reference_tail_pct": 62.96296296296296
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 3,
+              "tail_n": 1,
+              "reference_n": 48,
+              "reference_tail_pct": 31.25
+            },
+            {
+              "duration": ">4.04",
+              "n": 7,
+              "tail_n": 0,
+              "reference_n": 69,
+              "reference_tail_pct": 43.47826086956522
+            }
+          ]
+        },
+        {
+          "source": "vcc2020",
+          "speaker": "SEF1",
+          "n": 22,
+          "tail_n": 5,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 6.353075287285813,
+          "duration_bins": [
+            {
+              "duration": "<=2",
+              "n": 9,
+              "tail_n": 2,
+              "reference_n": 13,
+              "reference_tail_pct": 46.15384615384615
+            },
+            {
+              "duration": "2-3.03",
+              "n": 6,
+              "tail_n": 2,
+              "reference_n": 55,
+              "reference_tail_pct": 27.27272727272727
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 4,
+              "tail_n": 1,
+              "reference_n": 63,
+              "reference_tail_pct": 11.11111111111111
+            },
+            {
+              "duration": ">4.04",
+              "n": 3,
+              "tail_n": 0,
+              "reference_n": 76,
+              "reference_tail_pct": 3.9473684210526314
+            }
+          ]
+        },
+        {
+          "source": "vcc2020",
+          "speaker": "SEF2",
+          "n": 19,
+          "tail_n": 2,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 4.187358244569629,
+          "duration_bins": [
+            {
+              "duration": "<=2",
+              "n": 2,
+              "tail_n": 0,
+              "reference_n": 20,
+              "reference_tail_pct": 40.0
+            },
+            {
+              "duration": "2-3.03",
+              "n": 8,
+              "tail_n": 2,
+              "reference_n": 53,
+              "reference_tail_pct": 28.30188679245283
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 8,
+              "tail_n": 0,
+              "reference_n": 59,
+              "reference_tail_pct": 13.559322033898304
+            },
+            {
+              "duration": ">4.04",
+              "n": 1,
+              "tail_n": 0,
+              "reference_n": 78,
+              "reference_tail_pct": 3.8461538461538463
+            }
+          ]
+        },
+        {
+          "source": "vcc2020",
+          "speaker": "SEM1",
+          "n": 11,
+          "tail_n": 2,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 2.266636141636141,
+          "duration_bins": [
+            {
+              "duration": "<=2",
+              "n": 1,
+              "tail_n": 0,
+              "reference_n": 21,
+              "reference_tail_pct": 38.095238095238095
+            },
+            {
+              "duration": "2-3.03",
+              "n": 5,
+              "tail_n": 2,
+              "reference_n": 56,
+              "reference_tail_pct": 26.785714285714285
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 4,
+              "tail_n": 0,
+              "reference_n": 63,
+              "reference_tail_pct": 12.698412698412698
+            },
+            {
+              "duration": ">4.04",
+              "n": 1,
+              "tail_n": 0,
+              "reference_n": 78,
+              "reference_tail_pct": 3.8461538461538463
+            }
+          ]
+        },
+        {
+          "source": "vcc2020",
+          "speaker": "SEM2",
+          "n": 15,
+          "tail_n": 5,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 3.5518534238822865,
+          "duration_bins": [
+            {
+              "duration": "<=2",
+              "n": 6,
+              "tail_n": 3,
+              "reference_n": 16,
+              "reference_tail_pct": 31.25
+            },
+            {
+              "duration": "2-3.03",
+              "n": 4,
+              "tail_n": 0,
+              "reference_n": 57,
+              "reference_tail_pct": 29.82456140350877
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 5,
+              "tail_n": 2,
+              "reference_n": 62,
+              "reference_tail_pct": 9.67741935483871
+            }
+          ]
+        },
+        {
+          "source": "vcc2020",
+          "speaker": "TEF1",
+          "n": 13,
+          "tail_n": 0,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 3.229817374978665,
+          "duration_bins": [
+            {
+              "duration": "<=2",
+              "n": 1,
+              "tail_n": 0,
+              "reference_n": 21,
+              "reference_tail_pct": 38.095238095238095
+            },
+            {
+              "duration": "2-3.03",
+              "n": 7,
+              "tail_n": 0,
+              "reference_n": 54,
+              "reference_tail_pct": 31.48148148148148
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 5,
+              "tail_n": 0,
+              "reference_n": 62,
+              "reference_tail_pct": 12.903225806451612
+            }
+          ]
+        },
+        {
+          "source": "vcc2020",
+          "speaker": "TEF2",
+          "n": 20,
+          "tail_n": 7,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 3.0683741368487127,
+          "duration_bins": [
+            {
+              "duration": "<=2",
+              "n": 1,
+              "tail_n": 1,
+              "reference_n": 21,
+              "reference_tail_pct": 33.33333333333333
+            },
+            {
+              "duration": "2-3.03",
+              "n": 7,
+              "tail_n": 3,
+              "reference_n": 54,
+              "reference_tail_pct": 25.925925925925924
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 8,
+              "tail_n": 2,
+              "reference_n": 59,
+              "reference_tail_pct": 10.16949152542373
+            },
+            {
+              "duration": ">4.04",
+              "n": 4,
+              "tail_n": 1,
+              "reference_n": 75,
+              "reference_tail_pct": 2.666666666666667
+            }
+          ]
+        },
+        {
+          "source": "vcc2020",
+          "speaker": "TEM1",
+          "n": 14,
+          "tail_n": 2,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 0.967345399698341,
+          "duration_bins": [
+            {
+              "duration": "2-3.03",
+              "n": 1,
+              "tail_n": 1,
+              "reference_n": 60,
+              "reference_tail_pct": 26.666666666666668
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 2,
+              "tail_n": 1,
+              "reference_n": 65,
+              "reference_tail_pct": 10.76923076923077
+            },
+            {
+              "duration": ">4.04",
+              "n": 11,
+              "tail_n": 0,
+              "reference_n": 68,
+              "reference_tail_pct": 4.411764705882353
+            }
+          ]
+        },
+        {
+          "source": "vcc2020",
+          "speaker": "TEM2",
+          "n": 18,
+          "tail_n": 2,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 3.759683084211386,
+          "duration_bins": [
+            {
+              "duration": "<=2",
+              "n": 1,
+              "tail_n": 1,
+              "reference_n": 21,
+              "reference_tail_pct": 33.33333333333333
+            },
+            {
+              "duration": "2-3.03",
+              "n": 8,
+              "tail_n": 1,
+              "reference_n": 53,
+              "reference_tail_pct": 30.18867924528302
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 7,
+              "tail_n": 0,
+              "reference_n": 60,
+              "reference_tail_pct": 13.333333333333334
+            },
+            {
+              "duration": ">4.04",
+              "n": 2,
+              "tail_n": 0,
+              "reference_n": 77,
+              "reference_tail_pct": 3.896103896103896
+            }
+          ]
+        },
+        {
+          "source": "vcc2020",
+          "speaker": "TFF1",
+          "n": 24,
+          "tail_n": 0,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 1.9445043103448276,
+          "duration_bins": [
+            {
+              "duration": "3.03-4.04",
+              "n": 9,
+              "tail_n": 0,
+              "reference_n": 58,
+              "reference_tail_pct": 13.793103448275861
+            },
+            {
+              "duration": ">4.04",
+              "n": 15,
+              "tail_n": 0,
+              "reference_n": 64,
+              "reference_tail_pct": 4.6875
+            }
+          ]
+        },
+        {
+          "source": "vcc2020",
+          "speaker": "TFM1",
+          "n": 15,
+          "tail_n": 0,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 0.8370629370629371,
+          "duration_bins": [
+            {
+              "duration": "3.03-4.04",
+              "n": 2,
+              "tail_n": 0,
+              "reference_n": 65,
+              "reference_tail_pct": 12.307692307692308
+            },
+            {
+              "duration": ">4.04",
+              "n": 13,
+              "tail_n": 0,
+              "reference_n": 66,
+              "reference_tail_pct": 4.545454545454546
+            }
+          ]
+        },
+        {
+          "source": "vcc2020",
+          "speaker": "TGF1",
+          "n": 15,
+          "tail_n": 0,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 2.182570404744693,
+          "duration_bins": [
+            {
+              "duration": "2-3.03",
+              "n": 4,
+              "tail_n": 0,
+              "reference_n": 57,
+              "reference_tail_pct": 29.82456140350877
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 6,
+              "tail_n": 0,
+              "reference_n": 61,
+              "reference_tail_pct": 13.114754098360656
+            },
+            {
+              "duration": ">4.04",
+              "n": 5,
+              "tail_n": 0,
+              "reference_n": 74,
+              "reference_tail_pct": 4.054054054054054
+            }
+          ]
+        },
+        {
+          "source": "vcc2020",
+          "speaker": "TGM1",
+          "n": 10,
+          "tail_n": 0,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 0.8211538461538461,
+          "duration_bins": [
+            {
+              "duration": "2-3.03",
+              "n": 1,
+              "tail_n": 0,
+              "reference_n": 60,
+              "reference_tail_pct": 28.333333333333332
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 2,
+              "tail_n": 0,
+              "reference_n": 65,
+              "reference_tail_pct": 12.307692307692308
+            },
+            {
+              "duration": ">4.04",
+              "n": 7,
+              "tail_n": 0,
+              "reference_n": 72,
+              "reference_tail_pct": 4.166666666666666
+            }
+          ]
+        },
+        {
+          "source": "vcc2020",
+          "speaker": "TMF1",
+          "n": 24,
+          "tail_n": 3,
+          "expected_tail_n_if_other_speakers_same_duration_bins": 2.3904539904539903,
+          "duration_bins": [
+            {
+              "duration": "2-3.03",
+              "n": 6,
+              "tail_n": 2,
+              "reference_n": 55,
+              "reference_tail_pct": 27.27272727272727
+            },
+            {
+              "duration": "3.03-4.04",
+              "n": 2,
+              "tail_n": 0,
+              "reference_n": 65,
+              "reference_tail_pct": 12.307692307692308
+            },
+            {
+              "duration": ">4.04",
+              "n": 16,
+              "tail_n": 1,
+              "reference_n": 63,
+              "reference_tail_pct": 3.1746031746031744
+            }
+          ]
+        }
+      ],
+      "speaker_interventions": [
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0001",
+          "n": 15,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 1,
+              "median_score": 0.9927749037742615
+            },
+            "gain_x0p25": {
+              "tail_n": 1,
+              "median_score": 0.9903030395507812
+            },
+            "zero_padding": {
+              "tail_n": 1,
+              "median_score": 0.988365650177002
+            },
+            "reflect_padding": {
+              "tail_n": 4,
+              "median_score": 0.9636074304580688
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 15,
+              "median_score": -0.626432478427887
+            },
+            "native_no_padding": {
+              "tail_n": 0,
+              "median_score": 0.9935145378112793
+            }
+          }
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0003",
+          "n": 19,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 0,
+              "median_score": 0.993532121181488
+            },
+            "gain_x0p25": {
+              "tail_n": 0,
+              "median_score": 0.9912714958190918
+            },
+            "zero_padding": {
+              "tail_n": 0,
+              "median_score": 0.9900711178779602
+            },
+            "reflect_padding": {
+              "tail_n": 6,
+              "median_score": 0.9785118699073792
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 19,
+              "median_score": -0.2541605830192566
+            },
+            "native_no_padding": {
+              "tail_n": 0,
+              "median_score": 0.9942848086357117
+            }
+          }
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0005",
+          "n": 13,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 0,
+              "median_score": 0.9924091696739197
+            },
+            "gain_x0p25": {
+              "tail_n": 0,
+              "median_score": 0.9909300804138184
+            },
+            "zero_padding": {
+              "tail_n": 0,
+              "median_score": 0.9913318753242493
+            },
+            "reflect_padding": {
+              "tail_n": 1,
+              "median_score": 0.9918555021286011
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 13,
+              "median_score": -0.14858539402484894
+            },
+            "native_no_padding": {
+              "tail_n": 0,
+              "median_score": 0.9937881827354431
+            }
+          }
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0008",
+          "n": 11,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 0,
+              "median_score": 0.9827750325202942
+            },
+            "gain_x0p25": {
+              "tail_n": 0,
+              "median_score": 0.9869166612625122
+            },
+            "zero_padding": {
+              "tail_n": 0,
+              "median_score": 0.9759870171546936
+            },
+            "reflect_padding": {
+              "tail_n": 6,
+              "median_score": 0.8065816760063171
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 11,
+              "median_score": -0.8434745669364929
+            },
+            "native_no_padding": {
+              "tail_n": 0,
+              "median_score": 0.9916017055511475
+            }
+          }
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0013",
+          "n": 25,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 0,
+              "median_score": 0.9928156137466431
+            },
+            "gain_x0p25": {
+              "tail_n": 1,
+              "median_score": 0.9903677105903625
+            },
+            "zero_padding": {
+              "tail_n": 0,
+              "median_score": 0.9888750314712524
+            },
+            "reflect_padding": {
+              "tail_n": 7,
+              "median_score": 0.982530415058136
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 25,
+              "median_score": -0.7472614645957947
+            },
+            "native_no_padding": {
+              "tail_n": 0,
+              "median_score": 0.9936968088150024
+            }
+          }
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0015",
+          "n": 13,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 0,
+              "median_score": 0.9941838383674622
+            },
+            "gain_x0p25": {
+              "tail_n": 0,
+              "median_score": 0.9916427135467529
+            },
+            "zero_padding": {
+              "tail_n": 0,
+              "median_score": 0.9937282204627991
+            },
+            "reflect_padding": {
+              "tail_n": 1,
+              "median_score": 0.9937283992767334
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 11,
+              "median_score": 0.1450439840555191
+            },
+            "native_no_padding": {
+              "tail_n": 0,
+              "median_score": 0.9941838383674622
+            }
+          }
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0016",
+          "n": 10,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 0,
+              "median_score": 0.9935886859893799
+            },
+            "gain_x0p25": {
+              "tail_n": 0,
+              "median_score": 0.9925956726074219
+            },
+            "zero_padding": {
+              "tail_n": 0,
+              "median_score": 0.9890736937522888
+            },
+            "reflect_padding": {
+              "tail_n": 2,
+              "median_score": 0.9819216728210449
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 8,
+              "median_score": 0.29307958483695984
+            },
+            "native_no_padding": {
+              "tail_n": 0,
+              "median_score": 0.9943310022354126
+            }
+          }
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0018",
+          "n": 23,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 0,
+              "median_score": 0.9946222305297852
+            },
+            "gain_x0p25": {
+              "tail_n": 0,
+              "median_score": 0.9930455088615417
+            },
+            "zero_padding": {
+              "tail_n": 0,
+              "median_score": 0.9935681819915771
+            },
+            "reflect_padding": {
+              "tail_n": 2,
+              "median_score": 0.993833065032959
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 19,
+              "median_score": 0.387706995010376
+            },
+            "native_no_padding": {
+              "tail_n": 0,
+              "median_score": 0.9949709177017212
+            }
+          }
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0021",
+          "n": 12,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 0,
+              "median_score": 0.9919983744621277
+            },
+            "gain_x0p25": {
+              "tail_n": 0,
+              "median_score": 0.9875105619430542
+            },
+            "zero_padding": {
+              "tail_n": 0,
+              "median_score": 0.9860199093818665
+            },
+            "reflect_padding": {
+              "tail_n": 2,
+              "median_score": 0.9883103370666504
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 12,
+              "median_score": -0.8080267906188965
+            },
+            "native_no_padding": {
+              "tail_n": 0,
+              "median_score": 0.9935302734375
+            }
+          }
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0023",
+          "n": 16,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 0,
+              "median_score": 0.9937006831169128
+            },
+            "gain_x0p25": {
+              "tail_n": 0,
+              "median_score": 0.9925264120101929
+            },
+            "zero_padding": {
+              "tail_n": 0,
+              "median_score": 0.9897414445877075
+            },
+            "reflect_padding": {
+              "tail_n": 1,
+              "median_score": 0.989412784576416
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 16,
+              "median_score": 0.47230347990989685
+            },
+            "native_no_padding": {
+              "tail_n": 0,
+              "median_score": 0.9943117499351501
+            }
+          }
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0026",
+          "n": 15,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 0,
+              "median_score": 0.9924703240394592
+            },
+            "gain_x0p25": {
+              "tail_n": 0,
+              "median_score": 0.9901488423347473
+            },
+            "zero_padding": {
+              "tail_n": 0,
+              "median_score": 0.9871367812156677
+            },
+            "reflect_padding": {
+              "tail_n": 0,
+              "median_score": 0.9892947673797607
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 13,
+              "median_score": -0.46214723587036133
+            },
+            "native_no_padding": {
+              "tail_n": 0,
+              "median_score": 0.9930564165115356
+            }
+          }
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0027",
+          "n": 11,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 0,
+              "median_score": 0.9939215183258057
+            },
+            "gain_x0p25": {
+              "tail_n": 0,
+              "median_score": 0.9924741387367249
+            },
+            "zero_padding": {
+              "tail_n": 0,
+              "median_score": 0.9936820268630981
+            },
+            "reflect_padding": {
+              "tail_n": 0,
+              "median_score": 0.9933798313140869
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 8,
+              "median_score": 0.6579990983009338
+            },
+            "native_no_padding": {
+              "tail_n": 0,
+              "median_score": 0.9939260482788086
+            }
+          }
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0028",
+          "n": 14,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 0,
+              "median_score": 0.9930326342582703
+            },
+            "gain_x0p25": {
+              "tail_n": 0,
+              "median_score": 0.9912383556365967
+            },
+            "zero_padding": {
+              "tail_n": 0,
+              "median_score": 0.9924425482749939
+            },
+            "reflect_padding": {
+              "tail_n": 0,
+              "median_score": 0.9928219318389893
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 14,
+              "median_score": -0.3038923442363739
+            },
+            "native_no_padding": {
+              "tail_n": 0,
+              "median_score": 0.9947404861450195
+            }
+          }
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0029",
+          "n": 12,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 0,
+              "median_score": 0.9938507676124573
+            },
+            "gain_x0p25": {
+              "tail_n": 0,
+              "median_score": 0.9925441741943359
+            },
+            "zero_padding": {
+              "tail_n": 0,
+              "median_score": 0.9936788082122803
+            },
+            "reflect_padding": {
+              "tail_n": 0,
+              "median_score": 0.9935470819473267
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 11,
+              "median_score": -0.012371111661195755
+            },
+            "native_no_padding": {
+              "tail_n": 0,
+              "median_score": 0.9944171905517578
+            }
+          }
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0030",
+          "n": 10,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 0,
+              "median_score": 0.9917759895324707
+            },
+            "gain_x0p25": {
+              "tail_n": 0,
+              "median_score": 0.9916938543319702
+            },
+            "zero_padding": {
+              "tail_n": 0,
+              "median_score": 0.9917901754379272
+            },
+            "reflect_padding": {
+              "tail_n": 0,
+              "median_score": 0.9912832975387573
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 10,
+              "median_score": -0.15337131917476654
+            },
+            "native_no_padding": {
+              "tail_n": 0,
+              "median_score": 0.9932451248168945
+            }
+          }
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0032",
+          "n": 13,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 0,
+              "median_score": 0.9857984781265259
+            },
+            "gain_x0p25": {
+              "tail_n": 0,
+              "median_score": 0.990842342376709
+            },
+            "zero_padding": {
+              "tail_n": 0,
+              "median_score": 0.9836559295654297
+            },
+            "reflect_padding": {
+              "tail_n": 0,
+              "median_score": 0.9802491068840027
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 13,
+              "median_score": -0.4865105450153351
+            },
+            "native_no_padding": {
+              "tail_n": 0,
+              "median_score": 0.9905677437782288
+            }
+          }
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0036",
+          "n": 16,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 0,
+              "median_score": 0.9941544532775879
+            },
+            "gain_x0p25": {
+              "tail_n": 0,
+              "median_score": 0.9925607442855835
+            },
+            "zero_padding": {
+              "tail_n": 0,
+              "median_score": 0.9937315583229065
+            },
+            "reflect_padding": {
+              "tail_n": 0,
+              "median_score": 0.9937475919723511
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 13,
+              "median_score": 0.7178537845611572
+            },
+            "native_no_padding": {
+              "tail_n": 0,
+              "median_score": 0.9944670796394348
+            }
+          }
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0039",
+          "n": 20,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 0,
+              "median_score": 0.9930576682090759
+            },
+            "gain_x0p25": {
+              "tail_n": 0,
+              "median_score": 0.9923222064971924
+            },
+            "zero_padding": {
+              "tail_n": 0,
+              "median_score": 0.9902535676956177
+            },
+            "reflect_padding": {
+              "tail_n": 9,
+              "median_score": 0.9094299674034119
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 19,
+              "median_score": -0.46537327766418457
+            },
+            "native_no_padding": {
+              "tail_n": 0,
+              "median_score": 0.9941344261169434
+            }
+          }
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0040",
+          "n": 16,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 0,
+              "median_score": 0.9912016987800598
+            },
+            "gain_x0p25": {
+              "tail_n": 0,
+              "median_score": 0.9920542240142822
+            },
+            "zero_padding": {
+              "tail_n": 0,
+              "median_score": 0.9913690686225891
+            },
+            "reflect_padding": {
+              "tail_n": 1,
+              "median_score": 0.9895050525665283
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 11,
+              "median_score": 0.7129510641098022
+            },
+            "native_no_padding": {
+              "tail_n": 0,
+              "median_score": 0.992546796798706
+            }
+          }
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0042",
+          "n": 14,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 0,
+              "median_score": 0.9884157180786133
+            },
+            "gain_x0p25": {
+              "tail_n": 0,
+              "median_score": 0.9915245771408081
+            },
+            "zero_padding": {
+              "tail_n": 0,
+              "median_score": 0.9851700067520142
+            },
+            "reflect_padding": {
+              "tail_n": 2,
+              "median_score": 0.9841518998146057
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 13,
+              "median_score": 0.2856636047363281
+            },
+            "native_no_padding": {
+              "tail_n": 0,
+              "median_score": 0.9922175407409668
+            }
+          }
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0043",
+          "n": 18,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 0,
+              "median_score": 0.9909414649009705
+            },
+            "gain_x0p25": {
+              "tail_n": 0,
+              "median_score": 0.9890168905258179
+            },
+            "zero_padding": {
+              "tail_n": 1,
+              "median_score": 0.9858421683311462
+            },
+            "reflect_padding": {
+              "tail_n": 7,
+              "median_score": 0.9679425954818726
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 18,
+              "median_score": -0.7846074104309082
+            },
+            "native_no_padding": {
+              "tail_n": 0,
+              "median_score": 0.993391215801239
+            }
+          }
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0044",
+          "n": 10,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 0,
+              "median_score": 0.9901244640350342
+            },
+            "gain_x0p25": {
+              "tail_n": 0,
+              "median_score": 0.9928205013275146
+            },
+            "zero_padding": {
+              "tail_n": 0,
+              "median_score": 0.9858443737030029
+            },
+            "reflect_padding": {
+              "tail_n": 2,
+              "median_score": 0.9840007424354553
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 10,
+              "median_score": -0.5598037838935852
+            },
+            "native_no_padding": {
+              "tail_n": 0,
+              "median_score": 0.9917725324630737
+            }
+          }
+        },
+        {
+          "source": "asvspoof",
+          "speaker": "LA_0046",
+          "n": 23,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 0,
+              "median_score": 0.9928205013275146
+            },
+            "gain_x0p25": {
+              "tail_n": 0,
+              "median_score": 0.9907510280609131
+            },
+            "zero_padding": {
+              "tail_n": 0,
+              "median_score": 0.9923785328865051
+            },
+            "reflect_padding": {
+              "tail_n": 1,
+              "median_score": 0.9922283887863159
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 22,
+              "median_score": -0.44803449511528015
+            },
+            "native_no_padding": {
+              "tail_n": 0,
+              "median_score": 0.9934073090553284
+            }
+          }
+        },
+        {
+          "source": "vcc2018",
+          "speaker": "VCC2SF1",
+          "n": 17,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 11,
+              "median_score": 0.8806034922599792
+            },
+            "gain_x0p25": {
+              "tail_n": 11,
+              "median_score": 0.81648850440979
+            },
+            "zero_padding": {
+              "tail_n": 3,
+              "median_score": 0.9690247178077698
+            },
+            "reflect_padding": {
+              "tail_n": 13,
+              "median_score": -0.5818043351173401
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 17,
+              "median_score": -0.7473317980766296
+            },
+            "native_no_padding": {
+              "tail_n": 4,
+              "median_score": 0.9699224829673767
+            }
+          }
+        },
+        {
+          "source": "vcc2018",
+          "speaker": "VCC2SF2",
+          "n": 19,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 10,
+              "median_score": 0.8724894523620605
+            },
+            "gain_x0p25": {
+              "tail_n": 14,
+              "median_score": 0.599743127822876
+            },
+            "zero_padding": {
+              "tail_n": 6,
+              "median_score": 0.9509268403053284
+            },
+            "reflect_padding": {
+              "tail_n": 15,
+              "median_score": -0.7163358926773071
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 19,
+              "median_score": -0.7740994095802307
+            },
+            "native_no_padding": {
+              "tail_n": 2,
+              "median_score": 0.9826357960700989
+            }
+          }
+        },
+        {
+          "source": "vcc2018",
+          "speaker": "VCC2SF3",
+          "n": 21,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 8,
+              "median_score": 0.9075309634208679
+            },
+            "gain_x0p25": {
+              "tail_n": 10,
+              "median_score": 0.9275857210159302
+            },
+            "zero_padding": {
+              "tail_n": 5,
+              "median_score": 0.9744638800621033
+            },
+            "reflect_padding": {
+              "tail_n": 13,
+              "median_score": -0.13264645636081696
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 20,
+              "median_score": -0.3532610833644867
+            },
+            "native_no_padding": {
+              "tail_n": 5,
+              "median_score": 0.9825858473777771
+            }
+          }
+        },
+        {
+          "source": "vcc2018",
+          "speaker": "VCC2SF4",
+          "n": 18,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 5,
+              "median_score": 0.9393553137779236
+            },
+            "gain_x0p25": {
+              "tail_n": 7,
+              "median_score": 0.9394081234931946
+            },
+            "zero_padding": {
+              "tail_n": 1,
+              "median_score": 0.9760557413101196
+            },
+            "reflect_padding": {
+              "tail_n": 13,
+              "median_score": 0.4599646031856537
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 17,
+              "median_score": 0.31245484948158264
+            },
+            "native_no_padding": {
+              "tail_n": 1,
+              "median_score": 0.9886690378189087
+            }
+          }
+        },
+        {
+          "source": "vcc2018",
+          "speaker": "VCC2SM1",
+          "n": 18,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 7,
+              "median_score": 0.9213799238204956
+            },
+            "gain_x0p25": {
+              "tail_n": 7,
+              "median_score": 0.9119226336479187
+            },
+            "zero_padding": {
+              "tail_n": 3,
+              "median_score": 0.9656935334205627
+            },
+            "reflect_padding": {
+              "tail_n": 11,
+              "median_score": 0.8061366081237793
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 17,
+              "median_score": -0.1267504096031189
+            },
+            "native_no_padding": {
+              "tail_n": 1,
+              "median_score": 0.981168270111084
+            }
+          }
+        },
+        {
+          "source": "vcc2018",
+          "speaker": "VCC2SM2",
+          "n": 24,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 7,
+              "median_score": 0.9500489830970764
+            },
+            "gain_x0p25": {
+              "tail_n": 11,
+              "median_score": 0.911591649055481
+            },
+            "zero_padding": {
+              "tail_n": 2,
+              "median_score": 0.9679749011993408
+            },
+            "reflect_padding": {
+              "tail_n": 14,
+              "median_score": 0.7335234880447388
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 21,
+              "median_score": 0.2811931371688843
+            },
+            "native_no_padding": {
+              "tail_n": 2,
+              "median_score": 0.9828516244888306
+            }
+          }
+        },
+        {
+          "source": "vcc2018",
+          "speaker": "VCC2SM3",
+          "n": 24,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 23,
+              "median_score": -0.6528669595718384
+            },
+            "gain_x0p25": {
+              "tail_n": 24,
+              "median_score": -0.6616265177726746
+            },
+            "zero_padding": {
+              "tail_n": 22,
+              "median_score": 0.3660113215446472
+            },
+            "reflect_padding": {
+              "tail_n": 24,
+              "median_score": -0.7624921798706055
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 24,
+              "median_score": -0.8754873275756836
+            },
+            "native_no_padding": {
+              "tail_n": 15,
+              "median_score": 0.6767538785934448
+            }
+          }
+        },
+        {
+          "source": "vcc2018",
+          "speaker": "VCC2SM4",
+          "n": 21,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 13,
+              "median_score": 0.790375828742981
+            },
+            "gain_x0p25": {
+              "tail_n": 12,
+              "median_score": 0.7928984761238098
+            },
+            "zero_padding": {
+              "tail_n": 8,
+              "median_score": 0.936485767364502
+            },
+            "reflect_padding": {
+              "tail_n": 13,
+              "median_score": 0.7858923077583313
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 21,
+              "median_score": -0.44194403290748596
+            },
+            "native_no_padding": {
+              "tail_n": 4,
+              "median_score": 0.9720561504364014
+            }
+          }
+        },
+        {
+          "source": "vcc2018",
+          "speaker": "VCC2TF1",
+          "n": 23,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 10,
+              "median_score": 0.9380444884300232
+            },
+            "gain_x0p25": {
+              "tail_n": 8,
+              "median_score": 0.9284651279449463
+            },
+            "zero_padding": {
+              "tail_n": 5,
+              "median_score": 0.971139669418335
+            },
+            "reflect_padding": {
+              "tail_n": 11,
+              "median_score": 0.9387056827545166
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 20,
+              "median_score": 0.3250289857387543
+            },
+            "native_no_padding": {
+              "tail_n": 4,
+              "median_score": 0.980277419090271
+            }
+          }
+        },
+        {
+          "source": "vcc2018",
+          "speaker": "VCC2TF2",
+          "n": 21,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 8,
+              "median_score": 0.9504225850105286
+            },
+            "gain_x0p25": {
+              "tail_n": 7,
+              "median_score": 0.9262920618057251
+            },
+            "zero_padding": {
+              "tail_n": 3,
+              "median_score": 0.9761906862258911
+            },
+            "reflect_padding": {
+              "tail_n": 12,
+              "median_score": -0.5158220529556274
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 21,
+              "median_score": -0.210749551653862
+            },
+            "native_no_padding": {
+              "tail_n": 1,
+              "median_score": 0.9848518371582031
+            }
+          }
+        },
+        {
+          "source": "vcc2018",
+          "speaker": "VCC2TM1",
+          "n": 22,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 15,
+              "median_score": 0.844430685043335
+            },
+            "gain_x0p25": {
+              "tail_n": 15,
+              "median_score": 0.7207926511764526
+            },
+            "zero_padding": {
+              "tail_n": 5,
+              "median_score": 0.9695476293563843
+            },
+            "reflect_padding": {
+              "tail_n": 16,
+              "median_score": 0.6241731643676758
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 22,
+              "median_score": -0.5332328081130981
+            },
+            "native_no_padding": {
+              "tail_n": 5,
+              "median_score": 0.973590612411499
+            }
+          }
+        },
+        {
+          "source": "vcc2018",
+          "speaker": "VCC2TM2",
+          "n": 18,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 7,
+              "median_score": 0.9170577526092529
+            },
+            "gain_x0p25": {
+              "tail_n": 10,
+              "median_score": 0.8514741659164429
+            },
+            "zero_padding": {
+              "tail_n": 3,
+              "median_score": 0.9677752256393433
+            },
+            "reflect_padding": {
+              "tail_n": 8,
+              "median_score": 0.9101775884628296
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 12,
+              "median_score": -0.08823063969612122
+            },
+            "native_no_padding": {
+              "tail_n": 0,
+              "median_score": 0.9834444522857666
+            }
+          }
+        },
+        {
+          "source": "vcc2020",
+          "speaker": "SEF1",
+          "n": 22,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 5,
+              "median_score": 0.9597736597061157
+            },
+            "gain_x0p25": {
+              "tail_n": 9,
+              "median_score": 0.9468280076980591
+            },
+            "zero_padding": {
+              "tail_n": 1,
+              "median_score": 0.9840630888938904
+            },
+            "reflect_padding": {
+              "tail_n": 16,
+              "median_score": -0.6239354610443115
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 18,
+              "median_score": -0.08515709638595581
+            },
+            "native_no_padding": {
+              "tail_n": 1,
+              "median_score": 0.9918991327285767
+            }
+          }
+        },
+        {
+          "source": "vcc2020",
+          "speaker": "SEF2",
+          "n": 19,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 2,
+              "median_score": 0.9814088940620422
+            },
+            "gain_x0p25": {
+              "tail_n": 3,
+              "median_score": 0.9732485413551331
+            },
+            "zero_padding": {
+              "tail_n": 0,
+              "median_score": 0.9878262877464294
+            },
+            "reflect_padding": {
+              "tail_n": 6,
+              "median_score": 0.9554629325866699
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 17,
+              "median_score": 0.7081066370010376
+            },
+            "native_no_padding": {
+              "tail_n": 0,
+              "median_score": 0.9921730756759644
+            }
+          }
+        },
+        {
+          "source": "vcc2020",
+          "speaker": "SEM1",
+          "n": 11,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 2,
+              "median_score": 0.9655143618583679
+            },
+            "gain_x0p25": {
+              "tail_n": 6,
+              "median_score": 0.8526329398155212
+            },
+            "zero_padding": {
+              "tail_n": 0,
+              "median_score": 0.9778236746788025
+            },
+            "reflect_padding": {
+              "tail_n": 7,
+              "median_score": 0.5934051275253296
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 10,
+              "median_score": 0.38055747747421265
+            },
+            "native_no_padding": {
+              "tail_n": 0,
+              "median_score": 0.9869908690452576
+            }
+          }
+        },
+        {
+          "source": "vcc2020",
+          "speaker": "SEM2",
+          "n": 15,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 5,
+              "median_score": 0.9314193725585938
+            },
+            "gain_x0p25": {
+              "tail_n": 8,
+              "median_score": 0.8823497295379639
+            },
+            "zero_padding": {
+              "tail_n": 0,
+              "median_score": 0.9818272590637207
+            },
+            "reflect_padding": {
+              "tail_n": 11,
+              "median_score": -0.7099225521087646
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 15,
+              "median_score": -0.1371641606092453
+            },
+            "native_no_padding": {
+              "tail_n": 0,
+              "median_score": 0.9869071245193481
+            }
+          }
+        },
+        {
+          "source": "vcc2020",
+          "speaker": "TEF1",
+          "n": 13,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 0,
+              "median_score": 0.9764714241027832
+            },
+            "gain_x0p25": {
+              "tail_n": 2,
+              "median_score": 0.9697564244270325
+            },
+            "zero_padding": {
+              "tail_n": 0,
+              "median_score": 0.988139808177948
+            },
+            "reflect_padding": {
+              "tail_n": 7,
+              "median_score": 0.8755608797073364
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 12,
+              "median_score": 0.4698956608772278
+            },
+            "native_no_padding": {
+              "tail_n": 0,
+              "median_score": 0.9932910203933716
+            }
+          }
+        },
+        {
+          "source": "vcc2020",
+          "speaker": "TEF2",
+          "n": 20,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 7,
+              "median_score": 0.9704837799072266
+            },
+            "gain_x0p25": {
+              "tail_n": 6,
+              "median_score": 0.9688058495521545
+            },
+            "zero_padding": {
+              "tail_n": 4,
+              "median_score": 0.9757311940193176
+            },
+            "reflect_padding": {
+              "tail_n": 10,
+              "median_score": 0.8945493698120117
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 19,
+              "median_score": -0.20450440049171448
+            },
+            "native_no_padding": {
+              "tail_n": 3,
+              "median_score": 0.9786835312843323
+            }
+          }
+        },
+        {
+          "source": "vcc2020",
+          "speaker": "TEM1",
+          "n": 14,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 2,
+              "median_score": 0.9784426093101501
+            },
+            "gain_x0p25": {
+              "tail_n": 3,
+              "median_score": 0.9612747430801392
+            },
+            "zero_padding": {
+              "tail_n": 1,
+              "median_score": 0.9784425497055054
+            },
+            "reflect_padding": {
+              "tail_n": 1,
+              "median_score": 0.9784427881240845
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 13,
+              "median_score": -0.03947295993566513
+            },
+            "native_no_padding": {
+              "tail_n": 0,
+              "median_score": 0.9794464707374573
+            }
+          }
+        },
+        {
+          "source": "vcc2020",
+          "speaker": "TEM2",
+          "n": 18,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 2,
+              "median_score": 0.9775255918502808
+            },
+            "gain_x0p25": {
+              "tail_n": 1,
+              "median_score": 0.9717304706573486
+            },
+            "zero_padding": {
+              "tail_n": 0,
+              "median_score": 0.9871460199356079
+            },
+            "reflect_padding": {
+              "tail_n": 3,
+              "median_score": 0.9630677700042725
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 17,
+              "median_score": -0.131382554769516
+            },
+            "native_no_padding": {
+              "tail_n": 0,
+              "median_score": 0.9918708801269531
+            }
+          }
+        },
+        {
+          "source": "vcc2020",
+          "speaker": "TFF1",
+          "n": 24,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 0,
+              "median_score": 0.9932293891906738
+            },
+            "gain_x0p25": {
+              "tail_n": 0,
+              "median_score": 0.9921408891677856
+            },
+            "zero_padding": {
+              "tail_n": 0,
+              "median_score": 0.9930652976036072
+            },
+            "reflect_padding": {
+              "tail_n": 0,
+              "median_score": 0.9931885004043579
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 24,
+              "median_score": -0.3636098802089691
+            },
+            "native_no_padding": {
+              "tail_n": 0,
+              "median_score": 0.9934363961219788
+            }
+          }
+        },
+        {
+          "source": "vcc2020",
+          "speaker": "TFM1",
+          "n": 15,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 0,
+              "median_score": 0.9925498962402344
+            },
+            "gain_x0p25": {
+              "tail_n": 0,
+              "median_score": 0.9890885353088379
+            },
+            "zero_padding": {
+              "tail_n": 0,
+              "median_score": 0.9921409487724304
+            },
+            "reflect_padding": {
+              "tail_n": 0,
+              "median_score": 0.9925223588943481
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 15,
+              "median_score": -0.5030560493469238
+            },
+            "native_no_padding": {
+              "tail_n": 0,
+              "median_score": 0.9925498962402344
+            }
+          }
+        },
+        {
+          "source": "vcc2020",
+          "speaker": "TGF1",
+          "n": 15,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 0,
+              "median_score": 0.9915167689323425
+            },
+            "gain_x0p25": {
+              "tail_n": 0,
+              "median_score": 0.9900696277618408
+            },
+            "zero_padding": {
+              "tail_n": 0,
+              "median_score": 0.9927891492843628
+            },
+            "reflect_padding": {
+              "tail_n": 2,
+              "median_score": 0.9908726215362549
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 4,
+              "median_score": 0.9471479654312134
+            },
+            "native_no_padding": {
+              "tail_n": 0,
+              "median_score": 0.994431734085083
+            }
+          }
+        },
+        {
+          "source": "vcc2020",
+          "speaker": "TGM1",
+          "n": 10,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 0,
+              "median_score": 0.9628604650497437
+            },
+            "gain_x0p25": {
+              "tail_n": 3,
+              "median_score": 0.9383346438407898
+            },
+            "zero_padding": {
+              "tail_n": 0,
+              "median_score": 0.9774100184440613
+            },
+            "reflect_padding": {
+              "tail_n": 1,
+              "median_score": 0.9702960252761841
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 9,
+              "median_score": 0.6641761064529419
+            },
+            "native_no_padding": {
+              "tail_n": 0,
+              "median_score": 0.9811754822731018
+            }
+          }
+        },
+        {
+          "source": "vcc2020",
+          "speaker": "TMF1",
+          "n": 24,
+          "methods": {
+            "wrap_baseline": {
+              "tail_n": 3,
+              "median_score": 0.9752020835876465
+            },
+            "gain_x0p25": {
+              "tail_n": 4,
+              "median_score": 0.9735878705978394
+            },
+            "zero_padding": {
+              "tail_n": 1,
+              "median_score": 0.984136700630188
+            },
+            "reflect_padding": {
+              "tail_n": 7,
+              "median_score": 0.9754422307014465
+            },
+            "trim_edges_then_wrap": {
+              "tail_n": 14,
+              "median_score": 0.8429391384124756
+            },
+            "native_no_padding": {
+              "tail_n": 1,
+              "median_score": 0.9857383966445923
+            }
+          }
+        }
+      ],
+      "validation": {
+        "rows": 1000,
+        "unique_ids": 1000,
+        "long_clip_n": 497,
+        "zero_pad_long_max_difference": 7.748603820800781e-06,
+        "reflect_pad_long_max_difference": 6.496906280517578e-06
+      },
+      "limitations": [
+        "Tail prediction AUC is not detection EER or evidence that a routing rule improves detection.",
+        "Speaker-held-out folds help assess new-speaker transfer, but same-source and recording-family dependencies remain.",
+        "Source and speaker associations may reflect voice, language, content, recording setup, or preprocessing; causal identity is not isolated.",
+        "Duration-adjusted speaker rates use coarse bins and do not adjust every confounder.",
+        "Pre-projection representations are from the frozen model being diagnosed; no independent training or validation performed."
+      ]
+    }
+  },
+  "method_documents": {}
+}

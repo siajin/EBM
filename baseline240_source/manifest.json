@@ -1,0 +1,10 @@
+{
+  "commit": "10f3bcd057dc6a2ca687fbd5389ad6c9e15a3746",
+  "files": {
+    "main.py": "f23483e1a8d1bf98edfcd934e9c373821635b9226240677bb38644809a9c0326",
+    "train.py": "b7b98a182a4946c479f477b7110e1c4a49be53ee6b6e89ef1b4bc4785374873f",
+    "data_loaders.py": "411e294692207b8f434cc49769cbd052abb51316d4a17fe555c71459d7eea8f6",
+    "model/b_linear.py": "c2cbcf898f1905c9c6ee8b20ef4514c4af7cb343abbf35e2dbd1fd526ad3459f",
+    "model/loss.py": "164be4161b57a7899ef7b289e005ab80d12da373922d57e9e021844ea828b1ac"
+  }
+}

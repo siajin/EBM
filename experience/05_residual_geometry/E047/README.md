@@ -1,0 +1,61 @@
+# E047. 좌표 선택의 전체 169조건과 회전 좌표계 대조
+
+**실행 상태:** 캐시 점수 개입 완료
+
+이 문서의 상태는 2026-11-12 출판 검토 기준이다. 기존 문서·state의 시점별 상태와 충돌하면 실제 완료표식과 본문 최신 보완을 우선한다.
+
+## 가설
+
+좌표 선택 효과가 회전 후 바뀐다면 특정 채널 번호의 의미는 기저 의존적일 수 있다.
+
+## 그렇게 설계한 이유
+
+원래 좌표에서의 중요도 순위가 좌표 축 선택에 의존하는지 검사한다.
+
+대조와 통제의 근거: 169 +3×43 =298개 명시 점수 조건. 초기 하위 좌표 소수 유지 추가 실험과 다르다. 각 조건의 정확한 좌표 목록은 masks.json에 전부 보존됐다.
+
+## 모델·데이터·표본
+
+배치 160 고정 특징, 학습 자료 25,380에서 순위 fit·개발 14,983 임계값·DF/21LA 진단 각 20,000 평가.
+
+## 실험 내용과 상세 절차
+
+1. 원래 좌표에서 k =8/16/40/80 마다 Fisher 상위 k개 유지·제거,seed 200~219 무작위 k개 유지·제거를 만든다. 기준 1 +4×42 =169조건이다.
+2. seed 511/512/513의 Gaussian160×160행렬을 QR 분해해 정규 직교 회전 기저를 만든다. z와 c를 함께 회전해 전체 cosine 불변을 검사한다.
+3. 각 회전 기저에서 학습 자료 Fisher 순위를 다시 적합하고 k40의 42개 유지/제거 +기준 =43조건씩 계산한다.
+4. 주비교 k40에서 상위 대 무작위 20개 평균 효과를 계산하고 화자 군집과 무작위 mask seed를 함께 재표집한다.
+
+## 측정과 검증
+
+주비교 두 개는 화자 군집과 무작위 좌표 선택 seed를 함께 10,000회 재표집했다. 각각 97.5% 구간을 사용해 두 비교 전체의 95% 범위를 맞췄다. 이 보정이 프로젝트에서 시도한 모든 탐색을 포함하지는 않는다.
+
+## 결과
+
+원래 DF k40 유지의 상위 대 무작위 효과 −0.281111%p,97.5%구간[−0.625862,0.049187]. 회전 기저에 따라 효과와 부호가 달랐다.
+
+## 해석·실패한 부분·한계
+
+원래 좌표의 특정 번호가 보편적인 음향 채널의 의미를 갖는다고 해석하지 않는다. 좌표 부분 집합의 효과와 전체 회전 불변성은 다른 질문이다.
+
+## 배운 점
+
+회전에 따라 효과·부호가 바뀌었다. 전체 코사인 불변과 부분좌표 성능을 구분해야 한다.
+
+## 실험 코드
+
+- [artifacts/geometry_experiments/frozen_n0.py](code/artifacts/geometry_experiments/frozen_n0.py)
+
+코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+
+## 설정·결과·검산 근거
+
+- [artifacts/geometry_experiments/frozen_n0.py](../../_shared/workspace/artifacts/geometry_experiments/frozen_n0.py)
+- [artifacts/geometry_cache/local_analysis/frozen_all_v1/F1/masks.json](../../_shared/references/artifacts/geometry_cache/local_analysis/frozen_all_v1/F1/masks.json)
+- [artifacts/geometry_cache/local_analysis/frozen_all_v1/F1/mask_curves.csv](../../_shared/references/artifacts/geometry_cache/local_analysis/frozen_all_v1/F1/mask_curves.csv)
+- [artifacts/geometry_cache/local_analysis/frozen_all_v1/F1/paired_effects.json](../../_shared/references/artifacts/geometry_cache/local_analysis/frozen_all_v1/F1/paired_effects.json)
+
+## 연결
+
+다른 관련 가설: 주 가설에서만 분류한다.
+
+[가설 목록으로](../README.md) · [전체 실험 목록](../../README.md)

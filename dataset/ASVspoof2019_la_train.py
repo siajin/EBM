@@ -6,6 +6,7 @@ class Item:
     path: str
     speaker: str
     label: int
+    type: str = ''
 
 @dataclass
 class Trial:
@@ -13,6 +14,19 @@ class Trial:
     speaker: str
     type: str
     label: int
+
+
+def load_train_items_only(path):
+    """Read only the Train protocol for policy preflight; never open dev."""
+    protocol=os.path.join(path,'LA/ASVspoof2019_LA_cm_protocols/ASVspoof2019.LA.cm.train.trn.txt')
+    items=[]
+    with open(protocol) as source:
+        for line in source:
+            speaker,uid,_,attack,kind=line.split()
+            label=int(kind=='bonafide')
+            items.append(Item(path=os.path.join(path,'LA/ASVspoof2019_LA_train/flac',uid+'.flac'),
+                              speaker=speaker,label=label,type='bonafide' if label else attack))
+    return items
 
 class ASVspoof2019_LA_Train:
     def __init__(self, path):
@@ -38,7 +52,7 @@ class ASVspoof2019_LA_Train:
             item = Item(
                 path=os.path.join(path, f'LA/ASVspoof2019_LA_train/flac', f'{strI[1]}.flac'), 
                 speaker=strI[0], 
-                label=label)
+                label=label, type='bonafide' if label == 1 else strI[3])
             self.class_weight[label] += 1
             self.class_num[label] += 1
             self.train_set.append(item)

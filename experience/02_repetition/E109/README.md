@@ -1,0 +1,57 @@
+# E109. 같은 저에너지 내부 개입을 다섯 저장 모델에 반복한 대조
+
+**실행 상태:** 기존 실제 결과 확인·문서화 완료
+
+이 문서의 상태는 2026-11-12 출판 검토 기준이다. 기존 문서·state의 시점별 상태와 충돌하면 실제 완료표식과 본문 최신 보완을 우선한다.
+
+## 가설
+
+같은내부개입반응이 한checkpoint에만 국한되지 않을 수 있다.
+
+## 그렇게 설계한 이유
+
+한 체크포인트만의 우연한 반응인지 저장 epoch와 학습 설정을 넓혀 확인한다.
+
+대조와 통제의 근거: 65/70/75/80은 한 학습 궤적이다. 새 다섯 학습 seed나 BPL 제거 대조로 세지 않는다.
+
+## 모델·데이터·표본
+
+80epoch 학습 저장본 4개와 배치 160·50epoch 저장본 1개, 같은 96개. 각 SHA256은 수신된 checkpoint_replication/plan.json에 보존됐다.
+
+## 실험 내용과 상세 절차
+
+1. [E108](../../05_residual_geometry/E108/README.md)의 같은 무작위 96개를 사용한다. 원래 80epoch 학습의 65/70/75/80epoch와 배치 160·50epoch 모델을 읽는다.
+2. 각 파일·모델에서 같은 원본/변형/위치 교체·제외 조건과 잡음 0을 적용한다. XLS-R 고정 경로는 공통 사용한다.
+3. 모델별 정상 기준 코사인 변화·최종 특징 이동을 계산하고 체크포인트 해시와 원래 80epoch 점수 재현을 검사한다.
+
+## 측정과 검증
+
+발화별 대응 점수·원래 160차원 코사인·클래스별 분모와 저장 검산을 확인한다.
+
+## 결과
+
+다섯 모델의 결과와 완료 표식을 확인했다. BPL 학습 모델들에도 변형 민감도가 남는다는 범위의 관측이며, BPL의 인과적 이익·해로움을 분리하지 못했다.
+
+## 해석·실패한 부분·한계
+
+하나의 고정 학습 모델과 탐색 표본의 결과다. 전체 공식 평가 EER, 여러 학습 seed의 효과, 손실을 제거한 재학습의 효과로 해석하지 않는다. 반복 관찰한 표본과 서로 겹치는 후속 분석은 독립 실험 표본으로 합산하지 않는다.
+
+## 배운 점
+
+다섯모델에서도민감도는남았다. 한학습궤적의 네epoch를 네독립seed로 세지 않는다.
+
+## 실험 코드
+
+- [historical_analysis/bpl_frozen_replication_20261030_v1.py](code/bpl_frozen_replication_20261030_v1.py)
+
+코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+
+## 설정·결과·검산 근거
+
+- [artifacts/experiment_methods_audit_20261111/historical_receipts/EBM80_BPL_frozen_audit_20261030_v1.json](../../_shared/references/artifacts/experiment_methods_audit_20261111/historical_receipts/EBM80_BPL_frozen_audit_20261030_v1.json)
+
+## 연결
+
+다른 관련 가설: [정상 다양성·도메인 지지와 정상쌍 학습](../../03_bonafide_diversity/README.md) · [잔여 방향·좌표·거리·기하와 변형 반응](../../05_residual_geometry/README.md)
+
+[가설 목록으로](../README.md) · [전체 실험 목록](../../README.md)

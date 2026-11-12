@@ -1,0 +1,11 @@
+{
+  "status": "excluded_by_user",
+  "recorded_KST": "2026-11-06T00:54:22+09:00",
+  "user_instruction": "그거는 하지 말자",
+  "experiment": "DF P3-B/P4 4 outer x 3 inner coverage follow-up",
+  "fits_launched": false,
+  "automatic_launch_allowed": false,
+  "original_5x3_results_preserved": true,
+  "source_class_coverage_complete": false,
+  "remaining_in_current_scope": false
+}

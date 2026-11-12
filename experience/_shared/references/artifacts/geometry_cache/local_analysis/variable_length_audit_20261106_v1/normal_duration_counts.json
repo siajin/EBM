@@ -1,0 +1,32 @@
+{
+  "source": "T original waveform duration metadata",
+  "source_fingerprint": "686e593443178bb89241e48ab9a148e1f248f2025140f379d564c19a75198b4b",
+  "bonafide_N": 2580,
+  "before_padding_or_augmentation": true,
+  "counts": {
+    "1.5": {
+      "under_seconds": 1.5,
+      "n": 9,
+      "percent": 0.3488372093023256
+    },
+    "2": {
+      "under_seconds": 2,
+      "n": 109,
+      "percent": 4.224806201550388
+    },
+    "3": {
+      "under_seconds": 3,
+      "n": 986,
+      "percent": 38.21705426356589
+    },
+    "3.0275": {
+      "under_seconds": 3.0275,
+      "n": 1040,
+      "percent": 40.310077519379846
+    }
+  },
+  "median_seconds": 3.24003125,
+  "verification": {
+    "integer_samples_vs_duration_agree": true
+  }
+}

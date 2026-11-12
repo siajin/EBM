@@ -1,0 +1,47 @@
+{
+  "checked_KST": "2026-11-08T03:27:21.065367",
+  "evaluation_exit": 0,
+  "geometry_exit": 0,
+  "training_exit": 0,
+  "source_unchanged": true,
+  "checkpoint_hash_checks": {
+    "B_CLS50": true,
+    "B_TrainState50": true,
+    "legacy240_CLS50": true
+  },
+  "branch": "train/ebm-B-zeropad-e50-bs240-20261106",
+  "commit": "2c2c6ff65bbadf33b811983f7c648c97fffb81a1",
+  "git_status": "",
+  "GPU6_7": "6, 0\n6, 0",
+  "screen0_pgid_tpgid": "352729  352729",
+  "complete": {
+    "status": "evaluation_complete_analysis_pending",
+    "phase_counts": {
+      "dev": 24844,
+      "19LA": 71237,
+      "21LA": 148176,
+      "21DF": 533928
+    },
+    "protocol": "both fixed50 checkpoints, same B cap/masks/batch8, default pooling noise1e-5 with common random numbers",
+    "no_target_checkpoint_selection": true,
+    "thresholds_selected_on_dev_only": true
+  },
+  "mechanism_complete": {
+    "status": "intervention_complete_analysis_pending",
+    "N": 768,
+    "paired_rows": 1536,
+    "noise_std": 0.0,
+    "models": [
+      "B",
+      "legacy240"
+    ],
+    "views": [
+      "native",
+      "wrap"
+    ],
+    "no_op_max_z_error": 0.0,
+    "no_op_max_score_error": 0.0,
+    "selected_sha256": "367e0d589ef4d442e22c10d5f30c679a70f0023987a7eca109dcfa7b4bf81dd4",
+    "embeddings_sha256": "bdb461ac489f4f18ad680a277fc4e0b9d5f2b1131840caf820b5ee41655f2fe1"
+  }
+}

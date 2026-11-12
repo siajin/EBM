@@ -1,0 +1,282 @@
+[
+  {
+    "dataset": "DF_pilot",
+    "baseline": "native",
+    "candidate": "dynamic",
+    "seed_deltas_pp": [
+      0.005555555555553315,
+      0.011111111111108407,
+      0.005555555555553315
+    ],
+    "mean_delta_EER_pp": 0.007407407407405013,
+    "CI95": [
+      -0.037530550593692195,
+      0.04819915497073317
+    ],
+    "CI99": [
+      -0.05471881914244299,
+      0.06502705562942432
+    ],
+    "draws": 10000,
+    "groups": 93,
+    "class_groups": [
+      62,
+      92
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "dataset": "DF_pilot",
+    "baseline": "static",
+    "candidate": "dynamic",
+    "seed_deltas_pp": [
+      0.005555555555553315,
+      0.011111111111108407,
+      0.005555555555553315
+    ],
+    "mean_delta_EER_pp": 0.007407407407405013,
+    "CI95": [
+      -0.037530550593692195,
+      0.04819915497073317
+    ],
+    "CI99": [
+      -0.05471881914244299,
+      0.06502705562942432
+    ],
+    "draws": 10000,
+    "groups": 93,
+    "class_groups": [
+      62,
+      92
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "dataset": "DF_pilot",
+    "baseline": "mlp",
+    "candidate": "dynamic",
+    "seed_deltas_pp": [
+      0.08333333333333348,
+      0.011111111111108407,
+      0.050000000000000266
+    ],
+    "mean_delta_EER_pp": 0.048148148148147385,
+    "CI95": [
+      -0.010809173356195084,
+      0.12371214365086484
+    ],
+    "CI99": [
+      -0.04818942875426451,
+      0.14878911448907106
+    ],
+    "draws": 10000,
+    "groups": 93,
+    "class_groups": [
+      62,
+      92
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "dataset": "DF_pilot",
+    "baseline": "native",
+    "candidate": "metric",
+    "seed_deltas_pp": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "mean_delta_EER_pp": 0.0,
+    "CI95": [
+      0.0,
+      0.0
+    ],
+    "CI99": [
+      0.0,
+      0.0
+    ],
+    "draws": 10000,
+    "groups": 93,
+    "class_groups": [
+      62,
+      92
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "dataset": "DF_pilot",
+    "baseline": "static",
+    "candidate": "metric",
+    "seed_deltas_pp": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "mean_delta_EER_pp": 0.0,
+    "CI95": [
+      0.0,
+      0.0
+    ],
+    "CI99": [
+      0.0,
+      0.0
+    ],
+    "draws": 10000,
+    "groups": 93,
+    "class_groups": [
+      62,
+      92
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "dataset": "21LA_pilot",
+    "baseline": "native",
+    "candidate": "dynamic",
+    "seed_deltas_pp": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "mean_delta_EER_pp": 0.0,
+    "CI95": [
+      0.0,
+      0.0034089903816593176
+    ],
+    "CI99": [
+      0.0,
+      0.01040081934479552
+    ],
+    "draws": 10000,
+    "groups": 67,
+    "class_groups": [
+      48,
+      67
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "dataset": "21LA_pilot",
+    "baseline": "static",
+    "candidate": "dynamic",
+    "seed_deltas_pp": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "mean_delta_EER_pp": 0.0,
+    "CI95": [
+      0.0,
+      0.0034089903816593176
+    ],
+    "CI99": [
+      0.0,
+      0.01040081934479552
+    ],
+    "draws": 10000,
+    "groups": 67,
+    "class_groups": [
+      48,
+      67
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "dataset": "21LA_pilot",
+    "baseline": "mlp",
+    "candidate": "dynamic",
+    "seed_deltas_pp": [
+      0.00555555555555487,
+      0.0,
+      0.0
+    ],
+    "mean_delta_EER_pp": 0.0018518518518516232,
+    "CI95": [
+      -0.04770685639851683,
+      0.035244354417169915
+    ],
+    "CI99": [
+      -0.0688603364874969,
+      0.04895333002893071
+    ],
+    "draws": 10000,
+    "groups": 67,
+    "class_groups": [
+      48,
+      67
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "dataset": "21LA_pilot",
+    "baseline": "native",
+    "candidate": "metric",
+    "seed_deltas_pp": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "mean_delta_EER_pp": 0.0,
+    "CI95": [
+      0.0,
+      0.0
+    ],
+    "CI99": [
+      0.0,
+      0.0
+    ],
+    "draws": 10000,
+    "groups": 67,
+    "class_groups": [
+      48,
+      67
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "dataset": "21LA_pilot",
+    "baseline": "static",
+    "candidate": "metric",
+    "seed_deltas_pp": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "mean_delta_EER_pp": 0.0,
+    "CI95": [
+      0.0,
+      0.0
+    ],
+    "CI99": [
+      0.0,
+      0.0
+    ],
+    "draws": 10000,
+    "groups": 67,
+    "class_groups": [
+      48,
+      67
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  }
+]

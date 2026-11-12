@@ -1,0 +1,56 @@
+{
+  "status": "passed_local_code_audit",
+  "confirmed_defects": [
+    {
+      "name": "Legacy scorer accepts role-v1 tensor weights but uses positive center cosine",
+      "reproduced_before_fix": true,
+      "synthetic_sign_demonstration": {
+        "correct_EER_percent": 0,
+        "legacy_EER_percent": 100
+      },
+      "scope": "Only when a spoof-centered model is sent through an unaware legacy scorer; not a measured user result",
+      "fix": "Role-tagged v2 CLS/TrainState formats reject tensor-only/classifier fallback loading; role-aware v1 reader retained"
+    },
+    {
+      "name": "Full smoke subset mislabeled full evaluation and smoke export unrestricted",
+      "reproduced_before_fix": true,
+      "fix": "Persist execution mode, checkpoint purpose and actual evaluation scope; require explicit smoke export; enforce official full trial counts in train mode"
+    }
+  ],
+  "original_failing_regressions": 3,
+  "new_audit_tests": 8,
+  "role_regressions": 32,
+  "legacy_regressions": 46,
+  "total_passed": 86,
+  "logs": {
+    "regressions_after.log": {
+      "tests": 40,
+      "seconds": 24.327,
+      "status": "passed"
+    },
+    "existing_regressions.log": {
+      "tests": 46,
+      "seconds": 52.086,
+      "status": "passed"
+    }
+  },
+  "learning_objective_model_and_two_step_update_files_unchanged": true,
+  "changed_local_files": [
+    "role_lifecycle.py",
+    "role_runtime.py",
+    "tools/train_role_experiment.py",
+    "ROLE_EBM.md"
+  ],
+  "added_source": "tests/test_role_code_audit.py",
+  "original_pre_role_files_preserved": 140,
+  "runtime_preflight": "passed, no launch/download",
+  "real_user_run_root_available": false,
+  "causality": "These defects are reproduced but have not been established as the cause of the user reported EER. Correct role-aware full-training evaluations may have another cause.",
+  "existing_checkpoints_rewritten": 0,
+  "remote_calls": 0,
+  "real_training_runs": 0,
+  "real_audio_or_XLSR_inference_runs": 0,
+  "new_spending_usd": 0,
+  "automatic_retries": 0,
+  "cleanup": "All local CPU test ranks and command sessions exited. TemporaryDirectory fixtures cleaned; no remote job, resource or queue created."
+}

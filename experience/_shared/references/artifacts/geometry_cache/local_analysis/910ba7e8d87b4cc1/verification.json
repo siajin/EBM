@@ -1,0 +1,55 @@
+{
+  "status": "pass",
+  "offline": true,
+  "GPU_inference_runs": 0,
+  "SSH_required": false,
+  "verified_utc": "2026-11-04T16:48:09.372189+00:00",
+  "cached_datasets": [
+    {
+      "dataset": "T",
+      "fingerprint": "686e593443178bb89241e48ab9a148e1f248f2025140f379d564c19a75198b4b",
+      "z_shape": [
+        25380,
+        160
+      ],
+      "h_shape": [
+        25380,
+        160
+      ],
+      "analysis_complete": true
+    },
+    {
+      "dataset": "V",
+      "fingerprint": "686e593443178bb89241e48ab9a148e1f248f2025140f379d564c19a75198b4b",
+      "z_shape": [
+        14983,
+        160
+      ],
+      "h_shape": [
+        14983,
+        160
+      ],
+      "analysis_complete": true
+    }
+  ],
+  "validation": [
+    {
+      "status": "pass",
+      "dataset": "T",
+      "rows": 25380,
+      "cache_fingerprint": "686e593443178bb89241e48ab9a148e1f248f2025140f379d564c19a75198b4b",
+      "file_hashes_checked": true
+    },
+    {
+      "status": "pass",
+      "dataset": "V",
+      "rows": 14983,
+      "cache_fingerprint": "686e593443178bb89241e48ab9a148e1f248f2025140f379d564c19a75198b4b",
+      "file_hashes_checked": true
+    }
+  ],
+  "not_available": [],
+  "metrics_recomputed": 7,
+  "metrics_file": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\910ba7e8d87b4cc1\\metrics.csv",
+  "scope": "T train diagnostic; V source-domain development; DF_pilot fixed 20000 sample, not full DF"
+}

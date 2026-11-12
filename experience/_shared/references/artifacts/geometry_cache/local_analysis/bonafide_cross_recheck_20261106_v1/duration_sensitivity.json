@@ -1,0 +1,164 @@
+{
+  "edges_seconds": [
+    1.0,
+    1.5,
+    2.0,
+    3.0,
+    4.0375,
+    6.0
+  ],
+  "support": [
+    {
+      "dataset": "19LA",
+      "y": 0,
+      "bins_counts": [
+        1058,
+        5815,
+        9493,
+        20356,
+        13481,
+        10285,
+        3394
+      ],
+      "common_bins": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "target_mass": [
+        0.016561785792555024,
+        0.0910272064118218,
+        0.14860211014057167,
+        0.3186500109577033,
+        0.21102971102971102,
+        0.1609999686922764,
+        0.05312920697536082
+      ],
+      "retained_fraction": 1.0
+    },
+    {
+      "dataset": "DF",
+      "y": 0,
+      "bins_counts": [
+        4374,
+        39102,
+        71971,
+        164412,
+        122531,
+        102197,
+        14472
+      ],
+      "common_bins": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "target_mass": [
+        0.016561785792555024,
+        0.0910272064118218,
+        0.14860211014057167,
+        0.3186500109577033,
+        0.21102971102971102,
+        0.1609999686922764,
+        0.05312920697536082
+      ],
+      "retained_fraction": 1.0
+    },
+    {
+      "dataset": "19LA",
+      "y": 1,
+      "bins_counts": [
+        1,
+        13,
+        251,
+        2761,
+        2675,
+        1478,
+        176
+      ],
+      "common_bins": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "target_mass": [
+        0.00013596193065941537,
+        0.0017675050985723998,
+        0.034126444595513256,
+        0.37539089055064584,
+        0.3636981645139361,
+        0.2009517335146159,
+        0.023929299796057103
+      ],
+      "retained_fraction": 1.0
+    },
+    {
+      "dataset": "DF",
+      "y": 1,
+      "bins_counts": [
+        45,
+        456,
+        867,
+        4499,
+        4898,
+        3492,
+        612
+      ],
+      "common_bins": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "target_mass": [
+        0.00013596193065941537,
+        0.0017675050985723998,
+        0.034126444595513256,
+        0.37539089055064584,
+        0.3636981645139361,
+        0.2009517335146159,
+        0.023929299796057103
+      ],
+      "retained_fraction": 1.0
+    }
+  ],
+  "matrix": [
+    {
+      "bona": "19LA",
+      "spoof": "19LA",
+      "eer_percent": 0.43517735825473375
+    },
+    {
+      "bona": "19LA",
+      "spoof": "DF",
+      "eer_percent": 0.28552005438481354
+    },
+    {
+      "bona": "DF",
+      "spoof": "19LA",
+      "eer_percent": 4.9998434613869955
+    },
+    {
+      "bona": "DF",
+      "spoof": "DF",
+      "eer_percent": 2.662010265124881
+    }
+  ],
+  "uncertainty": "Point estimates only; no sensitivity CIs",
+  "scope": "19LA class-specific duration prior on common binned support; residual within-bin confounding remains"
+}

@@ -1,0 +1,116 @@
+[
+  {
+    "source": "MENTEE_SERVER.md",
+    "reason": "operational account instructions excluded",
+    "sha256": "b19dd0a77b20582126e9b4c983b0dcae979fcd61536f872c025572dcfb001aa7"
+  },
+  {
+    "source": "MENTEE_SERVER.md",
+    "reason": "operational account instructions excluded",
+    "sha256": "b19dd0a77b20582126e9b4c983b0dcae979fcd61536f872c025572dcfb001aa7"
+  },
+  {
+    "source": "artifacts/repetition_shortcut_20261111/probe_selected.csv",
+    "reason": "per-utterance table excluded",
+    "sha256": "275dbad6116833097b8986c7d0213b20e4df2bab3c58ef228e8cbb3b0ee00735"
+  },
+  {
+    "source": "artifacts/repetition_shortcut_20261111/new_results/probe_rank0.csv",
+    "reason": "per-utterance table excluded",
+    "sha256": "a0196fa73a688d97c4ee87a8db2726591c6f10d253786d7c43a3bef8a5111414"
+  },
+  {
+    "source": "artifacts/repetition_shortcut_20261111/new_results/probe_rank1.csv",
+    "reason": "per-utterance table excluded",
+    "sha256": "ce0b681ddf4fc2eb28f95d5cb4a0bea916827f3388353d85779caa45d9fd4655"
+  },
+  {
+    "source": "MENTEE_SERVER.md",
+    "reason": "operational account instructions excluded",
+    "sha256": "b19dd0a77b20582126e9b4c983b0dcae979fcd61536f872c025572dcfb001aa7"
+  },
+  {
+    "source": "artifacts/repetition_shortcut_20261111/probe_selected.csv",
+    "reason": "per-utterance table excluded",
+    "sha256": "275dbad6116833097b8986c7d0213b20e4df2bab3c58ef228e8cbb3b0ee00735"
+  },
+  {
+    "source": "MENTEE_SERVER.md",
+    "reason": "operational account instructions excluded",
+    "sha256": "b19dd0a77b20582126e9b4c983b0dcae979fcd61536f872c025572dcfb001aa7"
+  },
+  {
+    "source": "MENTEE_SERVER.md",
+    "reason": "operational account instructions excluded",
+    "sha256": "b19dd0a77b20582126e9b4c983b0dcae979fcd61536f872c025572dcfb001aa7"
+  },
+  {
+    "source": "MENTEE_SERVER.md",
+    "reason": "operational account instructions excluded",
+    "sha256": "b19dd0a77b20582126e9b4c983b0dcae979fcd61536f872c025572dcfb001aa7"
+  },
+  {
+    "source": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\source_coverage_20261110",
+    "reason": "not locally available"
+  },
+  {
+    "source": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\joint_activity_balance_20261110",
+    "reason": "not locally available"
+  },
+  {
+    "source": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\duration_bias_research_20261111\\ebm_five_research_themes_20261111.md",
+    "reason": "not locally available"
+  },
+  {
+    "source": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\duration_bias_research_20261111\\ebm_completed_evidence_interpretation_20261111.md",
+    "reason": "not locally available"
+  },
+  {
+    "source": "MENTEE_SERVER.md",
+    "reason": "operational account instructions excluded",
+    "sha256": "b19dd0a77b20582126e9b4c983b0dcae979fcd61536f872c025572dcfb001aa7"
+  },
+  {
+    "source": "MENTEE_SERVER.md",
+    "reason": "operational account instructions excluded",
+    "sha256": "b19dd0a77b20582126e9b4c983b0dcae979fcd61536f872c025572dcfb001aa7"
+  },
+  {
+    "source": "artifacts/repetition_shortcut_20261111/probe_selected.csv",
+    "reason": "per-utterance table excluded",
+    "sha256": "275dbad6116833097b8986c7d0213b20e4df2bab3c58ef228e8cbb3b0ee00735"
+  },
+  {
+    "source": "artifacts/geometry_cache/local_analysis/full_score_overlap_20261106_v2/missing_endpoints_for_locked_strict_pairs.parquet",
+    "reason": "audio, model, feature array or unsupported artifact",
+    "sha256": "e93dfbe853046eb12e50e0e28fbb7d354c8aaf5db0c6ec68547b922e6d7595e3"
+  },
+  {
+    "source": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\duration_centroids_20261106_v1",
+    "reason": "not locally available"
+  },
+  {
+    "source": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\perturbation_candidate_audit_20261106_v1",
+    "reason": "not locally available"
+  },
+  {
+    "source": "MENTEE_SERVER.md",
+    "reason": "operational account instructions excluded",
+    "sha256": "b19dd0a77b20582126e9b4c983b0dcae979fcd61536f872c025572dcfb001aa7"
+  },
+  {
+    "source": "MENTEE_SERVER.md",
+    "reason": "operational account instructions excluded",
+    "sha256": "b19dd0a77b20582126e9b4c983b0dcae979fcd61536f872c025572dcfb001aa7"
+  },
+  {
+    "source": "MENTEE_SERVER.md",
+    "reason": "operational account instructions excluded",
+    "sha256": "b19dd0a77b20582126e9b4c983b0dcae979fcd61536f872c025572dcfb001aa7"
+  },
+  {
+    "source": "artifacts/geometry_cache/local_analysis/B_final_analysis_20261108_v1/mechanism_2x2/selected.parquet",
+    "reason": "audio, model, feature array or unsupported artifact",
+    "sha256": "367e0d589ef4d442e22c10d5f30c679a70f0023987a7eca109dcfa7b4bf81dd4"
+  }
+]

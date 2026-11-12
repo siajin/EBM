@@ -1,0 +1,29 @@
+{
+  "status": "pass",
+  "changed_file": "arguments.py",
+  "current": {
+    "name": "EBM_e50_bs240_lr1e5_native_short303_E1",
+    "batch_size": 240,
+    "native_length": true,
+    "short_oc_weight": 0.0,
+    "padding_loss_weight": 0.0,
+    "num_train_frames_short": 303
+  },
+  "backup": "/home/mentee/analysis/ebm_first_stage_E1_20261106_2058/arguments_before.py",
+  "full_training_started": false,
+  "old240_archive": {
+    "online_codec_probability": [
+      0.8
+    ],
+    "active_convert_calls": 2,
+    "codec_implementation_matches_current": true,
+    "same_main_hyperparameters": true,
+    "same_local_BPL_AST": true
+  },
+  "current_model_branches": [
+    "long",
+    "short"
+  ],
+  "unused_wrapped_cpu_item_may_still_be_collated": true,
+  "new_control_required_for_causal_claim": true
+}

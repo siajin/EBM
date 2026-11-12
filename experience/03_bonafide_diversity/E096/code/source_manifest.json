@@ -1,0 +1,14 @@
+[
+  {
+    "path": "experience/03_bonafide_diversity/E096/code/cue_audit_21df.py",
+    "sha256": "18c9d474c5c4b745ce1a64f534b5e4afe8e12b4fe05910cdf518c8a6780d1ae7",
+    "origin": "artifacts/github_archive_20261112/remote_source/historical_analysis/cue_audit_21df.py",
+    "kind": "actual historical analysis source"
+  },
+  {
+    "path": "experience/03_bonafide_diversity/E096/code/cue_audit_followup.py",
+    "sha256": "2aa5ed2ff6417c1ad4ebf6aa3b9cde68434c8831264e4fa968a61fe7c7a48059",
+    "origin": "artifacts/github_archive_20261112/remote_source/historical_analysis/cue_audit_followup.py",
+    "kind": "actual historical analysis source"
+  }
+]

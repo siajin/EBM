@@ -1,0 +1,31 @@
+{
+  "status": "inference_and_analysis_complete",
+  "phase_vocoder_N": 512,
+  "atempo_N": 64,
+  "models": [
+    "legacy240_e50",
+    "B_e50",
+    "C_e50"
+  ],
+  "conditions": [
+    "native_cap",
+    "slow_cap",
+    "fast_cap",
+    "roundtrip_cap",
+    "norm_full4",
+    "full_native"
+  ],
+  "report": "docs\\experiments\\ebm_B_C_all_checkpoint_evaluation_20261109.md",
+  "no_training": true,
+  "automation_remains_paused": true,
+  "server": {
+    "checked_KST": "2026-11-09T22:44:22+09:00",
+    "gpu6_7": "6, 0\n6, 0",
+    "shell_idle": true,
+    "run_exits": {
+      "ebm_speed_duration_probe_20261109_v1": "0",
+      "ebm_speed_duration_atempo_20261109_v1": "0"
+    },
+    "git_clean": true
+  }
+}

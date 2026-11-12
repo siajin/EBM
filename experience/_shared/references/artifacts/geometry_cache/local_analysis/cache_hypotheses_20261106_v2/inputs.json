@@ -1,0 +1,1547 @@
+[
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\analysis_manifests\\frozen_data_sizes_v1\\21LA_pilot.parquet",
+    "bytes": 1644095,
+    "sha256": "2153631a6337ebfc5f68a754596d89785e23a7ed800b7b72eb4c17ae06bfa619"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\catalog.json",
+    "bytes": 25397,
+    "sha256": "208e4259ef5bf719b55e55a6a2739e6e3fe08411d39c73798c39bc2a3f25c9da"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\CV4_coverage_candidate_v1\\execution_decision.json",
+    "bytes": 396,
+    "sha256": "bb6a1c105d9e58552452cc8dca4d9701edfc77a61add99a4fc89b595c1412e34"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P1\\101\\dynamic\\head_state.pt",
+    "bytes": 46522,
+    "sha256": "7171f855bb738b63d0dc6ecb7ae106153d95777cdac433a2c088b0eaa354a3b8"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P1\\101\\static\\head_state.pt",
+    "bytes": 4605,
+    "sha256": "8f9ac3af89e6006ab3aef9d1a2242c32c9ab7158a85c83be58f5b15db0dfa533"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P1\\102\\dynamic\\head_state.pt",
+    "bytes": 46522,
+    "sha256": "79bbb9e763ed18b30f8536b738c044c8639c68df571c0cbd0722e0ec626f4d83"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P1\\103\\dynamic\\head_state.pt",
+    "bytes": 46522,
+    "sha256": "edcc6d42b82a0d757a9cea2119f38576c156e52ad471d7bbd00bd3d6b775792e"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P2\\101\\metric\\head_state.pt",
+    "bytes": 4605,
+    "sha256": "7b009383d4aad00d80bb62f3dc7ec2a4437657e0faca4a981ab8696bbe1b7bcb"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\complete.json",
+    "bytes": 404,
+    "sha256": "2cbdde1f5f1cc0cd141c217ecd5d2591c9b84b394c6f51a1c32edeaf56a15cfc"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\fold_manifest.json",
+    "bytes": 6640876,
+    "sha256": "151d6f764fd00dbb86fd4d4e7cdf9c9ebd2820957f1ee4298e70f5c498ed7d35"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_h\\101\\outer0\\refit\\model.pt",
+    "bytes": 9539,
+    "sha256": "c73da3aa0a2bad2e8e50b031014e678d4da892044594da30183a919c7183663c"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_h\\101\\outer1\\refit\\model.pt",
+    "bytes": 9539,
+    "sha256": "602fa9d0f32aaf32e1d81980d6971341b416b9e1e97caa99ee60c00038643f09"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_h\\101\\outer2\\refit\\model.pt",
+    "bytes": 9539,
+    "sha256": "0a2e5cfeea60bd6e936cb586925483673af04c912c0eec49ba89a64af33824e2"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_h\\101\\outer3\\refit\\model.pt",
+    "bytes": 9539,
+    "sha256": "5bbe147a4768f64c2e16df5c5aeb113d8bb54ab252760cc6683e18ab892b8735"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_h\\101\\outer4\\refit\\model.pt",
+    "bytes": 9539,
+    "sha256": "5b14beaaa0f36e598db5b892a0670a9d4ece27b5dfc363b4dd065153c64e0574"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_h\\102\\outer0\\refit\\model.pt",
+    "bytes": 9539,
+    "sha256": "a9f84405026163764055ba477c00eee0b84bd581240f9faff09080da75100f96"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_h\\102\\outer1\\refit\\model.pt",
+    "bytes": 9539,
+    "sha256": "1bf8a12e68247160c26e8d4d7eb6e1587a2de8dc9c2654530fb02f64d851f379"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_h\\102\\outer2\\refit\\model.pt",
+    "bytes": 9539,
+    "sha256": "7cd142d219c66b1950f441e05fa565b583a58c02255fbfb940b8b70ff23c1469"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_h\\102\\outer3\\refit\\model.pt",
+    "bytes": 9539,
+    "sha256": "0c71bb1f8daa20ab5fd75c89204795e6be0f7df6078a4ed91bc39eb8cc38a9bd"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_h\\102\\outer4\\refit\\model.pt",
+    "bytes": 9539,
+    "sha256": "aa7aefcfc98f04f254bebc725ab76678a8ee85a950a2d71065dab502b5279767"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_h\\103\\outer0\\refit\\model.pt",
+    "bytes": 9539,
+    "sha256": "0a74572c8073808fccf331b406a68c0377584bd08f6344797eb2cd485fd1821c"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_h\\103\\outer1\\refit\\model.pt",
+    "bytes": 9539,
+    "sha256": "03066526d2f94106948cf494a160ddca541b1c10e5c7673b80e483138e9d9291"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_h\\103\\outer2\\refit\\model.pt",
+    "bytes": 9539,
+    "sha256": "2b8da9c34a72f5d26245a0ac121b5528a45c9347bb4b19e7787c0c1e155987e5"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_h\\103\\outer3\\refit\\model.pt",
+    "bytes": 9539,
+    "sha256": "6bb37e5add35c6fd4a7cfb1dcb8b7e4d2b5118681a5f72e10a52fcc179d1e8e8"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_h\\103\\outer4\\refit\\model.pt",
+    "bytes": 9539,
+    "sha256": "0da0f1033c8b88935fe60059ffef8ea6393a07aa71c5313e5f382524bfc7104d"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_linear\\101\\outer0\\refit\\model.pt",
+    "bytes": 4163,
+    "sha256": "aaa7d602e4df7c59b9474a5826c4f8af7b88bf00840dd182f2d4683a8b8bd3ba"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_linear\\101\\outer1\\refit\\model.pt",
+    "bytes": 4163,
+    "sha256": "fd25b925f105887176040769cda282ea2d30d674489fffa7b34878493f6fe24b"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_linear\\101\\outer2\\refit\\model.pt",
+    "bytes": 4163,
+    "sha256": "21f1781d3c5f4f8202686d51dc5894ba13cd687539a68abf38dfbff885119978"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_linear\\101\\outer3\\refit\\model.pt",
+    "bytes": 4163,
+    "sha256": "4c5bdbbfdedbace2f0ffeea1fb27dd0efdfb00879ca5e4a389b651e5a1c6c7d7"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_linear\\101\\outer4\\refit\\model.pt",
+    "bytes": 4163,
+    "sha256": "c2c7b05905d25f2c21eb2d510f1dff2e91bf8806d111c762e769f06d9f4bd4ba"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_linear\\102\\outer0\\refit\\model.pt",
+    "bytes": 4163,
+    "sha256": "83926c0d579ee3e0d90cf9a9390aeea3dfdc66b95bb67f476f305d13594384f5"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_linear\\102\\outer1\\refit\\model.pt",
+    "bytes": 4163,
+    "sha256": "630f5c1040e6baed1273156999a4334c4118daeb672f836f0806c9bc498a97e9"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_linear\\102\\outer2\\refit\\model.pt",
+    "bytes": 4163,
+    "sha256": "ad82f4d7ea53a5915a9ebf131968ec775a428d4463495fa1d79741c906fcda9b"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_linear\\102\\outer3\\refit\\model.pt",
+    "bytes": 4163,
+    "sha256": "d0e07bb79ff36d038dfb71dfb765e2484c2ba57c0e0b411c531863c6c9c84959"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_linear\\102\\outer4\\refit\\model.pt",
+    "bytes": 4163,
+    "sha256": "ab2bf161c643c6ee63ec54a22bf04f43623ce65156ee38cafc6c43729f24203b"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_linear\\103\\outer0\\refit\\model.pt",
+    "bytes": 4163,
+    "sha256": "99952d68c0cfb9846278a7cd6ac8834c93da7b73f10b8802d359325feb75ed69"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_linear\\103\\outer1\\refit\\model.pt",
+    "bytes": 4163,
+    "sha256": "8c994a3755c5b910a4ddd4c08615e45de6beb2bb1b4e1f76be0a5a1a4208f9ea"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_linear\\103\\outer2\\refit\\model.pt",
+    "bytes": 4163,
+    "sha256": "3c06c83a14f7eeade0636e95025b3529e7d7e18ab5c477105b43b0ad91298e4d"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_linear\\103\\outer3\\refit\\model.pt",
+    "bytes": 4163,
+    "sha256": "112a9f565a970cd4a7285d79c7a2963f007c8106a337eb71593b7634386e31ca"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_linear\\103\\outer4\\refit\\model.pt",
+    "bytes": 4163,
+    "sha256": "c254f043aa9224503f03f8edea5e58624f8ab4f9695573dbad0dbb9e60a70e91"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_mlp\\101\\outer0\\refit\\model.pt",
+    "bytes": 24241,
+    "sha256": "0049f71880eb73fed531b54c0f587b350d13fb18fd4d4e6a725a44fa1d7f862a"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_mlp\\101\\outer1\\refit\\model.pt",
+    "bytes": 24241,
+    "sha256": "c07fcdb609b3c2a1ed58b6dc7ba14cb87b66f6934b3db7c69eae7f96291c249e"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_mlp\\101\\outer2\\refit\\model.pt",
+    "bytes": 24241,
+    "sha256": "1319c24376aef227cc27ae9e3a19505872423e675c68a295d79f32972322e173"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_mlp\\101\\outer3\\refit\\model.pt",
+    "bytes": 24241,
+    "sha256": "512fb8672ae6220701201ccb4b6b49882b74e197030c58f4e2596b927c6f83b5"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_mlp\\101\\outer4\\refit\\model.pt",
+    "bytes": 24241,
+    "sha256": "7892c69267182c9dcde3bbc1ba270db744736eaf3682bc1164d6913d4967c542"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_mlp\\102\\outer0\\refit\\model.pt",
+    "bytes": 24241,
+    "sha256": "8183888c2a9d7940f4fd5485b6f3c22233edf1ca4272c919ca38695308f061c2"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_mlp\\102\\outer1\\refit\\model.pt",
+    "bytes": 24241,
+    "sha256": "7f0e8ac5a44e04afc10d8529c64a54de618e8aed399918bea0775d3e08c93902"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_mlp\\102\\outer2\\refit\\model.pt",
+    "bytes": 24241,
+    "sha256": "cfdc77b01669991121ee79306cec859b2b94a918de529bc5e037a814a271d56d"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_mlp\\102\\outer3\\refit\\model.pt",
+    "bytes": 24241,
+    "sha256": "ce2a873bf0ca3637a5d6021ca1a251dd0761be08d7b51afdbafec0f762c94868"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_mlp\\102\\outer4\\refit\\model.pt",
+    "bytes": 24241,
+    "sha256": "b4c3c8a82ccc46448fb7833d70d5de3636b0a61be481e426dc946a694124014f"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_mlp\\103\\outer0\\refit\\model.pt",
+    "bytes": 24241,
+    "sha256": "278b80fe7e967cb79e12d52f5b30579da97ef4b25718dfb853323ee283777f50"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_mlp\\103\\outer1\\refit\\model.pt",
+    "bytes": 24241,
+    "sha256": "c9809dcdafd17a598691084c02a6758211e4009e16099ea15deb898561b3ad79"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_mlp\\103\\outer2\\refit\\model.pt",
+    "bytes": 24241,
+    "sha256": "412b908d88dae5d29fe5bffeb23549f56fbd35fde74299cfcf3f4a0f4496372d"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_mlp\\103\\outer3\\refit\\model.pt",
+    "bytes": 24241,
+    "sha256": "a44d8274680b2646f9a4350ca3537d04af9cee80ce49c3dbb631fc66e8bbc496"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\direction_mlp\\103\\outer4\\refit\\model.pt",
+    "bytes": 24241,
+    "sha256": "d3d466bd53db6bdb3cc50ba3188d3f900ba34706cd08b8a256f4038d28617766"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\scalar\\101\\outer0\\refit\\model.pt",
+    "bytes": 2633,
+    "sha256": "8bb0ad18aa5fa0b93f3ab4f90f7a038b54a2694f48c9779ad54fde0d770aa0be"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\scalar\\101\\outer1\\refit\\model.pt",
+    "bytes": 2633,
+    "sha256": "93e3ff0dcf3b12e5dc8757f00f0e43a806e037728a09dcd3e2fe95c051c48a4f"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\scalar\\101\\outer2\\refit\\model.pt",
+    "bytes": 2633,
+    "sha256": "beafecd43901a86b451d3fdc55d2b7d8e94c35b8f0e60eceb2547b595b5b377a"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\scalar\\101\\outer3\\refit\\model.pt",
+    "bytes": 2633,
+    "sha256": "7f26adb68df2c0b1201cd6a9de5d0b4310bcc3abe4b9fce22899b25a394c34c2"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\scalar\\101\\outer4\\refit\\model.pt",
+    "bytes": 2633,
+    "sha256": "ef342eb4492d7d4cc572076883293a080677639ac9b2ec0c8a98bbbdd59a276e"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\scalar\\102\\outer0\\refit\\model.pt",
+    "bytes": 2633,
+    "sha256": "34e5615019decadeef46b4913e1d51bb9470a0fa89443ae553cb908fd626f461"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\scalar\\102\\outer1\\refit\\model.pt",
+    "bytes": 2633,
+    "sha256": "c483309da930682e143777e91c38cef7f087e13c31e9a44173f33a5779268635"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\scalar\\102\\outer2\\refit\\model.pt",
+    "bytes": 2633,
+    "sha256": "f346df71f0f7dcc8ebc504940949ca73cd5b7d16f0998abf8bbd55980a18b0e3"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\scalar\\102\\outer3\\refit\\model.pt",
+    "bytes": 2633,
+    "sha256": "7730de4d53806f17f91cd80d48a3456f977402c28550dcf0155eb1d2d82c762b"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\scalar\\102\\outer4\\refit\\model.pt",
+    "bytes": 2633,
+    "sha256": "1f3d18d5f3ae47dacf0d3649c55dc5f69245d708cd127772cd3f18d4e0f0b504"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\scalar\\103\\outer0\\refit\\model.pt",
+    "bytes": 2633,
+    "sha256": "89c7770ebd178cee01a9378b9772d4377943499b6b570f875c2bf7641bc5d1ec"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\scalar\\103\\outer1\\refit\\model.pt",
+    "bytes": 2633,
+    "sha256": "a1c7ea9e0bb4b40c6e34b85180d2d0b263e8844c5d6365956614e461425d6ec3"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\scalar\\103\\outer2\\refit\\model.pt",
+    "bytes": 2633,
+    "sha256": "e24cd71cf221431fe60fcd57c2537cc1f604529ef547a911b450db99306684fe"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\scalar\\103\\outer3\\refit\\model.pt",
+    "bytes": 2633,
+    "sha256": "881092dccb4cd369df3cad5da2c0e8e2cfa750e4cd8d3bcfb87579f701a6eadc"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\models\\scalar\\103\\outer4\\refit\\model.pt",
+    "bytes": 2633,
+    "sha256": "4c60004dce9bdc5e063c23a8291c3fa63c343e8d629fcc96bca800bd0b5a9558"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\paired_effects.json",
+    "bytes": 4361,
+    "sha256": "1a58cfdaea3591a3c1646dec43a27910acb91d2c0f5e39779f3a5827fa8a188c"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\21LA_pilot\\predictions.parquet",
+    "bytes": 5539898,
+    "sha256": "23cf9844f0c7154f1bfc526098f233e020d1b8a5b25e6664f391019fc9528a0c"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\complete.json",
+    "bytes": 403,
+    "sha256": "03c09b3bd4530b1f0dc1567bae3a0fc891dfaf4dc128fe1d81ab75e1ac302686"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\fold_manifest.json",
+    "bytes": 6642313,
+    "sha256": "1d2221dc97323f2917ff06311d4e2e13ae34ece37e3d8551ba845e6330c95d72"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_h\\101\\outer0\\refit\\model.pt",
+    "bytes": 9475,
+    "sha256": "bfcf1cf217a2b3e53be79891db8606194c2db8a246c95bca9c7a1d92bc0e34f2"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_h\\101\\outer1\\refit\\model.pt",
+    "bytes": 9475,
+    "sha256": "f72df09d08522c6df50e7275beb5959617b36bbdf53f88cc4e2ee9842214071b"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_h\\101\\outer2\\refit\\model.pt",
+    "bytes": 9539,
+    "sha256": "3a91c6c980f541fb4af539f47fdef77c75d08b7044d78f08735f3ba632ce00ff"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_h\\101\\outer3\\refit\\model.pt",
+    "bytes": 9475,
+    "sha256": "91ba2fecb31dd111e9a7b6852964eae78893b27dae20ff4978e8891a0163d32b"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_h\\101\\outer4\\refit\\model.pt",
+    "bytes": 9475,
+    "sha256": "2c478b025cff0a4d1698e673447d06851f31111fc48eabe21291d4044613cb56"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_h\\102\\outer0\\refit\\model.pt",
+    "bytes": 9475,
+    "sha256": "93158096ea2fe2aa0a8b158c597fb0ea273d0bba660754c3c8757f2bed29a7c4"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_h\\102\\outer1\\refit\\model.pt",
+    "bytes": 9475,
+    "sha256": "6126851ab8a02d81aba3b97fef8f760615e873f7aff2aec1587c03cb1d291c44"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_h\\102\\outer2\\refit\\model.pt",
+    "bytes": 9539,
+    "sha256": "4083bde3333035e7f6a4ae8626fecf3173efa37a2bb7ebea1cd38b7811720dcb"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_h\\102\\outer3\\refit\\model.pt",
+    "bytes": 9475,
+    "sha256": "cf8659dc11a03f1d8e2ed3bb92b125d6fefc804ca30025cc74d0881bc6e97627"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_h\\102\\outer4\\refit\\model.pt",
+    "bytes": 9475,
+    "sha256": "db32e097a982bb7b40bc7f11b9484c6ece96b3fde790b4c30bc9a495279098b3"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_h\\103\\outer0\\refit\\model.pt",
+    "bytes": 9475,
+    "sha256": "9dee5bb30dff19fdb213b506a41dd056255afa419cf81298791f42afe431c844"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_h\\103\\outer1\\refit\\model.pt",
+    "bytes": 9475,
+    "sha256": "8022ab846c985fe090241fcb73a5be21fd1c575f1e8d20ed0586a46c71549dac"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_h\\103\\outer2\\refit\\model.pt",
+    "bytes": 9539,
+    "sha256": "5cc5081893c1e2395df526b9dda52622d99aa010fa9a4066298febf38bbf4cd1"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_h\\103\\outer3\\refit\\model.pt",
+    "bytes": 9475,
+    "sha256": "0e40a0b61766a1fb69931e0ce56a0e21de99a32d98b6af4fe05257227b2f382d"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_h\\103\\outer4\\refit\\model.pt",
+    "bytes": 9475,
+    "sha256": "b93ed57ac3995bb7e9cf917561ae9a37c89047d897a465bca0df5034f9db2b00"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_linear\\101\\outer0\\refit\\model.pt",
+    "bytes": 4163,
+    "sha256": "fdf97ccc5eb79fa0d002cd644f25b342b86ddddf0d051a7664f2fbc083dfa214"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_linear\\101\\outer1\\refit\\model.pt",
+    "bytes": 4163,
+    "sha256": "51338542719029de13689126801958eb1f6effc24cbe1aadb7a78a7bf9b23f47"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_linear\\101\\outer2\\refit\\model.pt",
+    "bytes": 4163,
+    "sha256": "bb62b5e603fef3bc3ca15be7095b4cea48e451100b179a8dabb7449810831f9d"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_linear\\101\\outer3\\refit\\model.pt",
+    "bytes": 4099,
+    "sha256": "a441526333af91a5add17ff1757b183e0d755b24bffa8cbb39a67cc3298f9149"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_linear\\101\\outer4\\refit\\model.pt",
+    "bytes": 4163,
+    "sha256": "8a05ce366e5c64e9c16451cf2d62394d744e5a22aeefac9aebd80f4bc32c9d64"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_linear\\102\\outer0\\refit\\model.pt",
+    "bytes": 4163,
+    "sha256": "5895c62f7ce8667cc84bac8213309b70b837c6b4817739f7e6cb35434b51aa6c"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_linear\\102\\outer1\\refit\\model.pt",
+    "bytes": 4163,
+    "sha256": "442bdd95bbbaaaca0cc446525e932cb2424bb55ff0e1cc548e03542fc2c6b818"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_linear\\102\\outer2\\refit\\model.pt",
+    "bytes": 4163,
+    "sha256": "deabbe73dbac7c8251ebbcb28453cc25ac5a907028ab0bdfcd80f271261cabe2"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_linear\\102\\outer3\\refit\\model.pt",
+    "bytes": 4099,
+    "sha256": "25f4d1a48e810788b78c78d86dc386d33dc23db5669b72aaf2a91e808df6996e"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_linear\\102\\outer4\\refit\\model.pt",
+    "bytes": 4163,
+    "sha256": "d7b3706f74d07f3a66fa17802f2601250caebaf660e7ee250781e64b7134d235"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_linear\\103\\outer0\\refit\\model.pt",
+    "bytes": 4163,
+    "sha256": "d89dd6fdb6435e66b23da8253b8d0bb57079a1a9a0a4a3e721b76318178286fc"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_linear\\103\\outer1\\refit\\model.pt",
+    "bytes": 4163,
+    "sha256": "e819f2c2fad1639138d1a04ede09e0a20396ec8e0357d830cf9ea014582cb1b7"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_linear\\103\\outer2\\refit\\model.pt",
+    "bytes": 4163,
+    "sha256": "e1d336c244c443b4021964b40c05c255d51422c588efda32145fdfbb39ca1259"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_linear\\103\\outer3\\refit\\model.pt",
+    "bytes": 4099,
+    "sha256": "486173efbd5d1d655f46b93a55c9cd7ff8b081667bcd70d40405ec42719005f7"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_linear\\103\\outer4\\refit\\model.pt",
+    "bytes": 4163,
+    "sha256": "88732c361511f3dff2355d53345336aa7eea6d9ddd1fb65d0b8d0b2bab08b371"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_mlp\\101\\outer0\\refit\\model.pt",
+    "bytes": 24241,
+    "sha256": "c543c5476609f147451fb0067e13dc379df9ae8d4e1f1d208130d39d6b08cfd8"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_mlp\\101\\outer1\\refit\\model.pt",
+    "bytes": 24241,
+    "sha256": "d9d9881027756820f254b81ccf9b2a591fee6144e19dd06cc4457e56a91f1c18"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_mlp\\101\\outer2\\refit\\model.pt",
+    "bytes": 24241,
+    "sha256": "0f25b226d7cf6a4286adb17953d2ce41c0eef9a9051dd25571699116eb31b79f"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_mlp\\101\\outer3\\refit\\model.pt",
+    "bytes": 24241,
+    "sha256": "408b85e5370d6158aa8ce9b93f0d52daf41848ab559aafc23eec9c1dc19aa1b9"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_mlp\\101\\outer4\\refit\\model.pt",
+    "bytes": 24241,
+    "sha256": "22c11f05cf95e4c65731c3c5cc180afa7f3484b030869384e38de0def7ed4d6f"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_mlp\\102\\outer0\\refit\\model.pt",
+    "bytes": 24241,
+    "sha256": "62c0f7fe3cccd20a15991bde779bcc1de6925efcd1d805a9bf859b29890f0e89"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_mlp\\102\\outer1\\refit\\model.pt",
+    "bytes": 24241,
+    "sha256": "77d4268b304797420f8b8cc7ffe11d373f64b2b595d7500ab4a2dc0f2416a9e2"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_mlp\\102\\outer2\\refit\\model.pt",
+    "bytes": 24241,
+    "sha256": "10f5d55a51860b51797ed774ddce16e16067f8dfcc9e181d1caf429a12de1b5d"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_mlp\\102\\outer3\\refit\\model.pt",
+    "bytes": 24241,
+    "sha256": "a45fdab83c9feaf830b36d1a755328f39482773d60cc423129fe002a51236051"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_mlp\\102\\outer4\\refit\\model.pt",
+    "bytes": 24241,
+    "sha256": "3c45a8fc97d91c72ad76bbb81bae150b372386bfa4ad62c85dc534096c935111"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_mlp\\103\\outer0\\refit\\model.pt",
+    "bytes": 24241,
+    "sha256": "ab31486dea54532a13a0a8c8370f82cc25fa49a9a835152a09f6b5106f6b5e8f"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_mlp\\103\\outer1\\refit\\model.pt",
+    "bytes": 24241,
+    "sha256": "5073ff18d299fe90b763b340695c25ffb2c61592771cfd11dabb105efe5d517f"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_mlp\\103\\outer2\\refit\\model.pt",
+    "bytes": 24241,
+    "sha256": "81d3b1213a353a43a0d8c881ebd3b79f08631f3f7402eff8839d5e120a5d086e"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_mlp\\103\\outer3\\refit\\model.pt",
+    "bytes": 24241,
+    "sha256": "94c1a57a3306ef54d24f931070e63c4b786e41f9ccfb55487d8bb5dedc3b6743"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\direction_mlp\\103\\outer4\\refit\\model.pt",
+    "bytes": 24241,
+    "sha256": "e34cdc0236efef647be1fc5c183a3dc8bf7cc672ec28fff5e077fdda80dbd0d3"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\scalar\\101\\outer0\\refit\\model.pt",
+    "bytes": 2697,
+    "sha256": "3ac6c2bc5cffeb09dfa131dfd6916c137541530383e18f7f2ed65b40cb2815e6"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\scalar\\101\\outer1\\refit\\model.pt",
+    "bytes": 2633,
+    "sha256": "b79b31b6a6c93e9243dee74773db569cea8a8e5ff3af938a938f88d414c68db1"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\scalar\\101\\outer2\\refit\\model.pt",
+    "bytes": 2633,
+    "sha256": "9446960eb0021ead83a7ea4c0c36663af03b06ed9ddb97106c4a4bb2331098a5"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\scalar\\101\\outer3\\refit\\model.pt",
+    "bytes": 2633,
+    "sha256": "611ae8d2795d386a9ff7b128378e9fd3ba6384d981c17868d9ec119de4b9a781"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\scalar\\101\\outer4\\refit\\model.pt",
+    "bytes": 2633,
+    "sha256": "cabf5c9854228792149b3ee7121ac7459bdcb3f9d7c5d6562bb837e93e4bc726"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\scalar\\102\\outer0\\refit\\model.pt",
+    "bytes": 2697,
+    "sha256": "62cf51015f7767d7d89219f28eb0d8b7d14092b067b167c4e8ff6da5413f3750"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\scalar\\102\\outer1\\refit\\model.pt",
+    "bytes": 2633,
+    "sha256": "1d2fbe38171367a5e30290dfe5d120166e3786158ceac13843eb652b59eb6894"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\scalar\\102\\outer2\\refit\\model.pt",
+    "bytes": 2633,
+    "sha256": "94b0cca5f07d2a97dbd2df7c43f446c8feb497ad76ea4a0d7b8731826adea667"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\scalar\\102\\outer3\\refit\\model.pt",
+    "bytes": 2633,
+    "sha256": "8ccb2721ffe34f1f433f3f93ebd41c0cccf55c9683887c1ea4abbda3d9601b7d"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\scalar\\102\\outer4\\refit\\model.pt",
+    "bytes": 2633,
+    "sha256": "28cdabb66bd0cc81e0a668d1e6104276b1548632bbd9f12d69b04f02eff36ecb"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\scalar\\103\\outer0\\refit\\model.pt",
+    "bytes": 2697,
+    "sha256": "3dc7cfa729127dd0429d84095688449582d2019304ca178a82661a52eba4ee0a"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\scalar\\103\\outer1\\refit\\model.pt",
+    "bytes": 2633,
+    "sha256": "c3812acfa572c9b932969e7a08f762f5a0801a8c7afa582af644d3cd2fcfe980"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\scalar\\103\\outer2\\refit\\model.pt",
+    "bytes": 2633,
+    "sha256": "7ac2c856a04791db21a58906ed5eb920f2be59b28938f3bf76c96d0a29843d56"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\scalar\\103\\outer3\\refit\\model.pt",
+    "bytes": 2633,
+    "sha256": "74de6825009adbe8064205011b47b93eebbf982c11021a21629fbcc0877f97b7"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\models\\scalar\\103\\outer4\\refit\\model.pt",
+    "bytes": 2633,
+    "sha256": "b9c348a0109b79d3054e980cd5131897cf2fdf0cbc5aeef440b03be62aecde2c"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\paired_effects.json",
+    "bytes": 4370,
+    "sha256": "8e6716ea90082ed54043be262fe77fcb44c4be67b6aecd1d92454ac48a53d090"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\P3_P4\\B\\DF_pilot\\predictions.parquet",
+    "bytes": 5539107,
+    "sha256": "9a49353ac10150566810184a5ed6cfc37d40eb0c3b23e90bc4900753ad639e18"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\r23_catalog.json",
+    "bytes": 43212,
+    "sha256": "a36eb133066c4215d4fc10d412582206c0c5b24c24a98bc7c8c76457b27fa092"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_21la_full_03\\4110118cb92e35c1\\extract\\rank0_centroid.npy",
+    "bytes": 1408,
+    "sha256": "4d38dfe0ff11fe74dc6b182f56d3f5bf711dd18ba11c247bc51cf351d4cd2b4a"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_21la_full_03\\4110118cb92e35c1\\extract\\rank0_h.npy",
+    "bytes": 47416448,
+    "sha256": "2dd40ac584958adbdc0c407e464c229f946d44fd1fc2115262c40232a9102908"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_21la_full_03\\4110118cb92e35c1\\extract\\rank0_model.json",
+    "bytes": 439,
+    "sha256": "937be9a95de04018ab837cd2aa668b6065093aee77b180b21ca0e4ad9b5f58a1"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_21la_full_03\\4110118cb92e35c1\\extract\\rank0_rows.parquet",
+    "bytes": 5688394,
+    "sha256": "6ef100e324c62e0492977dc8c3c82c8df77b1502820e878289c94fb9503ea8ae"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_21la_full_03\\4110118cb92e35c1\\extract\\rank0_z.npy",
+    "bytes": 47416448,
+    "sha256": "9dd04bb305744b2f54aba17f611beb19622c7ca3f6f3f31789f9712d88bd4f9d"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_21la_full_03\\4110118cb92e35c1\\extract\\rank1_centroid.npy",
+    "bytes": 1408,
+    "sha256": "4d38dfe0ff11fe74dc6b182f56d3f5bf711dd18ba11c247bc51cf351d4cd2b4a"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_21la_full_03\\4110118cb92e35c1\\extract\\rank1_h.npy",
+    "bytes": 47416448,
+    "sha256": "6f6c33a14b199bffa3631c02867a87a904ecdd7d4c73afbfababca968d9459c7"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_21la_full_03\\4110118cb92e35c1\\extract\\rank1_model.json",
+    "bytes": 440,
+    "sha256": "6f1526397e51c3b455ea267cb46d13733f6480d12cc71650be84381257549794"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_21la_full_03\\4110118cb92e35c1\\extract\\rank1_rows.parquet",
+    "bytes": 5689359,
+    "sha256": "50cc56426be7af06652a88620a6ff3904a54c5363e9976212d6b210720e9d783"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_21la_full_03\\4110118cb92e35c1\\extract\\rank1_z.npy",
+    "bytes": 47416448,
+    "sha256": "e06b060367671b83f33413e2860b988024432c09bbbf0eab98fff3a0578423d1"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_21la_full_03\\4110118cb92e35c1\\extract\\run.json",
+    "bytes": 459,
+    "sha256": "058bce64c7af854b2dd0ad5d0237aef4bc2f4bf781b68889f8a6a21ad6d13dfe"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_21la_full_03\\4110118cb92e35c1\\extract\\scores.parquet",
+    "bytes": 10619297,
+    "sha256": "96a86f82f705b73f5198a2bf1686491d4c2615052cf0cdc8d94cbe9e27f04cab"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_21la_full_03\\4110118cb92e35c1\\extract\\summary.json",
+    "bytes": 847,
+    "sha256": "ad72bdb296c5a4c592e1d0d5c726d210a0b9924f111611a229737c22781040e5"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_21la_full_03\\4110118cb92e35c1\\input_audit.json",
+    "bytes": 4515,
+    "sha256": "8ffc36e5eb9d9bcb772a06f51555e032e696d50cf56f68cbd955b9b6fcec730a"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_21la_full_03\\4110118cb92e35c1\\qc\\summary.json",
+    "bytes": 879,
+    "sha256": "3230b840dfac5c262b140c202a0269515a77382baf049ec3f8e7b4caa1a9e60e"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_df_fast_01\\1b0a7488e72f4ec2\\DF_evaluation\\metrics.json",
+    "bytes": 8551,
+    "sha256": "f94cc900876b86a473e8962bda3262982c6eeb641fd164532b741f1f1996010b"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_df_fast_01\\1b0a7488e72f4ec2\\DF_evaluation\\predictions.parquet",
+    "bytes": 7362787,
+    "sha256": "555074b8cb769b7ea488628acf73c95f2389bb03310d064fa8856cbe6d502174"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_df_fast_01\\1b0a7488e72f4ec2\\DF_evaluation\\segments.json",
+    "bytes": 48767,
+    "sha256": "566b69d8f441f05511ab2e2b820e2c3142e2748967c7010921d6c61eb1d24b38"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_df_fast_01\\1b0a7488e72f4ec2\\DF_evaluation\\summary.json",
+    "bytes": 6105,
+    "sha256": "931b32174d85b877365b4ebf99cdc00527fdfcce7b9f6f9b71b248c75dc9cc43"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_df_fast_01\\1b0a7488e72f4ec2\\extract\\rank0_centroid.npy",
+    "bytes": 1408,
+    "sha256": "4d38dfe0ff11fe74dc6b182f56d3f5bf711dd18ba11c247bc51cf351d4cd2b4a"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_df_fast_01\\1b0a7488e72f4ec2\\extract\\rank0_h.npy",
+    "bytes": 6400128,
+    "sha256": "e99214134450cf1bb42b0fcb0bc64219260681e0d6992484e444da28d9c3c3fa"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_df_fast_01\\1b0a7488e72f4ec2\\extract\\rank0_model.json",
+    "bytes": 219,
+    "sha256": "f4ca5020e43f57922d38ee5bfd6cfdd3f793ec62a2138aa5835a48fd0d9ca23d"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_df_fast_01\\1b0a7488e72f4ec2\\extract\\rank0_rows.parquet",
+    "bytes": 784280,
+    "sha256": "b42b9b1fd9d666458f587a5c92086b9b0685318e792bd47562415ff1d58f32fd"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_df_fast_01\\1b0a7488e72f4ec2\\extract\\rank0_z.npy",
+    "bytes": 6400128,
+    "sha256": "9fbe738beaa958837e4432c97fa681a49f5678c95d9c17c4b251419cf7181a34"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_df_fast_01\\1b0a7488e72f4ec2\\extract\\rank1_centroid.npy",
+    "bytes": 1408,
+    "sha256": "4d38dfe0ff11fe74dc6b182f56d3f5bf711dd18ba11c247bc51cf351d4cd2b4a"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_df_fast_01\\1b0a7488e72f4ec2\\extract\\rank1_h.npy",
+    "bytes": 6400128,
+    "sha256": "bd5cc6cea7d353ba247cce9b5c7e31ff574e78f7cecc639fcb4ca6fe89ec3369"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_df_fast_01\\1b0a7488e72f4ec2\\extract\\rank1_model.json",
+    "bytes": 219,
+    "sha256": "8870b926df839b701a3ea6648be3022afe2972601e7a5abf0cfc9f1ab9bdea61"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_df_fast_01\\1b0a7488e72f4ec2\\extract\\rank1_rows.parquet",
+    "bytes": 784216,
+    "sha256": "3d673b2dab420675a781c18f22e9cc7589cfbb8209ae050ff87246c0b90b1598"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_df_fast_01\\1b0a7488e72f4ec2\\extract\\rank1_z.npy",
+    "bytes": 6400128,
+    "sha256": "5999d393f3588225e9fecede748013065835c09d2029de64517bde2fba1a005d"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_df_fast_01\\1b0a7488e72f4ec2\\extract\\run.json",
+    "bytes": 237,
+    "sha256": "70b24065a5a87001b5cfdb8071f7c6cc9b94ff24a7823b2406770264dbaddec6"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_df_fast_01\\1b0a7488e72f4ec2\\extract\\scores.parquet",
+    "bytes": 1507222,
+    "sha256": "f3fa30b26c232968b4203f8bbbb8fcbd3d0b45364fa14564a6e8198d7ca77a50"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_df_fast_01\\1b0a7488e72f4ec2\\extract\\summary.json",
+    "bytes": 598,
+    "sha256": "f4c5768192a344361cc28814fc7071e6eb1719c91b8aea7209ca3ece8928119c"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_df_fast_01\\1b0a7488e72f4ec2\\input_audit.json",
+    "bytes": 1830,
+    "sha256": "dfad8db52b873eff86a75a7e11d6005c7288a01431f516f406f3d948bf48a6ff"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_df_fast_01\\1b0a7488e72f4ec2\\registry.json",
+    "bytes": 27768,
+    "sha256": "90ed84dbd008103e7aee1a500b87b4fc85ff2a01aeb876023db218fab1aadfbf"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_fast_p0_01\\686e593443178bb8\\extract\\rank0_centroid.npy",
+    "bytes": 1408,
+    "sha256": "4d38dfe0ff11fe74dc6b182f56d3f5bf711dd18ba11c247bc51cf351d4cd2b4a"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_fast_p0_01\\686e593443178bb8\\extract\\rank0_h.npy",
+    "bytes": 12916608,
+    "sha256": "436eaa1d0a36c6d820d18f74ae91a4b00a01e32fe6f8e652c7c65e2c93d89190"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_fast_p0_01\\686e593443178bb8\\extract\\rank0_model.json",
+    "bytes": 220,
+    "sha256": "2e22015ec2c68ad3c4c689ba393577fd6ecca4005830c92b9137ef4e1307036d"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_fast_p0_01\\686e593443178bb8\\extract\\rank0_rows.parquet",
+    "bytes": 1672262,
+    "sha256": "bfc7bdcb9a7718e85de89f7476a370c113479d09f888494ab2f2c203ce60e39c"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_fast_p0_01\\686e593443178bb8\\extract\\rank0_z.npy",
+    "bytes": 12916608,
+    "sha256": "66dab7becb105f8f3ad2aed59eb982a83afcc2198405b2778e6f06f629000a15"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_fast_p0_01\\686e593443178bb8\\extract\\rank1_centroid.npy",
+    "bytes": 1408,
+    "sha256": "4d38dfe0ff11fe74dc6b182f56d3f5bf711dd18ba11c247bc51cf351d4cd2b4a"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_fast_p0_01\\686e593443178bb8\\extract\\rank1_h.npy",
+    "bytes": 12915968,
+    "sha256": "8c9c49619fc37a4e791d5ac9201a8a62fdac842d448788cbf70f5592eee523d4"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_fast_p0_01\\686e593443178bb8\\extract\\rank1_model.json",
+    "bytes": 220,
+    "sha256": "fd27e772caf18059e19307f173a8e6e511bb306484f92803993693a966497577"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_fast_p0_01\\686e593443178bb8\\extract\\rank1_rows.parquet",
+    "bytes": 1672655,
+    "sha256": "12ef6b02801862be18101330e2503502c82ec20632c43abe4db3257e0b0c15dc"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_fast_p0_01\\686e593443178bb8\\extract\\rank1_z.npy",
+    "bytes": 12915968,
+    "sha256": "245a6ab5eaf4caaf27143e6afb1e52e94878901d5aece97c429dbffd75f163c1"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_fast_p0_01\\686e593443178bb8\\extract\\run.json",
+    "bytes": 237,
+    "sha256": "39c5de96a5fc62207521075a6faf44497d2ddc50164f1f1d439ac77701d0b220"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_fast_p0_01\\686e593443178bb8\\extract\\scores.parquet",
+    "bytes": 3226426,
+    "sha256": "66a58119b774c089829deb36b4a135e9b5e91d9d18e6e1e09809f20100179598"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_fast_p0_01\\686e593443178bb8\\extract\\summary.json",
+    "bytes": 713,
+    "sha256": "4fe664222193e34e66984baf01b8ade32f7ea1f35f8b25200e7a92088f7cf7c1"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_fast_p0_01\\686e593443178bb8\\fast_analysis\\A_fisher_by_attack.npy",
+    "bytes": 7808,
+    "sha256": "81db43230774b5e9c63fd6aec22fe22fb8c0f1cb439f9dfbed35af87a878b47c"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_fast_p0_01\\686e593443178bb8\\fast_analysis\\C_V_predictions.parquet",
+    "bytes": 880762,
+    "sha256": "dc0554235aa0c031d8978d5b68274e03bd50396a8c12139e81f15ce0a2497e01"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_fast_p0_01\\686e593443178bb8\\fast_analysis\\profile_lock.json",
+    "bytes": 631,
+    "sha256": "6df13948f326bcdc2f4dbf569cd1215524d5d064d6da092d525a66bd7080fc34"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_fast_p0_01\\686e593443178bb8\\fast_analysis\\summary.json",
+    "bytes": 22375,
+    "sha256": "9ca991708a647dcd9d6d2caba570c70e23e9591f3c330cd7e4801d337b25a947"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_fast_p0_01\\686e593443178bb8\\input_audit.json",
+    "bytes": 5835,
+    "sha256": "016c4c3c82f28ac8f8265e6075ef44a4ea1cc90a5017f2aec20769da43da683e"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_fast_p0_01\\686e593443178bb8\\output_verification_v1.json",
+    "bytes": 906,
+    "sha256": "18c06fd3e6fa4cd59d0ffcf07b6e38bc947653c8c697bb02509c00d9f66cc0fc"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\0023b1aa0538c6a4\\DF_pilot\\R2-00\\rank0_centroid.npy",
+    "bytes": 1408,
+    "sha256": "4d38dfe0ff11fe74dc6b182f56d3f5bf711dd18ba11c247bc51cf351d4cd2b4a"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\0023b1aa0538c6a4\\DF_pilot\\R2-00\\rank0_h.npy",
+    "bytes": 6400128,
+    "sha256": "f949e2b25e4712b2d7e6dbdee9bc569dfb2c22715172ee765827f75e209d53b3"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\0023b1aa0538c6a4\\DF_pilot\\R2-00\\rank0_rows.parquet",
+    "bytes": 688356,
+    "sha256": "a7dd4f0e9396cf5d5aaa20057e42ab86a3acec3af04515c468ec577fb13108f8"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\0023b1aa0538c6a4\\DF_pilot\\R2-00\\rank0_z.npy",
+    "bytes": 6400128,
+    "sha256": "c6ec20fed85568dc983320ab81e76dc695d3d1e71854894eeb3be2af577e47fe"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\0023b1aa0538c6a4\\DF_pilot\\R2-00\\rank1_centroid.npy",
+    "bytes": 1408,
+    "sha256": "4d38dfe0ff11fe74dc6b182f56d3f5bf711dd18ba11c247bc51cf351d4cd2b4a"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\0023b1aa0538c6a4\\DF_pilot\\R2-00\\rank1_h.npy",
+    "bytes": 6400128,
+    "sha256": "0d9ae951aef1652c7b719a52edaa1e78b0a8f1f66e35c3054fd1682bee87e50a"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\0023b1aa0538c6a4\\DF_pilot\\R2-00\\rank1_rows.parquet",
+    "bytes": 689448,
+    "sha256": "b220af3a92350ee41b4cf9aa7caa34af8686f34d8733719a6572779be94d7e9e"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\0023b1aa0538c6a4\\DF_pilot\\R2-00\\rank1_z.npy",
+    "bytes": 6400128,
+    "sha256": "56eb98315323555a824817e71f7f0fd919121012da484a1c66ce293878966803"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\0023b1aa0538c6a4\\DF_pilot\\R2-00\\scores.parquet",
+    "bytes": 1312594,
+    "sha256": "547656ce7a1dba1c371a7d1c6c0da28ce675a9817d922b17ed82c5e07b12dbb1"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\0023b1aa0538c6a4\\DF_pilot\\R2-00\\summary.json",
+    "bytes": 541,
+    "sha256": "3351e28dd1360cc0978b39301695711e7e6a058f61e690da0cd4ba478131a4cc"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\0023b1aa0538c6a4\\DF_pilot\\rank0_complete.json",
+    "bytes": 390,
+    "sha256": "a280e58a3129598a3df361afa3b0d6fdc0215b509e65c814864de11f8c27fec4"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\0023b1aa0538c6a4\\DF_pilot\\rank1_complete.json",
+    "bytes": 390,
+    "sha256": "6a6ba6eaaa246f3b69f3a8c52bbc893dffaf382d27e3b5b39f522577eddd4f7b"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\0023b1aa0538c6a4\\preprocessing_QC.json",
+    "bytes": 42059,
+    "sha256": "5b1b683b8950303319043674b20097ba2f17a6fad797177248ff6ca503e1eae5"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\0023b1aa0538c6a4\\protocol_lock.json",
+    "bytes": 4086,
+    "sha256": "2b84cd46853618d53113f97282cc61b3bf7a51f66595c3979c4164d7d53c4ac5"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\1eb5fc924baa3be3\\DF_pilot\\R3-noise20\\rank0_centroid.npy",
+    "bytes": 1408,
+    "sha256": "4d38dfe0ff11fe74dc6b182f56d3f5bf711dd18ba11c247bc51cf351d4cd2b4a"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\1eb5fc924baa3be3\\DF_pilot\\R3-noise20\\rank0_h.npy",
+    "bytes": 6400128,
+    "sha256": "4d08c5636fde84dbbbc842ae5dbf41b9fe64f6a82f42c18532b4f87467d8ac75"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\1eb5fc924baa3be3\\DF_pilot\\R3-noise20\\rank0_rows.parquet",
+    "bytes": 689471,
+    "sha256": "036af1bdd3d5141f7cff20d48244358ea288f30b119b8b94ce3e6e5790dfcd33"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\1eb5fc924baa3be3\\DF_pilot\\R3-noise20\\rank0_z.npy",
+    "bytes": 6400128,
+    "sha256": "1b03df99cbebad3a3878346a6c1ce1205f7677154572cf052b2e3e4e340f5524"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\1eb5fc924baa3be3\\DF_pilot\\R3-noise20\\rank1_centroid.npy",
+    "bytes": 1408,
+    "sha256": "4d38dfe0ff11fe74dc6b182f56d3f5bf711dd18ba11c247bc51cf351d4cd2b4a"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\1eb5fc924baa3be3\\DF_pilot\\R3-noise20\\rank1_h.npy",
+    "bytes": 6400128,
+    "sha256": "d07d2c049f9df537d16e9f4416b08e80970baf683405a9ae3ca23d0d0ae814fc"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\1eb5fc924baa3be3\\DF_pilot\\R3-noise20\\rank1_rows.parquet",
+    "bytes": 690015,
+    "sha256": "30af97af0ea8d6d3eb66beb626d663bd787292b4becea762d6dda7b7768cd289"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\1eb5fc924baa3be3\\DF_pilot\\R3-noise20\\rank1_z.npy",
+    "bytes": 6400128,
+    "sha256": "e3c8f60e546277e292e74253a18710d1457de4c56a06eae5cbbec0f0a7bec7fb"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\1eb5fc924baa3be3\\DF_pilot\\R3-noise20\\scores.parquet",
+    "bytes": 1313582,
+    "sha256": "f7bc731edf15b90fc53c1c3a8977ba93c9122570697ec69225e46ce0a83cb16c"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\1eb5fc924baa3be3\\DF_pilot\\R3-noise20\\summary.json",
+    "bytes": 546,
+    "sha256": "c4ecd34ba1b3e144d65ee3370bb093e8694456bec48a86b97e222a89a992ba1f"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\1eb5fc924baa3be3\\DF_pilot\\rank0_complete.json",
+    "bytes": 390,
+    "sha256": "a280e58a3129598a3df361afa3b0d6fdc0215b509e65c814864de11f8c27fec4"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\1eb5fc924baa3be3\\DF_pilot\\rank1_complete.json",
+    "bytes": 390,
+    "sha256": "6a6ba6eaaa246f3b69f3a8c52bbc893dffaf382d27e3b5b39f522577eddd4f7b"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\1eb5fc924baa3be3\\preprocessing_QC.json",
+    "bytes": 42059,
+    "sha256": "5b1b683b8950303319043674b20097ba2f17a6fad797177248ff6ca503e1eae5"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\1eb5fc924baa3be3\\protocol_lock.json",
+    "bytes": 4086,
+    "sha256": "2b84cd46853618d53113f97282cc61b3bf7a51f66595c3979c4164d7d53c4ac5"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\2047b8d1c69f649e\\DF_pilot\\R3-noise10\\rank0_centroid.npy",
+    "bytes": 1408,
+    "sha256": "4d38dfe0ff11fe74dc6b182f56d3f5bf711dd18ba11c247bc51cf351d4cd2b4a"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\2047b8d1c69f649e\\DF_pilot\\R3-noise10\\rank0_h.npy",
+    "bytes": 6400128,
+    "sha256": "621b67f41cf9e54403d9aa83acf9b2ff59665c8993cd54b0ea9f63a338d8c08a"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\2047b8d1c69f649e\\DF_pilot\\R3-noise10\\rank0_rows.parquet",
+    "bytes": 692006,
+    "sha256": "36673febbfdfe2a2f68d6cfd71239f67796c02d5346dcc4a592cd9f1b41d6af2"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\2047b8d1c69f649e\\DF_pilot\\R3-noise10\\rank0_z.npy",
+    "bytes": 6400128,
+    "sha256": "9186b24d2084127510202cc12be1effb1c91689294392dad8b9c42861c9a32b4"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\2047b8d1c69f649e\\DF_pilot\\R3-noise10\\rank1_centroid.npy",
+    "bytes": 1408,
+    "sha256": "4d38dfe0ff11fe74dc6b182f56d3f5bf711dd18ba11c247bc51cf351d4cd2b4a"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\2047b8d1c69f649e\\DF_pilot\\R3-noise10\\rank1_h.npy",
+    "bytes": 6400128,
+    "sha256": "9eb48ef095dfb5b8ab46e8a328ef8c00691ed7f052917f147f3091f0e29da448"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\2047b8d1c69f649e\\DF_pilot\\R3-noise10\\rank1_rows.parquet",
+    "bytes": 691974,
+    "sha256": "fa1f2f838be096d0a8069c9842a9415b401146dc3bed561f5e73ac5f222b3641"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\2047b8d1c69f649e\\DF_pilot\\R3-noise10\\rank1_z.npy",
+    "bytes": 6400128,
+    "sha256": "f46256a9012e8657e7fe9d5435d747469d7fb7f7e59f3e13f38e745736cdbc23"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\2047b8d1c69f649e\\DF_pilot\\R3-noise10\\scores.parquet",
+    "bytes": 1319327,
+    "sha256": "b38b7aa5f2e84aaf40f93c9365a4b2efe88dde74655b2b2138f9d4204d1a4acf"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\2047b8d1c69f649e\\DF_pilot\\R3-noise10\\summary.json",
+    "bytes": 546,
+    "sha256": "8884bb8ee1c0ad0914cdd009e8bb371526390058c1c87f2e3d1e165db4766fa9"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\2047b8d1c69f649e\\DF_pilot\\rank0_complete.json",
+    "bytes": 390,
+    "sha256": "a280e58a3129598a3df361afa3b0d6fdc0215b509e65c814864de11f8c27fec4"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\2047b8d1c69f649e\\DF_pilot\\rank1_complete.json",
+    "bytes": 390,
+    "sha256": "6a6ba6eaaa246f3b69f3a8c52bbc893dffaf382d27e3b5b39f522577eddd4f7b"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\2047b8d1c69f649e\\preprocessing_QC.json",
+    "bytes": 42059,
+    "sha256": "5b1b683b8950303319043674b20097ba2f17a6fad797177248ff6ca503e1eae5"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\2047b8d1c69f649e\\protocol_lock.json",
+    "bytes": 4086,
+    "sha256": "2b84cd46853618d53113f97282cc61b3bf7a51f66595c3979c4164d7d53c4ac5"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\4bdafb4d5625e902\\DF_pilot\\R3-Opus32k_recompression\\rank0_centroid.npy",
+    "bytes": 1408,
+    "sha256": "4d38dfe0ff11fe74dc6b182f56d3f5bf711dd18ba11c247bc51cf351d4cd2b4a"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\4bdafb4d5625e902\\DF_pilot\\R3-Opus32k_recompression\\rank0_h.npy",
+    "bytes": 6400128,
+    "sha256": "595103edbd0b479ac15df0ecc75f397b019732788081b1bc45dedea653eb38d6"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\4bdafb4d5625e902\\DF_pilot\\R3-Opus32k_recompression\\rank0_rows.parquet",
+    "bytes": 689354,
+    "sha256": "7a7886e43cff6109d1f71213af0205add8a191b7ec036dc089ede5cf22c83a51"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\4bdafb4d5625e902\\DF_pilot\\R3-Opus32k_recompression\\rank0_z.npy",
+    "bytes": 6400128,
+    "sha256": "aadd641a13d7b600c9e8fa1865510901c61cbd2bd15242f771f488b0f532b6b1"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\4bdafb4d5625e902\\DF_pilot\\R3-Opus32k_recompression\\rank1_centroid.npy",
+    "bytes": 1408,
+    "sha256": "4d38dfe0ff11fe74dc6b182f56d3f5bf711dd18ba11c247bc51cf351d4cd2b4a"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\4bdafb4d5625e902\\DF_pilot\\R3-Opus32k_recompression\\rank1_h.npy",
+    "bytes": 6400128,
+    "sha256": "fe58f5bb203b04273bd419cb675a52925266fdb8287fe471aebc276f70bedaf7"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\4bdafb4d5625e902\\DF_pilot\\R3-Opus32k_recompression\\rank1_rows.parquet",
+    "bytes": 689486,
+    "sha256": "b4d524cc02c28fc756358c42b56517ee2859be6ee3a3b642cfcd526902cbd8be"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\4bdafb4d5625e902\\DF_pilot\\R3-Opus32k_recompression\\rank1_z.npy",
+    "bytes": 6400128,
+    "sha256": "c2b4b3d5acdb2530b5fbe702bafd6a4152fdc5fcd095e118c80e08f6324a33e2"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\4bdafb4d5625e902\\DF_pilot\\R3-Opus32k_recompression\\scores.parquet",
+    "bytes": 1313227,
+    "sha256": "51c02f770d741b89071ad6a1fc59e650abae4943c3545cc761b8545e19205d72"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\4bdafb4d5625e902\\DF_pilot\\R3-Opus32k_recompression\\summary.json",
+    "bytes": 560,
+    "sha256": "1be690a2d80a8c851e06318d45550c775c12b1ba58da60599e16631197af6648"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\4bdafb4d5625e902\\DF_pilot\\rank0_complete.json",
+    "bytes": 390,
+    "sha256": "a280e58a3129598a3df361afa3b0d6fdc0215b509e65c814864de11f8c27fec4"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\4bdafb4d5625e902\\DF_pilot\\rank1_complete.json",
+    "bytes": 390,
+    "sha256": "6a6ba6eaaa246f3b69f3a8c52bbc893dffaf382d27e3b5b39f522577eddd4f7b"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\4bdafb4d5625e902\\preprocessing_QC.json",
+    "bytes": 42059,
+    "sha256": "5b1b683b8950303319043674b20097ba2f17a6fad797177248ff6ca503e1eae5"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\4bdafb4d5625e902\\protocol_lock.json",
+    "bytes": 4086,
+    "sha256": "2b84cd46853618d53113f97282cc61b3bf7a51f66595c3979c4164d7d53c4ac5"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\7a2e6f9b17f0965c\\21LA_pilot\\R2-00\\rank0_centroid.npy",
+    "bytes": 1408,
+    "sha256": "4d38dfe0ff11fe74dc6b182f56d3f5bf711dd18ba11c247bc51cf351d4cd2b4a"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\7a2e6f9b17f0965c\\21LA_pilot\\R2-00\\rank0_h.npy",
+    "bytes": 6400128,
+    "sha256": "bbdb77fa79d13e8c0e8e18a6b8902621a43901fb5503caaecd2f197d5477c04d"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\7a2e6f9b17f0965c\\21LA_pilot\\R2-00\\rank0_rows.parquet",
+    "bytes": 688924,
+    "sha256": "6f8dbd3c82606a5039a659a070a68179c8a816731815eb2305b1b5df61169141"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\7a2e6f9b17f0965c\\21LA_pilot\\R2-00\\rank0_z.npy",
+    "bytes": 6400128,
+    "sha256": "e3cb739d438c86b13692617c5dee6625362fdf110599c24f1986636a38acb938"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\7a2e6f9b17f0965c\\21LA_pilot\\R2-00\\rank1_centroid.npy",
+    "bytes": 1408,
+    "sha256": "4d38dfe0ff11fe74dc6b182f56d3f5bf711dd18ba11c247bc51cf351d4cd2b4a"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\7a2e6f9b17f0965c\\21LA_pilot\\R2-00\\rank1_h.npy",
+    "bytes": 6400128,
+    "sha256": "f0e088605d570d67969b0762a14f0bd8bfd2a3643ef19e322a47e9e72d8df096"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\7a2e6f9b17f0965c\\21LA_pilot\\R2-00\\rank1_rows.parquet",
+    "bytes": 689204,
+    "sha256": "5a17a098b290d39fcd56236a766b729e70a10bd46129515d75c21d4a5107cdd6"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\7a2e6f9b17f0965c\\21LA_pilot\\R2-00\\rank1_z.npy",
+    "bytes": 6400128,
+    "sha256": "ad58fc7f40aec3e560e235272c13a216ecb07c24424eb23d86d9129fd6f1816c"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\7a2e6f9b17f0965c\\21LA_pilot\\R2-00\\scores.parquet",
+    "bytes": 1319888,
+    "sha256": "4a5bd0054e0c70d5e10ee25836060878504cf1af089c216bc1f8726d57da6120"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\7a2e6f9b17f0965c\\21LA_pilot\\R2-00\\summary.json",
+    "bytes": 543,
+    "sha256": "d3e3963be8c2e09c547eca19abfe4f75b8e02f9a5b699ee614d671723bb9a376"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\7a2e6f9b17f0965c\\21LA_pilot\\rank0_complete.json",
+    "bytes": 391,
+    "sha256": "dd14238d9ed4755cc8d4fded51dbcbe2174b208f6d70ac632340a945f718f23f"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\7a2e6f9b17f0965c\\21LA_pilot\\rank1_complete.json",
+    "bytes": 389,
+    "sha256": "02f83a828b6c97439f64786d3458f47957442c533e383631ef572c0f2cf3aa31"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\7a2e6f9b17f0965c\\preprocessing_QC.json",
+    "bytes": 42059,
+    "sha256": "5b1b683b8950303319043674b20097ba2f17a6fad797177248ff6ca503e1eae5"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\7a2e6f9b17f0965c\\protocol_lock.json",
+    "bytes": 4086,
+    "sha256": "2b84cd46853618d53113f97282cc61b3bf7a51f66595c3979c4164d7d53c4ac5"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\8a1ab8d73e24c09a\\21LA_pilot\\R3-noise10\\rank0_centroid.npy",
+    "bytes": 1408,
+    "sha256": "4d38dfe0ff11fe74dc6b182f56d3f5bf711dd18ba11c247bc51cf351d4cd2b4a"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\8a1ab8d73e24c09a\\21LA_pilot\\R3-noise10\\rank0_h.npy",
+    "bytes": 6400128,
+    "sha256": "a58a61f50b3596d0cafcae2bab39749bb42c1991e1787e8e736b469335c85f3b"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\8a1ab8d73e24c09a\\21LA_pilot\\R3-noise10\\rank0_rows.parquet",
+    "bytes": 690553,
+    "sha256": "787be42b08d259f7c772b3c497f2641b5a96cc62e6c2b62ea2fcd80fe4e84786"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\8a1ab8d73e24c09a\\21LA_pilot\\R3-noise10\\rank0_z.npy",
+    "bytes": 6400128,
+    "sha256": "4130dacb42f2ad899e9c7bd8c3fc7b62b2f4560d1b7eeacf4c699419a05d2e2c"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\8a1ab8d73e24c09a\\21LA_pilot\\R3-noise10\\rank1_centroid.npy",
+    "bytes": 1408,
+    "sha256": "4d38dfe0ff11fe74dc6b182f56d3f5bf711dd18ba11c247bc51cf351d4cd2b4a"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\8a1ab8d73e24c09a\\21LA_pilot\\R3-noise10\\rank1_h.npy",
+    "bytes": 6400128,
+    "sha256": "fa3a1bc2b666e2c0b869e5d3f71b8280873753dddccbe49c82bc14a8cbadf70a"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\8a1ab8d73e24c09a\\21LA_pilot\\R3-noise10\\rank1_rows.parquet",
+    "bytes": 690881,
+    "sha256": "d63e8fb6b361f5402027bd17fbec65c8a3399c0a97184b00fc26bc7fe052db8f"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\8a1ab8d73e24c09a\\21LA_pilot\\R3-noise10\\rank1_z.npy",
+    "bytes": 6400128,
+    "sha256": "41d6c346201f2cad527e0f3153f610e600a40c2799364be524b262ac4fcab7e9"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\8a1ab8d73e24c09a\\21LA_pilot\\R3-noise10\\scores.parquet",
+    "bytes": 1323456,
+    "sha256": "1f0937f005cde4c66b948c97c47cf60ee6039dc900cfcd1fd9269857f941200e"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\8a1ab8d73e24c09a\\21LA_pilot\\R3-noise10\\summary.json",
+    "bytes": 548,
+    "sha256": "dc15035202fad8a00432d29b913319c007d76782592af1b42eb80397ffba6d81"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\8a1ab8d73e24c09a\\21LA_pilot\\rank0_complete.json",
+    "bytes": 391,
+    "sha256": "dd14238d9ed4755cc8d4fded51dbcbe2174b208f6d70ac632340a945f718f23f"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\8a1ab8d73e24c09a\\21LA_pilot\\rank1_complete.json",
+    "bytes": 389,
+    "sha256": "02f83a828b6c97439f64786d3458f47957442c533e383631ef572c0f2cf3aa31"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\8a1ab8d73e24c09a\\preprocessing_QC.json",
+    "bytes": 42059,
+    "sha256": "5b1b683b8950303319043674b20097ba2f17a6fad797177248ff6ca503e1eae5"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\8a1ab8d73e24c09a\\protocol_lock.json",
+    "bytes": 4086,
+    "sha256": "2b84cd46853618d53113f97282cc61b3bf7a51f66595c3979c4164d7d53c4ac5"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\8c20d99a248a23fa\\21LA_pilot\\R3-Opus32k_recompression\\rank0_centroid.npy",
+    "bytes": 1408,
+    "sha256": "4d38dfe0ff11fe74dc6b182f56d3f5bf711dd18ba11c247bc51cf351d4cd2b4a"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\8c20d99a248a23fa\\21LA_pilot\\R3-Opus32k_recompression\\rank0_h.npy",
+    "bytes": 6400128,
+    "sha256": "f20be309bf4a34fccbe85878409251df9d3d1aa01ff620213b892b1237560ab2"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\8c20d99a248a23fa\\21LA_pilot\\R3-Opus32k_recompression\\rank0_rows.parquet",
+    "bytes": 688849,
+    "sha256": "cd158eeaacf8d361ae4ecadb3222741d8a4bdbce09e8865445efe3c595465f05"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\8c20d99a248a23fa\\21LA_pilot\\R3-Opus32k_recompression\\rank0_z.npy",
+    "bytes": 6400128,
+    "sha256": "4c40dd800196225ae369f1a3825a8bca673ac3640d97f9b032462daef6eb3f81"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\8c20d99a248a23fa\\21LA_pilot\\R3-Opus32k_recompression\\rank1_centroid.npy",
+    "bytes": 1408,
+    "sha256": "4d38dfe0ff11fe74dc6b182f56d3f5bf711dd18ba11c247bc51cf351d4cd2b4a"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\8c20d99a248a23fa\\21LA_pilot\\R3-Opus32k_recompression\\rank1_h.npy",
+    "bytes": 6400128,
+    "sha256": "d31bb5550b56c0da8481e84001d87bb55c7fb8daabb91aa1ac87086617e5f687"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\8c20d99a248a23fa\\21LA_pilot\\R3-Opus32k_recompression\\rank1_rows.parquet",
+    "bytes": 688950,
+    "sha256": "d77db1ace797c8d796c22399794fbda3495470c7d1ef24c9c7031e3d46873713"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\8c20d99a248a23fa\\21LA_pilot\\R3-Opus32k_recompression\\rank1_z.npy",
+    "bytes": 6400128,
+    "sha256": "c934dd05962a3925e78b1737472307731477cc5d40edd6cf51ff769d0947b264"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\8c20d99a248a23fa\\21LA_pilot\\R3-Opus32k_recompression\\scores.parquet",
+    "bytes": 1319726,
+    "sha256": "f589d089c2f0a4111dcd9a46c22511696a2f15ee7c5adcbf9a3cb5a9b6fb947c"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\8c20d99a248a23fa\\21LA_pilot\\R3-Opus32k_recompression\\summary.json",
+    "bytes": 562,
+    "sha256": "4686b82ade864134553aba880e1347d412d0f6645f08ea61f6d566be1b00ae16"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\8c20d99a248a23fa\\21LA_pilot\\rank0_complete.json",
+    "bytes": 391,
+    "sha256": "dd14238d9ed4755cc8d4fded51dbcbe2174b208f6d70ac632340a945f718f23f"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\8c20d99a248a23fa\\21LA_pilot\\rank1_complete.json",
+    "bytes": 389,
+    "sha256": "02f83a828b6c97439f64786d3458f47957442c533e383631ef572c0f2cf3aa31"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\8c20d99a248a23fa\\preprocessing_QC.json",
+    "bytes": 42059,
+    "sha256": "5b1b683b8950303319043674b20097ba2f17a6fad797177248ff6ca503e1eae5"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\8c20d99a248a23fa\\protocol_lock.json",
+    "bytes": 4086,
+    "sha256": "2b84cd46853618d53113f97282cc61b3bf7a51f66595c3979c4164d7d53c4ac5"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\feb4799a14db0c16\\21LA_pilot\\R3-noise20\\rank0_centroid.npy",
+    "bytes": 1408,
+    "sha256": "4d38dfe0ff11fe74dc6b182f56d3f5bf711dd18ba11c247bc51cf351d4cd2b4a"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\feb4799a14db0c16\\21LA_pilot\\R3-noise20\\rank0_h.npy",
+    "bytes": 6400128,
+    "sha256": "c9dc51114313a695cc67411d3ef2c363f3a4114ccc25930aeb1c57a670662957"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\feb4799a14db0c16\\21LA_pilot\\R3-noise20\\rank0_rows.parquet",
+    "bytes": 689367,
+    "sha256": "a716eeb3ea6b3caf1e076a1815ce894448bf9df1a48d78b942d5c013d977bf30"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\feb4799a14db0c16\\21LA_pilot\\R3-noise20\\rank0_z.npy",
+    "bytes": 6400128,
+    "sha256": "bfad9c9cebd9475205b2be3cef22b84924fcd1d77331f70e25c57ad111395051"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\feb4799a14db0c16\\21LA_pilot\\R3-noise20\\rank1_centroid.npy",
+    "bytes": 1408,
+    "sha256": "4d38dfe0ff11fe74dc6b182f56d3f5bf711dd18ba11c247bc51cf351d4cd2b4a"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\feb4799a14db0c16\\21LA_pilot\\R3-noise20\\rank1_h.npy",
+    "bytes": 6400128,
+    "sha256": "0f2316958d6b185f2e04d0f4fca8c9bcc32f24456566b072745af8b49296316e"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\feb4799a14db0c16\\21LA_pilot\\R3-noise20\\rank1_rows.parquet",
+    "bytes": 689668,
+    "sha256": "6c7128a228e9ec69ad07e1e5aa5d4ce6f1b67971fee0d236f07dcb31b475515c"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\feb4799a14db0c16\\21LA_pilot\\R3-noise20\\rank1_z.npy",
+    "bytes": 6400128,
+    "sha256": "4711ec0943b641d4c429bd5e22d9a0cc618c87716d239dbaaf48e6e0e5339307"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\feb4799a14db0c16\\21LA_pilot\\R3-noise20\\scores.parquet",
+    "bytes": 1320833,
+    "sha256": "fe605dba775c9511e874408edfd29f6ca616bd1ab0479f3f4ac8858210aa7501"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\feb4799a14db0c16\\21LA_pilot\\R3-noise20\\summary.json",
+    "bytes": 548,
+    "sha256": "245f314a8fa473debec6b107957fc1d864d64c3ee349ab4b72905855f6b908d1"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\feb4799a14db0c16\\21LA_pilot\\rank0_complete.json",
+    "bytes": 391,
+    "sha256": "dd14238d9ed4755cc8d4fded51dbcbe2174b208f6d70ac632340a945f718f23f"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\feb4799a14db0c16\\21LA_pilot\\rank1_complete.json",
+    "bytes": 389,
+    "sha256": "02f83a828b6c97439f64786d3458f47957442c533e383631ef572c0f2cf3aa31"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\feb4799a14db0c16\\preprocessing_QC.json",
+    "bytes": 42059,
+    "sha256": "5b1b683b8950303319043674b20097ba2f17a6fad797177248ff6ca503e1eae5"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\feb4799a14db0c16\\protocol_lock.json",
+    "bytes": 4086,
+    "sha256": "2b84cd46853618d53113f97282cc61b3bf7a51f66595c3979c4164d7d53c4ac5"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_experiments\\check_cached_hypotheses.py",
+    "bytes": 26207,
+    "sha256": "eaf459228b683e67b86be638926c23810d0af7bc0f016b42949c6999e11c201f"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_experiments\\frozen_common.py",
+    "bytes": 5825,
+    "sha256": "ebc82daf871dca89401b3bb8da2dd7231861e1ccdc749c70f98b279e37480f36"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_experiments\\frozen_fast_bootstrap.py",
+    "bytes": 2174,
+    "sha256": "7a7c7e0532ccc2a59dc8db86811ac0fa5406bac5d746f2a73f7310b5b9a2928b"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_experiments\\frozen_heads.py",
+    "bytes": 10682,
+    "sha256": "9964e7c794c6e61941c8d09f332a69eeda68b8fb31a463f2d1c3bacbdbcb4003"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_experiments\\frozen_probes.py",
+    "bytes": 14445,
+    "sha256": "5ec64d2ab84c9d91ebdc59de6aba4708589adea6d0cad2afe4b2988694514868"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_experiments\\frozen_r23_cache.py",
+    "bytes": 4332,
+    "sha256": "0d1d1da8b52830ee5ab3c124340618544322f3b2da3c07d20cdb24a2a09675cd"
+  },
+  {
+    "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_experiments\\geometry_cache.py",
+    "bytes": 5922,
+    "sha256": "f2015759a68fafffd53807c118bb2c1cd219c3090aaedcdb2849f9852c27984f"
+  }
+]

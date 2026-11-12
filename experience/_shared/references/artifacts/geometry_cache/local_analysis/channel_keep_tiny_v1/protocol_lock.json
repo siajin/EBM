@@ -1,0 +1,41 @@
+{
+  "version": "channel_keep_tiny_v1",
+  "created_utc": "2026-11-05T01:11:58.912921+00:00",
+  "script_sha256": "5accfb9973f1c7cdce448a99bd17c8dc837b867367bc0a6aa5d75806706b70a8",
+  "prior_protocol_sha256": "d06262a73c8270bd743af8b907a5cd16203ba326faf5b2663f092128eba6d767",
+  "prior_masks_sha256": "734beec841b5b1e128fd9814fb903ccf63f103fe0c250cf51aa5f71a8ea2ea64",
+  "checkpoint_sha256": "104873703a57cad98b686d770e0860e031a2cf9abef79b72668780c1660e0b24",
+  "dependency_sha256": {
+    "channel_keep_sweep.py": "64002defd47693d9ea94ed72a57cb8d7b8e1d10a77d944dbb12cb34d9d348f8b",
+    "cached_core_diagnostics.py": "0284aab32cc9976e2262927cd005ca3b4ba24f8435e67e24de60665367032085",
+    "geometry_cache.py": "4ecf9c85ec99d2ca77bc6e7f3267a083e113d78e972db802e3db0a6d2cf759a7",
+    "fast_analyze.py": "7b06092ea697e8289e9c5baf06b935e733ef6169b9a89f678892b13dee26b942",
+    "audit_cached_core_results.py": "d898526fdfc0916b9057a6d11005813cdeedcbce99119ffcac097f0f4dc1d878"
+  },
+  "counts": [
+    10,
+    5,
+    3,
+    2
+  ],
+  "new_counts": [
+    5,
+    3,
+    2
+  ],
+  "anchor_reproduced": 10,
+  "families": "T-only Fisher top/bottom; last k of seed200..219 permutations; nested; all masks reported",
+  "score": "cosine(z[K],c[K]), normalize both; no norm feature or probe",
+  "selection_on_new_DF_results": false,
+  "EBM_retrained": false,
+  "GPU_inference_runs": 0,
+  "Q_opened": false,
+  "intervals": "pointwise95; paired source-prefixed speaker bootstrap2000 seed7301; no simultaneous or noninferiority claim",
+  "threshold": "original native V threshold, unchanged",
+  "limits": [
+    "already-observed20000-row DF pilot",
+    "family dependencies unresolved",
+    "160-dimension encoder/LayerNorm still computed",
+    "no smallest dimension or best DF mask selected"
+  ]
+}

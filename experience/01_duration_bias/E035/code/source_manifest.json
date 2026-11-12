@@ -1,0 +1,26 @@
+[
+  {
+    "path": "experience/01_duration_bias/E035/code/EBM/activity_policy.py",
+    "sha256": "8657f9614bc9dcde1b48c295402953bba34d300f1bb8137821f3a58d30f662a8",
+    "origin": "EBM/activity_policy.py",
+    "kind": "explicit method source"
+  },
+  {
+    "path": "experience/01_duration_bias/E035/code/EBM/tools/fit_activity_policy.py",
+    "sha256": "dbb15ffe9a4ea3f88cfd4ee5b0f4ac565aeead92d5ece6afb62f1e0f98e5d534",
+    "origin": "EBM/tools/fit_activity_policy.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/01_duration_bias/E035/code/EBM/tools/validate_activity_policy.py",
+    "sha256": "a3cc2a2a65fc49d09ac24b4761432f6be6927bb1a279e7e2a8f1fe4a7d61b6bb",
+    "origin": "EBM/tools/validate_activity_policy.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/01_duration_bias/E035/code/EBM/tools/build_activity_candidates.py",
+    "sha256": "98ed4d9e98aa1fef0dc2fe8ceb6e5324d5fb1dc20953084076b77210d47e3c7c",
+    "origin": "EBM/tools/build_activity_candidates.py",
+    "kind": "implementation / validation source"
+  }
+]

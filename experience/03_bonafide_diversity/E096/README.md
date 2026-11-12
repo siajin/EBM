@@ -1,0 +1,61 @@
+# E096. 단순 길이·저에너지·에너지·스펙트럼 단서를 읽는 분류기의 전이
+
+**실행 상태:** 기존 실제 결과 확인·문서화 완료
+
+이 문서의 상태는 2026-11-12 출판 검토 기준이다. 기존 문서·state의 시점별 상태와 충돌하면 실제 완료표식과 본문 최신 보완을 우선한다.
+
+## 가설
+
+길이·저에너지같은 단순단서는 학습출처에서 읽혀도 다른출처에는 전이되지 않을 수 있다.
+
+## 그렇게 설계한 이유
+
+그 단서가 정답을 예측할 수 있는지와 새로운 출처에서 유지되는지를 나눈다.
+
+대조와 통제의 근거: 단순 단서의 예측력은 EBM이 그 단서를 이용한 정도가 아니다. 학습 자료 재대입 성능을 독립 평가로 쓰지 않는다.
+
+## 모델·데이터·표본
+
+이전 80epoch 모델의 점수와 별도의 파형 특징. 2019 LA 학습·개발·DF 진단에서 각각 2,000개. 기존 EBM 가중치는 고정하고 작은 통계 분류기만 학습했다.
+
+## 실험 내용과 상세 절차
+
+1. 학습·개발·DF에서 정상·위조 각 1,000개씩 총 6,000개의 특징을 측정한다. 원래 64,600샘플 절단·반복 파형을 사용한다.
+2. 길이·패딩·접합, 저에너지 비율·앞·뒤 길이, RMS·peak·하위 에너지·0 비율·DC/RMS·crest, 영교차·4kHz 초과 비율·스펙트럼 중심·평탄도, 큰 샘플 차이·자기상관의 다섯 묶음을 만든다.
+3. 저에너지+에너지, 모든 특징의 선형 로지스틱 분류기, 모든 특징의 작은 트리도 비교한다. 학습 자료로 맞추고 개발에서 임계값을 정해 DF 전체·출처별로 그대로 적용한다.
+4. 출처 이름·화자 ID는 분류기 입력에 넣지 않는다. 화자 군집 재표집과 정상 내부의 길이·화자 조정 순위 상관을 보조 계산한다.
+5. 원실행 소스에서 선형 모델의 StandardScaler→LogisticRegression(C=1,max_iter=2000)을 확인했다. 트리 대조는 HistGradientBoostingClassifier(max_iter=100,max_leaf_nodes=7,max_depth=3,min_samples_leaf=30,learning_rate=0.05,l2_regularization=1,random_state=17)다. 학습 표본 seed는 17, 개발 표본 seed는 18이다.
+
+## 측정과 검증
+
+발화별 대응 점수·원래 160차원 코사인·클래스별 분모와 저장 검산을 확인한다.
+
+## 결과
+
+저에너지 길이·비율 모델의 AUROC는 개발 0.748175, DF 0.749221, ASVspoof 0.843041, VCC2018 0.437310, VCC2020 0.559646이었다. 출처에 따른 차이가 컸다.
+
+## 해석·실패한 부분·한계
+
+하나의 고정 학습 모델과 탐색 표본의 결과다. 전체 공식 평가 EER, 여러 학습 seed의 효과, 손실을 제거한 재학습의 효과로 해석하지 않는다. 반복 관찰한 표본과 서로 겹치는 후속 분석은 독립 실험 표본으로 합산하지 않는다. 특징과 작은 분류기 설정은 DF 결과를 보기 전에 고정했다. 출처별 결과를 본 뒤 좋은 특징을 골라 독립 확인 결과로 부르지 않는다.
+
+## 배운 점
+
+출처별AUROC가 크게달랐다. 별도통계분류기의 성능을 EBM의단서사용률로 바꿀 수 없다.
+
+## 실험 코드
+
+- [historical_analysis/cue_audit_21df.py](code/cue_audit_21df.py)
+- [historical_analysis/cue_audit_followup.py](code/cue_audit_followup.py)
+
+코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+
+## 설정·결과·검산 근거
+
+- [artifacts/experiment_methods_audit_20261111/historical_receipts/EBM80_21DF_cue_audit.json](../../_shared/references/artifacts/experiment_methods_audit_20261111/historical_receipts/EBM80_21DF_cue_audit.json)
+- [artifacts/experiment_methods_audit_20261111/historical_method_source_checks.json](../../_shared/references/artifacts/experiment_methods_audit_20261111/historical_method_source_checks.json)
+
+## 연결
+
+다른 관련 가설: [길이·유효 발화량과 앞뒤 저에너지 편향](../../01_duration_bias/README.md)
+
+[가설 목록으로](../README.md) · [전체 실험 목록](../../README.md)

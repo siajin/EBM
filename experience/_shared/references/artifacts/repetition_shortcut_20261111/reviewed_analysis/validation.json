@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "full_rows": 346040,
+  "probe_rows": 10416,
+  "no_op_utterances": 27406,
+  "independent_eer_max_difference_pp": 5.10702591327572e-15,
+  "sources": {
+    "full_rank0.csv": "034de3c0d536c91dc76980c1631da8849a6d3c61e9e3e71b02dfe6eee94c0aca",
+    "full_rank1.csv": "8c1b3b12333ab6470616739bfb70c821691ff46cce1f75d3a9add48543a6dfba",
+    "new_dose_controls.csv": "55a09da06333056317c65f3004147e7161f224c42f3917966441afd09d3ab450",
+    "new_full_metrics.csv": "e6ffe4b99e35e19463ef64bf3eb60f73632bad7adc44fec7ca519871bfc9cd89",
+    "new_length_attack_codec_errors.csv": "5b1bbd45883b5d0103936bfdb96f6e9b13c821c62e12651f98d1f50abb6b4f30",
+    "new_paired_effects.csv": "b314cdf0cbdc64c67709da34d5e707066702d2af4e5495540814ccc995937aae",
+    "probe_rank0.csv": "a0196fa73a688d97c4ee87a8db2726591c6f10d253786d7c43a3bef8a5111414",
+    "probe_rank1.csv": "ce0b681ddf4fc2eb28f95d5cb4a0bea916827f3388353d85779caa45d9fd4655"
+  },
+  "independent_ROC": "numpy tie-block sort/cumulative class normalization; no sklearn/scipy/old metric helpers",
+  "scope": "Frozen original24050 and B50, noise0, dev thresholds diagnostic only, no GPU/training/audio/model access",
+  "paired_transition_groups_reconciled": 16,
+  "head_tail_error_counts_reconciled": true,
+  "analysis_script_sha256": "fec9ff9bea0a2af5a106b2cd4162882a1c489100cbfc70ba38a13934e9558f9e",
+  "metadata_source": {
+    "official_metadata_sha256": "6cc64a94d74c3c749a4ad8f5e377d0f46ed221477cfe3585996d8b550548bba8",
+    "derived_UID_codec_rows": 148176,
+    "columns": [
+      "uid",
+      "codec",
+      "attack",
+      "class"
+    ],
+    "audio_or_models_copied": false
+  },
+  "new_paid_resources": false,
+  "spending_ceiling_usd": 0,
+  "active_training_changed": false
+}

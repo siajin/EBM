@@ -1,0 +1,114 @@
+{
+  "checked_KST": "2026-11-09T11:15:15",
+  "experiment_name": "EBM_e50_bs240_lr1e5_C_nativeLong_short303",
+  "root": "/home/mentee/analysis/ebm_train_C_20261108_061305",
+  "run_exit": 0,
+  "epoch": 50,
+  "last_rendered_batch": 108,
+  "loss1": 0.581,
+  "loss2": 0.686,
+  "log_age_seconds": 16722.54,
+  "source_hashes_unchanged": true,
+  "logger_backup_matches_source": true,
+  "working_tree_clean": true,
+  "B_checkpoints_unchanged": {
+    "B_CLS50": true,
+    "B_TrainState50": true,
+    "legacy240_CLS50": true
+  },
+  "processes": [],
+  "metrics": {
+    "loss1": {
+      "rows_flushed": 5400,
+      "last_values": [
+        0.4959636628627777,
+        0.48824170231819153,
+        0.5805190205574036
+      ]
+    },
+    "loss2": {
+      "rows_flushed": 5400,
+      "last_values": [
+        0.6728878170251846,
+        0.6475324928760529,
+        0.6856812834739685
+      ]
+    },
+    "oc_long": {
+      "rows_flushed": 5400,
+      "last_values": [
+        0.06684836745262146,
+        0.06482888013124466,
+        0.07304771989583969
+      ]
+    },
+    "bpl": {
+      "rows_flushed": 5400,
+      "last_values": [
+        0.42911529541015625,
+        0.42341282963752747,
+        0.5074713230133057
+      ]
+    },
+    "oc_short": {
+      "rows_flushed": 5400,
+      "last_values": [
+        0.06599054485559464,
+        0.3848525583744049,
+        0.06757765263319016
+      ]
+    },
+    "padding": {
+      "rows_flushed": 5400,
+      "last_values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "active_pairs": {
+      "rows_flushed": 5400,
+      "last_values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "all_flushed_loss_values_finite": true,
+  "dev_log": [
+    "[5] V/EER: 0.1569788302834589",
+    "[10] V/EER: 0.040365984930032295",
+    "[15] V/EER: 0.03924646781789942",
+    "[20] V/EER: 0.03924646781789942",
+    "[25] V/EER: 0.03924646781789942",
+    "[30] V/EER: 0.03924646781789942",
+    "[35] V/EER: 0.03924646781789942",
+    "[40] V/EER: 0.03924646781789942",
+    "[45] V/EER: 0.03924646781789942"
+  ],
+  "checkpoints": [
+    "CLS_15.pt",
+    "TrainState_50.pt",
+    "CLS_5.pt",
+    "CLS_10.pt",
+    "TrainState_5.pt",
+    "CLS_40.pt",
+    "TrainState_30.pt",
+    "TrainState_35.pt",
+    "TrainState_40.pt",
+    "TrainState_20.pt",
+    "CLS_30.pt",
+    "TrainState_10.pt",
+    "CLS_25.pt",
+    "CLS_45.pt",
+    "CLS_35.pt",
+    "TrainState_15.pt",
+    "TrainState_25.pt",
+    "CLS_20.pt",
+    "TrainState_45.pt",
+    "CLS_50.pt"
+  ],
+  "error_markers": [],
+  "GPU6_7": "6, 0\n6, 0"
+}

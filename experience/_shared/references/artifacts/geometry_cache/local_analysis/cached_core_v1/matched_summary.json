@@ -1,0 +1,333 @@
+[
+  {
+    "name": "tight",
+    "strata": [
+      "source_corpus",
+      "codec"
+    ],
+    "cosine_caliper": 0.005,
+    "lognorm_caliper": 0.001,
+    "pairs": 72,
+    "bona_coverage": 0.036,
+    "spoof_coverage": 0.004,
+    "mean_abs_cosine_diff": 0.001799568864264453,
+    "max_abs_cosine_diff": 0.004970123520810721,
+    "mean_abs_lognorm_diff": 0.0002818920801103871,
+    "max_abs_lognorm_diff": 0.0009315591685856717,
+    "direction_mean_difference_norm": 0.37934065215323154,
+    "within_pair_direction_cosine_mean": 0.7154094427604195,
+    "speaker_groups": 26,
+    "source_codec_cells": 19,
+    "probe_metrics": [
+      {
+        "case": "scalar",
+        "eer_percent": 52.77777777777778,
+        "auroc": 0.47627314814814814,
+        "balanced_logloss": 1.3014464774246437
+      },
+      {
+        "case": "direction",
+        "eer_percent": 23.61111111111111,
+        "auroc": 0.8620756172839507,
+        "balanced_logloss": 0.5907660241893119
+      },
+      {
+        "case": "noise",
+        "eer_percent": 51.388888888888886,
+        "auroc": 0.4930555555555555,
+        "balanced_logloss": 1.3238844351858785
+      },
+      {
+        "case": "metadata",
+        "eer_percent": 43.05555555555556,
+        "auroc": 0.5368441358024691,
+        "balanced_logloss": 1.5229496979159838
+      },
+      {
+        "case": "metadata_direction",
+        "eer_percent": 19.444444444444446,
+        "auroc": 0.9002700617283951,
+        "balanced_logloss": 0.45439937010531367
+      },
+      {
+        "case": "preLN_h",
+        "eer_percent": 26.38888888888889,
+        "auroc": 0.8179012345679012,
+        "balanced_logloss": 0.6529808938564365
+      },
+      {
+        "case": "postLN_z",
+        "eer_percent": 34.72222222222222,
+        "auroc": 0.765625,
+        "balanced_logloss": 0.8843514101005648
+      },
+      {
+        "case": "preLN_stats",
+        "eer_percent": 45.83333333333333,
+        "auroc": 0.5823688271604939,
+        "balanced_logloss": 1.2648779324653194
+      }
+    ]
+  },
+  {
+    "name": "primary",
+    "strata": [
+      "source_corpus",
+      "codec"
+    ],
+    "cosine_caliper": 0.01,
+    "lognorm_caliper": 0.002,
+    "pairs": 106,
+    "bona_coverage": 0.053,
+    "spoof_coverage": 0.005888888888888889,
+    "mean_abs_cosine_diff": 0.0038667581554062817,
+    "max_abs_cosine_diff": 0.009742628494440408,
+    "mean_abs_lognorm_diff": 0.0003590685539945715,
+    "max_abs_lognorm_diff": 0.0017367115977804382,
+    "direction_mean_difference_norm": 0.45286113514373527,
+    "within_pair_direction_cosine_mean": 0.6742274883201961,
+    "speaker_groups": 28,
+    "source_codec_cells": 20,
+    "probe_metrics": [
+      {
+        "case": "scalar",
+        "eer_percent": 50.943396226415096,
+        "auroc": 0.4746351014595941,
+        "balanced_logloss": 1.3215381609626569
+      },
+      {
+        "case": "direction",
+        "eer_percent": 19.811320754716977,
+        "auroc": 0.8892844428622285,
+        "balanced_logloss": 0.49518796405485954
+      },
+      {
+        "case": "noise",
+        "eer_percent": 51.886792452830186,
+        "auroc": 0.4758810964756141,
+        "balanced_logloss": 1.4421130734053866
+      },
+      {
+        "case": "metadata",
+        "eer_percent": 44.339622641509436,
+        "auroc": 0.5380918476326094,
+        "balanced_logloss": 1.4933369678845365
+      },
+      {
+        "case": "metadata_direction",
+        "eer_percent": 16.037735849056602,
+        "auroc": 0.9257742969028124,
+        "balanced_logloss": 0.3891073560083971
+      },
+      {
+        "case": "preLN_h",
+        "eer_percent": 24.52830188679245,
+        "auroc": 0.8543965824136703,
+        "balanced_logloss": 0.5586988427955051
+      },
+      {
+        "case": "postLN_z",
+        "eer_percent": 29.245283018867923,
+        "auroc": 0.8104307582769669,
+        "balanced_logloss": 0.7847984835390405
+      },
+      {
+        "case": "preLN_stats",
+        "eer_percent": 48.113207547169814,
+        "auroc": 0.5841046635813457,
+        "balanced_logloss": 1.249192323701956
+      }
+    ],
+    "paired_intervals": [
+      {
+        "baseline": "scalar",
+        "candidate": "direction",
+        "delta_balanced_logloss": 0.8263501969077973,
+        "CI95": [
+          0.532227275874426,
+          1.3655019645804616
+        ],
+        "CI99_pointwise": [
+          0.4697468174276993,
+          1.5252089724425282
+        ],
+        "groups": 28,
+        "dropped_replicates": 0,
+        "conditional_on_OOF_predictions": true
+      },
+      {
+        "baseline": "noise",
+        "candidate": "direction",
+        "delta_balanced_logloss": 0.9469251093505271,
+        "CI95": [
+          0.6488525994757337,
+          1.514039249732492
+        ],
+        "CI99_pointwise": [
+          0.5841757168869081,
+          1.6789972251862764
+        ],
+        "groups": 28,
+        "dropped_replicates": 0,
+        "conditional_on_OOF_predictions": true
+      },
+      {
+        "baseline": "metadata",
+        "candidate": "metadata_direction",
+        "delta_balanced_logloss": 1.1042296118761394,
+        "CI95": [
+          0.818063131970045,
+          1.5580016126382419
+        ],
+        "CI99_pointwise": [
+          0.7423272727605966,
+          1.702491103216509
+        ],
+        "groups": 28,
+        "dropped_replicates": 0,
+        "conditional_on_OOF_predictions": true
+      }
+    ]
+  },
+  {
+    "name": "wide",
+    "strata": [
+      "source_corpus",
+      "codec"
+    ],
+    "cosine_caliper": 0.02,
+    "lognorm_caliper": 0.004,
+    "pairs": 139,
+    "bona_coverage": 0.0695,
+    "spoof_coverage": 0.007722222222222222,
+    "mean_abs_cosine_diff": 0.007649909092862186,
+    "max_abs_cosine_diff": 0.01998851779839446,
+    "mean_abs_lognorm_diff": 0.000390490038853303,
+    "max_abs_lognorm_diff": 0.0017367115977804382,
+    "direction_mean_difference_norm": 0.4781576657762775,
+    "within_pair_direction_cosine_mean": 0.6575982346568157,
+    "speaker_groups": 32,
+    "source_codec_cells": 22,
+    "probe_metrics": [
+      {
+        "case": "scalar",
+        "eer_percent": 52.517985611510795,
+        "auroc": 0.47911598778531134,
+        "balanced_logloss": 1.3792261003344837
+      },
+      {
+        "case": "direction",
+        "eer_percent": 17.266187050359715,
+        "auroc": 0.892655659644946,
+        "balanced_logloss": 0.49355368549948697
+      },
+      {
+        "case": "noise",
+        "eer_percent": 53.23741007194245,
+        "auroc": 0.4838776460845711,
+        "balanced_logloss": 1.5239004688265063
+      },
+      {
+        "case": "metadata",
+        "eer_percent": 46.043165467625904,
+        "auroc": 0.5249728274934009,
+        "balanced_logloss": 1.5268650231497212
+      },
+      {
+        "case": "metadata_direction",
+        "eer_percent": 15.107913669064748,
+        "auroc": 0.9327156979452409,
+        "balanced_logloss": 0.3661682893493558
+      },
+      {
+        "case": "preLN_h",
+        "eer_percent": 23.021582733812952,
+        "auroc": 0.8651208529579214,
+        "balanced_logloss": 0.5339500393841713
+      },
+      {
+        "case": "postLN_z",
+        "eer_percent": 26.618705035971225,
+        "auroc": 0.8288908441592051,
+        "balanced_logloss": 0.7355977927812622
+      },
+      {
+        "case": "preLN_stats",
+        "eer_percent": 49.64028776978417,
+        "auroc": 0.5687593809844211,
+        "balanced_logloss": 1.2968879633286339
+      }
+    ]
+  },
+  {
+    "name": "same_speaker",
+    "strata": [
+      "source_corpus",
+      "codec",
+      "speaker_group"
+    ],
+    "cosine_caliper": 0.01,
+    "lognorm_caliper": 0.002,
+    "pairs": 18,
+    "bona_coverage": 0.009,
+    "spoof_coverage": 0.001,
+    "mean_abs_cosine_diff": 0.005801246861641444,
+    "max_abs_cosine_diff": 0.00952256719160538,
+    "mean_abs_lognorm_diff": 0.00022357133950273104,
+    "max_abs_lognorm_diff": 0.0011782740744492592,
+    "direction_mean_difference_norm": 0.5137078281045401,
+    "within_pair_direction_cosine_mean": 0.6431475524858088,
+    "speaker_groups": 7,
+    "source_codec_cells": 11,
+    "probe_metrics": [
+      {
+        "case": "scalar",
+        "eer_percent": 50.0,
+        "auroc": 0.5277777777777778,
+        "balanced_logloss": 1.3766997416633737
+      },
+      {
+        "case": "direction",
+        "eer_percent": 22.22222222222222,
+        "auroc": 0.8549382716049383,
+        "balanced_logloss": 0.7796475766486175
+      },
+      {
+        "case": "noise",
+        "eer_percent": 50.0,
+        "auroc": 0.5246913580246914,
+        "balanced_logloss": 1.3755834982559145
+      },
+      {
+        "case": "metadata",
+        "eer_percent": 33.33333333333333,
+        "auroc": 0.6604938271604939,
+        "balanced_logloss": 1.4719245660486313
+      },
+      {
+        "case": "metadata_direction",
+        "eer_percent": 16.666666666666664,
+        "auroc": 0.9197530864197531,
+        "balanced_logloss": 0.43451787217640825
+      },
+      {
+        "case": "preLN_h",
+        "eer_percent": 27.77777777777778,
+        "auroc": 0.8395061728395061,
+        "balanced_logloss": 0.746161256582375
+      },
+      {
+        "case": "postLN_z",
+        "eer_percent": 27.77777777777778,
+        "auroc": 0.7901234567901235,
+        "balanced_logloss": 0.9465400620935596
+      },
+      {
+        "case": "preLN_stats",
+        "eer_percent": 38.88888888888889,
+        "auroc": 0.6666666666666667,
+        "balanced_logloss": 1.200466989182283
+      }
+    ]
+  }
+]

@@ -1,0 +1,593 @@
+{
+  "remote_root": "/home/mentee/results/analysis/EBM80_ASV_bona_natural_lowenergy_axis",
+  "file_inventory": [
+    {
+      "name": "README_FIRST.txt",
+      "bytes": 553,
+      "directory": false
+    },
+    {
+      "name": "natural_lowenergy_sorted.pdf",
+      "bytes": 28965,
+      "directory": false
+    },
+    {
+      "name": "natural_lowenergy_relationships.pdf",
+      "bytes": 35092,
+      "directory": false
+    },
+    {
+      "name": "report.md",
+      "bytes": 2437,
+      "directory": false
+    },
+    {
+      "name": "natural_lowenergy_sorted.png",
+      "bytes": 349594,
+      "directory": false
+    },
+    {
+      "name": "private",
+      "bytes": 4096,
+      "directory": true
+    },
+    {
+      "name": "COMPLETED.json",
+      "bytes": 483,
+      "directory": false
+    },
+    {
+      "name": "summary.json",
+      "bytes": 15208,
+      "directory": false
+    },
+    {
+      "name": "natural_lowenergy_space.png",
+      "bytes": 183919,
+      "directory": false
+    },
+    {
+      "name": "natural_lowenergy_space.pdf",
+      "bytes": 37483,
+      "directory": false
+    },
+    {
+      "name": "plan.json",
+      "bytes": 1954,
+      "directory": false
+    },
+    {
+      "name": "natural_lowenergy_relationships.png",
+      "bytes": 235587,
+      "directory": false
+    }
+  ],
+  "aggregate_json": {
+    "COMPLETED.json": {
+      "status": "complete",
+      "elapsed_seconds": 21.063343286514282,
+      "n": 1050,
+      "view": 0,
+      "artifacts": [
+        "natural_lowenergy_sorted.pdf",
+        "natural_lowenergy_relationships.pdf",
+        "report.md",
+        "natural_lowenergy_sorted.png",
+        "summary.json",
+        "natural_lowenergy_space.png",
+        "natural_lowenergy_space.pdf",
+        "plan.json",
+        "natural_lowenergy_relationships.png"
+      ],
+      "script_sha256": "01afa3aa01baf5b38353c0d886daca45cd7e47726b5e67cdcf5f14e410369e34"
+    },
+    "summary.json": {
+      "plan": {
+        "scope": "ASVspoof2021 DF eval, source=asvspoof, label=bonafide; existing sampled 1050 files, not entire corpus.",
+        "checkpoint": "/home/mentee/results/CM/LA/EBM/model/BestCLS_80_21DF.pt",
+        "embedding": "Existing native view 0 only: entire decoded mono 16kHz waveform, no crop, repeat, padding, resampling, gain change or augmentation. L2-normalized 160-D embeddings.",
+        "primary_target": "Leading consecutive 20ms nonoverlapping RMS frames strictly below 1% of the maximum frame RMS (-40 dB); duration in seconds. Zero means no complete leading low-energy frame at this resolution.",
+        "secondary_thresholds_db": [
+          -30,
+          -50
+        ],
+        "axis": "Ridge predict log1p(leading seconds) from centered embeddings; positive axis is the coefficient direction. No coordinate scaling.",
+        "validation": "Seed 271828 GroupShuffleSplit by speaker: 30% held out. Alpha selected by 4-fold GroupKFold inside training speakers. Test set never used to choose axes, signs, alpha, PCA, or controls.",
+        "controls": "Train-fitted nuisance regressions for target and embeddings: codec, log1p(post-leading duration), squared log1p(post-leading duration), log1p(trailing quiet duration), active-frame RMS dB, its square. Residual-axis alpha chosen with nuisance fits repeated inside each training fold.",
+        "sensitivity_controls": "Replace post-leading duration with total duration, an explicitly secondary part-whole-conditioned check. Also use -30/-50 dB definitions with the SAME primary axis, and positive-duration-only analysis.",
+        "uncertainty": "2000 held-out speaker-cluster bootstrap percentile intervals, conditional on training fit; exploratory, no multiplicity-adjusted significance claims.",
+        "interpretation": "Natural cross-file association, not a within-file intervention, not proof of causal shortcut learning; target-informed axis requires held-out replication. Source/label homogeneous. VCC untouched.",
+        "created_utc": "2026-10-30T06:17:59Z"
+      },
+      "sample": {
+        "n": 1050,
+        "speakers": 64,
+        "codecs": {
+          "high_mp3": 56,
+          "mp3m4a": 203,
+          "high_ogg": 198,
+          "low_ogg": 184,
+          "nocodec": 53,
+          "oggm4a": 206,
+          "high_m4a": 49,
+          "low_m4a": 54,
+          "low_mp3": 47
+        },
+        "cohorts": {
+          "previous": 525,
+          "new_files": 525
+        },
+        "train_n": 719,
+        "train_speakers": 44,
+        "test_n": 331,
+        "test_speakers": 20,
+        "all_leading_quantiles_s": [
+          0.0,
+          0.22,
+          0.52,
+          0.76,
+          1.0150000000000001,
+          1.3,
+          5.14
+        ],
+        "no_complete_lowenergy_frame_n": 72,
+        "test_no_complete_lowenergy_frame_n": 7,
+        "all_pcm_hashes_verified": true,
+        "source_manifest_sha256": "2b0f728dcb282eba9f7bdb5823980130b9d9684cde4a3401d81bdaddb2cb7e17"
+      },
+      "raw_axis": {
+        "alpha": 0.31622776601683794,
+        "cv_mse": [
+          0.07774221446814764,
+          0.07728621706292774,
+          0.07599186293886714,
+          0.07276403190198859,
+          0.0685733428404982,
+          0.06601083465193419,
+          0.06587950708682463,
+          0.06528055069141045,
+          0.0633022712837181,
+          0.06316509669349812,
+          0.06421650130863041,
+          0.06474059055476812,
+          0.06478330715952896,
+          0.06473883988745728,
+          0.06471438017229313
+        ],
+        "heldout_correlation": {
+          "n": 331,
+          "speakers": 20,
+          "spearman": 0.37685862919583435,
+          "ci95": [
+            0.18615925570200265,
+            0.5433072643478752
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "heldout_target_r2": 0.031360564960294046,
+        "heldout_mse": 0.08000473359637103,
+        "axis_cosine_with_OC_center": -0.01840795497972568
+      },
+      "adjusted_axis": {
+        "alpha": 0.31622776601683794,
+        "cv_mse": [
+          0.12110751201688096,
+          0.12170036636673194,
+          0.1153976704069911,
+          0.10593211374329145,
+          0.09665152415470278,
+          0.09018345392345029,
+          0.08278024922652118,
+          0.07015015943069629,
+          0.059980734576663114,
+          0.058448341295150544,
+          0.0603915176123379,
+          0.06171230539142569,
+          0.0621987401962693,
+          0.06234977100696289,
+          0.06239650089040542
+        ],
+        "heldout_correlation": {
+          "n": 331,
+          "speakers": 20,
+          "spearman": 0.6607664384536224,
+          "ci95": [
+            0.49886457344010954,
+            0.8148687309497369
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "heldout_target_r2": 0.10266750805336322,
+        "heldout_mse": 0.07520122650775508,
+        "axis_cosine_with_OC_center": 0.015517952770108513,
+        "heldout_total_target_r2": 0.08951795369681781,
+        "nuisance_only_target_r2": -0.12518509134638145,
+        "incremental_r2": 0.21470304504319926
+      },
+      "total_duration_adjusted_axis": {
+        "alpha": 0.01,
+        "cv_mse": [
+          0.08970633278652802,
+          0.08810296113402677,
+          0.0841962027586064,
+          0.07602349912320658,
+          0.0657330673720225,
+          0.05921246657849464,
+          0.05817088560164294,
+          0.05899682235141584,
+          0.06086958016840615,
+          0.06395199417125491,
+          0.06613409785463338,
+          0.06687910067602426,
+          0.06704036477376829,
+          0.06707325887871135,
+          0.06708085173014236
+        ],
+        "heldout_correlation": {
+          "n": 331,
+          "speakers": 20,
+          "spearman": 0.41871523446160364,
+          "ci95": [
+            0.2448314879123788,
+            0.5526175018867328
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "heldout_target_r2": 0.17216790308343777,
+        "heldout_mse": 0.05611653282618334,
+        "axis_cosine_with_OC_center": 0.0033615800146436572,
+        "heldout_total_target_r2": 0.32058161799057683,
+        "nuisance_only_target_r2": 0.10708086049642229,
+        "incremental_r2": 0.21350075749415454
+      },
+      "natural_lead_vs_OC": {
+        "n": 331,
+        "speakers": 20,
+        "spearman": 0.0025532505675925545,
+        "ci95": [
+          -0.16151779095225227,
+          0.174894025010481
+        ],
+        "valid_bootstrap_replicates": 2000
+      },
+      "natural_lead_vs_OC_within_speaker": {
+        "n": 331,
+        "speakers": 20,
+        "partial_rank_correlation": -0.023368566093207612,
+        "ci95_conditional_on_rank_transform": [
+          -0.12510891844913444,
+          0.08997266244571546
+        ]
+      },
+      "axis_vs_lead_within_speaker": {
+        "n": 331,
+        "speakers": 20,
+        "partial_rank_correlation": 0.2511074798853129,
+        "ci95_conditional_on_rank_transform": [
+          0.11088891462210362,
+          0.3718699324325901
+        ]
+      },
+      "axis_positive_duration_only": {
+        "n": 324,
+        "speakers": 20,
+        "spearman": 0.36187743396289135,
+        "ci95": [
+          0.155216406938289,
+          0.5321948996183459
+        ],
+        "valid_bootstrap_replicates": 2000
+      },
+      "positive_duration_vs_OC": {
+        "n": 324,
+        "speakers": 20,
+        "spearman": -0.027365288426359984,
+        "ci95": [
+          -0.18372260334245527,
+          0.1300827834211377
+        ],
+        "valid_bootstrap_replicates": 2000
+      },
+      "threshold_sensitivity_fixed_primary_axis": {
+        "30": {
+          "n": 331,
+          "speakers": 20,
+          "spearman": 0.3732471584827152,
+          "ci95": [
+            0.11785495379063902,
+            0.5888347879977209
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "50": {
+          "n": 331,
+          "speakers": 20,
+          "spearman": 0.16924406516228832,
+          "ci95": [
+            0.017845029799246518,
+            0.33057484584594327
+          ],
+          "valid_bootstrap_replicates": 2000
+        }
+      },
+      "pca": {
+        "train_explained_variance_ratio": [
+          0.5600325443405402,
+          0.10271611352002581,
+          0.06100422802571429,
+          0.03205421872870001,
+          0.022022240128725,
+          0.018762979635643197,
+          0.016542220207836092,
+          0.014436869610391135
+        ],
+        "heldout_PC1_lead_spearman": -0.116826770811834,
+        "heldout_PC2_lead_spearman": 0.3422070107855278
+      },
+      "bins_all": [
+        {
+          "bin": "0 s",
+          "n": 72,
+          "speakers": 23,
+          "leading_mean": 0.0,
+          "projection_mean": -0.01357192422785242,
+          "projection_median": -0.010560368866508654,
+          "cosine_mean": 0.9797121433334218,
+          "cosine_median": 0.9928670823574066,
+          "angle_to_OC_mean_deg": 8.293403610377727,
+          "OC_cosine_below_09_n": 2,
+          "mean_embedding_norm": 0.9853355238876839,
+          "total_duration_mean": 3.3274453125
+        },
+        {
+          "bin": "(0, 0.1] s",
+          "n": 21,
+          "speakers": 14,
+          "leading_mean": 0.052380952380952396,
+          "projection_mean": -0.004901317850215188,
+          "projection_median": -0.004537257914879609,
+          "cosine_mean": 0.9929897558121454,
+          "cosine_median": 0.9935764670372009,
+          "angle_to_OC_mean_deg": 6.704234172825743,
+          "OC_cosine_below_09_n": 0,
+          "mean_embedding_norm": 0.9980402155711563,
+          "total_duration_mean": 3.437696428571429
+        },
+        {
+          "bin": "(0.1, 0.5] s",
+          "n": 157,
+          "speakers": 43,
+          "leading_mean": 0.38789808917197444,
+          "projection_mean": -0.005725080046088119,
+          "projection_median": -0.005491912891045566,
+          "cosine_mean": 0.9923658686079038,
+          "cosine_median": 0.9935539364814758,
+          "angle_to_OC_mean_deg": 6.935014220525552,
+          "OC_cosine_below_09_n": 0,
+          "mean_embedding_norm": 0.997651116925667,
+          "total_duration_mean": 3.15765127388535
+        },
+        {
+          "bin": "(0.5, 1.0] s",
+          "n": 537,
+          "speakers": 58,
+          "leading_mean": 0.7617132216014897,
+          "projection_mean": 0.0018148781602200141,
+          "projection_median": 0.0025025360453956765,
+          "cosine_mean": 0.9916431824477248,
+          "cosine_median": 0.9940165281295776,
+          "angle_to_OC_mean_deg": 6.753916390397223,
+          "OC_cosine_below_09_n": 2,
+          "mean_embedding_norm": 0.9964969049859722,
+          "total_duration_mean": 3.2284377327746743
+        },
+        {
+          "bin": "(1.0, 1.5] s",
+          "n": 190,
+          "speakers": 38,
+          "leading_mean": 1.166842105263158,
+          "projection_mean": 0.007366580085792036,
+          "projection_median": 0.008723431575473992,
+          "cosine_mean": 0.9934379812918211,
+          "cosine_median": 0.9940686821937561,
+          "angle_to_OC_mean_deg": 6.47616680425556,
+          "OC_cosine_below_09_n": 0,
+          "mean_embedding_norm": 0.9981974883436483,
+          "total_duration_mean": 3.607477631578948
+        },
+        {
+          "bin": ">1.5 s",
+          "n": 73,
+          "speakers": 19,
+          "leading_mean": 2.097534246575343,
+          "projection_mean": 0.02195136012681761,
+          "projection_median": 0.018104690707329472,
+          "cosine_mean": 0.9617545065814501,
+          "cosine_median": 0.9928076267242432,
+          "angle_to_OC_mean_deg": 10.025234919916146,
+          "OC_cosine_below_09_n": 2,
+          "mean_embedding_norm": 0.9684109666662849,
+          "total_duration_mean": 5.033486301369863
+        }
+      ],
+      "bins_heldout": [
+        {
+          "bin": "0 s",
+          "n": 7,
+          "speakers": 3,
+          "leading_mean": 0.0,
+          "projection_mean": -0.009768933192136656,
+          "projection_median": -0.014741892863061636,
+          "cosine_mean": 0.9920844605990818,
+          "cosine_median": 0.9923254251480103,
+          "angle_to_OC_mean_deg": 7.182356930132917,
+          "OC_cosine_below_09_n": 0,
+          "mean_embedding_norm": 0.9982916379275555,
+          "total_duration_mean": 2.664
+        },
+        {
+          "bin": "(0, 0.1] s",
+          "n": 9,
+          "speakers": 5,
+          "leading_mean": 0.044444444444444446,
+          "projection_mean": 0.005912555321430483,
+          "projection_median": 0.0008431635152253434,
+          "cosine_mean": 0.9931091798676385,
+          "cosine_median": 0.9940476417541504,
+          "angle_to_OC_mean_deg": 6.649153387013047,
+          "OC_cosine_below_09_n": 0,
+          "mean_embedding_norm": 0.9980353344738012,
+          "total_duration_mean": 3.5824583333333333
+        },
+        {
+          "bin": "(0.1, 0.5] s",
+          "n": 46,
+          "speakers": 13,
+          "leading_mean": 0.3882608695652174,
+          "projection_mean": 0.002415117119458386,
+          "projection_median": 0.002333267531693794,
+          "cosine_mean": 0.9923986352008322,
+          "cosine_median": 0.9934356510639191,
+          "angle_to_OC_mean_deg": 6.949850622876352,
+          "OC_cosine_below_09_n": 0,
+          "mean_embedding_norm": 0.9978220919079072,
+          "total_duration_mean": 3.332383152173913
+        },
+        {
+          "bin": "(0.5, 1.0] s",
+          "n": 157,
+          "speakers": 17,
+          "leading_mean": 0.7428025477707006,
+          "projection_mean": 0.0034894241596813346,
+          "projection_median": 0.005311839686024718,
+          "cosine_mean": 0.9914094991744704,
+          "cosine_median": 0.9942881464958191,
+          "angle_to_OC_mean_deg": 6.770690099067593,
+          "OC_cosine_below_09_n": 1,
+          "mean_embedding_norm": 0.9964874917835804,
+          "total_duration_mean": 3.2917683121019112
+        },
+        {
+          "bin": "(1.0, 1.5] s",
+          "n": 71,
+          "speakers": 12,
+          "leading_mean": 1.1856338028169016,
+          "projection_mean": 0.00747509619818269,
+          "projection_median": 0.006473879382064658,
+          "cosine_mean": 0.9933283438145275,
+          "cosine_median": 0.9941197633743286,
+          "angle_to_OC_mean_deg": 6.509096051161361,
+          "OC_cosine_below_09_n": 0,
+          "mean_embedding_norm": 0.9982260092720318,
+          "total_duration_mean": 3.660904049295775
+        },
+        {
+          "bin": ">1.5 s",
+          "n": 41,
+          "speakers": 6,
+          "leading_mean": 2.2531707317073164,
+          "projection_mean": 0.020079219876015884,
+          "projection_median": 0.01778190075448896,
+          "cosine_mean": 0.9857054716203271,
+          "cosine_median": 0.9929091930389404,
+          "angle_to_OC_mean_deg": 8.207728822990717,
+          "OC_cosine_below_09_n": 1,
+          "mean_embedding_norm": 0.9924038017493516,
+          "total_duration_mean": 5.2358125
+        }
+      ],
+      "codec_descriptive_heldout": [
+        {
+          "codec": "high_m4a",
+          "n": 15,
+          "speakers": 8,
+          "lead_axis_spearman": 0.33065250021864845,
+          "lead_OC_spearman": 0.0035746216239853886
+        },
+        {
+          "codec": "high_mp3",
+          "n": 19,
+          "speakers": 11,
+          "lead_axis_spearman": 0.0386303924126719,
+          "lead_OC_spearman": 0.2906059065589637
+        },
+        {
+          "codec": "high_ogg",
+          "n": 57,
+          "speakers": 18,
+          "lead_axis_spearman": 0.5862231732624875,
+          "lead_OC_spearman": -0.12625846441836983
+        },
+        {
+          "codec": "low_m4a",
+          "n": 13,
+          "speakers": 8,
+          "lead_axis_spearman": 0.37689169079829965,
+          "lead_OC_spearman": 0.18982136251885168
+        },
+        {
+          "codec": "low_mp3",
+          "n": 20,
+          "speakers": 11,
+          "lead_axis_spearman": -0.18455776607036026,
+          "lead_OC_spearman": 0.3751419081756711
+        },
+        {
+          "codec": "low_ogg",
+          "n": 61,
+          "speakers": 15,
+          "lead_axis_spearman": 0.36593082009513733,
+          "lead_OC_spearman": -0.023439466932062728
+        },
+        {
+          "codec": "mp3m4a",
+          "n": 62,
+          "speakers": 19,
+          "lead_axis_spearman": 0.48402175767080635,
+          "lead_OC_spearman": -0.29870639570617563
+        },
+        {
+          "codec": "nocodec",
+          "n": 13,
+          "speakers": 8,
+          "lead_axis_spearman": 0.5151534699149546,
+          "lead_OC_spearman": -0.476585830456081
+        },
+        {
+          "codec": "oggm4a",
+          "n": 71,
+          "speakers": 15,
+          "lead_axis_spearman": 0.22670384796181062,
+          "lead_OC_spearman": 0.12143890257160934
+        }
+      ],
+      "integrity": {
+        "embedding_norm_max_abs_error": 9.404138157087516e-08,
+        "recomputed_score_max_abs_error": 1.542381136143689e-07,
+        "raw_axis_vs_OC_angle_deg": 91.0547577034598,
+        "sphere_cosine_distance_identity_max_error": 3.45921742750388e-07
+      }
+    },
+    "plan.json": {
+      "scope": "ASVspoof2021 DF eval, source=asvspoof, label=bonafide; existing sampled 1050 files, not entire corpus.",
+      "checkpoint": "/home/mentee/results/CM/LA/EBM/model/BestCLS_80_21DF.pt",
+      "embedding": "Existing native view 0 only: entire decoded mono 16kHz waveform, no crop, repeat, padding, resampling, gain change or augmentation. L2-normalized 160-D embeddings.",
+      "primary_target": "Leading consecutive 20ms nonoverlapping RMS frames strictly below 1% of the maximum frame RMS (-40 dB); duration in seconds. Zero means no complete leading low-energy frame at this resolution.",
+      "secondary_thresholds_db": [
+        -30,
+        -50
+      ],
+      "axis": "Ridge predict log1p(leading seconds) from centered embeddings; positive axis is the coefficient direction. No coordinate scaling.",
+      "validation": "Seed 271828 GroupShuffleSplit by speaker: 30% held out. Alpha selected by 4-fold GroupKFold inside training speakers. Test set never used to choose axes, signs, alpha, PCA, or controls.",
+      "controls": "Train-fitted nuisance regressions for target and embeddings: codec, log1p(post-leading duration), squared log1p(post-leading duration), log1p(trailing quiet duration), active-frame RMS dB, its square. Residual-axis alpha chosen with nuisance fits repeated inside each training fold.",
+      "sensitivity_controls": "Replace post-leading duration with total duration, an explicitly secondary part-whole-conditioned check. Also use -30/-50 dB definitions with the SAME primary axis, and positive-duration-only analysis.",
+      "uncertainty": "2000 held-out speaker-cluster bootstrap percentile intervals, conditional on training fit; exploratory, no multiplicity-adjusted significance claims.",
+      "interpretation": "Natural cross-file association, not a within-file intervention, not proof of causal shortcut learning; target-informed axis requires held-out replication. Source/label homogeneous. VCC untouched.",
+      "created_utc": "2026-10-30T06:17:59Z"
+    }
+  },
+  "method_documents": {
+    "README_FIRST.txt": "This directory is the preliminary -40 dB analysis. The final natural-length analysis uses the historical -20 dB criterion and is in ../EBM80_ASV_bona_natural_lowenergy_axis_db20/; read report_ko.md there.\nThe preliminary adjusted_axis uses post-leading duration = total duration minus the target leading duration. It is a target-derived conditional descriptive check, NOT independent duration prediction or causal evidence. Do not use its incremental R2 as predictive validation. The final -20 dB analysis uses controls that do not subtract the target.\n",
+    "report.md": "# Original ASV bona fide: leading low-energy duration and embedding geometry\n\nScope: 1,050 sampled ASV-source bona fide files from ASVspoof2021 DF eval. No VCC. Full native waveform embeddings, no synthetic transformations.\nTrain: 719 files / 44 speakers. Held out: 331 files / 20 speakers.\nLeading low energy: consecutive initial 20 ms RMS frames below 1% of maximum frame RMS (−40 dB). Zero is resolution-dependent, not certified silence absence.\n\n| Held-out check | Estimate | 95% speaker-cluster CI |\n|---|---:|---:|\n|Duration vs fitted axis|0.3769|[0.1862, 0.5433]|\n|Nuisance-adjusted residual duration vs residual axis|0.6608|[0.4989, 0.8149]|\n|Duration vs cosine to OC center|0.0026|[-0.1615, 0.1749]|\n|Positive-duration files only: duration vs axis|0.3619|[0.1552, 0.5322]|\n\nHeld-out log-duration prediction R²: 0.0314. Nuisance-only R²: -0.1252; combined R²: 0.0895.\n\n| Original leading low energy | Held-out n | Mean axis projection | Mean OC cosine | Mean angle to OC (deg) | OC < 0.9 n |\n|---|---:|---:|---:|---:|---:|\n|0 s|7|-0.0098|0.9921|7.18|0|\n|(0, 0.1] s|9|0.0059|0.9931|6.65|0|\n|(0.1, 0.5] s|46|0.0024|0.9924|6.95|0|\n|(0.5, 1.0] s|157|0.0035|0.9914|6.77|1|\n|(1.0, 1.5] s|71|0.0075|0.9933|6.51|0|\n|>1.5 s|41|0.0201|0.9857|8.21|1|\n\nImportant limits:\n- This is a natural cross-file association. It cannot establish that changing duration alone moves a recording, or that training causally exploited duration as a shortcut.\n- The axis is supervised on training speakers. Its held-out association is the relevant check; training-set visual alignment alone is circular.\n- Speaker clustering and speaker-disjoint fitting do not remove every recording, codec or utterance confound. Nuisance adjustment is model-dependent.\n- All samples are bona fide. This analysis alone cannot quantify discrimination benefit, EER changes or a B/S shortcut.\n- 21DF participated in earlier model selection. Held-out refers only to this axis fitting, not to a pristine model-development test.\n- Full native inputs differ from the fixed crop/repeat input used in some earlier figures. Those earlier tail plots are not directly reproduced here.\n- Bootstrap intervals condition on the fitted training axis. They do not cover retraining or axis selection uncertainty.\n\nArtifacts: natural_lowenergy_space.png/pdf, natural_lowenergy_sorted.png/pdf, natural_lowenergy_relationships.png/pdf; summary.json. Per-file rows and axes stay in private/.\n"
+  }
+}

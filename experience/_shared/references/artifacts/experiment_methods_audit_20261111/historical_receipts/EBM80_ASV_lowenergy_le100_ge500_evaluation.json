@@ -1,0 +1,605 @@
+{
+  "remote_root": "/home/mentee/results/analysis/EBM80_ASV_lowenergy_le100_ge500_evaluation",
+  "file_inventory": [
+    {
+      "name": "attack_composition.png",
+      "bytes": 86338,
+      "directory": false
+    },
+    {
+      "name": "COMPLETED.json",
+      "bytes": 152,
+      "directory": false
+    },
+    {
+      "name": "strata_evaluation.pdf",
+      "bytes": 22564,
+      "directory": false
+    },
+    {
+      "name": "summary.json",
+      "bytes": 17172,
+      "directory": false
+    },
+    {
+      "name": "strata_evaluation.png",
+      "bytes": 187890,
+      "directory": false
+    },
+    {
+      "name": "report_ko.md",
+      "bytes": 4123,
+      "directory": false
+    },
+    {
+      "name": "plan.json",
+      "bytes": 1494,
+      "directory": false
+    }
+  ],
+  "aggregate_json": {
+    "COMPLETED.json": {
+      "status": "complete",
+      "groups": [
+        "all_asv",
+        "le100ms",
+        "ge500ms"
+      ],
+      "script_sha256": "5d85e527cbdd58c14f1afe05e20aff314e9a3a97a857beb7726711add4cf7ca6"
+    },
+    "summary.json": {
+      "plan": {
+        "population": "Existing 21DF ASV-source eval samples only, true B and S in EACH duration stratum. No VCC or training-set performance evaluation.",
+        "checkpoint": "/home/mentee/results/CM/LA/EBM/model/BestCLS_80_21DF.pt",
+        "input": "Cached whole-native-file inference view 0, no augmentation/cropping/repetition/padding. No new GPU inference.",
+        "duration": "Leading consecutive 20ms RMS frames <10% of full-file max RMS (-20dB). Exact integer-frame boundaries: <=5 frames (100ms INCLUDED), >=25 frames (500ms INCLUDED).",
+        "eer": "Primary: linear interpolation of ROC at FPR=FNR. A secondary nearest discrete EER approximation is provided because small classes cause large steps. AUC independently verified by ranks.",
+        "common_threshold": "One retrospective operating threshold selected on ALL 1298 ASV eval files by minimum |FPR-FNR|; ties by lower mean error. It is then frozen for both strata. This is NOT independent calibration or deployment/test accuracy.",
+        "uncertainty": "2000 speaker-cluster bootstrap resamples within each duration stratum, resampling speakers jointly across B/S. Resamples missing a class are excluded and counted. Descriptive percentile intervals; rare-class support cannot be repaired by bootstrapping.",
+        "comparison_limits": "Different original files and potentially different speakers/attacks/codecs. Subset EER differences are not causal effects of prefix duration. 21DF was involved in model selection.",
+        "created_utc": "2026-10-30T07:46:25Z"
+      },
+      "common_threshold": 0.9837228059768677,
+      "groups": {
+        "all_asv": {
+          "n": 1298,
+          "metrics": {
+            "eer_pct": 3.1428571428571472,
+            "auc": 0.9951958525345621,
+            "nearest_discrete_eer_pct": 3.1843317972350254,
+            "nearest_discrete_frr_pct": 3.1428571428571472,
+            "nearest_discrete_far_pct": 3.225806451612903,
+            "nearest_discrete_threshold": 0.9837228059768677
+          },
+          "fixed_common_threshold": {
+            "threshold": 0.9837228059768677,
+            "bona_rejected_n": 33,
+            "bona_n": 1050,
+            "bona_rejection_pct": 3.1428571428571432,
+            "spoof_accepted_n": 8,
+            "spoof_n": 248,
+            "spoof_acceptance_pct": 3.225806451612903,
+            "balanced_error_pct": 3.184331797235023,
+            "balanced_accuracy_pct": 96.81566820276498,
+            "raw_accuracy_pct": 96.84129429892143
+          },
+          "classes": {
+            "bonafide": {
+              "n": 1050,
+              "speakers": 64,
+              "cosine_mean": 0.989206842822688,
+              "cosine_median": 0.9938362240791321,
+              "cosine_q10": 0.9899167478084564,
+              "cosine_q90": 0.9952553749084473,
+              "angle_to_OC_median_deg": 6.364794366547419,
+              "leading_median_s": 1.04
+            },
+            "spoof": {
+              "n": 248,
+              "speakers": 44,
+              "cosine_mean": -0.40896563442243683,
+              "cosine_median": -0.8956920802593231,
+              "cosine_q10": -0.9783696115016938,
+              "cosine_q90": 0.943166619539261,
+              "angle_to_OC_median_deg": 153.59810382673265,
+              "leading_median_s": 0.08
+            }
+          },
+          "bootstrap": {
+            "replicates_requested": 2000,
+            "valid_replicates": 2000,
+            "missing_class_replicates": 0,
+            "ci95": {
+              "eer_pct": [
+                1.6702424627279062,
+                4.7623110677718214
+              ],
+              "auc": [
+                0.9911171703719028,
+                0.9981033508458441
+              ],
+              "bona_rejection_pct": [
+                1.5753359336784236,
+                4.980495776637453
+              ],
+              "spoof_acceptance_pct": [
+                1.0378839225198873,
+                5.7251908396946565
+              ],
+              "balanced_error_pct": [
+                1.7648917553096213,
+                4.661612168589437
+              ]
+            },
+            "degenerate_intervals": [],
+            "degenerate_interval_warning": "A zero-width empirical bootstrap interval at an observed boundary does not establish zero population error or certainty; observed resampling cannot create unseen events."
+          },
+          "codec_counts": {
+            "bonafide": {
+              "high_mp3": 56,
+              "mp3m4a": 203,
+              "high_ogg": 198,
+              "low_ogg": 184,
+              "nocodec": 53,
+              "oggm4a": 206,
+              "high_m4a": 49,
+              "low_m4a": 54,
+              "low_mp3": 47
+            },
+            "spoof": {
+              "low_ogg": 52,
+              "low_mp3": 14,
+              "mp3m4a": 45,
+              "oggm4a": 44,
+              "low_m4a": 14,
+              "high_ogg": 44,
+              "high_mp3": 20,
+              "high_m4a": 10,
+              "nocodec": 5
+            }
+          }
+        },
+        "le100ms": {
+          "n": 160,
+          "metrics": {
+            "eer_pct": 0.0,
+            "auc": 1.0,
+            "nearest_discrete_eer_pct": 0.0,
+            "nearest_discrete_frr_pct": 0.0,
+            "nearest_discrete_far_pct": 0.0,
+            "nearest_discrete_threshold": 0.9925864934921265
+          },
+          "fixed_common_threshold": {
+            "threshold": 0.9837228059768677,
+            "bona_rejected_n": 0,
+            "bona_n": 5,
+            "bona_rejection_pct": 0.0,
+            "spoof_accepted_n": 7,
+            "spoof_n": 155,
+            "spoof_acceptance_pct": 4.516129032258064,
+            "balanced_error_pct": 2.258064516129032,
+            "balanced_accuracy_pct": 97.74193548387098,
+            "raw_accuracy_pct": 95.625
+          },
+          "classes": {
+            "bonafide": {
+              "n": 5,
+              "speakers": 3,
+              "cosine_mean": 0.9933441519737244,
+              "cosine_median": 0.9929709434509277,
+              "cosine_q10": 0.9926797389984131,
+              "cosine_q90": 0.9941718578338623,
+              "angle_to_OC_median_deg": 6.7973693258273675,
+              "leading_median_s": 0.02
+            },
+            "spoof": {
+              "n": 155,
+              "speakers": 37,
+              "cosine_mean": -0.3076374556268415,
+              "cosine_median": -0.8486087918281555,
+              "cosine_q10": -0.9787546277046204,
+              "cosine_q90": 0.9662490367889405,
+              "angle_to_OC_median_deg": 148.06067480202955,
+              "leading_median_s": 0.06
+            }
+          },
+          "bootstrap": {
+            "replicates_requested": 2000,
+            "valid_replicates": 1917,
+            "missing_class_replicates": 83,
+            "ci95": {
+              "eer_pct": [
+                0.0,
+                0.0
+              ],
+              "auc": [
+                0.9999999999999999,
+                1.0
+              ],
+              "bona_rejection_pct": [
+                0.0,
+                0.0
+              ],
+              "spoof_acceptance_pct": [
+                1.1954913702007752,
+                8.16326530612245
+              ],
+              "balanced_error_pct": [
+                0.5977456851003876,
+                4.081632653061225
+              ]
+            },
+            "degenerate_intervals": [
+              "eer_pct",
+              "auc",
+              "bona_rejection_pct"
+            ],
+            "degenerate_interval_warning": "A zero-width empirical bootstrap interval at an observed boundary does not establish zero population error or certainty; observed resampling cannot create unseen events."
+          },
+          "codec_counts": {
+            "bonafide": {
+              "high_ogg": 2,
+              "oggm4a": 2,
+              "mp3m4a": 1
+            },
+            "spoof": {
+              "low_ogg": 32,
+              "low_mp3": 9,
+              "mp3m4a": 34,
+              "oggm4a": 21,
+              "high_ogg": 30,
+              "high_m4a": 6,
+              "high_mp3": 14,
+              "nocodec": 4,
+              "low_m4a": 5
+            }
+          },
+          "support_warning": "Rare bona fide support: empirical EER/AUC and bootstrap intervals can be highly unstable; bootstrap cannot create unseen bona fide variability."
+        },
+        "ge500ms": {
+          "n": 1099,
+          "metrics": {
+            "eer_pct": 0.7722007722007707,
+            "auc": 0.999279892137035,
+            "nearest_discrete_eer_pct": 0.38610038610038533,
+            "nearest_discrete_frr_pct": 0.7722007722007707,
+            "nearest_discrete_far_pct": 0.0,
+            "nearest_discrete_threshold": 0.937981128692627
+          },
+          "fixed_common_threshold": {
+            "threshold": 0.9837228059768677,
+            "bona_rejected_n": 33,
+            "bona_n": 1036,
+            "bona_rejection_pct": 3.1853281853281854,
+            "spoof_accepted_n": 0,
+            "spoof_n": 63,
+            "spoof_acceptance_pct": 0.0,
+            "balanced_error_pct": 1.5926640926640927,
+            "balanced_accuracy_pct": 98.4073359073359,
+            "raw_accuracy_pct": 96.9972702456779
+          },
+          "classes": {
+            "bonafide": {
+              "n": 1036,
+              "speakers": 64,
+              "cosine_mean": 0.9891440750577966,
+              "cosine_median": 0.9938263595104218,
+              "cosine_q10": 0.989861249923706,
+              "cosine_q90": 0.995254635810852,
+              "angle_to_OC_median_deg": 6.369890722164019,
+              "leading_median_s": 1.04
+            },
+            "spoof": {
+              "n": 63,
+              "speakers": 32,
+              "cosine_mean": -0.6534939745352382,
+              "cosine_median": -0.9191054105758667,
+              "cosine_q10": -0.9781212687492371,
+              "cosine_q90": 0.45741965770721454,
+              "angle_to_OC_median_deg": 156.7956474926321,
+              "leading_median_s": 1.06
+            }
+          },
+          "bootstrap": {
+            "replicates_requested": 2000,
+            "valid_replicates": 2000,
+            "missing_class_replicates": 0,
+            "ci95": {
+              "eer_pct": [
+                0.10039908883276466,
+                1.4925744782065806
+              ],
+              "auc": [
+                0.9979292831262939,
+                0.9999376557746084
+              ],
+              "bona_rejection_pct": [
+                1.5954289002413968,
+                5.069692836637679
+              ],
+              "spoof_acceptance_pct": [
+                0.0,
+                0.0
+              ],
+              "balanced_error_pct": [
+                0.7977144501206984,
+                2.5348464183188395
+              ]
+            },
+            "degenerate_intervals": [
+              "spoof_acceptance_pct"
+            ],
+            "degenerate_interval_warning": "A zero-width empirical bootstrap interval at an observed boundary does not establish zero population error or certainty; observed resampling cannot create unseen events."
+          },
+          "codec_counts": {
+            "bonafide": {
+              "high_mp3": 55,
+              "mp3m4a": 200,
+              "high_ogg": 196,
+              "low_ogg": 183,
+              "nocodec": 52,
+              "oggm4a": 202,
+              "high_m4a": 49,
+              "low_m4a": 52,
+              "low_mp3": 47
+            },
+            "spoof": {
+              "oggm4a": 16,
+              "low_m4a": 6,
+              "high_mp3": 4,
+              "high_ogg": 10,
+              "high_m4a": 3,
+              "mp3m4a": 7,
+              "low_ogg": 14,
+              "low_mp3": 3
+            }
+          }
+        }
+      },
+      "attack_composition": [
+        {
+          "attack": "A07",
+          "le100ms": {
+            "n": 15,
+            "fraction_of_spoof_group": 0.0967741935483871,
+            "accepted_at_common_threshold_n": 0,
+            "cosine_median": -0.6278658509254456,
+            "cosine_mean": -0.39296354055404664
+          },
+          "ge500ms": {
+            "n": 0,
+            "fraction_of_spoof_group": 0.0,
+            "accepted_at_common_threshold_n": 0
+          }
+        },
+        {
+          "attack": "A08",
+          "le100ms": {
+            "n": 0,
+            "fraction_of_spoof_group": 0.0,
+            "accepted_at_common_threshold_n": 0
+          },
+          "ge500ms": {
+            "n": 2,
+            "fraction_of_spoof_group": 0.031746031746031744,
+            "accepted_at_common_threshold_n": 0,
+            "cosine_median": 0.45047320798039436,
+            "cosine_mean": 0.45047320798039436
+          }
+        },
+        {
+          "attack": "A09",
+          "le100ms": {
+            "n": 14,
+            "fraction_of_spoof_group": 0.09032258064516129,
+            "accepted_at_common_threshold_n": 0,
+            "cosine_median": -0.945134311914444,
+            "cosine_mean": -0.9324000307491848
+          },
+          "ge500ms": {
+            "n": 0,
+            "fraction_of_spoof_group": 0.0,
+            "accepted_at_common_threshold_n": 0
+          }
+        },
+        {
+          "attack": "A10",
+          "le100ms": {
+            "n": 20,
+            "fraction_of_spoof_group": 0.12903225806451613,
+            "accepted_at_common_threshold_n": 7,
+            "cosine_median": 0.9793434739112854,
+            "cosine_mean": 0.858856451511383
+          },
+          "ge500ms": {
+            "n": 0,
+            "fraction_of_spoof_group": 0.0,
+            "accepted_at_common_threshold_n": 0
+          }
+        },
+        {
+          "attack": "A11",
+          "le100ms": {
+            "n": 15,
+            "fraction_of_spoof_group": 0.0967741935483871,
+            "accepted_at_common_threshold_n": 0,
+            "cosine_median": 0.914890468120575,
+            "cosine_mean": 0.838676451643308
+          },
+          "ge500ms": {
+            "n": 0,
+            "fraction_of_spoof_group": 0.0,
+            "accepted_at_common_threshold_n": 0
+          }
+        },
+        {
+          "attack": "A12",
+          "le100ms": {
+            "n": 22,
+            "fraction_of_spoof_group": 0.14193548387096774,
+            "accepted_at_common_threshold_n": 0,
+            "cosine_median": -0.8640240430831909,
+            "cosine_mean": -0.5844578980044886
+          },
+          "ge500ms": {
+            "n": 0,
+            "fraction_of_spoof_group": 0.0,
+            "accepted_at_common_threshold_n": 0
+          }
+        },
+        {
+          "attack": "A13",
+          "le100ms": {
+            "n": 26,
+            "fraction_of_spoof_group": 0.16774193548387098,
+            "accepted_at_common_threshold_n": 0,
+            "cosine_median": -0.973681628704071,
+            "cosine_mean": -0.9690835109123817
+          },
+          "ge500ms": {
+            "n": 0,
+            "fraction_of_spoof_group": 0.0,
+            "accepted_at_common_threshold_n": 0
+          }
+        },
+        {
+          "attack": "A14",
+          "le100ms": {
+            "n": 18,
+            "fraction_of_spoof_group": 0.11612903225806452,
+            "accepted_at_common_threshold_n": 0,
+            "cosine_median": -0.8988075256347656,
+            "cosine_mean": -0.765015316920148
+          },
+          "ge500ms": {
+            "n": 0,
+            "fraction_of_spoof_group": 0.0,
+            "accepted_at_common_threshold_n": 0
+          }
+        },
+        {
+          "attack": "A15",
+          "le100ms": {
+            "n": 18,
+            "fraction_of_spoof_group": 0.11612903225806452,
+            "accepted_at_common_threshold_n": 0,
+            "cosine_median": -0.10827840119600296,
+            "cosine_mean": -0.04468590269486109
+          },
+          "ge500ms": {
+            "n": 0,
+            "fraction_of_spoof_group": 0.0,
+            "accepted_at_common_threshold_n": 0
+          }
+        },
+        {
+          "attack": "A16",
+          "le100ms": {
+            "n": 7,
+            "fraction_of_spoof_group": 0.04516129032258064,
+            "accepted_at_common_threshold_n": 0,
+            "cosine_median": -0.9752374291419983,
+            "cosine_mean": -0.8377372707639422
+          },
+          "ge500ms": {
+            "n": 0,
+            "fraction_of_spoof_group": 0.0,
+            "accepted_at_common_threshold_n": 0
+          }
+        },
+        {
+          "attack": "A17",
+          "le100ms": {
+            "n": 0,
+            "fraction_of_spoof_group": 0.0,
+            "accepted_at_common_threshold_n": 0
+          },
+          "ge500ms": {
+            "n": 19,
+            "fraction_of_spoof_group": 0.30158730158730157,
+            "accepted_at_common_threshold_n": 0,
+            "cosine_median": -0.953925609588623,
+            "cosine_mean": -0.9376955597024215
+          }
+        },
+        {
+          "attack": "A18",
+          "le100ms": {
+            "n": 0,
+            "fraction_of_spoof_group": 0.0,
+            "accepted_at_common_threshold_n": 0
+          },
+          "ge500ms": {
+            "n": 24,
+            "fraction_of_spoof_group": 0.38095238095238093,
+            "accepted_at_common_threshold_n": 0,
+            "cosine_median": -0.9138289391994476,
+            "cosine_mean": -0.7470432867606481
+          }
+        },
+        {
+          "attack": "A19",
+          "le100ms": {
+            "n": 0,
+            "fraction_of_spoof_group": 0.0,
+            "accepted_at_common_threshold_n": 0
+          },
+          "ge500ms": {
+            "n": 18,
+            "fraction_of_spoof_group": 0.2857142857142857,
+            "accepted_at_common_threshold_n": 0,
+            "cosine_median": -0.6439538598060608,
+            "cosine_mean": -0.35143401639329064
+          }
+        }
+      ],
+      "boundaries": {
+        "exactly100ms": {
+          "B": 0,
+          "S": 18
+        },
+        "exactly500ms": {
+          "B": 2,
+          "S": 0
+        },
+        "excluded_middle": {
+          "B": 9,
+          "S": 30
+        }
+      },
+      "verification": {
+        "integer_boundary_checks": true,
+        "input_sha256": "2d6bd2124f74c578a857974a37d26f3289f8fa781c6fe6e81607f5d1cbbcbb91",
+        "independent_metric_checks": [
+          "all_asv",
+          "le100ms",
+          "ge500ms"
+        ]
+      },
+      "attack_support": {
+        "attacks_in_both": [],
+        "shared_attacks_with_at_least5_spoof_per_group": [],
+        "shared_attack_spoof_n": {
+          "le100ms": 0,
+          "ge500ms": 0
+        },
+        "interpretation": "Attack-adjusted comparison would require overlap. Sparse common attacks do not permit a reliable general attack-matched duration conclusion."
+      },
+      "presentation_revision": "Added explicit boundary-bootstrap warnings; original computed metrics and raw bootstrap intervals unchanged."
+    },
+    "plan.json": {
+      "population": "Existing 21DF ASV-source eval samples only, true B and S in EACH duration stratum. No VCC or training-set performance evaluation.",
+      "checkpoint": "/home/mentee/results/CM/LA/EBM/model/BestCLS_80_21DF.pt",
+      "input": "Cached whole-native-file inference view 0, no augmentation/cropping/repetition/padding. No new GPU inference.",
+      "duration": "Leading consecutive 20ms RMS frames <10% of full-file max RMS (-20dB). Exact integer-frame boundaries: <=5 frames (100ms INCLUDED), >=25 frames (500ms INCLUDED).",
+      "eer": "Primary: linear interpolation of ROC at FPR=FNR. A secondary nearest discrete EER approximation is provided because small classes cause large steps. AUC independently verified by ranks.",
+      "common_threshold": "One retrospective operating threshold selected on ALL 1298 ASV eval files by minimum |FPR-FNR|; ties by lower mean error. It is then frozen for both strata. This is NOT independent calibration or deployment/test accuracy.",
+      "uncertainty": "2000 speaker-cluster bootstrap resamples within each duration stratum, resampling speakers jointly across B/S. Resamples missing a class are excluded and counted. Descriptive percentile intervals; rare-class support cannot be repaired by bootstrapping.",
+      "comparison_limits": "Different original files and potentially different speakers/attacks/codecs. Subset EER differences are not causal effects of prefix duration. 21DF was involved in model selection.",
+      "created_utc": "2026-10-30T07:46:25Z"
+    }
+  },
+  "method_documents": {
+    "report_ko.md": "# 원본 ASV: 앞 저에너지 ≤100ms 및 ≥500ms 평가\r\n\r\n동일한 epoch80 모델의 기존 원본 전체 입력 점수를 재사용했다. 각 집단에 bona fide와 spoof를 모두 포함했다. 100ms 이하에는 정확히 100ms도 포함한다. VCC는 포함하지 않았다.\r\n저에너지 기준: 앞부분의 연속 20ms 프레임 RMS가 전체 원본 최대 RMS의 10% 미만(−20dB). 파형을 짧게/길게 바꾸지 않고 자연 길이로 파일만 선택했다.\r\n\r\n| 집단 | B 수(화자) | S 수(화자) | 보간 EER | EER 95% bootstrap 구간 | AUC |\r\n|---|---:|---:|---:|---:|---:|\r\n|전체 ASV|1050 (64)|248 (44)|3.143%|1.670~4.762%|0.99520|\r\n|≤100ms|5 (3)|155 (37)|0.000%|퇴화: 일반화 불확실성 추정에 부적합|1.00000|\r\n|≥500ms|1036 (64)|63 (32)|0.772%|0.100~1.493%|0.99928|\r\n\r\nEER은 집단별 ROC에서 FPR=FNR 교차를 선형 보간한 값이다. 작은 B 표본에서는 한 파일 때문에 FNR이 크게 변하므로 보간 EER과 가장 가까운 실제 임계값의 오류율을 구분해야 한다. 화자 단위 bootstrap 2,000회이며 한 클래스가 빠진 반복은 제외하고 summary.json에 횟수를 기록했다. 적은 B/화자 수의 문제는 bootstrap으로 해결되지 않는다.\r\n\r\n## 동일 임계값에서의 기술적 비교\r\n\r\n전체 ASV 평가 표본에서 한 번 선택한 코사인 임계값 0.983722806를 두 집단에 동일하게 적용했다. 평가 표본 자체로 선택한 사후 비교용 임계값이다. 독립 개발셋 보정이나 배포 성능으로 해석하면 안 된다.\r\n\r\n| 집단 | B→S 거절 | S→B 수락 | 균형 오류율 |\r\n|---|---:|---:|---:|\r\n|전체 ASV|33/1050 (3.14%)|8/248 (3.23%)|3.18%|\r\n|≤100ms|0/5 (0.00%)|7/155 (4.52%)|2.26%|\r\n|≥500ms|33/1036 (3.19%)|0/63 (0.00%)|1.59%|\r\n\r\n## 점수 분포\r\n\r\n| 집단 | B 코사인 중앙값 | S 코사인 중앙값 |\r\n|---|---:|---:|\r\n|≤100ms|+0.99297|-0.84861|\r\n|≥500ms|+0.99383|-0.91911|\r\n\r\n코사인은 높을수록 학습된 B 중심에 가깝다. 확률이 아니다.\r\n\r\n## 공격 구성과 해석 제한\r\n\r\n| Spoof 공격 | ≤100ms 수 | ≥500ms 수 |\r\n|---|---:|---:|\r\n|A07|15|0|\r\n|A08|0|2|\r\n|A09|14|0|\r\n|A10|20|0|\r\n|A11|15|0|\r\n|A12|22|0|\r\n|A13|26|0|\r\n|A14|18|0|\r\n|A15|18|0|\r\n|A16|7|0|\r\n|A17|0|19|\r\n|A18|0|24|\r\n|A19|0|18|\r\n\r\n양쪽에서 spoof가 5개 이상 있는 공통 공격: [].\r\n집단 간 EER 차이는 앞 구간 길이를 바꾼 효과가 아니다. 서로 다른 파일·화자·공격·코덱 구성의 성능이다. 특히 짧은 집단의 B 지원과 공통 공격 지원이 부족하면 길이 때문에 더 좋아졌거나 나빠졌다고 결론낼 수 없다.\r\n이전 고정 crop/repeat 평가와 달리 원본 전체 입력의 점수다. 다른 입력 조건 또는 전체 21DF EER과 직접 동일시하면 안 된다. 21DF는 과거 모델 선택에도 사용되어 완전히 새로운 외부 검증이 아니다.\r\nEER은 독립 DET 검색으로, AUC는 순위합으로 각각 검산했다. 종료코드와 산출물을 확인한다.\r\n\r\n서버 경로: /results/analysis/EBM80_ASV_lowenergy_le100_ge500_evaluation/\r\n\r\n## 이번 결과의 핵심 해석\r\n\r\n100ms 이하 집단의 0% EER은 관측된 5개 B와 155개 S를 분리하는 임계값이 존재한다는 뜻이다. B가 3명·5개뿐이므로 일반적인 성능 우위를 입증하지 않는다. 모든 재표집에서도 이 제한된 표본이 분리되어 EER bootstrap 구간이 0~0으로 퇴화했다. 이를 실제 오류율 0%의 확실한 구간으로 해석하지 않는다.\r\n\r\n공통 임계값에서는 짧은 집단에서 S→B 오류 7개가 발생했고 전부 A10이었다. 긴 집단의 S→B 오류는 0/63이었다. 따라서 이 표본에서는 긴 앞 구간을 가진 spoof가 더 B로 오인되는 패턴이 나타나지 않았다. 다만 두 집단의 공격 종류는 하나도 겹치지 않아, 이를 길이의 독립 효과나 길이 지름길 부재의 증거로 해석할 수 없다.\r\n\r\n짧은 집단의 공격: A07, A09~A16. 긴 집단: A08, A17~A19. 동일 공격 내 길이 비교는 이 표본의 두 극단 집단에서 불가능하다.\r\n"
+  }
+}

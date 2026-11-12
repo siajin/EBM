@@ -1,0 +1,37 @@
+{
+  "status": "pass",
+  "datasets_validated": [
+    {
+      "status": "pass",
+      "dataset": "T",
+      "rows": 25380,
+      "cache_fingerprint": "686e593443178bb89241e48ab9a148e1f248f2025140f379d564c19a75198b4b",
+      "file_hashes_checked": true
+    },
+    {
+      "status": "pass",
+      "dataset": "V",
+      "rows": 14983,
+      "cache_fingerprint": "686e593443178bb89241e48ab9a148e1f248f2025140f379d564c19a75198b4b",
+      "file_hashes_checked": true
+    },
+    {
+      "status": "pass",
+      "dataset": "DF_pilot",
+      "rows": 20000,
+      "cache_fingerprint": "1b0a7488e72f4ec277c88575c51ce983bc9879e9ed092249938eb3c84fc69bae",
+      "file_hashes_checked": true
+    }
+  ],
+  "masks_per_dataset": 177,
+  "metrics_independently_checked": 531,
+  "score_max_error": 1.7763568394002505e-15,
+  "metric_max_error": 4.440892098500626e-15,
+  "previous80_cases_reproduced": 21,
+  "previous80_max_score_error": 1.5543122344752192e-15,
+  "T_Fisher_ranking_recomputed_matches": true,
+  "nested_masks_checked": true,
+  "protocol_sha256": "d06262a73c8270bd743af8b907a5cd16203ba326faf5b2663f092128eba6d767",
+  "Q_opened": false,
+  "GPU_inference_runs": 0
+}

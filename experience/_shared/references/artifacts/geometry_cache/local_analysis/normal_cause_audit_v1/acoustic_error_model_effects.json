@@ -1,0 +1,121 @@
+[
+  {
+    "case": "level",
+    "OOF_AUROC": 0.9202082639582639,
+    "balanced_LL_reduction": -0.004588334250648252,
+    "CI95": [
+      -0.012456849584867377,
+      0.004318545678272766
+    ],
+    "family95_interval": [
+      -0.01468777954556545,
+      0.008009742953761593
+    ],
+    "comparisons_in_family": 7,
+    "bootstrap_draws": 2000,
+    "speaker_groups": 86,
+    "limitation": "Conditional on OOF predictions; no refit uncertainty or source-family dependence included."
+  },
+  {
+    "case": "spectrum",
+    "OOF_AUROC": 0.9260288322788323,
+    "balanced_LL_reduction": 0.009099171183749144,
+    "CI95": [
+      -0.03162828994975433,
+      0.04593980120980229
+    ],
+    "family95_interval": [
+      -0.046745282177584425,
+      0.05956372765962666
+    ],
+    "comparisons_in_family": 7,
+    "bootstrap_draws": 2000,
+    "speaker_groups": 86,
+    "limitation": "Conditional on OOF predictions; no refit uncertainty or source-family dependence included."
+  },
+  {
+    "case": "cepstrum",
+    "OOF_AUROC": 0.9048590298590299,
+    "balanced_LL_reduction": -0.0617022619720663,
+    "CI95": [
+      -0.11357246621882482,
+      -0.011947297978293839
+    ],
+    "family95_interval": [
+      -0.1366953827426768,
+      0.0039046672775800997
+    ],
+    "comparisons_in_family": 7,
+    "bootstrap_draws": 2000,
+    "speaker_groups": 86,
+    "limitation": "Conditional on OOF predictions; no refit uncertainty or source-family dependence included."
+  },
+  {
+    "case": "pitch_periodicity",
+    "OOF_AUROC": 0.9233891108891109,
+    "balanced_LL_reduction": 0.002788283302824879,
+    "CI95": [
+      -0.015997821987487247,
+      0.020912792801137742
+    ],
+    "family95_interval": [
+      -0.021811975959062844,
+      0.026319426823745985
+    ],
+    "comparisons_in_family": 7,
+    "bootstrap_draws": 2000,
+    "speaker_groups": 86,
+    "limitation": "Conditional on OOF predictions; no refit uncertainty or source-family dependence included."
+  },
+  {
+    "case": "time_variation",
+    "OOF_AUROC": 0.9237151737151738,
+    "balanced_LL_reduction": 0.004307586280567932,
+    "CI95": [
+      -0.007684564673162145,
+      0.016328155570392328
+    ],
+    "family95_interval": [
+      -0.010649806894066976,
+      0.022693790315588717
+    ],
+    "comparisons_in_family": 7,
+    "bootstrap_draws": 2000,
+    "speaker_groups": 86,
+    "limitation": "Conditional on OOF predictions; no refit uncertainty or source-family dependence included."
+  },
+  {
+    "case": "all_acoustics",
+    "OOF_AUROC": 0.9097707847707847,
+    "balanced_LL_reduction": -0.054028965242804816,
+    "CI95": [
+      -0.10889837172042038,
+      -0.0030282980964967854
+    ],
+    "family95_interval": [
+      -0.13505187094380258,
+      0.012799346942633388
+    ],
+    "comparisons_in_family": 7,
+    "bootstrap_draws": 2000,
+    "speaker_groups": 86,
+    "limitation": "Conditional on OOF predictions; no refit uncertainty or source-family dependence included."
+  },
+  {
+    "case": "noise_control",
+    "OOF_AUROC": 0.908303502053502,
+    "balanced_LL_reduction": -0.03844255466078994,
+    "CI95": [
+      -0.0548860101000355,
+      -0.022228974963172006
+    ],
+    "family95_interval": [
+      -0.06037640840968631,
+      -0.015731050769766542
+    ],
+    "comparisons_in_family": 7,
+    "bootstrap_draws": 2000,
+    "speaker_groups": 86,
+    "limitation": "Conditional on OOF predictions; no refit uncertainty or source-family dependence included."
+  }
+]

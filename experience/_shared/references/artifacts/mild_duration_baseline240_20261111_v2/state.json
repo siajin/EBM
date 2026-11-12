@@ -1,0 +1,386 @@
+{
+  "status": "failed_eval_worker_import_user_terminated",
+  "root": "/home/mentee/analysis/ebm_baseline240_mild_e20_20261111_v2",
+  "experiment_name": "EBM_e20_bs240_lr1e5_baseline240_speed08_12_crop20_20261111_v2",
+  "training_started": true,
+  "training_complete": false,
+  "evaluation_complete": false,
+  "comparison_complete": false,
+  "queue_host_pid": 0,
+  "configuration": {
+    "experiment_name": "EBM_e20_bs240_lr1e5_baseline240_speed08_12_crop20_20261111_v2",
+    "root": "/home/mentee/analysis/ebm_baseline240_mild_e20_20261111_v2",
+    "result_path": "/results/CM/LA/EBM_e20_bs240_lr1e5_baseline240_speed08_12_crop20_20261111_v2",
+    "host_result_path": "/home/mentee/results/CM/LA/EBM_e20_bs240_lr1e5_baseline240_speed08_12_crop20_20261111_v2",
+    "source_sha256": {
+      "POSITIVE_BPL.md": "18f154a108bce2586e2609e73a9c148d2a115b7d28928d1c9b5a49cbd9b7011c",
+      "arguments.py": "2ed34a6255860629732d49d31617835464f5aa20a083feb9fa63658c3f55bd38",
+      "data_loaders.py": "64d565305b3028558ad9d67fe36d868d4048602b870ebf82c471c5a561a3a461",
+      "data_processing/__init__.py": "d224ec426097c98a684b425048bee2d76dab9228099ea8864952a448fb9e7c3f",
+      "data_processing/augmentation/augmentation.py": "555c0f6be6e4638fea66eedb469f3aa2ba3ab8c171f024f24d49797a85cb1863",
+      "data_processing/augmentation/codec_aug.py": "d94287e460ee1d10b7d1f2bfaaa27e638300b77e3cb50d6fd79222de5423ddcd",
+      "data_processing/augmentation/raw_boost.py": "75e2c3d2ce8da0b649dae3ffc2a69817017a5514c6ada2eda28a34eef9aa0739",
+      "data_processing/augmentation/wav_read_functions.py": "28cf65b66970a81f1e7e53a4e16c32cecfe85718722a8155c7e446a74869baeb",
+      "dataset/ASVspoof2019_la_eval.py": "cbd2cc71222959a90f3d2d0a3cb76de1f48c93413cdb082ceab1512e53663417",
+      "dataset/ASVspoof2019_la_train.py": "3da40334a3888b3cbd063ecdf3db44b9d232f43d7399f6caed2a02e52e5b3172",
+      "dataset/ASVspoof2021_df_eval.py": "770441069170385d1d7a4bd99a993566aff6e70316a37a3b0605f7b0c6dd2043",
+      "dataset/ASVspoof2021_la_eval.py": "fd40380232d142855d967ceffba9d5775938c22f23e9b9ba6a610714a3f63f75",
+      "dataset/__init__.py": "4ee0d06be74e9cd8c6401ecfb4dbb1a2026deec84716928e96b5b1e9696705e2",
+      "logger/__init__.py": "69a9ba3b2628685a3fa23102a50a860a1a7c5607a205507e22a62e3cb4e83b10",
+      "logger/interface.py": "4104bafe47c69d70bb9da65c6d23e65aaf152b38428a5b4432ae8f98c3bc0326",
+      "logger/local.py": "090b65c516ebb76d172e6ecc082cb1f2889c9a4a33cc44219e6e1aaf000054be",
+      "logger/logger.py": "0bc18ed05e7509c9bcecf49b02d4589e8d485e0b12f0541238d1880d2d15ba11",
+      "logger/neptune.py": "842fd2d97190c9b18725ec9c264abefb14b192eacaf89df84f63a159127c85a5",
+      "logger/wandb.py": "d83280931a9b51c3c48a28400db34c66328349e16bcc28de63dccf3e85191096",
+      "main.py": "9d3169f0291e384bbad2004ec88dd8dad3a278d353a9bb8b9b3ddd0cf366bc93",
+      "model/__init__.py": "8ac912160cfb7cdad15d5d54ff8dd051a69fa2fc50d433bdf51061ac50c33929",
+      "model/b_linear.py": "73bd5e5676d4877a8a08f9fb82695b9fd7358d289a94a53b3203ab114920e5cb",
+      "model/loss.py": "b3c282817cf7a2781fab2881cf1508ca862710245002c78e5a5ad2708815f7bb",
+      "native_steps.py": "84d493b90848c3f79f0a1623c0b76eaea95b98b3a16cac80fad5523476a939b6",
+      "positive_bpl.py": "f9912467f3cbec576d92823b4eefab986b55b34d5fa2eff5de063ba58fa624ae",
+      "scheduler/cosine_warmup.py": "776ff35974b3cd1bce350ae5a46a528e882f0fbe5495b754ce376d5c7b6ee50a",
+      "scheduler/steplr.py": "c04eb4fd9d016dde5dcca587aac9e1ef1cc83406381f7e173b57e75873a4e2b8",
+      "tests/gpu_positive_smoke.py": "e7e4a7e0c11d4da11485d82222423f571d8d38c39e1c44b04909ea36322162f3",
+      "tests/test_positive_bpl.py": "ca43eafca1ca1e4800aa93038880a9939c31883dc5eeecd7efa0ce542cc5fec0",
+      "train.py": "f9a5a8ab8d0feb4f9f3492b95c561ebe6dddd5ea7dfc145c352560cd07738ec7",
+      "utils/__init__.py": "a63eda2c5181d9de31e02d71b95f2c77fd29800e3c1432b453b795ae617be7b9",
+      "utils/ddp_util.py": "43bece35fb033c9f373a631082ebb554f3b3e0f3b73e814957071929f03fac79",
+      "utils/get_threshold.py": "f93382289fd71baed602188e1b83ee5f509e66f5507381e52d12e0bcc54e8054",
+      "tools/analyze_train_crop_io.py": "9f8574b6a6b517f28ac46a6e023aea4af7918c4ff3e7de2d3fb6470bb1727a81",
+      "activity_policy.py": "8657f9614bc9dcde1b48c295402953bba34d300f1bb8137821f3a58d30f662a8",
+      "tools/fit_activity_policy.py": "dbb15ffe9a4ea3f88cfd4ee5b0f4ac565aeead92d5ece6afb62f1e0f98e5d534",
+      "tools/build_activity_candidates.py": "98ed4d9e98aa1fef0dc2fe8ceb6e5324d5fb1dc20953084076b77210d47e3c7c",
+      "tests/test_activity_policy.py": "127c75b3589afb6bc9b4039874573882c147805216db925c7537a977f9e4c2bd",
+      "tools/validate_activity_policy.py": "a3cc2a2a65fc49d09ac24b4761432f6be6927bb1a279e7e2a8f1fe4a7d61b6bb",
+      "tests/test_source_coverage.py": "62cacc4d40aba6f9afa88759c6cfb80c99f72e8d20ab6f842f40a3bf6fa21aab",
+      "tools/validate_source_coverage.py": "de6bf1cde1a5e512a22f340202039c8d1912becae20eb32d24cfa243de0b178d",
+      "tools/train_coverage_experiment.py": "f6f775cc96410db35b4b7d9eb0c2ac7c19eef3f74f609428566046002d080dbc",
+      "tools/evaluate_coverage_comparison.py": "c17bd3c0560c41bfc5e6d11dd320147f420d2793fd315d544eae6e47f8ad5ce4",
+      "tools/check_coverage_training.py": "4ad7710bb3b0afa7744bf568c075c79172b2c1c523171580b800fa487b132b5e",
+      "tools/evaluate_B_C_checkpoints.py": "961ece4a5ba570bab91bfee45a6992e1767174f22cfaa94861c7e755e1a2230e",
+      "tests/test_intermediate_19la.py": "3bfcebe872fc4af9db5383636e9f222609c788d521c6f8cc024ed53e5fee3c01",
+      "mild_duration.py": "6b424e30be60b64cf583bd7974506b3838a8fdb939cc1ad036bc397382fc8273",
+      "tests/test_mild_duration.py": "61a5f6fe64a16f55370177fa561ea356b9588a31a7251eca1546e6ea47ce5bb9",
+      "tools/build_mild_duration_policy.py": "b8ea46308669bbf6e6658b4f1f8eb17621a459ce1ae8b7c097983960f8387be3",
+      "tools/prepare_mild_audio.py": "01f4da2595103262821ee2cc2902839cebf9d470c9f19d9de779cb2e3d2253e7",
+      "tools/train_mild_duration.py": "09fbbe0a9e7d5d6fa7f9ae3da5e418fa4ba57d717ce2e24e5105d9a3f9e40d1c",
+      "tools/check_mild_training.py": "d77c0d0532b9c2f8bc58a497e4a9fde014b20213f4315435a317d938b2249400",
+      "tools/finish_mild_experiment.py": "e4fea14ba90543513fff5f76d595c97ffeeb0bc581d3e72637a4f83f44950946",
+      "tools/queue_mild_experiment.py": "6d2038fc1e5cda8bb9bdcf6a98f9b6ecec674de5ecc66ece33baa89358c188fe",
+      "tools/evaluate_coverage_checkpoint.py": "0bae8bfb46853796b825e979dba257a4c2f390d7216d3e502263bc7ed201ac73",
+      "tools/compare_coverage_epoch20.py": "dd8160515e464d2f8dc5899da29e1bcdb83941ae1fd0adac5de134372fb0871b",
+      "baseline240_mild.py": "aa74558586d30bf562ae576ec57c4fb76506140700ed2c604f9304107072c158",
+      "tests/test_baseline240_mild.py": "82d81052736990dd254176fdb79d069c1623b0491f8d0cc67b3d0eeb8272aa72",
+      "tools/train_baseline240_mild.py": "15143b9af629604c38487b55d9f80a50abc9ee329d96bffe5fa3714f3f613fd7",
+      "tools/check_baseline240_mild.py": "0d285edc58b36ec88bb595411b24ef91335827f8ec9f208cce9e46bc56252f9c",
+      "tools/evaluate_original240_reference.py": "82a2af8029c9c8f5c1ec248858c05385bbcd0465b14b051232241a9d08f72b22",
+      "tools/finish_baseline240_mild.py": "729c8b3a116b123aaead131bef3079aa02ce5bc11ffd35b8c961932f05495fa2"
+    },
+    "live_commit": "cf199af03044c40837c08ce31d633e2c048bde08",
+    "source_repo_branch": "experiment/positive-bpl-native-pairs-20261110",
+    "protected_checkpoints": {
+      "legacy240": {
+        "path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5/model/BestCLS_50_21DF.pt",
+        "bytes": 15053782,
+        "sha256": "84a828eeda71d74212178dc2c2f02e72f8bb79b3573354f6cd9ca181a376d19e"
+      },
+      "B": {
+        "path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_B_zeropad_short303/model/CLS_50.pt",
+        "bytes": 15045708,
+        "sha256": "63ed02a1baef97efa9c8b701814dcccebf3360d441782abe9688d8edb3cdf457",
+        "TrainState_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_B_zeropad_short303/model/TrainState_50.pt",
+        "TrainState_sha256": "3b1fe8ac2ec67e680ac582365e40cd6f34451a42484858f847f55e41a1b1cba0"
+      },
+      "C": {
+        "path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_C_nativeLong_short303/model/CLS_50.pt",
+        "bytes": 15045708,
+        "sha256": "dcf7e141a35eb2d19adfa8a1ec36bf89d9a557c5b8ece4344939809c1aa1fa3d",
+        "TrainState_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_C_nativeLong_short303/model/TrainState_50.pt",
+        "TrainState_sha256": "6dc0d45cf402d1cb00a2085d7c9c98f2891df5c610344b9e8b59a641b57d0d20"
+      },
+      "stopped_coverage20": {
+        "path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_OC_BPL_coverage_activity_20261110_mid19LA/model/CLS_20.pt",
+        "sha256": "80efcd90df0f2762a27ac2fb10a5d454740e18979f7ecc7df4b9c0062f9d4701"
+      },
+      "original240_epoch20": {
+        "path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5/model/BestCLS_20_21DF.pt",
+        "sha256": "7dc6ba8892ee84a747f8a3947cad1a0885aece17d948cb6aa6202be69a0ef2d1",
+        "bytes": 15053782
+      }
+    },
+    "duration_policy_sha256": "d42b72f72696c3e68d540579e871d5c69a49ba6e79a75f6910af56286912522b",
+    "frontend_revision": "1a640f32ac3e39899438a2931f9924c02f080a54",
+    "training_epochs": 20,
+    "training_seed": 1,
+    "source_sampling": "original class-specific DistributedSampler plus small-loader recycling",
+    "source_originals": {
+      "bonafide": 2580,
+      "spoof": 22800
+    },
+    "OC_global_batch": 240,
+    "OC_per_rank": {
+      "normal": 120,
+      "batch106": 72,
+      "batch108": 114
+    },
+    "BPL_extra_per_rank": 0,
+    "BPL_pairs_per_rank": {
+      "normal": 144,
+      "last_batch": 36
+    },
+    "BPL_pairing": "same-source long/short; local all-pairs",
+    "steps_per_epoch": 108,
+    "logical_training_steps": 2160,
+    "objective": "original full-graph OC+BPL backend update, then original OC-center update",
+    "lr": 1e-05,
+    "weight_decay": 0.0001,
+    "micro_batch_size": null,
+    "RawBoost": "original types0..8; type8 LnL+ISD",
+    "codec": false,
+    "VAD_matching": false,
+    "silence_removal": false,
+    "old_short_duration_policy": false,
+    "speed_bounds": [
+      0.8,
+      1.2
+    ],
+    "crop_fraction_bounds": [
+      0,
+      0.2
+    ],
+    "pitch_preserving_transform": "SoX tempo -s",
+    "source_uid_weights": "uniform within class, unchanged expected speaker/attack proportions",
+    "target_choice": "independent random conditional target on each visit; fixed seeded crop per variant",
+    "evaluation_input": "front64600 cap; no repeat; masks; batch8/rank; trained OC cosine; original ASPnoise",
+    "evaluation_seed": 1729,
+    "intermediate_evaluation_phase": "19LA",
+    "intermediate_evaluation_every_epochs": 5,
+    "final_evaluation_phases": {
+      "19LA": 71237,
+      "21LA": 148176,
+      "21DF": 533928
+    },
+    "model_selection": "fixed20 chosen by user; no dev; monitoring19LA every5",
+    "train_port": 29749,
+    "smoke_port": 29748,
+    "CUDA_VISIBLE_DEVICES": "0,1",
+    "wait_for_evaluation_root": "/home/mentee/analysis/ebm_coverage_e20_eval_20261110_v1",
+    "container_shell_start_ticks": "223995823",
+    "new_paid_resource_cost_USD": 0,
+    "new_spending_ceiling_USD": 0,
+    "automatic_retries": 0,
+    "queue_wait_ceiling_hours": 8,
+    "pipeline_wall_ceiling_hours": 48,
+    "generated_cache_ceiling_bytes": 21474836480,
+    "cleanup": "Watcher exits after launch; own stage process groups bounded; temp files only in unique new root. No resource rental. Preserve cache, checkpoints, logs, frozen sources and existing results.",
+    "registered_KST": "2026-11-11T01:24:54.486615+09:00",
+    "training_basis": "original240 complete training procedure from archived10f3bcd",
+    "baseline_commit": "10f3bcd057dc6a2ca687fbd5389ad6c9e15a3746",
+    "baseline_source_sha256": {
+      ".gitignore": "5c97c214558e316f4f499604e2885343e4e52015799fc5e19e9f860babf944f7",
+      "Dockerfile": "e8f7adfa82a915ac0883974e8d9546394429a9c97ce5e08c7fbfef1bbf65516b",
+      "LICENSE": "e850eabeb4ee31872aadd4f95cb4cc5cf1dcc2af25c3e9170bed6f6e527e08dd",
+      "README.md": "eaa6fdba1977afdbed3ecf2f9545776d581f7d892d0bc93f221485525bbe6295",
+      "arguments.py": "c5f54a6b0201820dedcb85eb04c7e8127333d359cf01927a70c0c442640369c0",
+      "data_loaders.py": "411e294692207b8f434cc49769cbd052abb51316d4a17fe555c71459d7eea8f6",
+      "data_processing/__init__.py": "e90c884ba77e163b8c8377f3fa9ab5442f279c16f726e2fc939c57468733816e",
+      "data_processing/augmentation/augmentation.py": "82c7ebd4fd24fb58f7021b82101233edb185d6684eb85c5026febd2f17d32faa",
+      "data_processing/augmentation/codec_aug.py": "4dbb894e994af786926cc5bdcfead9e1a3cf742bfc15a0a9ea62b7a9803f828e",
+      "data_processing/augmentation/raw_boost.py": "e8a8944850f4305a042fceceb8daf7fdb52b627f7874206284ce88f7b220d33f",
+      "data_processing/augmentation/wav_read_functions.py": "d81e376dd4fb060aef00208380fb429ca63841b6d7975f31fc012c0eae903cc4",
+      "dataset/ASVspoof2019_la_eval.py": "843642f72871b89781ede23998c9456b21b0415bbeae340bbe8d0c36beea2c35",
+      "dataset/ASVspoof2019_la_train.py": "bd98462e9e3f6da6f1e9a4f439761d4ec67ca625cd82aa7fcd6b07412953da2b",
+      "dataset/ASVspoof2021_df_eval.py": "422b4e0cf14ae1232e8ba918141d36c68b9057c311bafb6c541c7a80e942c4a7",
+      "dataset/ASVspoof2021_la_eval.py": "18c2a1a19d00d2e6eaf417ad3f0707434516f66e999cb013f62968b266e0f235",
+      "dataset/__init__.py": "3534dcaa88978f59714243b6f0e64bfb2f57f0c58fb4e1511234ea8ee70723dd",
+      "docker_build.sh": "cd244e9001469cd3ab14707f468f310255b5325719891ce83d85d34ec6e079d8",
+      "docker_run.sh": "cc5a923c65bcc4109e3dd62d5d0368fd3a6488c2deb593742badf805d7895ab2",
+      "docs/CONTROL_B.md": "108ca9bac9b7a43e8b11b9da016f6dc9c15e227be5494b5374fd8bb5b4d42535",
+      "docs/RUN_BASELINE240_20261106.md": "8843d381a2c9f334eb240ca25619f46adf7537b31859452e0fc95546c9a449eb",
+      "docs/SERVER_BASELINE.md": "48270b84c719ce6f57412b923da89aaa18c216b776a3ccf6463e18918246787d",
+      "docs/WORKFLOW.md": "9cbe234904082e59b3a98f34ab084f0af0482870e0a2a879249d496227dffc25",
+      "logger/__init__.py": "ceaf8c7f0f309f2489a88b7376bef13952d3a735a1b2b393a34797f796d21c3d",
+      "logger/interface.py": "8b1c23931a24a9e1967a6ec479e2a8c81cee13c8efc9458fd044ba6af936848e",
+      "logger/local.py": "fbbce7ae888ec3be63e6320668dac9792f4d14d394b1a402afde1e124aee1871",
+      "logger/logger.py": "3cf192ae21f819e9dbf48b8e16dc42f49dce1894ac0e4c16f2b3e8865d56ca25",
+      "logger/neptune.py": "a5905325f55b7ecf31a01f84814e33cee777e0baa976a57d760b5c4ca723f9db",
+      "logger/wandb.py": "42c293e802b03fcc7d4764643cec147d8d6f8dfa7c0e4530c6eb3ad9fc0eadba",
+      "main.py": "f23483e1a8d1bf98edfcd934e9c373821635b9226240677bb38644809a9c0326",
+      "model/__init__.py": "357dae54f8602f4fbbd07a9d6cc4d80126c7d7950f36ebdeccd511aabb2c1f56",
+      "model/b_linear.py": "c2cbcf898f1905c9c6ee8b20ef4514c4af7cb343abbf35e2dbd1fd526ad3459f",
+      "model/loss.py": "164be4161b57a7899ef7b289e005ab80d12da373922d57e9e021844ea828b1ac",
+      "scheduler/cosine_warmup.py": "ce81225049a4a31864752d6377e08ddb1f86a55f3e3a3860bd6fdb0ecb760d19",
+      "scheduler/steplr.py": "7d3e1c96134c5f36588def6b08b643e74e9bc72bf809f71f98cf2e518026ffd1",
+      "train.py": "b7b98a182a4946c479f477b7110e1c4a49be53ee6b6e89ef1b4bc4785374873f",
+      "utils/__init__.py": "a17c6a58fe56069f873f8d22bae35354b4e3fd42b1b2cf330713a41c05a038fd",
+      "utils/ddp_util.py": "e3533ad2c29d166dbfabb486ab942ca999b63d8e8f77eed19ee87f38c7bd0b70",
+      "utils/get_threshold.py": "040adf607c2b62473ed42790e7c33d36305e58341614e3ef87ddbc852cfa0b83"
+    },
+    "initialization": "seed1 from scratch; no classifier checkpoint load",
+    "visits_per_epoch": {
+      "bonafide": 2580,
+      "spoof": 23232
+    },
+    "training_long_samples": 64600,
+    "training_short_samples": 48440,
+    "training_repeat_short_audio": true,
+    "gradient_replay": false,
+    "training_masks": false,
+    "original240_same_epoch_reference": true,
+    "reference_evaluation_phases": {
+      "19LA": 71237,
+      "21LA": 148176,
+      "21DF": 533928
+    },
+    "supersedes_root": "/home/mentee/analysis/ebm_baseline240_mild_e20_20261111_v1",
+    "cache_reused_from_root": "/home/mentee/analysis/ebm_baseline240_mild_e20_20261111_v1",
+    "recovery_reason": "Fix actual entrypoint alias; original GitHub EBM core unchanged",
+    "github_review": "github_source_review.json"
+  },
+  "cache_reused": true,
+  "last_check": {
+    "checked_KST": "2026-11-11T09:38:47.999337+09:00",
+    "stage": "train",
+    "exits": {
+      "unit": 0,
+      "preflight": 0,
+      "train_gpu_smoke": 0
+    },
+    "progress": [
+      {
+        "epoch": 5,
+        "batch": 100,
+        "batches": 108,
+        "values": {
+          "oc": 0.8203837275505066,
+          "bpl": 0.6418371200561523,
+          "loss1": 1.462220847606659,
+          "loss2": 1.354034423828125,
+          "positive_pairs": 144,
+          "optimizer_steps": 2,
+          "center_updates": 1
+        },
+        "updated_unix": 1794355414.7628922,
+        "smoke": false
+      },
+      {
+        "epoch": 5,
+        "batch": 100,
+        "batches": 108,
+        "values": {
+          "oc": 0.7571998238563538,
+          "bpl": 0.7041763067245483,
+          "loss1": 1.461376130580902,
+          "loss2": 1.6357171535491943,
+          "positive_pairs": 144,
+          "optimizer_steps": 2,
+          "center_updates": 1
+        },
+        "updated_unix": 1794355414.7634258,
+        "smoke": false
+      }
+    ],
+    "cache_complete": {
+      "status": "passed",
+      "originals": 25380,
+      "variants": 46580,
+      "policy_sha256": "d42b72f72696c3e68d540579e871d5c69a49ba6e79a75f6910af56286912522b",
+      "cache_index_sha256": "a4eacc80749b72e8c0587da38a5a944c5beeb2c9eb02c6209aa8f6219e9f3d87",
+      "bytes": 10205612268,
+      "seconds": 646.2718415260315,
+      "SoX": "sox:      SoX v14.4.2",
+      "synthetic_pitch_tests": [
+        {
+          "rate": 0.8,
+          "samples": 60000,
+          "peak_Hz": 440.0
+        },
+        {
+          "rate": 0.912345,
+          "samples": 52612,
+          "peak_Hz": 440.05169923211434
+        },
+        {
+          "rate": 1.0,
+          "samples": 48000,
+          "peak_Hz": 440.0
+        },
+        {
+          "rate": 1.12345,
+          "samples": 42726,
+          "peak_Hz": 440.01310677339325
+        },
+        {
+          "rate": 1.2,
+          "samples": 40000,
+          "peak_Hz": 440.0
+        }
+      ],
+      "maximum_crop_fraction": 0.2,
+      "no_manual_output_repeat_pad_trim": true,
+      "all_measured_lengths_equal_policy": true,
+      "optimizer_updates": 0
+    },
+    "preflight": {
+      "status": "passed",
+      "source_files": 62,
+      "archived_source_files": 38,
+      "cached_waveforms_verified": 46580,
+      "worker_processes_checked": 2,
+      "training_long_samples": 64600,
+      "training_short_samples": 48440,
+      "repeat_short_audio": true,
+      "source_fingerprint": "b0a1c954b5adaf51ce5dd01b96b31a01dce9a0c8c57f9fa3419d4aece3f536cb",
+      "original_class_loaders": true,
+      "num_batches_per_epoch": 108,
+      "last_BPL_pairs_per_rank": 36,
+      "normal_BPL_pairs_per_rank": 144,
+      "source_originals": {
+        "bonafide": 2580,
+        "spoof": 22800
+      },
+      "visits_per_epoch": {
+        "bonafide": 2580,
+        "spoof": 23232
+      },
+      "GPU_training_updates": 0,
+      "dev_used": false
+    },
+    "train_gpu_smoke_rank0": {
+      "status": "passed",
+      "logical_steps": 3,
+      "backend_updates": 3,
+      "center_updates": 3,
+      "pair_counts": [
+        144,
+        144,
+        36
+      ],
+      "controlled_evaluation_repeat_equal": true,
+      "center_changed": true,
+      "frontend_versions_unchanged": true
+    },
+    "train_gpu_smoke_rank1": {
+      "status": "passed",
+      "logical_steps": 3,
+      "backend_updates": 3,
+      "center_updates": 3,
+      "pair_counts": [
+        144,
+        144,
+        36
+      ],
+      "controlled_evaluation_repeat_equal": true,
+      "center_changed": true,
+      "frontend_versions_unchanged": true
+    },
+    "queue_process": "",
+    "gpu": "6, 3288, 0\n7, 3288, 0"
+  },
+  "termination_reason": "User explicitly approved stopping failed evaluation-entry job before starting repetition probe",
+  "pipeline_exit": 143,
+  "checkpoint_count": 0,
+  "error": "ModuleNotFoundError: controlled_data_loaders in spawned evaluation workers",
+  "training_restarted": false,
+  "user_stop_record": "user_stop_20261111_0956.json"
+}

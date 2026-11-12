@@ -1,0 +1,92 @@
+[
+  {
+    "path": "experience/01_duration_bias/E084/code/EBM/tests/test_activity_policy.py",
+    "sha256": "127c75b3589afb6bc9b4039874573882c147805216db925c7537a977f9e4c2bd",
+    "origin": "EBM/tests/test_activity_policy.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/01_duration_bias/E084/code/EBM/tests/test_baseline240_mild.py",
+    "sha256": "82d81052736990dd254176fdb79d069c1623b0491f8d0cc67b3d0eeb8272aa72",
+    "origin": "EBM/tests/test_baseline240_mild.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/01_duration_bias/E084/code/EBM/tests/test_conditional_bpl2.py",
+    "sha256": "dbddd91e64c6d3b83225399114052de4940efc49ca520ad7bbc810c286ecef7f",
+    "origin": "EBM/tests/test_conditional_bpl2.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/01_duration_bias/E084/code/EBM/tests/test_intermediate_19la.py",
+    "sha256": "3bfcebe872fc4af9db5383636e9f222609c788d521c6f8cc024ed53e5fee3c01",
+    "origin": "EBM/tests/test_intermediate_19la.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/01_duration_bias/E084/code/EBM/tests/test_mild_duration.py",
+    "sha256": "61a5f6fe64a16f55370177fa561ea356b9588a31a7251eca1546e6ea47ce5bb9",
+    "origin": "EBM/tests/test_mild_duration.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/01_duration_bias/E084/code/EBM/tests/test_paired_evaluation.py",
+    "sha256": "ed487a2c55670227929db951e5f47b10dafaf6dd8c5e68c7c714b0c8a8486a49",
+    "origin": "EBM/tests/test_paired_evaluation.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/01_duration_bias/E084/code/EBM/tests/test_positive_bpl.py",
+    "sha256": "eace03cdf239579d232153f64c0dde88d037b8025842f0d7e8420fe273185601",
+    "origin": "EBM/tests/test_positive_bpl.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/01_duration_bias/E084/code/EBM/tests/test_repetition_shortcut.py",
+    "sha256": "c893275671d0141efd2e22a2fcaba5628a41ccbf09ab651c1a43d89789d19e66",
+    "origin": "EBM/tests/test_repetition_shortcut.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/01_duration_bias/E084/code/EBM/tests/test_role_code_audit.py",
+    "sha256": "c6b2eb57c30ef5026611d83d7aecec7c903d000e346425168b14d1ac3f3bfae6",
+    "origin": "EBM/tests/test_role_code_audit.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/01_duration_bias/E084/code/EBM/tests/test_role_experiment.py",
+    "sha256": "92ba46769834f552cc745aaa05d77cffa9881ec59098eb425f52fd3d2a6dfa67",
+    "origin": "EBM/tests/test_role_experiment.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/01_duration_bias/E084/code/EBM/tests/test_short32_bpl.py",
+    "sha256": "4ea897b584fc1b9d377c3c4686c08676559a4c9c818876ba918edc81904367ec",
+    "origin": "EBM/tests/test_short32_bpl.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/01_duration_bias/E084/code/EBM/tests/test_short32_lifecycle.py",
+    "sha256": "5b3f039376396e68ecdf5e7597b86e0975d874593ec5d8e5da4876edbd3fcd5f",
+    "origin": "EBM/tests/test_short32_lifecycle.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/01_duration_bias/E084/code/EBM/tests/test_short32_runner.py",
+    "sha256": "666ff1ab6df61beb439ef647c5f8854097bed01ee30b50295cf2a84840142be8",
+    "origin": "EBM/tests/test_short32_runner.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/01_duration_bias/E084/code/EBM/tests/test_source_coverage.py",
+    "sha256": "62cacc4d40aba6f9afa88759c6cfb80c99f72e8d20ab6f842f40a3bf6fa21aab",
+    "origin": "EBM/tests/test_source_coverage.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/01_duration_bias/E084/code/EBM/tools/validate_short32.py",
+    "sha256": "8e225456532920a518e6cb28f460f7d830b25d290a1470d546aabe497b50f95d",
+    "origin": "EBM/tools/validate_short32.py",
+    "kind": "implementation / validation source"
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "path": "experience/02_repetition/E013/code/EBM/tools/audit_original_repetition.py",
+    "sha256": "8662588d241a43238c70f66f931bcad703cb671b875e0775fa8349ee680ce46e",
+    "origin": "EBM/tools/audit_original_repetition.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/02_repetition/E013/code/artifacts/padding_analysis_20261030/analyze_padding.py",
+    "sha256": "0eb43a80e201e3a70470e84e14373c105b84b1c28e34b3138f6d29bebf1f7956",
+    "origin": "artifacts/padding_analysis_20261030/analyze_padding.py",
+    "kind": "explicit method source"
+  },
+  {
+    "path": "experience/02_repetition/E013/code/artifacts/spoof_error_audit_20261108/analyze.py",
+    "sha256": "856eab86f187787de3bac8c25d6764140e25f00d57ac59a28f1ff53273267516",
+    "origin": "artifacts/spoof_error_audit_20261108/analyze.py",
+    "kind": "explicit method source"
+  }
+]

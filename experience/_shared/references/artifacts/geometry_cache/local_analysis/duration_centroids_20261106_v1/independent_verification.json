@@ -1,0 +1,83 @@
+{
+  "status": "pass",
+  "verifier_sha256": "6cd1dba05379426c95cf87b56113e94ca280cde34cb6147658300d9717605c16",
+  "checks": [
+    {
+      "dataset": "V",
+      "n": 14983,
+      "methods_verified": 7,
+      "raw_vector_samples": 512,
+      "random_repeats_checked": [
+        0,
+        99,
+        198
+      ]
+    },
+    {
+      "dataset": "DF_pilot",
+      "n": 20000,
+      "methods_verified": 7,
+      "raw_vector_samples": 512,
+      "random_repeats_checked": [
+        0,
+        99,
+        198
+      ]
+    },
+    {
+      "dataset": "DF_full",
+      "n": 533928,
+      "methods_verified": 7,
+      "raw_vector_samples": 512,
+      "random_repeats_checked": [
+        0,
+        99,
+        198
+      ]
+    },
+    {
+      "dataset": "19LA_eval",
+      "n": 71237,
+      "methods_verified": 7,
+      "raw_vector_samples": 512,
+      "random_repeats_checked": [
+        0,
+        99,
+        198
+      ]
+    },
+    {
+      "dataset": "21LA_eval",
+      "n": 148176,
+      "methods_verified": 7,
+      "raw_vector_samples": 512,
+      "random_repeats_checked": [
+        0,
+        99,
+        198
+      ]
+    },
+    {
+      "dataset": "Q",
+      "n": 9861,
+      "methods_verified": 7,
+      "raw_vector_samples": 512,
+      "random_repeats_checked": [
+        0,
+        99,
+        198
+      ]
+    }
+  ],
+  "maximum_errors": {
+    "score_error": 6.661338147750939e-16,
+    "eer_error": 4.884981308350689e-15,
+    "auc_error": 2.220446049250313e-16,
+    "random_error": 1.1102230246251565e-15
+  },
+  "random_controls": 1194,
+  "bootstrap_draws_per_dataset": 10000,
+  "independent_EER_method": "DET crossing",
+  "independent_AUROC_method": "rank sum",
+  "raw_rank_embeddings_reconstructed_by_UID": true
+}

@@ -1,0 +1,61 @@
+{
+  "status": "locked_before_forward",
+  "N": 512,
+  "quota_per_phase_class_length_bin": 16,
+  "phases": [
+    "dev",
+    "19LA",
+    "21LA",
+    "21DF"
+  ],
+  "selection": "UID hash, speaker round robin, metadata minimum/maximum sentinel; no score selection",
+  "selected_sha256": "7711b071a19c3bc5f74de848b8966d737cdcf39263d8d37ebec676c1565dd140",
+  "checkpoints": {
+    "legacy240": {
+      "path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5/model/BestCLS_50_21DF.pt",
+      "bytes": 15053782,
+      "sha256": "84a828eeda71d74212178dc2c2f02e72f8bb79b3573354f6cd9ca181a376d19e"
+    },
+    "B": {
+      "path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_B_zeropad_short303/model/CLS_50.pt",
+      "bytes": 15045708,
+      "sha256": "63ed02a1baef97efa9c8b701814dcccebf3360d441782abe9688d8edb3cdf457",
+      "TrainState_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_B_zeropad_short303/model/TrainState_50.pt",
+      "TrainState_sha256": "3b1fe8ac2ec67e680ac582365e40cd6f34451a42484858f847f55e41a1b1cba0"
+    },
+    "C": {
+      "path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_C_nativeLong_short303/model/CLS_50.pt",
+      "bytes": 15045708,
+      "sha256": "dcf7e141a35eb2d19adfa8a1ec36bf89d9a557c5b8ece4344939809c1aa1fa3d",
+      "TrainState_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_C_nativeLong_short303/model/TrainState_50.pt",
+      "TrainState_sha256": "6dc0d45cf402d1cb00a2085d7c9c98f2891df5c610344b9e8b59a641b57d0d20"
+    }
+  },
+  "target_samples": 64600,
+  "conditions": [
+    "native_cap",
+    "full_native",
+    "slow_cap",
+    "fast_cap",
+    "norm_full4",
+    "roundtrip_cap"
+  ],
+  "fixed_rates": {
+    "slow_cap": 0.8,
+    "fast_cap": 1.25
+  },
+  "noise_std": 0.0,
+  "dev_thresholds": {
+    "legacy240": 0.9927266836166382,
+    "B": -0.8357445001602173,
+    "C": -0.8292239904403687
+  },
+  "limitations": [
+    "Balanced diagnostic sample is not representative benchmark EER",
+    "Fixed dev thresholds come from full native-cap dev with pooling noise1e-5; probe noise0",
+    "Slow/fast share exact cap content; full normalization uses full content",
+    "Time-stretch changes DSP artifacts as well as timing",
+    "No training, optimizer, raw audio export, hidden-state export or checkpoint export"
+  ],
+  "remote_root": "/home/mentee/analysis/ebm_speed_duration_probe_20261109_v1"
+}

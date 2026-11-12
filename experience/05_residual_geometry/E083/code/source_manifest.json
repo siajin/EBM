@@ -1,0 +1,14 @@
+[
+  {
+    "path": "experience/05_residual_geometry/E083/code/artifacts/geometry_experiments/centroid_centered_maps.py",
+    "sha256": "4e62ab16d69b3628363d1a0b41758d68dee81c40d4d77cd3ec09a405d18fbc01",
+    "origin": "artifacts/geometry_experiments/centroid_centered_maps.py",
+    "kind": "explicit method source"
+  },
+  {
+    "path": "experience/05_residual_geometry/E083/code/artifacts/geometry_experiments/plot_author_embedding_distribution.py",
+    "sha256": "1125e13e86409e8dd9f1b58c94e3d5fde31e16391816f845cc6e957337d31d53",
+    "origin": "artifacts/geometry_experiments/plot_author_embedding_distribution.py",
+    "kind": "implementation / validation source"
+  }
+]

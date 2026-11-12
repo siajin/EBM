@@ -1,0 +1,20 @@
+[
+  {
+    "path": "experience/01_duration_bias/E097/code/leading_quiet_paired_21df.py",
+    "sha256": "683a0fba75d6c785619f7ccb06f64e0784c7f7b717f525489d4aad6c6fe24558",
+    "origin": "artifacts/github_archive_20261112/remote_source/historical_analysis/leading_quiet_paired_21df.py",
+    "kind": "actual historical analysis source"
+  },
+  {
+    "path": "experience/01_duration_bias/E097/code/leading_quiet_shift_tables.py",
+    "sha256": "2514d8150cb4fa772e774f333f1847c350b844931e53fba8f24b57524aa923b2",
+    "origin": "artifacts/github_archive_20261112/remote_source/historical_analysis/leading_quiet_shift_tables.py",
+    "kind": "actual historical analysis source"
+  },
+  {
+    "path": "experience/01_duration_bias/E097/code/leading_quiet_tail_followup.py",
+    "sha256": "05b6c812a9210592eb824da5eca85487add255205167f3a3060913daa647adc8",
+    "origin": "artifacts/github_archive_20261112/remote_source/historical_analysis/leading_quiet_tail_followup.py",
+    "kind": "actual historical analysis source"
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "status": "pass",
+  "controlled_pair_files_checked": 24,
+  "total_pair_rows_checked_across_nonindependent_settings": 6983,
+  "max_response_arithmetic_error": 0.0,
+  "maximum_counts_agree_with_unweighted_v1": true,
+  "all_v2_native_score_gap_objectives_no_worse_than_v1": true,
+  "exhaustive_small_solver_cases": 50,
+  "inputs_unchanged": true,
+  "new_forward": false,
+  "new_model_fit": false,
+  "script_sha256": "0e0332d16e90b570f0730e2bd9e341229e466879d329a763b2fb2f4d5ba2ac8f",
+  "missing_forward_endpoints_for_selected_strict_pairs": 1122,
+  "limits": [
+    "no uncertainty intervals or response-effect significance claimed",
+    "original-family mapping unresolved",
+    "missing endpoint count is for fixed pair lists, not a minimum-inference-cost optimization"
+  ]
+}

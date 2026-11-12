@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "logical_steps": 3,
+  "backend_updates": 3,
+  "center_updates": 3,
+  "frozen_frontend": true,
+  "lifecycle_status": "complete",
+  "result_directory": "/home/mentee/analysis/ebm_short32_original240_e50_20261111_v2/smoke_results/CM/LA/EBM_e50_bs240_lr1e5_original240_OC_BPL43_short32_LE2_20261111_v2_gpu_smoke"
+}

@@ -1,0 +1,37 @@
+{
+  "sources": [
+    {
+      "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_fast_p0_01\\686e593443178bb8\\extract\\scores.parquet",
+      "sha256": "66a58119b774c089829deb36b4a135e9b5e91d9d18e6e1e09809f20100179598"
+    },
+    {
+      "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\Q\\c288fb7a7ab48dd3\\extract\\scores.parquet",
+      "sha256": "3c20ea01e4c91fcf046f81199b2b1d8a4337296b45c1e1eb5099763d3935971e"
+    },
+    {
+      "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\19LA_eval\\4b8955da49f12316\\extract\\scores.parquet",
+      "sha256": "badece9d259010576e48be7fdc3ef18fe187cfda532efabcca5f9aaaa645f317"
+    },
+    {
+      "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_21la_full_03\\4110118cb92e35c1\\extract\\scores.parquet",
+      "sha256": "96a86f82f705b73f5198a2bf1686491d4c2615052cf0cdc8d94cbe9e27f04cab"
+    },
+    {
+      "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_df_fast_01\\1b0a7488e72f4ec2\\extract\\scores.parquet",
+      "sha256": "f3fa30b26c232968b4203f8bbbb8fcbd3d0b45364fa14564a6e8198d7ca77a50"
+    },
+    {
+      "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\DF_remaining\\096bc3b970f33181\\extract\\scores.parquet",
+      "sha256": "71a760eb99941082b5fbcdb5a80f27839692cb68b5df00cab76ee1788a23291a"
+    }
+  ],
+  "checks": [
+    "Source SHA256 matches prior validated cache",
+    "Unique IDs in each dataset",
+    "Expected class counts",
+    "Positive finite durations",
+    "Histogram bin totals equal exact under-2s counts"
+  ],
+  "scope": "Original full-utterance durations; official eval only for 2021; no audio processing",
+  "bins": "[0,2) in 0.05-second bins; class-wide denominator"
+}

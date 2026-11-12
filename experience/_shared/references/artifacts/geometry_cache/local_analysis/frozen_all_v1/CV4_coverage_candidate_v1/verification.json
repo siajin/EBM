@@ -1,0 +1,25 @@
+{
+  "status": "metadata_candidate_pass",
+  "outer_seed": 13,
+  "inner_seeds": [
+    14,
+    12,
+    18,
+    17
+  ],
+  "outer_seeds_tried": 3,
+  "source_class_cells": [
+    "asvspoof::0",
+    "asvspoof::1",
+    "vcc2018::0",
+    "vcc2018::1",
+    "vcc2020::0",
+    "vcc2020::1"
+  ],
+  "fits_launched": false,
+  "original_run_changed": false,
+  "manifest_sha256": "377ff48410b12d18e48934225be98f2f75897d80a354b210fc1035c226db8db8",
+  "split_pairs_checked": 16,
+  "partitions_checked": 32,
+  "all_partitions_cover_all6source_class_cells": true
+}

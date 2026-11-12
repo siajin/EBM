@@ -1,0 +1,42 @@
+{
+  "0.5": {
+    "1": {
+      "expected_le_percent": 0.0,
+      "replayed20_le_percent": 0.0
+    },
+    "0": {
+      "expected_le_percent": 0.0,
+      "replayed20_le_percent": 0.0
+    }
+  },
+  "1.0": {
+    "1": {
+      "expected_le_percent": 0.07894736842105261,
+      "replayed20_le_percent": 0.07716049382716049
+    },
+    "0": {
+      "expected_le_percent": 0.10526315789473684,
+      "replayed20_le_percent": 0.10588134430727023
+    }
+  },
+  "1.5": {
+    "1": {
+      "expected_le_percent": 1.5891472868217058,
+      "replayed20_le_percent": 1.5933641975308641
+    },
+    "0": {
+      "expected_le_percent": 1.6154630762953897,
+      "replayed20_le_percent": 1.6171553497942388
+    }
+  },
+  "2.0": {
+    "1": {
+      "expected_le_percent": 8.912280701754387,
+      "replayed20_le_percent": 8.91010802469136
+    },
+    "0": {
+      "expected_le_percent": 8.93859649122807,
+      "replayed20_le_percent": 8.94804526748971
+    }
+  }
+}

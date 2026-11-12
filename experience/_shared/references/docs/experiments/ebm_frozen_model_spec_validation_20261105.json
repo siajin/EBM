@@ -1,0 +1,472 @@
+{
+  "status": "pass",
+  "UTC": "2026-11-05T09:40:36.058235+00:00",
+  "scope": "synthetic CPU mathematics, gradient paths, metadata sample locks and document/protocol consistency only",
+  "torch_version": "2.13.0+cpu",
+  "dtype": "float64",
+  "device": "cpu",
+  "seed": 1153,
+  "real_embedding_training": false,
+  "audio_inference": false,
+  "original_model_loaded": false,
+  "original_model_changed": false,
+  "source_hashes": {
+    "docs/experiments/ebm_frozen_model_experiments_20261105.md": "a5d51cbf9e2222e9d1e2aa2dc097af5d4daa135b74865ba5cde05df6bc76172d",
+    "docs/experiments/ebm_frozen_model_protocol_20261105.json": "6cf4c3c6efb58856908a48cced1ef46e893a87ef85ee98b3a0ab6740b7d71a76",
+    "docs/experiments/ebm_frozen_structure_audit_20261105.json": "c48746ac92f86278842f7823039ad7a656a5e99d21b7e407d7d4e95b6fac900d",
+    "docs/experiments/verify_frozen_model_spec.py": "b895d91e4d8d55517004361b9fd225de3ba9806af5b400f17cd22954bead1bbf",
+    "artifacts/geometry_cache/local_analysis/cached_core_v1/output_audit.json": "bc25bbf7ac5036bba4458f0ff7fbc8b7f4b8005d6e6e28bc18bbac15d704dd54",
+    "artifacts/geometry_cache/analysis_manifests/frozen_data_sizes_v1/lock.json": "83a2ac24785b6598ecb8f373bc64e3ba2493b94a596a27d2e0a852c0edf3b09e"
+  },
+  "check_count": 86,
+  "checks": [
+    {
+      "name": "class_weight_reduction_16B_144S",
+      "status": "pass",
+      "maximum_absolute_error": 1.7763568394002505e-15,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "static_parameter_count",
+      "status": "pass",
+      "count": 160
+    },
+    {
+      "name": "static_identity_vectors",
+      "status": "pass",
+      "maximum_absolute_error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "static_identity_score",
+      "status": "pass",
+      "maximum_absolute_error": 5.551115123125783e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "static_optimizer_isolation",
+      "status": "pass"
+    },
+    {
+      "name": "static_bounded_transform",
+      "status": "pass",
+      "maximum_L2_change": 0.49807339149718405,
+      "minimum_output_norm": 0.9224563158473872
+    },
+    {
+      "name": "dynamic_parameter_count",
+      "status": "pass",
+      "count": 5296
+    },
+    {
+      "name": "dynamic_identity_vectors",
+      "status": "pass",
+      "maximum_absolute_error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "dynamic_identity_score",
+      "status": "pass",
+      "maximum_absolute_error": 5.551115123125783e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "dynamic_optimizer_isolation",
+      "status": "pass"
+    },
+    {
+      "name": "dynamic_first_step_gradient",
+      "status": "pass",
+      "first_weight_gradient_norm": 0.0,
+      "last_weight_gradient_norm": 0.01369926051102664
+    },
+    {
+      "name": "dynamic_second_step_gradient",
+      "status": "pass",
+      "first_weight_gradient_norm": 5.0860278554303825e-06
+    },
+    {
+      "name": "dynamic_bounded_transform",
+      "status": "pass",
+      "maximum_L2_change": 0.5000000000000001,
+      "minimum_output_norm": 1.0026237060230443
+    },
+    {
+      "name": "MLP_parameter_count",
+      "status": "pass",
+      "count": 5296
+    },
+    {
+      "name": "MLP_identity_vectors",
+      "status": "pass",
+      "maximum_absolute_error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "MLP_identity_score",
+      "status": "pass",
+      "maximum_absolute_error": 5.551115123125783e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "MLP_optimizer_isolation",
+      "status": "pass"
+    },
+    {
+      "name": "MLP_first_step_gradient",
+      "status": "pass",
+      "first_weight_gradient_norm": 0.0,
+      "last_weight_gradient_norm": 0.015256749163806578
+    },
+    {
+      "name": "MLP_second_step_gradient",
+      "status": "pass",
+      "first_weight_gradient_norm": 9.713726791255239e-06
+    },
+    {
+      "name": "MLP_bounded_transform",
+      "status": "pass",
+      "maximum_L2_change": 0.5000000000000001,
+      "minimum_output_norm": 1.0386117578133858
+    },
+    {
+      "name": "original_parameters_unchanged",
+      "status": "pass"
+    },
+    {
+      "name": "normalized_Euclidean_equals_cosine",
+      "status": "pass",
+      "maximum_absolute_error": 4.0245584642661925e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "metric_identity",
+      "status": "pass",
+      "maximum_absolute_error": 4.0245584642661925e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "metric_parameter_count",
+      "status": "pass",
+      "count": 160
+    },
+    {
+      "name": "metric_nonzero_gradient",
+      "status": "pass"
+    },
+    {
+      "name": "metric_positive_trace_condition",
+      "status": "pass",
+      "trace": 159.99999999999997,
+      "condition_ratio": 54.59815003314423
+    },
+    {
+      "name": "metric_can_be_less_than_minus_one",
+      "status": "pass",
+      "synthetic_score": -80.79568874282943
+    },
+    {
+      "name": "full_mask_native",
+      "status": "pass",
+      "maximum_absolute_error": 8.326672684688674e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "mask_8_positive_scaling",
+      "status": "pass",
+      "maximum_absolute_error": 2.7755575615628914e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "mask_8_ranking",
+      "status": "pass"
+    },
+    {
+      "name": "mask_16_positive_scaling",
+      "status": "pass",
+      "maximum_absolute_error": 4.163336342344337e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "mask_16_ranking",
+      "status": "pass"
+    },
+    {
+      "name": "mask_40_positive_scaling",
+      "status": "pass",
+      "maximum_absolute_error": 5.551115123125783e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "mask_40_ranking",
+      "status": "pass"
+    },
+    {
+      "name": "mask_80_positive_scaling",
+      "status": "pass",
+      "maximum_absolute_error": 5.551115123125783e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "mask_80_ranking",
+      "status": "pass"
+    },
+    {
+      "name": "rotation_0.3_score",
+      "status": "pass",
+      "maximum_absolute_error": 1.1102230246251565e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "rotation_0.3_weighted_OC",
+      "status": "pass",
+      "maximum_absolute_error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "rotation_1.0_score",
+      "status": "pass",
+      "maximum_absolute_error": 1.1102230246251565e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "rotation_1.0_weighted_OC",
+      "status": "pass",
+      "maximum_absolute_error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "rotation_2.0_score",
+      "status": "pass",
+      "maximum_absolute_error": 1.1102230246251565e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "rotation_2.0_weighted_OC",
+      "status": "pass",
+      "maximum_absolute_error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "azimuth_directional_derivative",
+      "status": "pass",
+      "maximum_absolute_error": 2.0816681711721685e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "joint_basis_rotation_native",
+      "status": "pass",
+      "maximum_absolute_error": 1.5265566588595902e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "LayerNorm_shift_invariance",
+      "status": "pass",
+      "maximum_absolute_error": 4.063416270128073e-14,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "LayerNorm_scaling_not_exact_with_epsilon",
+      "status": "pass",
+      "near_epsilon_scale_difference": 1.1804045935355516
+    },
+    {
+      "name": "ASP_weighted_features_std_differs_from_weighted_variance",
+      "status": "pass",
+      "noise_disabled_to_isolate_formula": true,
+      "maximum_std_difference": 1.0052022511735903
+    },
+    {
+      "name": "positive_calibration_rank_preservation",
+      "status": "pass"
+    },
+    {
+      "name": "reference_hash_consistency",
+      "status": "pass"
+    },
+    {
+      "name": "training_class_weights_and_length",
+      "status": "pass"
+    },
+    {
+      "name": "F1_condition_count",
+      "status": "pass"
+    },
+    {
+      "name": "reused_diagnostic_audited",
+      "status": "pass"
+    },
+    {
+      "name": "equal_primary_evaluation_sizes",
+      "status": "pass"
+    },
+    {
+      "name": "T_V_training_sizes_preserved",
+      "status": "pass"
+    },
+    {
+      "name": "sample_selection_metadata_only",
+      "status": "pass"
+    },
+    {
+      "name": "sample_source_fingerprints",
+      "status": "pass"
+    },
+    {
+      "name": "21LA_pilot_locked_hash",
+      "status": "pass"
+    },
+    {
+      "name": "21LA_pilot_counts_IDs_and_no_scores",
+      "status": "pass"
+    },
+    {
+      "name": "21LA_small_locked_hash",
+      "status": "pass"
+    },
+    {
+      "name": "21LA_small_counts_IDs_and_no_scores",
+      "status": "pass"
+    },
+    {
+      "name": "DF_small_locked_hash",
+      "status": "pass"
+    },
+    {
+      "name": "DF_small_counts_IDs_and_no_scores",
+      "status": "pass"
+    },
+    {
+      "name": "small_LA_nested_in_pilot",
+      "status": "pass"
+    },
+    {
+      "name": "within_dataset_CV_separate",
+      "status": "pass"
+    },
+    {
+      "name": "LA_default_vs_full_supplement",
+      "status": "pass"
+    },
+    {
+      "name": "broad_spec_count_policy_matches",
+      "status": "pass"
+    },
+    {
+      "name": "document_link_0",
+      "status": "pass",
+      "relative_target": "ebm_frozen_structure_audit_20261105.json",
+      "generated_validation_output": false
+    },
+    {
+      "name": "document_link_1",
+      "status": "pass",
+      "relative_target": "ebm_frozen_model_protocol_20261105.json",
+      "generated_validation_output": false
+    },
+    {
+      "name": "document_link_2",
+      "status": "pass",
+      "relative_target": "ebm_embedding_geometry_spec_20261105.md",
+      "generated_validation_output": false
+    },
+    {
+      "name": "document_link_3",
+      "status": "pass",
+      "relative_target": "../../artifacts/geometry_experiments/README.md",
+      "generated_validation_output": false
+    },
+    {
+      "name": "document_link_4",
+      "status": "pass",
+      "relative_target": "../../MENTEE_SERVER.md",
+      "generated_validation_output": false
+    },
+    {
+      "name": "document_link_5",
+      "status": "pass",
+      "relative_target": "ebm_cached_core_results_20261105.md",
+      "generated_validation_output": false
+    },
+    {
+      "name": "document_link_6",
+      "status": "pass",
+      "relative_target": "21la_cache_20261105.md",
+      "generated_validation_output": false
+    },
+    {
+      "name": "document_link_7",
+      "status": "pass",
+      "relative_target": "ebm_frozen_all_results_20261105.md",
+      "generated_validation_output": false
+    },
+    {
+      "name": "document_link_8",
+      "status": "pass",
+      "relative_target": "../../artifacts/geometry_experiments/lock_analysis_sample_sizes.py",
+      "generated_validation_output": false
+    },
+    {
+      "name": "document_link_9",
+      "status": "pass",
+      "relative_target": "../../artifacts/geometry_cache/analysis_manifests/frozen_data_sizes_v1/lock.json",
+      "generated_validation_output": false
+    },
+    {
+      "name": "document_link_10",
+      "status": "pass",
+      "relative_target": "ebm_frozen_all_results_20261105.md",
+      "generated_validation_output": false
+    },
+    {
+      "name": "document_link_11",
+      "status": "pass",
+      "relative_target": "../../artifacts/geometry_cache/local_analysis/cached_core_v1/output_audit.json",
+      "generated_validation_output": false
+    },
+    {
+      "name": "document_link_12",
+      "status": "pass",
+      "relative_target": "ebm_condition_audit_20261105.md",
+      "generated_validation_output": false
+    },
+    {
+      "name": "document_link_13",
+      "status": "pass",
+      "relative_target": "../../artifacts/geometry_experiments/cached_core_diagnostics.py",
+      "generated_validation_output": false
+    },
+    {
+      "name": "document_link_14",
+      "status": "pass",
+      "relative_target": "../../artifacts/geometry_cache/local_analysis/frozen_runtime_profile_v1.json",
+      "generated_validation_output": false
+    },
+    {
+      "name": "document_link_15",
+      "status": "pass",
+      "relative_target": "ebm_frozen_structure_audit_20261105.json",
+      "generated_validation_output": false
+    },
+    {
+      "name": "document_link_16",
+      "status": "pass",
+      "relative_target": "verify_frozen_model_spec.py",
+      "generated_validation_output": false
+    },
+    {
+      "name": "document_link_17",
+      "status": "pass",
+      "relative_target": "ebm_frozen_model_spec_validation_20261105.json",
+      "generated_validation_output": true
+    },
+    {
+      "name": "markdown_fences_balanced",
+      "status": "pass"
+    },
+    {
+      "name": "document_key_contracts",
+      "status": "pass"
+    }
+  ]
+}

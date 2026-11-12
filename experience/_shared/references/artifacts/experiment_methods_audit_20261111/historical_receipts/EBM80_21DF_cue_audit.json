@@ -1,0 +1,1507 @@
+{
+  "remote_root": "/home/mentee/results/analysis/EBM80_21DF_cue_audit",
+  "file_inventory": [
+    {
+      "name": "cue_features_private.csv",
+      "bytes": 2218412,
+      "directory": false
+    },
+    {
+      "name": "cue_transfer_reviewed.png",
+      "bytes": 208734,
+      "directory": false
+    },
+    {
+      "name": "cue_transfer.png",
+      "bytes": 189901,
+      "directory": false
+    },
+    {
+      "name": "followup_summary.json",
+      "bytes": 5028,
+      "directory": false
+    },
+    {
+      "name": "summary.json",
+      "bytes": 41590,
+      "directory": false
+    },
+    {
+      "name": "verification.json",
+      "bytes": 1319,
+      "directory": false
+    },
+    {
+      "name": "cue_transfer_reviewed.pdf",
+      "bytes": 26989,
+      "directory": false
+    },
+    {
+      "name": "sample_manifest.json",
+      "bytes": 1392633,
+      "directory": false
+    },
+    {
+      "name": "interpretation_ko_20261030.md",
+      "bytes": 10992,
+      "directory": false
+    },
+    {
+      "name": "cue_predictions.npz",
+      "bytes": 147113,
+      "directory": false
+    },
+    {
+      "name": "cue_transfer.pdf",
+      "bytes": 22290,
+      "directory": false
+    }
+  ],
+  "aggregate_json": {
+    "followup_summary.json": {
+      "bootstrap": {
+        "asvspoof": {
+          "silence_timing": {
+            "auc": 0.8430414746543778,
+            "speaker_cluster_bootstrap_95pct": [
+              0.7829656888994526,
+              0.8974632740445143
+            ],
+            "speaker_groups": 60,
+            "bona_n": 525,
+            "spoof_n": 124
+          },
+          "silence_and_energy": {
+            "auc": 0.8230721966205837,
+            "speaker_cluster_bootstrap_95pct": [
+              0.7757771442632008,
+              0.8653846538215543
+            ],
+            "speaker_groups": 60,
+            "bona_n": 525,
+            "spoof_n": 124
+          }
+        },
+        "vcc2018": {
+          "silence_timing": {
+            "auc": 0.43731035600954293,
+            "speaker_cluster_bootstrap_95pct": [
+              0.3439769785427374,
+              0.5248475581495885
+            ],
+            "speaker_groups": 12,
+            "bona_n": 246,
+            "spoof_n": 351
+          },
+          "silence_and_energy": {
+            "auc": 0.5833970305515022,
+            "speaker_cluster_bootstrap_95pct": [
+              0.5189332370249574,
+              0.6452030743628715
+            ],
+            "speaker_groups": 12,
+            "bona_n": 246,
+            "spoof_n": 351
+          }
+        },
+        "vcc2020": {
+          "silence_timing": {
+            "auc": 0.5596464961530464,
+            "speaker_cluster_bootstrap_95pct": [
+              0.4895716713459899,
+              0.6522256997382323
+            ],
+            "speaker_groups": 14,
+            "bona_n": 229,
+            "spoof_n": 525
+          },
+          "silence_and_energy": {
+            "auc": 0.6505385735080059,
+            "speaker_cluster_bootstrap_95pct": [
+              0.6071867148780808,
+              0.688785245743789
+            ],
+            "speaker_groups": 14,
+            "bona_n": 229,
+            "spoof_n": 525
+          }
+        }
+      },
+      "partial_spearman": {
+        "asvspoof": {
+          "leading_s": 0.048246696354315145,
+          "low_energy_fraction": -0.02942010259343787,
+          "rms_dbfs": -0.029318978923473012,
+          "low_rms_q10_dbfs": -0.026751476459383597,
+          "repeat_peak_corr": -0.07496552458755623
+        },
+        "vcc2018": {
+          "leading_s": 0.41851445660940195,
+          "low_energy_fraction": 0.24610191343671917,
+          "rms_dbfs": -0.15650977613848854,
+          "low_rms_q10_dbfs": -0.33176038793930296,
+          "repeat_peak_corr": -0.10153749457367572
+        },
+        "vcc2020": {
+          "leading_s": 0.5406819348557598,
+          "low_energy_fraction": 0.20886668753120466,
+          "rms_dbfs": -0.032065037092885273,
+          "low_rms_q10_dbfs": -0.35944902270120305,
+          "repeat_peak_corr": 0.05934099254878368
+        }
+      },
+      "feature_medians": {
+        "19LA_train": {
+          "0": {
+            "leading_s": 0.48,
+            "trailing_s": 0.0375,
+            "low_energy_fraction": 0.5099009900990099,
+            "rms_dbfs": -18.35762320672137,
+            "log_duration": 1.1717949242812415
+          },
+          "1": {
+            "leading_s": 1.0,
+            "trailing_s": 0.2775,
+            "low_energy_fraction": 0.6287128712871287,
+            "rms_dbfs": -19.052530994234097,
+            "log_duration": 1.188100629760691
+          }
+        },
+        "19LA_dev": {
+          "0": {
+            "leading_s": 0.48,
+            "trailing_s": 0.0175,
+            "low_energy_fraction": 0.504950495049505,
+            "rms_dbfs": -18.132781591111073,
+            "log_duration": 1.1877098434023683
+          },
+          "1": {
+            "leading_s": 1.08,
+            "trailing_s": 0.3375,
+            "low_energy_fraction": 0.6435643564356436,
+            "rms_dbfs": -18.865322814325186,
+            "log_duration": 1.2267306195732093
+          }
+        },
+        "21DF_asvspoof": {
+          "0": {
+            "leading_s": 0.06,
+            "trailing_s": 0.0,
+            "low_energy_fraction": 0.3712871287128713,
+            "rms_dbfs": -17.170837855903237,
+            "log_duration": 0.8445443331903663
+          },
+          "1": {
+            "leading_s": 1.02,
+            "trailing_s": 0.1375,
+            "low_energy_fraction": 0.6584158415841584,
+            "rms_dbfs": -19.727524695472816,
+            "log_duration": 1.170622824644382
+          }
+        },
+        "21DF_vcc2018": {
+          "0": {
+            "leading_s": 0.22,
+            "trailing_s": 0.0175,
+            "low_energy_fraction": 0.4158415841584158,
+            "rms_dbfs": -17.905948352683982,
+            "log_duration": 1.0726318680421494
+          },
+          "1": {
+            "leading_s": 0.22,
+            "trailing_s": 0.0,
+            "low_energy_fraction": 0.3811881188118812,
+            "rms_dbfs": -16.879362955956996,
+            "log_duration": 1.1429481024881614
+          }
+        },
+        "21DF_vcc2020": {
+          "0": {
+            "leading_s": 0.16,
+            "trailing_s": 0.0,
+            "low_energy_fraction": 0.4108910891089108,
+            "rms_dbfs": -17.185656029877777,
+            "log_duration": 1.0577902941478543
+          },
+          "1": {
+            "leading_s": 0.22,
+            "trailing_s": 0.0175,
+            "low_energy_fraction": 0.4108910891089108,
+            "rms_dbfs": -16.816675461754627,
+            "log_duration": 1.2691283225816323
+          }
+        }
+      },
+      "limitations": [
+        "Bootstrap resamples speaker groups within source; it does not cover new unseen sources, different sampling or model training uncertainty.",
+        "Partial Spearman adjusts for rank duration and observed speaker IDs only; residual associations remain non-causal."
+      ]
+    },
+    "summary.json": {
+      "sample_counts": {
+        "21df": {
+          "0": 1000,
+          "1": 1000
+        },
+        "dev": {
+          "0": 1000,
+          "1": 1000
+        },
+        "train": {
+          "0": 1000,
+          "1": 1000
+        }
+      },
+      "speaker_overlap_train_dev": 0,
+      "speaker_overlap_train_21df": 0,
+      "models": {
+        "length_and_pipeline": {
+          "features": [
+            "log_duration",
+            "padding_fraction",
+            "wrap_seam_over_rms"
+          ],
+          "dev_threshold": 0.5013573029440874,
+          "train_resubstitution": {
+            "n": 2000,
+            "bona_n": 1000,
+            "spoof_n": 1000,
+            "auc": 0.5959625,
+            "sample_eer_pct": 43.00000000000001,
+            "bona_reject_at_dev_threshold_pct": 44.9,
+            "spoof_accept_at_dev_threshold_pct": 41.4
+          },
+          "19LA_dev": {
+            "n": 2000,
+            "bona_n": 1000,
+            "spoof_n": 1000,
+            "auc": 0.59954,
+            "sample_eer_pct": 44.599999999999994,
+            "bona_reject_at_dev_threshold_pct": 44.6,
+            "spoof_accept_at_dev_threshold_pct": 44.6
+          },
+          "21DF_all": {
+            "n": 2000,
+            "bona_n": 1000,
+            "spoof_n": 1000,
+            "auc": 0.583095,
+            "sample_eer_pct": 43.300000000000004,
+            "bona_reject_at_dev_threshold_pct": 51.800000000000004,
+            "spoof_accept_at_dev_threshold_pct": 37.1
+          },
+          "21DF_asvspoof": {
+            "n": 649,
+            "bona_n": 525,
+            "spoof_n": 124,
+            "auc": 0.7398847926267281,
+            "sample_eer_pct": 31.451612903225808,
+            "bona_reject_at_dev_threshold_pct": 48.0,
+            "spoof_accept_at_dev_threshold_pct": 20.161290322580644
+          },
+          "21DF_vcc2018": {
+            "n": 597,
+            "bona_n": 246,
+            "spoof_n": 351,
+            "auc": 0.5092940031964422,
+            "sample_eer_pct": 48.78048780487805,
+            "bona_reject_at_dev_threshold_pct": 59.34959349593496,
+            "spoof_accept_at_dev_threshold_pct": 36.46723646723647
+          },
+          "21DF_vcc2020": {
+            "n": 754,
+            "bona_n": 229,
+            "spoof_n": 525,
+            "auc": 0.5447369515491787,
+            "sample_eer_pct": 47.59825327510917,
+            "bona_reject_at_dev_threshold_pct": 52.40174672489083,
+            "spoof_accept_at_dev_threshold_pct": 41.523809523809526
+          },
+          "standardized_logistic_coefficients": {
+            "log_duration": -0.6714920471726533,
+            "padding_fraction": -0.8547529352410776,
+            "wrap_seam_over_rms": 0.09248081681820733
+          }
+        },
+        "silence_timing": {
+          "features": [
+            "low_energy_fraction",
+            "leading_s",
+            "trailing_s"
+          ],
+          "dev_threshold": 0.5729856555615064,
+          "train_resubstitution": {
+            "n": 2000,
+            "bona_n": 1000,
+            "spoof_n": 1000,
+            "auc": 0.7275595,
+            "sample_eer_pct": 34.9,
+            "bona_reject_at_dev_threshold_pct": 43.8,
+            "spoof_accept_at_dev_threshold_pct": 31.1
+          },
+          "19LA_dev": {
+            "n": 2000,
+            "bona_n": 1000,
+            "spoof_n": 1000,
+            "auc": 0.7481749999999999,
+            "sample_eer_pct": 33.0,
+            "bona_reject_at_dev_threshold_pct": 33.0,
+            "spoof_accept_at_dev_threshold_pct": 33.0
+          },
+          "21DF_all": {
+            "n": 2000,
+            "bona_n": 1000,
+            "spoof_n": 1000,
+            "auc": 0.7492205000000001,
+            "sample_eer_pct": 32.9,
+            "bona_reject_at_dev_threshold_pct": 63.6,
+            "spoof_accept_at_dev_threshold_pct": 2.4
+          },
+          "21DF_asvspoof": {
+            "n": 649,
+            "bona_n": 525,
+            "spoof_n": 124,
+            "auc": 0.8430414746543778,
+            "sample_eer_pct": 20.161290322580644,
+            "bona_reject_at_dev_threshold_pct": 33.14285714285714,
+            "spoof_accept_at_dev_threshold_pct": 16.93548387096774
+          },
+          "21DF_vcc2018": {
+            "n": 597,
+            "bona_n": 246,
+            "spoof_n": 351,
+            "auc": 0.43731035600954293,
+            "sample_eer_pct": 54.131054131054135,
+            "bona_reject_at_dev_threshold_pct": 99.59349593495935,
+            "spoof_accept_at_dev_threshold_pct": 0.5698005698005698
+          },
+          "21DF_vcc2020": {
+            "n": 754,
+            "bona_n": 229,
+            "spoof_n": 525,
+            "auc": 0.5596464961530464,
+            "sample_eer_pct": 46.724890829694324,
+            "bona_reject_at_dev_threshold_pct": 94.75982532751091,
+            "spoof_accept_at_dev_threshold_pct": 0.19047619047619047
+          },
+          "standardized_logistic_coefficients": {
+            "low_energy_fraction": 0.6663740583980465,
+            "leading_s": 0.47551978507214365,
+            "trailing_s": -0.003112337280078436
+          }
+        },
+        "energy_floor": {
+          "features": [
+            "rms_dbfs",
+            "peak_dbfs",
+            "low_rms_q10_dbfs",
+            "zero_fraction",
+            "dc_over_rms",
+            "crest_db"
+          ],
+          "dev_threshold": 0.5358580104797617,
+          "train_resubstitution": {
+            "n": 2000,
+            "bona_n": 1000,
+            "spoof_n": 1000,
+            "auc": 0.7040770000000001,
+            "sample_eer_pct": 35.4,
+            "bona_reject_at_dev_threshold_pct": 32.1,
+            "spoof_accept_at_dev_threshold_pct": 37.7
+          },
+          "19LA_dev": {
+            "n": 2000,
+            "bona_n": 1000,
+            "spoof_n": 1000,
+            "auc": 0.737202,
+            "sample_eer_pct": 33.8,
+            "bona_reject_at_dev_threshold_pct": 33.800000000000004,
+            "spoof_accept_at_dev_threshold_pct": 33.800000000000004
+          },
+          "21DF_all": {
+            "n": 2000,
+            "bona_n": 1000,
+            "spoof_n": 1000,
+            "auc": 0.607895,
+            "sample_eer_pct": 42.00000000000001,
+            "bona_reject_at_dev_threshold_pct": 85.5,
+            "spoof_accept_at_dev_threshold_pct": 8.4
+          },
+          "21DF_asvspoof": {
+            "n": 649,
+            "bona_n": 525,
+            "spoof_n": 124,
+            "auc": 0.6988018433179723,
+            "sample_eer_pct": 33.87096774193548,
+            "bona_reject_at_dev_threshold_pct": 79.80952380952381,
+            "spoof_accept_at_dev_threshold_pct": 8.064516129032258
+          },
+          "21DF_vcc2018": {
+            "n": 597,
+            "bona_n": 246,
+            "spoof_n": 351,
+            "auc": 0.5477497510017836,
+            "sample_eer_pct": 47.15447154471545,
+            "bona_reject_at_dev_threshold_pct": 95.1219512195122,
+            "spoof_accept_at_dev_threshold_pct": 6.837606837606838
+          },
+          "21DF_vcc2020": {
+            "n": 754,
+            "bona_n": 229,
+            "spoof_n": 525,
+            "auc": 0.5822083593262632,
+            "sample_eer_pct": 43.66812227074236,
+            "bona_reject_at_dev_threshold_pct": 88.20960698689956,
+            "spoof_accept_at_dev_threshold_pct": 9.523809523809524
+          },
+          "standardized_logistic_coefficients": {
+            "rms_dbfs": -0.21228903729294052,
+            "peak_dbfs": 0.37556211119203187,
+            "low_rms_q10_dbfs": -0.9360188058464579,
+            "zero_fraction": -2.341690027238617,
+            "dc_over_rms": -0.12682929096648768,
+            "crest_db": 0.2471060166758401
+          }
+        },
+        "spectral_shape": {
+          "features": [
+            "zcr",
+            "hf_above4k_fraction",
+            "spectral_centroid_hz",
+            "spectral_flatness"
+          ],
+          "dev_threshold": 0.4621160489266064,
+          "train_resubstitution": {
+            "n": 2000,
+            "bona_n": 1000,
+            "spoof_n": 1000,
+            "auc": 0.7172790000000001,
+            "sample_eer_pct": 34.9,
+            "bona_reject_at_dev_threshold_pct": 25.2,
+            "spoof_accept_at_dev_threshold_pct": 42.9
+          },
+          "19LA_dev": {
+            "n": 2000,
+            "bona_n": 1000,
+            "spoof_n": 1000,
+            "auc": 0.6605770000000001,
+            "sample_eer_pct": 39.0,
+            "bona_reject_at_dev_threshold_pct": 39.0,
+            "spoof_accept_at_dev_threshold_pct": 39.0
+          },
+          "21DF_all": {
+            "n": 2000,
+            "bona_n": 1000,
+            "spoof_n": 1000,
+            "auc": 0.631213,
+            "sample_eer_pct": 39.4,
+            "bona_reject_at_dev_threshold_pct": 48.9,
+            "spoof_accept_at_dev_threshold_pct": 31.4
+          },
+          "21DF_asvspoof": {
+            "n": 649,
+            "bona_n": 525,
+            "spoof_n": 124,
+            "auc": 0.6348847926267281,
+            "sample_eer_pct": 39.61904761904762,
+            "bona_reject_at_dev_threshold_pct": 41.904761904761905,
+            "spoof_accept_at_dev_threshold_pct": 37.903225806451616
+          },
+          "21DF_vcc2018": {
+            "n": 597,
+            "bona_n": 246,
+            "spoof_n": 351,
+            "auc": 0.6183146874203784,
+            "sample_eer_pct": 41.31054131054131,
+            "bona_reject_at_dev_threshold_pct": 54.0650406504065,
+            "spoof_accept_at_dev_threshold_pct": 27.635327635327634
+          },
+          "21DF_vcc2020": {
+            "n": 754,
+            "bona_n": 229,
+            "spoof_n": 525,
+            "auc": 0.5834227490122686,
+            "sample_eer_pct": 43.66812227074236,
+            "bona_reject_at_dev_threshold_pct": 59.388646288209614,
+            "spoof_accept_at_dev_threshold_pct": 32.38095238095238
+          },
+          "standardized_logistic_coefficients": {
+            "zcr": -0.5046491586994323,
+            "hf_above4k_fraction": -1.1193300606401768,
+            "spectral_centroid_hz": -0.3037319363677874,
+            "spectral_flatness": 1.729089111758916
+          }
+        },
+        "repetition_and_steps": {
+          "features": [
+            "step_q99_over_rms",
+            "repeat_peak_corr",
+            "repeat_peak_lag_s"
+          ],
+          "dev_threshold": 0.5106951955040341,
+          "train_resubstitution": {
+            "n": 2000,
+            "bona_n": 1000,
+            "spoof_n": 1000,
+            "auc": 0.561994,
+            "sample_eer_pct": 44.99999999999999,
+            "bona_reject_at_dev_threshold_pct": 45.6,
+            "spoof_accept_at_dev_threshold_pct": 44.5
+          },
+          "19LA_dev": {
+            "n": 2000,
+            "bona_n": 1000,
+            "spoof_n": 1000,
+            "auc": 0.526157,
+            "sample_eer_pct": 48.1,
+            "bona_reject_at_dev_threshold_pct": 48.1,
+            "spoof_accept_at_dev_threshold_pct": 48.1
+          },
+          "21DF_all": {
+            "n": 2000,
+            "bona_n": 1000,
+            "spoof_n": 1000,
+            "auc": 0.5855490000000001,
+            "sample_eer_pct": 43.300000000000004,
+            "bona_reject_at_dev_threshold_pct": 47.099999999999994,
+            "spoof_accept_at_dev_threshold_pct": 39.4
+          },
+          "21DF_asvspoof": {
+            "n": 649,
+            "bona_n": 525,
+            "spoof_n": 124,
+            "auc": 0.6641013824884792,
+            "sample_eer_pct": 36.29032258064516,
+            "bona_reject_at_dev_threshold_pct": 36.76190476190476,
+            "spoof_accept_at_dev_threshold_pct": 36.29032258064516
+          },
+          "21DF_vcc2018": {
+            "n": 597,
+            "bona_n": 246,
+            "spoof_n": 351,
+            "auc": 0.4962708174090288,
+            "sample_eer_pct": 51.6260162601626,
+            "bona_reject_at_dev_threshold_pct": 57.3170731707317,
+            "spoof_accept_at_dev_threshold_pct": 43.87464387464387
+          },
+          "21DF_vcc2020": {
+            "n": 754,
+            "bona_n": 229,
+            "spoof_n": 525,
+            "auc": 0.5111915159076731,
+            "sample_eer_pct": 48.03493449781659,
+            "bona_reject_at_dev_threshold_pct": 59.82532751091703,
+            "spoof_accept_at_dev_threshold_pct": 37.142857142857146
+          },
+          "standardized_logistic_coefficients": {
+            "step_q99_over_rms": 0.023451383520126937,
+            "repeat_peak_corr": -0.0018854295160959794,
+            "repeat_peak_lag_s": 0.15204025891615836
+          }
+        },
+        "silence_and_energy": {
+          "features": [
+            "low_energy_fraction",
+            "leading_s",
+            "trailing_s",
+            "rms_dbfs",
+            "peak_dbfs",
+            "low_rms_q10_dbfs",
+            "zero_fraction",
+            "dc_over_rms",
+            "crest_db"
+          ],
+          "dev_threshold": 0.6274462007860735,
+          "train_resubstitution": {
+            "n": 2000,
+            "bona_n": 1000,
+            "spoof_n": 1000,
+            "auc": 0.8399979999999999,
+            "sample_eer_pct": 24.7,
+            "bona_reject_at_dev_threshold_pct": 32.7,
+            "spoof_accept_at_dev_threshold_pct": 18.3
+          },
+          "19LA_dev": {
+            "n": 2000,
+            "bona_n": 1000,
+            "spoof_n": 1000,
+            "auc": 0.8687229999999999,
+            "sample_eer_pct": 20.7,
+            "bona_reject_at_dev_threshold_pct": 20.7,
+            "spoof_accept_at_dev_threshold_pct": 20.7
+          },
+          "21DF_all": {
+            "n": 2000,
+            "bona_n": 1000,
+            "spoof_n": 1000,
+            "auc": 0.7339519999999999,
+            "sample_eer_pct": 34.599999999999994,
+            "bona_reject_at_dev_threshold_pct": 88.8,
+            "spoof_accept_at_dev_threshold_pct": 0.8
+          },
+          "21DF_asvspoof": {
+            "n": 649,
+            "bona_n": 525,
+            "spoof_n": 124,
+            "auc": 0.8230721966205837,
+            "sample_eer_pct": 25.71428571428571,
+            "bona_reject_at_dev_threshold_pct": 78.66666666666666,
+            "spoof_accept_at_dev_threshold_pct": 6.451612903225806
+          },
+          "21DF_vcc2018": {
+            "n": 597,
+            "bona_n": 246,
+            "spoof_n": 351,
+            "auc": 0.5833970305515022,
+            "sample_eer_pct": 44.71544715447154,
+            "bona_reject_at_dev_threshold_pct": 100.0,
+            "spoof_accept_at_dev_threshold_pct": 0.0
+          },
+          "21DF_vcc2020": {
+            "n": 754,
+            "bona_n": 229,
+            "spoof_n": 525,
+            "auc": 0.6505385735080059,
+            "sample_eer_pct": 41.714285714285715,
+            "bona_reject_at_dev_threshold_pct": 100.0,
+            "spoof_accept_at_dev_threshold_pct": 0.0
+          },
+          "standardized_logistic_coefficients": {
+            "low_energy_fraction": 1.278559131062203,
+            "leading_s": 0.4574887577956086,
+            "trailing_s": 0.07657592484651954,
+            "rms_dbfs": 0.13400131728754833,
+            "peak_dbfs": 0.39938925788977536,
+            "low_rms_q10_dbfs": -1.4575390668929096,
+            "zero_fraction": -3.5631038305212415,
+            "dc_over_rms": -0.07873140537572476,
+            "crest_db": -0.09739360194359305
+          }
+        },
+        "all_audio": {
+          "features": [
+            "low_energy_fraction",
+            "leading_s",
+            "trailing_s",
+            "rms_dbfs",
+            "peak_dbfs",
+            "low_rms_q10_dbfs",
+            "zero_fraction",
+            "dc_over_rms",
+            "crest_db",
+            "zcr",
+            "hf_above4k_fraction",
+            "spectral_centroid_hz",
+            "spectral_flatness",
+            "step_q99_over_rms",
+            "repeat_peak_corr",
+            "repeat_peak_lag_s"
+          ],
+          "dev_threshold": 0.5863990770919916,
+          "train_resubstitution": {
+            "n": 2000,
+            "bona_n": 1000,
+            "spoof_n": 1000,
+            "auc": 0.9002669999999999,
+            "sample_eer_pct": 18.6,
+            "bona_reject_at_dev_threshold_pct": 21.8,
+            "spoof_accept_at_dev_threshold_pct": 16.7
+          },
+          "19LA_dev": {
+            "n": 2000,
+            "bona_n": 1000,
+            "spoof_n": 1000,
+            "auc": 0.8641789999999999,
+            "sample_eer_pct": 20.699999999999996,
+            "bona_reject_at_dev_threshold_pct": 20.7,
+            "spoof_accept_at_dev_threshold_pct": 20.7
+          },
+          "21DF_all": {
+            "n": 2000,
+            "bona_n": 1000,
+            "spoof_n": 1000,
+            "auc": 0.7334700000000001,
+            "sample_eer_pct": 32.699999999999996,
+            "bona_reject_at_dev_threshold_pct": 81.8,
+            "spoof_accept_at_dev_threshold_pct": 2.8000000000000003
+          },
+          "21DF_asvspoof": {
+            "n": 649,
+            "bona_n": 525,
+            "spoof_n": 124,
+            "auc": 0.8202918586789555,
+            "sample_eer_pct": 24.0,
+            "bona_reject_at_dev_threshold_pct": 68.38095238095238,
+            "spoof_accept_at_dev_threshold_pct": 7.258064516129033
+          },
+          "21DF_vcc2018": {
+            "n": 597,
+            "bona_n": 246,
+            "spoof_n": 351,
+            "auc": 0.617608227364325,
+            "sample_eer_pct": 43.08943089430895,
+            "bona_reject_at_dev_threshold_pct": 99.1869918699187,
+            "spoof_accept_at_dev_threshold_pct": 1.1396011396011396
+          },
+          "21DF_vcc2020": {
+            "n": 754,
+            "bona_n": 229,
+            "spoof_n": 525,
+            "auc": 0.6706175920149718,
+            "sample_eer_pct": 38.285714285714285,
+            "bona_reject_at_dev_threshold_pct": 93.88646288209607,
+            "spoof_accept_at_dev_threshold_pct": 2.857142857142857
+          },
+          "standardized_logistic_coefficients": {
+            "low_energy_fraction": 1.6127502210452536,
+            "leading_s": 0.5028682003620141,
+            "trailing_s": -0.003892225183685695,
+            "rms_dbfs": 0.33371584732999704,
+            "peak_dbfs": 0.4136184606773708,
+            "low_rms_q10_dbfs": -1.2156004270286072,
+            "zero_fraction": -3.425659791218552,
+            "dc_over_rms": -0.1249044588894926,
+            "crest_db": -0.2960304968143874,
+            "zcr": -0.6053228496608622,
+            "hf_above4k_fraction": -1.1217198585295438,
+            "spectral_centroid_hz": 1.3261140865013425,
+            "spectral_flatness": 2.4541610571298893,
+            "step_q99_over_rms": -1.860599974595887,
+            "repeat_peak_corr": 0.122608631876288,
+            "repeat_peak_lag_s": 0.12300017678434438
+          }
+        },
+        "all_with_pipeline": {
+          "features": [
+            "log_duration",
+            "padding_fraction",
+            "low_energy_fraction",
+            "leading_s",
+            "trailing_s",
+            "rms_dbfs",
+            "peak_dbfs",
+            "low_rms_q10_dbfs",
+            "zero_fraction",
+            "dc_over_rms",
+            "crest_db",
+            "zcr",
+            "hf_above4k_fraction",
+            "spectral_centroid_hz",
+            "spectral_flatness",
+            "step_q99_over_rms",
+            "repeat_peak_corr",
+            "repeat_peak_lag_s",
+            "wrap_seam_over_rms"
+          ],
+          "dev_threshold": 0.5890921898270288,
+          "train_resubstitution": {
+            "n": 2000,
+            "bona_n": 1000,
+            "spoof_n": 1000,
+            "auc": 0.902094,
+            "sample_eer_pct": 18.500000000000007,
+            "bona_reject_at_dev_threshold_pct": 22.3,
+            "spoof_accept_at_dev_threshold_pct": 17.0
+          },
+          "19LA_dev": {
+            "n": 2000,
+            "bona_n": 1000,
+            "spoof_n": 1000,
+            "auc": 0.865881,
+            "sample_eer_pct": 20.0,
+            "bona_reject_at_dev_threshold_pct": 20.0,
+            "spoof_accept_at_dev_threshold_pct": 20.0
+          },
+          "21DF_all": {
+            "n": 2000,
+            "bona_n": 1000,
+            "spoof_n": 1000,
+            "auc": 0.733208,
+            "sample_eer_pct": 32.9,
+            "bona_reject_at_dev_threshold_pct": 82.1,
+            "spoof_accept_at_dev_threshold_pct": 2.7
+          },
+          "21DF_asvspoof": {
+            "n": 649,
+            "bona_n": 525,
+            "spoof_n": 124,
+            "auc": 0.8281105990783411,
+            "sample_eer_pct": 23.387096774193548,
+            "bona_reject_at_dev_threshold_pct": 68.95238095238095,
+            "spoof_accept_at_dev_threshold_pct": 6.451612903225806
+          },
+          "21DF_vcc2018": {
+            "n": 597,
+            "bona_n": 246,
+            "spoof_n": 351,
+            "auc": 0.6173881824288329,
+            "sample_eer_pct": 43.08943089430895,
+            "bona_reject_at_dev_threshold_pct": 99.1869918699187,
+            "spoof_accept_at_dev_threshold_pct": 1.1396011396011396
+          },
+          "21DF_vcc2020": {
+            "n": 754,
+            "bona_n": 229,
+            "spoof_n": 525,
+            "auc": 0.6658348929091287,
+            "sample_eer_pct": 39.04761904761905,
+            "bona_reject_at_dev_threshold_pct": 93.88646288209607,
+            "spoof_accept_at_dev_threshold_pct": 2.857142857142857
+          },
+          "standardized_logistic_coefficients": {
+            "log_duration": -0.501383008580917,
+            "padding_fraction": -0.8031266333915233,
+            "low_energy_fraction": 1.7042433542956923,
+            "leading_s": 0.4307949418611366,
+            "trailing_s": -0.09765658350241845,
+            "rms_dbfs": 0.35297297120144966,
+            "peak_dbfs": 0.33687331402346865,
+            "low_rms_q10_dbfs": -1.2339155201133747,
+            "zero_fraction": -3.460224680869916,
+            "dc_over_rms": -0.12284857860265544,
+            "crest_db": -0.32237433866906007,
+            "zcr": -0.6036337410755688,
+            "hf_above4k_fraction": -1.1161917226824167,
+            "spectral_centroid_hz": 1.318942513201457,
+            "spectral_flatness": 2.427279440343254,
+            "step_q99_over_rms": -1.8213000011672367,
+            "repeat_peak_corr": 0.3703051429202478,
+            "repeat_peak_lag_s": 0.05588725237900729,
+            "wrap_seam_over_rms": -0.03188458706013739
+          }
+        },
+        "all_audio_tree": {
+          "features": [
+            "low_energy_fraction",
+            "leading_s",
+            "trailing_s",
+            "rms_dbfs",
+            "peak_dbfs",
+            "low_rms_q10_dbfs",
+            "zero_fraction",
+            "dc_over_rms",
+            "crest_db",
+            "zcr",
+            "hf_above4k_fraction",
+            "spectral_centroid_hz",
+            "spectral_flatness",
+            "step_q99_over_rms",
+            "repeat_peak_corr",
+            "repeat_peak_lag_s"
+          ],
+          "dev_threshold": 0.626356836952157,
+          "train_resubstitution": {
+            "n": 2000,
+            "bona_n": 1000,
+            "spoof_n": 1000,
+            "auc": 0.954843,
+            "sample_eer_pct": 11.899999999999999,
+            "bona_reject_at_dev_threshold_pct": 10.4,
+            "spoof_accept_at_dev_threshold_pct": 12.3
+          },
+          "19LA_dev": {
+            "n": 2000,
+            "bona_n": 1000,
+            "spoof_n": 1000,
+            "auc": 0.8928480000000001,
+            "sample_eer_pct": 19.3,
+            "bona_reject_at_dev_threshold_pct": 19.3,
+            "spoof_accept_at_dev_threshold_pct": 19.3
+          },
+          "21DF_all": {
+            "n": 2000,
+            "bona_n": 1000,
+            "spoof_n": 1000,
+            "auc": 0.7809220000000001,
+            "sample_eer_pct": 30.100000000000005,
+            "bona_reject_at_dev_threshold_pct": 76.8,
+            "spoof_accept_at_dev_threshold_pct": 1.0
+          },
+          "21DF_asvspoof": {
+            "n": 649,
+            "bona_n": 525,
+            "spoof_n": 124,
+            "auc": 0.8997695852534563,
+            "sample_eer_pct": 18.548387096774192,
+            "bona_reject_at_dev_threshold_pct": 58.0952380952381,
+            "spoof_accept_at_dev_threshold_pct": 5.64516129032258
+          },
+          "21DF_vcc2018": {
+            "n": 597,
+            "bona_n": 246,
+            "spoof_n": 351,
+            "auc": 0.5032775114075927,
+            "sample_eer_pct": 49.572649572649574,
+            "bona_reject_at_dev_threshold_pct": 100.0,
+            "spoof_accept_at_dev_threshold_pct": 0.5698005698005698
+          },
+          "21DF_vcc2020": {
+            "n": 754,
+            "bona_n": 229,
+            "spoof_n": 525,
+            "auc": 0.6718153462258266,
+            "sample_eer_pct": 38.864628820960704,
+            "bona_reject_at_dev_threshold_pct": 94.75982532751091,
+            "spoof_accept_at_dev_threshold_pct": 0.19047619047619047
+          }
+        }
+      },
+      "univariate": {
+        "log_duration": {
+          "direction_from_train": 1,
+          "train_auc": 0.5257865,
+          "19LA_dev_auc": 0.53695,
+          "21DF_auc": 0.604463,
+          "21DF_asvspoof_auc": 0.740453149001536,
+          "21DF_vcc2018_auc": 0.5278356843397494,
+          "21DF_vcc2020_auc": 0.6371844458307341
+        },
+        "padding_fraction": {
+          "direction_from_train": -1,
+          "train_auc": 0.5335584999999999,
+          "19LA_dev_auc": 0.5498775,
+          "21DF_auc": 0.5971085,
+          "21DF_asvspoof_auc": 0.7451766513056836,
+          "21DF_vcc2018_auc": 0.5206031547494963,
+          "21DF_vcc2020_auc": 0.6174547723019339
+        },
+        "low_energy_fraction": {
+          "direction_from_train": 1,
+          "train_auc": 0.7241885000000001,
+          "19LA_dev_auc": 0.740054,
+          "21DF_auc": 0.7174174999999999,
+          "21DF_asvspoof_auc": 0.8471198156682029,
+          "21DF_vcc2018_auc": 0.42888495124267484,
+          "21DF_vcc2020_auc": 0.5250447078394678
+        },
+        "leading_s": {
+          "direction_from_train": 1,
+          "train_auc": 0.693516,
+          "19LA_dev_auc": 0.7256225,
+          "21DF_auc": 0.7979174999999998,
+          "21DF_asvspoof_auc": 0.8374731182795699,
+          "21DF_vcc2018_auc": 0.5074467838695481,
+          "21DF_vcc2020_auc": 0.6448326055312955
+        },
+        "trailing_s": {
+          "direction_from_train": 1,
+          "train_auc": 0.61297,
+          "19LA_dev_auc": 0.6209315,
+          "21DF_auc": 0.6059810000000001,
+          "21DF_asvspoof_auc": 0.697373271889401,
+          "21DF_vcc2018_auc": 0.44423019016514953,
+          "21DF_vcc2020_auc": 0.5850447078394676
+        },
+        "rms_dbfs": {
+          "direction_from_train": -1,
+          "train_auc": 0.575483,
+          "19LA_dev_auc": 0.598221,
+          "21DF_auc": 0.603684,
+          "21DF_asvspoof_auc": 0.7863133640552995,
+          "21DF_vcc2018_auc": 0.3518865957890348,
+          "21DF_vcc2020_auc": 0.44093158660844256
+        },
+        "peak_dbfs": {
+          "direction_from_train": 1,
+          "train_auc": 0.5200370000000001,
+          "19LA_dev_auc": 0.52068,
+          "21DF_auc": 0.5501815000000001,
+          "21DF_asvspoof_auc": 0.518010752688172,
+          "21DF_vcc2018_auc": 0.6691508581752484,
+          "21DF_vcc2020_auc": 0.5496901642753171
+        },
+        "low_rms_q10_dbfs": {
+          "direction_from_train": 1,
+          "train_auc": 0.513319,
+          "19LA_dev_auc": 0.49990899999999994,
+          "21DF_auc": 0.39779499999999995,
+          "21DF_asvspoof_auc": 0.23105990783410135,
+          "21DF_vcc2018_auc": 0.48661200287216544,
+          "21DF_vcc2020_auc": 0.4896568933250156
+        },
+        "zero_fraction": {
+          "direction_from_train": -1,
+          "train_auc": 0.5562914999999999,
+          "19LA_dev_auc": 0.5349005,
+          "21DF_auc": 0.4646555,
+          "21DF_asvspoof_auc": 0.3980491551459293,
+          "21DF_vcc2018_auc": 0.5588156949945569,
+          "21DF_vcc2020_auc": 0.5729008109794136
+        },
+        "dc_over_rms": {
+          "direction_from_train": -1,
+          "train_auc": 0.546779,
+          "19LA_dev_auc": 0.564985,
+          "21DF_auc": 0.498166,
+          "21DF_asvspoof_auc": 0.49427035330261127,
+          "21DF_vcc2018_auc": 0.4889514279758182,
+          "21DF_vcc2020_auc": 0.4997213557912248
+        },
+        "crest_db": {
+          "direction_from_train": 1,
+          "train_auc": 0.5788840000000001,
+          "19LA_dev_auc": 0.600873,
+          "21DF_auc": 0.6021380000000001,
+          "21DF_asvspoof_auc": 0.7898310291858679,
+          "21DF_vcc2018_auc": 0.34870173488059664,
+          "21DF_vcc2020_auc": 0.4404907465169474
+        },
+        "zcr": {
+          "direction_from_train": -1,
+          "train_auc": 0.5645635,
+          "19LA_dev_auc": 0.5808565,
+          "21DF_auc": 0.6196435,
+          "21DF_asvspoof_auc": 0.6612672811059908,
+          "21DF_vcc2018_auc": 0.501627174391402,
+          "21DF_vcc2020_auc": 0.5296069868995633
+        },
+        "hf_above4k_fraction": {
+          "direction_from_train": 1,
+          "train_auc": 0.5460929999999999,
+          "19LA_dev_auc": 0.5422560000000001,
+          "21DF_auc": 0.58038,
+          "21DF_asvspoof_auc": 0.49838709677419357,
+          "21DF_vcc2018_auc": 0.6350728464549603,
+          "21DF_vcc2020_auc": 0.5056186317321688
+        },
+        "spectral_centroid_hz": {
+          "direction_from_train": 1,
+          "train_auc": 0.510853,
+          "19LA_dev_auc": 0.5164839999999999,
+          "21DF_auc": 0.558071,
+          "21DF_asvspoof_auc": 0.5306451612903227,
+          "21DF_vcc2018_auc": 0.5051768466402613,
+          "21DF_vcc2020_auc": 0.5185028072364317
+        },
+        "spectral_flatness": {
+          "direction_from_train": 1,
+          "train_auc": 0.6104590000000001,
+          "19LA_dev_auc": 0.592981,
+          "21DF_auc": 0.6073569999999999,
+          "21DF_asvspoof_auc": 0.5499846390168971,
+          "21DF_vcc2018_auc": 0.6657633242999097,
+          "21DF_vcc2020_auc": 0.5395134123518404
+        },
+        "step_q99_over_rms": {
+          "direction_from_train": 1,
+          "train_auc": 0.5157489999999999,
+          "19LA_dev_auc": 0.5414019999999999,
+          "21DF_auc": 0.6010449999999999,
+          "21DF_asvspoof_auc": 0.5787711213517666,
+          "21DF_vcc2018_auc": 0.5020846362309777,
+          "21DF_vcc2020_auc": 0.5206903722187566
+        },
+        "repeat_peak_corr": {
+          "direction_from_train": 1,
+          "train_auc": 0.507332,
+          "19LA_dev_auc": 0.481254,
+          "21DF_auc": 0.45763,
+          "21DF_asvspoof_auc": 0.40814132104454687,
+          "21DF_vcc2018_auc": 0.478864104880365,
+          "21DF_vcc2020_auc": 0.39351216469120404
+        },
+        "repeat_peak_lag_s": {
+          "direction_from_train": 1,
+          "train_auc": 0.5623805000000001,
+          "19LA_dev_auc": 0.521667,
+          "21DF_auc": 0.5730485000000001,
+          "21DF_asvspoof_auc": 0.6586482334869431,
+          "21DF_vcc2018_auc": 0.5019630324508373,
+          "21DF_vcc2020_auc": 0.5143730505302558
+        },
+        "wrap_seam_over_rms": {
+          "direction_from_train": 1,
+          "train_auc": 0.6083805,
+          "19LA_dev_auc": 0.5748580000000001,
+          "21DF_auc": 0.604865,
+          "21DF_asvspoof_auc": 0.5654454685099847,
+          "21DF_vcc2018_auc": 0.5829106154309407,
+          "21DF_vcc2020_auc": 0.5622665834892909
+        }
+      },
+      "feature_summary": {
+        "train": {
+          "0": {
+            "log_duration": 1.1717949242812415,
+            "padding_fraction": 0.20054953560371516,
+            "low_energy_fraction": 0.5099009900990099,
+            "leading_s": 0.48,
+            "trailing_s": 0.0375,
+            "rms_dbfs": -18.35762320672137,
+            "peak_dbfs": -0.00026507635169365656,
+            "low_rms_q10_dbfs": -60.94666055223635,
+            "zero_fraction": 0.005386996904024768,
+            "dc_over_rms": 2.6986383473551526e-05,
+            "crest_db": 18.281251424915567,
+            "zcr": 0.1216272697719779,
+            "hf_above4k_fraction": 0.006718338236333654,
+            "spectral_centroid_hz": 577.069844078135,
+            "spectral_flatness": 0.03283440632244347,
+            "step_q99_over_rms": 1.4119519968348966,
+            "repeat_peak_corr": 0.9999999999999997,
+            "repeat_peak_lag_s": 2.60871875,
+            "wrap_seam_over_rms": 0.0027355797735745856
+          },
+          "1": {
+            "log_duration": 1.188100629760691,
+            "padding_fraction": 0.18740712074303406,
+            "low_energy_fraction": 0.6287128712871287,
+            "leading_s": 1.0,
+            "trailing_s": 0.2775,
+            "rms_dbfs": -19.052530994234097,
+            "peak_dbfs": -0.00026507635169365656,
+            "low_rms_q10_dbfs": -60.953099388904846,
+            "zero_fraction": 0.0046671826625387,
+            "dc_over_rms": 1.4809786880309697e-05,
+            "crest_db": 19.052398456062598,
+            "zcr": 0.11404975309215312,
+            "hf_above4k_fraction": 0.00809297629168171,
+            "spectral_centroid_hz": 583.8657879938421,
+            "spectral_flatness": 0.043836107225781226,
+            "step_q99_over_rms": 1.4433291871468037,
+            "repeat_peak_corr": 0.9999999999999993,
+            "repeat_peak_lag_s": 2.85303125,
+            "wrap_seam_over_rms": 0.011254349399611712
+          }
+        },
+        "19LA_dev": {
+          "0": {
+            "log_duration": 1.1877098434023683,
+            "padding_fraction": 0.18772445820433437,
+            "low_energy_fraction": 0.504950495049505,
+            "leading_s": 0.48,
+            "trailing_s": 0.0175,
+            "rms_dbfs": -18.132781591111073,
+            "peak_dbfs": -0.00026507635169365656,
+            "low_rms_q10_dbfs": -60.40591525761688,
+            "zero_fraction": 0.0050696594427244585,
+            "dc_over_rms": 2.9608010027207033e-05,
+            "crest_db": 18.108648056525034,
+            "zcr": 0.12309014071425255,
+            "hf_above4k_fraction": 0.006191790135644271,
+            "spectral_centroid_hz": 587.2296809994373,
+            "spectral_flatness": 0.032802543687334526,
+            "step_q99_over_rms": 1.4108964086514195,
+            "repeat_peak_corr": 0.9999999999999997,
+            "repeat_peak_lag_s": 2.7085,
+            "wrap_seam_over_rms": 0.0032957923184818655
+          },
+          "1": {
+            "log_duration": 1.2267306195732093,
+            "padding_fraction": 0.15540247678018576,
+            "low_energy_fraction": 0.6435643564356436,
+            "leading_s": 1.08,
+            "trailing_s": 0.3375,
+            "rms_dbfs": -18.865322814325186,
+            "peak_dbfs": -0.00026507635169365656,
+            "low_rms_q10_dbfs": -60.70823846989864,
+            "zero_fraction": 0.004659442724458204,
+            "dc_over_rms": 1.4117289728298196e-05,
+            "crest_db": 18.855447383520584,
+            "zcr": 0.11314416631836406,
+            "hf_above4k_fraction": 0.007555436028286836,
+            "spectral_centroid_hz": 585.6448992074986,
+            "spectral_flatness": 0.04097979738666623,
+            "step_q99_over_rms": 1.4441390309281386,
+            "repeat_peak_corr": 0.9999999999998379,
+            "repeat_peak_lag_s": 2.8100625,
+            "wrap_seam_over_rms": 0.010230049332800212
+          }
+        },
+        "21DF_asvspoof": {
+          "0": {
+            "log_duration": 0.8445443331903663,
+            "padding_fraction": 0.4236455108359133,
+            "low_energy_fraction": 0.3712871287128713,
+            "leading_s": 0.06,
+            "trailing_s": 0.0,
+            "rms_dbfs": -17.170837855903237,
+            "peak_dbfs": -0.00026507635169365656,
+            "low_rms_q10_dbfs": -55.070201075271754,
+            "zero_fraction": 0.006215170278637772,
+            "dc_over_rms": 0.00021412892693463805,
+            "crest_db": 17.170837855911927,
+            "zcr": 0.13648818093159337,
+            "hf_above4k_fraction": 0.010253581843890093,
+            "spectral_centroid_hz": 591.2452294538296,
+            "spectral_flatness": 0.033595790882153455,
+            "step_q99_over_rms": 1.4507638767006672,
+            "repeat_peak_corr": 0.9999999999999999,
+            "repeat_peak_lag_s": 2.392,
+            "wrap_seam_over_rms": 0.005306150385201783
+          },
+          "1": {
+            "log_duration": 1.170622824644382,
+            "padding_fraction": 0.2014860681114551,
+            "low_energy_fraction": 0.6584158415841584,
+            "leading_s": 1.02,
+            "trailing_s": 0.1375,
+            "rms_dbfs": -19.727524695472816,
+            "peak_dbfs": -0.00026507635169365656,
+            "low_rms_q10_dbfs": -62.55736742542016,
+            "zero_fraction": 0.0093343653250774,
+            "dc_over_rms": 0.00021384426653753662,
+            "crest_db": 19.719218590631936,
+            "zcr": 0.11398009257109243,
+            "hf_above4k_fraction": 0.009420912429653662,
+            "spectral_centroid_hz": 616.9831229335153,
+            "spectral_flatness": 0.04244961936583554,
+            "step_q99_over_rms": 1.5232932708814544,
+            "repeat_peak_corr": 0.9999999999999997,
+            "repeat_peak_lag_s": 2.944,
+            "wrap_seam_over_rms": 0.011163026164700775
+          }
+        },
+        "21DF_vcc2018": {
+          "0": {
+            "log_duration": 1.0726318680421494,
+            "padding_fraction": 0.2760216718266254,
+            "low_energy_fraction": 0.4158415841584158,
+            "leading_s": 0.22,
+            "trailing_s": 0.0175,
+            "rms_dbfs": -17.905948352683982,
+            "peak_dbfs": -0.00026507635169365656,
+            "low_rms_q10_dbfs": -66.27808063758081,
+            "zero_fraction": 0.013312693498452013,
+            "dc_over_rms": 0.00021504904088210392,
+            "crest_db": 17.90568327633229,
+            "zcr": 0.1235003637827211,
+            "hf_above4k_fraction": 0.004263301779811821,
+            "spectral_centroid_hz": 588.4507013618264,
+            "spectral_flatness": 0.019773498132443945,
+            "step_q99_over_rms": 1.3883391629260946,
+            "repeat_peak_corr": 0.9999999999999998,
+            "repeat_peak_lag_s": 2.6800625,
+            "wrap_seam_over_rms": 0.0005371880491175698
+          },
+          "1": {
+            "log_duration": 1.1429481024881614,
+            "padding_fraction": 0.22328173374613003,
+            "low_energy_fraction": 0.3811881188118812,
+            "leading_s": 0.22,
+            "trailing_s": 0.0,
+            "rms_dbfs": -16.879362955956996,
+            "peak_dbfs": 8.686661818707667e-12,
+            "low_rms_q10_dbfs": -67.76105143547252,
+            "zero_fraction": 0.010356037151702786,
+            "dc_over_rms": 0.00022174487938839664,
+            "crest_db": 16.843812190535076,
+            "zcr": 0.12404990789331104,
+            "hf_above4k_fraction": 0.008429563946596847,
+            "spectral_centroid_hz": 604.3043008392075,
+            "spectral_flatness": 0.04062957530215325,
+            "step_q99_over_rms": 1.3941342876262885,
+            "repeat_peak_corr": 0.9999999999999998,
+            "repeat_peak_lag_s": 2.63359375,
+            "wrap_seam_over_rms": 0.0014315013483563338
+          }
+        },
+        "21DF_vcc2020": {
+          "0": {
+            "log_duration": 1.0577902941478545,
+            "padding_fraction": 0.286687306501548,
+            "low_energy_fraction": 0.41089108910891087,
+            "leading_s": 0.16,
+            "trailing_s": 0.0,
+            "rms_dbfs": -17.185656029877777,
+            "peak_dbfs": 8.686661818707667e-12,
+            "low_rms_q10_dbfs": -54.42664939558131,
+            "zero_fraction": 0.0042569659442724455,
+            "dc_over_rms": 0.00022843423086818908,
+            "crest_db": 17.185390953526085,
+            "zcr": 0.14529636681682379,
+            "hf_above4k_fraction": 0.00652156616056903,
+            "spectral_centroid_hz": 540.7483005163818,
+            "spectral_flatness": 0.029454751650772847,
+            "step_q99_over_rms": 1.1980517860327207,
+            "repeat_peak_corr": 0.9999999999999998,
+            "repeat_peak_lag_s": 2.581375,
+            "wrap_seam_over_rms": 0.0018949481819145754
+          },
+          "1": {
+            "log_duration": 1.2691283225816323,
+            "padding_fraction": 0.1188235294117647,
+            "low_energy_fraction": 0.41089108910891087,
+            "leading_s": 0.22,
+            "trailing_s": 0.0175,
+            "rms_dbfs": -16.816675461754627,
+            "peak_dbfs": 8.686661818707667e-12,
+            "low_rms_q10_dbfs": -54.43338589031784,
+            "zero_fraction": 0.0025696594427244584,
+            "dc_over_rms": 0.00022601244373768136,
+            "crest_db": 16.816410385402932,
+            "zcr": 0.14441400021672163,
+            "hf_above4k_fraction": 0.006679960937967674,
+            "spectral_centroid_hz": 540.489538953253,
+            "spectral_flatness": 0.03377990003247428,
+            "step_q99_over_rms": 1.2053966894072743,
+            "repeat_peak_corr": 0.36238368213950417,
+            "repeat_peak_lag_s": 2.627375,
+            "wrap_seam_over_rms": 0.005640203710431036
+          }
+        }
+      },
+      "bonafide_score_correlation": {
+        "all": {
+          "log_duration": 0.20356335511447904,
+          "padding_fraction": -0.21291839395559797,
+          "low_energy_fraction": 0.6051236186407494,
+          "leading_s": 0.7252328781081322,
+          "trailing_s": 0.3061400671338746,
+          "rms_dbfs": -0.49958049158049167,
+          "peak_dbfs": -0.16123205673839547,
+          "low_rms_q10_dbfs": -0.16595927795927798,
+          "zero_fraction": 0.16369856894108842,
+          "dc_over_rms": -0.06302555102555103,
+          "crest_db": 0.503904287904288,
+          "zcr": -0.11729083697753309,
+          "hf_above4k_fraction": 0.004960276960276961,
+          "spectral_centroid_hz": 0.12652295452295453,
+          "spectral_flatness": 0.08597792597792599,
+          "step_q99_over_rms": 0.19488729888729892,
+          "repeat_peak_corr": -0.08729413677059117,
+          "repeat_peak_lag_s": 0.19650700186874595,
+          "wrap_seam_over_rms": 0.07087532982906382
+        },
+        "asvspoof": {
+          "log_duration": 0.1439092359464813,
+          "padding_fraction": -0.15190091963553295,
+          "low_energy_fraction": -0.10880239884257853,
+          "leading_s": 0.09581202108886253,
+          "trailing_s": 0.03948449352396917,
+          "rms_dbfs": -0.0327607382313794,
+          "peak_dbfs": -0.022868690339975795,
+          "low_rms_q10_dbfs": -0.16726090616201783,
+          "zero_fraction": -0.02247161986124033,
+          "dc_over_rms": -0.10224512897487675,
+          "crest_db": 0.0441467672315494,
+          "zcr": 0.09945638764472539,
+          "hf_above4k_fraction": -0.08725999394620415,
+          "spectral_centroid_hz": -0.002079852055180764,
+          "spectral_flatness": 0.0023394189185266885,
+          "step_q99_over_rms": -0.0440802584058614,
+          "repeat_peak_corr": -0.1083199489486445,
+          "repeat_peak_lag_s": 0.07108083045263638,
+          "wrap_seam_over_rms": -0.16580165148968637
+        },
+        "vcc2018": {
+          "log_duration": 0.3800080288810827,
+          "padding_fraction": -0.37084399002975704,
+          "low_energy_fraction": 0.223429669630648,
+          "leading_s": 0.5115124209457621,
+          "trailing_s": 0.24187906330869227,
+          "rms_dbfs": -0.17179010243378479,
+          "peak_dbfs": -0.07841990291150623,
+          "low_rms_q10_dbfs": -0.30542760009108805,
+          "zero_fraction": 0.22527794078986343,
+          "dc_over_rms": -0.06130509871569838,
+          "crest_db": 0.15869518341552083,
+          "zcr": 0.015529720828977406,
+          "hf_above4k_fraction": -0.27758044266388293,
+          "spectral_centroid_hz": -0.051830326284755035,
+          "spectral_flatness": -0.044652908067542206,
+          "step_q99_over_rms": -0.1299855105466695,
+          "repeat_peak_corr": -0.3097385667327895,
+          "repeat_peak_lag_s": 0.15807643795672188,
+          "wrap_seam_over_rms": -0.26043383673176107
+        },
+        "vcc2020": {
+          "log_duration": 0.48500003016880816,
+          "padding_fraction": -0.4831665334982985,
+          "low_energy_fraction": 0.2709734456135038,
+          "leading_s": 0.7114520800948562,
+          "trailing_s": 0.17192971330351806,
+          "rms_dbfs": -0.17644619427817695,
+          "peak_dbfs": -0.07911332675196797,
+          "low_rms_q10_dbfs": -0.4548799376455188,
+          "zero_fraction": 0.3205109340737463,
+          "dc_over_rms": -0.04497117104513705,
+          "crest_db": 0.1728388276558113,
+          "zcr": 0.043083592061408764,
+          "hf_above4k_fraction": 0.09533640442476994,
+          "spectral_centroid_hz": 0.24646707903230647,
+          "spectral_flatness": 0.17809399138628804,
+          "step_q99_over_rms": 0.19521149560820603,
+          "repeat_peak_corr": -0.4446835452530873,
+          "repeat_peak_lag_s": 0.0669738169677058,
+          "wrap_seam_over_rms": -0.3454731148893405
+        }
+      },
+      "provenance": {
+        "seed_train": 17,
+        "seed_dev": 18,
+        "per_class_per_split": 1000,
+        "features_input": "head 64600, wrap if short; raw audio before training augmentations",
+        "protocol_sha256": {
+          "ASVspoof2019.LA.cm.train.trn.txt": "65a289e4009400b42bb4f1e47ac60938d93f7f595452d1f220d35defc3de8ab8",
+          "ASVspoof2019.LA.cm.dev.trl.txt": "2fedaebf1ba3ae1a9bb7d3ec916804ac237b4eee063a27fa92e6549f03d129c7",
+          "trial_metadata.txt": "70e0e7d5964562cb0166e79143f73beaeaf77ee18e799fa4156355a57006d800"
+        },
+        "probe_selection": "Feature families and model settings fixed before seeing test results; no 21DF tuning."
+      },
+      "limitations": [
+        "Small cue probes measure availability of label information, not proof that EBM uses each cue.",
+        "Train audio is raw before codec/RawBoost augmentation; these probes do not reconstruct the full training stream.",
+        "19LA dev uses unseen speakers but related attack families; 21DF has different source and attack mixtures.",
+        "Low energy proxy is relative 20 ms frame RMS, not VAD or MOS.",
+        "Pipeline family includes original duration and known wrap boundary, which EBM does not receive explicitly.",
+        "Spectral shape can contain both genuine spoof artifacts and recording/channel cues; predictive power alone cannot distinguish them.",
+        "EERs are exploratory on sampled trials, not official full-set EER; no multi-centroid model was trained."
+      ]
+    },
+    "verification.json": {
+      "EBM80_21DF_pooling_audit": {
+        "baseline_fixed": {
+          "independent_eer_pct": 2.0,
+          "equal_errors_per_class": 20
+        },
+        "duplicate_final_features": {
+          "independent_eer_pct": 2.0,
+          "equal_errors_per_class": 20
+        },
+        "duplicate_all_SSL_features": {
+          "independent_eer_pct": 2.0,
+          "equal_errors_per_class": 20
+        },
+        "native_length": {
+          "independent_eer_pct": 5.9,
+          "equal_errors_per_class": 59
+        },
+        "native_scale_final_std": {
+          "independent_eer_pct": 5.9,
+          "equal_errors_per_class": 59
+        },
+        "native_scale_all_std": {
+          "independent_eer_pct": 5.9,
+          "equal_errors_per_class": 59
+        }
+      },
+      "EBM80_21DF_quiet_texture": {
+        "baseline": {
+          "independent_eer_pct": 2.0,
+          "equal_errors_per_class": 20
+        },
+        "zero_edges_40dB": {
+          "independent_eer_pct": 1.9,
+          "equal_errors_per_class": 19
+        },
+        "permute_edges_40dB": {
+          "independent_eer_pct": 1.8,
+          "equal_errors_per_class": 18
+        },
+        "rms_matched_noise_edges_40dB": {
+          "independent_eer_pct": 1.8,
+          "equal_errors_per_class": 18
+        },
+        "permute_edges_20dB": {
+          "independent_eer_pct": 1.9,
+          "equal_errors_per_class": 19
+        }
+      },
+      "auc_independent_rank_formula_max_error": 1.1102230246251565e-16,
+      "auc_comparisons": 36
+    }
+  },
+  "method_documents": {
+    "interpretation_ko_20261030.md": "**EBM의 학습 단서 점검: 풀링 길이 효과, 저에너지 구간, 출처 변화**\n\n2026-10-30 분석. 모델은 기존 BestCLS_80_21DF.pt로 고정했다. EBM 추론은 기존 컨테이너에서 GPU 0,1을 사용했고 학습 코드를 수정하지 않았다. 별도로 작은 통계 분류기를 학습해 단순 단서의 예측력을 측정했다.\n\n주요 판단은 이전 설명을 일부 수정한다. 표준편차 계산의 길이 의존성은 수학적으로 확인됐지만, 이 고정 모델에서 꼬리와 EER에 미치는 영향은 작았다. 더 강한 단서는 저에너지 구간의 길이·비율·에너지와 내부 파형 구조다. 그러나 이런 단서의 학습 가능성과 새로운 출처에서의 신뢰성은 다르다.\n\n**표준편차 부분의 길이 의존성**\n\n현재 풀링은 attention 가중치 alpha_t를 특징 h_t에 곱한 뒤, 합과 표준편차를 이어 붙인다. 평균 부분은 sum(alpha_t*h_t), 표준편차 부분은 std(alpha_t*h_t)다. 표준적인 weighted standard deviation은 sqrt(sum(alpha_t*(h_t-mu)^2))이므로 서로 다른 계산이다.\n\nattention이 균등하면 alpha_t=1/T이므로 현재 표준편차 부분은 std(h)/T가 된다. 특징을 정확히 두 번 반복하면 평균은 유지되고, 표준편차 부분은 약 절반이 된다. 실제 torch 표본 표준편차의 보정까지 고려하면 반복 전 프레임 수가 T일 때 비율은 sqrt(2*(T-1)/(2*T-1))/2이다.\n\n실험에서는 같은 SSL 또는 Bridge 특징을 시간축으로 정확히 복제했다. 원본 음성, 발화 내용, SSL의 문맥 처리는 바꾸지 않아 풀링 이후 효과를 분리했다. 작은 풀링 잡음은 끄고 기준 점수를 기존 결과와 대조했다.\n\n- T=201에서 402로 복제했을 때 표준편차 크기 비율: 0.499376.\n- 평균 부분의 최대 차이: 1.79e-7.\n- 복제 결과와 표준편차 부분만 이 비율로 줄인 결과의 점수 최대 차이: 2.38e-7.\n\n| 고정 모델에 적용한 조건 | bonafide 꼬리 수 | 표본 EER |\n|---|---:|---:|\n| 기준 입력 | 163 | 2.0% |\n| 마지막 풀링 직전 특징을 두 번 복제 | 163 | 2.0% |\n| 모든 SSL 프레임 특징을 두 번 복제 | 162 | 2.0% |\n| 패딩 없이 원래 길이 | 52 | 5.9% |\n| 원래 길이 + 마지막 풀링의 표준편차 길이 배율 보정 | 52 | 5.9% |\n| 원래 길이 + 모든 풀링의 표준편차 길이 배율 보정 | 52 | 5.9% |\n\n길이 배율 보정은 기준 길이에서 원래 공식을 유지하면서 명시적인 1/T 배율을 맞춘 실험이며 표준 ASP로 교체한 것이 아니다. 이 효과가 학습 과정에 전혀 영향을 주지 않았다고 결론낼 수는 없지만, 현재 고정 모델의 꼬리 원인으로 우선순위를 높일 근거는 약하다. 원래 평가 파이프라인은 모든 입력을 4.0375초로 맞추므로, 프레임 수 T 자체도 평가 표본마다 달라지는 단서가 아니다.\n\n**단순 특징만으로 정답을 학습할 수 있는가**\n\n19LA train, 19LA dev, 21DF eval에서 각각 bonafide/spoof 1,000개씩, 총 6,000개를 사용했다. 작은 분류기는 19LA train에만 맞췄다. train과 dev 및 21DF 사이에 화자 ID가 겹치지 않음을 확인했다. 출처명과 화자 ID는 분류기 입력에 넣지 않았다. 입력 특징은 코덱·RawBoost 증강 이전 원본을 4.0375초로 자르거나 반복 패딩한 파형에서 계산했다.\n\n아래 수치는 ROC AUC다. 0.5는 무작위 순위 수준이고, 정확도 백분율이 아니다. 21DF 하위 출처는 클래스 수가 서로 다르다.\n\n| 특징/분류기 | 19LA dev | 21DF 전체 | 21DF ASVspoof | 21DF VCC2018 | 21DF VCC2020 |\n|---|---:|---:|---:|---:|---:|\n| 길이·패딩 메타데이터 | 0.600 | 0.583 | 0.740 | 0.509 | 0.545 |\n| 저에너지 길이·비율 | 0.748 | 0.749 | 0.843 | 0.437 | 0.560 |\n| 에너지·noise floor | 0.737 | 0.608 | 0.699 | 0.548 | 0.582 |\n| 스펙트럼 형태 | 0.661 | 0.631 | 0.635 | 0.618 | 0.583 |\n| 반복·파형 변화량 | 0.526 | 0.586 | 0.664 | 0.496 | 0.511 |\n| 저에너지 길이·비율 + 에너지 | 0.869 | 0.734 | 0.823 | 0.583 | 0.651 |\n| 모든 파형 특징, 선형 분류기 | 0.864 | 0.733 | 0.820 | 0.618 | 0.671 |\n| 모든 파형 특징, 작은 트리 | 0.893 | 0.781 | 0.900 | 0.503 | 0.672 |\n\n저에너지 길이·비율 분류기는 앞 구간 길이, 뒤 구간 길이, 저에너지 프레임 비율의 세 특징만 쓴다. 에너지 결합 모델은 이 세 특징과 RMS, peak, 하위 10% 프레임 RMS, 정확한 0 비율, DC/RMS, crest factor의 여섯 특징을 사용한다. 스펙트럼 모델은 zero crossing, 4kHz 초과 에너지 비율, spectral centroid, flatness의 네 특징을 쓴다. 반복·파형 모델은 큰 샘플 간 변화량, 장시간 지연 자기상관의 최대값과 그 지연을 쓴다. 작은 프로브가 성능이 낮다고 해서 더 복잡한 신경망도 그 단서를 활용하지 못한다고 단정할 수는 없다.\n\n저에너지 길이·비율 모델의 화자 그룹 재표집 95% 구간은 ASVspoof 0.783~0.897, VCC2018 0.344~0.525, VCC2020 0.490~0.652였다. VCC2018의 점추정이 0.5 미만이지만, 불확실성 구간에 0.5가 포함되므로 방향 반전을 모집단 사실로 단정하지 않는다. 출처가 바뀌면 이 규칙의 신뢰도가 크게 떨어진다는 해석이 적절하다.\n\n| 데이터 범위 | bonafide 앞 저에너지 구간 중앙값 | spoof 중앙값 |\n|---|---:|---:|\n| 19LA train | 1.00초 | 0.48초 |\n| 19LA dev | 1.08초 | 0.48초 |\n| 21DF ASVspoof | 1.02초 | 0.06초 |\n| 21DF VCC2018 | 0.22초 | 0.22초 |\n| 21DF VCC2020 | 0.22초 | 0.16초 |\n\n학습 데이터에서 '앞부분이 오래 조용하면 bonafide'라는 규칙을 이용하기 쉽지만, VCC2018에서는 같은 단서가 두 클래스를 거의 구분하지 못한다. 그런데 bonafide만 놓고 전체 길이와 화자 ID를 통계적으로 조정한 뒤에도, 앞 저에너지 구간 길이와 EBM 코사인의 부분 Spearman 상관은 VCC2018 0.419, VCC2020 0.541이었다. 이는 모델이 이러한 문맥과 연결된 점수를 낸다는 가설을 지지하지만, 상관만으로 특정 특징의 인과적 사용을 확정하지는 않는다.\n\n**구간의 길이와 에너지를 그대로 두고 내부 파형만 바꾼 실험**\n\n앞뒤에서 최대 프레임 RMS보다 40dB 이상 작은 구간만 선택했다. 20ms 프레임 안에서 샘플 순서를 섞으면 해당 프레임의 길이, 위치, RMS, 평균, 샘플 값의 히스토그램은 그대로이고 시간·스펙트럼 구조가 바뀐다. 선택되지 않은 샘플은 그대로 유지했다. 별도로 0으로 교체하거나 같은 RMS의 백색 잡음으로 교체했다. 이 임계값은 엄격한 저에너지 대리 기준이며 VAD의 정답 구간은 아니다.\n\n| 입력 변경 | bonafide 꼬리 수 | 표본 EER | bonafide 평균 코사인 변화 |\n|---|---:|---:|---:|\n| 없음 | 163 | 2.0% | 0 |\n| -40dB 가장자리를 0으로 교체 | 186 | 1.9% | -0.0132 |\n| -40dB 가장자리 내부 순서 섞기 | 191 | 1.8% | -0.0250 |\n| -40dB 가장자리를 RMS 일치 잡음으로 교체 | 191 | 1.8% | -0.0266 |\n| -20dB 가장자리 내부 순서 섞기 | 277 | 1.9% | -0.0961 |\n\n순서 섞기에서 프레임 평균은 정확히 보존됐고, 순서 섞기/잡음 교체의 프레임 에너지 오차는 최대 2.44e-13 미만이었다. 기준 EBM 점수 재현 오차는 약 7.1e-6 이하였다. 이 결과는 낮은 에너지 구간의 내부 파형 구조에도 모델 출력이 의존함을 보여 준다. 다만 새로운 잡음이나 샘플 재배열은 학습 분포 밖 입력을 만들 수 있고, 그 구간에 포함된 실제 생성기 흔적과 녹음 환경 흔적은 분리하지 못했다.\n\n꼬리는 코사인 0.9 미만인 bonafide이며 분류 오류가 아니다. 2.0%에서 1.8%로 바뀐 표본 EER는 균등 오류점에서 각 클래스 오류가 20개에서 18개로 변한 정도다. 이를 검증된 성능 개선이나 배포할 전처리로 주장하지 않는다.\n\n**어떤 단서를 학습에 활용할 것인가**\n\n1. 저에너지 구간의 길이·비율은 학습하기 쉬운 단서라는 근거가 강하다. 출처가 바뀌면 성능이 크게 떨어져 단독 bonafide 판정 기준이나 센트로이드 분할 기준으로 고정하기에는 부적절하다. 조건을 균형 있게 샘플링하고, 같은 음성에서 문맥을 바꿔도 표현이 안정적인지 점검하는 용도로 우선 활용한다.\n2. 저에너지 구간의 미세한 시간·스펙트럼 구조는 후속 분석 가치가 있다. 단순한 무음 길이와 달리 합성기 잔여 신호가 포함될 수 있지만, 마이크·코덱·녹음 환경도 포함될 수 있다. 별도 문맥 표현으로 관찰하면서 새로운 화자·출처·공격 방식에 모두 전이되는 부분을 선별해야 한다.\n3. 스펙트럼 형태는 이번 단순 모델에서 세 출처 모두 AUC 0.58~0.64로 제한적인 예측력을 보였다. 낮은 차원의 탐색적 후보일 뿐, 강하고 일반적인 탐지 특징을 찾았다고 볼 수 없다.\n4. 반복량·파형 변화량과 길이 메타데이터는 단독 예측력이 낮았다. 입력 구성에 대한 EBM 민감성과, 그 정보 자체가 정답을 잘 예측하는지는 구분한다.\n5. 현재 풀링의 명시적인 표준편차 길이 배율은 고정 모델에서 기여가 작았다. 이를 꼬리의 주원인으로 보고 먼저 구조를 바꾸는 우선순위는 낮춘다.\n\n다중 센트로이드에는 '무음이 긴 군집/짧은 군집'을 바로 적용하기보다, 저에너지 문맥을 달리해도 유지되는 발화 표현을 중심 분리 후보로 삼는 것이 타당하다. 현재는 설계 가설이며 다중 중심 재학습의 성능 향상은 검증하지 않았다.\n\n**검증 범위와 한계**\n\nEER는 균등 오류점에서의 직접 오류 개수로, AUC 36개는 독립적인 순위합 공식으로 교차 확인했다. AUC 최대 차이는 1.12e-16 미만이었다. 원시 음성·임베딩·체크포인트는 서버에 남겼고 결과 그림과 집계 설명만 표시한다.\n\n프로브는 증강 이전 원본에서 학습했으므로 EBM이 실제 학습 중 본 모든 변형을 재현한 것은 아니다. 21DF 표본에서 설계 후보를 찾았으므로 앞으로 모델 선택은 별도의 학습/검증 데이터에서 해야 한다. 저에너지 대리 기준은 무음 정답이나 MOS가 아니다. 화자 그룹 부트스트랩은 새로운 출처의 불확실성을 포함하지 않는다.\n\n관련 1차 문헌:\n- Attentive Statistics Pooling for Deep Speaker Embedding, 식 6: https://arxiv.org/pdf/1803.10963\n- Speech is Silver, Silence is Golden: https://arxiv.org/abs/2106.12914\n- The Impact of Silence on Speech Anti-Spoofing: https://arxiv.org/abs/2309.11827\n\n서버 결과:\n- /results/analysis/EBM80_21DF_pooling_audit\n- /results/analysis/EBM80_21DF_cue_audit\n- /results/analysis/EBM80_21DF_quiet_texture\n"
+  }
+}

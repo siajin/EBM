@@ -1,0 +1,50 @@
+{
+  "status": "passed",
+  "base_commit": "2c2c6ff65bbadf33b811983f7c648c97fffb81a1",
+  "only_argument_differences": {
+    "name": [
+      "EBM_e50_bs240_lr1e5_B_zeropad_short303",
+      "EBM_e50_bs240_lr1e5_C_nativeLong_short303"
+    ],
+    "cap_long": [
+      true,
+      false
+    ]
+  },
+  "loader_AST_only_evaluation_args_changed": true,
+  "Python_files_syntax_checked": 29,
+  "unchanged_Python_files": [
+    "data_processing/__init__.py",
+    "data_processing/augmentation/augmentation.py",
+    "data_processing/augmentation/codec_aug.py",
+    "data_processing/augmentation/raw_boost.py",
+    "data_processing/augmentation/wav_read_functions.py",
+    "dataset/ASVspoof2019_la_eval.py",
+    "dataset/ASVspoof2019_la_train.py",
+    "dataset/ASVspoof2021_df_eval.py",
+    "dataset/ASVspoof2021_la_eval.py",
+    "dataset/__init__.py",
+    "logger/__init__.py",
+    "logger/interface.py",
+    "logger/local.py",
+    "logger/logger.py",
+    "logger/neptune.py",
+    "logger/wandb.py",
+    "main.py",
+    "model/__init__.py",
+    "model/b_linear.py",
+    "model/loss.py",
+    "native_steps.py",
+    "scheduler/cosine_warmup.py",
+    "scheduler/steplr.py",
+    "train.py",
+    "utils/__init__.py",
+    "utils/ddp_util.py",
+    "utils/get_threshold.py"
+  ],
+  "modified_runtime_files": [
+    "arguments.py",
+    "data_loaders.py"
+  ],
+  "comparison_line_endings_normalized": true
+}

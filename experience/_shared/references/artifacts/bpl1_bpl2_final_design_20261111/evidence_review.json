@@ -1,0 +1,113 @@
+{
+  "status": "methods_and_experiments_reviewed",
+  "papers": [
+    {
+      "title": "Enhancing Audio Deepfake Detection by Improving Representation Similarity of Bonafide Speech",
+      "year": 2025,
+      "url": "https://www.isca-archive.org/interspeech_2025/kim25g_interspeech.pdf",
+      "read": [
+        "Sec3.1 Eq8 same-source shortened augmented pairs",
+        "Sec4 implementation",
+        "Sec5.2 Table2 ablation"
+      ],
+      "results": {
+        "EOCS_21LA": 1.41,
+        "EOCS_BPL_21LA": 1.21,
+        "EOCS_21DF": 2.12,
+        "EOCS_BPL_21DF": 1.89
+      },
+      "implication": "Retain OC and distinguish same-source duration consistency from inter-source grouping. Not evidence all compared views must have equal duration.",
+      "limits": [
+        "Local implementation all12x12 differs from paper Eq8 aligned pairs",
+        "Different batch, epochs and augmentation; cannot transplant EER"
+      ]
+    },
+    {
+      "title": "Improving Short Utterance Anti-Spoofing with AASIST2",
+      "year": 2024,
+      "url": "https://arxiv.org/pdf/2309.08279",
+      "read": [
+        "Sec2.2 dynamic chunk sizing",
+        "Sec3 setup",
+        "Sec4.1/4.2 Table1/Fig2"
+      ],
+      "results": {
+        "baseline_4s_21LA": 1.76,
+        "DCS_4s_21LA": 1.08,
+        "baseline_4s_21DF": 4.38,
+        "DCS_4s_21DF": 7.14
+      },
+      "implication": "Length augmentation can help LA and hurt DF; no universal crop verdict. Avoid changing the main OC duration distribution in the initial pair experiment.",
+      "limits": [
+        "Fine-tuned frontend and different backend",
+        "Padding/truncation and DCS1-6s differ from local aggressive0.5-4s sampling"
+      ]
+    },
+    {
+      "title": "SAMO: Speaker Attractor Multi-Center One-Class Learning For Voice Anti-Spoofing",
+      "year": 2023,
+      "url": "https://arxiv.org/pdf/2211.02718",
+      "read": [
+        "Sec3 speaker attractors and no-enrollment inference",
+        "Sec4.1 target-only dataset",
+        "Sec4.2 Tables2/3"
+      ],
+      "results": {
+        "OCSoftmax_target_only_19LA_mean3seeds": 1.25,
+        "SAMO_no_enrollment_mean3seeds": 1.09,
+        "SAMO_with_enrollment_mean3seeds": 1.08,
+        "SAMO_no_speaker_update": 1.54
+      },
+      "implication": "Speaker-aware normal structure can help, but a multi-center scorer is not equivalent to single-center OC plus same-speaker BPL.",
+      "limits": [
+        "Target-only19LA protocol; not official whole19LA/21LA/DF comparison",
+        "Includes speaker-center optimization/inference changes absent from this proposal"
+      ]
+    },
+    {
+      "title": "Speaker-Invariant Representation Learning for Spoofing Detection via Gradient Reversal and A Variational Information Bottleneck",
+      "year": 2026,
+      "url": "https://www.isca-archive.org/odyssey_2026/dao26_odyssey.pdf",
+      "read": [
+        "Sec3 GRL teacher/student and VIB",
+        "Sec4 ASVspoof5 training and9OOD datasets",
+        "Table1 ablations and Sec5.2"
+      ],
+      "results": {
+        "MHFA_pooled9sets": 13.67,
+        "SInMT_pooled9sets": 12.83,
+        "MHFA_IVSpk_pooled9sets": 11.37,
+        "MHFA_IVSpk_VIB_pooled9sets": 10.15,
+        "MHFA_IVSpk_VIB_DFADD": 4.13,
+        "MHFA_DFADD": 2.11
+      },
+      "implication": "Same-speaker attraction is not speaker-invariant learning. Track identity leakage and out-of-domain errors; invariance also has dataset-specific tradeoffs.",
+      "limits": [
+        "ASV5 training400speakers, externalVoxCeleb teacher and additional heads",
+        "Not a direct test of proposed BPL1 or frozenXLSR EBM",
+        "Pooled means single threshold on merged9sets, not averageEER"
+      ]
+    },
+    {
+      "title": "Assessing the Impact of Speaker Identity in Speech Spoofing Detection",
+      "year": 2026,
+      "status": "arXiv preprint",
+      "url": "https://arxiv.org/pdf/2602.20805",
+      "read": [
+        "Sec3 speaker-aware versus GRL",
+        "Sec4 ASV5 training and hidden21LA/DF subsets",
+        "Tables1/2 and Sec5"
+      ],
+      "results": {
+        "A11_MHFA_21LA_hidden": 17.02,
+        "A11_MHFA_IVspk_21LA_hidden": 8.76
+      },
+      "implication": "Speaker bias is a plausible additional axis behind A11 weakness; cannot attribute our A11 failures to it from these results.",
+      "limits": [
+        "ASV5-trained, hidden trimmed21 subsets; not our full official21 eval",
+        "Preprint; peer-reviewed Odyssey extension is the main support"
+      ]
+    }
+  ],
+  "scope": "Research synthesis and Train-metadata feasibility only; current frozen repetition experiment is unchanged; new full repetition/dose results are pending."
+}

@@ -1,0 +1,17 @@
+{
+  "status": "pass",
+  "independent_random_weighted_ROC_checks": 320,
+  "tied_scores_included": true,
+  "all_bootstrap_intervals_recomputed": true,
+  "source_counts_reconciled_at_all_thresholds": true,
+  "normal_errors_at_DF_nearest_EER": {
+    "total": 482,
+    "by_corpus": {
+      "vcc2018": 451,
+      "vcc2020": 31
+    }
+  },
+  "shared_attack_EER_worsened": 4,
+  "shared_attacks_total": 13,
+  "caveat": "Aggregate spoof shift is favorable; this does not imply every individual attack improves."
+}

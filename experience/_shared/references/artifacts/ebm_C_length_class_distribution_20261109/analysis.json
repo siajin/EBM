@@ -1,0 +1,99 @@
+{
+  "scope": "All unique training utterances, class-normalized; not sampler-exposure weighted. Long input lengths before RawBoost. B/C Short policy unchanged.",
+  "source": "artifacts\\geometry_cache\\runs\\20261105_fast_p0_01\\686e593443178bb8\\extract\\scores.parquet",
+  "source_sha256": "66a58119b774c089829deb36b4a135e9b5e91d9d18e6e1e09809f20100179598",
+  "cap_samples": 64600,
+  "sample_rate": 16000,
+  "conditions": {
+    "B_cap": {
+      "classes": {
+        "bonafide": {
+          "N": 2580,
+          "mean_seconds": 3.2206515019379847,
+          "sd_seconds": 0.6708463433448554,
+          "p50_seconds": 3.24003125,
+          "p95_seconds": 4.0375,
+          "under2_percent": 4.224806201550388,
+          "over_cap_percent": 0.0,
+          "over5_percent": 0.0,
+          "over6_percent": 0.0,
+          "histogram_counts": [
+            109,
+            931,
+            1540,
+            0,
+            0,
+            0
+          ]
+        },
+        "spoof": {
+          "N": 22800,
+          "mean_seconds": 3.0857305482456145,
+          "sd_seconds": 0.8650140786125017,
+          "p50_seconds": 3.1970625000000004,
+          "p95_seconds": 4.0375,
+          "under2_percent": 14.065789473684209,
+          "over_cap_percent": 0.0,
+          "over5_percent": 0.0,
+          "over6_percent": 0.0,
+          "histogram_counts": [
+            3207,
+            7084,
+            12509,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "KS_max_CDF_gap": 0.12562729498164016,
+      "Wasserstein1_seconds": 0.1774484418349653,
+      "spoof_minus_bonafide_mean_seconds": -0.13492095369237012
+    },
+    "C_full": {
+      "classes": {
+        "bonafide": {
+          "N": 2580,
+          "mean_seconds": 3.388754820736434,
+          "sd_seconds": 0.9853266608007799,
+          "p50_seconds": 3.24003125,
+          "p95_seconds": 5.161312499999999,
+          "under2_percent": 4.224806201550388,
+          "over_cap_percent": 22.325581395348838,
+          "over5_percent": 6.124031007751938,
+          "over6_percent": 1.8992248062015504,
+          "histogram_counts": [
+            109,
+            931,
+            964,
+            418,
+            109,
+            49
+          ]
+        },
+        "spoof": {
+          "N": 22800,
+          "mean_seconds": 3.430018851425439,
+          "sd_seconds": 1.4597581080162068,
+          "p50_seconds": 3.1970625000000004,
+          "p95_seconds": 6.173459375,
+          "under2_percent": 14.065789473684209,
+          "over_cap_percent": 27.171052631578945,
+          "over5_percent": 13.048245614035087,
+          "over6_percent": 5.662280701754386,
+          "histogram_counts": [
+            3207,
+            7084,
+            6314,
+            3220,
+            1684,
+            1291
+          ]
+        }
+      },
+      "KS_max_CDF_gap": 0.12562729498164016,
+      "Wasserstein1_seconds": 0.35363342621634014,
+      "spoof_minus_bonafide_mean_seconds": 0.04126403068900508
+    }
+  }
+}

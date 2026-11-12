@@ -1,0 +1,1724 @@
+{
+  "checked_at_kst": "2026-11-04T10:32:01.462197+09:00",
+  "units": "EER percent; lower is better",
+  "scope": "All five result directories in /home/mentee/results/CM/LA, plus previously used Interspeech 2025 EBM benchmark",
+  "paper": {
+    "title": "Enhancing Audio Deepfake Detection by Improving Representation Similarity of Bonafide Speech",
+    "venue": "Interspeech 2025",
+    "url": "https://www.isca-archive.org/interspeech_2025/kim25g_interspeech.pdf",
+    "table": "Table 1, EBM (proposed), page 2253",
+    "reported_eer_percent": {
+      "19LA": 0.26,
+      "21LA": 1.21,
+      "21DF": 1.89
+    },
+    "training": {
+      "epochs": 150,
+      "batch_size": 30
+    },
+    "qualification": "Published reported results, not known to share the local checkpoint-selection rule; numerical benchmark rather than controlled comparison.",
+    "implementation_note": {
+      "source": "https://github.com/kimho1wq/EBM#implementation-notes-and-hyperparameter-clarification",
+      "text": "Official README corrects the printed beta1/beta2 settings to beta1=5,beta2=20. Do not treat the paper's printed settings alone as a complete reproduction recipe."
+    }
+  },
+  "experiments": {
+    "old80": {
+      "name": "EBM",
+      "source_root": "/home/mentee/results/CM/LA/EBM",
+      "settings": {
+        "epoch": 80,
+        "batch_size": 80,
+        "lr": 1e-06,
+        "lr_min": 1e-06,
+        "seed": 1
+      },
+      "bpl_mode": "local",
+      "bpl_matrix_per_gpu": [
+        4,
+        4
+      ],
+      "source_differences_from_local160": [
+        "arguments.py"
+      ],
+      "missing_source_files": [],
+      "state": "completed"
+    },
+    "local160": {
+      "name": "EBM_e50_bs160_lr1e5",
+      "source_root": "/home/mentee/results/CM/LA/EBM_e50_bs160_lr1e5",
+      "settings": {
+        "epoch": 50,
+        "batch_size": 160,
+        "lr": 1e-05,
+        "lr_min": 1e-05,
+        "seed": 1
+      },
+      "bpl_mode": "local",
+      "bpl_matrix_per_gpu": [
+        8,
+        8
+      ],
+      "source_differences_from_local160": [],
+      "missing_source_files": [],
+      "state": "completed"
+    },
+    "global160": {
+      "name": "EBM_e50_bs160_lr1e5_bpl_global",
+      "source_root": "/home/mentee/results/CM/LA/EBM_e50_bs160_lr1e5_bpl_global",
+      "settings": {
+        "epoch": 50,
+        "batch_size": 160,
+        "lr": 1e-05,
+        "lr_min": 1e-05,
+        "seed": 1
+      },
+      "bpl_mode": "global",
+      "bpl_matrix_per_gpu": [
+        16,
+        16
+      ],
+      "source_differences_from_local160": [
+        "arguments.py",
+        "model/loss.py"
+      ],
+      "missing_source_files": [],
+      "state": "completed"
+    },
+    "local240": {
+      "name": "EBM_e50_bs240_lr1e5",
+      "source_root": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5",
+      "settings": {
+        "epoch": 50,
+        "batch_size": 240,
+        "lr": 1e-05,
+        "lr_min": 1e-05,
+        "seed": 1
+      },
+      "bpl_mode": "local",
+      "bpl_matrix_per_gpu": [
+        12,
+        12
+      ],
+      "source_differences_from_local160": [
+        "arguments.py"
+      ],
+      "missing_source_files": [],
+      "state": "running"
+    },
+    "failed320": {
+      "name": "EBM_e50_bs320_lr1e5",
+      "source_root": "/home/mentee/results/CM/LA/EBM_e50_bs320_lr1e5",
+      "settings": {
+        "epoch": 50,
+        "batch_size": 320,
+        "lr": 1e-05,
+        "lr_min": 1e-05,
+        "seed": 1
+      },
+      "bpl_mode": "local",
+      "bpl_matrix_per_gpu": [
+        16,
+        16
+      ],
+      "source_differences_from_local160": [
+        "arguments.py"
+      ],
+      "missing_source_files": [],
+      "state": "failed_first_batch_OOM"
+    }
+  },
+  "datasets": {
+    "19LA": {
+      "series": {
+        "old80": [
+          {
+            "epoch": 15,
+            "eer_percent": 3.907142745398197,
+            "source": "metric/19LA/EER.txt"
+          },
+          {
+            "epoch": 20,
+            "eer_percent": 2.8035627632711315,
+            "source": "metric/19LA/EER.txt"
+          },
+          {
+            "epoch": 25,
+            "eer_percent": 1.8596496720296265,
+            "source": "metric/19LA/EER.txt"
+          },
+          {
+            "epoch": 30,
+            "eer_percent": 0.8837525492862128,
+            "source": "metric/19LA/EER.txt"
+          },
+          {
+            "epoch": 35,
+            "eer_percent": 0.5166553365057822,
+            "source": "metric/19LA/EER.txt"
+          },
+          {
+            "epoch": 40,
+            "eer_percent": 0.4622705642889757,
+            "source": "metric/19LA/EER.txt"
+          },
+          {
+            "epoch": 45,
+            "eer_percent": 0.35533710080329556,
+            "source": "metric/19LA/EER.txt"
+          },
+          {
+            "epoch": 50,
+            "eer_percent": 0.3535010197144798,
+            "source": "metric/19LA/EER.txt"
+          },
+          {
+            "epoch": 55,
+            "eer_percent": 0.3263086335822998,
+            "source": "metric/19LA/EER.txt"
+          },
+          {
+            "epoch": 60,
+            "eer_percent": 0.3127124405166583,
+            "source": "metric/19LA/EER.txt"
+          },
+          {
+            "epoch": 65,
+            "eer_percent": 0.3127124405047739,
+            "source": "metric/19LA/EER.txt"
+          },
+          {
+            "epoch": 70,
+            "eer_percent": 0.28019974026961825,
+            "source": "metric/19LA/EER.txt"
+          },
+          {
+            "epoch": 75,
+            "eer_percent": 0.3224645053831526,
+            "source": "metric/19LA/EER.txt"
+          },
+          {
+            "epoch": 80,
+            "eer_percent": 0.2991162474507222,
+            "source": "metric/19LA/EER.txt"
+          }
+        ],
+        "local160": [
+          {
+            "epoch": 15,
+            "eer_percent": 0.35350101972025805,
+            "source": "metric/19LA/EER.txt"
+          },
+          {
+            "epoch": 20,
+            "eer_percent": 0.46227056424201585,
+            "source": "metric/19LA/EER.txt"
+          },
+          {
+            "epoch": 25,
+            "eer_percent": 0.2311352821210114,
+            "source": "metric/19LA/EER.txt"
+          },
+          {
+            "epoch": 30,
+            "eer_percent": 0.5030591434398318,
+            "source": "metric/19LA/EER.txt"
+          },
+          {
+            "epoch": 35,
+            "eer_percent": 0.3942895989113541,
+            "source": "metric/19LA/EER.txt"
+          },
+          {
+            "epoch": 40,
+            "eer_percent": 0.5030591433928957,
+            "source": "metric/19LA/EER.txt"
+          },
+          {
+            "epoch": 45,
+            "eer_percent": 0.5846363018354812,
+            "source": "metric/19LA/EER.txt"
+          },
+          {
+            "epoch": 50,
+            "eer_percent": 0.4351705461561101,
+            "source": "metric/19LA/EER.txt"
+          }
+        ],
+        "global160": [
+          {
+            "epoch": 15,
+            "eer_percent": 0.35350101971489245,
+            "source": "metric/19LA/EER.txt"
+          },
+          {
+            "epoch": 20,
+            "eer_percent": 0.5030591434413108,
+            "source": "metric/19LA/EER.txt"
+          },
+          {
+            "epoch": 25,
+            "eer_percent": 0.25515395323838613,
+            "source": "metric/19LA/EER.txt"
+          },
+          {
+            "epoch": 30,
+            "eer_percent": 0.44925880135051366,
+            "source": "metric/19LA/EER.txt"
+          },
+          {
+            "epoch": 35,
+            "eer_percent": 0.522830800065731,
+            "source": "metric/19LA/EER.txt"
+          },
+          {
+            "epoch": 40,
+            "eer_percent": 0.40855939774908784,
+            "source": "metric/19LA/EER.txt"
+          },
+          {
+            "epoch": 45,
+            "eer_percent": 0.48946295037418974,
+            "source": "metric/19LA/EER.txt"
+          },
+          {
+            "epoch": 50,
+            "eer_percent": 0.40788579197886454,
+            "source": "metric/19LA/EER.txt"
+          }
+        ],
+        "local240": [
+          {
+            "epoch": 15,
+            "eer_percent": 0.299116247447392,
+            "source": "metric/19LA/EER.txt"
+          },
+          {
+            "epoch": 20,
+            "eer_percent": 0.2974187184256473,
+            "source": "metric/19LA/EER.txt"
+          },
+          {
+            "epoch": 25,
+            "eer_percent": 0.217539089065842,
+            "source": "metric/19LA/EER.txt"
+          },
+          {
+            "epoch": 30,
+            "eer_percent": 0.2911572719119949,
+            "source": "metric/19LA/EER.txt"
+          },
+          {
+            "epoch": 35,
+            "eer_percent": 0.3263086335826009,
+            "source": "metric/19LA/EER.txt"
+          },
+          {
+            "epoch": 40,
+            "eer_percent": 0.39428959894010074,
+            "source": "metric/19LA/EER.txt"
+          },
+          {
+            "epoch": 45,
+            "eer_percent": 0.6809323294329493,
+            "source": "metric/19LA/EER.txt"
+          }
+        ],
+        "failed320": []
+      },
+      "best": {
+        "old80": {
+          "epoch": 70,
+          "eer_percent": 0.28019974026961825,
+          "source": "metric/19LA/EER.txt"
+        },
+        "local160": {
+          "epoch": 25,
+          "eer_percent": 0.2311352821210114,
+          "source": "metric/19LA/EER.txt"
+        },
+        "global160": {
+          "epoch": 25,
+          "eer_percent": 0.25515395323838613,
+          "source": "metric/19LA/EER.txt"
+        },
+        "local240": {
+          "epoch": 25,
+          "eer_percent": 0.217539089065842,
+          "source": "metric/19LA/EER.txt"
+        },
+        "failed320": null
+      },
+      "at_epoch40": {
+        "old80": 0.4622705642889757,
+        "local160": 0.5030591433928957,
+        "global160": 0.40855939774908784,
+        "local240": 0.39428959894010074,
+        "failed320": null
+      },
+      "at_epoch45": {
+        "old80": 0.35533710080329556,
+        "local160": 0.5846363018354812,
+        "global160": 0.48946295037418974,
+        "local240": 0.6809323294329493,
+        "failed320": null
+      },
+      "final": {
+        "old80": {
+          "epoch": 80,
+          "eer_percent": 0.2991162474507222,
+          "source": "metric/19LA/EER.txt"
+        },
+        "local160": {
+          "epoch": 50,
+          "eer_percent": 0.4351705461561101,
+          "source": "metric/19LA/EER.txt"
+        },
+        "global160": {
+          "epoch": 50,
+          "eer_percent": 0.40788579197886454,
+          "source": "metric/19LA/EER.txt"
+        },
+        "local240": null,
+        "failed320": null
+      },
+      "current_best_vs_reference": {
+        "old80": {
+          "target": 0.217539089065842,
+          "reference": 0.28019974026961825,
+          "delta_pp": -0.06266065120377626,
+          "relative_reduction_percent": 22.36285128011965
+        },
+        "local160": {
+          "target": 0.217539089065842,
+          "reference": 0.2311352821210114,
+          "delta_pp": -0.013596193055169403,
+          "relative_reduction_percent": 5.8823529365158045
+        },
+        "global160": {
+          "target": 0.217539089065842,
+          "reference": 0.25515395323838613,
+          "delta_pp": -0.037614864172544143,
+          "relative_reduction_percent": 14.742026801913273
+        },
+        "paper": {
+          "target": 0.217539089065842,
+          "reference": 0.26,
+          "delta_pp": -0.04246091093415802,
+          "relative_reduction_percent": 16.331119590060776
+        }
+      },
+      "common_epoch_comparisons": {
+        "old80": {
+          "epochs": [
+            15,
+            20,
+            25,
+            30,
+            35,
+            40
+          ],
+          "improved": 6,
+          "worsened": 0,
+          "pairs": [
+            {
+              "epoch": 15,
+              "target": 0.299116247447392,
+              "reference": 3.907142745398197,
+              "delta_pp": -3.6080264979508048,
+              "relative_reduction_percent": 92.3443737037842
+            },
+            {
+              "epoch": 20,
+              "target": 0.2974187184256473,
+              "reference": 2.8035627632711315,
+              "delta_pp": -2.506144044845484,
+              "relative_reduction_percent": 89.39140145809947
+            },
+            {
+              "epoch": 25,
+              "target": 0.217539089065842,
+              "reference": 1.8596496720296265,
+              "delta_pp": -1.6421105829637845,
+              "relative_reduction_percent": 88.30214677862313
+            },
+            {
+              "epoch": 30,
+              "target": 0.2911572719119949,
+              "reference": 0.8837525492862128,
+              "delta_pp": -0.5925952773742179,
+              "relative_reduction_percent": 67.05443484749706
+            },
+            {
+              "epoch": 35,
+              "target": 0.3263086335826009,
+              "reference": 0.5166553365057822,
+              "delta_pp": -0.1903467029231813,
+              "relative_reduction_percent": 36.84210526315758
+            },
+            {
+              "epoch": 40,
+              "target": 0.39428959894010074,
+              "reference": 0.4622705642889757,
+              "delta_pp": -0.06798096534887499,
+              "relative_reduction_percent": 14.7058823555935
+            }
+          ]
+        },
+        "local160": {
+          "epochs": [
+            15,
+            20,
+            25,
+            30,
+            35,
+            40
+          ],
+          "improved": 6,
+          "worsened": 0,
+          "pairs": [
+            {
+              "epoch": 15,
+              "target": 0.299116247447392,
+              "reference": 0.35350101972025805,
+              "delta_pp": -0.05438477227286603,
+              "relative_reduction_percent": 15.384615386938137
+            },
+            {
+              "epoch": 20,
+              "target": 0.2974187184256473,
+              "reference": 0.46227056424201585,
+              "delta_pp": -0.16485184581636853,
+              "relative_reduction_percent": 35.66133311704061
+            },
+            {
+              "epoch": 25,
+              "target": 0.217539089065842,
+              "reference": 0.2311352821210114,
+              "delta_pp": -0.013596193055169403,
+              "relative_reduction_percent": 5.8823529365158045
+            },
+            {
+              "epoch": 30,
+              "target": 0.2911572719119949,
+              "reference": 0.5030591434398318,
+              "delta_pp": -0.2119018715278369,
+              "relative_reduction_percent": 42.12265581316908
+            },
+            {
+              "epoch": 35,
+              "target": 0.3263086335826009,
+              "reference": 0.3942895989113541,
+              "delta_pp": -0.0679809653287532,
+              "relative_reduction_percent": 17.24137931014431
+            },
+            {
+              "epoch": 40,
+              "target": 0.39428959894010074,
+              "reference": 0.5030591433928957,
+              "delta_pp": -0.10876954445279496,
+              "relative_reduction_percent": 21.621621608782597
+            }
+          ]
+        },
+        "global160": {
+          "epochs": [
+            15,
+            20,
+            25,
+            30,
+            35,
+            40
+          ],
+          "improved": 6,
+          "worsened": 0,
+          "pairs": [
+            {
+              "epoch": 15,
+              "target": 0.299116247447392,
+              "reference": 0.35350101971489245,
+              "delta_pp": -0.054384772267500436,
+              "relative_reduction_percent": 15.384615385653804
+            },
+            {
+              "epoch": 20,
+              "target": 0.2974187184256473,
+              "reference": 0.5030591434413108,
+              "delta_pp": -0.20564042501566343,
+              "relative_reduction_percent": 40.87798178339928
+            },
+            {
+              "epoch": 25,
+              "target": 0.217539089065842,
+              "reference": 0.25515395323838613,
+              "delta_pp": -0.037614864172544143,
+              "relative_reduction_percent": 14.742026801913273
+            },
+            {
+              "epoch": 30,
+              "target": 0.2911572719119949,
+              "reference": 0.44925880135051366,
+              "delta_pp": -0.15810152943851874,
+              "relative_reduction_percent": 35.1916376403202
+            },
+            {
+              "epoch": 35,
+              "target": 0.3263086335826009,
+              "reference": 0.522830800065731,
+              "delta_pp": -0.1965221664831301,
+              "relative_reduction_percent": 37.58810048268446
+            },
+            {
+              "epoch": 40,
+              "target": 0.39428959894010074,
+              "reference": 0.40855939774908784,
+              "delta_pp": -0.0142697988089871,
+              "relative_reduction_percent": 3.4927109467081054
+            }
+          ]
+        }
+      },
+      "paper_reported": 0.26,
+      "current_at40_vs_local160": {
+        "target": 0.39428959894010074,
+        "reference": 0.5030591433928957,
+        "delta_pp": -0.10876954445279496,
+        "relative_reduction_percent": 21.621621608782597
+      },
+      "current_at40_vs_global160": {
+        "target": 0.39428959894010074,
+        "reference": 0.40855939774908784,
+        "delta_pp": -0.0142697988089871,
+        "relative_reduction_percent": 3.4927109467081054
+      },
+      "current_at45_vs_local160": {
+        "target": 0.6809323294329493,
+        "reference": 0.5846363018354812,
+        "delta_pp": 0.09629602759746814,
+        "relative_reduction_percent": -16.47109960417172
+      },
+      "current_at45_vs_global160": {
+        "target": 0.6809323294329493,
+        "reference": 0.48946295037418974,
+        "delta_pp": 0.1914693790587596,
+        "relative_reduction_percent": -39.1182578604536
+      },
+      "current_40_to_45": {
+        "target": 0.6809323294329493,
+        "reference": 0.39428959894010074,
+        "delta_pp": 0.2866427304928486,
+        "relative_reduction_percent": -72.69852698711297
+      }
+    },
+    "21LA": {
+      "series": {
+        "old80": [
+          {
+            "epoch": 15,
+            "eer_percent": 7.340281943526214,
+            "source": "metric/21LA/EER.txt"
+          },
+          {
+            "epoch": 20,
+            "eer_percent": 6.756148770187035,
+            "source": "metric/21LA/EER.txt"
+          },
+          {
+            "epoch": 25,
+            "eer_percent": 6.148020395786671,
+            "source": "metric/21LA/EER.txt"
+          },
+          {
+            "epoch": 30,
+            "eer_percent": 5.635799136069124,
+            "source": "metric/21LA/EER.txt"
+          },
+          {
+            "epoch": 35,
+            "eer_percent": 4.900107991366442,
+            "source": "metric/21LA/EER.txt"
+          },
+          {
+            "epoch": 40,
+            "eer_percent": 4.576133909287257,
+            "source": "metric/21LA/EER.txt"
+          },
+          {
+            "epoch": 45,
+            "eer_percent": 3.9164667066844254,
+            "source": "metric/21LA/EER.txt"
+          },
+          {
+            "epoch": 50,
+            "eer_percent": 3.748500299971581,
+            "source": "metric/21LA/EER.txt"
+          },
+          {
+            "epoch": 55,
+            "eer_percent": 3.573035393012484,
+            "source": "metric/21LA/EER.txt"
+          },
+          {
+            "epoch": 60,
+            "eer_percent": 3.482721382267713,
+            "source": "metric/21LA/EER.txt"
+          },
+          {
+            "epoch": 65,
+            "eer_percent": 3.1115010799364136,
+            "source": "metric/21LA/EER.txt"
+          },
+          {
+            "epoch": 70,
+            "eer_percent": 2.794276457883829,
+            "source": "metric/21LA/EER.txt"
+          },
+          {
+            "epoch": 75,
+            "eer_percent": 2.7267818574151415,
+            "source": "metric/21LA/EER.txt"
+          },
+          {
+            "epoch": 80,
+            "eer_percent": 2.8749250148212044,
+            "source": "metric/21LA/EER.txt"
+          }
+        ],
+        "local160": [
+          {
+            "epoch": 15,
+            "eer_percent": 1.6333693304538033,
+            "source": "metric/21LA/EER.txt"
+          },
+          {
+            "epoch": 20,
+            "eer_percent": 1.403887688984883,
+            "source": "metric/21LA/EER.txt"
+          },
+          {
+            "epoch": 25,
+            "eer_percent": 1.2823974082067815,
+            "source": "metric/21LA/EER.txt"
+          },
+          {
+            "epoch": 30,
+            "eer_percent": 1.5726241900647575,
+            "source": "metric/21LA/EER.txt"
+          },
+          {
+            "epoch": 35,
+            "eer_percent": 1.0160467905643364,
+            "source": "metric/21LA/EER.txt"
+          },
+          {
+            "epoch": 40,
+            "eer_percent": 1.410637149028085,
+            "source": "metric/21LA/EER.txt"
+          },
+          {
+            "epoch": 45,
+            "eer_percent": 1.248650107991352,
+            "source": "metric/21LA/EER.txt"
+          },
+          {
+            "epoch": 50,
+            "eer_percent": 1.0535392923191627,
+            "source": "metric/21LA/EER.txt"
+          }
+        ],
+        "global160": [
+          {
+            "epoch": 15,
+            "eer_percent": 1.6459208157794094,
+            "source": "metric/21LA/EER.txt"
+          },
+          {
+            "epoch": 20,
+            "eer_percent": 1.5253779697622831,
+            "source": "metric/21LA/EER.txt"
+          },
+          {
+            "epoch": 25,
+            "eer_percent": 1.268898488096935,
+            "source": "metric/21LA/EER.txt"
+          },
+          {
+            "epoch": 30,
+            "eer_percent": 1.356641468682749,
+            "source": "metric/21LA/EER.txt"
+          },
+          {
+            "epoch": 35,
+            "eer_percent": 0.9928014397632806,
+            "source": "metric/21LA/EER.txt"
+          },
+          {
+            "epoch": 40,
+            "eer_percent": 1.2904919016478815,
+            "source": "metric/21LA/EER.txt"
+          },
+          {
+            "epoch": 45,
+            "eer_percent": 1.1676565874733904,
+            "source": "metric/21LA/EER.txt"
+          },
+          {
+            "epoch": 50,
+            "eer_percent": 1.0799136069405235,
+            "source": "metric/21LA/EER.txt"
+          }
+        ],
+        "local240": [
+          {
+            "epoch": 15,
+            "eer_percent": 1.3971382289379453,
+            "source": "metric/21LA/EER.txt"
+          },
+          {
+            "epoch": 20,
+            "eer_percent": 1.1300239952516618,
+            "source": "metric/21LA/EER.txt"
+          },
+          {
+            "epoch": 25,
+            "eer_percent": 1.3564787041553947,
+            "source": "metric/21LA/EER.txt"
+          },
+          {
+            "epoch": 30,
+            "eer_percent": 1.140658747300567,
+            "source": "metric/21LA/EER.txt"
+          },
+          {
+            "epoch": 35,
+            "eer_percent": 1.31673665270228,
+            "source": "metric/21LA/EER.txt"
+          },
+          {
+            "epoch": 40,
+            "eer_percent": 1.191511697582229,
+            "source": "metric/21LA/EER.txt"
+          },
+          {
+            "epoch": 45,
+            "eer_percent": 1.9235961123110106,
+            "source": "metric/21LA/EER.txt"
+          }
+        ],
+        "failed320": []
+      },
+      "best": {
+        "old80": {
+          "epoch": 75,
+          "eer_percent": 2.7267818574151415,
+          "source": "metric/21LA/EER.txt"
+        },
+        "local160": {
+          "epoch": 35,
+          "eer_percent": 1.0160467905643364,
+          "source": "metric/21LA/EER.txt"
+        },
+        "global160": {
+          "epoch": 35,
+          "eer_percent": 0.9928014397632806,
+          "source": "metric/21LA/EER.txt"
+        },
+        "local240": {
+          "epoch": 20,
+          "eer_percent": 1.1300239952516618,
+          "source": "metric/21LA/EER.txt"
+        },
+        "failed320": null
+      },
+      "at_epoch40": {
+        "old80": 4.576133909287257,
+        "local160": 1.410637149028085,
+        "global160": 1.2904919016478815,
+        "local240": 1.191511697582229,
+        "failed320": null
+      },
+      "at_epoch45": {
+        "old80": 3.9164667066844254,
+        "local160": 1.248650107991352,
+        "global160": 1.1676565874733904,
+        "local240": 1.9235961123110106,
+        "failed320": null
+      },
+      "final": {
+        "old80": {
+          "epoch": 80,
+          "eer_percent": 2.8749250148212044,
+          "source": "metric/21LA/EER.txt"
+        },
+        "local160": {
+          "epoch": 50,
+          "eer_percent": 1.0535392923191627,
+          "source": "metric/21LA/EER.txt"
+        },
+        "global160": {
+          "epoch": 50,
+          "eer_percent": 1.0799136069405235,
+          "source": "metric/21LA/EER.txt"
+        },
+        "local240": null,
+        "failed320": null
+      },
+      "current_best_vs_reference": {
+        "old80": {
+          "target": 1.1300239952516618,
+          "reference": 2.7267818574151415,
+          "delta_pp": -1.5967578621634797,
+          "relative_reduction_percent": 58.5583279359622
+        },
+        "local160": {
+          "target": 1.1300239952516618,
+          "reference": 1.0160467905643364,
+          "delta_pp": 0.1139772046873253,
+          "relative_reduction_percent": -11.217712190598984
+        },
+        "global160": {
+          "target": 1.1300239952516618,
+          "reference": 0.9928014397632806,
+          "delta_pp": 0.13722255548838114,
+          "relative_reduction_percent": -13.821752265095416
+        },
+        "paper": {
+          "target": 1.1300239952516618,
+          "reference": 1.21,
+          "delta_pp": -0.07997600474833821,
+          "relative_reduction_percent": 6.60958716928415
+        }
+      },
+      "common_epoch_comparisons": {
+        "old80": {
+          "epochs": [
+            15,
+            20,
+            25,
+            30,
+            35,
+            40
+          ],
+          "improved": 6,
+          "worsened": 0,
+          "pairs": [
+            {
+              "epoch": 15,
+              "target": 1.3971382289379453,
+              "reference": 7.340281943526214,
+              "delta_pp": -5.943143714588269,
+              "relative_reduction_percent": 80.96615035107533
+            },
+            {
+              "epoch": 20,
+              "target": 1.1300239952516618,
+              "reference": 6.756148770187035,
+              "delta_pp": -5.626124774935373,
+              "relative_reduction_percent": 83.27413984372079
+            },
+            {
+              "epoch": 25,
+              "target": 1.3564787041553947,
+              "reference": 6.148020395786671,
+              "delta_pp": -4.791541691631276,
+              "relative_reduction_percent": 77.9363337004378
+            },
+            {
+              "epoch": 30,
+              "target": 1.140658747300567,
+              "reference": 5.635799136069124,
+              "delta_pp": -4.495140388768558,
+              "relative_reduction_percent": 79.76047904190999
+            },
+            {
+              "epoch": 35,
+              "target": 1.31673665270228,
+              "reference": 4.900107991366442,
+              "delta_pp": -3.5833713386641617,
+              "relative_reduction_percent": 73.12841563854809
+            },
+            {
+              "epoch": 40,
+              "target": 1.191511697582229,
+              "reference": 4.576133909287257,
+              "delta_pp": -3.3846222117050275,
+              "relative_reduction_percent": 73.9624818416249
+            }
+          ]
+        },
+        "local160": {
+          "epochs": [
+            15,
+            20,
+            25,
+            30,
+            35,
+            40
+          ],
+          "improved": 4,
+          "worsened": 2,
+          "pairs": [
+            {
+              "epoch": 15,
+              "target": 1.3971382289379453,
+              "reference": 1.6333693304538033,
+              "delta_pp": -0.23623110151585802,
+              "relative_reduction_percent": 14.462809917596855
+            },
+            {
+              "epoch": 20,
+              "target": 1.1300239952516618,
+              "reference": 1.403887688984883,
+              "delta_pp": -0.2738636937332213,
+              "relative_reduction_percent": 19.50752156899712
+            },
+            {
+              "epoch": 25,
+              "target": 1.3564787041553947,
+              "reference": 1.2823974082067815,
+              "delta_pp": 0.07408129594861323,
+              "relative_reduction_percent": -5.776781477763866
+            },
+            {
+              "epoch": 30,
+              "target": 1.140658747300567,
+              "reference": 1.5726241900647575,
+              "delta_pp": -0.4319654427641906,
+              "relative_reduction_percent": 27.46781115877425
+            },
+            {
+              "epoch": 35,
+              "target": 1.31673665270228,
+              "reference": 1.0160467905643364,
+              "delta_pp": 0.30068986213794346,
+              "relative_reduction_percent": -29.594095954078373
+            },
+            {
+              "epoch": 40,
+              "target": 1.191511697582229,
+              "reference": 1.410637149028085,
+              "delta_pp": -0.21912545144585582,
+              "relative_reduction_percent": 15.533792768525279
+            }
+          ]
+        },
+        "global160": {
+          "epochs": [
+            15,
+            20,
+            25,
+            30,
+            35,
+            40
+          ],
+          "improved": 4,
+          "worsened": 2,
+          "pairs": [
+            {
+              "epoch": 15,
+              "target": 1.3971382289379453,
+              "reference": 1.6459208157794094,
+              "delta_pp": -0.24878258684146415,
+              "relative_reduction_percent": 15.115100584207367
+            },
+            {
+              "epoch": 20,
+              "target": 1.1300239952516618,
+              "reference": 1.5253779697622831,
+              "delta_pp": -0.3953539745106214,
+              "relative_reduction_percent": 25.918426930751718
+            },
+            {
+              "epoch": 25,
+              "target": 1.3564787041553947,
+              "reference": 1.268898488096935,
+              "delta_pp": 0.08758021605845978,
+              "relative_reduction_percent": -6.902066389078184
+            },
+            {
+              "epoch": 30,
+              "target": 1.140658747300567,
+              "reference": 1.356641468682749,
+              "delta_pp": -0.2159827213821821,
+              "relative_reduction_percent": 15.920398009939479
+            },
+            {
+              "epoch": 35,
+              "target": 1.31673665270228,
+              "reference": 0.9928014397632806,
+              "delta_pp": 0.3239352129389993,
+              "relative_reduction_percent": -32.628398788003075
+            },
+            {
+              "epoch": 40,
+              "target": 1.191511697582229,
+              "reference": 1.2904919016478815,
+              "delta_pp": -0.09898020406565244,
+              "relative_reduction_percent": 7.669959334053984
+            }
+          ]
+        }
+      },
+      "paper_reported": 1.21,
+      "current_at40_vs_local160": {
+        "target": 1.191511697582229,
+        "reference": 1.410637149028085,
+        "delta_pp": -0.21912545144585582,
+        "relative_reduction_percent": 15.533792768525279
+      },
+      "current_at40_vs_global160": {
+        "target": 1.191511697582229,
+        "reference": 1.2904919016478815,
+        "delta_pp": -0.09898020406565244,
+        "relative_reduction_percent": 7.669959334053984
+      },
+      "current_at45_vs_local160": {
+        "target": 1.9235961123110106,
+        "reference": 1.248650107991352,
+        "delta_pp": 0.6749460043196587,
+        "relative_reduction_percent": -54.054054054054774
+      },
+      "current_at45_vs_global160": {
+        "target": 1.9235961123110106,
+        "reference": 1.1676565874733904,
+        "delta_pp": 0.7559395248376202,
+        "relative_reduction_percent": -64.73988439300842
+      },
+      "current_40_to_45": {
+        "target": 1.9235961123110106,
+        "reference": 1.191511697582229,
+        "delta_pp": 0.7320844147287815,
+        "relative_reduction_percent": -61.441647296816285
+      }
+    },
+    "21DF": {
+      "series": {
+        "old80": [
+          {
+            "epoch": 15,
+            "eer_percent": 5.0911291949695405,
+            "source": "metric/21DF/EER.txt"
+          },
+          {
+            "epoch": 20,
+            "eer_percent": 4.5464966411591545,
+            "source": "metric/21DF/EER.txt"
+          },
+          {
+            "epoch": 25,
+            "eer_percent": 3.8290444824339445,
+            "source": "metric/21DF/EER.txt"
+          },
+          {
+            "epoch": 30,
+            "eer_percent": 3.037804950859525,
+            "source": "metric/21DF/EER.txt"
+          },
+          {
+            "epoch": 35,
+            "eer_percent": 2.569103503934363,
+            "source": "metric/21DF/EER.txt"
+          },
+          {
+            "epoch": 40,
+            "eer_percent": 2.2731858228533484,
+            "source": "metric/21DF/EER.txt"
+          },
+          {
+            "epoch": 45,
+            "eer_percent": 2.172778046482101,
+            "source": "metric/21DF/EER.txt"
+          },
+          {
+            "epoch": 50,
+            "eer_percent": 2.1252269823122054,
+            "source": "metric/21DF/EER.txt"
+          },
+          {
+            "epoch": 55,
+            "eer_percent": 2.1050507768164666,
+            "source": "metric/21DF/EER.txt"
+          },
+          {
+            "epoch": 60,
+            "eer_percent": 2.101302549563757,
+            "source": "metric/21DF/EER.txt"
+          },
+          {
+            "epoch": 65,
+            "eer_percent": 2.140989752647954,
+            "source": "metric/21DF/EER.txt"
+          },
+          {
+            "epoch": 70,
+            "eer_percent": 2.1185015804694283,
+            "source": "metric/21DF/EER.txt"
+          },
+          {
+            "epoch": 75,
+            "eer_percent": 2.1658424188033516,
+            "source": "metric/21DF/EER.txt"
+          }
+        ],
+        "local160": [
+          {
+            "epoch": 15,
+            "eer_percent": 2.5263024049627316,
+            "source": "metric/21DF/EER.txt"
+          },
+          {
+            "epoch": 20,
+            "eer_percent": 2.8582957831734044,
+            "source": "metric/21DF/EER.txt"
+          },
+          {
+            "epoch": 25,
+            "eer_percent": 2.4211446634078997,
+            "source": "metric/21DF/EER.txt"
+          },
+          {
+            "epoch": 30,
+            "eer_percent": 2.4993305192367834,
+            "source": "metric/21DF/EER.txt"
+          },
+          {
+            "epoch": 35,
+            "eer_percent": 3.945986872344951,
+            "source": "metric/21DF/EER.txt"
+          },
+          {
+            "epoch": 40,
+            "eer_percent": 3.134037258721757,
+            "source": "metric/21DF/EER.txt"
+          },
+          {
+            "epoch": 45,
+            "eer_percent": 2.964788203219176,
+            "source": "metric/21DF/EER.txt"
+          }
+        ],
+        "global160": [
+          {
+            "epoch": 15,
+            "eer_percent": 2.524183185384214,
+            "source": "metric/21DF/EER.txt"
+          },
+          {
+            "epoch": 20,
+            "eer_percent": 2.878471988701328,
+            "source": "metric/21DF/EER.txt"
+          },
+          {
+            "epoch": 25,
+            "eer_percent": 2.333714439437764,
+            "source": "metric/21DF/EER.txt"
+          },
+          {
+            "epoch": 30,
+            "eer_percent": 2.724545764576125,
+            "source": "metric/21DF/EER.txt"
+          },
+          {
+            "epoch": 35,
+            "eer_percent": 3.947810881700203,
+            "source": "metric/21DF/EER.txt"
+          },
+          {
+            "epoch": 40,
+            "eer_percent": 2.9744210196550176,
+            "source": "metric/21DF/EER.txt"
+          },
+          {
+            "epoch": 45,
+            "eer_percent": 3.1919300117040743,
+            "source": "metric/21DF/EER.txt"
+          },
+          {
+            "epoch": 50,
+            "eer_percent": 2.733793268295894,
+            "source": "console: EBM_e50_bs160_lr1e5_bpl_global_20261030_182702.log; duplicate ranks agree"
+          }
+        ],
+        "local240": [
+          {
+            "epoch": 15,
+            "eer_percent": 2.396259384895441,
+            "source": "metric/21DF/EER.txt"
+          },
+          {
+            "epoch": 20,
+            "eer_percent": 2.5758150806965148,
+            "source": "metric/21DF/EER.txt"
+          },
+          {
+            "epoch": 25,
+            "eer_percent": 2.8736617610750144,
+            "source": "metric/21DF/EER.txt"
+          },
+          {
+            "epoch": 30,
+            "eer_percent": 2.8490017511485086,
+            "source": "metric/21DF/EER.txt"
+          },
+          {
+            "epoch": 35,
+            "eer_percent": 2.5501917893897095,
+            "source": "metric/21DF/EER.txt"
+          },
+          {
+            "epoch": 40,
+            "eer_percent": 2.6484465156228496,
+            "source": "metric/21DF/EER.txt"
+          }
+        ],
+        "failed320": []
+      },
+      "best": {
+        "old80": {
+          "epoch": 60,
+          "eer_percent": 2.101302549563757,
+          "source": "metric/21DF/EER.txt"
+        },
+        "local160": {
+          "epoch": 25,
+          "eer_percent": 2.4211446634078997,
+          "source": "metric/21DF/EER.txt"
+        },
+        "global160": {
+          "epoch": 25,
+          "eer_percent": 2.333714439437764,
+          "source": "metric/21DF/EER.txt"
+        },
+        "local240": {
+          "epoch": 15,
+          "eer_percent": 2.396259384895441,
+          "source": "metric/21DF/EER.txt"
+        },
+        "failed320": null
+      },
+      "at_epoch40": {
+        "old80": 2.2731858228533484,
+        "local160": 3.134037258721757,
+        "global160": 2.9744210196550176,
+        "local240": 2.6484465156228496,
+        "failed320": null
+      },
+      "at_epoch45": {
+        "old80": 2.172778046482101,
+        "local160": 2.964788203219176,
+        "global160": 3.1919300117040743,
+        "local240": null,
+        "failed320": null
+      },
+      "final": {
+        "old80": null,
+        "local160": null,
+        "global160": {
+          "epoch": 50,
+          "eer_percent": 2.733793268295894,
+          "source": "console: EBM_e50_bs160_lr1e5_bpl_global_20261030_182702.log; duplicate ranks agree"
+        },
+        "local240": null,
+        "failed320": null
+      },
+      "current_best_vs_reference": {
+        "old80": {
+          "target": 2.396259384895441,
+          "reference": 2.101302549563757,
+          "delta_pp": 0.2949568353316838,
+          "relative_reduction_percent": -14.03685706244056
+        },
+        "local160": {
+          "target": 2.396259384895441,
+          "reference": 2.4211446634078997,
+          "delta_pp": -0.024885278512458697,
+          "relative_reduction_percent": 1.0278311283321353
+        },
+        "global160": {
+          "target": 2.396259384895441,
+          "reference": 2.333714439437764,
+          "delta_pp": 0.06254494545767697,
+          "relative_reduction_percent": -2.6800599251014288
+        },
+        "paper": {
+          "target": 2.396259384895441,
+          "reference": 1.89,
+          "delta_pp": 0.5062593848954411,
+          "relative_reduction_percent": -26.78621084102863
+        }
+      },
+      "common_epoch_comparisons": {
+        "old80": {
+          "epochs": [
+            15,
+            20,
+            25,
+            30,
+            35,
+            40
+          ],
+          "improved": 5,
+          "worsened": 1,
+          "pairs": [
+            {
+              "epoch": 15,
+              "target": 2.396259384895441,
+              "reference": 5.0911291949695405,
+              "delta_pp": -2.6948698100740995,
+              "relative_reduction_percent": 52.93265416907619
+            },
+            {
+              "epoch": 20,
+              "target": 2.5758150806965148,
+              "reference": 4.5464966411591545,
+              "delta_pp": -1.9706815604626398,
+              "relative_reduction_percent": 43.34505699668137
+            },
+            {
+              "epoch": 25,
+              "target": 2.8736617610750144,
+              "reference": 3.8290444824339445,
+              "delta_pp": -0.9553827213589301,
+              "relative_reduction_percent": 24.950943394411496
+            },
+            {
+              "epoch": 30,
+              "target": 2.8490017511485086,
+              "reference": 3.037804950859525,
+              "delta_pp": -0.18880319971101622,
+              "relative_reduction_percent": 6.215119231325096
+            },
+            {
+              "epoch": 35,
+              "target": 2.5501917893897095,
+              "reference": 2.569103503934363,
+              "delta_pp": -0.018911714544653346,
+              "relative_reduction_percent": 0.7361211611634825
+            },
+            {
+              "epoch": 40,
+              "target": 2.6484465156228496,
+              "reference": 2.2731858228533484,
+              "delta_pp": 0.37526069276950125,
+              "relative_reduction_percent": -16.5081397656469
+            }
+          ]
+        },
+        "local160": {
+          "epochs": [
+            15,
+            20,
+            25,
+            30,
+            35,
+            40
+          ],
+          "improved": 4,
+          "worsened": 2,
+          "pairs": [
+            {
+              "epoch": 15,
+              "target": 2.396259384895441,
+              "reference": 2.5263024049627316,
+              "delta_pp": -0.13004302006729063,
+              "relative_reduction_percent": 5.147563482971432
+            },
+            {
+              "epoch": 20,
+              "target": 2.5758150806965148,
+              "reference": 2.8582957831734044,
+              "delta_pp": -0.2824807024768896,
+              "relative_reduction_percent": 9.882836623831395
+            },
+            {
+              "epoch": 25,
+              "target": 2.8736617610750144,
+              "reference": 2.4211446634078997,
+              "delta_pp": 0.4525170976671147,
+              "relative_reduction_percent": -18.690213125479705
+            },
+            {
+              "epoch": 30,
+              "target": 2.8490017511485086,
+              "reference": 2.4993305192367834,
+              "delta_pp": 0.3496712319117252,
+              "relative_reduction_percent": -13.990595850384116
+            },
+            {
+              "epoch": 35,
+              "target": 2.5501917893897095,
+              "reference": 3.945986872344951,
+              "delta_pp": -1.3957950829552415,
+              "relative_reduction_percent": 35.37252221332842
+            },
+            {
+              "epoch": 40,
+              "target": 2.6484465156228496,
+              "reference": 3.134037258721757,
+              "delta_pp": -0.4855907430989075,
+              "relative_reduction_percent": 15.49409604967363
+            }
+          ]
+        },
+        "global160": {
+          "epochs": [
+            15,
+            20,
+            25,
+            30,
+            35,
+            40
+          ],
+          "improved": 4,
+          "worsened": 2,
+          "pairs": [
+            {
+              "epoch": 15,
+              "target": 2.396259384895441,
+              "reference": 2.524183185384214,
+              "delta_pp": -0.12792380048877305,
+              "relative_reduction_percent": 5.067928557225587
+            },
+            {
+              "epoch": 20,
+              "target": 2.5758150806965148,
+              "reference": 2.878471988701328,
+              "delta_pp": -0.3026569080048134,
+              "relative_reduction_percent": 10.514498983933564
+            },
+            {
+              "epoch": 25,
+              "target": 2.8736617610750144,
+              "reference": 2.333714439437764,
+              "delta_pp": 0.5399473216372503,
+              "relative_reduction_percent": -23.136820534363828
+            },
+            {
+              "epoch": 30,
+              "target": 2.8490017511485086,
+              "reference": 2.724545764576125,
+              "delta_pp": 0.12445598657238355,
+              "relative_reduction_percent": -4.567953608653953
+            },
+            {
+              "epoch": 35,
+              "target": 2.5501917893897095,
+              "reference": 3.947810881700203,
+              "delta_pp": -1.3976190923104936,
+              "relative_reduction_percent": 35.40238208443717
+            },
+            {
+              "epoch": 40,
+              "target": 2.6484465156228496,
+              "reference": 2.9744210196550176,
+              "delta_pp": -0.325974504032168,
+              "relative_reduction_percent": 10.959259024802599
+            }
+          ]
+        }
+      },
+      "paper_reported": 1.89,
+      "current_at40_vs_local160": {
+        "target": 2.6484465156228496,
+        "reference": 3.134037258721757,
+        "delta_pp": -0.4855907430989075,
+        "relative_reduction_percent": 15.49409604967363
+      },
+      "current_at40_vs_global160": {
+        "target": 2.6484465156228496,
+        "reference": 2.9744210196550176,
+        "delta_pp": -0.325974504032168,
+        "relative_reduction_percent": 10.959259024802599
+      },
+      "current_at45_vs_local160": null,
+      "current_at45_vs_global160": null,
+      "current_40_to_45": null
+    }
+  },
+  "source_validation": {
+    "inventory": [
+      "EBM",
+      "EBM_e50_bs160_lr1e5",
+      "EBM_e50_bs160_lr1e5_bpl_global",
+      "EBM_e50_bs240_lr1e5",
+      "EBM_e50_bs320_lr1e5"
+    ],
+    "config_comparison": {
+      "EBM": {
+        "selected_settings": {
+          "epoch": 80,
+          "batch_size": 80,
+          "lr": 1e-06,
+          "lr_min": 1e-06,
+          "seed": 1
+        },
+        "differences_from_bs160": {
+          "batch_size": {
+            "baseline": 160,
+            "value": 80
+          },
+          "epoch": {
+            "baseline": 50,
+            "value": 80
+          },
+          "lr": {
+            "baseline": 1e-05,
+            "value": 1e-06
+          },
+          "lr_min": {
+            "baseline": 1e-05,
+            "value": 1e-06
+          },
+          "name": {
+            "baseline": "EBM_e50_bs160_lr1e5",
+            "value": "EBM"
+          }
+        }
+      },
+      "EBM_e50_bs160_lr1e5": {
+        "selected_settings": {
+          "epoch": 50,
+          "batch_size": 160,
+          "lr": 1e-05,
+          "lr_min": 1e-05,
+          "seed": 1
+        },
+        "differences_from_bs160": {}
+      },
+      "EBM_e50_bs160_lr1e5_bpl_global": {
+        "selected_settings": {
+          "epoch": 50,
+          "batch_size": 160,
+          "lr": 1e-05,
+          "lr_min": 1e-05,
+          "seed": 1
+        },
+        "differences_from_bs160": {
+          "name": {
+            "baseline": "EBM_e50_bs160_lr1e5",
+            "value": "EBM_e50_bs160_lr1e5_bpl_global"
+          }
+        }
+      },
+      "EBM_e50_bs240_lr1e5": {
+        "selected_settings": {
+          "epoch": 50,
+          "batch_size": 240,
+          "lr": 1e-05,
+          "lr_min": 1e-05,
+          "seed": 1
+        },
+        "differences_from_bs160": {
+          "batch_size": {
+            "baseline": 160,
+            "value": 240
+          },
+          "name": {
+            "baseline": "EBM_e50_bs160_lr1e5",
+            "value": "EBM_e50_bs240_lr1e5"
+          }
+        }
+      },
+      "EBM_e50_bs320_lr1e5": {
+        "selected_settings": {
+          "epoch": 50,
+          "batch_size": 320,
+          "lr": 1e-05,
+          "lr_min": 1e-05,
+          "seed": 1
+        },
+        "differences_from_bs160": {
+          "batch_size": {
+            "baseline": 160,
+            "value": 320
+          },
+          "name": {
+            "baseline": "EBM_e50_bs160_lr1e5",
+            "value": "EBM_e50_bs320_lr1e5"
+          }
+        }
+      }
+    },
+    "matches_prior_snapshot": [
+      {
+        "experiment": "old80",
+        "dataset": "19LA",
+        "matched_points": 14
+      },
+      {
+        "experiment": "old80",
+        "dataset": "21LA",
+        "matched_points": 14
+      },
+      {
+        "experiment": "old80",
+        "dataset": "21DF",
+        "matched_points": 13
+      },
+      {
+        "experiment": "local160",
+        "dataset": "19LA",
+        "matched_points": 8
+      },
+      {
+        "experiment": "local160",
+        "dataset": "21LA",
+        "matched_points": 8
+      },
+      {
+        "experiment": "local160",
+        "dataset": "21DF",
+        "matched_points": 7
+      },
+      {
+        "experiment": "global160",
+        "dataset": "19LA",
+        "matched_points": 8
+      },
+      {
+        "experiment": "global160",
+        "dataset": "21LA",
+        "matched_points": 8
+      },
+      {
+        "experiment": "global160",
+        "dataset": "21DF",
+        "matched_points": 8
+      }
+    ],
+    "current_metrics_agree_with_both_rank_console": true
+  },
+  "current_status": {
+    "phase": "epoch45_21DF_evaluation",
+    "training_epoch": 45,
+    "total_epochs": 50,
+    "last_losses": [
+      "0.990",
+      "0.834"
+    ],
+    "errors": [],
+    "exit_code": null,
+    "log_modified_kst": "2026-11-04T10:31:57.652837+09:00",
+    "evaluation_batch": 1372,
+    "evaluation_batches": 2225
+  },
+  "formulas": {
+    "relative_reduction_percent": "100 * (reference - target) / reference",
+    "delta_pp": "target - reference"
+  },
+  "caveats": [
+    "Batch240 is incomplete: 19LA/21LA through epoch45, 21DF through epoch40. No final50 result is inferred.",
+    "Per-dataset minima can come from different checkpoints, and test-minimum selection is descriptive, not independent model validation.",
+    "Old80 also differs in batch size and learning rate. Fifty-epoch local160 versus local240 differs in batch_size and output name only; global160 additionally changes model/loss.py.",
+    "Each successful run uses one seed. No statistical significance or causal generalization claim is supported.",
+    "Paper: batch30 and 150 epochs, not controlled against local runs.",
+    "Old80 21DF epoch80 and local160 21DF epoch50 are absent; global160 21DF epoch50 is verified in duplicate rank console output."
+  ],
+  "validation": {
+    "decimal_comparison_records_checked": 78,
+    "unique_finite_eer_points_and_minima": true,
+    "missing_final_metrics_retained_as_null": true,
+    "config_differences_and_current_console_alignment": true,
+    "visual_inspection": "PNG inspected: all three dataset panels, five bars per dataset, current partial trajectories, epoch labels, legends and qualifications legible; no clipping or overlap observed."
+  }
+}

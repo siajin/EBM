@@ -1,0 +1,21 @@
+{
+  "task": "Determine whether erroneous bona fide utterances in existing EBM embeddings concentrate along particular tangent residual directions",
+  "date_kst": "2026-11-11",
+  "status": "locked_before_analysis",
+  "spending_ceiling_usd": 0,
+  "resources": {"local_cpu_threads": 2, "gpu_calls": 0, "network_calls": 0, "remote_commands": 0, "time_limit_minutes": 30, "automatic_retries": 0},
+  "protected": "No current training source, process, snapshot, checkpoint, queue or server is read-modified or controlled. Existing local caches are read only; outputs use a new folder. Q embeddings remain unopened.",
+  "model": {"name": "archived EBM batch160 fixed epoch50", "checkpoint_sha256": "104873703a57cad98b686d770e0860e031a2cf9abef79b72668780c1660e0b24", "not_equivalent_to": ["current short32 batch240 training", "legacy240 epoch50", "B50"]},
+  "fit": "Centered covariance of uncentered tangent residuals from all 2580 T bona fide embeddings, using archived learned OC centroid; no target-fitted primary basis",
+  "primary_k": 8,
+  "sensitivity_k": [1, 2, 4, 16],
+  "error_rule": "Accept bona fide iff recomputed native cosine >= threshold; threshold selected once on V by minimum absolute FPR-FNR, tie lower FPR then higher threshold. Q/target labels not used to choose threshold, subspace, k or cutoffs.",
+  "primary_analysis": ["V source development (threshold resubstitution disclosed)", "DF_pilot fixed 20000 utterances", "21LA_pilot fixed pre-existing 20000-utterance metadata-only manifest"],
+  "supporting_analysis": ["19LA official eval", "21LA official eval", "DF official eval = disjoint pilot + remaining; overlapping with pilots and not independent replication"],
+  "metrics": ["Bona fide rejection counts under fixed V threshold", "DTRS parallel residual energy and scale-independent parallel energy ratio rho", "rho difference error minus accepted, unadjusted and stratified by duration x source x codec", "Speaker-cluster bootstrap 2000 replicates, seed fixed", "Direction mean resultant length and uncentered second-moment effective rank; equal-sample-size descriptive comparison", "Normal score deciles, duration groups and negative-score subgroup", "Individual Train residual PCs, sensitivity only; no target-directed axis selection"],
+  "duration_edges_seconds": [0, 1, 2, 3, 4, 6, 10, "infinity"],
+  "matching": "Error-weighted within-cell difference on common support, requiring >=1 error and >=2 accepted. Also report stricter speaker x duration x source x codec common support. Coverage and sparse groups disclosed.",
+  "checks": ["SHA of every consumed cache array/score/row/centroid file matches catalog before and after", "Same checkpoint and centroid across datasets", "UID uniqueness, shard order and label counts", "Finite embeddings and recomputed scores", "Tangent orthogonality and norm identity", "Independent energy via explicit projector on sample", "Synthetic same-score different-direction fixture", "No raw-norm claim as directional evidence", "No causal or DTRS efficacy conclusion from fixed embeddings"],
+  "deliverable": "Inline findings with scientific figure, inspectable derived CSV/JSON, reproducible CPU analysis script and concise local evidence notes",
+  "cleanup": "Foreground bounded local process exits on completion; no paid or remote resources, background watchers, new inference or model optimization."
+}

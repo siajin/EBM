@@ -1,0 +1,80 @@
+{
+  "regressions": [
+    {
+      "dataset": "21LA_pilot",
+      "condition": "R3-noise20",
+      "n": 20000,
+      "groups": 67,
+      "radius_log_coefficient": -0.47489044728510155,
+      "radius_coefficient_CI95": [
+        -0.5049585498488024,
+        -0.44462186517962654
+      ],
+      "shift_log_coefficient": 0.4937830302591054,
+      "R_squared": 0.7491360350844133,
+      "source_class_strata": [
+        "asvspoof::0",
+        "asvspoof::1"
+      ],
+      "median_angle": 18.37081385616537,
+      "fraction_angle_gt30_and_abs_score_change_lt001": 0.04475
+    },
+    {
+      "dataset": "21LA_pilot",
+      "condition": "R3-noise10",
+      "n": 20000,
+      "groups": 67,
+      "radius_log_coefficient": -0.22411766483518492,
+      "radius_coefficient_CI95": [
+        -0.2433991940913427,
+        -0.20495033197801948
+      ],
+      "shift_log_coefficient": 0.30112223881263417,
+      "R_squared": 0.6010477781637236,
+      "source_class_strata": [
+        "asvspoof::0",
+        "asvspoof::1"
+      ],
+      "median_angle": 28.36935845595551,
+      "fraction_angle_gt30_and_abs_score_change_lt001": 0.13665
+    },
+    {
+      "dataset": "21LA_pilot",
+      "condition": "R3-Opus32k_recompression",
+      "n": 20000,
+      "groups": 67,
+      "radius_log_coefficient": -1.0142916984736248,
+      "radius_coefficient_CI95": [
+        -1.0320220650595993,
+        -0.9960512710949709
+      ],
+      "shift_log_coefficient": 0.7582730112312527,
+      "R_squared": 0.8641163838094714,
+      "source_class_strata": [
+        "asvspoof::0",
+        "asvspoof::1"
+      ],
+      "median_angle": 3.537221995230932,
+      "fraction_angle_gt30_and_abs_score_change_lt001": 0.0
+    }
+  ],
+  "native_radius": {
+    "n": 20000,
+    "mean": 0.23854563754183933,
+    "median": 0.21002223653777952,
+    "p05": 0.07454148041458025,
+    "p95": 0.4453839522373875,
+    "max": 0.9999983692293712
+  },
+  "fraction_radius_below01": 0.07285,
+  "max_geometric_identity_error": 4.440892098500626e-16,
+  "float32_vs_float64_direction_chord": {
+    "n": 20000,
+    "mean": 3.3478587350884134e-07,
+    "median": 2.751118525545749e-07,
+    "p05": 1.2558277224510086e-07,
+    "p95": 7.819405678951623e-07,
+    "max": 2.409821528711182e-06
+  },
+  "distinction": "Log coefficient is descriptive geometry, not proof that normalization causes classification errors or that a reliability gate helps."
+}

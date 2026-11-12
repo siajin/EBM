@@ -1,0 +1,208 @@
+{
+  "training_directories": [
+    {
+      "name": "EBM",
+      "models": [
+        "BestCLS_65_21DF.pt",
+        "BestCLS_70_21DF.pt",
+        "BestCLS_75_21DF.pt",
+        "BestCLS_80_21DF.pt"
+      ],
+      "metrics": [
+        "metric/19LA/EER.txt",
+        "metric/21DF/EER.txt",
+        "metric/21LA/EER.txt"
+      ]
+    },
+    {
+      "name": "EBM_e20_bs240_lr1e5_baseline240_speed08_12_crop20_20261111_v2",
+      "models": [],
+      "metrics": []
+    },
+    {
+      "name": "EBM_e50_bs160_lr1e5",
+      "models": [
+        "BestCLS_15_21DF.pt",
+        "BestCLS_20_21DF.pt",
+        "BestCLS_25_21DF.pt",
+        "BestCLS_30_21DF.pt",
+        "BestCLS_35_21DF.pt",
+        "BestCLS_40_21DF.pt",
+        "BestCLS_45_21DF.pt",
+        "BestCLS_50_21DF.pt"
+      ],
+      "metrics": [
+        "metric/19LA/EER.txt",
+        "metric/21DF/EER.txt",
+        "metric/21LA/EER.txt"
+      ]
+    },
+    {
+      "name": "EBM_e50_bs160_lr1e5_bpl_global",
+      "models": [
+        "BestCLS_15_21DF.pt",
+        "BestCLS_20_21DF.pt",
+        "BestCLS_25_21DF.pt",
+        "BestCLS_30_21DF.pt",
+        "BestCLS_35_21DF.pt",
+        "BestCLS_40_21DF.pt",
+        "BestCLS_45_21DF.pt",
+        "BestCLS_50_21DF.pt"
+      ],
+      "metrics": [
+        "metric/19LA/EER.txt",
+        "metric/21DF/EER.txt",
+        "metric/21LA/EER.txt"
+      ]
+    },
+    {
+      "name": "EBM_e50_bs240_lr1e5",
+      "models": [
+        "BestCLS_15_21DF.pt",
+        "BestCLS_20_21DF.pt",
+        "BestCLS_25_21DF.pt",
+        "BestCLS_30_21DF.pt",
+        "BestCLS_35_21DF.pt",
+        "BestCLS_40_21DF.pt",
+        "BestCLS_45_21DF.pt",
+        "BestCLS_50_21DF.pt"
+      ],
+      "metrics": [
+        "metric/19LA/EER.txt",
+        "metric/21DF/EER.txt",
+        "metric/21LA/EER.txt"
+      ]
+    },
+    {
+      "name": "EBM_e50_bs240_lr1e5_B_zeropad_short303",
+      "models": [
+        "CLS_10.pt",
+        "CLS_15.pt",
+        "CLS_20.pt",
+        "CLS_25.pt",
+        "CLS_30.pt",
+        "CLS_35.pt",
+        "CLS_40.pt",
+        "CLS_45.pt",
+        "CLS_5.pt",
+        "CLS_50.pt",
+        "TrainState_10.pt",
+        "TrainState_15.pt",
+        "TrainState_20.pt",
+        "TrainState_25.pt",
+        "TrainState_30.pt",
+        "TrainState_35.pt",
+        "TrainState_40.pt",
+        "TrainState_45.pt",
+        "TrainState_5.pt",
+        "TrainState_50.pt"
+      ],
+      "metrics": [
+        "metric/V/EER.txt"
+      ]
+    },
+    {
+      "name": "EBM_e50_bs240_lr1e5_C_nativeLong_short303",
+      "models": [
+        "CLS_10.pt",
+        "CLS_15.pt",
+        "CLS_20.pt",
+        "CLS_25.pt",
+        "CLS_30.pt",
+        "CLS_35.pt",
+        "CLS_40.pt",
+        "CLS_45.pt",
+        "CLS_5.pt",
+        "CLS_50.pt",
+        "TrainState_10.pt",
+        "TrainState_15.pt",
+        "TrainState_20.pt",
+        "TrainState_25.pt",
+        "TrainState_30.pt",
+        "TrainState_35.pt",
+        "TrainState_40.pt",
+        "TrainState_45.pt",
+        "TrainState_5.pt",
+        "TrainState_50.pt"
+      ],
+      "metrics": [
+        "metric/V/EER.txt"
+      ]
+    },
+    {
+      "name": "EBM_e50_bs240_lr1e5_OC_BPL_coverage_activity_20261110",
+      "models": [],
+      "metrics": []
+    },
+    {
+      "name": "EBM_e50_bs240_lr1e5_OC_BPL_coverage_activity_20261110_mid19LA",
+      "models": [
+        "CLS_10.pt",
+        "CLS_15.pt",
+        "CLS_20.pt",
+        "CLS_5.pt",
+        "TrainState_10.pt",
+        "TrainState_15.pt",
+        "TrainState_20.pt",
+        "TrainState_5.pt"
+      ],
+      "metrics": [
+        "metric/19LA/EER.txt"
+      ]
+    },
+    {
+      "name": "EBM_e50_bs240_lr1e5_original240_OC_BPL43_short32_LE2_20261111_v2",
+      "models": [
+        "CLS_5.pt",
+        "TrainState_5.pt"
+      ],
+      "metrics": []
+    },
+    {
+      "name": "EBM_e50_bs320_lr1e5",
+      "models": [],
+      "metrics": []
+    }
+  ],
+  "active_progress_read_only": {
+    "train_progress_rank1.json": {
+      "epoch": 7,
+      "batch": 30,
+      "bona": 12,
+      "eligible": 1,
+      "bpl43_pairs": 144,
+      "bpl32_pairs": 1,
+      "bpl32_weight": 0.041666666666666664,
+      "bpl32": 0.48569971323013306,
+      "bpl43_eligible": 0.7382277846336365,
+      "loss1": 0.7859495282173157,
+      "loss2": 0.912859320640564,
+      "backend_updates": 678,
+      "center_updates": 678,
+      "logical_steps": 678,
+      "updated_unix": 1794375822.3423934,
+      "smoke": false,
+      "oc_batch": 120
+    },
+    "train_progress_rank0.json": {
+      "epoch": 7,
+      "batch": 30,
+      "bona": 12,
+      "eligible": 1,
+      "bpl43_pairs": 144,
+      "bpl32_pairs": 1,
+      "bpl32_weight": 0.041666666666666664,
+      "bpl32": 0.648343026638031,
+      "bpl43_eligible": 1.1280858516693115,
+      "loss1": 1.129773497581482,
+      "loss2": 0.997865617275238,
+      "backend_updates": 678,
+      "center_updates": 678,
+      "logical_steps": 678,
+      "updated_unix": 1794375822.3429637,
+      "smoke": false,
+      "oc_batch": 120
+    }
+  },
+  "new_paired_queue_cancelled": true
+}

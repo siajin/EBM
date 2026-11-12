@@ -1,0 +1,46 @@
+{
+  "scope": "Completed fixed original24050/B50 repetition intervention, new noise0 scores; no new GPU/model changes",
+  "key_results": {
+    "A10_A11_share_of_legacy_spoof_miss_reduction_at_fixed_native_dev": 0.7867361219095008,
+    "fraction_legacy_normal_wrap_errors_in_repeat_group_at_fixed_native_dev": 0.7488584474885844,
+    "fraction_normal_population_requiring_repeat": 0.7832748380129589,
+    "seam_smoothing_rescue": [
+      {
+        "crop_seconds": 1,
+        "repeat_score_delta": -0.8583793708130543,
+        "seam_smoothing_delta": 0.0325822230552148,
+        "fraction_of_mean_score_drop_recovered": 0.03795783561801237
+      },
+      {
+        "crop_seconds": 2,
+        "repeat_score_delta": -0.5035015538160224,
+        "seam_smoothing_delta": 0.0383220226649427,
+        "fraction_of_mean_score_drop_recovered": 0.07611103158371867
+      }
+    ]
+  },
+  "supported": [
+    "Input repetition changes frozen-model scores and error transitions",
+    "Original240 and B show different responses; original240 full21LA EER improves with wrap, B worsens",
+    "Original240 natural<=2s normals are adversely shifted at fixed native threshold; retuned dev reduces much of false-reject increase",
+    "Artificial1/2s crops from long normals remain harmed even at wrapped-dev threshold; smoothing only partly rescues scores",
+    "Class-conditional duration composition materially changes EER even preserving attack x codec marginals"
+  ],
+  "not_identified": [
+    "Whether training short-spoof prevalence caused the learned response",
+    "Whether periodicity alone, temporal context, boundary artifacts or their interactions explain the score response",
+    "Whether ongoing BPL32 training improves EER; this diagnosis uses only prior fixed50 models",
+    "C response was not measured in new paired interventions"
+  ],
+  "essential_limits": [
+    "EER normalizes each class, so raw spoof class size is not a mechanical cause",
+    "Fixed-threshold error counts are diagnostic and condition-matched dev is a separate operating policy",
+    "New diagnostic ASP noise0 differs from original noise1e-5 benchmarks; do not mix them",
+    "Weighted results are metadata sensitivity on145097 common-support21LA items;3079 spoof<=1s without bona support excluded",
+    "Long-original probe is metadata-selected128normal+208spoof,2crops per source averaged; not a population EER cohort",
+    "Speaker bootstrap intervals in saved summaries are exploratory individual95%, not multiplicity corrected",
+    "B and original240 training differ beyond repetition policy; not a clean training ablation"
+  ],
+  "current_BPL32_interpretation": "Only native<=32000 normal sources get3s/2s term; first2s of augmented3s wrap contains all original source samples, unlike aggressive long-source cropping. Benefit remains empirical; do not change active frozen training based on this analysis.",
+  "current_BPL32_identification_limit": "Current candidate both halves eligible L43 anchor mass and adds L32. Any gain cannot isolate L32 alignment from L43 reweighting without a corresponding no-L32 ablation."
+}

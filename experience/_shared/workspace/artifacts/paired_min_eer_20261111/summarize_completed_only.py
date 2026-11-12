@@ -1,0 +1,126 @@
+"""Summarize existing completed evidence only. No GPU, inference or new fitting."""
+import hashlib
+import json
+from pathlib import Path
+
+import pandas as pd
+
+HERE = Path(__file__).resolve().parent
+PROJECT = HERE.parents[1]
+BC = PROJECT/'artifacts/ebm_B_C_checkpoints_20261109'
+REP = PROJECT/'artifacts/repetition_shortcut_20261111/reviewed_analysis'
+OUT = PROJECT/'docs/experiments/ebm_completed_evidence_interpretation_20261111.md'
+
+
+def read(path): return json.loads(path.read_text(encoding='utf-8'))
+
+
+def main():
+    metrics = read(BC/'metrics.json')
+    historical = read(BC/'dataset_minimum_comparison_pending_DF.json')['legacy240']
+    minimum = []
+    for phase in ['19LA', '21LA', '21DF']:
+        for family in ['B', 'C']:
+            options = [(v['EER_percent'], int(k.split('_e')[1])) for k, v in metrics[phase].items() if k.startswith(family+'_e')]
+            assert len(options) == 10
+            value, epoch = min(options)
+            minimum.append(dict(phase=phase, family=family, eer_percent=value, epoch=epoch, candidates=10, condition='native'))
+    for phase, row in historical.items():
+        minimum.append(dict(phase=phase, family='legacy240', eer_percent=row['EER_percent'], epoch=row['epoch'], candidates=8, condition='historical_repeat'))
+    native_summary = pd.read_csv(BC/'LA_analysis/epoch_summary.csv')
+    for row in minimum:
+        if row['family'] in ('B', 'C') and row['phase'] != '21DF':
+            match = native_summary[(native_summary.model == row['family']) & (native_summary.phase == row['phase']) & (native_summary.epoch == row['epoch'])]
+            assert len(match) == 1 and abs(match.iloc[0].EER_percent-row['eer_percent']) < 1e-10
+    full = pd.read_csv(REP/'independent_full_eer.csv')
+    operating = pd.read_csv(REP/'operating_points_21LA.csv')
+    weighted = pd.read_csv(REP/'weighted_eer_21LA.csv')
+    interpretation = read(REP/'interpretation.json')
+    coverage = read(PROJECT/'artifacts/ebm_coverage_e20_eval_20261110/comparison.json')
+    current = read(HERE/'current_eval5_validation.json')
+    assert current['status'] == 'passed' and current['independent_EER_error_pp'] == 0
+    lines = ['# 완료된 실험만으로 본 반복·길이·BPL 가설', '',
+        '현재 short32 학습은 유지했다. 새 공통 평가 watcher만 실행 전에 해제했으며, 추가 음성 추론·모델 학습은 하지 않았다.',
+        '아래는 완료된 평가·진단의 재정리다. 각 표의 입력 조건·epoch·잡음 조건을 구분한다.', '',
+        '## 실험 1. 기록된 체크포인트 최소 EER', '',
+        '|집합|기존240 반복: EER% / epoch|B 비반복: EER% / epoch|C 비반복: EER% / epoch|', '|---|---:|---:|---:|']
+    for phase in ['19LA', '21LA', '21DF']:
+        cells = []
+        for family in ['legacy240', 'B', 'C']:
+            row = next(r for r in minimum if r['phase'] == phase and r['family'] == family)
+            cells.append(f"{row['eer_percent']:.6f} / {row['epoch']}")
+        lines.append('|'+phase+'|'+'|'.join(cells)+'|')
+    lines += ['', '기존240은 보존15~50epoch8개, B/C는5~50epoch10개다. 기존240의 입력은 과거 반복 파이프라인이고 B/C는 같은 비반복 입력·ASP 잡음1e-5다. 따라서 이 표로 순수 학습법의 우열을 확정할 수 없다. 집합별 사후 최솟값이며 하나의 공통 checkpoint 성능도 아니다.',
+        '해석: B/C끼리는 최소 EER 기준으로 B가 세 집합 모두 낮다. C의 long 학습 상한 해제가 전반적 개선으로 이어진 근거는 없다. 기존240은 LA에서 낮고 B/C는 DF에서 낮지만, 입력 조건 차이를 함께 봐야 한다.', '',
+        '## 실험 2. 동일 모델에서 반복 입력만 바꾸기', '',
+        '완료된 고정50epoch·21LA 전체148,176개·ASP 잡음0의 paired 진단이다. 앞64,600 상한·같은 원음·같은 OC 중심을 사용했다.', '',
+        '|모델|비반복 EER%|반복 EER%|반복-비반복 %p|', '|---|---:|---:|---:|']
+    for family in ['legacy240', 'B']:
+        g = full[(full.model == family) & (full.phase == '21LA')]
+        a = float(g[g.condition == 'native'].iloc[0].eer); b = float(g[g.condition == 'wrap4'].iloc[0].eer)
+        lines.append(f'|{family}|{a:.6f}|{b:.6f}|{b-a:+.6f}|')
+    lines += ['', '해석: 반복은 기존240에서는 유리하고 B에서는 불리하다. 반복이 보편적인 스푸프 단서라는 단순 설명보다 모델별 입력 의존성이 중요하다. 반복을 없앤 평가의 악화를 곧 학습 자체의 악화로 해석하면 안 된다. C·현재 short32의 paired 반복 진단은 아직 없다. 이 표는 최소 EER가 아니라 동일50epoch 개입 결과다.', '',
+        '## 실험 3. 자연적으로 짧은 정상의 오탐과 임계값', '',
+        '21LA 원음≤2초: 정상571개·스푸프49,193개. 기존24050을 사용했다.', '',
+        '|입력·임계값|정상 거부|스푸프 누락|', '|---|---:|---:|']
+    for condition, policy, title in [('native', 'fixed_native_dev', '비반복·native dev 임계값'),
+        ('wrap4', 'fixed_native_dev', '반복·같은 native dev 임계값'),
+        ('wrap4', 'condition_matched_dev', '반복·반복 dev 임계값')]:
+        g = operating[(operating.model == 'legacy240') & (operating.condition == condition) & (operating.threshold_policy == policy) & (operating.group == 'le2')]
+        cells = []
+        for label in [1, 0]:
+            r = g[g.label == label].iloc[0]
+            cells.append(f'{int(r.errors)}/{int(r.n)} ({r.error_percent:.4f}%)')
+        lines.append('|'+title+'|'+'|'.join(cells)+'|')
+    lines += ['', '해석: 반복이 짧은 정상에 불리한 점수 이동을 만드는 것은 관측됐다. 동시에 스푸프 누락을 크게 줄여 전체 EER는 개선됐다. 정상 오탐 증가의 상당 부분은 임계값 재설정에 민감하다. 따라서 정상 오탐과 스푸프 누락·EER를 함께 봐야 한다.',
+        '또한 반복 필요 집단은 정상 전체의78.33%다. 고정native 임계값에서 반복 후 정상 오류의74.89%가 이 집단에 있다는 사실만으로 과대표집된 위험을 입증하지 못한다. 같은 집단의 오류율이3.24→8.48%로 바뀐 paired 결과가 더 직접적인 근거다.', '',
+        '## 실험 4. 길이·공격·코덱 구성 통제', '',
+        '21LA 원음≤2초 비율은 정상3.8539%, 스푸프36.8874%다. Train은 정상4.2248%, 스푸프14.0658%다. 다만 Train에서4.0375초 미만이라 반복이 필요한 비율은 정상77.6744%, 스푸프72.8289%로 반대 방향이다. 반복 유무와 반복 횟수·주기를 구별해야 한다.',
+        '정상과 스푸프가 모두 있는 길이 지지집합145,097개에서, 스푸프 공격×코덱 비율을 보존하고 길이를 정상 분포에 맞춰 재가중했다. 정상 없는≤1초 스푸프3,079개는 양쪽 비교에서 제외했다.', '',
+        '|모델·비반복|공통 지지집합 원래 EER%|길이 재가중 EER%|', '|---|---:|---:|']
+    for family in ['legacy240', 'B']:
+        g = weighted[(weighted.model == family) & (weighted.condition == 'native')]
+        a = float(g[g.policy == 'common_support_observed'].iloc[0].eer)
+        b = float(g[g.policy == 'duration_attack_codec_preserved'].iloc[0].eer)
+        lines.append(f'|{family}|{a:.6f}|{b:.6f}|')
+    share = interpretation['key_results']['A10_A11_share_of_legacy_spoof_miss_reduction_at_fixed_native_dev']*100
+    lines += ['', f'기존240에서 반복으로 회복된 스푸프 누락의 {share:.2f}%는 A10·A11이 차지했다(고정native dev 임계값).',
+        '해석: 평가 길이 구성과 특정 공격이 성능에 크게 관여한다. 하지만 B의 재가중 결과는 악화돼 모든 모델에 같은 방향으로 작용하지 않는다. 길이별 클래스 개수 차이가 EER를 기계적으로 올리는 것은 아니며, 길이별 난이도·공격 구성이 매개한다. 학습에서 짧은 스푸프가 많았기 때문에 숏컷이 생겼다는 인과관계는 아직 입증하지 못했다.', '',
+        '## 실험 5. 같은 crop의 반복량·접합부 통제', '',
+        '긴 원음336개(정상128·스푸프208), head/tail1초·2초와 반복2/3/4.0375초·접합 smoothing·sham·reflect·자연4초 대조31조건을 완료했다. head/tail은 원음별로 평균했다. 기존240 정상 점수의 변화는 다음과 같다. 음수는 스푸프 방향이다.', '',
+        '|crop|반복2초 Δscore|반복3초 Δscore|반복4.0375초 Δscore|', '|---|---:|---:|---:|',
+        '|1초|−0.152219|−0.494815|−0.858379|', '|2초|0 (동일 입력)|−0.333210|−0.503502|', '',
+        '접합 smoothing은1초 crop의 평균 점수 하락 중3.80%, 2초 crop에서는7.61%만 회복했다. 같은 처리는 자연4초 정상도 손상시켰고 reflect도 해결책이 되지 않았다.',
+        '해석: 같은 내용의 반복을 늘려도 점수가 스푸프 방향으로 움직이므로 정보량 부족만으로 설명하기 어렵다. 접합 불연속만이 원인이라는 설명도 부족하다. 반복 주기성·시간 문맥·접합의 상호작용을 분리해 확정한 것은 아니다. 긴 원음의 인공 crop 결과를 자연 단음에 그대로 일반화할 수 없다.', '',
+        '## 실험 6. 가변길이·조각 학습', '',
+        '이전 coverage/activity 가변길이 학습은19LA의5·10·15·20epoch에서 각각2.622022·2.927272·2.961711·2.708118%였다. 관측 최소는5epoch2.622022%다. 21LA·DF는20epoch 한 점만 평가돼 각각8.908218%,2.286637%다. 이 둘은 여러 체크포인트의 최소 EER가 아니다.',
+        '해석: 해당 가변길이·조각·sampling·activity·BPL pairing을 합친 구성에서 LA 성능이 좋지 않았다. 강제로 짧게 만든 조각이 자연 단음의 대체가 된다는 가설을 지지하지 않는다. 여러 요소를 함께 바꿨으므로 crop 하나만 원인이라고 확정할 수도 없다.', '',
+        '## 실험 7. 속도 변형 알고리즘 대조', '',
+        '완료된512개 phase-vocoder 진단과 같은64개 atempo 대조에서, B의 정상32개 중 거부 수는 원본2개,0.8배 phase-vocoder31개,0.8배 atempo2개였다. atempo의 전체→약4초 변형은7개였다. 소표본 동결모델 진단이며 재학습 성능이 아니다.',
+        '해석: 길이뿐 아니라 변형 알고리즘 자체의 흔적이 판정을 크게 바꾼다. 강한 전 음성4초 정규화나 임의 crop을 안전한 정보 보존 변형이라고 가정할 근거는 부족하다. atempo의 길이 오차가 있어 exact4초의 동등 대조도 아니다.', '',
+        '## 실험 8. 양성 전용 BPL pilot와 현재 L3,2', '',
+        '이전 양성 전용 BPL108update pilot는 층화dev512에서 EER48.046875→30.078125%, 같은128개20dB 백색잡음에서는59.375→42.1875%였다. OC 없이 수행한 소표본 pilot이며 RawBoost 유형8이 원본과 달랐다. 표현 분산91.63% 수축도 관측됐다. 따라서 정식 OC+BPL 구성의 성능 개선 근거로 사용하지 않는다.',
+        f'현재 원본240+조건부L3,2 학습은 첫5epoch19LA 전체 EER **{current["eer_percent"]:.6f}%**가 완료됐고 독립ROC 검산 오차0이다. 아직 체크포인트1개이며21LA·DF 결과는 없다.',
+        '해석: 원음≤2초 정상의2초 view는 전체 원음 내용을 보존하므로 긴 원음의 강제2초 crop과는 다른 접근이다. 설계의 논리적 근거는 있지만 실제 L3,2 효과는 미확정이다. L43 비중 감소와 L32 추가가 동시에 적용돼 나중에 개선돼도 어느 항의 효과인지 독립 분리되지 않는다.', '',
+        '## 현재 근거로 가능한 판단', '',
+        '관측된 핵심은 모델마다 다른 반복 반응, 특정 공격·길이 구성, 변형 자체의 영향이다. 반복으로 정상 오탐이 늘어도 스푸프 회복이 더 커 EER는 좋아질 수 있다. 자연 단음과 긴 원음의 crop은 같지 않지만, crop 학습이 항상 해롭다거나 반복 주기성만이 유일 원인이라는 결론까지는 낼 수 없다.',
+        '기존240의 비반복 전체 체크포인트 최소값, B/C의 반복 전체 체크포인트 최소값, 현재 short32의 최종 결과는 기존 완료 자료에 없다. 그 부분은 빈칸으로 남긴다.', '',
+        '## 근거 파일', '',
+        '- `artifacts/ebm_B_C_checkpoints_20261109/{metrics.json,LA_analysis/epoch_summary.csv,LA_analysis/validation.json,dataset_minimum_comparison_pending_DF.json}`: 과거 최소표의 DF pending은 최신metrics로 보완했다.',
+        '- `artifacts/repetition_shortcut_20261111/reviewed_analysis/`: full EER·임계값 오류·길이 재가중·공격·반복량·독립검산.',
+        '- `artifacts/ebm_coverage_e20_eval_20261110/comparison.json`: 중단된 이전 학습 평가.',
+        '- `docs/experiments/ebm_B_C_all_checkpoint_evaluation_20261109.md`: 속도 알고리즘 동일표본 대조.',
+        '- `artifacts/positive_only_bpl_20261110/state.json` 및 AGENTS 정정 기록: pilot 범위·제약.',
+        '- `artifacts/paired_min_eer_20261111/{current_eval5_validation.json,queue_cancelled.json}`: 현재 완료 평가 검산과 새 대기 취소 증거.']
+    OUT.write_text('\n'.join(lines)+'\n', encoding='utf-8')
+    sources = [BC/'metrics.json', BC/'dataset_minimum_comparison_pending_DF.json', BC/'LA_analysis/epoch_summary.csv',
+               REP/'independent_full_eer.csv', REP/'operating_points_21LA.csv', REP/'weighted_eer_21LA.csv',
+               REP/'interpretation.json', HERE/'current_eval5_validation.json', HERE/'queue_cancelled.json']
+    result = dict(status='completed_existing_evidence_only', minima=minimum,
+        current19LA_e5=current, new_inference_runs=0, new_training_runs=0, new_evaluation_queue_cancelled=True,
+        report=str(OUT.relative_to(PROJECT)), sources_sha256={str(p.relative_to(PROJECT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sources})
+    (HERE/'completed_only_summary.json').write_text(json.dumps(result, indent=2, ensure_ascii=False)+'\n', encoding='utf-8')
+    print(json.dumps(dict(status=result['status'], report=result['report'], minima=minimum), ensure_ascii=False))
+
+
+if __name__ == '__main__': main()

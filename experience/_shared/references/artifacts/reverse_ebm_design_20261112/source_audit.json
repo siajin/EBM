@@ -1,0 +1,5711 @@
+{
+  "reference_commit": "10f3bcd057dc6a2ca687fbd5389ad6c9e15a3746",
+  "head": "cf199af03044c40837c08ce31d633e2c048bde08",
+  "reference_file_count": 38,
+  "reference": {
+    ".gitignore": {
+      "bytes": 1634,
+      "lines": 150,
+      "sha256": "5c97c214558e316f4f499604e2885343e4e52015799fc5e19e9f860babf944f7"
+    },
+    "Dockerfile": {
+      "bytes": 532,
+      "lines": 22,
+      "sha256": "e8f7adfa82a915ac0883974e8d9546394429a9c97ce5e08c7fbfef1bbf65516b"
+    },
+    "LICENSE": {
+      "bytes": 1070,
+      "lines": 21,
+      "sha256": "e850eabeb4ee31872aadd4f95cb4cc5cf1dcc2af25c3e9170bed6f6e527e08dd"
+    },
+    "README.md": {
+      "bytes": 8895,
+      "lines": 190,
+      "sha256": "eaa6fdba1977afdbed3ecf2f9545776d581f7d892d0bc93f221485525bbe6295"
+    },
+    "arguments.py": {
+      "bytes": 2364,
+      "lines": 83,
+      "sha256": "c5f54a6b0201820dedcb85eb04c7e8127333d359cf01927a70c0c442640369c0",
+      "definitions": [
+        {
+          "name": "get_args",
+          "line": 4,
+          "end_line": 83
+        }
+      ],
+      "imports": [
+        "itertools",
+        "os"
+      ]
+    },
+    "data_loaders.py": {
+      "bytes": 8183,
+      "lines": 219,
+      "sha256": "411e294692207b8f434cc49769cbd052abb51316d4a17fe555c71459d7eea8f6",
+      "definitions": [
+        {
+          "name": "separate_bona_spoof",
+          "line": 11,
+          "end_line": 19
+        },
+        {
+          "name": "get_loaders",
+          "line": 22,
+          "end_line": 90
+        },
+        {
+          "name": "TrainSet",
+          "line": 92,
+          "end_line": 194
+        },
+        {
+          "name": "EnrollmentSet",
+          "line": 197,
+          "end_line": 218
+        }
+      ],
+      "imports": [
+        "data_processing",
+        "data_processing.augmentation.raw_boost",
+        "numpy",
+        "random",
+        "soundfile",
+        "torch.utils.data"
+      ]
+    },
+    "data_processing/__init__.py": {
+      "bytes": 164,
+      "lines": 3,
+      "sha256": "e90c884ba77e163b8c8377f3fa9ab5442f279c16f726e2fc939c57468733816e",
+      "definitions": [],
+      "imports": [
+        "augmentation.augmentation",
+        "augmentation.codec_aug",
+        "augmentation.wav_read_functions"
+      ]
+    },
+    "data_processing/augmentation/augmentation.py": {
+      "bytes": 3242,
+      "lines": 83,
+      "sha256": "82c7ebd4fd24fb58f7021b82101233edb185d6684eb85c5026febd2f17d32faa",
+      "definitions": [
+        {
+          "name": "WaveformAugmetation",
+          "line": 9,
+          "end_line": 82
+        }
+      ],
+      "imports": [
+        "random",
+        "torch",
+        "torch.nn",
+        "torch.nn.functional",
+        "torch_audiomentations",
+        "torchaudio"
+      ]
+    },
+    "data_processing/augmentation/codec_aug.py": {
+      "bytes": 9036,
+      "lines": 221,
+      "sha256": "4dbb894e994af786926cc5bdcfead9e1a3cf742bfc15a0a9ea62b7a9803f828e",
+      "definitions": [
+        {
+          "name": "convert_audio_on_the_fly_16K",
+          "line": 9,
+          "end_line": 64
+        },
+        {
+          "name": "alaw_compress",
+          "line": 66,
+          "end_line": 72
+        },
+        {
+          "name": "ulaw_compress",
+          "line": 74,
+          "end_line": 78
+        },
+        {
+          "name": "resample_audio",
+          "line": 80,
+          "end_line": 85
+        },
+        {
+          "name": "convert_audio_to_alaw",
+          "line": 88,
+          "end_line": 100
+        },
+        {
+          "name": "convert_audio_to_ulaw",
+          "line": 102,
+          "end_line": 114
+        },
+        {
+          "name": "CodecAugmentationLight",
+          "line": 116,
+          "end_line": 168
+        },
+        {
+          "name": "codecAugmentationFull",
+          "line": 178,
+          "end_line": 202
+        },
+        {
+          "name": "save_audio",
+          "line": 205,
+          "end_line": 214
+        }
+      ],
+      "imports": [
+        "ffmpeg",
+        "io",
+        "numpy",
+        "pydub",
+        "random",
+        "scipy",
+        "soundfile"
+      ]
+    },
+    "data_processing/augmentation/raw_boost.py": {
+      "bytes": 2827,
+      "lines": 97,
+      "sha256": "e8a8944850f4305a042fceceb8daf7fdb52b627f7874206284ce88f7b220d33f",
+      "definitions": [
+        {
+          "name": "randRange",
+          "line": 13,
+          "end_line": 17
+        },
+        {
+          "name": "normWav",
+          "line": 19,
+          "end_line": 24
+        },
+        {
+          "name": "genNotchCoeffs",
+          "line": 28,
+          "end_line": 48
+        },
+        {
+          "name": "filterFIR",
+          "line": 51,
+          "end_line": 56
+        },
+        {
+          "name": "LnL_convolutive_noise",
+          "line": 59,
+          "end_line": 69
+        },
+        {
+          "name": "ISD_additive_noise",
+          "line": 73,
+          "end_line": 84
+        },
+        {
+          "name": "SSI_additive_noise",
+          "line": 89,
+          "end_line": 97
+        }
+      ],
+      "imports": [
+        "copy",
+        "numpy",
+        "scipy"
+      ]
+    },
+    "data_processing/augmentation/wav_read_functions.py": {
+      "bytes": 2681,
+      "lines": 96,
+      "sha256": "d81e376dd4fb060aef00208380fb429ca63841b6d7975f31fc012c0eae903cc4",
+      "definitions": [
+        {
+          "name": "rand_crop_audio",
+          "line": 5,
+          "end_line": 32
+        },
+        {
+          "name": "rand_crop_read",
+          "line": 34,
+          "end_line": 64
+        },
+        {
+          "name": "linspace_crop_read",
+          "line": 66,
+          "end_line": 84
+        },
+        {
+          "name": "_pad_wav",
+          "line": 86,
+          "end_line": 96
+        }
+      ],
+      "imports": [
+        "numpy",
+        "random",
+        "soundfile"
+      ]
+    },
+    "dataset/ASVspoof2019_la_eval.py": {
+      "bytes": 998,
+      "lines": 31,
+      "sha256": "843642f72871b89781ede23998c9456b21b0415bbeae340bbe8d0c36beea2c35",
+      "definitions": [
+        {
+          "name": "Trial",
+          "line": 5,
+          "end_line": 9
+        },
+        {
+          "name": "ASVspoof2019_LA_Eval",
+          "line": 11,
+          "end_line": 29
+        }
+      ],
+      "imports": [
+        "dataclasses",
+        "os"
+      ]
+    },
+    "dataset/ASVspoof2019_la_train.py": {
+      "bytes": 2431,
+      "lines": 69,
+      "sha256": "bd98462e9e3f6da6f1e9a4f439761d4ec67ca625cd82aa7fcd6b07412953da2b",
+      "definitions": [
+        {
+          "name": "Item",
+          "line": 5,
+          "end_line": 8
+        },
+        {
+          "name": "Trial",
+          "line": 11,
+          "end_line": 15
+        },
+        {
+          "name": "ASVspoof2019_LA_Train",
+          "line": 17,
+          "end_line": 66
+        }
+      ],
+      "imports": [
+        "dataclasses",
+        "os"
+      ]
+    },
+    "dataset/ASVspoof2021_df_eval.py": {
+      "bytes": 968,
+      "lines": 32,
+      "sha256": "422b4e0cf14ae1232e8ba918141d36c68b9057c311bafb6c541c7a80e942c4a7",
+      "definitions": [
+        {
+          "name": "Trial",
+          "line": 5,
+          "end_line": 8
+        },
+        {
+          "name": "ASVspoof2021_DF_Eval",
+          "line": 10,
+          "end_line": 30
+        }
+      ],
+      "imports": [
+        "dataclasses",
+        "os"
+      ]
+    },
+    "dataset/ASVspoof2021_la_eval.py": {
+      "bytes": 1094,
+      "lines": 35,
+      "sha256": "18c2a1a19d00d2e6eaf417ad3f0707434516f66e999cb013f62968b266e0f235",
+      "definitions": [
+        {
+          "name": "Trial",
+          "line": 5,
+          "end_line": 8
+        },
+        {
+          "name": "ASVspoof2021_LA_Eval",
+          "line": 10,
+          "end_line": 31
+        }
+      ],
+      "imports": [
+        "dataclasses",
+        "os"
+      ]
+    },
+    "dataset/__init__.py": {
+      "bytes": 221,
+      "lines": 4,
+      "sha256": "3534dcaa88978f59714243b6f0e64bfb2f57f0c58fb4e1511234ea8ee70723dd",
+      "definitions": [],
+      "imports": [
+        "ASVspoof2019_la_eval",
+        "ASVspoof2019_la_train",
+        "ASVspoof2021_df_eval",
+        "ASVspoof2021_la_eval"
+      ]
+    },
+    "docker_build.sh": {
+      "bytes": 32,
+      "lines": 1,
+      "sha256": "cd244e9001469cd3ab14707f468f310255b5325719891ce83d85d34ec6e079d8"
+    },
+    "docker_run.sh": {
+      "bytes": 147,
+      "lines": 4,
+      "sha256": "cc5a923c65bcc4109e3dd62d5d0368fd3a6488c2deb593742badf805d7895ab2"
+    },
+    "docs/CONTROL_B.md": {
+      "bytes": 2909,
+      "lines": 45,
+      "sha256": "108ca9bac9b7a43e8b11b9da016f6dc9c15e227be5494b5374fd8bb5b4d42535"
+    },
+    "docs/RUN_BASELINE240_20261106.md": {
+      "bytes": 1666,
+      "lines": 29,
+      "sha256": "8843d381a2c9f334eb240ca25619f46adf7537b31859452e0fc95546c9a449eb"
+    },
+    "docs/SERVER_BASELINE.md": {
+      "bytes": 1357,
+      "lines": 24,
+      "sha256": "48270b84c719ce6f57412b923da89aaa18c216b776a3ccf6463e18918246787d"
+    },
+    "docs/WORKFLOW.md": {
+      "bytes": 1134,
+      "lines": 18,
+      "sha256": "9cbe234904082e59b3a98f34ab084f0af0482870e0a2a879249d496227dffc25"
+    },
+    "logger/__init__.py": {
+      "bytes": 123,
+      "lines": 4,
+      "sha256": "ceaf8c7f0f309f2489a88b7376bef13952d3a735a1b2b393a34797f796d21c3d",
+      "definitions": [],
+      "imports": [
+        "local",
+        "logger",
+        "neptune",
+        "wandb"
+      ]
+    },
+    "logger/interface.py": {
+      "bytes": 449,
+      "lines": 26,
+      "sha256": "8b1c23931a24a9e1967a6ec479e2a8c81cee13c8efc9458fd044ba6af936848e",
+      "definitions": [
+        {
+          "name": "ExperimentLogger",
+          "line": 3,
+          "end_line": 26
+        }
+      ],
+      "imports": [
+        "abc"
+      ]
+    },
+    "logger/local.py": {
+      "bytes": 2657,
+      "lines": 98,
+      "sha256": "fbbce7ae888ec3be63e6320668dac9792f4d14d394b1a402afde1e124aee1871",
+      "definitions": [
+        {
+          "name": "LocalLogger",
+          "line": 10,
+          "end_line": 98
+        }
+      ],
+      "imports": [
+        "interface",
+        "os",
+        "shutil",
+        "threading",
+        "time",
+        "torch"
+      ]
+    },
+    "logger/logger.py": {
+      "bytes": 3355,
+      "lines": 129,
+      "sha256": "3cf192ae21f819e9dbf48b8e16dc42f49dce1894ac0e4c16f2b3e8865d56ca25",
+      "definitions": [
+        {
+          "name": "Logger",
+          "line": 8,
+          "end_line": 129
+        }
+      ],
+      "imports": [
+        "interface",
+        "local",
+        "neptune",
+        "os",
+        "wandb"
+      ]
+    },
+    "logger/neptune.py": {
+      "bytes": 1282,
+      "lines": 47,
+      "sha256": "a5905325f55b7ecf31a01f84814e33cee777e0baa976a57d760b5c4ca723f9db",
+      "definitions": [
+        {
+          "name": "NeptuneLogger",
+          "line": 7,
+          "end_line": 47
+        }
+      ],
+      "imports": [
+        "interface",
+        "neptune.new",
+        "os",
+        "torch"
+      ]
+    },
+    "logger/wandb.py": {
+      "bytes": 1136,
+      "lines": 49,
+      "sha256": "42c293e802b03fcc7d4764643cec147d8d6f8dfa7c0e4530c6eb3ad9fc0eadba",
+      "definitions": [
+        {
+          "name": "WandbLogger",
+          "line": 5,
+          "end_line": 49
+        }
+      ],
+      "imports": [
+        "interface",
+        "os",
+        "torch",
+        "wandb"
+      ]
+    },
+    "main.py": {
+      "bytes": 6458,
+      "lines": 187,
+      "sha256": "f23483e1a8d1bf98edfcd934e9c373821635b9226240677bb38644809a9c0326",
+      "definitions": [
+        {
+          "name": "set_experiment_environment",
+          "line": 28,
+          "end_line": 44
+        },
+        {
+          "name": "run",
+          "line": 46,
+          "end_line": 152
+        }
+      ],
+      "imports": [
+        "argparse",
+        "arguments",
+        "collections",
+        "data_loaders",
+        "data_processing",
+        "dataset",
+        "datetime",
+        "logger",
+        "model",
+        "numpy",
+        "os",
+        "random",
+        "torch",
+        "torch.nn",
+        "torchvision",
+        "train",
+        "transformers",
+        "utils",
+        "warnings"
+      ]
+    },
+    "model/__init__.py": {
+      "bytes": 80,
+      "lines": 3,
+      "sha256": "357dae54f8602f4fbbd07a9d6cc4d80126c7d7950f36ebdeccd511aabb2c1f56",
+      "definitions": [],
+      "imports": [
+        "b_linear",
+        "loss"
+      ]
+    },
+    "model/b_linear.py": {
+      "bytes": 6392,
+      "lines": 175,
+      "sha256": "c2cbcf898f1905c9c6ee8b20ef4514c4af7cb343abbf35e2dbd1fd526ad3459f",
+      "definitions": [
+        {
+          "name": "B_Linear",
+          "line": 10,
+          "end_line": 46
+        },
+        {
+          "name": "Bridge_module",
+          "line": 49,
+          "end_line": 104
+        },
+        {
+          "name": "PositionwiseFeedForward",
+          "line": 106,
+          "end_line": 118
+        },
+        {
+          "name": "SelfWeightedPooling",
+          "line": 120,
+          "end_line": 174
+        }
+      ],
+      "imports": [
+        "math",
+        "torch",
+        "torch.nn",
+        "torch.nn.functional"
+      ]
+    },
+    "model/loss.py": {
+      "bytes": 1924,
+      "lines": 62,
+      "sha256": "164be4161b57a7899ef7b289e005ab80d12da373922d57e9e021844ea828b1ac",
+      "definitions": [
+        {
+          "name": "BPL",
+          "line": 6,
+          "end_line": 23
+        },
+        {
+          "name": "OCSoftmax",
+          "line": 26,
+          "end_line": 62
+        }
+      ],
+      "imports": [
+        "math",
+        "torch",
+        "torch.nn",
+        "torch.nn.functional"
+      ]
+    },
+    "scheduler/cosine_warmup.py": {
+      "bytes": 3116,
+      "lines": 78,
+      "sha256": "ce81225049a4a31864752d6377e08ddb1f86a55f3e3a3860bd6fdb0ecb760d19",
+      "definitions": [
+        {
+          "name": "Scheduler",
+          "line": 7,
+          "end_line": 21
+        },
+        {
+          "name": "CosineAnnealingWarmUpRestarts",
+          "line": 24,
+          "end_line": 78
+        }
+      ],
+      "imports": [
+        "math",
+        "torch.optim.lr_scheduler"
+      ]
+    },
+    "scheduler/steplr.py": {
+      "bytes": 315,
+      "lines": 14,
+      "sha256": "7d3e1c96134c5f36588def6b08b643e74e9bc72bf809f71f98cf2e518026ffd1",
+      "definitions": [
+        {
+          "name": "Scheduler",
+          "line": 6,
+          "end_line": 14
+        }
+      ],
+      "imports": [
+        "torch"
+      ]
+    },
+    "train.py": {
+      "bytes": 10712,
+      "lines": 288,
+      "sha256": "b7b98a182a4946c479f477b7110e1c4a49be53ee6b6e89ef1b4bc4785374873f",
+      "definitions": [
+        {
+          "name": "ModelTrainer",
+          "line": 14,
+          "end_line": 288
+        }
+      ],
+      "imports": [
+        "PIL",
+        "copy",
+        "matplotlib.pyplot",
+        "os",
+        "scipy.interpolate",
+        "scipy.optimize",
+        "sklearn",
+        "torch",
+        "torch.distributed",
+        "tqdm",
+        "utils"
+      ]
+    },
+    "utils/__init__.py": {
+      "bytes": 53,
+      "lines": 2,
+      "sha256": "a17c6a58fe56069f873f8d22bae35354b4e3fd42b1b2cf330713a41c05a038fd",
+      "definitions": [],
+      "imports": [
+        "ddp_util",
+        "get_threshold"
+      ]
+    },
+    "utils/ddp_util.py": {
+      "bytes": 8771,
+      "lines": 316,
+      "sha256": "e3533ad2c29d166dbfabb486ab942ca999b63d8e8f77eed19ee87f38c7bd0b70",
+      "definitions": [
+        {
+          "name": "GatherLayer",
+          "line": 20,
+          "end_line": 37
+        },
+        {
+          "name": "get_world_size",
+          "line": 40,
+          "end_line": 45
+        },
+        {
+          "name": "get_rank",
+          "line": 48,
+          "end_line": 53
+        },
+        {
+          "name": "get_local_rank",
+          "line": 56,
+          "end_line": 66
+        },
+        {
+          "name": "get_local_size",
+          "line": 69,
+          "end_line": 79
+        },
+        {
+          "name": "is_main_process",
+          "line": 82,
+          "end_line": 83
+        },
+        {
+          "name": "synchronize",
+          "line": 86,
+          "end_line": 98
+        },
+        {
+          "name": "_get_global_gloo_group",
+          "line": 102,
+          "end_line": 110
+        },
+        {
+          "name": "_serialize_to_tensor",
+          "line": 113,
+          "end_line": 128
+        },
+        {
+          "name": "_pad_to_largest_tensor",
+          "line": 131,
+          "end_line": 155
+        },
+        {
+          "name": "all_gather",
+          "line": 158,
+          "end_line": 193
+        },
+        {
+          "name": "all_gather_tensor",
+          "line": 196,
+          "end_line": 229
+        },
+        {
+          "name": "gather",
+          "line": 231,
+          "end_line": 269
+        },
+        {
+          "name": "shared_random_seed",
+          "line": 276,
+          "end_line": 286
+        },
+        {
+          "name": "reduce_dict",
+          "line": 289,
+          "end_line": 316
+        }
+      ],
+      "imports": [
+        "functools",
+        "logging",
+        "numpy",
+        "pickle",
+        "torch",
+        "torch.distributed"
+      ]
+    },
+    "utils/get_threshold.py": {
+      "bytes": 172,
+      "lines": 6,
+      "sha256": "040adf607c2b62473ed42790e7c33d36305e58341614e3ef87ddbc852cfa0b83",
+      "definitions": [
+        {
+          "name": "get_threshold",
+          "line": 3,
+          "end_line": 6
+        }
+      ],
+      "imports": [
+        "math"
+      ]
+    }
+  },
+  "frozen": {
+    "main.py": {
+      "manifest_sha_match": true,
+      "reference_text_match": true,
+      "bytes": 6458,
+      "lines": 187,
+      "sha256": "f23483e1a8d1bf98edfcd934e9c373821635b9226240677bb38644809a9c0326",
+      "definitions": [
+        {
+          "name": "set_experiment_environment",
+          "line": 28,
+          "end_line": 44
+        },
+        {
+          "name": "run",
+          "line": 46,
+          "end_line": 152
+        }
+      ],
+      "imports": [
+        "argparse",
+        "arguments",
+        "collections",
+        "data_loaders",
+        "data_processing",
+        "dataset",
+        "datetime",
+        "logger",
+        "model",
+        "numpy",
+        "os",
+        "random",
+        "torch",
+        "torch.nn",
+        "torchvision",
+        "train",
+        "transformers",
+        "utils",
+        "warnings"
+      ]
+    },
+    "train.py": {
+      "manifest_sha_match": true,
+      "reference_text_match": true,
+      "bytes": 10712,
+      "lines": 288,
+      "sha256": "b7b98a182a4946c479f477b7110e1c4a49be53ee6b6e89ef1b4bc4785374873f",
+      "definitions": [
+        {
+          "name": "ModelTrainer",
+          "line": 14,
+          "end_line": 288
+        }
+      ],
+      "imports": [
+        "PIL",
+        "copy",
+        "matplotlib.pyplot",
+        "os",
+        "scipy.interpolate",
+        "scipy.optimize",
+        "sklearn",
+        "torch",
+        "torch.distributed",
+        "tqdm",
+        "utils"
+      ]
+    },
+    "data_loaders.py": {
+      "manifest_sha_match": true,
+      "reference_text_match": true,
+      "bytes": 8183,
+      "lines": 219,
+      "sha256": "411e294692207b8f434cc49769cbd052abb51316d4a17fe555c71459d7eea8f6",
+      "definitions": [
+        {
+          "name": "separate_bona_spoof",
+          "line": 11,
+          "end_line": 19
+        },
+        {
+          "name": "get_loaders",
+          "line": 22,
+          "end_line": 90
+        },
+        {
+          "name": "TrainSet",
+          "line": 92,
+          "end_line": 194
+        },
+        {
+          "name": "EnrollmentSet",
+          "line": 197,
+          "end_line": 218
+        }
+      ],
+      "imports": [
+        "data_processing",
+        "data_processing.augmentation.raw_boost",
+        "numpy",
+        "random",
+        "soundfile",
+        "torch.utils.data"
+      ]
+    },
+    "model/b_linear.py": {
+      "manifest_sha_match": true,
+      "reference_text_match": true,
+      "bytes": 6392,
+      "lines": 175,
+      "sha256": "c2cbcf898f1905c9c6ee8b20ef4514c4af7cb343abbf35e2dbd1fd526ad3459f",
+      "definitions": [
+        {
+          "name": "B_Linear",
+          "line": 10,
+          "end_line": 46
+        },
+        {
+          "name": "Bridge_module",
+          "line": 49,
+          "end_line": 104
+        },
+        {
+          "name": "PositionwiseFeedForward",
+          "line": 106,
+          "end_line": 118
+        },
+        {
+          "name": "SelfWeightedPooling",
+          "line": 120,
+          "end_line": 174
+        }
+      ],
+      "imports": [
+        "math",
+        "torch",
+        "torch.nn",
+        "torch.nn.functional"
+      ]
+    },
+    "model/loss.py": {
+      "manifest_sha_match": true,
+      "reference_text_match": true,
+      "bytes": 1924,
+      "lines": 62,
+      "sha256": "164be4161b57a7899ef7b289e005ab80d12da373922d57e9e021844ea828b1ac",
+      "definitions": [
+        {
+          "name": "BPL",
+          "line": 6,
+          "end_line": 23
+        },
+        {
+          "name": "OCSoftmax",
+          "line": 26,
+          "end_line": 62
+        }
+      ],
+      "imports": [
+        "math",
+        "torch",
+        "torch.nn",
+        "torch.nn.functional"
+      ]
+    }
+  },
+  "current": {
+    ".gitignore": {
+      "bytes": 1784,
+      "lines": 150,
+      "sha256": "5cba2f6b8e950ba112ac57c18daa7a745881d5bf3eb64ce2f2906c4a3f7e5185"
+    },
+    "activity_policy.py": {
+      "bytes": 7418,
+      "lines": 107,
+      "sha256": "8657f9614bc9dcde1b48c295402953bba34d300f1bb8137821f3a58d30f662a8",
+      "definitions": [
+        {
+          "name": "activity_bins",
+          "line": 8,
+          "end_line": 10
+        },
+        {
+          "name": "ActivityPolicy",
+          "line": 13,
+          "end_line": 107
+        }
+      ],
+      "imports": [
+        "hashlib",
+        "json",
+        "numpy",
+        "pathlib"
+      ]
+    },
+    "arguments.py": {
+      "bytes": 3184,
+      "lines": 102,
+      "sha256": "ae263994c057d2a6254c0b3cff8324852d66bbf0a5bd320f9e217663b58bfb00",
+      "definitions": [
+        {
+          "name": "get_args",
+          "line": 4,
+          "end_line": 102
+        }
+      ],
+      "imports": [
+        "itertools",
+        "os"
+      ]
+    },
+    "baseline240_mild.py": {
+      "bytes": 4340,
+      "lines": 99,
+      "sha256": "aa74558586d30bf562ae576ec57c4fb76506140700ed2c604f9304107072c158",
+      "definitions": [
+        {
+          "name": "TrainRow",
+          "line": 12,
+          "end_line": 16
+        },
+        {
+          "name": "original_views",
+          "line": 19,
+          "end_line": 41
+        },
+        {
+          "name": "MildOriginal240TrainSet",
+          "line": 44,
+          "end_line": 69
+        },
+        {
+          "name": "collate_rows",
+          "line": 72,
+          "end_line": 73
+        },
+        {
+          "name": "ConsumedIterator",
+          "line": 76,
+          "end_line": 90
+        },
+        {
+          "name": "ConsumedDataLoader",
+          "line": 93,
+          "end_line": 99
+        }
+      ],
+      "imports": [
+        "csv",
+        "dataclasses",
+        "numpy",
+        "pathlib",
+        "torch",
+        "torch.utils.data",
+        "torch.utils.data._utils.collate"
+      ]
+    },
+    "baseline240_source/data_loaders.py": {
+      "bytes": 8183,
+      "lines": 219,
+      "sha256": "411e294692207b8f434cc49769cbd052abb51316d4a17fe555c71459d7eea8f6",
+      "definitions": [
+        {
+          "name": "separate_bona_spoof",
+          "line": 11,
+          "end_line": 19
+        },
+        {
+          "name": "get_loaders",
+          "line": 22,
+          "end_line": 90
+        },
+        {
+          "name": "TrainSet",
+          "line": 92,
+          "end_line": 194
+        },
+        {
+          "name": "EnrollmentSet",
+          "line": 197,
+          "end_line": 218
+        }
+      ],
+      "imports": [
+        "data_processing",
+        "data_processing.augmentation.raw_boost",
+        "numpy",
+        "random",
+        "soundfile",
+        "torch.utils.data"
+      ]
+    },
+    "baseline240_source/main.py": {
+      "bytes": 6458,
+      "lines": 187,
+      "sha256": "f23483e1a8d1bf98edfcd934e9c373821635b9226240677bb38644809a9c0326",
+      "definitions": [
+        {
+          "name": "set_experiment_environment",
+          "line": 28,
+          "end_line": 44
+        },
+        {
+          "name": "run",
+          "line": 46,
+          "end_line": 152
+        }
+      ],
+      "imports": [
+        "argparse",
+        "arguments",
+        "collections",
+        "data_loaders",
+        "data_processing",
+        "dataset",
+        "datetime",
+        "logger",
+        "model",
+        "numpy",
+        "os",
+        "random",
+        "torch",
+        "torch.nn",
+        "torchvision",
+        "train",
+        "transformers",
+        "utils",
+        "warnings"
+      ]
+    },
+    "baseline240_source/manifest.json": {
+      "bytes": 526,
+      "lines": 10,
+      "sha256": "82d7e9bf93eb5aa02dab528ff0d1b947f37b0b42956c51b92f1ad5e4cc3bd455"
+    },
+    "baseline240_source/model/b_linear.py": {
+      "bytes": 6392,
+      "lines": 175,
+      "sha256": "c2cbcf898f1905c9c6ee8b20ef4514c4af7cb343abbf35e2dbd1fd526ad3459f",
+      "definitions": [
+        {
+          "name": "B_Linear",
+          "line": 10,
+          "end_line": 46
+        },
+        {
+          "name": "Bridge_module",
+          "line": 49,
+          "end_line": 104
+        },
+        {
+          "name": "PositionwiseFeedForward",
+          "line": 106,
+          "end_line": 118
+        },
+        {
+          "name": "SelfWeightedPooling",
+          "line": 120,
+          "end_line": 174
+        }
+      ],
+      "imports": [
+        "math",
+        "torch",
+        "torch.nn",
+        "torch.nn.functional"
+      ]
+    },
+    "baseline240_source/model/loss.py": {
+      "bytes": 1924,
+      "lines": 62,
+      "sha256": "164be4161b57a7899ef7b289e005ab80d12da373922d57e9e021844ea828b1ac",
+      "definitions": [
+        {
+          "name": "BPL",
+          "line": 6,
+          "end_line": 23
+        },
+        {
+          "name": "OCSoftmax",
+          "line": 26,
+          "end_line": 62
+        }
+      ],
+      "imports": [
+        "math",
+        "torch",
+        "torch.nn",
+        "torch.nn.functional"
+      ]
+    },
+    "baseline240_source/train.py": {
+      "bytes": 10712,
+      "lines": 288,
+      "sha256": "b7b98a182a4946c479f477b7110e1c4a49be53ee6b6e89ef1b4bc4785374873f",
+      "definitions": [
+        {
+          "name": "ModelTrainer",
+          "line": 14,
+          "end_line": 288
+        }
+      ],
+      "imports": [
+        "PIL",
+        "copy",
+        "matplotlib.pyplot",
+        "os",
+        "scipy.interpolate",
+        "scipy.optimize",
+        "sklearn",
+        "torch",
+        "torch.distributed",
+        "tqdm",
+        "utils"
+      ]
+    },
+    "conditional_bpl2.py": {
+      "bytes": 3801,
+      "lines": 77,
+      "sha256": "9b85981af242ea4e973066ce7e15be755d42540b72323ec6b32645d3daf3df77",
+      "definitions": [
+        {
+          "name": "targets",
+          "line": 11,
+          "end_line": 13
+        },
+        {
+          "name": "wrap_prefix",
+          "line": 15,
+          "end_line": 17
+        },
+        {
+          "name": "short_window",
+          "line": 19,
+          "end_line": 26
+        },
+        {
+          "name": "pair_seed",
+          "line": 28,
+          "end_line": 30
+        },
+        {
+          "name": "independent_random",
+          "line": 33,
+          "end_line": 37
+        },
+        {
+          "name": "ConditionalTrainSet",
+          "line": 39,
+          "end_line": 64
+        },
+        {
+          "name": "collate_train",
+          "line": 66,
+          "end_line": 66
+        },
+        {
+          "name": "merge_train",
+          "line": 68,
+          "end_line": 77
+        }
+      ],
+      "imports": [
+        "contextlib",
+        "hashlib",
+        "numpy",
+        "positive_bpl",
+        "random",
+        "soundfile",
+        "torch"
+      ]
+    },
+    "conditional_bpl2_steps.py": {
+      "bytes": 3755,
+      "lines": 64,
+      "sha256": "61170035a5a5e60f51b01f3d48dd4ec5f19d2bedb30065cd681491e3cc26f2cf",
+      "definitions": [
+        {
+          "name": "objective",
+          "line": 7,
+          "end_line": 20
+        },
+        {
+          "name": "train_step",
+          "line": 22,
+          "end_line": 64
+        }
+      ],
+      "imports": [
+        "contextlib",
+        "native_steps",
+        "torch",
+        "torch.nn.functional"
+      ]
+    },
+    "controlled_data_loaders.py": {
+      "bytes": 433,
+      "lines": 10,
+      "sha256": "7fb4b01d64b572edea180bad6acdb584a125f04c13a46b9b972991e6d2bd1b05",
+      "definitions": [],
+      "imports": [
+        "pathlib"
+      ]
+    },
+    "data_loaders.py": {
+      "bytes": 11745,
+      "lines": 259,
+      "sha256": "106809812cfcc113ff49952f9fb75eb99119ef8cf1a851052dc6e75e69b3b04b",
+      "definitions": [
+        {
+          "name": "separate_bona_spoof",
+          "line": 14,
+          "end_line": 22
+        },
+        {
+          "name": "BalancedLengthBatchSampler",
+          "line": 24,
+          "end_line": 62
+        },
+        {
+          "name": "ExactDistributedEvalSampler",
+          "line": 65,
+          "end_line": 74
+        },
+        {
+          "name": "collate_train",
+          "line": 77,
+          "end_line": 87
+        },
+        {
+          "name": "collate_eval",
+          "line": 90,
+          "end_line": 94
+        },
+        {
+          "name": "get_loaders",
+          "line": 97,
+          "end_line": 115
+        },
+        {
+          "name": "TrainSet",
+          "line": 118,
+          "end_line": 228
+        },
+        {
+          "name": "EnrollmentSet",
+          "line": 231,
+          "end_line": 259
+        }
+      ],
+      "imports": [
+        "data_processing",
+        "data_processing.augmentation.raw_boost",
+        "functools",
+        "math",
+        "numpy",
+        "positive_bpl",
+        "random",
+        "soundfile",
+        "torch",
+        "torch.utils.data"
+      ]
+    },
+    "data_processing/__init__.py": {
+      "bytes": 668,
+      "lines": 16,
+      "sha256": "cf46131b1390c1c8fef4eaffcaeea84965ff70b093b49a2dbe1c95b9a9dd6d9a",
+      "definitions": [
+        {
+          "name": "__getattr__",
+          "line": 7,
+          "end_line": 16
+        }
+      ],
+      "imports": [
+        "augmentation.augmentation",
+        "augmentation.codec_aug",
+        "augmentation.wav_read_functions"
+      ]
+    },
+    "data_processing/augmentation/augmentation.py": {
+      "bytes": 3325,
+      "lines": 83,
+      "sha256": "555c0f6be6e4638fea66eedb469f3aa2ba3ab8c171f024f24d49797a85cb1863",
+      "definitions": [
+        {
+          "name": "WaveformAugmetation",
+          "line": 9,
+          "end_line": 82
+        }
+      ],
+      "imports": [
+        "random",
+        "torch",
+        "torch.nn",
+        "torch.nn.functional",
+        "torch_audiomentations",
+        "torchaudio"
+      ]
+    },
+    "data_processing/augmentation/codec_aug.py": {
+      "bytes": 9256,
+      "lines": 221,
+      "sha256": "d94287e460ee1d10b7d1f2bfaaa27e638300b77e3cb50d6fd79222de5423ddcd",
+      "definitions": [
+        {
+          "name": "convert_audio_on_the_fly_16K",
+          "line": 9,
+          "end_line": 64
+        },
+        {
+          "name": "alaw_compress",
+          "line": 66,
+          "end_line": 72
+        },
+        {
+          "name": "ulaw_compress",
+          "line": 74,
+          "end_line": 78
+        },
+        {
+          "name": "resample_audio",
+          "line": 80,
+          "end_line": 85
+        },
+        {
+          "name": "convert_audio_to_alaw",
+          "line": 88,
+          "end_line": 100
+        },
+        {
+          "name": "convert_audio_to_ulaw",
+          "line": 102,
+          "end_line": 114
+        },
+        {
+          "name": "CodecAugmentationLight",
+          "line": 116,
+          "end_line": 168
+        },
+        {
+          "name": "codecAugmentationFull",
+          "line": 178,
+          "end_line": 202
+        },
+        {
+          "name": "save_audio",
+          "line": 205,
+          "end_line": 214
+        }
+      ],
+      "imports": [
+        "ffmpeg",
+        "io",
+        "numpy",
+        "pydub",
+        "random",
+        "scipy",
+        "soundfile"
+      ]
+    },
+    "data_processing/augmentation/raw_boost.py": {
+      "bytes": 2923,
+      "lines": 97,
+      "sha256": "75e2c3d2ce8da0b649dae3ffc2a69817017a5514c6ada2eda28a34eef9aa0739",
+      "definitions": [
+        {
+          "name": "randRange",
+          "line": 13,
+          "end_line": 17
+        },
+        {
+          "name": "normWav",
+          "line": 19,
+          "end_line": 24
+        },
+        {
+          "name": "genNotchCoeffs",
+          "line": 28,
+          "end_line": 48
+        },
+        {
+          "name": "filterFIR",
+          "line": 51,
+          "end_line": 56
+        },
+        {
+          "name": "LnL_convolutive_noise",
+          "line": 59,
+          "end_line": 69
+        },
+        {
+          "name": "ISD_additive_noise",
+          "line": 73,
+          "end_line": 84
+        },
+        {
+          "name": "SSI_additive_noise",
+          "line": 89,
+          "end_line": 97
+        }
+      ],
+      "imports": [
+        "copy",
+        "numpy",
+        "scipy"
+      ]
+    },
+    "data_processing/augmentation/wav_read_functions.py": {
+      "bytes": 2776,
+      "lines": 96,
+      "sha256": "28cf65b66970a81f1e7e53a4e16c32cecfe85718722a8155c7e446a74869baeb",
+      "definitions": [
+        {
+          "name": "rand_crop_audio",
+          "line": 5,
+          "end_line": 32
+        },
+        {
+          "name": "rand_crop_read",
+          "line": 34,
+          "end_line": 64
+        },
+        {
+          "name": "linspace_crop_read",
+          "line": 66,
+          "end_line": 84
+        },
+        {
+          "name": "_pad_wav",
+          "line": 86,
+          "end_line": 96
+        }
+      ],
+      "imports": [
+        "numpy",
+        "random",
+        "soundfile"
+      ]
+    },
+    "dataset/__init__.py": {
+      "bytes": 224,
+      "lines": 4,
+      "sha256": "4ee0d06be74e9cd8c6401ecfb4dbb1a2026deec84716928e96b5b1e9696705e2",
+      "definitions": [],
+      "imports": [
+        "ASVspoof2019_la_eval",
+        "ASVspoof2019_la_train",
+        "ASVspoof2021_df_eval",
+        "ASVspoof2021_la_eval"
+      ]
+    },
+    "dataset/ASVspoof2019_la_eval.py": {
+      "bytes": 1028,
+      "lines": 31,
+      "sha256": "cbd2cc71222959a90f3d2d0a3cb76de1f48c93413cdb082ceab1512e53663417",
+      "definitions": [
+        {
+          "name": "Trial",
+          "line": 5,
+          "end_line": 9
+        },
+        {
+          "name": "ASVspoof2019_LA_Eval",
+          "line": 11,
+          "end_line": 29
+        }
+      ],
+      "imports": [
+        "dataclasses",
+        "os"
+      ]
+    },
+    "dataset/ASVspoof2019_la_train.py": {
+      "bytes": 3086,
+      "lines": 83,
+      "sha256": "3da40334a3888b3cbd063ecdf3db44b9d232f43d7399f6caed2a02e52e5b3172",
+      "definitions": [
+        {
+          "name": "Item",
+          "line": 5,
+          "end_line": 9
+        },
+        {
+          "name": "Trial",
+          "line": 12,
+          "end_line": 16
+        },
+        {
+          "name": "load_train_items_only",
+          "line": 19,
+          "end_line": 29
+        },
+        {
+          "name": "ASVspoof2019_LA_Train",
+          "line": 31,
+          "end_line": 80
+        }
+      ],
+      "imports": [
+        "dataclasses",
+        "os"
+      ]
+    },
+    "dataset/ASVspoof2021_df_eval.py": {
+      "bytes": 999,
+      "lines": 32,
+      "sha256": "770441069170385d1d7a4bd99a993566aff6e70316a37a3b0605f7b0c6dd2043",
+      "definitions": [
+        {
+          "name": "Trial",
+          "line": 5,
+          "end_line": 8
+        },
+        {
+          "name": "ASVspoof2021_DF_Eval",
+          "line": 10,
+          "end_line": 30
+        }
+      ],
+      "imports": [
+        "dataclasses",
+        "os"
+      ]
+    },
+    "dataset/ASVspoof2021_la_eval.py": {
+      "bytes": 1128,
+      "lines": 35,
+      "sha256": "fd40380232d142855d967ceffba9d5775938c22f23e9b9ba6a610714a3f63f75",
+      "definitions": [
+        {
+          "name": "Trial",
+          "line": 5,
+          "end_line": 8
+        },
+        {
+          "name": "ASVspoof2021_LA_Eval",
+          "line": 10,
+          "end_line": 31
+        }
+      ],
+      "imports": [
+        "dataclasses",
+        "os"
+      ]
+    },
+    "docker_build.sh": {
+      "bytes": 32,
+      "lines": 1,
+      "sha256": "cd244e9001469cd3ab14707f468f310255b5325719891ce83d85d34ec6e079d8"
+    },
+    "docker_run.sh": {
+      "bytes": 151,
+      "lines": 4,
+      "sha256": "295be7271c592b49cf274a6b8f96d5c16759b5caf7cd5b0a89f8e8afba87e2d0"
+    },
+    "Dockerfile": {
+      "bytes": 554,
+      "lines": 22,
+      "sha256": "eb41b92a0808e26f9532f84c1530850caa1c40ea5bd77c7cbd3c87ddcbd77aad"
+    },
+    "docs/CONTROL_B.md": {
+      "bytes": 2954,
+      "lines": 45,
+      "sha256": "9762df2ad997b0ef7b16bfb9ab92adf98ff9d25a978dc7e23f0e639d95d7824a"
+    },
+    "docs/CONTROL_C.md": {
+      "bytes": 3175,
+      "lines": 54,
+      "sha256": "d41373b6592f7595daf627fa3d9ef24c3a0de0c77a138ae5163891011d35820a"
+    },
+    "docs/RUN_B_20261106.md": {
+      "bytes": 1880,
+      "lines": 34,
+      "sha256": "e3e22faf86dbf766eda3df747c9b4f5a924b5168d6d2cfca340390edeb59ec56"
+    },
+    "docs/WORKFLOW.md": {
+      "bytes": 1073,
+      "lines": 17,
+      "sha256": "667736023ab955a04cf45cfa0101542fc87150bb64d3ca47e9f772efca266c40"
+    },
+    "LICENSE": {
+      "bytes": 1091,
+      "lines": 21,
+      "sha256": "0780460efb6a40c1c3f71f75c448d5c7f7511a75d94541d475fa3907676737cf"
+    },
+    "logger/__init__.py": {
+      "bytes": 126,
+      "lines": 4,
+      "sha256": "69a9ba3b2628685a3fa23102a50a860a1a7c5607a205507e22a62e3cb4e83b10",
+      "definitions": [],
+      "imports": [
+        "local",
+        "logger",
+        "neptune",
+        "wandb"
+      ]
+    },
+    "logger/interface.py": {
+      "bytes": 474,
+      "lines": 26,
+      "sha256": "4104bafe47c69d70bb9da65c6d23e65aaf152b38428a5b4432ae8f98c3bc0326",
+      "definitions": [
+        {
+          "name": "ExperimentLogger",
+          "line": 3,
+          "end_line": 26
+        }
+      ],
+      "imports": [
+        "abc"
+      ]
+    },
+    "logger/local.py": {
+      "bytes": 2809,
+      "lines": 98,
+      "sha256": "090b65c516ebb76d172e6ecc082cb1f2889c9a4a33cc44219e6e1aaf000054be",
+      "definitions": [
+        {
+          "name": "LocalLogger",
+          "line": 10,
+          "end_line": 98
+        }
+      ],
+      "imports": [
+        "interface",
+        "os",
+        "shutil",
+        "threading",
+        "time",
+        "torch"
+      ]
+    },
+    "logger/logger.py": {
+      "bytes": 3483,
+      "lines": 129,
+      "sha256": "0bc18ed05e7509c9bcecf49b02d4589e8d485e0b12f0541238d1880d2d15ba11",
+      "definitions": [
+        {
+          "name": "Logger",
+          "line": 8,
+          "end_line": 129
+        }
+      ],
+      "imports": [
+        "interface",
+        "local",
+        "neptune",
+        "os",
+        "wandb"
+      ]
+    },
+    "logger/neptune.py": {
+      "bytes": 1328,
+      "lines": 47,
+      "sha256": "842fd2d97190c9b18725ec9c264abefb14b192eacaf89df84f63a159127c85a5",
+      "definitions": [
+        {
+          "name": "NeptuneLogger",
+          "line": 7,
+          "end_line": 47
+        }
+      ],
+      "imports": [
+        "interface",
+        "neptune.new",
+        "os",
+        "torch"
+      ]
+    },
+    "logger/wandb.py": {
+      "bytes": 1184,
+      "lines": 49,
+      "sha256": "d83280931a9b51c3c48a28400db34c66328349e16bcc28de63dccf3e85191096",
+      "definitions": [
+        {
+          "name": "WandbLogger",
+          "line": 5,
+          "end_line": 49
+        }
+      ],
+      "imports": [
+        "interface",
+        "os",
+        "torch",
+        "wandb"
+      ]
+    },
+    "main.py": {
+      "bytes": 14817,
+      "lines": 300,
+      "sha256": "ab8afc783038ed0d7d3aa00f45eb4f5ad6947ed9b363d786b64de2e2e04e5dea",
+      "definitions": [
+        {
+          "name": "set_experiment_environment",
+          "line": 25,
+          "end_line": 42
+        },
+        {
+          "name": "run",
+          "line": 44,
+          "end_line": 185
+        }
+      ],
+      "imports": [
+        "argparse",
+        "arguments",
+        "collections",
+        "data_loaders",
+        "dataset",
+        "dataset.ASVspoof2019_la_train",
+        "datetime",
+        "hashlib",
+        "json",
+        "logger",
+        "model",
+        "numpy",
+        "os",
+        "pathlib",
+        "positive_bpl",
+        "random",
+        "short32_bpl",
+        "short32_original240",
+        "torch",
+        "torch.nn",
+        "train",
+        "transformers",
+        "utils"
+      ]
+    },
+    "mild_duration.py": {
+      "bytes": 6243,
+      "lines": 128,
+      "sha256": "6b424e30be60b64cf583bd7974506b3838a8fdb939cc1ad036bc397382fc8273",
+      "definitions": [
+        {
+          "name": "transform_parameters",
+          "line": 14,
+          "end_line": 24
+        },
+        {
+          "name": "tempo",
+          "line": 27,
+          "end_line": 42
+        },
+        {
+          "name": "MildSpec",
+          "line": 46,
+          "end_line": 49
+        },
+        {
+          "name": "MildTrainSet",
+          "line": 52,
+          "end_line": 128
+        }
+      ],
+      "imports": [
+        "dataclasses",
+        "hashlib",
+        "json",
+        "numpy",
+        "pathlib",
+        "positive_bpl",
+        "random",
+        "soundfile",
+        "subprocess",
+        "torch"
+      ]
+    },
+    "model/__init__.py": {
+      "bytes": 82,
+      "lines": 3,
+      "sha256": "8ac912160cfb7cdad15d5d54ff8dd051a69fa2fc50d433bdf51061ac50c33929",
+      "definitions": [],
+      "imports": [
+        "b_linear",
+        "loss"
+      ]
+    },
+    "model/b_linear.py": {
+      "bytes": 7725,
+      "lines": 196,
+      "sha256": "73bd5e5676d4877a8a08f9fb82695b9fd7358d289a94a53b3203ab114920e5cb",
+      "definitions": [
+        {
+          "name": "B_Linear",
+          "line": 10,
+          "end_line": 49
+        },
+        {
+          "name": "Bridge_module",
+          "line": 52,
+          "end_line": 107
+        },
+        {
+          "name": "PositionwiseFeedForward",
+          "line": 109,
+          "end_line": 121
+        },
+        {
+          "name": "SelfWeightedPooling",
+          "line": 123,
+          "end_line": 195
+        }
+      ],
+      "imports": [
+        "math",
+        "torch",
+        "torch.nn",
+        "torch.nn.functional"
+      ]
+    },
+    "model/loss.py": {
+      "bytes": 2066,
+      "lines": 62,
+      "sha256": "b3c282817cf7a2781fab2881cf1508ca862710245002c78e5a5ad2708815f7bb",
+      "definitions": [
+        {
+          "name": "BPL",
+          "line": 6,
+          "end_line": 23
+        },
+        {
+          "name": "OCSoftmax",
+          "line": 26,
+          "end_line": 62
+        }
+      ],
+      "imports": [
+        "math",
+        "torch",
+        "torch.nn",
+        "torch.nn.functional"
+      ]
+    },
+    "native_steps.py": {
+      "bytes": 7947,
+      "lines": 163,
+      "sha256": "72aac33f4a9745b4f29c6d25514df38edf4c83ec791b6928c36510d3e70f1c24",
+      "definitions": [
+        {
+          "name": "unwrap",
+          "line": 9,
+          "end_line": 10
+        },
+        {
+          "name": "features",
+          "line": 13,
+          "end_line": 22
+        },
+        {
+          "name": "_freeze",
+          "line": 25,
+          "end_line": 27
+        },
+        {
+          "name": "_objective",
+          "line": 30,
+          "end_line": 65
+        },
+        {
+          "name": "train_batch",
+          "line": 68,
+          "end_line": 142
+        },
+        {
+          "name": "_matched_objective",
+          "line": 145,
+          "end_line": 163
+        }
+      ],
+      "imports": [
+        "contextlib",
+        "math",
+        "torch",
+        "torch.distributed",
+        "torch.nn.utils.rnn"
+      ]
+    },
+    "paired_evaluation.py": {
+      "bytes": 12052,
+      "lines": 223,
+      "sha256": "dcc8565d79ffa8c3eeb6710ebdb7552325966ce531a7712c152b51b6340a8b41",
+      "definitions": [
+        {
+          "name": "sha",
+          "line": 18,
+          "end_line": 23
+        },
+        {
+          "name": "save",
+          "line": 26,
+          "end_line": 30
+        },
+        {
+          "name": "views",
+          "line": 33,
+          "end_line": 37
+        },
+        {
+          "name": "roc",
+          "line": 40,
+          "end_line": 52
+        },
+        {
+          "name": "metric",
+          "line": 55,
+          "end_line": 65
+        },
+        {
+          "name": "checkpoint_minima",
+          "line": 68,
+          "end_line": 78
+        },
+        {
+          "name": "common_scores",
+          "line": 81,
+          "end_line": 102
+        },
+        {
+          "name": "length_group",
+          "line": 108,
+          "end_line": 109
+        },
+        {
+          "name": "paired_diagnostics",
+          "line": 112,
+          "end_line": 135
+        },
+        {
+          "name": "analyze_phase",
+          "line": 138,
+          "end_line": 223
+        }
+      ],
+      "imports": [
+        "hashlib",
+        "json",
+        "numpy",
+        "paired_queue_guard",
+        "pandas",
+        "pathlib",
+        "sklearn.metrics",
+        "tools.review_repetition_results",
+        "torch"
+      ]
+    },
+    "paired_queue_guard.py": {
+      "bytes": 1012,
+      "lines": 23,
+      "sha256": "ebee0b7adf8f6df7a275473c22d537d2989b066faa500d8d3efeffd8a3e596f5",
+      "definitions": [
+        {
+          "name": "dependency_ready",
+          "line": 7,
+          "end_line": 22
+        }
+      ],
+      "imports": [
+        "json",
+        "pathlib"
+      ]
+    },
+    "POSITIVE_BPL.md": {
+      "bytes": 27966,
+      "lines": 334,
+      "sha256": "18f154a108bce2586e2609e73a9c148d2a115b7d28928d1c9b5a49cbd9b7011c"
+    },
+    "positive_bpl.py": {
+      "bytes": 20205,
+      "lines": 379,
+      "sha256": "f9912467f3cbec576d92823b4eefab986b55b34d5fa2eff5de063ba58fa624ae",
+      "definitions": [
+        {
+          "name": "evaluation_mode",
+          "line": 18,
+          "end_line": 22
+        },
+        {
+          "name": "validate_evaluation_options",
+          "line": 25,
+          "end_line": 32
+        },
+        {
+          "name": "validate_options",
+          "line": 35,
+          "end_line": 56
+        },
+        {
+          "name": "evaluation_rng",
+          "line": 60,
+          "end_line": 76
+        },
+        {
+          "name": "rawboost",
+          "line": 79,
+          "end_line": 106
+        },
+        {
+          "name": "CropSpec",
+          "line": 110,
+          "end_line": 114
+        },
+        {
+          "name": "MatchedTrainSet",
+          "line": 117,
+          "end_line": 243
+        },
+        {
+          "name": "CoverageSourcePlan",
+          "line": 246,
+          "end_line": 284
+        },
+        {
+          "name": "coverage_source_plans",
+          "line": 287,
+          "end_line": 289
+        },
+        {
+          "name": "MatchedBatchSampler",
+          "line": 292,
+          "end_line": 337
+        },
+        {
+          "name": "collate_matched",
+          "line": 340,
+          "end_line": 348
+        },
+        {
+          "name": "get_loaders",
+          "line": 351,
+          "end_line": 368
+        },
+        {
+          "name": "oc_evaluation_protocol",
+          "line": 371,
+          "end_line": 379
+        }
+      ],
+      "imports": [
+        "activity_policy",
+        "contextlib",
+        "data_loaders",
+        "data_processing.augmentation.raw_boost",
+        "dataclasses",
+        "functools",
+        "hashlib",
+        "json",
+        "mild_duration",
+        "numpy",
+        "pathlib",
+        "random",
+        "soundfile",
+        "torch",
+        "torch.utils.data"
+      ]
+    },
+    "README.md": {
+      "bytes": 9084,
+      "lines": 190,
+      "sha256": "d7db73da842aa9ec345ef1f75eb463d951907d6fa31418341375688579f0ba1e"
+    },
+    "scheduler/cosine_warmup.py": {
+      "bytes": 3194,
+      "lines": 78,
+      "sha256": "776ff35974b3cd1bce350ae5a46a528e882f0fbe5495b754ce376d5c7b6ee50a",
+      "definitions": [
+        {
+          "name": "Scheduler",
+          "line": 7,
+          "end_line": 21
+        },
+        {
+          "name": "CosineAnnealingWarmUpRestarts",
+          "line": 24,
+          "end_line": 78
+        }
+      ],
+      "imports": [
+        "math",
+        "torch.optim.lr_scheduler"
+      ]
+    },
+    "scheduler/steplr.py": {
+      "bytes": 329,
+      "lines": 14,
+      "sha256": "c04eb4fd9d016dde5dcca587aac9e1ef1cc83406381f7e173b57e75873a4e2b8",
+      "definitions": [
+        {
+          "name": "Scheduler",
+          "line": 6,
+          "end_line": 14
+        }
+      ],
+      "imports": [
+        "torch"
+      ]
+    },
+    "short32_bpl.py": {
+      "bytes": 1572,
+      "lines": 34,
+      "sha256": "e3737dd41e8480d831d397b11e0f32a5f44cc68d001126ba6c02fb97e62f0209",
+      "definitions": [
+        {
+          "name": "validate_options",
+          "line": 11,
+          "end_line": 21
+        },
+        {
+          "name": "configure",
+          "line": 24,
+          "end_line": 33
+        }
+      ],
+      "imports": [
+        "short32_original240"
+      ]
+    },
+    "short32_lifecycle.py": {
+      "bytes": 14905,
+      "lines": 301,
+      "sha256": "7d1fa2ec64b445dcf59cd8c740310c427206f7f985b8d7ba9fe1b3479a024d5c",
+      "definitions": [
+        {
+          "name": "StageError",
+          "line": 20,
+          "end_line": 21
+        },
+        {
+          "name": "rank",
+          "line": 24,
+          "end_line": 25
+        },
+        {
+          "name": "gather",
+          "line": 28,
+          "end_line": 33
+        },
+        {
+          "name": "coordinated",
+          "line": 36,
+          "end_line": 47
+        },
+        {
+          "name": "atomic_write",
+          "line": 50,
+          "end_line": 63
+        },
+        {
+          "name": "write_json",
+          "line": 66,
+          "end_line": 68
+        },
+        {
+          "name": "sha256",
+          "line": 71,
+          "end_line": 76
+        },
+        {
+          "name": "rng_state",
+          "line": 79,
+          "end_line": 85
+        },
+        {
+          "name": "Checkpoints",
+          "line": 88,
+          "end_line": 177
+        },
+        {
+          "name": "evaluate",
+          "line": 180,
+          "end_line": 253
+        },
+        {
+          "name": "run_training",
+          "line": 256,
+          "end_line": 301
+        }
+      ],
+      "imports": [
+        "datetime",
+        "hashlib",
+        "json",
+        "math",
+        "model",
+        "native_steps",
+        "numpy",
+        "os",
+        "pathlib",
+        "positive_bpl",
+        "random",
+        "short32_original240",
+        "tempfile",
+        "torch",
+        "torch.distributed",
+        "traceback"
+      ]
+    },
+    "SHORT32_ORIGINAL240.md": {
+      "bytes": 10362,
+      "lines": 139,
+      "sha256": "5a1f9cc558a8c8cced84bd2ccd8638b4c7d7fe9cdebf7715c0257bad1b583e8e"
+    },
+    "short32_original240.py": {
+      "bytes": 12213,
+      "lines": 244,
+      "sha256": "9377b0a428c434cf43e4f07fbfe9b600a30863ce041ad1f1e06e0e94ea333022",
+      "definitions": [
+        {
+          "name": "verify_source",
+          "line": 22,
+          "end_line": 27
+        },
+        {
+          "name": "load_source",
+          "line": 30,
+          "end_line": 51
+        },
+        {
+          "name": "validate_runtime",
+          "line": 54,
+          "end_line": 61
+        },
+        {
+          "name": "unwrap",
+          "line": 64,
+          "end_line": 65
+        },
+        {
+          "name": "Short32Hooks",
+          "line": 68,
+          "end_line": 192
+        },
+        {
+          "name": "run",
+          "line": 195,
+          "end_line": 244
+        }
+      ],
+      "imports": [
+        "ast",
+        "controlled_data_loaders",
+        "hashlib",
+        "importlib",
+        "importlib.util",
+        "json",
+        "pathlib",
+        "positive_bpl",
+        "short32_bpl",
+        "short32_lifecycle",
+        "soundfile",
+        "sys",
+        "torch",
+        "torch.utils.data",
+        "train",
+        "types"
+      ]
+    },
+    "tests/gpu_positive_smoke.py": {
+      "bytes": 8473,
+      "lines": 149,
+      "sha256": "e7e4a7e0c11d4da11485d82222423f571d8d38c39e1c44b04909ea36322162f3",
+      "definitions": [
+        {
+          "name": "worker",
+          "line": 11,
+          "end_line": 134
+        }
+      ],
+      "imports": [
+        "argparse",
+        "arguments",
+        "hashlib",
+        "itertools",
+        "json",
+        "main",
+        "native_steps",
+        "os",
+        "pathlib",
+        "sys",
+        "torch",
+        "torch.distributed",
+        "torch.multiprocessing",
+        "types"
+      ]
+    },
+    "tests/test_activity_policy.py": {
+      "bytes": 7681,
+      "lines": 123,
+      "sha256": "127c75b3589afb6bc9b4039874573882c147805216db925c7537a977f9e4c2bd",
+      "definitions": [
+        {
+          "name": "ActivityTests",
+          "line": 19,
+          "end_line": 120
+        }
+      ],
+      "imports": [
+        "activity_policy",
+        "dataset.ASVspoof2019_la_train",
+        "hashlib",
+        "itertools",
+        "json",
+        "numpy",
+        "os",
+        "pathlib",
+        "positive_bpl",
+        "soundfile",
+        "sys",
+        "test_positive_bpl",
+        "tools.fit_activity_policy",
+        "unittest"
+      ]
+    },
+    "tests/test_baseline240_mild.py": {
+      "bytes": 8996,
+      "lines": 153,
+      "sha256": "82d81052736990dd254176fdb79d069c1623b0491f8d0cc67b3d0eeb8272aa72",
+      "definitions": [
+        {
+          "name": "archived",
+          "line": 24,
+          "end_line": 27
+        },
+        {
+          "name": "SilentProgress",
+          "line": 30,
+          "end_line": 33
+        },
+        {
+          "name": "Baseline240Tests",
+          "line": 36,
+          "end_line": 150
+        }
+      ],
+      "imports": [
+        "ast",
+        "baseline240_mild",
+        "copy",
+        "json",
+        "numpy",
+        "os",
+        "pathlib",
+        "random",
+        "runpy",
+        "subprocess",
+        "sys",
+        "tempfile",
+        "torch",
+        "torch.utils.data",
+        "types",
+        "unittest",
+        "unittest.mock"
+      ]
+    },
+    "tests/test_conditional_bpl2.py": {
+      "bytes": 4400,
+      "lines": 68,
+      "sha256": "dbddd91e64c6d3b83225399114052de4940efc49ca520ad7bbc810c286ecef7f",
+      "definitions": [
+        {
+          "name": "Toy",
+          "line": 17,
+          "end_line": 23
+        },
+        {
+          "name": "ConditionalTests",
+          "line": 25,
+          "end_line": 66
+        }
+      ],
+      "imports": [
+        "conditional_bpl2",
+        "conditional_bpl2_steps",
+        "copy",
+        "model.loss",
+        "native_steps",
+        "numpy",
+        "pathlib",
+        "random",
+        "sys",
+        "torch",
+        "types",
+        "unittest",
+        "unittest.mock"
+      ]
+    },
+    "tests/test_intermediate_19la.py": {
+      "bytes": 1450,
+      "lines": 30,
+      "sha256": "3bfcebe872fc4af9db5383636e9f222609c788d521c6f8cc024ed53e5fee3c01",
+      "definitions": [
+        {
+          "name": "Intermediate19LATests",
+          "line": 7,
+          "end_line": 27
+        }
+      ],
+      "imports": [
+        "ast",
+        "pathlib",
+        "unittest"
+      ]
+    },
+    "tests/test_mild_duration.py": {
+      "bytes": 3303,
+      "lines": 65,
+      "sha256": "61a5f6fe64a16f55370177fa561ea356b9588a31a7251eca1546e6ea47ce5bb9",
+      "definitions": [
+        {
+          "name": "MildDurationTests",
+          "line": 11,
+          "end_line": 62
+        }
+      ],
+      "imports": [
+        "ast",
+        "hashlib",
+        "mild_duration",
+        "numpy",
+        "pathlib",
+        "shutil",
+        "tempfile",
+        "unittest"
+      ]
+    },
+    "tests/test_paired_evaluation.py": {
+      "bytes": 8008,
+      "lines": 141,
+      "sha256": "ed487a2c55670227929db951e5f47b10dafaf6dd8c5e68c7c714b0c8a8486a49",
+      "definitions": [
+        {
+          "name": "PairedEvaluationTests",
+          "line": 15,
+          "end_line": 138
+        }
+      ],
+      "imports": [
+        "json",
+        "numpy",
+        "paired_evaluation",
+        "pandas",
+        "pathlib",
+        "sklearn.metrics",
+        "tempfile",
+        "tools.review_repetition_results",
+        "tools.run_paired_evaluation",
+        "torch",
+        "types",
+        "unittest",
+        "unittest.mock"
+      ]
+    },
+    "tests/test_positive_bpl.py": {
+      "bytes": 15840,
+      "lines": 271,
+      "sha256": "eace03cdf239579d232153f64c0dde88d037b8025842f0d7e8420fe273185601",
+      "definitions": [
+        {
+          "name": "baseline",
+          "line": 26,
+          "end_line": 30
+        },
+        {
+          "name": "ToyHead",
+          "line": 33,
+          "end_line": 46
+        },
+        {
+          "name": "toy_features",
+          "line": 49,
+          "end_line": 50
+        },
+        {
+          "name": "MatchedTests",
+          "line": 53,
+          "end_line": 268
+        }
+      ],
+      "imports": [
+        "arguments",
+        "ast",
+        "copy",
+        "data_loaders",
+        "json",
+        "model",
+        "native_steps",
+        "numpy",
+        "os",
+        "pathlib",
+        "positive_bpl",
+        "random",
+        "subprocess",
+        "sys",
+        "tempfile",
+        "torch",
+        "train",
+        "types",
+        "unittest",
+        "unittest.mock"
+      ]
+    },
+    "tests/test_repetition_shortcut.py": {
+      "bytes": 4195,
+      "lines": 67,
+      "sha256": "c893275671d0141efd2e22a2fcaba5628a41ccbf09ab651c1a43d89789d19e66",
+      "definitions": [
+        {
+          "name": "RepetitionControls",
+          "line": 17,
+          "end_line": 65
+        }
+      ],
+      "imports": [
+        "analyze_repetition_shortcut",
+        "hashlib",
+        "importlib.util",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "probe_repetition_shortcut",
+        "summarize_repetition_shortcut",
+        "sys",
+        "tempfile",
+        "unittest"
+      ]
+    },
+    "tests/test_short32_bpl.py": {
+      "bytes": 19495,
+      "lines": 342,
+      "sha256": "4ea897b584fc1b9d377c3c4686c08676559a4c9c818876ba918edc81904367ec",
+      "definitions": [
+        {
+          "name": "SilentProgress",
+          "line": 29,
+          "end_line": 32
+        },
+        {
+          "name": "Frontend",
+          "line": 35,
+          "end_line": 42
+        },
+        {
+          "name": "PrefixWrapper",
+          "line": 45,
+          "end_line": 47
+        },
+        {
+          "name": "runtime",
+          "line": 50,
+          "end_line": 56
+        },
+        {
+          "name": "head",
+          "line": 59,
+          "end_line": 61
+        },
+        {
+          "name": "options",
+          "line": 64,
+          "end_line": 68
+        },
+        {
+          "name": "sources",
+          "line": 71,
+          "end_line": 77
+        },
+        {
+          "name": "trainer",
+          "line": 80,
+          "end_line": 92
+        },
+        {
+          "name": "ddp_worker",
+          "line": 95,
+          "end_line": 116
+        },
+        {
+          "name": "Original240Short32Tests",
+          "line": 119,
+          "end_line": 339
+        }
+      ],
+      "imports": [
+        "argparse",
+        "arguments",
+        "ast",
+        "contextlib",
+        "copy",
+        "datetime",
+        "io",
+        "native_steps",
+        "numpy",
+        "os",
+        "pathlib",
+        "positive_bpl",
+        "random",
+        "short32_bpl",
+        "short32_original240",
+        "soundfile",
+        "subprocess",
+        "sys",
+        "tempfile",
+        "torch",
+        "torch.distributed",
+        "torch.utils.data",
+        "types",
+        "unittest",
+        "unittest.mock"
+      ]
+    },
+    "tests/test_short32_lifecycle.py": {
+      "bytes": 13187,
+      "lines": 241,
+      "sha256": "5b3f039376396e68ecdf5e7597b86e0975d874593ec5d8e5da4876edbd3fcd5f",
+      "definitions": [
+        {
+          "name": "fake_features",
+          "line": 22,
+          "end_line": 26
+        },
+        {
+          "name": "prepare",
+          "line": 29,
+          "end_line": 43
+        },
+        {
+          "name": "failure_worker",
+          "line": 46,
+          "end_line": 85
+        },
+        {
+          "name": "LifecycleTests",
+          "line": 88,
+          "end_line": 238
+        }
+      ],
+      "imports": [
+        "controlled_data_loaders",
+        "copy",
+        "datetime",
+        "importlib",
+        "importlib.machinery",
+        "json",
+        "numpy",
+        "pathlib",
+        "random",
+        "short32_lifecycle",
+        "short32_original240",
+        "subprocess",
+        "sys",
+        "tempfile",
+        "test_short32_bpl",
+        "torch",
+        "torch.distributed",
+        "torch.nn.utils.rnn",
+        "unittest",
+        "unittest.mock"
+      ]
+    },
+    "tests/test_short32_runner.py": {
+      "bytes": 2799,
+      "lines": 49,
+      "sha256": "666ff1ab6df61beb439ef647c5f8854097bed01ee30b50295cf2a84840142be8",
+      "definitions": [
+        {
+          "name": "RunnerTests",
+          "line": 19,
+          "end_line": 46
+        }
+      ],
+      "imports": [
+        "hashlib",
+        "importlib.util",
+        "json",
+        "os",
+        "pathlib",
+        "sys",
+        "tempfile",
+        "torch",
+        "types",
+        "unittest",
+        "unittest.mock"
+      ]
+    },
+    "tests/test_source_coverage.py": {
+      "bytes": 3764,
+      "lines": 65,
+      "sha256": "62cacc4d40aba6f9afa88759c6cfb80c99f72e8d20ab6f842f40a3bf6fa21aab",
+      "definitions": [
+        {
+          "name": "SourceCoverageTests",
+          "line": 12,
+          "end_line": 62
+        }
+      ],
+      "imports": [
+        "itertools",
+        "numpy",
+        "pathlib",
+        "positive_bpl",
+        "sys",
+        "test_positive_bpl",
+        "unittest"
+      ]
+    },
+    "tools/add_duration_to_residual_3d.py": {
+      "bytes": 19529,
+      "lines": 273,
+      "sha256": "227977cf4eb9328254ca7d53a36cc0dff671bd801b51613046fc08ea0acb7695",
+      "definitions": [
+        {
+          "name": "save",
+          "line": 29,
+          "end_line": 30
+        },
+        {
+          "name": "choose_alpha",
+          "line": 33,
+          "end_line": 44
+        },
+        {
+          "name": "rho",
+          "line": 47,
+          "end_line": 50
+        },
+        {
+          "name": "adjusted_rank_rho",
+          "line": 53,
+          "end_line": 68
+        },
+        {
+          "name": "patch_viewer",
+          "line": 71,
+          "end_line": 129
+        },
+        {
+          "name": "main",
+          "line": 132,
+          "end_line": 268
+        }
+      ],
+      "imports": [
+        "json",
+        "matplotlib",
+        "matplotlib.colors",
+        "matplotlib.pyplot",
+        "numpy",
+        "os",
+        "pandas",
+        "pathlib",
+        "scipy.stats",
+        "shutil",
+        "sklearn.linear_model",
+        "sklearn.metrics",
+        "sklearn.model_selection",
+        "threadpoolctl",
+        "time",
+        "visualize_residual_clusters"
+      ]
+    },
+    "tools/analyze_bona_tangent_errors.py": {
+      "bytes": 26256,
+      "lines": 483,
+      "sha256": "54f929fc34ce5659f433a8acf58d69584356333cb4b9ec1f25e87521672e9f3a",
+      "definitions": [
+        {
+          "name": "digest",
+          "line": 32,
+          "end_line": 37
+        },
+        {
+          "name": "save_json",
+          "line": 40,
+          "end_line": 42
+        },
+        {
+          "name": "geometry",
+          "line": 45,
+          "end_line": 58
+        },
+        {
+          "name": "top_basis",
+          "line": 61,
+          "end_line": 69
+        },
+        {
+          "name": "math_checks",
+          "line": 72,
+          "end_line": 86
+        },
+        {
+          "name": "Inputs",
+          "line": 89,
+          "end_line": 169
+        },
+        {
+          "name": "subset",
+          "line": 172,
+          "end_line": 175
+        },
+        {
+          "name": "attach_projections",
+          "line": 178,
+          "end_line": 196
+        },
+        {
+          "name": "concentration",
+          "line": 199,
+          "end_line": 209
+        },
+        {
+          "name": "cluster_difference",
+          "line": 212,
+          "end_line": 253
+        },
+        {
+          "name": "group_summary",
+          "line": 256,
+          "end_line": 266
+        },
+        {
+          "name": "analyze",
+          "line": 269,
+          "end_line": 320
+        },
+        {
+          "name": "plot",
+          "line": 323,
+          "end_line": 372
+        },
+        {
+          "name": "main",
+          "line": 375,
+          "end_line": 478
+        }
+      ],
+      "imports": [
+        "argparse",
+        "datetime",
+        "hashlib",
+        "json",
+        "matplotlib",
+        "matplotlib.pyplot",
+        "numpy",
+        "os",
+        "pandas",
+        "pathlib",
+        "scipy.linalg",
+        "sklearn.metrics",
+        "threadpoolctl",
+        "time"
+      ]
+    },
+    "tools/analyze_coverage20_length_shortcut.py": {
+      "bytes": 18494,
+      "lines": 297,
+      "sha256": "a3b3510b90775aa957d88e3c54dbec1e72be55aa1bab7574e837738c77312f1d",
+      "definitions": [
+        {
+          "name": "digest",
+          "line": 20,
+          "end_line": 21
+        },
+        {
+          "name": "independent_eer",
+          "line": 24,
+          "end_line": 39
+        },
+        {
+          "name": "operating_point",
+          "line": 42,
+          "end_line": 52
+        },
+        {
+          "name": "read_pair",
+          "line": 55,
+          "end_line": 58
+        },
+        {
+          "name": "summarize",
+          "line": 61,
+          "end_line": 86
+        },
+        {
+          "name": "main",
+          "line": 89,
+          "end_line": 293
+        }
+      ],
+      "imports": [
+        "argparse",
+        "hashlib",
+        "json",
+        "matplotlib",
+        "matplotlib.pyplot",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "scipy.stats",
+        "sklearn.metrics"
+      ]
+    },
+    "tools/analyze_original_first_length_sampling.py": {
+      "bytes": 7459,
+      "lines": 106,
+      "sha256": "e0a8dcc3bcc0245e2e8d64bc9def287af20916d1e23237cc6a4049cbd72902f2",
+      "definitions": [],
+      "imports": [
+        "hashlib",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib"
+      ]
+    },
+    "tools/analyze_positive_bpl_pilot.py": {
+      "bytes": 6358,
+      "lines": 77,
+      "sha256": "ed12837a19e1c7a29fb3ed1c194174b1a3fb4d54384f6189f8a8ddbc6c627922",
+      "definitions": [],
+      "imports": [
+        "hashlib",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "positive_bpl_pilot",
+        "sys"
+      ]
+    },
+    "tools/analyze_repetition_duration_proxy.py": {
+      "bytes": 6374,
+      "lines": 76,
+      "sha256": "daa8928374a06439730068e0cb7cc50ab76affec2b788ef2f6fad6b6e0b9baf5",
+      "definitions": [
+        {
+          "name": "weights",
+          "line": 14,
+          "end_line": 22
+        },
+        {
+          "name": "main",
+          "line": 24,
+          "end_line": 74
+        }
+      ],
+      "imports": [
+        "analyze_repetition_shortcut",
+        "hashlib",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "sklearn.metrics"
+      ]
+    },
+    "tools/analyze_repetition_shortcut.py": {
+      "bytes": 6135,
+      "lines": 78,
+      "sha256": "3b8a4b095aa412a7ee43f04fd0a391ac7f53163a968c4c53849b9359927d762d",
+      "definitions": [
+        {
+          "name": "sha",
+          "line": 14,
+          "end_line": 14
+        },
+        {
+          "name": "save",
+          "line": 15,
+          "end_line": 15
+        },
+        {
+          "name": "eer",
+          "line": 17,
+          "end_line": 24
+        },
+        {
+          "name": "cluster_ci",
+          "line": 26,
+          "end_line": 31
+        },
+        {
+          "name": "main",
+          "line": 33,
+          "end_line": 76
+        }
+      ],
+      "imports": [
+        "hashlib",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "sklearn.metrics"
+      ]
+    },
+    "tools/analyze_segment_group_shifts.py": {
+      "bytes": 9338,
+      "lines": 130,
+      "sha256": "dd6f3d84e4376c545c6f252a98bbcb19bb1eff1b4cce7e1c11118b4ef2c13cab",
+      "definitions": [],
+      "imports": [
+        "hashlib",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "pyarrow.parquet"
+      ]
+    },
+    "tools/analyze_segment_length_histograms.py": {
+      "bytes": 11991,
+      "lines": 172,
+      "sha256": "fa7453c79b81f1e14417b291c0d7fbb3c7bed06627fb8eb2363f9a279539fc2e",
+      "definitions": [],
+      "imports": [
+        "argparse",
+        "bidirectional_audio_segments",
+        "hashlib",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib"
+      ]
+    },
+    "tools/analyze_short32_fixed25.py": {
+      "bytes": 3103,
+      "lines": 70,
+      "sha256": "798e8e542b7d28469b5c279e2c472fbb57c1591bcb86cea8cb2c3a34922d9068",
+      "definitions": [
+        {
+          "name": "sha",
+          "line": 11,
+          "end_line": 16
+        },
+        {
+          "name": "independent_eer",
+          "line": 19,
+          "end_line": 37
+        },
+        {
+          "name": "main",
+          "line": 40,
+          "end_line": 66
+        }
+      ],
+      "imports": [
+        "hashlib",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "sys"
+      ]
+    },
+    "tools/analyze_train_crop_io.py": {
+      "bytes": 16982,
+      "lines": 294,
+      "sha256": "9f8574b6a6b517f28ac46a6e023aea4af7918c4ff3e7de2d3fb6470bb1727a81",
+      "definitions": [
+        {
+          "name": "save_json",
+          "line": 25,
+          "end_line": 26
+        },
+        {
+          "name": "activity",
+          "line": 29,
+          "end_line": 51
+        },
+        {
+          "name": "audit_crop",
+          "line": 54,
+          "end_line": 67
+        },
+        {
+          "name": "interval_size",
+          "line": 70,
+          "end_line": 76
+        },
+        {
+          "name": "full_crop",
+          "line": 79,
+          "end_line": 82
+        },
+        {
+          "name": "benchmark",
+          "line": 85,
+          "end_line": 134
+        },
+        {
+          "name": "coverage",
+          "line": 137,
+          "end_line": 158
+        },
+        {
+          "name": "summarize_activity",
+          "line": 161,
+          "end_line": 176
+        },
+        {
+          "name": "main",
+          "line": 179,
+          "end_line": 290
+        }
+      ],
+      "imports": [
+        "argparse",
+        "arguments",
+        "collections",
+        "hashlib",
+        "json",
+        "math",
+        "multiprocessing",
+        "numpy",
+        "os",
+        "pandas",
+        "pathlib",
+        "positive_bpl",
+        "random",
+        "soundfile",
+        "time",
+        "torch",
+        "types",
+        "webrtcvad"
+      ]
+    },
+    "tools/audit_original_repetition.py": {
+      "bytes": 5899,
+      "lines": 102,
+      "sha256": "8662588d241a43238c70f66f931bcad703cb671b875e0775fa8349ee680ce46e",
+      "definitions": [
+        {
+          "name": "measures",
+          "line": 18,
+          "end_line": 50
+        },
+        {
+          "name": "main",
+          "line": 53,
+          "end_line": 98
+        }
+      ],
+      "imports": [
+        "datetime",
+        "hashlib",
+        "json",
+        "numpy",
+        "os",
+        "pathlib",
+        "scipy.signal",
+        "soundfile"
+      ]
+    },
+    "tools/bidirectional_audio_segments.py": {
+      "bytes": 1901,
+      "lines": 46,
+      "sha256": "38be09d048000db04f7b7b2679c6f36529faa513db31eb1ab8e32fd8c66b216c",
+      "definitions": [
+        {
+          "name": "Segment",
+          "line": 13,
+          "end_line": 18
+        },
+        {
+          "name": "iter_segments",
+          "line": 21,
+          "end_line": 36
+        },
+        {
+          "name": "iter_waveform_segments",
+          "line": 39,
+          "end_line": 46
+        }
+      ],
+      "imports": [
+        "dataclasses",
+        "operator"
+      ]
+    },
+    "tools/build_activity_candidates.py": {
+      "bytes": 4115,
+      "lines": 69,
+      "sha256": "98ed4d9e98aa1fef0dc2fe8ceb6e5324d5fb1dc20953084076b77210d47e3c7c",
+      "definitions": [
+        {
+          "name": "one",
+          "line": 17,
+          "end_line": 35
+        }
+      ],
+      "imports": [
+        "arguments",
+        "collections",
+        "hashlib",
+        "json",
+        "multiprocessing",
+        "numpy",
+        "os",
+        "pathlib",
+        "positive_bpl",
+        "soundfile",
+        "sys",
+        "time",
+        "types",
+        "webrtcvad"
+      ]
+    },
+    "tools/build_mild_duration_policy.py": {
+      "bytes": 4812,
+      "lines": 76,
+      "sha256": "b8ea46308669bbf6e6658b4f1f8eb17621a459ce1ae8b7c097983960f8387be3",
+      "definitions": [
+        {
+          "name": "main",
+          "line": 10,
+          "end_line": 72
+        }
+      ],
+      "imports": [
+        "hashlib",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "sys"
+      ]
+    },
+    "tools/check_baseline240_mild.py": {
+      "bytes": 6205,
+      "lines": 103,
+      "sha256": "0d285edc58b36ec88bb595411b24ef91335827f8ec9f208cce9e46bc56252f9c",
+      "definitions": [
+        {
+          "name": "sha",
+          "line": 17,
+          "end_line": 17
+        },
+        {
+          "name": "audit_consumed",
+          "line": 20,
+          "end_line": 35
+        },
+        {
+          "name": "main",
+          "line": 38,
+          "end_line": 100
+        }
+      ],
+      "imports": [
+        "arguments",
+        "baseline240_mild",
+        "csv",
+        "dataset.ASVspoof2019_la_train",
+        "hashlib",
+        "importlib.util",
+        "json",
+        "mild_duration",
+        "numpy",
+        "os",
+        "pathlib",
+        "subprocess",
+        "sys",
+        "tools.train_baseline240_mild",
+        "torch"
+      ]
+    },
+    "tools/check_coverage_training.py": {
+      "bytes": 5055,
+      "lines": 69,
+      "sha256": "4ad7710bb3b0afa7744bf568c075c79172b2c1c523171580b800fa487b132b5e",
+      "definitions": [
+        {
+          "name": "sha",
+          "line": 8,
+          "end_line": 8
+        }
+      ],
+      "imports": [
+        "arguments",
+        "dataset.ASVspoof2019_la_train",
+        "hashlib",
+        "json",
+        "os",
+        "pathlib",
+        "positive_bpl",
+        "socket",
+        "subprocess",
+        "sys",
+        "tools.train_coverage_experiment",
+        "torch"
+      ]
+    },
+    "tools/check_mild_training.py": {
+      "bytes": 6484,
+      "lines": 100,
+      "sha256": "d77c0d0532b9c2f8bc58a497e4a9fde014b20213f4315435a317d938b2249400",
+      "definitions": [
+        {
+          "name": "sha",
+          "line": 16,
+          "end_line": 16
+        },
+        {
+          "name": "main",
+          "line": 19,
+          "end_line": 97
+        }
+      ],
+      "imports": [
+        "arguments",
+        "dataset.ASVspoof2019_la_train",
+        "hashlib",
+        "json",
+        "math",
+        "mild_duration",
+        "numpy",
+        "os",
+        "pathlib",
+        "positive_bpl",
+        "socket",
+        "subprocess",
+        "sys",
+        "tools.train_coverage_experiment",
+        "torch"
+      ]
+    },
+    "tools/collect_prior_acoustic_distributions.py": {
+      "bytes": 3289,
+      "lines": 65,
+      "sha256": "ad2a8b451f4da1cdbde5da13ad025e66919ad4a8250cd029d2d4bc3604f567f5",
+      "definitions": [
+        {
+          "name": "main",
+          "line": 49,
+          "end_line": 62
+        }
+      ],
+      "imports": [
+        "json",
+        "pathlib",
+        "run_padding_causal",
+        "sys"
+      ]
+    },
+    "tools/compact_duration_partitions.py": {
+      "bytes": 3925,
+      "lines": 71,
+      "sha256": "2d9ed9b0861b8f8f0f13ca7997c226ed7e8462dccc476599a73417e83fa10fe1",
+      "definitions": [
+        {
+          "name": "main",
+          "line": 15,
+          "end_line": 68
+        }
+      ],
+      "imports": [
+        "analyze",
+        "json",
+        "numpy",
+        "optimize_duration_partitions",
+        "pandas",
+        "pathlib",
+        "sys",
+        "time"
+      ]
+    },
+    "tools/compare_coverage_epoch20.py": {
+      "bytes": 8416,
+      "lines": 155,
+      "sha256": "dd8160515e464d2f8dc5899da29e1bcdb83941ae1fd0adac5de134372fb0871b",
+      "definitions": [
+        {
+          "name": "save",
+          "line": 13,
+          "end_line": 16
+        },
+        {
+          "name": "sha",
+          "line": 19,
+          "end_line": 20
+        },
+        {
+          "name": "eer",
+          "line": 23,
+          "end_line": 41
+        },
+        {
+          "name": "validate_phase",
+          "line": 44,
+          "end_line": 74
+        },
+        {
+          "name": "compare",
+          "line": 77,
+          "end_line": 139
+        }
+      ],
+      "imports": [
+        "csv",
+        "datetime",
+        "hashlib",
+        "itertools",
+        "json",
+        "math",
+        "pathlib",
+        "sys",
+        "time"
+      ]
+    },
+    "tools/design_duration_sampling_policy.py": {
+      "bytes": 8703,
+      "lines": 146,
+      "sha256": "268b99f612ce67a04c03871d8f22daf99e5b97e38da0f105fd713b0b543384df",
+      "definitions": [
+        {
+          "name": "fit_conditionals",
+          "line": 29,
+          "end_line": 43
+        }
+      ],
+      "imports": [
+        "duration_sampling_policy",
+        "hashlib",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib"
+      ]
+    },
+    "tools/diagnose_speed_atempo.py": {
+      "bytes": 16385,
+      "lines": 332,
+      "sha256": "153ddf74c90328694130d6ee63d8923334419ae1bc2747bd720eaa1395d2b331",
+      "definitions": [
+        {
+          "name": "sha",
+          "line": 31,
+          "end_line": 32
+        },
+        {
+          "name": "save",
+          "line": 35,
+          "end_line": 39
+        },
+        {
+          "name": "selection",
+          "line": 42,
+          "end_line": 57
+        },
+        {
+          "name": "make_items",
+          "line": 60,
+          "end_line": 80
+        },
+        {
+          "name": "atempo_filter",
+          "line": 83,
+          "end_line": 97
+        },
+        {
+          "name": "stretch",
+          "line": 100,
+          "end_line": 115
+        },
+        {
+          "name": "views",
+          "line": 118,
+          "end_line": 128
+        },
+        {
+          "name": "worker",
+          "line": 131,
+          "end_line": 262
+        },
+        {
+          "name": "summarize",
+          "line": 265,
+          "end_line": 312
+        },
+        {
+          "name": "main",
+          "line": 315,
+          "end_line": 328
+        }
+      ],
+      "imports": [
+        "argparse",
+        "arguments",
+        "csv",
+        "dataset",
+        "hashlib",
+        "json",
+        "model",
+        "native_steps",
+        "numpy",
+        "os",
+        "pandas",
+        "pathlib",
+        "soundfile",
+        "subprocess",
+        "sys",
+        "time",
+        "torch",
+        "torch.multiprocessing",
+        "transformers"
+      ]
+    },
+    "tools/diagnose_speed_views.py": {
+      "bytes": 13601,
+      "lines": 283,
+      "sha256": "bdc22e4dd35c9c196d1d80b34ab476fbc6577ec9782abed3167be38932c0d495",
+      "definitions": [
+        {
+          "name": "sha",
+          "line": 25,
+          "end_line": 26
+        },
+        {
+          "name": "save",
+          "line": 29,
+          "end_line": 33
+        },
+        {
+          "name": "selection",
+          "line": 36,
+          "end_line": 51
+        },
+        {
+          "name": "make_items",
+          "line": 54,
+          "end_line": 74
+        },
+        {
+          "name": "stretch",
+          "line": 77,
+          "end_line": 86
+        },
+        {
+          "name": "views",
+          "line": 89,
+          "end_line": 100
+        },
+        {
+          "name": "worker",
+          "line": 103,
+          "end_line": 224
+        },
+        {
+          "name": "summarize",
+          "line": 227,
+          "end_line": 263
+        },
+        {
+          "name": "main",
+          "line": 266,
+          "end_line": 279
+        }
+      ],
+      "imports": [
+        "argparse",
+        "arguments",
+        "csv",
+        "dataset",
+        "hashlib",
+        "json",
+        "librosa",
+        "model",
+        "native_steps",
+        "numpy",
+        "os",
+        "pandas",
+        "pathlib",
+        "soundfile",
+        "sys",
+        "time",
+        "torch",
+        "torch.multiprocessing",
+        "transformers"
+      ]
+    },
+    "tools/duration_sampling_policy.py": {
+      "bytes": 3081,
+      "lines": 68,
+      "sha256": "6ae4a5efceb226ee97afcd8189836aa10ce0377a02ec51acfdbd4b3f514fadf7",
+      "definitions": [
+        {
+          "name": "SampledCrop",
+          "line": 16,
+          "end_line": 21
+        },
+        {
+          "name": "OriginalFirstDurationPolicy",
+          "line": 24,
+          "end_line": 68
+        }
+      ],
+      "imports": [
+        "dataclasses",
+        "json",
+        "numpy",
+        "operator",
+        "pathlib"
+      ]
+    },
+    "tools/evaluate_B_C_checkpoints.py": {
+      "bytes": 14430,
+      "lines": 253,
+      "sha256": "961ece4a5ba570bab91bfee45a6992e1767174f22cfaa94861c7e755e1a2230e",
+      "definitions": [
+        {
+          "name": "sha",
+          "line": 30,
+          "end_line": 30
+        },
+        {
+          "name": "save",
+          "line": 31,
+          "end_line": 33
+        },
+        {
+          "name": "make_items",
+          "line": 35,
+          "end_line": 50
+        },
+        {
+          "name": "Waves",
+          "line": 52,
+          "end_line": 63
+        },
+        {
+          "name": "collate",
+          "line": 65,
+          "end_line": 67
+        },
+        {
+          "name": "metrics",
+          "line": 69,
+          "end_line": 83
+        },
+        {
+          "name": "worker",
+          "line": 85,
+          "end_line": 201
+        },
+        {
+          "name": "summarize",
+          "line": 203,
+          "end_line": 231
+        },
+        {
+          "name": "main",
+          "line": 233,
+          "end_line": 251
+        }
+      ],
+      "imports": [
+        "argparse",
+        "arguments",
+        "csv",
+        "data_loaders",
+        "dataset",
+        "hashlib",
+        "json",
+        "model",
+        "native_steps",
+        "numpy",
+        "os",
+        "pandas",
+        "pathlib",
+        "sklearn.metrics",
+        "soundfile",
+        "sys",
+        "time",
+        "torch",
+        "torch.multiprocessing",
+        "transformers",
+        "types"
+      ]
+    },
+    "tools/evaluate_B_checkpoints.py": {
+      "bytes": 13751,
+      "lines": 248,
+      "sha256": "9482fd15f9cdee9a22f710f3e6132844814b5d73c11f642ea59d5baf112030cd",
+      "definitions": [
+        {
+          "name": "sha",
+          "line": 28,
+          "end_line": 28
+        },
+        {
+          "name": "save",
+          "line": 29,
+          "end_line": 31
+        },
+        {
+          "name": "make_items",
+          "line": 33,
+          "end_line": 48
+        },
+        {
+          "name": "Waves",
+          "line": 50,
+          "end_line": 61
+        },
+        {
+          "name": "collate",
+          "line": 63,
+          "end_line": 65
+        },
+        {
+          "name": "metrics",
+          "line": 67,
+          "end_line": 81
+        },
+        {
+          "name": "worker",
+          "line": 83,
+          "end_line": 196
+        },
+        {
+          "name": "summarize",
+          "line": 198,
+          "end_line": 226
+        },
+        {
+          "name": "main",
+          "line": 228,
+          "end_line": 246
+        }
+      ],
+      "imports": [
+        "argparse",
+        "arguments",
+        "csv",
+        "data_loaders",
+        "dataset",
+        "hashlib",
+        "json",
+        "model",
+        "native_steps",
+        "numpy",
+        "os",
+        "pandas",
+        "pathlib",
+        "sklearn.metrics",
+        "soundfile",
+        "sys",
+        "time",
+        "torch",
+        "torch.multiprocessing",
+        "transformers",
+        "types"
+      ]
+    },
+    "tools/evaluate_coverage_checkpoint.py": {
+      "bytes": 10086,
+      "lines": 192,
+      "sha256": "0bae8bfb46853796b825e979dba257a4c2f390d7216d3e502263bc7ed201ac73",
+      "definitions": [
+        {
+          "name": "sha",
+          "line": 14,
+          "end_line": 15
+        },
+        {
+          "name": "save",
+          "line": 18,
+          "end_line": 22
+        },
+        {
+          "name": "audit_checkpoint",
+          "line": 25,
+          "end_line": 47
+        },
+        {
+          "name": "worker",
+          "line": 50,
+          "end_line": 143
+        },
+        {
+          "name": "summarize_phase",
+          "line": 146,
+          "end_line": 167
+        }
+      ],
+      "imports": [
+        "arguments",
+        "csv",
+        "data_loaders",
+        "hashlib",
+        "json",
+        "model",
+        "native_steps",
+        "numpy",
+        "os",
+        "pandas",
+        "pathlib",
+        "positive_bpl",
+        "sys",
+        "time",
+        "tools.evaluate_B_C_checkpoints",
+        "torch",
+        "torch.multiprocessing",
+        "transformers"
+      ]
+    },
+    "tools/evaluate_coverage_comparison.py": {
+      "bytes": 10388,
+      "lines": 161,
+      "sha256": "c17bd3c0560c41bfc5e6d11dd320147f420d2793fd315d544eae6e47f8ad5ce4",
+      "definitions": [
+        {
+          "name": "sha",
+          "line": 15,
+          "end_line": 15
+        },
+        {
+          "name": "worker",
+          "line": 18,
+          "end_line": 108
+        },
+        {
+          "name": "summarize",
+          "line": 111,
+          "end_line": 151
+        }
+      ],
+      "imports": [
+        "arguments",
+        "csv",
+        "data_loaders",
+        "hashlib",
+        "json",
+        "model",
+        "native_steps",
+        "numpy",
+        "os",
+        "pandas",
+        "pathlib",
+        "positive_bpl",
+        "sys",
+        "time",
+        "tools.evaluate_B_C_checkpoints",
+        "tools.train_coverage_experiment",
+        "torch",
+        "torch.multiprocessing",
+        "transformers"
+      ]
+    },
+    "tools/evaluate_low_occupancy_152_158.py": {
+      "bytes": 10737,
+      "lines": 180,
+      "sha256": "714ee303c87999b0fd868568c28b3247e4585d691be2550eb0e82a54aaf26f9d",
+      "definitions": [
+        {
+          "name": "save",
+          "line": 24,
+          "end_line": 25
+        },
+        {
+          "name": "main",
+          "line": 28,
+          "end_line": 175
+        }
+      ],
+      "imports": [
+        "evaluate_low_occupancy_ablation",
+        "json",
+        "matplotlib",
+        "matplotlib.pyplot",
+        "numpy",
+        "os",
+        "pandas",
+        "pathlib",
+        "threadpoolctl",
+        "time",
+        "verify_low_occupancy_ablation"
+      ]
+    },
+    "tools/evaluate_low_occupancy_ablation.py": {
+      "bytes": 18149,
+      "lines": 330,
+      "sha256": "a9e7579fda8196c12027f3134cfdc2295c5ac8675025a0400ed7d5e5a399c1df",
+      "definitions": [
+        {
+          "name": "digest",
+          "line": 28,
+          "end_line": 33
+        },
+        {
+          "name": "save",
+          "line": 36,
+          "end_line": 37
+        },
+        {
+          "name": "check",
+          "line": 40,
+          "end_line": 44
+        },
+        {
+          "name": "clock_check",
+          "line": 47,
+          "end_line": 48
+        },
+        {
+          "name": "load_sources",
+          "line": 51,
+          "end_line": 79
+        },
+        {
+          "name": "eer_and_dev_threshold",
+          "line": 82,
+          "end_line": 96
+        },
+        {
+          "name": "operating_rates",
+          "line": 99,
+          "end_line": 102
+        },
+        {
+          "name": "transform_scores",
+          "line": 105,
+          "end_line": 149
+        },
+        {
+          "name": "render",
+          "line": 152,
+          "end_line": 181
+        },
+        {
+          "name": "main",
+          "line": 184,
+          "end_line": 325
+        }
+      ],
+      "imports": [
+        "hashlib",
+        "json",
+        "matplotlib",
+        "matplotlib.pyplot",
+        "numpy",
+        "os",
+        "pandas",
+        "pathlib",
+        "scipy.linalg",
+        "sklearn.metrics",
+        "threadpoolctl",
+        "time"
+      ]
+    },
+    "tools/evaluate_original240_reference.py": {
+      "bytes": 2131,
+      "lines": 40,
+      "sha256": "82a2af8029c9c8f5c1ec248858c05385bbcd0465b14b051232241a9d08f72b22",
+      "definitions": [
+        {
+          "name": "main",
+          "line": 13,
+          "end_line": 37
+        }
+      ],
+      "imports": [
+        "hashlib",
+        "json",
+        "os",
+        "pathlib",
+        "sys",
+        "time",
+        "tools.evaluate_coverage_checkpoint",
+        "tools.train_baseline240_mild",
+        "torch.multiprocessing"
+      ]
+    },
+    "tools/evaluate_short32_fixed25.py": {
+      "bytes": 12438,
+      "lines": 255,
+      "sha256": "48e4ffe3083398a7a1ef2e880e4020753f939527b2ed07760eb3824c9438c53e",
+      "definitions": [
+        {
+          "name": "make_items",
+          "line": 19,
+          "end_line": 36
+        },
+        {
+          "name": "Waves",
+          "line": 39,
+          "end_line": 55
+        },
+        {
+          "name": "collate",
+          "line": 58,
+          "end_line": 60
+        },
+        {
+          "name": "metrics",
+          "line": 63,
+          "end_line": 76
+        },
+        {
+          "name": "sha",
+          "line": 79,
+          "end_line": 80
+        },
+        {
+          "name": "save",
+          "line": 83,
+          "end_line": 87
+        },
+        {
+          "name": "audit_checkpoint",
+          "line": 90,
+          "end_line": 112
+        },
+        {
+          "name": "worker",
+          "line": 115,
+          "end_line": 207
+        },
+        {
+          "name": "summarize_phase",
+          "line": 210,
+          "end_line": 230
+        }
+      ],
+      "imports": [
+        "arguments",
+        "csv",
+        "data_loaders",
+        "dataset",
+        "hashlib",
+        "json",
+        "model",
+        "native_steps",
+        "numpy",
+        "os",
+        "pandas",
+        "pathlib",
+        "positive_bpl",
+        "sklearn.metrics",
+        "soundfile",
+        "sys",
+        "time",
+        "torch",
+        "torch.multiprocessing",
+        "transformers"
+      ]
+    },
+    "tools/finish_baseline240_mild.py": {
+      "bytes": 3341,
+      "lines": 52,
+      "sha256": "729c8b3a116b123aaead131bef3079aa02ce5bc11ffd35b8c961932f05495fa2",
+      "definitions": [
+        {
+          "name": "sha",
+          "line": 11,
+          "end_line": 11
+        },
+        {
+          "name": "main",
+          "line": 14,
+          "end_line": 49
+        }
+      ],
+      "imports": [
+        "csv",
+        "hashlib",
+        "json",
+        "pathlib",
+        "sys",
+        "tools.compare_coverage_epoch20",
+        "tools.finish_mild_experiment"
+      ]
+    },
+    "tools/finish_mild_experiment.py": {
+      "bytes": 4142,
+      "lines": 65,
+      "sha256": "e4fea14ba90543513fff5f76d595c97ffeeb0bc581d3e72637a4f83f44950946",
+      "definitions": [
+        {
+          "name": "sha",
+          "line": 11,
+          "end_line": 11
+        },
+        {
+          "name": "main",
+          "line": 14,
+          "end_line": 62
+        }
+      ],
+      "imports": [
+        "csv",
+        "hashlib",
+        "json",
+        "pathlib",
+        "sys",
+        "tools.compare_coverage_epoch20"
+      ]
+    },
+    "tools/fit_activity_policy.py": {
+      "bytes": 11350,
+      "lines": 183,
+      "sha256": "dbb15ffe9a4ea3f88cfd4ee5b0f4ac565aeead92d5ece6afb62f1e0f98e5d534",
+      "definitions": [
+        {
+          "name": "totals",
+          "line": 15,
+          "end_line": 15
+        },
+        {
+          "name": "errors",
+          "line": 18,
+          "end_line": 27
+        },
+        {
+          "name": "fit_flow",
+          "line": 30,
+          "end_line": 96
+        },
+        {
+          "name": "fixed_mean_ranges",
+          "line": 99,
+          "end_line": 110
+        },
+        {
+          "name": "main",
+          "line": 113,
+          "end_line": 179
+        }
+      ],
+      "imports": [
+        "activity_policy",
+        "argparse",
+        "arguments",
+        "dataset.ASVspoof2019_la_train",
+        "hashlib",
+        "json",
+        "numpy",
+        "os",
+        "pathlib",
+        "positive_bpl",
+        "scipy",
+        "scipy.optimize",
+        "sys",
+        "time"
+      ]
+    },
+    "tools/launch_B_checkpoints.py": {
+      "bytes": 3043,
+      "lines": 62,
+      "sha256": "52d90f39c8db55b37fdf2bc507b3b45317f2c0bbc0a9018e671fa8ec7494d085",
+      "definitions": [
+        {
+          "name": "main",
+          "line": 14,
+          "end_line": 58
+        }
+      ],
+      "imports": [
+        "json",
+        "pathlib",
+        "run_padding_causal",
+        "shlex",
+        "sys"
+      ]
+    },
+    "tools/optimize_duration_partitions.py": {
+      "bytes": 15376,
+      "lines": 307,
+      "sha256": "e788545fd80296e74389c4ec0161ca85d6b0312f1777d6cb5b037320efbbd0e7",
+      "definitions": [
+        {
+          "name": "PartitionModel",
+          "line": 30,
+          "end_line": 39
+        },
+        {
+          "name": "candidate_patterns",
+          "line": 42,
+          "end_line": 52
+        },
+        {
+          "name": "build_model",
+          "line": 55,
+          "end_line": 80
+        },
+        {
+          "name": "relaxation",
+          "line": 83,
+          "end_line": 106
+        },
+        {
+          "name": "overlap",
+          "line": 109,
+          "end_line": 111
+        },
+        {
+          "name": "round_groups",
+          "line": 114,
+          "end_line": 126
+        },
+        {
+          "name": "polish",
+          "line": 129,
+          "end_line": 160
+        },
+        {
+          "name": "materialize",
+          "line": 163,
+          "end_line": 188
+        },
+        {
+          "name": "segment_boundaries",
+          "line": 191,
+          "end_line": 194
+        },
+        {
+          "name": "self_check",
+          "line": 197,
+          "end_line": 208
+        },
+        {
+          "name": "run",
+          "line": 211,
+          "end_line": 296
+        }
+      ],
+      "imports": [
+        "__future__",
+        "analyze",
+        "argparse",
+        "dataclasses",
+        "hashlib",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "scipy.optimize",
+        "scipy.sparse",
+        "sys",
+        "time"
+      ]
+    },
+    "tools/plot_class_distributions.py": {
+      "bytes": 30745,
+      "lines": 421,
+      "sha256": "6cf2136883e8dbe488ec40f8884feb5cf25dbcddb6d54ceae24447192bd20d0c",
+      "definitions": [
+        {
+          "name": "digest",
+          "line": 47,
+          "end_line": 48
+        },
+        {
+          "name": "source",
+          "line": 50,
+          "end_line": 54
+        },
+        {
+          "name": "read_alias",
+          "line": 56,
+          "end_line": 68
+        },
+        {
+          "name": "load",
+          "line": 70,
+          "end_line": 98
+        },
+        {
+          "name": "legend",
+          "line": 100,
+          "end_line": 102
+        },
+        {
+          "name": "grid",
+          "line": 104,
+          "end_line": 118
+        },
+        {
+          "name": "save",
+          "line": 120,
+          "end_line": 128
+        },
+        {
+          "name": "record_hist",
+          "line": 130,
+          "end_line": 135
+        },
+        {
+          "name": "hist",
+          "line": 137,
+          "end_line": 143
+        },
+        {
+          "name": "counts_plot",
+          "line": 145,
+          "end_line": 167
+        },
+        {
+          "name": "durations",
+          "line": 169,
+          "end_line": 217
+        },
+        {
+          "name": "numeric_distributions",
+          "line": 219,
+          "end_line": 250
+        },
+        {
+          "name": "category_plot",
+          "line": 252,
+          "end_line": 267
+        },
+        {
+          "name": "categories",
+          "line": 269,
+          "end_line": 300
+        },
+        {
+          "name": "acoustics",
+          "line": 302,
+          "end_line": 338
+        },
+        {
+          "name": "pca_view",
+          "line": 340,
+          "end_line": 367
+        },
+        {
+          "name": "duration_zoom",
+          "line": 369,
+          "end_line": 383
+        },
+        {
+          "name": "gallery",
+          "line": 385,
+          "end_line": 414
+        },
+        {
+          "name": "main",
+          "line": 416,
+          "end_line": 418
+        }
+      ],
+      "imports": [
+        "geometry_cache",
+        "hashlib",
+        "json",
+        "matplotlib",
+        "matplotlib.lines",
+        "matplotlib.pyplot",
+        "matplotlib.text",
+        "matplotlib.ticker",
+        "numpy",
+        "os",
+        "pandas",
+        "pathlib",
+        "sklearn.decomposition",
+        "sys"
+      ]
+    },
+    "tools/plot_coverage20_length_only.py": {
+      "bytes": 2153,
+      "lines": 48,
+      "sha256": "6b6191ecac32089b6c1a6c7d4a14d7ab430950864be9f1cc04c586027070c963",
+      "definitions": [
+        {
+          "name": "main",
+          "line": 12,
+          "end_line": 44
+        }
+      ],
+      "imports": [
+        "argparse",
+        "matplotlib",
+        "matplotlib.pyplot",
+        "pandas",
+        "pathlib"
+      ]
+    },
+    "tools/plot_reference_length_profiles.py": {
+      "bytes": 3604,
+      "lines": 65,
+      "sha256": "7d6d0306b037099dae8f33065e3944bbe9892ebec9975905feac2cafdcdc81a3",
+      "definitions": [
+        {
+          "name": "main",
+          "line": 13,
+          "end_line": 61
+        }
+      ],
+      "imports": [
+        "argparse",
+        "json",
+        "matplotlib",
+        "matplotlib.pyplot",
+        "pandas",
+        "pathlib"
+      ]
+    },
+    "tools/positive_bpl_pilot.py": {
+      "bytes": 13353,
+      "lines": 220,
+      "sha256": "a81902126fe17f9a78b02db7d8092dbe31d74c8bedf8345d0abf91d4ba133ba3",
+      "definitions": [
+        {
+          "name": "save",
+          "line": 21,
+          "end_line": 23
+        },
+        {
+          "name": "digest",
+          "line": 25,
+          "end_line": 26
+        },
+        {
+          "name": "diagnostics",
+          "line": 28,
+          "end_line": 39
+        },
+        {
+          "name": "eer",
+          "line": 41,
+          "end_line": 49
+        },
+        {
+          "name": "add_noise",
+          "line": 51,
+          "end_line": 57
+        },
+        {
+          "name": "augment",
+          "line": 59,
+          "end_line": 65
+        },
+        {
+          "name": "worker",
+          "line": 67,
+          "end_line": 211
+        },
+        {
+          "name": "main",
+          "line": 213,
+          "end_line": 218
+        }
+      ],
+      "imports": [
+        "argparse",
+        "csv",
+        "hashlib",
+        "importlib.util",
+        "json",
+        "math",
+        "model",
+        "native_steps",
+        "numpy",
+        "os",
+        "pathlib",
+        "random",
+        "sklearn.metrics",
+        "soundfile",
+        "sys",
+        "time",
+        "torch",
+        "torch.distributed",
+        "torch.multiprocessing",
+        "transformers"
+      ]
+    },
+    "tools/prepare_mild_audio.py": {
+      "bytes": 4036,
+      "lines": 77,
+      "sha256": "01f4da2595103262821ee2cc2902839cebf9d470c9f19d9de779cb2e3d2253e7",
+      "definitions": [
+        {
+          "name": "main",
+          "line": 20,
+          "end_line": 74
+        }
+      ],
+      "imports": [
+        "concurrent.futures",
+        "dataset.ASVspoof2019_la_train",
+        "hashlib",
+        "json",
+        "mild_duration",
+        "numpy",
+        "pathlib",
+        "shutil",
+        "soundfile",
+        "subprocess",
+        "sys",
+        "time",
+        "tools.train_coverage_experiment"
+      ]
+    },
+    "tools/probe_repetition_shortcut.py": {
+      "bytes": 9496,
+      "lines": 160,
+      "sha256": "fa215831054a18746e1fff2d654451b671107d4aacd7ae391233b109c38b01a3",
+      "definitions": [
+        {
+          "name": "sha",
+          "line": 18,
+          "end_line": 18
+        },
+        {
+          "name": "save",
+          "line": 19,
+          "end_line": 20
+        },
+        {
+          "name": "smooth",
+          "line": 22,
+          "end_line": 27
+        },
+        {
+          "name": "repeat",
+          "line": 29,
+          "end_line": 31
+        },
+        {
+          "name": "dose_views",
+          "line": 33,
+          "end_line": 49
+        },
+        {
+          "name": "read_selection",
+          "line": 51,
+          "end_line": 58
+        },
+        {
+          "name": "worker",
+          "line": 60,
+          "end_line": 133
+        },
+        {
+          "name": "validate",
+          "line": 135,
+          "end_line": 152
+        },
+        {
+          "name": "main",
+          "line": 154,
+          "end_line": 158
+        }
+      ],
+      "imports": [
+        "argparse",
+        "arguments",
+        "csv",
+        "hashlib",
+        "json",
+        "model",
+        "native_steps",
+        "numpy",
+        "os",
+        "pandas",
+        "pathlib",
+        "probe_common",
+        "soundfile",
+        "sys",
+        "time",
+        "torch",
+        "torch.multiprocessing",
+        "transformers"
+      ]
+    },
+    "tools/queue_mild_experiment.py": {
+      "bytes": 3788,
+      "lines": 71,
+      "sha256": "6d2038fc1e5cda8bb9bdcf6a98f9b6ecec674de5ecc66ece33baa89358c188fe",
+      "definitions": [
+        {
+          "name": "save",
+          "line": 11,
+          "end_line": 12
+        },
+        {
+          "name": "check_source",
+          "line": 15,
+          "end_line": 21
+        },
+        {
+          "name": "main",
+          "line": 24,
+          "end_line": 64
+        }
+      ],
+      "imports": [
+        "hashlib",
+        "json",
+        "pathlib",
+        "shlex",
+        "subprocess",
+        "sys",
+        "time"
+      ]
+    },
+    "tools/queue_paired_evaluation.py": {
+      "bytes": 3272,
+      "lines": 66,
+      "sha256": "817ceeeb9185fd539e7a776bd2887b94d162ac767d5ce8030f37fbd77d38a87e",
+      "definitions": [
+        {
+          "name": "sha",
+          "line": 12,
+          "end_line": 16
+        },
+        {
+          "name": "save",
+          "line": 18,
+          "end_line": 21
+        },
+        {
+          "name": "main",
+          "line": 24,
+          "end_line": 58
+        }
+      ],
+      "imports": [
+        "hashlib",
+        "json",
+        "paired_queue_guard",
+        "pathlib",
+        "shlex",
+        "subprocess",
+        "sys",
+        "time"
+      ]
+    },
+    "tools/render_low_occupancy_ablation_detail.py": {
+      "bytes": 5344,
+      "lines": 71,
+      "sha256": "d6b42c997f7d9f7c38b603231925dd3c7bcbba8d54429143313f11274f5c9948",
+      "definitions": [
+        {
+          "name": "main",
+          "line": 15,
+          "end_line": 67
+        }
+      ],
+      "imports": [
+        "json",
+        "matplotlib",
+        "matplotlib.pyplot",
+        "matplotlib.ticker",
+        "numpy",
+        "pandas",
+        "pathlib"
+      ]
+    },
+    "tools/review_repetition_results.py": {
+      "bytes": 14076,
+      "lines": 213,
+      "sha256": "fec9ff9bea0a2af5a106b2cd4162882a1c489100cbfc70ba38a13934e9558f9e",
+      "definitions": [
+        {
+          "name": "digest",
+          "line": 14,
+          "end_line": 15
+        },
+        {
+          "name": "save",
+          "line": 18,
+          "end_line": 19
+        },
+        {
+          "name": "roc",
+          "line": 22,
+          "end_line": 31
+        },
+        {
+          "name": "eer",
+          "line": 34,
+          "end_line": 38
+        },
+        {
+          "name": "threshold",
+          "line": 41,
+          "end_line": 43
+        },
+        {
+          "name": "errors",
+          "line": 46,
+          "end_line": 47
+        },
+        {
+          "name": "ipf_weights",
+          "line": 50,
+          "end_line": 69
+        },
+        {
+          "name": "main",
+          "line": 72,
+          "end_line": 210
+        }
+      ],
+      "imports": [
+        "hashlib",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib"
+      ]
+    },
+    "tools/run_paired_evaluation.py": {
+      "bytes": 25564,
+      "lines": 403,
+      "sha256": "2ffeca12e66fcce9253f13da66aa1a04521d7b5dd5333ed355af84a0deb5e4e7",
+      "definitions": [
+        {
+          "name": "verify_sources",
+          "line": 18,
+          "end_line": 25
+        },
+        {
+          "name": "freeze_checkpoints",
+          "line": 28,
+          "end_line": 71
+        },
+        {
+          "name": "items_for_phase",
+          "line": 74,
+          "end_line": 96
+        },
+        {
+          "name": "PairedWaves",
+          "line": 99,
+          "end_line": 111
+        },
+        {
+          "name": "collate",
+          "line": 114,
+          "end_line": 114
+        },
+        {
+          "name": "load_models",
+          "line": 117,
+          "end_line": 136
+        },
+        {
+          "name": "worker",
+          "line": 139,
+          "end_line": 249
+        },
+        {
+          "name": "summarize_probe",
+          "line": 252,
+          "end_line": 296
+        },
+        {
+          "name": "make_report",
+          "line": 299,
+          "end_line": 366
+        },
+        {
+          "name": "main",
+          "line": 369,
+          "end_line": 400
+        }
+      ],
+      "imports": [
+        "argparse",
+        "arguments",
+        "csv",
+        "hashlib",
+        "json",
+        "model",
+        "native_steps",
+        "numpy",
+        "os",
+        "paired_evaluation",
+        "pandas",
+        "pathlib",
+        "soundfile",
+        "sys",
+        "time",
+        "tools.evaluate_B_C_checkpoints",
+        "tools.probe_repetition_shortcut",
+        "torch",
+        "torch.multiprocessing",
+        "transformers"
+      ]
+    },
+    "tools/run_short32_experiment.py": {
+      "bytes": 9548,
+      "lines": 201,
+      "sha256": "e7833e1dac5ea0580c33c706d02927d849c84181d25c0de335f777e1d645e603",
+      "definitions": [
+        {
+          "name": "save",
+          "line": 15,
+          "end_line": 17
+        },
+        {
+          "name": "verify",
+          "line": 20,
+          "end_line": 25
+        },
+        {
+          "name": "smoke_items",
+          "line": 28,
+          "end_line": 48
+        },
+        {
+          "name": "balanced_trials",
+          "line": 51,
+          "end_line": 52
+        },
+        {
+          "name": "preflight",
+          "line": 55,
+          "end_line": 73
+        },
+        {
+          "name": "install_audit",
+          "line": 76,
+          "end_line": 123
+        },
+        {
+          "name": "worker",
+          "line": 126,
+          "end_line": 180
+        },
+        {
+          "name": "cli",
+          "line": 183,
+          "end_line": 198
+        }
+      ],
+      "imports": [
+        "argparse",
+        "arguments",
+        "dataset.ASVspoof2019_la_train",
+        "hashlib",
+        "json",
+        "main",
+        "os",
+        "pathlib",
+        "short32_bpl",
+        "short32_lifecycle",
+        "short32_original240",
+        "socket",
+        "soundfile",
+        "sys",
+        "time",
+        "torch",
+        "torch.distributed",
+        "torch.multiprocessing",
+        "torch.utils.data"
+      ]
+    },
+    "tools/summarize_duration_partitions.py": {
+      "bytes": 12324,
+      "lines": 150,
+      "sha256": "6be1188a7bc07fb848c7ac95651dea2dc055b2c67002ccd55db7f59d941605ef",
+      "definitions": [
+        {
+          "name": "verify_and_select",
+          "line": 15,
+          "end_line": 63
+        },
+        {
+          "name": "plot",
+          "line": 66,
+          "end_line": 100
+        },
+        {
+          "name": "report",
+          "line": 103,
+          "end_line": 145
+        }
+      ],
+      "imports": [
+        "json",
+        "matplotlib",
+        "matplotlib.lines",
+        "matplotlib.pyplot",
+        "numpy",
+        "pandas",
+        "pathlib"
+      ]
+    },
+    "tools/summarize_repetition_shortcut.py": {
+      "bytes": 5579,
+      "lines": 63,
+      "sha256": "ed7afb94e43e953f8a15c717cd998152317db17735c7fc5090e49009afbe6977",
+      "definitions": [
+        {
+          "name": "main",
+          "line": 11,
+          "end_line": 60
+        }
+      ],
+      "imports": [
+        "analyze_repetition_shortcut",
+        "argparse",
+        "hashlib",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "sklearn.metrics"
+      ]
+    },
+    "tools/train_baseline240_mild.py": {
+      "bytes": 14730,
+      "lines": 238,
+      "sha256": "88f389157c8bb55dbb484461dfc71cab21abbb49292cb7d5acffdc7b7729e75e",
+      "definitions": [
+        {
+          "name": "save",
+          "line": 15,
+          "end_line": 17
+        },
+        {
+          "name": "load_file",
+          "line": 20,
+          "end_line": 23
+        },
+        {
+          "name": "controlled_test",
+          "line": 26,
+          "end_line": 69
+        },
+        {
+          "name": "worker",
+          "line": 72,
+          "end_line": 224
+        }
+      ],
+      "imports": [
+        "arguments",
+        "baseline240_mild",
+        "csv",
+        "data_loaders",
+        "hashlib",
+        "importlib.util",
+        "json",
+        "logger.local",
+        "main",
+        "mild_duration",
+        "native_steps",
+        "numpy",
+        "os",
+        "pathlib",
+        "positive_bpl",
+        "sklearn.metrics",
+        "sys",
+        "time",
+        "torch",
+        "torch.distributed",
+        "torch.multiprocessing",
+        "train",
+        "types"
+      ]
+    },
+    "tools/train_conditional_bpl2.py": {
+      "bytes": 11332,
+      "lines": 162,
+      "sha256": "7f89ca6c8df1a8b58b17ae41fc769efdef227b1ead49afa0e607b694942af689",
+      "definitions": [
+        {
+          "name": "sha",
+          "line": 15,
+          "end_line": 15
+        },
+        {
+          "name": "save",
+          "line": 16,
+          "end_line": 17
+        },
+        {
+          "name": "atomic_torch",
+          "line": 19,
+          "end_line": 22
+        },
+        {
+          "name": "monitor",
+          "line": 24,
+          "end_line": 50
+        },
+        {
+          "name": "worker",
+          "line": 52,
+          "end_line": 150
+        },
+        {
+          "name": "main",
+          "line": 152,
+          "end_line": 160
+        }
+      ],
+      "imports": [
+        "archived240_data_loaders",
+        "argparse",
+        "arguments",
+        "conditional_bpl2",
+        "conditional_bpl2_steps",
+        "csv",
+        "dataset.ASVspoof2019_la_train",
+        "datetime",
+        "hashlib",
+        "json",
+        "model",
+        "native_steps",
+        "numpy",
+        "os",
+        "pandas",
+        "pathlib",
+        "positive_bpl",
+        "random",
+        "sys",
+        "time",
+        "tools.evaluate_B_C_checkpoints",
+        "torch",
+        "torch.distributed",
+        "torch.multiprocessing",
+        "torch.utils.data",
+        "transformers",
+        "types"
+      ]
+    },
+    "tools/train_coverage_experiment.py": {
+      "bytes": 6811,
+      "lines": 123,
+      "sha256": "f6f775cc96410db35b4b7d9eb0c2ac7c19eef3f74f609428566046002d080dbc",
+      "definitions": [
+        {
+          "name": "save",
+          "line": 9,
+          "end_line": 11
+        },
+        {
+          "name": "worker",
+          "line": 14,
+          "end_line": 113
+        }
+      ],
+      "imports": [
+        "arguments",
+        "hashlib",
+        "json",
+        "main",
+        "native_steps",
+        "numpy",
+        "os",
+        "pathlib",
+        "sys",
+        "time",
+        "torch",
+        "torch.distributed",
+        "train"
+      ]
+    },
+    "tools/train_mild_duration.py": {
+      "bytes": 7336,
+      "lines": 129,
+      "sha256": "09fbbe0a9e7d5d6fa7f9ae3da5e418fa4ba57d717ce2e24e5105d9a3f9e40d1c",
+      "definitions": [
+        {
+          "name": "save",
+          "line": 9,
+          "end_line": 11
+        },
+        {
+          "name": "worker",
+          "line": 14,
+          "end_line": 119
+        }
+      ],
+      "imports": [
+        "arguments",
+        "hashlib",
+        "json",
+        "main",
+        "mild_duration",
+        "native_steps",
+        "numpy",
+        "os",
+        "pathlib",
+        "sys",
+        "time",
+        "torch",
+        "torch.distributed",
+        "train"
+      ]
+    },
+    "tools/validate_activity_policy.py": {
+      "bytes": 10909,
+      "lines": 165,
+      "sha256": "a3cc2a2a65fc49d09ac24b4761432f6be6927bb1a279e7e2a8f1fe4a7d61b6bb",
+      "definitions": [
+        {
+          "name": "voice_fraction",
+          "line": 17,
+          "end_line": 23
+        },
+        {
+          "name": "inspect_audio",
+          "line": 26,
+          "end_line": 30
+        },
+        {
+          "name": "union_length",
+          "line": 33,
+          "end_line": 40
+        },
+        {
+          "name": "expected",
+          "line": 43,
+          "end_line": 68
+        }
+      ],
+      "imports": [
+        "arguments",
+        "collections",
+        "dataset.ASVspoof2019_la_train",
+        "hashlib",
+        "itertools",
+        "json",
+        "multiprocessing",
+        "numpy",
+        "os",
+        "pandas",
+        "pathlib",
+        "positive_bpl",
+        "sys",
+        "time",
+        "torch",
+        "webrtcvad"
+      ]
+    },
+    "tools/validate_duration_partitions.py": {
+      "bytes": 6294,
+      "lines": 108,
+      "sha256": "63ca322d188a14627eda960a8c401715dc531fe492872840e69c80c7815aead8",
+      "definitions": [
+        {
+          "name": "main",
+          "line": 20,
+          "end_line": 102
+        }
+      ],
+      "imports": [
+        "analyze",
+        "argparse",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "sys"
+      ]
+    },
+    "tools/validate_repetition_results.py": {
+      "bytes": 3234,
+      "lines": 42,
+      "sha256": "5d0e63ffee11ee2e115e4e3d5569a7d67f7dacbbde15e7e8777d2bfd6716a842",
+      "definitions": [
+        {
+          "name": "independent",
+          "line": 10,
+          "end_line": 16
+        },
+        {
+          "name": "main",
+          "line": 18,
+          "end_line": 40
+        }
+      ],
+      "imports": [
+        "hashlib",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib"
+      ]
+    },
+    "tools/validate_short32.py": {
+      "bytes": 2704,
+      "lines": 50,
+      "sha256": "8e225456532920a518e6cb28f460f7d830b25d290a1470d546aabe497b50f95d",
+      "definitions": [
+        {
+          "name": "main",
+          "line": 12,
+          "end_line": 46
+        }
+      ],
+      "imports": [
+        "argparse",
+        "hashlib",
+        "io",
+        "json",
+        "pathlib",
+        "sys",
+        "time",
+        "unittest"
+      ]
+    },
+    "tools/validate_source_coverage.py": {
+      "bytes": 9402,
+      "lines": 148,
+      "sha256": "de6bf1cde1a5e512a22f340202039c8d1912becae20eb32d24cfa243de0b178d",
+      "definitions": [
+        {
+          "name": "union_length",
+          "line": 14,
+          "end_line": 21
+        },
+        {
+          "name": "main",
+          "line": 24,
+          "end_line": 145
+        }
+      ],
+      "imports": [
+        "arguments",
+        "collections",
+        "dataset.ASVspoof2019_la_train",
+        "hashlib",
+        "json",
+        "numpy",
+        "os",
+        "pandas",
+        "pathlib",
+        "positive_bpl",
+        "sys",
+        "time",
+        "torch"
+      ]
+    },
+    "tools/verify_bona_tangent_errors.py": {
+      "bytes": 7508,
+      "lines": 124,
+      "sha256": "7c402547f86646045e70dde6568aac36ab3b2b9e2721d8fa6226406ea1240472",
+      "definitions": [
+        {
+          "name": "sha",
+          "line": 20,
+          "end_line": 25
+        },
+        {
+          "name": "main",
+          "line": 28,
+          "end_line": 119
+        }
+      ],
+      "imports": [
+        "analyze_bona_tangent_errors",
+        "hashlib",
+        "json",
+        "matplotlib",
+        "matplotlib.pyplot",
+        "numpy",
+        "os",
+        "pandas",
+        "pathlib",
+        "threadpoolctl"
+      ]
+    },
+    "tools/verify_duration_residual_3d.py": {
+      "bytes": 9368,
+      "lines": 147,
+      "sha256": "3f2c9778a9d808ae9da3955e7b54e7cbc223a947d2719c10c38dbb634f5f3463",
+      "definitions": [
+        {
+          "name": "records",
+          "line": 20,
+          "end_line": 21
+        },
+        {
+          "name": "main",
+          "line": 24,
+          "end_line": 142
+        }
+      ],
+      "imports": [
+        "json",
+        "numpy",
+        "os",
+        "pandas",
+        "pathlib",
+        "playwright.sync_api",
+        "scipy.stats",
+        "shutil",
+        "threadpoolctl",
+        "visualize_residual_clusters"
+      ]
+    },
+    "tools/verify_joint_duration_group_balance.py": {
+      "bytes": 11744,
+      "lines": 190,
+      "sha256": "ffbb8f51697fc5b5b788b4e69ed08053404b602d26953dc7ebcba3704292ea4d",
+      "definitions": [
+        {
+          "name": "fit",
+          "line": 71,
+          "end_line": 83
+        }
+      ],
+      "imports": [
+        "hashlib",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "scipy.optimize"
+      ]
+    },
+    "tools/verify_low_occupancy_ablation.py": {
+      "bytes": 6419,
+      "lines": 120,
+      "sha256": "d48645b4bf660f70cb312bfdb20a8f7a86c53f89b2c190b72ed0ad73313b1b75",
+      "definitions": [
+        {
+          "name": "eer_independent",
+          "line": 17,
+          "end_line": 31
+        },
+        {
+          "name": "digest",
+          "line": 34,
+          "end_line": 39
+        },
+        {
+          "name": "main",
+          "line": 42,
+          "end_line": 115
+        }
+      ],
+      "imports": [
+        "hashlib",
+        "json",
+        "numpy",
+        "os",
+        "pandas",
+        "pathlib",
+        "threadpoolctl"
+      ]
+    },
+    "tools/verify_residual_clusters_3d.py": {
+      "bytes": 8502,
+      "lines": 146,
+      "sha256": "d6e2ca1a31e4767c2a2fe14e68481bfa05f04d3ae6617d9d2777a51bafbf4767",
+      "definitions": [
+        {
+          "name": "sha",
+          "line": 17,
+          "end_line": 22
+        },
+        {
+          "name": "main",
+          "line": 25,
+          "end_line": 142
+        }
+      ],
+      "imports": [
+        "hashlib",
+        "json",
+        "numpy",
+        "os",
+        "pandas",
+        "pathlib",
+        "playwright.sync_api"
+      ]
+    },
+    "tools/visualize_residual_clusters.py": {
+      "bytes": 30381,
+      "lines": 477,
+      "sha256": "731beb515a441beb201cfefd17487fb6e767ac3d732b8345a7cf906410336ad3",
+      "definitions": [
+        {
+          "name": "digest",
+          "line": 44,
+          "end_line": 49
+        },
+        {
+          "name": "check_file",
+          "line": 52,
+          "end_line": 56
+        },
+        {
+          "name": "save_json",
+          "line": 59,
+          "end_line": 60
+        },
+        {
+          "name": "load_run",
+          "line": 63,
+          "end_line": 112
+        },
+        {
+          "name": "hash_sample",
+          "line": 115,
+          "end_line": 121
+        },
+        {
+          "name": "spherical_kmeans",
+          "line": 124,
+          "end_line": 145
+        },
+        {
+          "name": "direction_stats",
+          "line": 148,
+          "end_line": 180
+        },
+        {
+          "name": "nn_overlap",
+          "line": 183,
+          "end_line": 195
+        },
+        {
+          "name": "savefig",
+          "line": 198,
+          "end_line": 201
+        },
+        {
+          "name": "facet_projection",
+          "line": 204,
+          "end_line": 224
+        },
+        {
+          "name": "plot_clusters",
+          "line": 227,
+          "end_line": 259
+        },
+        {
+          "name": "plot_coverage",
+          "line": 262,
+          "end_line": 301
+        },
+        {
+          "name": "interactive",
+          "line": 304,
+          "end_line": 323
+        },
+        {
+          "name": "main",
+          "line": 326,
+          "end_line": 472
+        }
+      ],
+      "imports": [
+        "hashlib",
+        "json",
+        "matplotlib",
+        "matplotlib.lines",
+        "matplotlib.patches",
+        "matplotlib.pyplot",
+        "numpy",
+        "os",
+        "pandas",
+        "pathlib",
+        "plotly.graph_objects",
+        "plotly.offline",
+        "scipy.linalg",
+        "sklearn.cluster",
+        "sklearn.decomposition",
+        "sklearn.manifold",
+        "sklearn.metrics",
+        "sklearn.neighbors",
+        "threadpoolctl",
+        "time"
+      ]
+    },
+    "tools/visualize_residual_clusters_3d.py": {
+      "bytes": 18636,
+      "lines": 242,
+      "sha256": "1fc49c9e667828d58ba8a5caa83bc4491fe51300f698b22b2524c088a6810037",
+      "definitions": [
+        {
+          "name": "interactive_3d",
+          "line": 24,
+          "end_line": 66
+        },
+        {
+          "name": "static_3d",
+          "line": 69,
+          "end_line": 106
+        },
+        {
+          "name": "main",
+          "line": 109,
+          "end_line": 237
+        }
+      ],
+      "imports": [
+        "hashlib",
+        "json",
+        "matplotlib",
+        "matplotlib.lines",
+        "matplotlib.pyplot",
+        "numpy",
+        "os",
+        "pandas",
+        "pathlib",
+        "plotly.offline",
+        "sklearn.manifold",
+        "threadpoolctl",
+        "time",
+        "visualize_residual_clusters"
+      ]
+    },
+    "train.py": {
+      "bytes": 4964,
+      "lines": 104,
+      "sha256": "18670b0a5e09f8e9069550ae7426f5af8b4a9e416633e7f5d8de8937f4022fb0",
+      "definitions": [
+        {
+          "name": "ModelTrainer",
+          "line": 12,
+          "end_line": 104
+        }
+      ],
+      "imports": [
+        "contextlib",
+        "hashlib",
+        "json",
+        "native_steps",
+        "numpy",
+        "positive_bpl",
+        "sklearn",
+        "torch",
+        "torch.distributed",
+        "tqdm"
+      ]
+    },
+    "utils/__init__.py": {
+      "bytes": 55,
+      "lines": 2,
+      "sha256": "a63eda2c5181d9de31e02d71b95f2c77fd29800e3c1432b453b795ae617be7b9",
+      "definitions": [],
+      "imports": [
+        "ddp_util",
+        "get_threshold"
+      ]
+    },
+    "utils/ddp_util.py": {
+      "bytes": 9087,
+      "lines": 316,
+      "sha256": "43bece35fb033c9f373a631082ebb554f3b3e0f3b73e814957071929f03fac79",
+      "definitions": [
+        {
+          "name": "GatherLayer",
+          "line": 20,
+          "end_line": 37
+        },
+        {
+          "name": "get_world_size",
+          "line": 40,
+          "end_line": 45
+        },
+        {
+          "name": "get_rank",
+          "line": 48,
+          "end_line": 53
+        },
+        {
+          "name": "get_local_rank",
+          "line": 56,
+          "end_line": 66
+        },
+        {
+          "name": "get_local_size",
+          "line": 69,
+          "end_line": 79
+        },
+        {
+          "name": "is_main_process",
+          "line": 82,
+          "end_line": 83
+        },
+        {
+          "name": "synchronize",
+          "line": 86,
+          "end_line": 98
+        },
+        {
+          "name": "_get_global_gloo_group",
+          "line": 102,
+          "end_line": 110
+        },
+        {
+          "name": "_serialize_to_tensor",
+          "line": 113,
+          "end_line": 128
+        },
+        {
+          "name": "_pad_to_largest_tensor",
+          "line": 131,
+          "end_line": 155
+        },
+        {
+          "name": "all_gather",
+          "line": 158,
+          "end_line": 193
+        },
+        {
+          "name": "all_gather_tensor",
+          "line": 196,
+          "end_line": 229
+        },
+        {
+          "name": "gather",
+          "line": 231,
+          "end_line": 269
+        },
+        {
+          "name": "shared_random_seed",
+          "line": 276,
+          "end_line": 286
+        },
+        {
+          "name": "reduce_dict",
+          "line": 289,
+          "end_line": 316
+        }
+      ],
+      "imports": [
+        "functools",
+        "logging",
+        "numpy",
+        "pickle",
+        "torch",
+        "torch.distributed"
+      ]
+    },
+    "utils/get_threshold.py": {
+      "bytes": 177,
+      "lines": 6,
+      "sha256": "f93382289fd71baed602188e1b83ee5f509e66f5507381e52d12e0bcc54e8054",
+      "definitions": [
+        {
+          "name": "get_threshold",
+          "line": 3,
+          "end_line": 6
+        }
+      ],
+      "imports": [
+        "math"
+      ]
+    }
+  },
+  "git_status": " M arguments.py\n M data_loaders.py\n M data_processing/__init__.py\n M dataset/ASVspoof2019_la_train.py\n M main.py\n M native_steps.py\n M train.py\n?? POSITIVE_BPL.md\n?? SHORT32_ORIGINAL240.md\n?? activity_policy.py\n?? baseline240_mild.py\n?? baseline240_source/\n?? conditional_bpl2.py\n?? conditional_bpl2_steps.py\n?? controlled_data_loaders.py\n?? mild_duration.py\n?? paired_evaluation.py\n?? paired_queue_guard.py\n?? positive_bpl.py\n?? short32_bpl.py\n?? short32_lifecycle.py\n?? short32_original240.py\n?? tests/\n?? tools/\n",
+  "scope": "All original tree files read and Python AST inventoried; core and relevant extensions manually traced. Other extension utilities inventoried, not claimed to be line-by-line reviewed."
+}

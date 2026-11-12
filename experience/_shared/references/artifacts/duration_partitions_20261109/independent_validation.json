@@ -1,0 +1,187 @@
+{
+  "19LA_train": {
+    "global_maximum_proved": true,
+    "global_maximum_attained_by_half_second_plan": true,
+    "class_info": {
+      "0": {
+        "originals": 22800,
+        "pieces": 145034,
+        "short_originals": 0,
+        "discarded_seconds": 5687.4298125,
+        "max_discard_s": 0.4999375,
+        "total_seconds": 78204.4298125
+      },
+      "1": {
+        "originals": 2580,
+        "pieces": 16187,
+        "short_originals": 0,
+        "discarded_seconds": 649.4874375,
+        "max_discard_s": 0.4995,
+        "total_seconds": 8742.9874375
+      }
+    },
+    "alternative_if_entire_subminimum_original_may_be_lost": {
+      "all_classes_only_half_second_output_overlap_pct": 100.0,
+      "dropped_originals": 0,
+      "additional_discard_seconds": 0.0,
+      "each_dropped_original_strictly_below_tail_limit": true
+    },
+    "practical_plan": {
+      "one_to_one_source_join": true,
+      "source_labels_and_sample_counts_match": true,
+      "no_overlap_no_reuse_full_retained_span": true,
+      "strict_tail_limit_all_files": true,
+      "minimum_piece_length_and_short_exception": true,
+      "independently_recomputed_overlap_pct": 99.67299432815712,
+      "gap_to_global_upper_bound_pp": 0.32700567184288376
+    }
+  },
+  "19LA_dev": {
+    "global_maximum_proved": true,
+    "global_maximum_attained_by_half_second_plan": true,
+    "class_info": {
+      "0": {
+        "originals": 22296,
+        "pieces": 143797,
+        "short_originals": 0,
+        "discarded_seconds": 5572.4565625,
+        "max_discard_s": 0.499875,
+        "total_seconds": 77470.9565625
+      },
+      "1": {
+        "originals": 2548,
+        "pieces": 16618,
+        "short_originals": 0,
+        "discarded_seconds": 630.2945,
+        "max_discard_s": 0.49975,
+        "total_seconds": 8939.2945
+      }
+    },
+    "alternative_if_entire_subminimum_original_may_be_lost": {
+      "all_classes_only_half_second_output_overlap_pct": 100.0,
+      "dropped_originals": 0,
+      "additional_discard_seconds": 0.0,
+      "each_dropped_original_strictly_below_tail_limit": true
+    },
+    "practical_plan": {
+      "one_to_one_source_join": true,
+      "source_labels_and_sample_counts_match": true,
+      "no_overlap_no_reuse_full_retained_span": true,
+      "strict_tail_limit_all_files": true,
+      "minimum_piece_length_and_short_exception": true,
+      "independently_recomputed_overlap_pct": 99.72881464159535,
+      "gap_to_global_upper_bound_pp": 0.2711853584046464
+    }
+  },
+  "19LA_eval": {
+    "global_maximum_proved": true,
+    "global_maximum_attained_by_half_second_plan": true,
+    "class_info": {
+      "0": {
+        "originals": 63882,
+        "pieces": 360710,
+        "short_originals": 1,
+        "discarded_seconds": 16056.9103125,
+        "max_discard_s": 0.4999375,
+        "total_seconds": 196411.88025
+      },
+      "1": {
+        "originals": 7355,
+        "pieces": 46261,
+        "short_originals": 0,
+        "discarded_seconds": 1840.377875,
+        "max_discard_s": 0.4998125,
+        "total_seconds": 24970.877875
+      }
+    },
+    "alternative_if_entire_subminimum_original_may_be_lost": {
+      "all_classes_only_half_second_output_overlap_pct": 100.0,
+      "dropped_originals": 1,
+      "additional_discard_seconds": 0.4699375,
+      "each_dropped_original_strictly_below_tail_limit": true
+    },
+    "practical_plan": {
+      "one_to_one_source_join": true,
+      "source_labels_and_sample_counts_match": true,
+      "no_overlap_no_reuse_full_retained_span": true,
+      "strict_tail_limit_all_files": true,
+      "minimum_piece_length_and_short_exception": true,
+      "independently_recomputed_overlap_pct": 99.9863400341633,
+      "gap_to_global_upper_bound_pp": 0.01338273482007768
+    }
+  },
+  "21LA_eval": {
+    "global_maximum_proved": true,
+    "global_maximum_attained_by_half_second_plan": true,
+    "class_info": {
+      "0": {
+        "originals": 133360,
+        "pieces": 639143,
+        "short_originals": 0,
+        "discarded_seconds": 32735.8138125,
+        "max_discard_s": 0.4999375,
+        "total_seconds": 352307.3138125
+      },
+      "1": {
+        "originals": 14816,
+        "pieces": 93366,
+        "short_originals": 0,
+        "discarded_seconds": 3578.2975,
+        "max_discard_s": 0.4998125,
+        "total_seconds": 50261.2975
+      }
+    },
+    "alternative_if_entire_subminimum_original_may_be_lost": {
+      "all_classes_only_half_second_output_overlap_pct": 100.0,
+      "dropped_originals": 0,
+      "additional_discard_seconds": 0.0,
+      "each_dropped_original_strictly_below_tail_limit": true
+    },
+    "practical_plan": {
+      "one_to_one_source_join": true,
+      "source_labels_and_sample_counts_match": true,
+      "no_overlap_no_reuse_full_retained_span": true,
+      "strict_tail_limit_all_files": true,
+      "minimum_piece_length_and_short_exception": true,
+      "independently_recomputed_overlap_pct": 99.91747193516242,
+      "gap_to_global_upper_bound_pp": 0.08252806483757258
+    }
+  },
+  "21DF_eval": {
+    "global_maximum_proved": true,
+    "global_maximum_attained_by_half_second_plan": true,
+    "class_info": {
+      "0": {
+        "originals": 519059,
+        "pieces": 2905778,
+        "short_originals": 9,
+        "discarded_seconds": 131582.5456875,
+        "max_discard_s": 0.4998125,
+        "total_seconds": 1584470.8376875
+      },
+      "1": {
+        "originals": 14869,
+        "pieces": 95600,
+        "short_originals": 0,
+        "discarded_seconds": 3718.4355,
+        "max_discard_s": 0.499625,
+        "total_seconds": 51518.4355
+      }
+    },
+    "alternative_if_entire_subminimum_original_may_be_lost": {
+      "all_classes_only_half_second_output_overlap_pct": 100.0,
+      "dropped_originals": 9,
+      "additional_discard_seconds": 3.792,
+      "each_dropped_original_strictly_below_tail_limit": true
+    },
+    "practical_plan": {
+      "one_to_one_source_join": true,
+      "source_labels_and_sample_counts_match": true,
+      "no_overlap_no_reuse_full_retained_span": true,
+      "strict_tail_limit_all_files": true,
+      "minimum_piece_length_and_short_exception": true,
+      "independently_recomputed_overlap_pct": 99.99512702110755,
+      "gap_to_global_upper_bound_pp": 0.004563251170641713
+    }
+  }
+}

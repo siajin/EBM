@@ -28,6 +28,8 @@ def _freeze(model, centroid_only):
 
 
 def _objective(model, embeddings, batch, args):
+    if 'bpl_right' in embeddings:
+        return _matched_objective(model, embeddings, batch, args)
     labels = batch['labels'].to(embeddings['long'].device)
     bona = int(labels.sum())
     if bona == 0 or not torch.all(labels[:bona] == 1) or not torch.all(labels[bona:] == 0):
@@ -72,12 +74,17 @@ def train_batch(trainer, batch):
     classifier = trainer.classifier
     model = unwrap(classifier)
     args = trainer.args
+    if args.get('short32_bpl', False):
+        raise ValueError('Short32 uses original240 ModelTrainer.train, never gradient replay')
     device = args['device']
     micro = args.get('micro_batch_size', 8)
     if micro < 1:
         raise ValueError('micro_batch_size must be positive')
-    names = ['long', 'short']
-    if args.get('short_oc_weight', 0.25) or args.get('padding_loss_weight', 0.1):
+    matched = 'bpl_right' in batch
+    names = ['long', 'bpl_right'] if matched else ['long', 'short']
+    cuda = torch.device(device).type == 'cuda'
+    devices = [torch.device(device).index] if cuda else []
+    if not matched and (args.get('short_oc_weight', 0.25) or args.get('padding_loss_weight', 0.1)):
         names.append('wrapped')
     _freeze(model, centroid_only=False)
     trainer.optimizer.zero_grad(set_to_none=True)
@@ -85,11 +92,12 @@ def train_batch(trainer, batch):
     n = len(batch['labels'])
     for name in names:
         chunks = []
-        for start in range(0, n, micro):
-            stop = min(start+micro, n)
+        count = len(batch[name])
+        for start in range(0, count, micro):
+            stop = min(start+micro, count)
             x, mask = features(trainer.plm, batch[name][start:stop], device)
             cpu_rng = torch.get_rng_state()
-            cuda_rng = torch.cuda.get_rng_state(device)
+            cuda_rng = torch.cuda.get_rng_state(device) if cuda else None
             with torch.no_grad():
                 chunks.append(model(x, mask=mask, return_embedding=True).detach())
             records.append((name, start, stop, cpu_rng, cuda_rng))
@@ -101,10 +109,11 @@ def train_batch(trainer, batch):
     del loss, collected
     for number, (name, start, stop, cpu_rng, cuda_rng) in enumerate(records):
         sync = classifier.no_sync() if hasattr(classifier, 'no_sync') and number+1 < len(records) else nullcontext()
-        with sync, torch.random.fork_rng(devices=[torch.device(device).index]):
+        with sync, torch.random.fork_rng(devices=devices):
             x, mask = features(trainer.plm, batch[name][start:stop], device)
             torch.set_rng_state(cpu_rng)
-            torch.cuda.set_rng_state(cuda_rng, device)
+            if cuda:
+                torch.cuda.set_rng_state(cuda_rng, device)
             z = classifier(x, mask=mask, return_embedding=True)
             z.backward(gradients[name][start:stop])
         del x, mask, z
@@ -128,4 +137,27 @@ def train_batch(trainer, batch):
         del x, mask, value, scaled
     trainer.optimizer.step()
     stats['loss2'] = loss2
+    if matched:
+        stats.update(positive_pairs=144, optimizer_steps=2, centroid_updates=1)
     return stats
+
+
+def _matched_objective(model, embeddings, batch, args):
+    """Original OC+BPL on matched variable-length inputs; OC retains all120 rows."""
+    labels = batch['labels'].to(embeddings['long'].device)
+    bona = int(labels.sum())
+    if (bona != 12 or len(labels) != 120 or not torch.all(labels[:bona] == 1)
+            or not torch.all(labels[bona:] == 0)):
+        raise ValueError('Retain the original per-GPU OC quota:12 bona and108 spoof')
+    if args.get('short_oc_weight', 0.) or args.get('padding_loss_weight', 0.):
+        raise ValueError('Do not add auxiliary losses to the BPL-only-input control')
+    left, right = embeddings['long'][:bona], embeddings['bpl_right']
+    if left.shape[0] != 12 or right.shape[0] != 12:
+        raise ValueError('BPL must retain all12x12 positive pairs')
+    oc = model.loss(embeddings['long'], labels, logical_batch_size=len(labels))[0]
+    bpl = model.loss_bpl(left, right)
+    loss = oc+bpl
+    if not torch.isfinite(loss):
+        raise ValueError('Non-finite OC+BPL objective')
+    return loss, bona, {'oc_long': float(oc.detach()), 'bpl': float(bpl.detach()),
+                        'padding': 0., 'active_pairs': 0, 'loss1': float(loss.detach())}

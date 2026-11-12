@@ -1,0 +1,20 @@
+[
+  {
+    "path": "experience/01_duration_bias/E024/code/EBM/mild_duration.py",
+    "sha256": "6b424e30be60b64cf583bd7974506b3838a8fdb939cc1ad036bc397382fc8273",
+    "origin": "EBM/mild_duration.py",
+    "kind": "explicit method source"
+  },
+  {
+    "path": "experience/01_duration_bias/E024/code/EBM/tools/build_mild_duration_policy.py",
+    "sha256": "b8ea46308669bbf6e6658b4f1f8eb17621a459ce1ae8b7c097983960f8387be3",
+    "origin": "EBM/tools/build_mild_duration_policy.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/01_duration_bias/E024/code/EBM/tools/prepare_mild_audio.py",
+    "sha256": "01f4da2595103262821ee2cc2902839cebf9d470c9f19d9de779cb2e3d2253e7",
+    "origin": "EBM/tools/prepare_mild_audio.py",
+    "kind": "implementation / validation source"
+  }
+]

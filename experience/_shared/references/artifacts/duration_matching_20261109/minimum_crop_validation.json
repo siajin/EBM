@@ -1,0 +1,136 @@
+{
+  "sources": [
+    {
+      "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_fast_p0_01\\686e593443178bb8\\extract\\scores.parquet",
+      "sha256": "66a58119b774c089829deb36b4a135e9b5e91d9d18e6e1e09809f20100179598"
+    },
+    {
+      "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\Q\\c288fb7a7ab48dd3\\extract\\scores.parquet",
+      "sha256": "3c20ea01e4c91fcf046f81199b2b1d8a4337296b45c1e1eb5099763d3935971e"
+    },
+    {
+      "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\19LA_eval\\4b8955da49f12316\\extract\\scores.parquet",
+      "sha256": "badece9d259010576e48be7fdc3ef18fe187cfda532efabcca5f9aaaa645f317"
+    },
+    {
+      "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_21la_full_03\\4110118cb92e35c1\\extract\\scores.parquet",
+      "sha256": "96a86f82f705b73f5198a2bf1686491d4c2615052cf0cdc8d94cbe9e27f04cab"
+    },
+    {
+      "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_df_fast_01\\1b0a7488e72f4ec2\\extract\\scores.parquet",
+      "sha256": "f3fa30b26c232968b4203f8bbbb8fcbd3d0b45364fa14564a6e8198d7ca77a50"
+    },
+    {
+      "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\DF_remaining\\096bc3b970f33181\\extract\\scores.parquet",
+      "sha256": "71a760eb99941082b5fbcdb5a80f27839692cb68b5df00cab76ee1788a23291a"
+    }
+  ],
+  "datasets": {
+    "19LA_train": {
+      "threshold": {
+        "dataset": "19LA_train",
+        "minimum_crop_pct": 52.110285347279564,
+        "rounded_up_crop_pct": 52.2,
+        "exact_crop_fraction": "11359/21798",
+        "overlap_at_threshold_pct": 100.0,
+        "overlap_0_0001pp_below_pct": 99.99561403508773,
+        "bonafide_duration_s": 1.362375,
+        "spoof_duration_s": 0.6524375,
+        "bonafide_sorted_index": 0,
+        "spoof_sorted_index": 0,
+        "quantile_left": 0.0,
+        "quantile_right": 4.3859649122807014e-05,
+        "mass_pct": 0.0043859649122807015,
+        "cropped_class": "bonafide"
+      },
+      "at_threshold_full_matching": true,
+      "below_threshold_not_full_matching": true
+    },
+    "19LA_dev": {
+      "threshold": {
+        "dataset": "19LA_dev",
+        "minimum_crop_pct": 45.57909673631159,
+        "rounded_up_crop_pct": 45.6,
+        "exact_crop_fraction": "9315/20437",
+        "overlap_at_threshold_pct": 100.0,
+        "overlap_0_0001pp_below_pct": 99.99551489056333,
+        "bonafide_duration_s": 1.2773125,
+        "spoof_duration_s": 0.695125,
+        "bonafide_sorted_index": 0,
+        "spoof_sorted_index": 0,
+        "quantile_left": 0.0,
+        "quantile_right": 4.485109436670255e-05,
+        "mass_pct": 0.004485109436670255,
+        "cropped_class": "bonafide"
+      },
+      "at_threshold_full_matching": true,
+      "below_threshold_not_full_matching": true
+    },
+    "19LA_eval": {
+      "threshold": {
+        "dataset": "19LA_eval",
+        "minimum_crop_pct": 53.58310045943258,
+        "rounded_up_crop_pct": 53.6,
+        "exact_crop_fraction": "11313/21113",
+        "overlap_at_threshold_pct": 100.0,
+        "overlap_0_0001pp_below_pct": 99.99901543487802,
+        "bonafide_duration_s": 1.3195625,
+        "spoof_duration_s": 0.6125,
+        "bonafide_sorted_index": 2,
+        "spoof_sorted_index": 17,
+        "quantile_left": 0.00027192386131883074,
+        "quantile_right": 0.0002817695125387433,
+        "mass_pct": 0.000984565121991258,
+        "cropped_class": "bonafide"
+      },
+      "at_threshold_full_matching": true,
+      "below_threshold_not_full_matching": true
+    },
+    "21LA_eval": {
+      "threshold": {
+        "dataset": "21LA_eval",
+        "minimum_crop_pct": 55.0,
+        "rounded_up_crop_pct": 55.0,
+        "exact_crop_fraction": "11/20",
+        "overlap_at_threshold_pct": 100.0,
+        "overlap_0_0001pp_below_pct": 99.99852459313753,
+        "bonafide_duration_s": 1.6,
+        "spoof_duration_s": 0.72,
+        "bonafide_sorted_index": 30,
+        "spoof_sorted_index": 270,
+        "quantile_left": 0.0020248380129589635,
+        "quantile_right": 0.0020320935812837434,
+        "mass_pct": 0.0007255568324779968,
+        "cropped_class": "bonafide"
+      },
+      "at_threshold_full_matching": true,
+      "below_threshold_not_full_matching": true
+    },
+    "21DF_eval": {
+      "threshold": {
+        "dataset": "21DF_eval",
+        "minimum_crop_pct": 54.148471615720524,
+        "rounded_up_crop_pct": 54.2,
+        "exact_crop_fraction": "124/229",
+        "overlap_at_threshold_pct": 100.0,
+        "overlap_0_0001pp_below_pct": 99.99980734367384,
+        "bonafide_duration_s": 13.44,
+        "spoof_duration_s": 29.312,
+        "bonafide_sorted_index": 14868,
+        "spoof_sorted_index": 519058,
+        "quantile_left": 0.9999980734367384,
+        "quantile_right": 1.0,
+        "mass_pct": 0.00019265632615945394,
+        "cropped_class": "spoof"
+      },
+      "at_threshold_full_matching": true,
+      "below_threshold_not_full_matching": true
+    }
+  },
+  "policy": "Both classes; speed fixed at 1; every utterance keeps uniform within-class weight; per-file randomized crops allowed.",
+  "criterion": "Exact common continuous-duration probability distribution, not bin-dependent histogram equality.",
+  "formula": "max over exact quantile intervals of 1 - min(Q_b,Q_s)/max(Q_b,Q_s)",
+  "sufficiency": "Monotone quantile coupling, each output duration min(Q_b,Q_s).",
+  "necessity": "Reachable quantile intervals must intersect; bottleneck witness fails below threshold.",
+  "rounding": "Practical cap is rounded upward to next 0.1 percentage point and rechecked."
+}

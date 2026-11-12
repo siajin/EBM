@@ -1,0 +1,14 @@
+[
+  {
+    "path": "experience/01_duration_bias/E017/code/EBM/tools/review_repetition_results.py",
+    "sha256": "fec9ff9bea0a2af5a106b2cd4162882a1c489100cbfc70ba38a13934e9558f9e",
+    "origin": "EBM/tools/review_repetition_results.py",
+    "kind": "explicit method source"
+  },
+  {
+    "path": "experience/01_duration_bias/E017/code/EBM/tools/analyze_repetition_duration_proxy.py",
+    "sha256": "daa8928374a06439730068e0cb7cc50ab76affec2b788ef2f6fad6b6e0b9baf5",
+    "origin": "EBM/tools/analyze_repetition_duration_proxy.py",
+    "kind": "implementation / validation source"
+  }
+]

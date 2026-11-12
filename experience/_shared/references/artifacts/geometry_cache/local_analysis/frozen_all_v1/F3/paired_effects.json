@@ -1,0 +1,354 @@
+[
+  {
+    "dataset": "DF_pilot",
+    "model": "diagonal_0.01",
+    "delta_EER_pp": 0.30000000000000027,
+    "CI95": [
+      0.06581772976923597,
+      0.3912145887633009
+    ],
+    "CI_adjusted": [
+      0.0,
+      0.45877540765013075
+    ],
+    "draws": 10000,
+    "groups": 93,
+    "class_groups": [
+      62,
+      92
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "dataset": "DF_pilot",
+    "model": "diagonal_0.1",
+    "delta_EER_pp": 0.29444444444444207,
+    "CI95": [
+      0.05344616515708446,
+      0.37952056557961306
+    ],
+    "CI_adjusted": [
+      -0.0042807326313245775,
+      0.4491640927414547
+    ],
+    "draws": 10000,
+    "groups": 93,
+    "class_groups": [
+      62,
+      92
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "dataset": "DF_pilot",
+    "model": "diagonal_0.5",
+    "delta_EER_pp": 0.1722222222222194,
+    "CI95": [
+      0.01642769590697088,
+      0.28192973073211774
+    ],
+    "CI_adjusted": [
+      -0.03470797201619373,
+      0.3448210866433432
+    ],
+    "draws": 10000,
+    "groups": 93,
+    "class_groups": [
+      62,
+      92
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "dataset": "DF_pilot",
+    "model": "diagonal_1.0",
+    "delta_EER_pp": 0.0,
+    "CI95": [
+      0.0,
+      0.0
+    ],
+    "CI_adjusted": [
+      0.0,
+      0.0
+    ],
+    "draws": 10000,
+    "groups": 93,
+    "class_groups": [
+      62,
+      92
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "dataset": "DF_pilot",
+    "model": "full_0.01",
+    "delta_EER_pp": 0.20000000000000018,
+    "CI95": [
+      -0.05117395631756188,
+      0.28132460719759206
+    ],
+    "CI_adjusted": [
+      -0.128338114697911,
+      0.35420566295674294
+    ],
+    "draws": 10000,
+    "groups": 93,
+    "class_groups": [
+      62,
+      92
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "dataset": "DF_pilot",
+    "model": "full_0.1",
+    "delta_EER_pp": 0.20000000000000018,
+    "CI95": [
+      -0.03765810537830892,
+      0.2982401072010983
+    ],
+    "CI_adjusted": [
+      -0.10468943952023829,
+      0.38935300127352634
+    ],
+    "draws": 10000,
+    "groups": 93,
+    "class_groups": [
+      62,
+      92
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "dataset": "DF_pilot",
+    "model": "full_0.5",
+    "delta_EER_pp": 0.26666666666666394,
+    "CI95": [
+      0.027887351159410573,
+      0.3480290084938002
+    ],
+    "CI_adjusted": [
+      -0.04085678793067845,
+      0.42748769971241074
+    ],
+    "draws": 10000,
+    "groups": 93,
+    "class_groups": [
+      62,
+      92
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "dataset": "DF_pilot",
+    "model": "full_1.0",
+    "delta_EER_pp": 0.0,
+    "CI95": [
+      0.0,
+      0.0
+    ],
+    "CI_adjusted": [
+      0.0,
+      0.0
+    ],
+    "draws": 10000,
+    "groups": 93,
+    "class_groups": [
+      62,
+      92
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "dataset": "21LA_pilot",
+    "model": "diagonal_0.01",
+    "delta_EER_pp": 0.0,
+    "CI95": [
+      -0.06579735292541468,
+      0.046054262520999076
+    ],
+    "CI_adjusted": [
+      -0.12609294222713363,
+      0.07219063804192079
+    ],
+    "draws": 10000,
+    "groups": 67,
+    "class_groups": [
+      48,
+      67
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "dataset": "21LA_pilot",
+    "model": "diagonal_0.1",
+    "delta_EER_pp": 0.0,
+    "CI95": [
+      -0.06060439800025061,
+      0.04524926509201673
+    ],
+    "CI_adjusted": [
+      -0.11662809894902242,
+      0.07200571250890127
+    ],
+    "draws": 10000,
+    "groups": 67,
+    "class_groups": [
+      48,
+      67
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "dataset": "21LA_pilot",
+    "model": "diagonal_0.5",
+    "delta_EER_pp": 0.0,
+    "CI95": [
+      -0.047622092630799584,
+      0.04363426125847748
+    ],
+    "CI_adjusted": [
+      -0.08053706270909702,
+      0.06675666894816484
+    ],
+    "draws": 10000,
+    "groups": 67,
+    "class_groups": [
+      48,
+      67
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "dataset": "21LA_pilot",
+    "model": "diagonal_1.0",
+    "delta_EER_pp": 0.0,
+    "CI95": [
+      0.0,
+      0.0
+    ],
+    "CI_adjusted": [
+      0.0,
+      0.0
+    ],
+    "draws": 10000,
+    "groups": 67,
+    "class_groups": [
+      48,
+      67
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "dataset": "21LA_pilot",
+    "model": "full_0.01",
+    "delta_EER_pp": 0.0,
+    "CI95": [
+      -0.03102989006948802,
+      0.04891113504172868
+    ],
+    "CI_adjusted": [
+      -0.053764040634612605,
+      0.07543277720063868
+    ],
+    "draws": 10000,
+    "groups": 67,
+    "class_groups": [
+      48,
+      67
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "dataset": "21LA_pilot",
+    "model": "full_0.1",
+    "delta_EER_pp": 0.0,
+    "CI95": [
+      -0.041717848096254964,
+      0.053689057603411514
+    ],
+    "CI_adjusted": [
+      -0.06977751450328194,
+      0.09083066902361232
+    ],
+    "draws": 10000,
+    "groups": 67,
+    "class_groups": [
+      48,
+      67
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "dataset": "21LA_pilot",
+    "model": "full_0.5",
+    "delta_EER_pp": 0.0,
+    "CI95": [
+      -0.06641661373407455,
+      0.05512724761602831
+    ],
+    "CI_adjusted": [
+      -0.10726498525650394,
+      0.0978657690387013
+    ],
+    "draws": 10000,
+    "groups": 67,
+    "class_groups": [
+      48,
+      67
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  },
+  {
+    "dataset": "21LA_pilot",
+    "model": "full_1.0",
+    "delta_EER_pp": 0.0,
+    "CI95": [
+      0.0,
+      0.0
+    ],
+    "CI_adjusted": [
+      0.0,
+      0.0
+    ],
+    "draws": 10000,
+    "groups": 67,
+    "class_groups": [
+      48,
+      67
+    ],
+    "seed": 7301,
+    "unresolved_source_families": true,
+    "fit_selection_uncertainty_included": false
+  }
+]

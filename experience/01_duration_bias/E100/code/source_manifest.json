@@ -1,0 +1,14 @@
+[
+  {
+    "path": "experience/01_duration_bias/E100/code/native_quiet_strict.py",
+    "sha256": "e34a4c5056c29ed700e5c8b33a1e65ca3e2a5ffcca3d5cbb317b0fc21be17ce1",
+    "origin": "artifacts/github_archive_20261112/remote_source/historical_analysis/native_quiet_strict.py",
+    "kind": "actual historical analysis source"
+  },
+  {
+    "path": "experience/01_duration_bias/E100/code/analyze_native_quiet_strict.py",
+    "sha256": "442be40225c4ea4522100b73abaf8a29bd9e6d75224ce2ae069db4313466fb7c",
+    "origin": "artifacts/github_archive_20261112/remote_source/historical_analysis/analyze_native_quiet_strict.py",
+    "kind": "actual historical analysis source"
+  }
+]

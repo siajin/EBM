@@ -1,0 +1,38 @@
+{
+  "status": "pass",
+  "inputs_sha256": {
+    "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\r23_catalog.json": "a36eb133066c4215d4fc10d412582206c0c5b24c24a98bc7c8c76457b27fa092",
+    "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\0023b1aa0538c6a4\\DF_pilot\\R2-00\\scores.parquet": "547656ce7a1dba1c371a7d1c6c0da28ce675a9817d922b17ed82c5e07b12dbb1",
+    "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\R2_R3\\DF_pilot\\R2-10_paired.parquet": "8c988576ecbbbeb1aa4823dab32bb52648853906453fecb7045873fa252987f6",
+    "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\R2_R3\\DF_pilot\\R2-01_paired.parquet": "51aa595304fc584373d702d7a909d68224f3b84c7307ea84c94050eae6faca0a",
+    "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\R2_R3\\DF_pilot\\R2-11_paired.parquet": "565713acc36b06a961095c7349dafa711adf103dc08baadf9827c85b3767976d",
+    "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\R2_R3\\DF_pilot\\R3-noise20_paired.parquet": "6444b5acaa561f66ee03ae3beb1f9d81fe0011b722c683806ada25516878ec7c",
+    "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\R2_R3\\DF_pilot\\R3-noise10_paired.parquet": "c3fc1d3ed40ad183c4415beaa842fc7d2548a7c7bdb682c10c1919ecec5c9e25",
+    "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\R2_R3\\DF_pilot\\R3-Opus32k_recompression_paired.parquet": "5abb83df1fa736df552888fdfab1ed4b266146e19b2bc6aaeb515aaf2885ea89",
+    "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\R23\\7a2e6f9b17f0965c\\21LA_pilot\\R2-00\\scores.parquet": "4a5bd0054e0c70d5e10ee25836060878504cf1af089c216bc1f8726d57da6120",
+    "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\R2_R3\\21LA_pilot\\R2-10_paired.parquet": "76e13a50432ef2326ff47657c9f9560296374f3ba7488a44c5cc27d32f4e5f85",
+    "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\R2_R3\\21LA_pilot\\R2-01_paired.parquet": "90aa4888fe1222a8d375c3a6143aee8b43b118ed76b50fd10ee28f05eaf2956d",
+    "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\R2_R3\\21LA_pilot\\R2-11_paired.parquet": "97ca3d24c084f2dfedce3e10ca12c15cf00ac01b8ecfd0935702648df6ac1d1e",
+    "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\R2_R3\\21LA_pilot\\R3-noise20_paired.parquet": "2fc7d1b557ffc8b688d3fde94a26199e325b6f4183e6908c909e21c3f609c955",
+    "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\R2_R3\\21LA_pilot\\R3-noise10_paired.parquet": "d9c0326ec12a4478d6b21f24e31c198dfd8922f23ef8c526c2649f044c1da83d",
+    "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\frozen_all_v1\\R2_R3\\21LA_pilot\\R3-Opus32k_recompression_paired.parquet": "5f0cb6751f7c8d5684a284f75f7f5ba502de419d62a0b545813e0e86b3bef91a",
+    "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\local_analysis\\padding_causal_20261106_v1\\paired_derived.parquet": "638601b2aaf89b899aa03dca583631a62ad08e9ee170d07ac6f9c629884f897e"
+  },
+  "input_hashes_unchanged": true,
+  "unique_ID_and_class_counts_checked": true,
+  "score_delta_identity_max_error_bound": 1e-10,
+  "outputs_sha256": {
+    "21LA_pilot_relaxed_cross_speaker_pairs.parquet": "1378c97c1ab93392089e0f513c4259ebf60668d77f2b11fb294469a625aa67f3",
+    "21LA_pilot_strict_same_speaker_pairs.parquet": "9170fb399a5e9244e79710c8c8004e268b624a30589233c8c4f6e59a3145f0f2",
+    "audit_scope.json": "600f929bd862387f886d1b52487e279c583d2649d3f863bcd33cc619561678b8",
+    "class_response_summary.csv": "b40563c96225eaa39b00a225d748248e03a453c0f9d8db1840e50c12e4c42116",
+    "DF_pilot_relaxed_cross_speaker_pairs.parquet": "bf616257ceced20a7f3389ab188914203feb6f3cd0c8e45a889d5af3a379c2f6",
+    "DF_pilot_strict_same_speaker_pairs.parquet": "3dd32815e35e748f0adf5275b21fee9959c912f3786dc4bdf705839075964a69",
+    "native_score_matching.csv": "9294dc8db8465b806bbf69b84468fb91326047158649bff061110bb9d8a380be",
+    "response_gaps.csv": "efb7935b46fd1719e3f553d319567ab7a0115d869aca15c621d00c3d3de859d3",
+    "source_length_response.csv": "63ece836cee33758281c92c31ef4848af52fdd26e32d0f5723d8e0473682d855",
+    "summary.json": "19e041e422c7dab273902c73ee9855f78b9a85be5a63740c3f9612f1cbb6507b"
+  },
+  "elapsed_seconds": 6.380521400002181,
+  "scope": "data correspondence and arithmetic; no response-readout transfer or scientific validation claimed"
+}

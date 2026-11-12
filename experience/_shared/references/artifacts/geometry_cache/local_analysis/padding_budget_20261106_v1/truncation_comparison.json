@@ -1,0 +1,58 @@
+{
+  "status": "pass",
+  "source_fingerprint": "686e593443178bb89241e48ab9a148e1f248f2025140f379d564c19a75198b4b",
+  "N_unique": 25380,
+  "scheduled_occurrences": 25920,
+  "comparison": "Same occurrences and short-view rule as previous padding calculation",
+  "denominator": "Total original waveform samples per view; combined is two copies of original sample total",
+  "unit": "16kHz waveform samples before codec/RawBoost augmentation",
+  "qualification": "Short-view cropping remains intentional. Combined cut is view-wise omission, not unique content absent from both views; new long retains all original content.",
+  "rows": {
+    "long": {
+      "original_samples": 1421112150,
+      "old_cut_samples": 135595097,
+      "new_cut_samples": 0,
+      "old_cut_percent": 9.541477567410848,
+      "new_cut_percent": 0.0,
+      "cut_amount_reduction_percent": 100.0,
+      "old_affected_occurrences": 6909,
+      "new_affected_occurrences": 0,
+      "old_affected_percent": 26.65509259259259,
+      "new_affected_percent": 0.0,
+      "old_cut_seconds_per_utterance": 0.32695577015817906,
+      "new_cut_seconds_per_utterance": 0.0,
+      "restored_hours": 2.354081545138889
+    },
+    "short": {
+      "original_samples": 1421112150,
+      "old_cut_samples": 304079596,
+      "new_cut_samples": 304079596,
+      "old_cut_percent": 21.397297602444677,
+      "new_cut_percent": 21.397297602444677,
+      "cut_amount_reduction_percent": 0.0,
+      "old_affected_occurrences": 14350,
+      "new_affected_occurrences": 14350,
+      "old_affected_percent": 55.36265432098765,
+      "new_affected_percent": 55.36265432098765,
+      "old_cut_seconds_per_utterance": 0.7332166184413581,
+      "new_cut_seconds_per_utterance": 0.7332166184413581,
+      "restored_hours": 0.0
+    },
+    "combined": {
+      "original_samples": 2842224300,
+      "old_cut_samples": 439674693,
+      "new_cut_samples": 304079596,
+      "old_cut_percent": 15.469387584927762,
+      "new_cut_percent": 10.698648801222339,
+      "cut_amount_reduction_percent": 30.83986846611615,
+      "old_cut_seconds_per_utterance": 1.060172388599537,
+      "new_cut_seconds_per_utterance": 0.7332166184413581,
+      "restored_hours": 2.354081545138889
+    }
+  },
+  "verification": {
+    "scalar_vector_exact": true,
+    "prior_used_original_sample_counts_exact": true
+  },
+  "script_sha256": "28874cb1b9e2d5730110614080674324a598a39739da478062f60aa441a43021"
+}

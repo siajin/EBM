@@ -1,0 +1,20 @@
+{
+  "status": "complete_exploratory",
+  "reference_chat": "01a1abcd-37ab-73b3-9e02-3b493a9315ea",
+  "same_original_waveforms": 471,
+  "primary_variant_outputs": 3141,
+  "full_model_training": false,
+  "new_gpu_inference": true,
+  "silence_distribution_excluded": true,
+  "all3_runs_exit0": true,
+  "independent_verification": "pass",
+  "core_finding": "Fixed201 backend comparison localizes a large repeat-context sensitivity to frontend representation differences, especially hidden states9-16; final pooled mean feature changes dominate; standard-deviation scale alone is not main cause. Normal rescue is offset by worse spoof/ranking behavior.",
+  "paired_h_shift_first_axis_energy": 0.9969616815647181,
+  "report": "docs/experiments/ebm_padding_context_mechanism_20261106.md",
+  "figures_sha256": {
+    "01_same_waveform_padding.png": "971cfecd7418f5f7d0fcbb1ab54a12302a487438a6ac29fc4f6fc46a99c8266a",
+    "02_primary_contrasts.png": "712ffab2784cb271bb5c3f68c104dd37d266f11b39f611d7e21c327fcdc3f1fa",
+    "03_identical_feature_duplication.png": "8b064c996fbc4e0c6e94cbdbb6a1cce2def95917c8d1f239d7e1feb4769ea0c8",
+    "04_frontend_context_localization.png": "6c1b5951e33fd910f68455d3c43050e0adf57a29eb63b6745758feb1fa14d677"
+  }
+}

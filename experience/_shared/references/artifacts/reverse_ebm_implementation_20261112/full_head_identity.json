@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "seed": 1,
+  "actual_original240_dimensions": true,
+  "roles": [
+    {
+      "compact_label": 0,
+      "all_initial_tensors_identical": true,
+      "parameter_count": 3744384,
+      "backend_parameter_count": 3744224
+    },
+    {
+      "compact_label": 1,
+      "all_initial_tensors_identical": true,
+      "parameter_count": 3744384,
+      "backend_parameter_count": 3744224
+    }
+  ],
+  "optimizer_steps": 0,
+  "audio_inference": 0
+}

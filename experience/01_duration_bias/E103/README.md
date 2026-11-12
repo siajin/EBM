@@ -1,0 +1,60 @@
+# E103. 자연적인 앞 저에너지 길이를 읽는 특징 방향: −40dB 정의
+
+**실행 상태:** 기존 실제 결과 확인·문서화 완료
+
+이 문서의 상태는 2026-11-12 출판 검토 기준이다. 기존 문서·state의 시점별 상태와 충돌하면 실제 완료표식과 본문 최신 보완을 우선한다.
+
+## 가설
+
+자연적인앞저에너지길이 정보가 원음전체특징의 감독회귀축에서 읽힐 수 있다.
+
+## 그렇게 설계한 이유
+
+인공 변형 없이 원래 음성들 사이에서 저에너지 길이 정보가 특징에 있는지 본다.
+
+대조와 통제의 근거: 정상만 분석한 감독 회귀 축이다. 그림에서 길이 순서가 보이는 것만으로 위조 분류 지름길 사용을 입증하지 않는다.
+
+## 모델·데이터·표본
+
+기존 고정 80epoch 모델의 ASVspoof 출처 정상 1,050개·64명. 원음 전체·비반복·무변형의 저장 160차원 특징만 사용한다.
+
+## 실험 내용과 상세 절차
+
+1. DF의 ASVspoof 출처 정상 1,050개 전체 원음 특징에서, 앞 연속 20ms RMS가 최대 RMS의 1% 미만인 길이를 측정한다.
+2. seed 271828로 화자를 70/30% 분리한다. 학습 44명·719개, 보류 20명·331개다.
+3. 중심화 특징으로 log(1+앞 길이)를 ridge 회귀한다. 좌표별 배율 표준화는 하지 않고 학습 화자 안쪽 네 분할에서 규제 강도를 선택한다.
+4. 코덱·앞 구간 제외 길이와 제곱·뒤 길이·활성 RMS와 제곱으로 목표와 특징을 각각 잔차화한 축을 별도 적합한다. 전체 길이 조정은 별도 민감도다.
+5. 학습 축을 고정해 보류 표본의 순위 상관·R²·정상 기준 코사인 상관, 양의 길이 표본만의 결과를 측정한다. 보류 화자 2,000회 구간을 사용한다.
+
+## 측정과 검증
+
+발화별 대응 점수·원래 160차원 코사인·클래스별 분모와 저장 검산을 확인한다.
+
+## 결과
+
+보류 길이−축 상관 0.3769, 조건 조정 후 0.6608, 길이−정상 기준 코사인 상관 0.0026이었다. 길이 예측 R²는 0.0314였다.
+
+## 해석·실패한 부분·한계
+
+하나의 고정 학습 모델과 탐색 표본의 결과다. 전체 공식 평가 EER, 여러 학습 seed의 효과, 손실을 제거한 재학습의 효과로 해석하지 않는다. 반복 관찰한 표본과 서로 겹치는 후속 분석은 독립 실험 표본으로 합산하지 않는다.
+
+## 배운 점
+
+길이정보와정상중심점수의 상관은달랐다. 판독가능성을 모델의지름길사용으로 단정하지 않는다.
+
+## 실험 코드
+
+- [historical_analysis/natural_lowenergy_axis.py](code/natural_lowenergy_axis.py)
+
+코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+
+## 설정·결과·검산 근거
+
+- [artifacts/experiment_methods_audit_20261111/historical_receipts/EBM80_ASV_bona_natural_lowenergy_axis.json](../../_shared/references/artifacts/experiment_methods_audit_20261111/historical_receipts/EBM80_ASV_bona_natural_lowenergy_axis.json)
+- [artifacts/experiment_methods_audit_20261111/historical_method_source_checks.json](../../_shared/references/artifacts/experiment_methods_audit_20261111/historical_method_source_checks.json)
+
+## 연결
+
+다른 관련 가설: [정상 다양성·도메인 지지와 정상쌍 학습](../../03_bonafide_diversity/README.md) · [코사인 외 norm과 정규화 전 통계](../../04_norm_information/README.md) · [잔여 방향·좌표·거리·기하와 변형 반응](../../05_residual_geometry/README.md)
+
+[가설 목록으로](../README.md) · [전체 실험 목록](../../README.md)

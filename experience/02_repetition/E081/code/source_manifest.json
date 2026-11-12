@@ -1,0 +1,20 @@
+[
+  {
+    "path": "experience/02_repetition/E081/code/EBM/paired_evaluation.py",
+    "sha256": "dcc8565d79ffa8c3eeb6710ebdb7552325966ce531a7712c152b51b6340a8b41",
+    "origin": "EBM/paired_evaluation.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/02_repetition/E081/code/EBM/paired_queue_guard.py",
+    "sha256": "ebee0b7adf8f6df7a275473c22d537d2989b066faa500d8d3efeffd8a3e596f5",
+    "origin": "EBM/paired_queue_guard.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/02_repetition/E081/code/EBM/tools/run_paired_evaluation.py",
+    "sha256": "2ffeca12e66fcce9253f13da66aa1a04521d7b5dd5333ed355af84a0deb5e4e7",
+    "origin": "EBM/tools/run_paired_evaluation.py",
+    "kind": "implementation / validation source"
+  }
+]

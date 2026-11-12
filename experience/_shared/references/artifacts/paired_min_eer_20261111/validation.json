@@ -1,0 +1,18 @@
+{
+  "status": "validated_and_queued",
+  "checked_KST": "2026-11-11T14:30:57.649945+09:00",
+  "local_tests": 9,
+  "tests_passed": true,
+  "source_snapshot_matches_local": true,
+  "server_python_and_shell_syntax": "passed",
+  "server_source_files": 37,
+  "active_training_source_files_unchanged": 55,
+  "current_checkpoint5_committed": true,
+  "new_GPU_evaluation_started": false,
+  "actual_GPU_smoke": "pending until existing training and evaluations finish",
+  "derived_analysis_rows": 296352,
+  "independent_previous_eer_error_pp": 0.0,
+  "queue_pid": 2178277,
+  "spending_ceiling_usd": 0,
+  "automatic_retries": 0
+}

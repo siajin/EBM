@@ -1,0 +1,73 @@
+{
+  "observed_at_local": "2026-11-11T15:10:25.173713+09:00",
+  "source_directory": "F:\\IRLab\\XLSR\\19LA_train_last_20261105_01",
+  "read_only_metadata_capture": true,
+  "new_feature_extraction": false,
+  "raw_array_rehashed_now": false,
+  "status": {
+    "status": "complete",
+    "checked_epoch": 1793890614.6300888,
+    "remote_root": "/home/mentee/analysis/embedding_geometry/20261105_19la_train_xlsr_stream_01",
+    "local_folder": "F:\\IRLab\\XLSR\\19LA_train_last_20261105_01",
+    "server_feature_files": false,
+    "ranks": {
+      "1": {
+        "completed": 12690,
+        "total": 12690,
+        "status": "received"
+      },
+      "0": {
+        "completed": 12690,
+        "total": 12690,
+        "status": "received"
+      }
+    }
+  },
+  "summary": {
+    "status": "complete",
+    "dataset": "19LA_train",
+    "shape": [
+      25380,
+      201,
+      1024
+    ],
+    "dtype": "float32",
+    "storage": "laptop_only",
+    "server_feature_files": false,
+    "files": [
+      {
+        "rank": 0,
+        "file": "rank0_last_hidden.npy",
+        "shape": [
+          12690,
+          201,
+          1024
+        ],
+        "dtype": "float32",
+        "file_bytes": 10447626368,
+        "sha256": "fbc8d3388c174e3b0e530a94d01d9ae6ff2a44b2251c76fed8168240cb2d292a",
+        "raw_sha256": "7a567fd614c898c14d11dfc2d2fc354b00bcd73248ccaf55185f3d8d32b1d0b8"
+      },
+      {
+        "rank": 1,
+        "file": "rank1_last_hidden.npy",
+        "shape": [
+          12690,
+          201,
+          1024
+        ],
+        "dtype": "float32",
+        "file_bytes": 10447626368,
+        "sha256": "3dcd217eba26dce84819fea6fe6c7781e33803c8283d3ceb9e4c8bec0f2f8962",
+        "raw_sha256": "1a516b3ec32abf94d31fbafd1b25b571f53fd5600adc6d2029fb15c95a300960"
+      }
+    ],
+    "index_file": "metadata/index.parquet",
+    "frontend_state_sha256": "6f4e040a18b46412e704d8c01c2b9313821861f456390a0fbabfdc1d38707719",
+    "finished_epoch": 1793890614.6153018
+  },
+  "completion_markers": {
+    "complete": "0",
+    "metadata\\run.exit": "0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "status": "complete",
+  "remote_root": "/home/mentee/analysis/ebm_train_crop_io_activity_20261110",
+  "dev_used": false,
+  "eval_used": false,
+  "model_training": false,
+  "live_server_repo_changed": false,
+  "dependency_scope": "private analysis vendor directory only",
+  "analysis": "partial decode equality/speed, Trainepoch1 speech activity, actual50epoch sampler UID+time coverage",
+  "unit_tests_passed": 13,
+  "run_exit": 0,
+  "partial_reader_raw_equal": 512,
+  "partial_reader_augmented_equal": 64,
+  "epoch_weighted_IO_speedup": 1.594201248883953,
+  "Train_crops_analyzed": 28512,
+  "sampler_epochs_replayed": 50,
+  "first_epoch_all_UIDs_seen": {
+    "bona_OC": 8,
+    "bona_OC_plus_BPL": 5,
+    "spoof_OC": 12
+  },
+  "never_selected_after50": 0,
+  "final_server_audit": "final_server_audit.json",
+  "finished_KST": "2026-11-10T10:40:58+09:00"
+}

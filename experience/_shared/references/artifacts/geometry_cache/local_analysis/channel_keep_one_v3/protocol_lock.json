@@ -1,0 +1,38 @@
+{
+  "version": "channel_keep_one_v3",
+  "created_utc": "2026-11-05T01:23:10.853243+00:00",
+  "script_sha256": "074ee37ababd9f3a33752c5d1d0030f5e0411c33dccb90bce217ed874c824734",
+  "counts": [
+    2,
+    1
+  ],
+  "new_counts": [
+    1
+  ],
+  "previous_protocol_sha256": "2b28e7b6b40cf737ad56b3f0e4570ee88d1862513f15ef6f6a7be3d4d1f43656",
+  "dependency_sha256": {
+    "channel_keep_sweep.py": "64002defd47693d9ea94ed72a57cb8d7b8e1d10a77d944dbb12cb34d9d348f8b",
+    "cached_core_diagnostics.py": "0284aab32cc9976e2262927cd005ca3b4ba24f8435e67e24de60665367032085",
+    "geometry_cache.py": "4ecf9c85ec99d2ca77bc6e7f3267a083e113d78e972db802e3db0a6d2cf759a7",
+    "fast_analyze.py": "7b06092ea697e8289e9c5baf06b935e733ef6169b9a89f678892b13dee26b942",
+    "audit_cached_core_results.py": "d898526fdfc0916b9057a6d11005813cdeedcbce99119ffcac097f0f4dc1d878"
+  },
+  "masks": "same T-only top/bottom and nested random seeds200..219; no DF selection",
+  "one_dimensional_score": "exact sign(z[j])*sign(c[j]); raw quotient roundoff cannot break mathematical ties",
+  "zero_policy": "fail if selected z or c is zero; no silent exclusions",
+  "EER": "linear ROC interpolation across entire tied score bins; not a realizable deterministic threshold if rates differ at sign threshold",
+  "verification_note": "v1 stopped on T: trimmed DET omitted endpoints. v2 synthetic inverse test showed lost interior points too. v3 enumerates all binary operating points directly; primary full ROC and count formula unchanged",
+  "failed_v1_script_sha256": "30a2fe970fabe7038022858ac5e6b5e5838b45d89884d3ba0b62f29f6c133688",
+  "failed_v2_script_sha256": "011196363651c89e75ea5ec728c492dd01209065cdc966d29cc8923f1c907d70",
+  "checkpoint_sha256": "104873703a57cad98b686d770e0860e031a2cf9abef79b72668780c1660e0b24",
+  "GPU_inference_runs": 0,
+  "EBM_retrained": false,
+  "Q_opened": false,
+  "bootstrap": "source-prefixed speaker paired2000 seed7301; pointwise95 only",
+  "limits": [
+    "already-observed DF pilot",
+    "family dependencies unresolved",
+    "full160-dimension encoder and LN still computed",
+    "no smallest-dimension or deployment improvement claim"
+  ]
+}

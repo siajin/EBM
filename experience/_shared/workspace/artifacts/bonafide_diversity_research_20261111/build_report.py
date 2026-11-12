@@ -1,0 +1,372 @@
+"""Build a focused Markdown argument from archived class-swap experiments only."""
+import csv
+import hashlib
+import json
+import re
+from datetime import datetime
+from pathlib import Path
+
+import numpy as np
+
+ROOT = Path(__file__).resolve().parents[2]
+OUT = Path(__file__).resolve().parent
+BASE = ROOT / 'artifacts/geometry_cache/local_analysis/bonafide_cross_recheck_20261106_v1'
+REPORT = ROOT / 'docs/experiments/ebm_bonafide_diversity_research_20261111.md'
+CHECKPOINT = '104873703a57cad98b686d770e0860e031a2cf9abef79b72668780c1660e0b24'
+sources = {}
+checks = []
+
+def sha(p):
+    return hashlib.sha256(p.read_bytes()).hexdigest()
+
+def save(name, data):
+    (OUT / name).write_text(json.dumps(data, ensure_ascii=False, indent=2, allow_nan=False) + '\n', encoding='utf-8')
+
+def source(name):
+    p = BASE / name
+    sources[name] = {'path': p.relative_to(ROOT).as_posix(), 'sha256': sha(p)}
+    return p
+
+def read_json(name):
+    return json.loads(source(name).read_text(encoding='utf-8-sig'))
+
+def read_csv(name):
+    with source(name).open(encoding='utf-8-sig', newline='') as f:
+        return list(csv.DictReader(f))
+
+def check(name, ok, detail=None):
+    checks.append({'name': name, 'passed': bool(ok), 'detail': detail})
+    if not ok:
+        raise AssertionError((name, detail))
+
+def close(a, b):
+    return abs(float(a) - float(b)) < 1e-8
+
+def f(x):
+    return f'{float(x):.6f}'
+
+def signed(x):
+    return f'{float(x):+.6f}'.replace('-', '−')
+
+def table(headers, rows):
+    return '\n'.join(['|' + '|'.join(headers) + '|', '|' + '|'.join(['---'] * len(headers)) + '|'] + ['|' + '|'.join(map(str, row)) + '|' for row in rows])
+
+def link(name, label):
+    source(name)
+    return f'[{label}](../../{sources[name]["path"]})'
+
+protected = [
+    ROOT / 'docs/experiments/ebm_five_research_themes_20261111.md',
+    ROOT / 'docs/experiments/ebm_completed_evidence_interpretation_20261111.md',
+    ROOT / 'docs/experiments/ebm_duration_bias_research_20261111.md',
+]
+preserved = {p.relative_to(ROOT).as_posix(): sha(p) for p in protected}
+save('plan.json', {
+    'objective': 'Write a Korean evidence-selected research narrative about normal versus spoof distribution sensitivity; distinguish it from untested training-diversity causality.',
+    'status': 'in_progress', 'scope': 'One new report and its local provenance/checks; no existing report edits.',
+    'spending_ceiling_usd': 0, 'new_training': False, 'new_audio_inference': False,
+    'remote_queries': False, 'active_training_changes': False,
+    'cleanup': 'Local synchronous authoring; no background process or paid resource.',
+    'preserved_documents': preserved,
+})
+
+protocol = read_json('protocol.json')
+verification = read_json('verification.json')
+independent = read_json('independent_verification.json')
+summary = read_json('recheck_summary.json')
+check('completed_original_analysis', source('complete').read_text().strip() == '0')
+check('archived_validation_passes', all(d['status'] == 'pass' for d in [verification, independent, summary]))
+check('fixed_model_identity', protocol['checkpoint'] == verification['checkpoint'] == CHECKPOINT)
+check('DF_union_validated', verification['full_df_union_disjoint'] and verification['df_expected_rows'] == 533928)
+points = read_csv('class_replacement_eer.csv')
+contrasts = read_csv('paired_contrasts.csv')
+codec = read_csv('codec_sensitivity.csv')
+duration = read_json('duration_sensitivity.json')
+matrix = read_csv('source_cross_matrix.csv')
+attack = read_csv('same_source_attack_control.csv')
+operating = read_csv('V_spoof_FAR1_operating.csv')
+
+def cell(bona, spoof):
+    return float(next(r for r in matrix if r['bona'] == bona and r['spoof'] == spoof)['eer_percent'])
+
+for r in points:
+    if r['baseline'] not in ['19LA_eval', '21LA_eval']:
+        continue
+    mapping = {'19LA_eval': '19LA', '21LA_eval': '21LA', 'DF_full': 'DF_all'}
+    check('point_matrix_' + r['baseline'] + '_' + r['bona_dataset'] + '_' + r['spoof_dataset'], close(r['eer_percent'], cell(mapping[r['bona_dataset']], mapping[r['spoof_dataset']])))
+
+boot = np.load(source('cluster_bootstrap_draws.npz'), allow_pickle=False)
+for baseline, short in [('19LA_eval', '19LA'), ('21LA_eval', '21LA')]:
+    p00 = cell(short, short)
+    p10 = cell('DF_all', short)
+    p01 = cell(short, 'DF_all')
+    p11 = cell('DF_all', 'DF_all')
+    b00 = boot[f'{baseline}_bona__{baseline}_spoof']
+    b10 = boot[f'DF_full_bona__{baseline}_spoof']
+    b01 = boot[f'{baseline}_bona__DF_full_spoof']
+    b11 = boot['DF_full_bona__DF_full_spoof']
+    values = {
+        'normal_swap_with_baseline_spoof': (p10 - p00, b10 - b00),
+        'normal_swap_with_DF_spoof': (p11 - p01, b11 - b01),
+        'spoof_swap_with_baseline_normal': (p01 - p00, b01 - b00),
+        'spoof_swap_with_DF_normal': (p11 - p10, b11 - b10),
+    }
+    for name, (delta, draws) in values.items():
+        r = next(r for r in contrasts if r['baseline'] == baseline and r['contrast'] == name)
+        check('delta_arithmetic_' + baseline + '_' + name, close(delta, r['delta_pp']))
+        check('saved_draws_' + baseline + '_' + name, len(draws) == 2000 and np.isfinite(draws).all())
+        for q, field in [(.025, 'ci95_lower'), (.975, 'ci95_upper'), (.00625, 'ci98_75_lower'), (.99375, 'ci98_75_upper')]:
+            check('interval_' + baseline + '_' + name + '_' + field, close(np.quantile(draws, q), r[field]))
+    check('normal_swaps_worsen_' + baseline, p10 > p00 and p11 > p01)
+    check('spoof_swaps_improve_' + baseline, p01 < p00 and p11 < p10)
+
+def cross_table(short):
+    return table(['정상 점수 집합', short + ' 위조 고정', 'DF 위조 고정'], [
+        [short + ' 정상', f(cell(short, short)), f(cell(short, 'DF_all'))],
+        ['DF 정상', f(cell('DF_all', short)), f(cell('DF_all', 'DF_all'))],
+    ])
+
+contrast_labels = [
+    ('normal_swap_with_baseline_spoof', '정상만 DF로 교체 / 19LA 위조 고정'),
+    ('normal_swap_with_DF_spoof', '정상만 DF로 교체 / DF 위조 고정'),
+    ('spoof_swap_with_baseline_normal', '위조만 DF로 교체 / 19LA 정상 고정'),
+    ('spoof_swap_with_DF_normal', '위조만 DF로 교체 / DF 정상 고정'),
+]
+contrast_rows = []
+for key, label in contrast_labels:
+    r = next(r for r in contrasts if r['baseline'] == '19LA_eval' and r['contrast'] == key)
+    contrast_rows.append([label, signed(r['delta_pp']), f"[{signed(r['ci98_75_lower'])}, {signed(r['ci98_75_upper'])}]"])
+contrast_table = table(['한쪽 집합만 바꾼 비교', 'EER 변화(%p)', '98.75% 화자 군집 구간'], contrast_rows)
+
+def codec_value(setting, b, s):
+    return float(next(r for r in codec if r['setting'] == setting and r['bona'] == b and r['spoof'] == s)['eer_percent'])
+
+duration_cells = {(r['bona'], r['spoof']): float(r['eer_percent']) for r in duration['matrix']}
+checks_rows = []
+for name, values in [
+    ('전체 원래 구성', [codec_value('all_DF', b, s) for b, s in [('19LA', '19LA'), ('DF', '19LA'), ('19LA', 'DF'), ('DF', 'DF')]]),
+    ('DF의 추가 코덱 없는 부분만 사용', [codec_value('DF_nocodec', b, s) for b, s in [('19LA', '19LA'), ('DF', '19LA'), ('19LA', 'DF'), ('DF', 'DF')]]),
+    ('클래스별 원음 길이 비중을 19LA에 맞춤', [duration_cells[b, s] for b, s in [('19LA', '19LA'), ('DF', '19LA'), ('19LA', 'DF'), ('DF', 'DF')]]),
+]:
+    checks_rows.append([name] + [f(x) for x in values])
+    check('sensitivity_preserves_normal_direction_' + name, values[1] > values[0] and values[3] > values[2])
+    check('sensitivity_preserves_spoof_direction_' + name, values[2] < values[0] and values[3] < values[1])
+sensitivity_table = table(['조건', '정상19·위조19', '정상DF·위조19', '정상19·위조DF', '정상DF·위조DF'], checks_rows)
+check('duration_support_not_dropped', all(r['retained_fraction'] == 1 for r in duration['support']))
+
+source_names = [('19LA', '19LA 정상'), ('DF_asvspoof', 'DF의 ASVspoof 출처 정상'), ('DF_vcc2018', 'DF의 VCC2018 출처 정상'), ('DF_vcc2020', 'DF의 VCC2020 출처 정상')]
+source_rows = []
+for code, name in source_names:
+    r = next(r for r in matrix if r['bona'] == code and r['spoof'] == '19LA')
+    source_rows.append([name, f"{int(r['n_bona']):,}", f(r['eer_percent'])])
+source_table = table(['교체한 정상 집합', '정상 수', '같은 19LA 위조에 대한 EER(%)'], source_rows)
+check('source_normal_counts_sum', sum(int(next(r for r in matrix if r['bona'] == p and r['spoof'] == '19LA')['n_bona']) for p in ['DF_asvspoof', 'DF_vcc2018', 'DF_vcc2020']) == 14869)
+
+attack_rows = []
+for key, label in [('19LA_eval', '19LA 위조'), ('DF_asvspoof', 'DF의 ASVspoof 위조'), ('DF_asvspoof_19LA_attack_prior', '같은 DF 위조를 19LA 공격 ID 비중으로 재가중')]:
+    r = next(r for r in attack if r['bona_dataset'] == '19LA_eval' and r['spoof_dataset'] == key)
+    attack_rows.append([label, f(r['eer_percent'])])
+attack_table = table(['19LA 정상을 고정한 위조 집합', 'EER(%)'], attack_rows)
+check('individual_attack_counterexample_preserved', independent['shared_attack_EER_worsened'] == 4 and independent['shared_attacks_total'] == 13)
+
+op = {r['dataset']: r for r in operating}
+ber19 = (float(op['19LA']['bona_false_reject_percent']) + float(op['19LA']['spoof_false_accept_percent'])) / 2
+berdf = (float(op['DF_all']['bona_false_reject_percent']) + float(op['DF_all']['spoof_false_accept_percent'])) / 2
+check('fixed_operating_point_counterexample', berdf < ber19)
+
+body = f'''# 정상 음성의 분포 변화가 EBM의 EER 악화를 주도했다
+
+**이 고정 EBM에서 19LA의 정상만 DF 정상으로 바꾸면 EER이 0.435177%에서 5.999058%로 높아졌다. 반대로 정상은 유지하고 위조만 DF로 바꾸면 0.285520%로 낮아졌다.** 정상과 위조를 따로 교체했을 때의 차이가 이번 연구의 중심 근거다.
+
+이 결과는 “새로운 평가 환경에서 정상 음성이 충분히 대표되지 않는 문제가 중요한 병목인가?”라는 가설을 지지한다. 다만 직접 확인한 것은 **평가 정상 분포의 차이에 대한 취약성**이다. 정상 학습 자료의 다양성을 늘리는 것이 위조 학습 자료의 다양성을 늘리는 것보다 더 큰 개선을 낸다는 학습 효과까지 증명한 것은 아니다.
+
+## 1. 가설을 검정 가능한 질문으로 나눈다
+
+여기서 정상은 사람이 발화한 bonafide, 위조는 합성·음성 변환 등의 spoof다. 다양성은 파일 수가 아니라 화자·발성·녹음·출처·압축·길이 등에서 자료가 포괄하는 범위를 뜻한다. 이번 실험은 다양성을 하나의 수치로 측정하거나 많고 적은 순위를 매긴 실험이 아니다. **정상과 위조 중 어느 쪽의 평가 분포 변화가 EER 악화와 연결됐는지**를 분리했다.
+
+검정 순서는 다음과 같다.
+
+1. 위조 집합을 고정한 상태에서 정상만 다른 평가 자료로 바꾼다.
+2. 정상 집합을 고정한 상태에서 위조만 바꾼다.
+3. 정상 교체의 악화가 길이 구성이나 추가 코덱으로만 설명되는지 확인한다.
+4. 정상 출처를 나눠 어떤 정상 분포에서 문제가 집중되는지 확인한다.
+
+만약 새로운 위조 집합이 전체 EER 악화의 주된 이유라면, 기존 정상을 유지해도 위조 교체만으로 EER이 악화될 것으로 예상할 수 있다. 반대로 정상 교체에서 악화되고 위조 교체에서는 악화되지 않는다면, 이 자료 간 차이에서는 정상 분포의 문제가 더 직접적으로 드러난다.
+
+## 2. 핵심 실험: 정상과 위조를 한쪽씩 교체했다
+
+### 실험 방법
+
+배치 크기 160으로 50epoch 학습한 기존 EBM의 가중치를 고정했다. 배치 240 기준 모델이나 B/C 학습과는 다른 체크포인트다. 원래 최종 160차원 특징과 학습된 정상 기준 벡터의 코사인 점수를 사용했다. 점수가 높을수록 정상 방향이고, **EER은 낮을수록 좋다.**
+
+사용한 공식 평가 자료는 다음과 같다. 19LA와 21LA는 ASVspoof 2019·2021 LA 평가, DF는 ASVspoof 2021 DF 전체 평가다.
+
+|평가 자료|정상 음성 수|위조 음성 수|
+|---|---|---|
+|19LA|7,355|63,882|
+|21LA|14,816|133,360|
+|DF 전체|14,869|519,059|
+
+한 모델이 이미 계산한 점수에서 정상 집합과 위조 집합을 조합해 EER을 다시 계산했다. 음성에 변형을 가하거나 모델을 재학습한 것은 아니다. DF는 서로 중복되지 않는 기존 두 평가 묶음의 합집합이다. 파일 수가 다른 두 클래스는 각 클래스 안의 오류율로 계산되므로, 위조 파일이 많다는 이유만으로 EER이 기계적으로 올라가는 것은 아니다.
+
+이 분석은 입력 분포를 바꾸는 효과를 보기 위해 **같은 50epoch 모델을 고정**했다. 여러 epoch 중 조건마다 유리한 저장 모델을 새로 선택하는 비교가 아니다.
+
+### 결과: 19LA와 DF 교차 평가
+
+단위는 EER %. 행에서는 정상 집합만, 열에서는 위조 집합만 달라진다.
+
+{cross_table('19LA')}
+
+- **정상만 교체:** 19LA 위조를 고정하고 정상만 DF로 바꾸면 **+5.563881%p** 악화했다.
+- **위조만 교체:** 19LA 정상을 고정하고 위조만 DF로 바꾸면 **−0.149657%p** 개선됐다.
+- DF 위조를 고정해도 정상 교체는 **+2.956308%p** 악화했다.
+
+**DF의 위조가 이 모델에 더 어려워져서 전체 EER이 높아졌다는 설명은 이 조합에서 지지되지 않았다. 정상 분포를 교체했을 때 악화가 나타났다.**
+
+### 차이의 불확실성도 확인했다
+
+출처별 화자를 묶어 2,000회 재표집한 기존 결과다. 공유된 ASVspoof 화자의 가중치는 평가 자료 사이에서 공유했다. 네 교체 비교의 구간을 함께 고려하기 위해 각 구간을 98.75%로 제시했다.
+
+{contrast_table}
+
+정상 교체 구간은 모두 악화 방향이고 위조 교체 구간은 모두 개선 방향이었다. 다만 DF 정상을 고정했을 때 위조 교체도 EER을 2.757230%p 움직였다. 따라서 위조 분포가 중요하지 않다거나 모든 상황에서 정상 변화량이 압도적으로 크다는 뜻은 아니다.
+
+이 구간은 같은 자료를 사후 분석한 결과다. 네 비교에 대한 보정을 다른 기준 자료·모든 보완 분석의 동시 보장으로 확대하지 않는다. 화자와 원발화·재압축 계열의 관계를 완전히 분리하지 못했으며, 학습 초기값이나 모델 선택의 불확실성도 포함하지 않는다.
+
+근거: {link('class_replacement_eer.csv', '클래스 교체 EER')}, {link('paired_contrasts.csv', '교체 차이와 군집 구간')}, {link('protocol.json', '고정 모델과 재표집 규칙')}.
+
+## 3. 21LA를 기준으로 해도 같은 방향이었다
+
+같은 모델에서 19LA 대신 21LA를 기준으로 정상·위조를 교체했다. 단위는 EER %다.
+
+{cross_table('21LA')}
+
+21LA 위조를 고정한 정상 교체는 **+3.977061%p**, 21LA 정상을 고정한 위조 교체는 **−0.223356%p**였다. 특정 19LA 기준에만 생기는 방향은 아니었다.
+
+단, 19LA·21LA·DF는 자료와 화자가 일부 공유된다. 이 비교를 독립적인 학습 재현 두 번으로 세지는 않는다. 같은 고정 모델에서 기준 평가 자료를 달리한 보완 분석이다.
+
+근거: {link('class_replacement_eer.csv', '21LA 기준 교체 결과')}, {link('paired_contrasts.csv', '21LA 교체 차이')}.
+
+## 4. 정상 교체의 악화가 길이나 추가 압축 때문만인지는 대조했다
+
+### 대조 방법
+
+첫째, DF에서 평가 단계의 추가 코덱이 없는 부분집합만 남겼다. 정상 1,156개·위조 52,920개다. 원천 녹음 단계의 압축이나 채널 차이까지 없앤 것은 아니다.
+
+둘째, 정상과 위조 각각의 원음 길이 비중을 19LA의 해당 클래스와 같게 재가중했다. 구간은 1초 미만, 1~1.5초, 1.5~2초, 2~3초, 3~4.0375초, 4.0375~6초, 6초 이상이다. 모든 구간에 양쪽 자료가 있어 파일을 제외하지 않았다. 음성을 자르거나 반복한 것이 아니라 평가 가중치만 바꿨다.
+
+이 둘은 **각각의 대조**이며 길이와 코덱을 동시에 완벽히 통제한 실험은 아니다. 단위는 EER %다.
+
+{sensitivity_table}
+
+정상만 교체한 EER은 원래 5.999058%, 추가 코덱 없는 부분에서는 6.141869%, 길이 구성을 맞춘 경우에도 4.999843%였다. 모두 기준 0.435177%보다 높았다.
+
+**추가 코덱이 없는 부분으로 제한하거나, 거친 길이 구간의 비중을 맞추는 것만으로 정상 교체의 악화가 사라지지는 않았다.** 따라서 이 두 요인만으로 현상을 설명하기 어렵다. 어떤 녹음 특성이나 발성 차이가 원인인지는 여기서 특정하지 않는다.
+
+길이 구간 안의 분포는 여전히 다르며, 19LA 정상의 가장 짧은 두 구간은 각각 1개·13개라 참조 비중이 불안정할 수 있다. 이 절의 보완값에는 별도의 신뢰구간이 없다.
+
+근거: {link('codec_sensitivity.csv', '추가 코덱 없는 부분의 교차 EER')}, {link('duration_sensitivity.json', '클래스별 길이 재가중과 지지 구간')}.
+
+## 5. 정상의 모든 출처가 어려웠던 것은 아니다
+
+위조는 19LA의 같은 63,882개로 고정하고, 정상만 출처별로 바꿨다. ASVspoof·VCC2018·VCC2020은 DF에 포함된 자료 출처다. 아래 VCC 정상은 해당 출처에서 정상으로 표시된 원발화이며 변환된 위조를 정상으로 취급한 것이 아니다.
+
+{source_table}
+
+DF의 ASVspoof 정상으로 바꾼 EER은 0.474312%로 19LA 정상의 0.435177%와 가까웠다. 반면 VCC2018 정상은 10.952381%, VCC2020 정상은 4.730159%였다.
+
+**위조 집합이 같아도 정상 출처에 따라 분리 성능이 크게 달랐다.** 따라서 DF 정상 전체가 똑같이 어려워졌다는 설명보다, 특정 정상 분포에 대한 취약성이 전체 EER 악화와 연결됐다고 보는 편이 구체적이다.
+
+다만 출처를 바꾸면 화자·녹음·내용·길이·비중이 함께 달라진다. 이 표는 정상 분포의 취약 지점을 보여 주며 특정 물리적 원인이나 학습 정상의 부족을 단독으로 증명하지는 않는다. 출처별 값은 별도 구간을 계산하지 않은 점추정이다.
+
+근거: {link('source_cross_matrix.csv', '동일 위조를 고정한 정상 출처 교체')}.
+
+## 6. 위조 출처·공격 비중을 제한해도 주결론은 바뀌지 않았다
+
+위조 교체가 쉬운 출처나 공격 비중에만 의존하는지 보기 위해, 정상은 19LA로 고정하고 위조를 DF의 ASVspoof 출처로 제한했다. 이어서 그 위조의 공격 ID 비중을 19LA와 같게 맞췄다.
+
+{attack_table}
+
+공통 출처와 공격 ID 비중으로 제한해도 위조 교체에 따른 전체 EER 악화는 나타나지 않았다. 따라서 DF의 전체 위조 수나 새 출처가 많다는 사실만으로 EER 악화를 설명할 수는 없다.
+
+반대로 공유된 13개 공격을 각각의 정상 집합과 평가했을 때는 4개 공격에서 DF 조건의 EER이 더 높았다. 개별 공격 비교는 정상도 함께 달라진 조건이므로 생성기만의 효과가 아니다. **이번 결과는 모든 위조가 쉬워졌다거나 모든 미지 공격에 강하다는 증거가 아니다.** 공격 ID를 맞춰도 원발화·코덱·세부 생성 조건까지 대응시킨 것은 아니다.
+
+근거: {link('same_source_attack_control.csv', '공통 출처·공격 비중 대조')}, {link('independent_verification.json', '개별 공격 예외와 기존 독립 검산')}.
+
+## 7. 종합 결론: 가설의 어느 부분이 지지됐는가
+
+근거의 연결은 다음과 같다. 정상과 위조의 평가 자료를 분리해 교체했을 때 정상 교체에서 EER 악화가 나타났다. 21LA 기준에서도 방향이 같았다. 길이 구성을 맞추거나 추가 코덱 없는 부분을 사용해도 정상 교체의 악화가 남았다. 정상 출처를 나누자 취약성이 특정 출처에 집중됐다. 위조 출처와 공격 비중을 제한한 대조는 위조 교체가 전체 악화를 주도했다는 설명을 뒷받침하지 않았다.
+
+따라서 현재 결과가 지지하는 결론은 다음과 같다.
+
+> **이 고정 EBM의 LA 대비 DF EER 악화는, 위조 평가 집합의 교체보다 정상 평가 집합의 분포 변화와 더 직접적으로 연결됐다. 새로운 위조를 구분하는 문제뿐 아니라, 다른 출처의 정상 음성을 정상으로 대표하는 문제가 주요 연구 대상이다.**
+
+이를 정상 다양성 연구의 출발점으로 삼을 수 있다. 다만 **정상 학습 다양성을 늘리는 것이 위조 학습 다양성을 늘리는 것보다 더 효과적이라는 인과적 결론은 아직 없다.** 이번 실험은 정상 다양성을 늘려 재학습한 실험이 아니라, 고정 모델에서 평가 분포를 교체한 실험이다.
+
+또한 EER은 두 점수 분포의 비선형 함수다. 정상 교체 +5.563881%p와 위조 교체 −0.149657%p를 합쳐 전체 차이를 설명하거나, 정상이 악화의 몇 %를 일으켰다고 계산하지 않는다. 교체 순서와 고정한 상대 집합에 따라 효과 크기가 달라졌다.
+
+**결론의 지표 범위도 EER에 한정한다.** 기존 개발 자료에서 정한 하나의 고정 임계값에서는 정상·위조 오류의 평균이 19LA {ber19:.6f}%에서 DF {berdf:.6f}%로 오히려 낮았다. 정상 오거부가 늘어도 위조 통과 감소가 이를 상쇄할 수 있으므로, 모든 임계값·운용 비용에서 전체 성능이 악화했다고 일반화하지 않는다. [기존 고정 임계값 결과](../../{source('V_spoof_FAR1_operating.csv').relative_to(ROOT).as_posix()})
+
+## 8. 이 가설을 학습 효과까지 검정하려면
+
+위 결과가 권하는 우선순위는 위조 종류 추가만으로 문제를 정의하지 않고, 정상 출처의 대표성과 정상 수락 영역을 함께 검토하는 것이다. 다만 해결 효과를 확인하려면 아래 비교가 추가로 필요하다. **실행 결과가 아닌 후속 설계다.**
+
+- 기준 학습, 정상 다양성만 확대한 학습, 위조 다양성만 확대한 학습, 둘 다 확대한 학습을 구분한다.
+- 단순 파일 수 증가와 다양성 증가를 분리하도록 총 학습량·클래스별 노출·반복 사용량을 맞춘다. 같은 자료를 복제해 늘린 조건도 대조로 둔다.
+- 정상 출처와 위조 출처·공격의 겹침을 명시하고, 학습·선택에 사용하지 않은 출처를 최종 평가에 남긴다.
+- 같은 모델 구조·손실·입력 처리·갱신 수에서 여러 학습 초기값을 비교한다. 정상 출처별 거부율, 위조 통과율과 EER을 함께 보고한다.
+
+이때 정상 다양성만 확대한 조건이 동일 예산의 위조 다양성 확대보다 일관되게 큰 개선을 낸다면, 처음의 강한 가설까지 지지할 수 있다. 현재 문서는 그 전에 확보된 **정상 분포 취약성의 근거**를 정리한 것이다.
+
+## 선별 기준과 자료 범위
+
+본문에는 한쪽 클래스 교체, 기준 자료 교체, 길이·코덱 민감도, 정상 출처 분리, 공통 위조 출처·공격 대조만 남겼다. 같은 모델과 일부 공유 자료를 사용한 일련의 분석이며 독립 학습 실험 여러 번으로 세지 않는다.
+
+정상쌍을 늘린 배치 변경, 정상끼리의 단기 정렬 학습, 특징의 최근접 이웃 비율, 그림상 군집 모양, 정상 평균 중심을 바꾼 결과는 이 가설의 직접 증명에 사용하지 않았다. 해당 분석들은 다양성의 독립 효과를 확인하지 못하거나 별도 질문을 다룬다. 실패·진행 중 학습도 성능 근거에서 제외했다. 불리한 결과라는 이유로 제외하지 않았으며, 개별 공격 예외와 고정 임계값의 반대 결과를 본문에 남겼다.
+
+이 문서는 기존에 완료·검산된 결과를 선별해 작성했다. 이번에는 원점수로 전체 ROC를 다시 계산하거나 bootstrap을 새로 추출하지 않았다. 저장된 교차 EER의 대응 관계, 차이의 산술, 저장된 2,000회 재표집 결과의 구간을 다시 확인했다. 새 학습·음성 추론·서버 조회는 하지 않았다.
+
+- [기존 실험 방법과 독립 검산 기록](ebm_bonafide_cross_recheck_results_20261106.md)
+- [전체 다섯 연구 주제 기록](ebm_five_research_themes_20261111.md)
+- [이번 문서의 선별 기준·검증](../../artifacts/bonafide_diversity_research_20261111/validation.json)
+- [근거 파일 목록과 해시](../../artifacts/bonafide_diversity_research_20261111/sources.json)
+'''
+
+REPORT.write_text(body, encoding='utf-8')
+save('sources.json', list(sources.values()))
+for p, h in preserved.items():
+    check('existing_document_preserved_' + Path(p).name, sha(ROOT / p) == h)
+for s in sources.values():
+    check('source_unchanged_' + Path(s['path']).name, sha(ROOT / s['path']) == s['sha256'])
+for ref in re.findall(r'\]\(([^)]+)\)', body):
+    p = (REPORT.parent / ref).resolve()
+    check('link_' + str(len(checks)), p.exists() or p == OUT / 'validation.json')
+tables = 0
+cols = None
+for line in body.splitlines():
+    if line.startswith('|'):
+        n = line.count('|') - 1
+        if cols is None:
+            cols = n
+            tables += 1
+        check('table_columns_' + str(len(checks)), n == cols)
+    else:
+        cols = None
+check('no_unexplained_internal_experiment_ids', not re.search(r'\bE\d{3}\b', body))
+check('training_causality_not_claimed', '正常' not in body and '정상 학습 다양성을 늘리는 것이 위조 학습 다양성을 늘리는 것보다 더 효과적이라는 인과적 결론은 아직 없다' in body)
+check('counterevidence_and_interaction_explicit', all(v in body for v in ['4개 공격', '2.757230', '고정 임계값', '비선형 함수', '독립 학습 실험 여러 번으로 세지 않는다']))
+check('readable_utf8', '\ufffd' not in body)
+save('validation.json', {
+    'status': 'passed', 'checked_at': datetime.now().astimezone().isoformat(),
+    'report_sha256': sha(REPORT), 'source_count': len(sources),
+    'checks': checks, 'check_count': len(checks), 'table_count': tables,
+    'current_verification_scope': 'Archived metric/cell reconciliation, contrast arithmetic and percentile recomputation from stored2000 bootstrap draws. Original waveforms/ROC fitting/bootstrap sampling were not rerun.',
+    'archived_original_validation': independent,
+    'new_training': False, 'new_audio_inference': False, 'remote_queries': False,
+    'spending_ceiling_usd': 0, 'resources_left_running': 0,
+    'excluded_from_proof': ['batch-size/BPL changes', 'positive-only pilot training', 'nearest-neighbor geometry', 'centroid replacement', 'failed/ongoing training'],
+})
+plan = json.loads((OUT / 'plan.json').read_text(encoding='utf-8'))
+plan.update(status='complete', report=REPORT.relative_to(ROOT).as_posix(), validation='validation.json', check_count=len(checks))
+save('plan.json', plan)
+print(json.dumps({'status': 'passed', 'checks': len(checks), 'tables': tables, 'sources': len(sources), 'bytes': REPORT.stat().st_size}, ensure_ascii=False))

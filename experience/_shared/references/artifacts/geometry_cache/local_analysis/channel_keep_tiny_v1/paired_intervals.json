@@ -1,0 +1,82 @@
+[
+  {
+    "case": "keep_top10",
+    "EER_impairment_pp": 1.7000000000000015,
+    "CI95_pointwise": [
+      0.8214452199088806,
+      2.8779349166582784
+    ],
+    "groups": 93,
+    "dropped_replicates": 0
+  },
+  {
+    "case": "keep_bottom10",
+    "EER_impairment_pp": -0.4055555555555532,
+    "CI95_pointwise": [
+      -0.5388909479437703,
+      -0.096746643922567
+    ],
+    "groups": 93,
+    "dropped_replicates": 0
+  },
+  {
+    "case": "keep_top5",
+    "EER_impairment_pp": 2.300000000000002,
+    "CI95_pointwise": [
+      1.153617140215383,
+      3.9869728338358716
+    ],
+    "groups": 93,
+    "dropped_replicates": 0
+  },
+  {
+    "case": "keep_bottom5",
+    "EER_impairment_pp": -0.40000000000000036,
+    "CI95_pointwise": [
+      -0.6465606860741474,
+      0.07321191866372126
+    ],
+    "groups": 93,
+    "dropped_replicates": 0
+  },
+  {
+    "case": "keep_top3",
+    "EER_impairment_pp": 3.500000000000003,
+    "CI95_pointwise": [
+      1.954178222389791,
+      5.403084540869211
+    ],
+    "groups": 93,
+    "dropped_replicates": 0
+  },
+  {
+    "case": "keep_bottom3",
+    "EER_impairment_pp": -0.42777777777777537,
+    "CI95_pointwise": [
+      -0.7821047441361374,
+      0.36095437096563454
+    ],
+    "groups": 93,
+    "dropped_replicates": 0
+  },
+  {
+    "case": "keep_top2",
+    "EER_impairment_pp": 3.500000000000003,
+    "CI95_pointwise": [
+      1.8847013738601657,
+      5.560844789121909
+    ],
+    "groups": 93,
+    "dropped_replicates": 0
+  },
+  {
+    "case": "keep_bottom2",
+    "EER_impairment_pp": -0.42777777777777537,
+    "CI95_pointwise": [
+      -0.7991460489049097,
+      0.06927896975767035
+    ],
+    "groups": 93,
+    "dropped_replicates": 0
+  }
+]

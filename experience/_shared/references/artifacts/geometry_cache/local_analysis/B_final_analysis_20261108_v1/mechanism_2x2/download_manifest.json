@@ -1,0 +1,42 @@
+{
+  "files": {
+    "protocol.json": {
+      "bytes": 1319,
+      "sha256": "b77e2ce9e630479df187fb0aa775ac7537b97824e086b8a3d65a1e522015b397"
+    },
+    "selected.parquet": {
+      "bytes": 77051,
+      "sha256": "367e0d589ef4d442e22c10d5f30c679a70f0023987a7eca109dcfa7b4bf81dd4"
+    },
+    "complete.json": {
+      "bytes": 439,
+      "sha256": "02947d85c9a3ab497cdc8c135d88bc32a2ec2350fb854468b8a49c137e4a2e7d"
+    },
+    "paired_embeddings.npz": {
+      "bytes": 1533672,
+      "sha256": "bdb461ac489f4f18ad680a277fc4e0b9d5f2b1131840caf820b5ee41655f2fe1"
+    },
+    "intervention_scores.parquet": {
+      "bytes": 74979,
+      "sha256": "4d9d79140c111909a3c3c8c4088012c599eb95a90de4df3942ab219ba5fefae4"
+    },
+    "rank0_complete.json": {
+      "bytes": 220,
+      "sha256": "80f3f6f2c6599e1b6112b3891138946e4946d03277559b7c2d5e1c8ba7dcf520"
+    },
+    "rank1_complete.json": {
+      "bytes": 220,
+      "sha256": "2cbf47c505e01468cf43a615b18c68a5f5050658214f963c56670b91f5984ed3"
+    }
+  },
+  "legacy": {
+    "source": "/home/mentee/results/run_logs/EBM_e50_bs240_lr1e5_20261102_142835.log",
+    "source_bytes": 8092461,
+    "final_21DF_EER_occurrences": [
+      "3.477032752706973",
+      "3.477032752706973"
+    ],
+    "fixed_epoch50_checkpoint": "BestCLS_50_21DF.pt",
+    "log_tail_contains_epoch50": false
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "status": "execution_held_by_user",
+  "user_scope": "Save complete previous proposal asMarkdown, first run OC +0.5existingBPL +0.5same-sourceBPL2. BPL1 deferred. Repeat toexacttargets. Trainfromscratch50epochs.",
+  "threshold_original_samples": 64600,
+  "targets": {
+    "original_gt64600": [
+      80000,
+      64600
+    ],
+    "original_le64600": [
+      64600,
+      48440
+    ]
+  },
+  "seconds_note": "Preserve existing approx4s=64600 andapprox3s=48440; new5s=80000 at16kHz.",
+  "sampling": "Original mixed OC sampler unchanged; BPL2policy chosen peroriginalUID, not alternatingbalanced steps or separate optimizers.",
+  "BPL2_gradient": "Long reference stop-gradient as previous proposed specification; BPL2student gets gradient, existingBPLremains symmetric all-pairs.",
+  "data": "OriginalASV2019Train only; no mild speed/crop cache, noBPL1, no extra codec/VADpolicy",
+  "OC": "Original classsamplers, batchglobal240, long64600short48440legacyBPL, originalRawBoost0-8,2stageAdam, frozenXLSR",
+  "checks": [
+    "Pairlength/threshold/nesting/repetition andsourceidentity tests",
+    "Legacylong/short andRNG equality checks",
+    "Realspawn2worker data andeval path import tests",
+    "GPUfullgraph finiteupdates, centroidthenbackend, checkpointserialization beforeeval, frontendfrozen",
+    "Immutable payload/checkpoints/sources, actual fresh process/readback"
+  ],
+  "evaluation": "Nodev; checkpoints5..50 savedbeforeevaluation;19LAmonitoring every5. Allsavedcheckpoints21LA/DF evaluation aftertraining;report per-dataset minimum andepoch, also50. Existing240/B/Cmin reference sameinputconditions withlimitations.",
+  "spending_ceiling_usd": 0,
+  "new_paid_resources": false,
+  "automatic_retries": 0,
+  "queue_dependency": "/home/mentee/analysis/ebm_repetition_shortcut_20261111_v1 mustfinish successfully; do not interrupt existing experiment",
+  "wait_max_hours": 12,
+  "pipeline_max_hours": 120,
+  "cleanup": "No app schedules; finite waiter and timeout scoped to new isolatedroot; nooriginalcache/source/result deletion",
+  "new_training_started": false,
+  "user_hold": "아직 수행은 하지마",
+  "new_gpu_smoke_started": false,
+  "queue_registered": false,
+  "new_remote_run_root_created": false,
+  "local_cpu_unit_tests_passed": 4,
+  "code_status": "local draft, integration and actual-data/GPU preflight incomplete"
+}

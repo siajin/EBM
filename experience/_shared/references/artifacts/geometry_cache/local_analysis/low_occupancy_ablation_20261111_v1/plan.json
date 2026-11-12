@@ -1,0 +1,66 @@
+{
+  "status": "locked_before_evaluation",
+  "user_choice": "Remove whole dimensions starting with sparsely occupied residual directions",
+  "model": "archived batch160 epoch50; checkpoint 104873703a57cad98b686d770e0860e031a2cf9abef79b72668780c1660e0b24",
+  "fit": "Only Train bona fide 2580 unit residual directions; uncentered second moment in the 159D subspace orthogonal to the saved learned OC centroid. Eigenvectors ordered from lowest eigenvalue (mean squared directional projection). No attack labels in fitting/ranking.",
+  "transform": "x=z/||z||; zero chosen tangent-axis coefficients, renormalize x and use cosine to original learned centroid. No mean subtraction, no model or centroid updates.",
+  "k": [
+    0,
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    64,
+    96,
+    128,
+    144,
+    152,
+    158,
+    159
+  ],
+  "primary_method": "low_energy_first",
+  "primary_reference_k": 16,
+  "controls": [
+    "high_energy_first",
+    "random_subspace_seed20261111",
+    "random_subspace_seed20261112",
+    "random_subspace_seed20261113"
+  ],
+  "thresholds": "Original V-only 0.5093649528766109 fixed; additional per-variant V-only balanced-error threshold selected before reading target results. EER is tie-aware linear ROC intersection.",
+  "evaluations": [
+    "V 14983 (calibration/resubstitution)",
+    "19LA full 71237",
+    "21LA full 148176",
+    "DF full 533928 (existing disjoint pilot plus remainder)"
+  ],
+  "outputs": [
+    "EER-versus-removed-dimension figure",
+    "all-condition metrics",
+    "fixed and recalibrated normal rejection/spoof acceptance",
+    "per-attack/source diagnostics where labels available",
+    "removed energy by class",
+    "basis and train spectrum",
+    "independent checks"
+  ],
+  "interpretation": "Low Train occupancy does not establish irrelevance to unseen attacks. Sweep is exploratory; do not choose the best target-evaluation setting as a validated model.",
+  "checks": [
+    "cache identity and hashes before/after",
+    "full UID/class alignment",
+    "baseline score reconstruction",
+    "orthonormality and OC orthogonality",
+    "explicit projection vs energy shortcut",
+    "independent tie-aware EER",
+    "all-tangent endpoint sign-only ties",
+    "existing source hashes unchanged"
+  ],
+  "spending_ceiling_usd": 0,
+  "new_spend_estimate_usd": 0,
+  "resources": "local CPU, 2 threads, no GPU/network/remote calls",
+  "time_ceiling_seconds": 1800,
+  "automatic_retries": 0,
+  "cleanup": "no paid resources or background services; bounded local process exits",
+  "current_training_modified": false,
+  "Q_opened": false
+}

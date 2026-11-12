@@ -1,0 +1,11 @@
+{
+  "reference": "archived epoch50 batch160 arguments.py, read on server",
+  "num_train_frames": 404,
+  "num_train_frames_short": 303,
+  "num_test_frames": 404,
+  "long_samples": 64600,
+  "short_samples": 48440,
+  "long_seconds": 4.0375,
+  "short_seconds": 3.0275,
+  "caution": "T original short-duration counts exclude all effective exposure from long/short augmented views."
+}

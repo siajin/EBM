@@ -1,0 +1,60 @@
+# E040. 초기 개발 자료에서 점수·크기·옆 방향 특징을 읽는 분류기 비교
+
+**실행 상태:** 추가 분류기 학습·평가 완료
+
+이 문서의 상태는 2026-11-12 출판 검토 기준이다. 기존 문서·state의 시점별 상태와 충돌하면 실제 완료표식과 본문 최신 보완을 우선한다.
+
+## 가설
+
+점수와norm 밖의 잔여 방향이 개발 분류기의 추가 신호가 될 수 있다.
+
+## 그렇게 설계한 이유
+
+기존 코사인 외의 특징이 선형 분류기에 얼마나 읽히는지 출발점 진단을 한다.
+
+대조와 통제의 근거: 단위 방향은 ||r ||≥1e-4 일 때만 정규화한다. 초기 고정 잡음은 seed 601이며 나중의 발화 ID 별잡음대조와 설계가 다르다.
+
+## 모델·데이터·표본
+
+[E039](../../05_residual_geometry/E039/README.md)의 학습 자료 25,380에서 추가 분류기를 학습하고 개발 선택 14,983에서 평가한다. 기존 EBM 전체와 정상 기준 벡터는 고정한다.
+
+## 실험 내용과 상세 절차
+
+1. 코사인 s에 5-knot·3차 spline을 학습 자료에서 fit 한다. 다섯 입력은 spline(s), 여기에 log ||z || 추가, 방향 유효 표시 추가, 실제 옆 방향 u160개 추가, u 대신 고정 단위 잡음 160개 추가다.
+2. 각 입력을 학습 자료 통계로 표준화하고 class-balanced L2 logistic regression을 C =0.01/0.1/1/10,lbfgs,max_iter2000,tol1e-6로 학습한다.
+3. 개발 자료의 화자를 seed 11로 다섯 묶음으로 나눈다. 한 묶음의 예측에 쓸 정규화 강도 C는 나머지 개발 화자들에서만 고른다. 추가 분류기의 파라미터는 학습 자료로 맞추며, 각 개발 발화는 자기 화자가 C 선택에 쓰이지 않은 예측을 받는다.
+4. 이상치 출력·미수렴·동점 ROC·라벨 정렬을 검사한다.2,000회 화자 bootstrap 으로 로그 손실 차이를 구한다.
+
+## 측정과 검증
+
+개발 EER·AUROC·클래스 균형로그 손실. 기존 모델 학습이 아닌 저장 특징 위의 새 읽기 분류기 학습이다.
+
+## 결과
+
+개발 코사인 EER이 이미 0%. 점수/크기/방향/잡음 모두 EER 0%였고 방향과 잡음 대조가 비슷하게로그 손실을 낮춰 방향 고유 이득을 확정하지 못했다.
+
+## 해석·실패한 부분·한계
+
+개발 자료 내 교차 선택 결과이며 미지 공격 전이 성능이 아니다. 개발 최저 EER가 같아도 방향 정보가 없다고 결론 내리지 않는다.
+
+## 배운 점
+
+개발 EER이 이미0%였고 잡음 대조도 유사했다. 천장 효과와 같은 차원 대조 없이 방향 이득을 주장할 수 없다.
+
+## 실험 코드
+
+- [artifacts/geometry_experiments/fast_analyze.py](code/artifacts/geometry_experiments/fast_analyze.py)
+
+코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+
+## 설정·결과·검산 근거
+
+- [artifacts/geometry_experiments/fast_analyze.py](../../_shared/workspace/artifacts/geometry_experiments/fast_analyze.py)
+- [artifacts/geometry_cache/local_analysis/910ba7e8d87b4cc1/metrics.csv](../../_shared/references/artifacts/geometry_cache/local_analysis/910ba7e8d87b4cc1/metrics.csv)
+- [artifacts/geometry_cache/local_analysis/910ba7e8d87b4cc1/verification.json](../../_shared/references/artifacts/geometry_cache/local_analysis/910ba7e8d87b4cc1/verification.json)
+
+## 연결
+
+다른 관련 가설: [길이·유효 발화량과 앞뒤 저에너지 편향](../../01_duration_bias/README.md) · [잔여 방향·좌표·거리·기하와 변형 반응](../../05_residual_geometry/README.md)
+
+[가설 목록으로](../README.md) · [전체 실험 목록](../../README.md)

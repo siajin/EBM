@@ -1,0 +1,186 @@
+[
+  {
+    "file": "bonafide_p226_247.wav",
+    "sample_rate": 16000,
+    "channels": 1,
+    "sample_format": "signed PCM16",
+    "samples": 75857,
+    "duration_s": 4.7410625,
+    "vad": "WebRTC VAD, mode 2, 10 ms frames",
+    "nonspeech_s": 2.3510625,
+    "nonspeech_pct": 49.589358925346374,
+    "leading_nonspeech_s": 1.84,
+    "trailing_nonspeech_s": 0.5110624999999995,
+    "exact_zero_pct_all": 0.5470820095706395,
+    "exact_zero_pct_nonspeech": 0.9065050376159715,
+    "nonspeech_rms_dbfs": -51.18976726869721,
+    "nonspeech_intervals_s": [
+      [
+        0.0,
+        1.84
+      ],
+      [
+        4.23,
+        4.7410625
+      ]
+    ],
+    "riff_chunks": [
+      {
+        "id": "fmt ",
+        "bytes": 16
+      },
+      {
+        "id": "data",
+        "bytes": 151714
+      }
+    ],
+    "sha256": "e736cc64e59e927a19c60520e1abac5f138590611d3cced18cb906861e956f65",
+    "vad_mode_sensitivity_pct": {
+      "0": 41.36335473324809,
+      "1": 41.36335473324809,
+      "2": 49.589358925346374,
+      "3": 50.433051662997485
+    }
+  },
+  {
+    "file": "tts_A16_p226_c0022.wav",
+    "sample_rate": 16000,
+    "channels": 1,
+    "sample_format": "signed PCM16",
+    "samples": 45028,
+    "duration_s": 2.81425,
+    "vad": "WebRTC VAD, mode 2, 10 ms frames",
+    "nonspeech_s": 0.16425,
+    "nonspeech_pct": 5.836368481833526,
+    "leading_nonspeech_s": 0.06,
+    "trailing_nonspeech_s": 0.10424999999999995,
+    "exact_zero_pct_all": 4.128542240383761,
+    "exact_zero_pct_nonspeech": 33.21917808219178,
+    "nonspeech_rms_dbfs": -54.23228475604978,
+    "nonspeech_intervals_s": [
+      [
+        0.0,
+        0.06
+      ],
+      [
+        2.71,
+        2.81425
+      ]
+    ],
+    "riff_chunks": [
+      {
+        "id": "fmt ",
+        "bytes": 16
+      },
+      {
+        "id": "data",
+        "bytes": 90056
+      }
+    ],
+    "sha256": "6f4130c4564b63289b39aae14ddc6578ef65d392444a302b57bf539c922d09b1",
+    "vad_mode_sensitivity_pct": {
+      "0": 1.5723549791241007,
+      "1": 1.5723549791241007,
+      "2": 5.836368481833526,
+      "3": 16.141067780047972
+    }
+  },
+  {
+    "file": "bonafide_source_p281_394.wav",
+    "sample_rate": 16000,
+    "channels": 1,
+    "sample_format": "signed PCM16",
+    "samples": 39665,
+    "duration_s": 2.4790625,
+    "vad": "WebRTC VAD, mode 2, 10 ms frames",
+    "nonspeech_s": 0.8590625,
+    "nonspeech_pct": 34.65271650069331,
+    "leading_nonspeech_s": 0.5,
+    "trailing_nonspeech_s": 0.05906250000000002,
+    "exact_zero_pct_all": 0.08571788730618934,
+    "exact_zero_pct_nonspeech": 0.04365223717715533,
+    "nonspeech_rms_dbfs": -38.892225884648596,
+    "nonspeech_intervals_s": [
+      [
+        0.0,
+        0.5
+      ],
+      [
+        0.57,
+        0.79
+      ],
+      [
+        1.27,
+        1.35
+      ],
+      [
+        2.42,
+        2.4790625
+      ]
+    ],
+    "riff_chunks": [
+      {
+        "id": "fmt ",
+        "bytes": 16
+      },
+      {
+        "id": "data",
+        "bytes": 79330
+      }
+    ],
+    "sha256": "ac93f3daf71a8c03be10337ee5735257dc81d772c94b88f22ee92735f0e1889c",
+    "vad_mode_sensitivity_pct": {
+      "0": 16.538510021429474,
+      "1": 19.36215807386865,
+      "2": 34.65271650069331,
+      "3": 63.29257531829069
+    }
+  },
+  {
+    "file": "vc_A19_p226_p281_394.wav",
+    "sample_rate": 16000,
+    "channels": 1,
+    "sample_format": "signed PCM16",
+    "samples": 39520,
+    "duration_s": 2.47,
+    "vad": "WebRTC VAD, mode 2, 10 ms frames",
+    "nonspeech_s": 0.79,
+    "nonspeech_pct": 31.983805668016196,
+    "leading_nonspeech_s": 0.5,
+    "trailing_nonspeech_s": 0,
+    "exact_zero_pct_all": 0.2834008097165992,
+    "exact_zero_pct_nonspeech": 0.32436708860759494,
+    "nonspeech_rms_dbfs": -44.8781933878087,
+    "nonspeech_intervals_s": [
+      [
+        0.0,
+        0.5
+      ],
+      [
+        0.57,
+        0.78
+      ],
+      [
+        1.27,
+        1.35
+      ]
+    ],
+    "riff_chunks": [
+      {
+        "id": "fmt ",
+        "bytes": 16
+      },
+      {
+        "id": "data",
+        "bytes": 79040
+      }
+    ],
+    "sha256": "213047dc5c94a74e6511904c19f12bd46210dc7322c55c947f1378665c65788a",
+    "vad_mode_sensitivity_pct": {
+      "0": 17.813765182186234,
+      "1": 18.218623481781375,
+      "2": 31.983805668016196,
+      "3": 62.75303643724697
+    }
+  }
+]

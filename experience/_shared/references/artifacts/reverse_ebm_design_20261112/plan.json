@@ -1,0 +1,16 @@
+{
+  "task": "Audit original EBM and design spoof-centered OC plus spoof-pair learning",
+  "status": "completed_design_and_local_synthetic_validation_only",
+  "reference_commit": "10f3bcd057dc6a2ca687fbd5389ad6c9e15a3746",
+  "local_head": "cf199af03044c40837c08ce31d633e2c048bde08",
+  "deliverable": "docs/experiments/ebm_spoof_centered_design_20261112.md",
+  "scope": ["source inventory and dependency review", "loss and optimization derivation", "synthetic gradient and score validation", "implementation specification and experiment controls"],
+  "spending_ceiling_usd": 0,
+  "new_remote_resources": 0,
+  "training_launches": 0,
+  "model_inference_launches": 0,
+  "automatic_retries": 0,
+  "protected": ["all existing source edits", "frozen original240 and experiment snapshots", "remote processes and queues", "existing checkpoints and results"],
+  "checks": ["all reference files inventoried", "frozen five files match manifest and Git text", "OC derivative directions", "BPL gradients and class routing", "center-only coefficient", "sign and EER orientation", "original partial-batch schedules", "source preservation"],
+  "cleanup": "Only bounded foreground CPU checks. No remote resources, services, watchers, reservations or temporary model files are created. Keep source audit, validation and specification as evidence."
+}

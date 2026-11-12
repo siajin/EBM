@@ -1,0 +1,298 @@
+{
+  "status": "passed",
+  "checked_at": "2026-11-11T16:24:33.112554+09:00",
+  "checks": [
+    {
+      "name": "preserved_ebm_completed_evidence_interpretation_20261111.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preserved_ebm_five_research_themes_20261111.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "old_documents_match_previous_validations",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_sources_exist_and_file_hashes_match",
+      "passed": true,
+      "detail": 31
+    },
+    {
+      "name": "all_document_links_resolve",
+      "passed": true,
+      "detail": {
+        "count": 38,
+        "broken": []
+      }
+    },
+    {
+      "name": "markdown_tables_well_formed",
+      "passed": true,
+      "detail": 12
+    },
+    {
+      "name": "readable_utf8_no_private_experiment_ids",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "logical_story_order",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "same_file_shift_21LA_1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "nonuniform_sensitivity_change_21LA_1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "same_file_shift_21LA_0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "nonuniform_sensitivity_change_21LA_0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "same_file_shift_21DF_1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "nonuniform_sensitivity_change_21DF_1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "same_file_shift_21DF_0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "nonuniform_sensitivity_change_21DF_0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "crop_repeat_dose_1_repeat2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "crop_repeat_dose_1_repeat3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "crop_repeat_dose_1_repeat4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "crop_repeat_dose_2_repeat2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "crop_repeat_dose_2_repeat3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "crop_repeat_dose_2_repeat4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "feature_duplication_effect_sizes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "fixed_201_frame_context_angles",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "train_inclusive_2sec_1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "train_inclusive_2sec_0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "class_length_distribution_dev_1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "class_length_distribution_dev_0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "class_length_distribution_19LA_1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "class_length_distribution_19LA_0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "class_length_distribution_21LA_1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "class_length_distribution_21LA_0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "class_length_distribution_21DF_1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "class_length_distribution_21DF_0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "seam_rescue_percentages",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "observed_minimum_B_19LA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "observed_minimum_B_21LA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "observed_minimum_B_21DF",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "observed_minimum_C_19LA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "observed_minimum_C_21LA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "observed_minimum_C_21DF",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "common_nonrepeat_50epoch_19LA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "common_nonrepeat_50epoch_21LA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "common_nonrepeat_50epoch_21DF",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "coverage20_not_mislabeled_as_minimum_19LA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "coverage20_not_mislabeled_as_minimum_21LA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "coverage20_not_mislabeled_as_minimum_21DF",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "minima_and_coverage_selection_limits_explicit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "C_is_training_long_cap_ablation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "C_context_result_directions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "short_view_policy_80percent",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mild_inclusive_boundary_percentages",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "early_activity_content_not_final_policy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "failed_and_ongoing_results_not_fabricated",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "causal_and_input_limits_explicit",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "check_count": 55,
+  "report_sha256": "2a2800c32d889ca28ca9d3ce254cf879521e7684a86c9f4f8ee22c41709ebc1e",
+  "table_count": 12,
+  "source_manifest_count": 31,
+  "corrections": {
+    "mild_boundary": "Used <=2s 8.9123/8.9386 from shortness_comparison.json; earlier summary under2_percent 8.9079/8.9342 describes <2s and is not substituted."
+  },
+  "new_training": false,
+  "new_audio_inference": false,
+  "remote_state_queries": false,
+  "active_training_modified": false,
+  "spending_ceiling_usd": 0,
+  "resources_left_running": 0,
+  "scientific_scope": "Synthesis of archived experiments. Fixed-model input effects are distinguished from causal effects of training repetition; EER conditions and selected checkpoints remain explicit."
+}

@@ -1,0 +1,290 @@
+[
+  {
+    "phase": "19LA",
+    "label": 0,
+    "length_bin": "2to3.0275",
+    "N": 32,
+    "B_minus_legacy_absolute_sensitivity": -0.5873211067334253,
+    "CI95": [
+      -0.8472580560557953,
+      -0.34143748816372194
+    ],
+    "speakers": 32
+  },
+  {
+    "phase": "19LA",
+    "label": 0,
+    "length_bin": "3.0275to4.0375",
+    "N": 32,
+    "B_minus_legacy_absolute_sensitivity": -0.1193250690349372,
+    "CI95": [
+      -0.24981511587347224,
+      -0.02630067015173503
+    ],
+    "speakers": 32
+  },
+  {
+    "phase": "19LA",
+    "label": 0,
+    "length_bin": "atleast4.0375",
+    "N": 32,
+    "B_minus_legacy_absolute_sensitivity": 0.0,
+    "CI95": [
+      0.0,
+      0.0
+    ],
+    "speakers": 32
+  },
+  {
+    "phase": "19LA",
+    "label": 0,
+    "length_bin": "under2",
+    "N": 32,
+    "B_minus_legacy_absolute_sensitivity": -1.056920400675804,
+    "CI95": [
+      -1.3352815035999206,
+      -0.7725949669192392
+    ],
+    "speakers": 32
+  },
+  {
+    "phase": "19LA",
+    "label": 1,
+    "length_bin": "2to3.0275",
+    "N": 32,
+    "B_minus_legacy_absolute_sensitivity": 5.342834638272925e-05,
+    "CI95": [
+      -6.368830051155751e-05,
+      0.00021808311015825705
+    ],
+    "speakers": 32
+  },
+  {
+    "phase": "19LA",
+    "label": 1,
+    "length_bin": "3.0275to4.0375",
+    "N": 32,
+    "B_minus_legacy_absolute_sensitivity": 0.00010309573771460565,
+    "CI95": [
+      -2.6302565007806952e-05,
+      0.00026582168829580887
+    ],
+    "speakers": 32
+  },
+  {
+    "phase": "19LA",
+    "label": 1,
+    "length_bin": "atleast4.0375",
+    "N": 32,
+    "B_minus_legacy_absolute_sensitivity": 0.0,
+    "CI95": [
+      0.0,
+      0.0
+    ],
+    "speakers": 32
+  },
+  {
+    "phase": "19LA",
+    "label": 1,
+    "length_bin": "under2",
+    "N": 32,
+    "B_minus_legacy_absolute_sensitivity": 0.01342045189460302,
+    "CI95": [
+      -0.008096624779850573,
+      0.04787705995586354
+    ],
+    "speakers": 32
+  },
+  {
+    "phase": "21DF",
+    "label": 0,
+    "length_bin": "2to3.0275",
+    "N": 32,
+    "B_minus_legacy_absolute_sensitivity": -0.35695052578202613,
+    "CI95": [
+      -0.5772640091543831,
+      -0.1648730506777667
+    ],
+    "speakers": 32
+  },
+  {
+    "phase": "21DF",
+    "label": 0,
+    "length_bin": "3.0275to4.0375",
+    "N": 32,
+    "B_minus_legacy_absolute_sensitivity": -0.05370721876433123,
+    "CI95": [
+      -0.10926339452272849,
+      -0.011062543941343836
+    ],
+    "speakers": 32
+  },
+  {
+    "phase": "21DF",
+    "label": 0,
+    "length_bin": "atleast4.0375",
+    "N": 32,
+    "B_minus_legacy_absolute_sensitivity": 0.0,
+    "CI95": [
+      0.0,
+      0.0
+    ],
+    "speakers": 32
+  },
+  {
+    "phase": "21DF",
+    "label": 0,
+    "length_bin": "under2",
+    "N": 32,
+    "B_minus_legacy_absolute_sensitivity": -1.0957306386406316,
+    "CI95": [
+      -1.3917889530572696,
+      -0.7862145705080893
+    ],
+    "speakers": 32
+  },
+  {
+    "phase": "21DF",
+    "label": 1,
+    "length_bin": "2to3.0275",
+    "N": 32,
+    "B_minus_legacy_absolute_sensitivity": -0.24422166174489443,
+    "CI95": [
+      -0.44632017744774005,
+      -0.07376856426991342
+    ],
+    "speakers": 32
+  },
+  {
+    "phase": "21DF",
+    "label": 1,
+    "length_bin": "3.0275to4.0375",
+    "N": 32,
+    "B_minus_legacy_absolute_sensitivity": -0.07666638988156177,
+    "CI95": [
+      -0.1931514078824919,
+      -0.0007649284961809852
+    ],
+    "speakers": 32
+  },
+  {
+    "phase": "21DF",
+    "label": 1,
+    "length_bin": "atleast4.0375",
+    "N": 32,
+    "B_minus_legacy_absolute_sensitivity": 0.0,
+    "CI95": [
+      0.0,
+      0.0
+    ],
+    "speakers": 32
+  },
+  {
+    "phase": "21DF",
+    "label": 1,
+    "length_bin": "under2",
+    "N": 32,
+    "B_minus_legacy_absolute_sensitivity": -0.11776342077781496,
+    "CI95": [
+      -0.3353560048277661,
+      0.07364472470051019
+    ],
+    "speakers": 32
+  },
+  {
+    "phase": "21LA",
+    "label": 0,
+    "length_bin": "2to3.0275",
+    "N": 32,
+    "B_minus_legacy_absolute_sensitivity": -0.48731978300591244,
+    "CI95": [
+      -0.7482593372098293,
+      -0.2523259775301258
+    ],
+    "speakers": 32
+  },
+  {
+    "phase": "21LA",
+    "label": 0,
+    "length_bin": "3.0275to4.0375",
+    "N": 32,
+    "B_minus_legacy_absolute_sensitivity": -0.15056263358350824,
+    "CI95": [
+      -0.29778626198843616,
+      -0.04060823748211468
+    ],
+    "speakers": 32
+  },
+  {
+    "phase": "21LA",
+    "label": 0,
+    "length_bin": "atleast4.0375",
+    "N": 32,
+    "B_minus_legacy_absolute_sensitivity": 0.0,
+    "CI95": [
+      0.0,
+      0.0
+    ],
+    "speakers": 32
+  },
+  {
+    "phase": "21LA",
+    "label": 0,
+    "length_bin": "under2",
+    "N": 32,
+    "B_minus_legacy_absolute_sensitivity": -0.9085792669093404,
+    "CI95": [
+      -1.2097491377086096,
+      -0.6269424645651093
+    ],
+    "speakers": 32
+  },
+  {
+    "phase": "21LA",
+    "label": 1,
+    "length_bin": "2to3.0275",
+    "N": 32,
+    "B_minus_legacy_absolute_sensitivity": 0.07048935814808552,
+    "CI95": [
+      -0.058608918355123656,
+      0.1966794205819496
+    ],
+    "speakers": 32
+  },
+  {
+    "phase": "21LA",
+    "label": 1,
+    "length_bin": "3.0275to4.0375",
+    "N": 32,
+    "B_minus_legacy_absolute_sensitivity": 0.01724047012679162,
+    "CI95": [
+      0.0020141581937885415,
+      0.04444873664761353
+    ],
+    "speakers": 32
+  },
+  {
+    "phase": "21LA",
+    "label": 1,
+    "length_bin": "atleast4.0375",
+    "N": 32,
+    "B_minus_legacy_absolute_sensitivity": 0.0,
+    "CI95": [
+      0.0,
+      0.0
+    ],
+    "speakers": 32
+  },
+  {
+    "phase": "21LA",
+    "label": 1,
+    "length_bin": "under2",
+    "N": 32,
+    "B_minus_legacy_absolute_sensitivity": 0.030864714262772118,
+    "CI95": [
+      -0.13375777323188903,
+      0.17641725719834572
+    ],
+    "speakers": 32
+  }
+]

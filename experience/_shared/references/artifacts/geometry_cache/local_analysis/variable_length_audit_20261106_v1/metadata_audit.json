@@ -1,0 +1,247 @@
+{
+  "status": "pass",
+  "source_fingerprints": {
+    "T": "686e593443178bb89241e48ab9a148e1f248f2025140f379d564c19a75198b4b",
+    "V": "686e593443178bb89241e48ab9a148e1f248f2025140f379d564c19a75198b4b",
+    "19LA_eval": "4b8955da49f12316e9abf1055e9e2f1996873051d266eb8639324a271dfd3326",
+    "21LA_eval": "4110118cb92e35c171ef7b71194407b5a3400b5d3eedaeb2af9909c096997a29",
+    "DF_pilot": "1b0a7488e72f4ec277c88575c51ce983bc9879e9ed092249938eb3c84fc69bae",
+    "DF_remaining": "096bc3b970f331819fb5709862e59a9dff07b6a1a9a27c47fb5d6e99ce23ba4d"
+  },
+  "datasets": {
+    "T": {
+      "N": 25380,
+      "distinct_lengths": 20338,
+      "quantiles_seconds": {
+        "0.0": 0.6524375,
+        "0.01": 1.18040875,
+        "0.05": 1.5993031249999998,
+        "0.5": 3.20153125,
+        "0.9": 5.25481875,
+        "0.95": 6.08463125,
+        "0.99": 8.087075625,
+        "1.0": 13.1879375
+      },
+      "below_4_0375": 18609,
+      "class_stats": {
+        "0": {
+          "N": 22800,
+          "below_4_0375": 16605
+        },
+        "1": {
+          "N": 2580,
+          "below_4_0375": 2004
+        }
+      }
+    },
+    "V": {
+      "N": 14983,
+      "distinct_lengths": 13228,
+      "quantiles_seconds": {
+        "0.0": 0.710625,
+        "0.01": 1.1082474999999998,
+        "0.05": 1.5172187499999998,
+        "0.5": 3.3105625,
+        "0.9": 5.421862500000001,
+        "0.95": 6.2317374999999995,
+        "0.99": 8.338638750000007,
+        "1.0": 11.3943125
+      },
+      "below_4_0375": 10561,
+      "class_stats": {
+        "0": {
+          "N": 13632,
+          "below_4_0375": 9612
+        },
+        "1": {
+          "N": 1351,
+          "below_4_0375": 949
+        }
+      }
+    },
+    "19LA_eval": {
+      "N": 71237,
+      "distinct_lengths": 42659,
+      "quantiles_seconds": {
+        "0.0": 0.4699375,
+        "0.01": 0.9316,
+        "0.05": 1.27035,
+        "0.5": 2.81775,
+        "0.9": 5.064887500000001,
+        "0.95": 6.0027374999999985,
+        "0.99": 7.936897499999999,
+        "1.0": 13.0255625
+      },
+      "below_4_0375": 55904,
+      "class_stats": {
+        "0": {
+          "N": 63882,
+          "below_4_0375": 50203
+        },
+        "1": {
+          "N": 7355,
+          "below_4_0375": 5701
+        }
+      }
+    },
+    "21LA_eval": {
+      "N": 148176,
+      "distinct_lengths": 14325,
+      "quantiles_seconds": {
+        "0.0": 0.52,
+        "0.01": 0.9,
+        "0.05": 1.18,
+        "0.5": 2.44,
+        "0.9": 4.34,
+        "0.95": 5.15,
+        "0.99": 7.38,
+        "1.0": 13.40225
+      },
+      "below_4_0375": 127978,
+      "class_stats": {
+        "0": {
+          "N": 133360,
+          "below_4_0375": 116373
+        },
+        "1": {
+          "N": 14816,
+          "below_4_0375": 11605
+        }
+      }
+    },
+    "DF_pilot": {
+      "N": 20000,
+      "distinct_lengths": 3178,
+      "quantiles_seconds": {
+        "0.0": 0.5950625,
+        "0.01": 1.0478968750000002,
+        "0.05": 1.3948031250000001,
+        "0.5": 2.9194375,
+        "0.9": 4.672,
+        "0.95": 5.12,
+        "0.99": 6.8500625,
+        "1.0": 20.544
+      },
+      "below_4_0375": 15452,
+      "class_stats": {
+        "0": {
+          "N": 18000,
+          "below_4_0375": 14022
+        },
+        "1": {
+          "N": 2000,
+          "below_4_0375": 1430
+        }
+      }
+    },
+    "DF_remaining": {
+      "N": 513928,
+      "distinct_lengths": 9247,
+      "quantiles_seconds": {
+        "0.0": 0.4,
+        "0.01": 1.024,
+        "0.05": 1.376,
+        "0.5": 2.88,
+        "0.9": 4.64,
+        "0.95": 5.056,
+        "0.99": 6.776,
+        "1.0": 29.312
+      },
+      "below_4_0375": 397703,
+      "class_stats": {
+        "0": {
+          "N": 501059,
+          "below_4_0375": 388368
+        },
+        "1": {
+          "N": 12869,
+          "below_4_0375": 9335
+        }
+      }
+    },
+    "DF_full": {
+      "N": 533928,
+      "distinct_lengths": 9387,
+      "quantiles_seconds": {
+        "0.0": 0.4,
+        "0.01": 1.024125,
+        "0.05": 1.377875,
+        "0.5": 2.88,
+        "0.9": 4.6403125,
+        "0.95": 5.056,
+        "0.99": 6.776,
+        "1.0": 29.312
+      },
+      "below_4_0375": 413155,
+      "class_stats": {
+        "0": {
+          "N": 519059,
+          "below_4_0375": 402390
+        },
+        "1": {
+          "N": 14869,
+          "below_4_0375": 10765
+        }
+      }
+    }
+  },
+  "exact_length_groups": {
+    "singleton_utterances": 16386,
+    "utterances_in_exact_length_groups_ge80": 0,
+    "max_same_length_group": 6,
+    "groups_with_both_labels": 979
+  },
+  "packing_simulation": {
+    "random": {
+      "local_batches": 324,
+      "rows_seen": 25920,
+      "unique_rows": 25380,
+      "omitted_rows": 0,
+      "duplicated_occurrences": 540,
+      "useful_frame_fraction": 0.4037480640542357,
+      "useful_attention_pair_fraction": 0.1865116258636535,
+      "max_batch_max_to_mean_frame_ratio": 3.7808376362593226,
+      "allocated_frames": 10950720,
+      "attention_pairs": 4743754240,
+      "global_steps": 162
+    },
+    "sortish32": {
+      "local_batches": 324,
+      "rows_seen": 25920,
+      "unique_rows": 25380,
+      "omitted_rows": 0,
+      "duplicated_occurrences": 540,
+      "useful_frame_fraction": 0.9250267800354836,
+      "useful_attention_pair_fraction": 0.8403835194179515,
+      "max_batch_max_to_mean_frame_ratio": 1.7772714326402734,
+      "allocated_frames": 4779680,
+      "attention_pairs": 1052811360,
+      "global_steps": 162
+    },
+    "sorted": {
+      "local_batches": 324,
+      "rows_seen": 25920,
+      "unique_rows": 25380,
+      "omitted_rows": 0,
+      "duplicated_occurrences": 540,
+      "useful_frame_fraction": 0.9494845980723968,
+      "useful_attention_pair_fraction": 0.9197888901946079,
+      "max_batch_max_to_mean_frame_ratio": 1.6504042375243937,
+      "allocated_frames": 4656560,
+      "attention_pairs": 961922160,
+      "global_steps": 162
+    }
+  },
+  "cost_proxies": {
+    "full_length_unpadded_frame_ratio_to_fixed201": 0.8486372151587741,
+    "full_length_unpadded_attention_ratio_to_fixed201": 0.8448915707990359,
+    "sortish_padded_frame_ratio_to_fixed201": 0.9174190774522449,
+    "sortish_padded_attention_ratio_to_fixed201": 1.0053642786619694,
+    "train_max_frames": 659,
+    "fixed_frames": 201,
+    "max_train_attention_ratio": 10.749263632088315,
+    "warning": "Frame/attention-operation proxies only; no wall-clock or capacity claim"
+  },
+  "label": "1=bonafide, 0=spoof",
+  "coverage": "T/V are existing diagnostic cache splits, not newly audited complete official train/dev inventory"
+}

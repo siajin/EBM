@@ -1,0 +1,88 @@
+{
+  "pilot_complete": true,
+  "steps": 108,
+  "scope": "fresh backend vs its own initialization; locked stratified dev diagnostics, not official benchmark comparison",
+  "clean_EER_change_pp": -17.96875,
+  "paired_noisy_EER_change_pp": -17.1875,
+  "white_noise_distance_reduction_percent": 96.17444862776456,
+  "unit_variance_reduction_percent": 91.62933843967097,
+  "relative_noise_ratio_reduction_percent": 54.298100040673944,
+  "initial_effective_rank": 19.317516081873805,
+  "final_effective_rank": 36.108842370909976,
+  "final_unit_variance_positive": true,
+  "rows": [
+    {
+      "step": 0,
+      "clean_dev512_EER_percent": 48.046875,
+      "clean_dev512_AUC": 0.5193634033203125,
+      "paired_clean128_EER_percent": 46.875,
+      "paired_noisy128_EER_percent": 59.375,
+      "white_noise_cosine_distance": 0.053200382365002304,
+      "unit_covariance_trace": 0.03452747303943439,
+      "effective_rank": 19.317516081873805,
+      "mean_offdiagonal_cosine": 0.9654049585201752,
+      "relative_noise_to_between_utterance_distance": 1.5378036877344905
+    },
+    {
+      "step": 27,
+      "clean_dev512_EER_percent": 43.359375,
+      "clean_dev512_AUC": 0.5818023681640625,
+      "paired_clean128_EER_percent": 40.625,
+      "paired_noisy128_EER_percent": 53.125,
+      "white_noise_cosine_distance": 0.008667967130513446,
+      "unit_covariance_trace": 0.00910570069807253,
+      "effective_rank": 26.00556425594706,
+      "mean_offdiagonal_cosine": 0.9908764799267844,
+      "relative_noise_to_between_utterance_distance": 0.9500682917288097
+    },
+    {
+      "step": 54,
+      "clean_dev512_EER_percent": 39.0625,
+      "clean_dev512_AUC": 0.6597747802734375,
+      "paired_clean128_EER_percent": 34.375,
+      "paired_noisy128_EER_percent": 42.1875,
+      "white_noise_cosine_distance": 0.004103255406327282,
+      "unit_covariance_trace": 0.0051761397024590265,
+      "effective_rank": 30.426651825753574,
+      "mean_offdiagonal_cosine": 0.9948137308656378,
+      "relative_noise_to_between_utterance_distance": 0.7911767206874679
+    },
+    {
+      "step": 108,
+      "clean_dev512_EER_percent": 30.078125,
+      "clean_dev512_AUC": 0.7653350830078125,
+      "paired_clean128_EER_percent": 25.0,
+      "paired_noisy128_EER_percent": 42.1875,
+      "white_noise_cosine_distance": 0.0020352079575988464,
+      "unit_covariance_trace": 0.002890177913464905,
+      "effective_rank": 36.108842370909976,
+      "mean_offdiagonal_cosine": 0.9971041661610683,
+      "relative_noise_to_between_utterance_distance": 0.7028055029392436
+    }
+  ],
+  "limitations": [
+    "108-step pilot, not the previous full 50-epoch run",
+    "dev subset EER is stratified diagnostic, not full official dev or target EER",
+    "RawBoost retained, so any noise improvement is not attributable to cross-utterance BPL alone",
+    "reduced noise sensitivity must be assessed alongside collapse metrics and detection scores",
+    "Controlled noise is one 20dB additive-white-noise condition.",
+    "No all-constant representation at the measured stages; strong directional contraction is not ruled out by a nonzero effective rank.",
+    "No conclusion about full 50-epoch performance, unseen attacks, or superiority to B/C."
+  ],
+  "validation": {
+    "score_UID_label_order_matches_manifest": true,
+    "clean_EER_and_AUC_independently_recomputed": true,
+    "paired_clean_subset_EER_recomputed": true,
+    "all_training_losses_finite": true,
+    "all144_pairs_used": true,
+    "no_raw_audio_SSL_hidden_or_model_downloaded": true
+  },
+  "augmentation_erratum": {
+    "finding": "Pilot RawBoost kind 8 differs from original TrainSet: LnL+SSI vs LnL+ISD.",
+    "pilot_source_sha256": "a81902126fe17f9a78b02db7d8092dbe31d74c8bedf8345d0abf91d4ba133ba3",
+    "original_bpl_and_network_unchanged": true,
+    "interpretation": "Pilot observations remain valid for its actual recipe, but not a strict original-RawBoost controlled comparison.",
+    "repository_implementation": "positive_bpl.rawboost reproduces original TrainSet kinds 0..8, including LnL+ISD for kind 8."
+  },
+  "strict_original_rawboost_control": false
+}

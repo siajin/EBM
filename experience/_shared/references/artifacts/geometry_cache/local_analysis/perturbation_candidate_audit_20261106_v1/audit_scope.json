@@ -1,0 +1,24 @@
+{
+  "status": "retrospective_exploratory",
+  "datasets": [
+    "DF_pilot",
+    "21LA_pilot",
+    "selected_DF471"
+  ],
+  "no_ssh": true,
+  "no_model_training": true,
+  "no_new_audio_forward": true,
+  "canceled_DF4x3_not_run": true,
+  "estimands": [
+    "classwise signed delta",
+    "absolute delta (stability)",
+    "native-score/metadata overlap"
+  ],
+  "CI": "5000 source-stratified speaker bootstrap; pointwise95, no multiplicity correction; hypotheses selected after prior outcome inspection",
+  "known_limits": [
+    "unresolved original-family dependencies",
+    "matching is approximate and may have low support",
+    "single EBM checkpoint",
+    "no held-out response-based readout exists"
+  ]
+}

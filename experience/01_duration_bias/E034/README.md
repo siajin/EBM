@@ -1,0 +1,62 @@
+# E034. 140개 클래스·화자·공격 그룹의 0.5~4초 공동 길이 균형
+
+**실행 상태:** 정책 계산·검증 완료
+
+이 문서의 상태는 2026-11-12 출판 검토 기준이다. 기존 문서·state의 시점별 상태와 충돌하면 실제 완료표식과 본문 최신 보완을 우선한다.
+
+## 가설
+
+화자×공격 그룹에도 가능한 공통 목표를 쓰면 클래스 평균만 맞추는 한계를 줄일 수 있다.
+
+## 그렇게 설계한 이유
+
+클래스 전체 길이만 맞추는 대신 화자·공격별로도 같은 목표 길이를 만들 수 있는지 확인한다.
+
+대조와 통제의 근거: 이 Train의 출처는 ASVspoof 하나다. 화자 그룹을 녹음 방·마이크·환경 ID로 해석하지 않는다. 각 원음이 모든 길이를 낼 수 있다는 요구는 아니다.
+
+## 모델·데이터·표본
+
+Train의 20 명 화자, 정상/6 공격 조합을 포함한 140개 그룹. 전체 원음 25,380개.
+
+## 실험 내용과 상세 절차
+
+1. 그룹별 실제 원음 길이와 각 목표 이상을 공급할 수 있는 비율을 계산한다.
+2. 6초 목표는 11개 정상 화자에서 해당 길이 원음이 없어 동시 균형이 불가능함을 확인한다.
+3. 목표를 0.5,1,1.5,2,2.5,3,3.5,4초, 확률 10,20,30,20,8,5,6,1%로 고정한다.
+4. 정상/위조가 같은 화자 비율을 갖도록 작은 원음 선택 가중치를 주고, 그룹별 가능한 길이의 조건부 확률 표를 계산한다. 화자 내부 출처/공격 비율과 모든 원음의 양의 선택 확률을 보존한다.
+
+## 측정과 검증
+
+그룹별 원음 공급 가능성·선택 가중치·목표 길이 오차. 정책 JSON의 전체 140개 조건부표를 보존한다.
+
+## 결과
+
+모든 그룹에서 가능한 최장 원음의 최소는 4.1755625초였다.0.5~4초 최종 목표로 공동 균형 정책을 검증했고 이후 실제 조각 학습에 연결됐다.
+
+## 해석·실패한 부분·한계
+
+개별 배치의 정수 표본이 매번 목표 확률과 정확히 같다는 뜻은 아니다. 기대 분포의 통제이며 발화 내용·목소리·음향 환경 전체가 같아진 것은 아니다.
+
+## 배운 점
+
+6초는 불가능한 그룹이 있었고4초 목표는 가능했다. 환경 정보가 없는 화자 ID를 녹음 환경으로 해석하지 않는다.
+
+## 실험 코드
+
+- [EBM/tools/verify_joint_duration_group_balance.py](code/EBM/tools/verify_joint_duration_group_balance.py)
+- [EBM/tools/design_duration_sampling_policy.py](code/EBM/tools/design_duration_sampling_policy.py)
+
+코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+
+## 설정·결과·검산 근거
+
+- [artifacts/joint_duration_group_balance_20261110/analysis.json](../../_shared/references/artifacts/joint_duration_group_balance_20261110/analysis.json)
+- [artifacts/joint_duration_group_balance_20261110/policy.json](../../_shared/references/artifacts/joint_duration_group_balance_20261110/policy.json)
+- [artifacts/joint_duration_group_balance_20261110/speaker_overlap_by_length.csv](../../_shared/references/artifacts/joint_duration_group_balance_20261110/speaker_overlap_by_length.csv)
+- [EBM/POSITIVE_BPL.md](../../../POSITIVE_BPL.md)
+
+## 연결
+
+다른 관련 가설: [정상 다양성·도메인 지지와 정상쌍 학습](../../03_bonafide_diversity/README.md)
+
+[가설 목록으로](../README.md) · [전체 실험 목록](../../README.md)

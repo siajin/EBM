@@ -1,0 +1,139 @@
+{
+  "remote_root": "/home/mentee/results/analysis/EBM80_21DF_centroid",
+  "file_inventory": [
+    {
+      "name": "centroid_geometry.png",
+      "bytes": 710165,
+      "directory": false
+    },
+    {
+      "name": "shard_1.npz",
+      "bytes": 568919,
+      "directory": false
+    },
+    {
+      "name": "shard_0.npz",
+      "bytes": 570045,
+      "directory": false
+    },
+    {
+      "name": "summary.json",
+      "bytes": 2328,
+      "directory": false
+    },
+    {
+      "name": "sample_manifest.json",
+      "bytes": 146131,
+      "directory": false
+    },
+    {
+      "name": "centroid_geometry.pdf",
+      "bytes": 121571,
+      "directory": false
+    },
+    {
+      "name": "embeddings.npz",
+      "bytes": 1166109,
+      "directory": false
+    },
+    {
+      "name": "provenance.json",
+      "bytes": 1079,
+      "directory": false
+    }
+  ],
+  "aggregate_json": {
+    "summary.json": {
+      "provenance": {
+        "per_class": 1000,
+        "batch_size": 4,
+        "seed": 1,
+        "cpu": false,
+        "out": "/results/analysis/EBM80_21DF_centroid",
+        "workers": 2,
+        "plm_path": "/home/mentee/.cache/huggingface/hub/models--facebook--wav2vec2-xls-r-300m/snapshots/1a640f32ac3e39899438a2931f9924c02f080a54",
+        "checkpoint": "/home/mentee/results/CM/LA/EBM/model/BestCLS_80_21DF.pt",
+        "checkpoint_sha256": "30043199664bc84da780654e01fd430235f647b894e7832a52f777c7fee5939a",
+        "protocol_sha256": "70e0e7d5964562cb0166e79143f73beaeaf77ee18e799fa4156355a57006d800",
+        "population": {
+          "0": 519059,
+          "1": 14869
+        },
+        "torch_version": "2.6.0+cu124",
+        "sampling": "uniform random within label, without replacement",
+        "crop_samples": 64600,
+        "sample_rate": 16000,
+        "embedding": "after layer_norm, L2 normalized",
+        "source_sha256": {
+          "model/b_linear.py": "c2cbcf898f1905c9c6ee8b20ef4514c4af7cb343abbf35e2dbd1fd526ad3459f",
+          "model/loss.py": "164be4161b57a7899ef7b289e005ab80d12da373922d57e9e021844ea828b1ac",
+          "train.py": "b7b98a182a4946c479f477b7110e1c4a49be53ee6b6e89ef1b4bc4785374873f"
+        }
+      },
+      "classes": {
+        "Bonafide": {
+          "n": 1000,
+          "cosine_mean": 0.8780089020729065,
+          "cosine_std": 0.3368523120880127,
+          "cosine_q05_q50_q95": [
+            0.10563701912760735,
+            0.9894128143787384,
+            0.995028167963028
+          ],
+          "angle_median_degrees": 8.344719886779785
+        },
+        "Spoof": {
+          "n": 1000,
+          "cosine_mean": -0.9406262040138245,
+          "cosine_std": 0.16841350495815277,
+          "cosine_q05_q50_q95": [
+            -0.9857344925403595,
+            -0.9772717356681824,
+            -0.8219017565250397
+          ],
+          "angle_median_degrees": 167.760986328125
+        }
+      },
+      "pca_variance_ratio": [
+        0.9409185647964478,
+        0.030066026374697685,
+        0.005293115507811308
+      ],
+      "limitations": [
+        "Balanced sample does not reflect class prevalence.",
+        "No full-evaluation EER is inferred from this sample.",
+        "PCA can distort distances; cosine is measured in original 160D space.",
+        "Backbone was frozen in the saved training configuration.",
+        "Backbone uses a currently cached revision; original run did not pin its revision.",
+        "Original pooling injects small random noise even in eval mode; extraction seed is fixed."
+      ]
+    },
+    "provenance.json": {
+      "per_class": 1000,
+      "batch_size": 4,
+      "seed": 1,
+      "cpu": false,
+      "out": "/results/analysis/EBM80_21DF_centroid",
+      "workers": 2,
+      "plm_path": "/home/mentee/.cache/huggingface/hub/models--facebook--wav2vec2-xls-r-300m/snapshots/1a640f32ac3e39899438a2931f9924c02f080a54",
+      "checkpoint": "/home/mentee/results/CM/LA/EBM/model/BestCLS_80_21DF.pt",
+      "checkpoint_sha256": "30043199664bc84da780654e01fd430235f647b894e7832a52f777c7fee5939a",
+      "protocol_sha256": "70e0e7d5964562cb0166e79143f73beaeaf77ee18e799fa4156355a57006d800",
+      "population": {
+        "0": 519059,
+        "1": 14869
+      },
+      "torch_version": "2.6.0+cu124",
+      "sampling": "uniform random within label, without replacement",
+      "crop_samples": 64600,
+      "sample_rate": 16000,
+      "embedding": "after layer_norm, L2 normalized",
+      "source_sha256": {
+        "model/b_linear.py": "c2cbcf898f1905c9c6ee8b20ef4514c4af7cb343abbf35e2dbd1fd526ad3459f",
+        "model/loss.py": "164be4161b57a7899ef7b289e005ab80d12da373922d57e9e021844ea828b1ac",
+        "train.py": "b7b98a182a4946c479f477b7110e1c4a49be53ee6b6e89ef1b4bc4785374873f"
+      }
+    }
+  },
+  "method_documents": {}
+}

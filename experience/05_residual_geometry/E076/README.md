@@ -1,0 +1,59 @@
+# E076. 저점유 방향 제거 152~158개를 한 축씩 늘리는 정밀 비교
+
+**실행 상태:** 기존캐시 점수개입·독립 검수 완료
+
+이 문서의 상태는 2026-11-12 출판 검토 기준이다. 기존 문서·state의 시점별 상태와 충돌하면 실제 완료표식과 본문 최신 보완을 우선한다.
+
+## 가설
+
+저점유152~158축 사이의 변화는 정밀하게 보면 비단조적일 수 있다.
+
+## 그렇게 설계한 이유
+
+제거 축 수가 커질 때 성능이 갑자기 악화하는 구간을 정확히 확인한다.
+
+대조와 통제의 근거: 처음부터 현재 기저에서의 후속 탐색이다. 평가 결과로 축 순서를 다시 정렬하지 않는다.
+
+## 모델·데이터·표본
+
+[E075](../E075/README.md)에서 이미 정한 기저·순서를 재사용한다. DF 전체 533,928개 와 개발 선택 부분. 새기저 fit 없음.
+
+## 실험 내용과 상세 절차
+
+1. 제거 개수 152/153/154/155/156/157/158과 기준 0을 같은 점수 정의로 계산한다.
+2. 원래 0/152/158 결과가 정확히 재현되는지 검사한다.
+3. 각 추가 제거 축의 학습 자료 점유·DF 정상/위조 제거 에너지와 인접 EER 차이를 계산한다. 원래 임계값 고정과 개발 재보정 오류도 남긴다.
+
+## 측정과 검증
+
+독립 전체 DF 동점 ROC·인접차이·UID/라벨·실제 raw 벡터 표본의 명시적 투영 검산.
+
+## 결과
+
+DFEER은 152~158 순서 3.149353/3.185765/3.181115/3.217361/3.349250/4.452216/5.066091%. 가장 큰 인접 악화는 156 →157의 +1.102966%p 다.
+
+## 해석·실패한 부분·한계
+
+한 축이 학습 원인이라고 증명한 것이 아니다. 고정 특징의 투영 점수 변화이며 방향을 삭제해 재학습한 일반화 성능은 모른다.
+
+## 배운 점
+
+사후최적k를 배포설정으로 고르면 선택편향이 생긴다. 끝점에서 부호점수만 남는 퇴화도 검산해야 한다.
+
+## 실험 코드
+
+- [EBM/tools/evaluate_low_occupancy_152_158.py](code/EBM/tools/evaluate_low_occupancy_152_158.py)
+
+코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+
+## 설정·결과·검산 근거
+
+- [artifacts/geometry_cache/local_analysis/low_occupancy_ablation_152_158_20261111_v1/plan.json](../../_shared/references/artifacts/geometry_cache/local_analysis/low_occupancy_ablation_152_158_20261111_v1/plan.json)
+- [artifacts/geometry_cache/local_analysis/low_occupancy_ablation_152_158_20261111_v1/DF_152_to_158.csv](../../_shared/references/artifacts/geometry_cache/local_analysis/low_occupancy_ablation_152_158_20261111_v1/DF_152_to_158.csv)
+- [artifacts/geometry_cache/local_analysis/low_occupancy_ablation_152_158_20261111_v1/validation.json](../../_shared/references/artifacts/geometry_cache/local_analysis/low_occupancy_ablation_152_158_20261111_v1/validation.json)
+
+## 연결
+
+다른 관련 가설: [길이·유효 발화량과 앞뒤 저에너지 편향](../../01_duration_bias/README.md) · [정상 다양성·도메인 지지와 정상쌍 학습](../../03_bonafide_diversity/README.md) · [코사인 외 norm과 정규화 전 통계](../../04_norm_information/README.md)
+
+[가설 목록으로](../README.md) · [전체 실험 목록](../../README.md)

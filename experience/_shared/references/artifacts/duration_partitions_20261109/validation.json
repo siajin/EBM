@@ -1,0 +1,135 @@
+{
+  "sources": [
+    {
+      "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_fast_p0_01\\686e593443178bb8\\extract\\scores.parquet",
+      "sha256": "66a58119b774c089829deb36b4a135e9b5e91d9d18e6e1e09809f20100179598"
+    },
+    {
+      "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\Q\\c288fb7a7ab48dd3\\extract\\scores.parquet",
+      "sha256": "3c20ea01e4c91fcf046f81199b2b1d8a4337296b45c1e1eb5099763d3935971e"
+    },
+    {
+      "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\19LA_eval\\4b8955da49f12316\\extract\\scores.parquet",
+      "sha256": "badece9d259010576e48be7fdc3ef18fe187cfda532efabcca5f9aaaa645f317"
+    },
+    {
+      "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_21la_full_03\\4110118cb92e35c1\\extract\\scores.parquet",
+      "sha256": "96a86f82f705b73f5198a2bf1686491d4c2615052cf0cdc8d94cbe9e27f04cab"
+    },
+    {
+      "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_df_fast_01\\1b0a7488e72f4ec2\\extract\\scores.parquet",
+      "sha256": "f3fa30b26c232968b4203f8bbbb8fcbd3d0b45364fa14564a6e8198d7ca77a50"
+    },
+    {
+      "path": "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\geometry_cache\\runs\\20261105_frozen_all_01\\DF_remaining\\096bc3b970f33181\\extract\\scores.parquet",
+      "sha256": "71a760eb99941082b5fbcdb5a80f27839692cb68b5df00cab76ee1788a23291a"
+    }
+  ],
+  "datasets": {
+    "19LA_train": {
+      "ratio_search": [
+        {
+          "ratio": 7.640915681288259,
+          "overlap": 0.9982182476965653,
+          "scale": 0.26029749516984846
+        },
+        {
+          "ratio": 7.997430122764229,
+          "overlap": 1.0,
+          "scale": 0.2206608339623571
+        },
+        {
+          "ratio": 8.353944564240198,
+          "overlap": 0.9999999999999998,
+          "scale": 0.2070421609265175
+        },
+        {
+          "ratio": 8.710459005716169,
+          "overlap": 0.9999999999999996,
+          "scale": 0.20918120330786072
+        },
+        {
+          "ratio": 8.944817817885605,
+          "overlap": 0.9999999999999994,
+          "scale": 0.20908990679101522
+        },
+        {
+          "ratio": 9.066973447192138,
+          "overlap": 0.9999999999999996,
+          "scale": 0.2077471453677971
+        },
+        {
+          "ratio": 9.423487888668108,
+          "overlap": 1.0,
+          "scale": 0.21396294299451626
+        },
+        {
+          "ratio": 9.780002330144079,
+          "overlap": 1.0000000000000002,
+          "scale": 0.22966049580935785
+        },
+        {
+          "ratio": 10.136516771620048,
+          "overlap": 1.0000000000000002,
+          "scale": 0.2574502752125209
+        },
+        {
+          "ratio": 10.493031213096017,
+          "overlap": 0.9976379047573672,
+          "scale": 0.2984262569447095
+        },
+        {
+          "ratio": 9.780002330144079,
+          "overlap": 1.0000000000000002,
+          "scale": 0.22966049580935785
+        },
+        {
+          "ratio": 9.958259550882063,
+          "overlap": 1.0000000000000004,
+          "scale": 0.2411709452466848
+        },
+        {
+          "ratio": 10.136516771620048,
+          "overlap": 1.0000000000000002,
+          "scale": 0.2574502752125209
+        },
+        {
+          "ratio": 10.314773992358033,
+          "overlap": 0.9999784799601701,
+          "scale": 0.30666444538115245
+        },
+        {
+          "ratio": 10.493031213096017,
+          "overlap": 0.9976379047573672,
+          "scale": 0.2984262569447095
+        }
+      ],
+      "fractional_solution_equality_residual": 5.329070518200751e-15,
+      "solver": {
+        "status": 1,
+        "message": "Time limit reached. (HiGHS Status 13: Time limit reached)",
+        "initial_overlap": 0.9948139751774473,
+        "fixed_bona_pieces": 2587,
+        "fixed_spoof_pieces": 25766,
+        "mip_gap": 0.003914493318974558,
+        "mip_node_count": 0.0,
+        "mip_dual_bound": -0.9997977545883492,
+        "final_overlap": 0.9958993133797529,
+        "fixed_budget_upper_overlap": 0.9997977545883492
+      },
+      "all_originals_preserved_once": true,
+      "all_waste_strictly_less_than_0_5_seconds": true,
+      "all_generated_pieces_at_least_0_5_seconds": true,
+      "short_originals_preserved_unchanged": true,
+      "independent_histogram_reconstruction": true
+    }
+  },
+  "minimum_segment_seconds": 0.5,
+  "grid_seconds": 0.05,
+  "tail_loss_seconds_strict_upper": 0.5,
+  "model": "One equal-length partition per original; no overlap, speed, padding, cross-file join or source reuse.",
+  "short_original_exception": "Originals below .5s remain unchanged.",
+  "normalization": "Piece counts within each class. Source recording weights are no longer preserved because all disjoint pieces are used.",
+  "scope": "Each dataset separately; equal partitions on a .05s grid, conservative original-length groups; finite ratio search. Integer plans are feasible lower bounds on the unrestricted mixed-length partition optimum.",
+  "no_audio_processed": true
+}

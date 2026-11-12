@@ -1,0 +1,68 @@
+{
+  "status": "pass",
+  "source_and_protocol_hash_match": true,
+  "Q_opened": false,
+  "OOF_row_label_alignment": true,
+  "one_fold_per_speaker": true,
+  "metrics_independently_checked": [
+    {
+      "case": "scalar",
+      "ll_error": 4.163336342344337e-17,
+      "auc_error": 1.1102230246251565e-16,
+      "eer_error": 0.0
+    },
+    {
+      "case": "direction",
+      "ll_error": 6.938893903907228e-18,
+      "auc_error": 1.1102230246251565e-16,
+      "eer_error": 1.1102230246251565e-15
+    },
+    {
+      "case": "noise",
+      "ll_error": 5.551115123125783e-17,
+      "auc_error": 1.1102230246251565e-16,
+      "eer_error": 3.552713678800501e-15
+    },
+    {
+      "case": "metadata",
+      "ll_error": 6.938893903907228e-18,
+      "auc_error": 0.0,
+      "eer_error": 4.440892098500626e-16
+    },
+    {
+      "case": "metadata_direction",
+      "ll_error": 3.469446951953614e-18,
+      "auc_error": 2.220446049250313e-16,
+      "eer_error": 5.551115123125783e-16
+    },
+    {
+      "case": "preLN_h",
+      "ll_error": 1.3877787807814457e-17,
+      "auc_error": 0.0,
+      "eer_error": 0.0
+    },
+    {
+      "case": "postLN_z",
+      "ll_error": 0.0,
+      "auc_error": 1.1102230246251565e-16,
+      "eer_error": 1.3322676295501878e-15
+    },
+    {
+      "case": "preLN_stats",
+      "ll_error": 4.163336342344337e-17,
+      "auc_error": 0.0,
+      "eer_error": 0.0
+    }
+  ],
+  "masked_metrics_checked": 255,
+  "max_independent_mask_score_error": 2.220446049250313e-15,
+  "matching_constraints_checked": [
+    "tight",
+    "primary",
+    "wide",
+    "same_speaker"
+  ],
+  "posthoc_scope": "all original masks at existing native V threshold; no new selection or refit",
+  "threshold_equality": "native baseline uses archived cosine exactly, avoiding threshold equality changes from floating-point summation",
+  "CI_levels": "95% pointwise; 99% pointwise supports Bonferroni family95% for the five listed primary comparisons only"
+}

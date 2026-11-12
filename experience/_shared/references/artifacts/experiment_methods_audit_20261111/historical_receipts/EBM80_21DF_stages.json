@@ -1,0 +1,225 @@
+{
+  "remote_root": "/home/mentee/results/analysis/EBM80_21DF_stages",
+  "file_inventory": [
+    {
+      "name": "loss_inputs.png",
+      "bytes": 200694,
+      "directory": false
+    },
+    {
+      "name": "stage_geometry.pdf",
+      "bytes": 191253,
+      "directory": false
+    },
+    {
+      "name": "shard_1.npz",
+      "bytes": 6939984,
+      "directory": false
+    },
+    {
+      "name": "shard_0.npz",
+      "bytes": 6943447,
+      "directory": false
+    },
+    {
+      "name": "summary.json",
+      "bytes": 4518,
+      "directory": false
+    },
+    {
+      "name": "stage_geometry.png",
+      "bytes": 778209,
+      "directory": false
+    },
+    {
+      "name": "stage_embeddings.npz",
+      "bytes": 13878510,
+      "directory": false
+    },
+    {
+      "name": "sample_manifest.json",
+      "bytes": 146131,
+      "directory": false
+    },
+    {
+      "name": "provenance.json",
+      "bytes": 1146,
+      "directory": false
+    },
+    {
+      "name": "loss_inputs.pdf",
+      "bytes": 51947,
+      "directory": false
+    }
+  ],
+  "aggregate_json": {
+    "summary.json": {
+      "stages": {
+        "ssl": {
+          "Bonafide_within_cosine_mean": 0.9792924997006102,
+          "Spoof_within_cosine_mean": 0.9802712602835184,
+          "between_cosine_mean": 0.9788119792938232,
+          "pca2_variance": 0.6303126215934753,
+          "dimension": 1024
+        },
+        "bridge": {
+          "Bonafide_within_cosine_mean": 0.9217359528116732,
+          "Spoof_within_cosine_mean": 0.8721341222885179,
+          "between_cosine_mean": 0.2900058329105377,
+          "pca2_variance": 0.9159018397331238,
+          "dimension": 128
+        },
+        "pool": {
+          "Bonafide_within_cosine_mean": 0.9177183599492075,
+          "Spoof_within_cosine_mean": 0.880216687366609,
+          "between_cosine_mean": 0.2588701546192169,
+          "pca2_variance": 0.9202176928520203,
+          "dimension": 256
+        },
+        "linear": {
+          "Bonafide_within_cosine_mean": 0.8054502417119596,
+          "Spoof_within_cosine_mean": 0.9354258037427978,
+          "between_cosine_mean": -0.7960330247879028,
+          "pca2_variance": 0.9707250595092773,
+          "dimension": 160
+        },
+        "embeddings": {
+          "Bonafide_within_cosine_mean": 0.8065335417460702,
+          "Spoof_within_cosine_mean": 0.9353533930482034,
+          "between_cosine_mean": -0.7970210313796997,
+          "pca2_variance": 0.9709845781326294,
+          "dimension": 160
+        }
+      },
+      "provenance": {
+        "per_class": 1000,
+        "batch_size": 4,
+        "seed": 1,
+        "cpu": false,
+        "out": "/results/analysis/EBM80_21DF_stages",
+        "workers": 2,
+        "plm_path": "/home/mentee/.cache/huggingface/hub/models--facebook--wav2vec2-xls-r-300m/snapshots/1a640f32ac3e39899438a2931f9924c02f080a54",
+        "checkpoint": "/home/mentee/results/CM/LA/EBM/model/BestCLS_80_21DF.pt",
+        "checkpoint_sha256": "30043199664bc84da780654e01fd430235f647b894e7832a52f777c7fee5939a",
+        "protocol_sha256": "70e0e7d5964562cb0166e79143f73beaeaf77ee18e799fa4156355a57006d800",
+        "population": {
+          "0": 519059,
+          "1": 14869
+        },
+        "torch_version": "2.6.0+cu124",
+        "sampling": "uniform random within label, without replacement",
+        "crop_samples": 64600,
+        "sample_rate": 16000,
+        "embedding": "stagewise L2 normalized; short crop seeded per trial, no augmentation",
+        "short_crop_samples": 48440,
+        "source_sha256": {
+          "model/b_linear.py": "c2cbcf898f1905c9c6ee8b20ef4514c4af7cb343abbf35e2dbd1fd526ad3459f",
+          "model/loss.py": "164be4161b57a7899ef7b289e005ab80d12da373922d57e9e021844ea828b1ac",
+          "train.py": "b7b98a182a4946c479f477b7110e1c4a49be53ee6b6e89ef1b4bc4785374873f"
+        }
+      },
+      "paired_long_short": {
+        "Bonafide": {
+          "mean": 0.9609200954437256,
+          "q05_q50_q95": [
+            0.7798060059547425,
+            0.9979643225669861,
+            0.9995782464742661
+          ]
+        },
+        "Spoof": {
+          "mean": 0.9642589688301086,
+          "q05_q50_q95": [
+            0.8307780236005783,
+            0.9979079067707062,
+            0.9996023416519165
+          ]
+        }
+      },
+      "bpl_bonafide_cross_utterance": {
+        "mean": 0.8514312505722046,
+        "q05_q50_q95": [
+          -0.09239920005202287,
+          0.9828720986843109,
+          0.9971855312585831
+        ]
+      },
+      "eocs": {
+        "Bonafide": {
+          "long": {
+            "mean": 0.8780089616775513,
+            "q05_q50_q95": [
+              0.10563319139182568,
+              0.9894128143787384,
+              0.995028167963028
+            ]
+          },
+          "short": {
+            "mean": 0.9356837868690491,
+            "q05_q50_q95": [
+              0.7430580288171769,
+              0.990530401468277,
+              0.9953139215707779
+            ]
+          },
+          "outside_training_margin_fraction": 0.163
+        },
+        "Spoof": {
+          "long": {
+            "mean": -0.9406262040138245,
+            "q05_q50_q95": [
+              -0.9857344895601272,
+              -0.97727170586586,
+              -0.8219024240970613
+            ]
+          },
+          "short": {
+            "mean": -0.878372073173523,
+            "q05_q50_q95": [
+              -0.9837519645690918,
+              -0.9699435830116272,
+              -0.4013473734259607
+            ]
+          },
+          "outside_training_margin_fraction": 0.007
+        }
+      },
+      "limitations": [
+        "All stages belong to the jointly trained model; this is not a loss ablation.",
+        "Temporal means summarize SSL and bridge sequences, not their complete representations.",
+        "L2 normalization is applied for stage comparison; independent PCA axes cannot be compared directly.",
+        "Short crop is seeded per utterance; augmentation disabled. This is not training BPL loss.",
+        "BPL cross-utterance distribution uses all sampled bonafide pairs, not original training minibatches.",
+        "Bonafide/spoof sample balanced; no population EER inferred."
+      ]
+    },
+    "provenance.json": {
+      "per_class": 1000,
+      "batch_size": 4,
+      "seed": 1,
+      "cpu": false,
+      "out": "/results/analysis/EBM80_21DF_stages",
+      "workers": 2,
+      "plm_path": "/home/mentee/.cache/huggingface/hub/models--facebook--wav2vec2-xls-r-300m/snapshots/1a640f32ac3e39899438a2931f9924c02f080a54",
+      "checkpoint": "/home/mentee/results/CM/LA/EBM/model/BestCLS_80_21DF.pt",
+      "checkpoint_sha256": "30043199664bc84da780654e01fd430235f647b894e7832a52f777c7fee5939a",
+      "protocol_sha256": "70e0e7d5964562cb0166e79143f73beaeaf77ee18e799fa4156355a57006d800",
+      "population": {
+        "0": 519059,
+        "1": 14869
+      },
+      "torch_version": "2.6.0+cu124",
+      "sampling": "uniform random within label, without replacement",
+      "crop_samples": 64600,
+      "sample_rate": 16000,
+      "embedding": "stagewise L2 normalized; short crop seeded per trial, no augmentation",
+      "short_crop_samples": 48440,
+      "source_sha256": {
+        "model/b_linear.py": "c2cbcf898f1905c9c6ee8b20ef4514c4af7cb343abbf35e2dbd1fd526ad3459f",
+        "model/loss.py": "164be4161b57a7899ef7b289e005ab80d12da373922d57e9e021844ea828b1ac",
+        "train.py": "b7b98a182a4946c479f477b7110e1c4a49be53ee6b6e89ef1b4bc4785374873f"
+      }
+    }
+  },
+  "method_documents": {}
+}

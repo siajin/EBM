@@ -1,0 +1,49 @@
+{
+  "status": "superseded_by_B_C_all_checkpoint_evaluation_running",
+  "root": "/home/mentee/analysis/ebm_B_checkpoints_20261108",
+  "epochs": [
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50
+  ],
+  "evaluation_complete": false,
+  "analysis_complete": false,
+  "automation_id": "ebm-c-30-b",
+  "launcher": "EBM/tools/launch_B_checkpoints.py",
+  "prepared_source_sha256": "9482fd15f9cdee9a22f710f3e6132844814b5d73c11f642ea59d5baf112030cd",
+  "last_launch_check": {
+    "status": "waiting_for_C",
+    "root": "/home/mentee/analysis/ebm_B_checkpoints_20261108"
+  },
+  "summary_validation": "passed synthetic perfect/reversed scores for eight columns and both rank shards",
+  "GPU_smoke_status": "pending C completion",
+  "automation_updated": true,
+  "report": "docs/experiments/ebm_B_checkpoint_evaluation_20261108.md",
+  "execution_order": "C training completes, then B eight-checkpoint evaluation/report, then original B/C fixed50 paired evaluation/report",
+  "last_monitor_check_KST": "2026-11-09T11:15:15",
+  "C_training_status": {
+    "epoch": 50,
+    "batch": 108,
+    "run_exit": 0
+  },
+  "last_remote_markers": {
+    "launch.claim": false,
+    "run.exit": false,
+    "smoke.exit": false,
+    "complete.json": false
+  },
+  "last_remote_markers_checked_KST": "2026-11-09T11:15:15",
+  "automation_status": "PAUSED",
+  "automation_paused_by_user": true,
+  "automation_paused_at_KST": "2026-11-08T16:41:20+09:00",
+  "all_checkpoint_evaluation_state": "artifacts/ebm_B_C_checkpoints_20261109/state.json",
+  "all_checkpoint_evaluation_root": "/home/mentee/analysis/ebm_B_C_checkpoints_20261109",
+  "evaluation_started": true,
+  "evaluation_last_check_KST": "2026-11-09T11:23:37",
+  "do_not_launch_old_B8": true
+}

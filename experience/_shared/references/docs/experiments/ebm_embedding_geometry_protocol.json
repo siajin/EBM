@@ -1,0 +1,676 @@
+{
+  "schema_version": "1.0",
+  "date_kst": "2026-11-05",
+  "status": "specification_only",
+  "executable_runner": false,
+  "specification": "ebm_embedding_geometry_spec_20261105.md",
+  "scope": {
+    "raw_data_location": "mentee_server_only",
+    "start_training": false,
+    "upload_source_data": false
+  },
+  "baseline": {
+    "historical_reference": "EBM_e50_bs160_lr1e5/model/BestCLS_50_21DF.pt",
+    "checkpoint_rule": "final_epoch_50",
+    "historical_tests_previously_observed": true,
+    "dimension": 160,
+    "positive_label": 1,
+    "positive_class": "bonafide",
+    "score_direction": "higher_is_bonafide"
+  },
+  "splits": {
+    "fit": "T",
+    "tune": "V",
+    "locked_source": "Q",
+    "benchmarks": [
+      "R19",
+      "R21LA",
+      "R21DF"
+    ],
+    "primary_benchmark": "R21DF",
+    "fresh_external": "U_if_available_and_prelocked",
+    "group_split_seed": 11,
+    "dev_ratio": [
+      0.5,
+      0.5
+    ],
+    "forbidden_fit_splits": [
+      "Q",
+      "R19",
+      "R21LA",
+      "R21DF",
+      "U"
+    ]
+  },
+  "extraction": {
+    "feature": "post_LayerNorm_pre_L2_long_embedding",
+    "auxiliary": "pre_LayerNorm",
+    "microbatch_per_rank": 1,
+    "seed": 20261105,
+    "sensitivity_seeds": [
+      20261105,
+      20261106,
+      20261107
+    ],
+    "sensitivity_max_utterances": 512,
+    "raw_dtype": "float32",
+    "derived_dtype": "float64",
+    "norm_min": 1e-12,
+    "tangent_valid_min": 0.0001,
+    "tangent_sensitivity": [
+      1e-05,
+      0.001
+    ],
+    "native_score_atol": 1e-05,
+    "identity_atol": 1e-10,
+    "deduplication_key": [
+      "dataset",
+      "utterance_id",
+      "condition_id",
+      "crop_id"
+    ],
+    "rng_key": [
+      "dataset",
+      "utterance_id",
+      "condition_id",
+      "crop_id",
+      "extraction_seed"
+    ]
+  },
+  "training": {
+    "epochs": 50,
+    "batch_size_total": 160,
+    "gpu_count": 2,
+    "cuda_visible_devices": "0,1",
+    "frontend_frozen": true,
+    "bpl": "local_all_pairs_mean",
+    "lr": 1e-05,
+    "lr_min": 1e-05,
+    "weight_decay": 0.0001,
+    "long_frames": 404,
+    "short_frames": 303,
+    "test_frames": 404,
+    "num_seg": 1,
+    "alpha": 20,
+    "alpha_cl": 30,
+    "r_real": 0.9,
+    "r_fake": 0.2,
+    "screening_seeds": [
+      1,
+      2,
+      3
+    ],
+    "confirmation_seeds": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "optimizer": "inherit_and_hash_archived_baseline",
+    "update_order": [
+      "classifier_gate_metric_with_centroid_frozen",
+      "bonafide_centroid_only"
+    ]
+  },
+  "probe": {
+    "seeds": [
+      101,
+      102,
+      103
+    ],
+    "logistic_C": [
+      0.01,
+      0.1,
+      1,
+      10
+    ],
+    "mlp_hidden": [
+      16,
+      32
+    ],
+    "mlp_lr": [
+      0.0001,
+      0.001
+    ],
+    "mlp_weight_decay": [
+      0.0001,
+      0.01
+    ],
+    "batch_size": 256,
+    "max_epochs": 100,
+    "patience": 10,
+    "selection": "V_balanced_logloss",
+    "scalar_spline_knots": 5,
+    "posthoc_metric": {
+      "lr": 0.001,
+      "batch_size": 256,
+      "max_epochs": 100,
+      "patience": 10,
+      "selection": "V_EER"
+    }
+  },
+  "statistics": {
+    "bootstrap_replicates": 2000,
+    "bootstrap_seed": 7301,
+    "paired": true,
+    "group_unit": "dependency_group",
+    "pointwise_CI": 0.95,
+    "confirmatory_family_CI": 0.99,
+    "primary_contrasts": [
+      [
+        "G2",
+        "G0"
+      ],
+      [
+        "G2",
+        "G1"
+      ],
+      [
+        "G2",
+        "Gm"
+      ],
+      [
+        "G3_native",
+        "G0_cosine"
+      ],
+      [
+        "G3_native",
+        "G0_posthoc"
+      ]
+    ],
+    "family_size": 5,
+    "delta_eer_sign": "baseline_minus_candidate",
+    "eer_units": "percent",
+    "delta_eer_units": "percentage_points",
+    "practical_delta": "max(0.05 pp,0.05*baseline_EER_percent)",
+    "guardrail_regression": "max(0.20 pp,0.10*baseline_EER_percent)",
+    "operating_bonafide_rejection": 0.01,
+    "min_dependency_groups_for_support": 10,
+    "min_class_groups_for_support": 5,
+    "diagnostic_inference": "A_to_F_exploratory_95_percent_CI"
+  },
+  "channel": {
+    "fractions": [
+      0.05,
+      0.1,
+      0.25,
+      0.5,
+      1
+    ],
+    "counts": [
+      8,
+      16,
+      40,
+      80,
+      160
+    ],
+    "random_seeds": [
+      200,
+      201,
+      202,
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      210,
+      211,
+      212,
+      213,
+      214,
+      215,
+      216,
+      217,
+      218,
+      219
+    ],
+    "rank_fit": "T",
+    "primary_fraction": 0.25
+  },
+  "attention": {
+    "hidden": 16,
+    "scale": 2,
+    "output_activation": "sigmoid",
+    "placement": "after_final_LayerNorm_shared_long_short",
+    "identity_initialization": true,
+    "static_parameters": 160,
+    "dynamic_parameters": 5296,
+    "matched_residual_mlp_parameters": 5296,
+    "shuffle_seeds": [
+      301,
+      302,
+      303,
+      304,
+      305,
+      306,
+      307,
+      308,
+      309,
+      310,
+      311,
+      312,
+      313,
+      314,
+      315,
+      316,
+      317,
+      318,
+      319,
+      320
+    ]
+  },
+  "direction": {
+    "probe_inputs": {
+      "C0": [
+        "s"
+      ],
+      "C1": [
+        "s",
+        "log_norm"
+      ],
+      "C1v": [
+        "s",
+        "log_norm",
+        "direction_valid"
+      ],
+      "C2": [
+        "s",
+        "log_norm",
+        "direction_valid",
+        "u"
+      ],
+      "Cnoise": [
+        "s",
+        "log_norm",
+        "direction_valid",
+        "independent_unit_noise"
+      ]
+    },
+    "primary_contrast": [
+      "C2",
+      "C1v"
+    ],
+    "score_bins": 10,
+    "min_valid_per_class": 20,
+    "min_speakers_per_class": 5,
+    "mmd_kernel": "gaussian",
+    "mmd_estimator": "unbiased_U_statistic",
+    "mmd_bandwidth_fit": "T_positive_pairwise_distance_median",
+    "mmd_max_per_class": 512,
+    "mmd_subsample_repetitions": 10,
+    "mmd_inference": "descriptive_not_exact_conditional_p_value",
+    "shuffle_seeds": [
+      401,
+      402,
+      403,
+      404,
+      405,
+      406,
+      407,
+      408,
+      409,
+      410,
+      411,
+      412,
+      413,
+      414,
+      415,
+      416,
+      417,
+      418,
+      419,
+      420
+    ],
+    "prototype_K": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "prototype_seeds": [
+      501,
+      502,
+      503,
+      504,
+      505
+    ],
+    "prototype_mean_min_norm": 0.1,
+    "effective_rank": "participation_ratio_of_second_moment",
+    "shuffle_score_quantiles": 10,
+    "shuffle_log_norm_quantiles": 5,
+    "concentration_min_valid": 20,
+    "concentration_min_speakers": 5,
+    "isotropic_reference_repetitions": 1000,
+    "prototype_restart_selection": "max_T_cosine_sum",
+    "prototype_K_selection": "min_V_balanced_logloss_then_smaller_K"
+  },
+  "covariance": {
+    "gamma": [
+      0.01,
+      0.1,
+      0.5,
+      1
+    ],
+    "eigenvalue_floor_relative": 1e-06,
+    "degenerate_trace_max": 1e-12,
+    "trace_normalization": 160,
+    "primary_center": "learned_unit_centroid",
+    "auxiliary_center": "train_bonafide_mean",
+    "selection": "V_EER_min_tie_larger_gamma"
+  },
+  "loss": {
+    "primary": "diagonal_anisotropic_OC",
+    "A": "d*diag(exp(2*tanh(v)))/sum(exp(2*tanh(v)))",
+    "score": "1-0.5*(unit_z-unit_c)^T*A*(unit_z-unit_c)",
+    "v_init": 0,
+    "v_weight_decay": 0,
+    "regularizer": "0.01*||A-I||_F^2/d",
+    "regularizer_weight": 0.01,
+    "centroid_spoof_gradient": false,
+    "optional_low_rank": 8,
+    "optional_low_rank_std": 0.001,
+    "optional_prototype_K": [
+      1,
+      2,
+      4
+    ],
+    "optional_prototype_margin": 0.2
+  },
+  "perturbations": {
+    "mandatory": [
+      "clean",
+      "noise20",
+      "noise10",
+      "gainminus6"
+    ],
+    "optional_if_verified_tools": [
+      "mulaw8",
+      "opus16"
+    ],
+    "seed_by_family": true,
+    "preserve_pairs_in_bootstrap": true,
+    "primary_panel": "Q_all",
+    "extended_panel": "R21DF_prelocked_max1000_per_class_attack",
+    "snr_atol_db": 0.1,
+    "main_robustness": [
+      "noise20",
+      "mulaw8"
+    ],
+    "codec_missing_fallback": [
+      "noise20",
+      "gainminus6"
+    ],
+    "shared_noise_key": "noise_base"
+  },
+  "variants": [
+    {
+      "id": "G0",
+      "alias": "B0",
+      "transform": "identity",
+      "loss": "baseline_EBM"
+    },
+    {
+      "id": "G1",
+      "alias": "B1",
+      "transform": "static_gate",
+      "loss": "baseline_EBM"
+    },
+    {
+      "id": "G2",
+      "alias": "B2",
+      "transform": "dynamic_gate",
+      "loss": "baseline_EBM"
+    },
+    {
+      "id": "Gm",
+      "alias": "B3",
+      "transform": "matched_residual_MLP",
+      "loss": "baseline_EBM"
+    },
+    {
+      "id": "G3",
+      "transform": "identity",
+      "loss": "diagonal_anisotropic_OC_plus_unchanged_BPL"
+    },
+    {
+      "id": "G4",
+      "transform": "dynamic_gate",
+      "loss": "diagonal_anisotropic_OC_plus_unchanged_BPL"
+    }
+  ],
+  "experiments": [
+    {
+      "id": "P0",
+      "hypotheses": [],
+      "depends_on": [],
+      "purpose": "extract_and_validate",
+      "fit_splits": [],
+      "outputs": [
+        "manifest.parquet",
+        "embedding_z.npy",
+        "embedding_h.npy",
+        "scores.parquet",
+        "model_metadata.json",
+        "extraction_qc.json"
+      ]
+    },
+    {
+      "id": "A",
+      "hypotheses": [
+        "H1"
+      ],
+      "depends_on": [
+        "P0"
+      ],
+      "purpose": "channel_concentration",
+      "fit_splits": [
+        "T"
+      ],
+      "tune_split": "V",
+      "primary_eval": "Q",
+      "primary_metric": "balanced_logloss_top25_vs_random25",
+      "outputs": [
+        "channel_statistics.parquet",
+        "masks.json",
+        "probe_scores.parquet",
+        "ablation_curves.csv",
+        "attack_channel_heatmap.png",
+        "decision.json"
+      ]
+    },
+    {
+      "id": "B",
+      "hypotheses": [
+        "H2"
+      ],
+      "depends_on": [
+        "P0",
+        "G"
+      ],
+      "purpose": "input_dependent_attention",
+      "fit_splits": [
+        "T"
+      ],
+      "tune_split": "V",
+      "primary_eval": "R21DF",
+      "shares_training_with": "G",
+      "outputs": [
+        "model_comparisons.csv",
+        "gate_statistics.parquet",
+        "interventions.csv",
+        "condition_effects.csv",
+        "decision.json"
+      ]
+    },
+    {
+      "id": "C",
+      "hypotheses": [
+        "H3"
+      ],
+      "depends_on": [
+        "P0"
+      ],
+      "purpose": "conditional_directional_prediction",
+      "fit_splits": [
+        "T"
+      ],
+      "tune_split": "V",
+      "primary_eval": "Q",
+      "primary_metric": "balanced_logloss_C2_vs_C1v",
+      "outputs": [
+        "probe_registry.json",
+        "bin_definitions.json",
+        "support_coverage.csv",
+        "mmd_by_bin.csv",
+        "probe_scores.parquet",
+        "rescue_harm.csv",
+        "direction_shuffle.csv",
+        "decision.json"
+      ]
+    },
+    {
+      "id": "D",
+      "hypotheses": [
+        "H4"
+      ],
+      "depends_on": [
+        "P0"
+      ],
+      "purpose": "direction_structure_and_transfer",
+      "fit_splits": [
+        "T"
+      ],
+      "tune_split": "V",
+      "primary_eval": "Q",
+      "outputs": [
+        "concentration.csv",
+        "direction_similarity.csv",
+        "spectra.csv",
+        "prototype_registry.json",
+        "prototype_scores.parquet",
+        "transfer_results.csv",
+        "decision.json"
+      ]
+    },
+    {
+      "id": "E",
+      "hypotheses": [
+        "H5"
+      ],
+      "depends_on": [
+        "P0"
+      ],
+      "purpose": "anisotropic_distance",
+      "fit_splits": [
+        "T"
+      ],
+      "tune_split": "V",
+      "primary_eval": "R21DF",
+      "outputs": [
+        "metric_registry.json",
+        "covariance_spectrum.csv",
+        "metric_scores.parquet",
+        "center_metric_factorial.csv",
+        "decision.json"
+      ]
+    },
+    {
+      "id": "F",
+      "hypotheses": [
+        "H6"
+      ],
+      "depends_on": [
+        "P0",
+        "C",
+        "E"
+      ],
+      "purpose": "nuisance_and_generalization_controls",
+      "fit_splits": [],
+      "primary_eval": "Q",
+      "outputs": [
+        "condition_manifest.parquet",
+        "transform_versions.json",
+        "transform_qc.csv",
+        "paired_scores.parquet",
+        "robustness.csv",
+        "subgroup_results.csv",
+        "decision.json"
+      ],
+      "stages": {
+        "F_frozen": [
+          "P0",
+          "C",
+          "E"
+        ],
+        "F_trained": [
+          "G"
+        ]
+      }
+    },
+    {
+      "id": "G",
+      "hypotheses": [
+        "H7"
+      ],
+      "depends_on": [
+        "P0"
+      ],
+      "recommended_prerequisites": [
+        "A",
+        "C",
+        "D",
+        "E",
+        "F_on_frozen_encoder"
+      ],
+      "purpose": "controlled_training_and_scoring",
+      "fit_splits": [
+        "T"
+      ],
+      "tune_split": "V",
+      "primary_eval": "R21DF",
+      "outputs": [
+        "run_registry.json",
+        "epoch_metrics.csv",
+        "loss_components.csv",
+        "native_scores.parquet",
+        "posthoc_scores.parquet",
+        "seed_effects.csv",
+        "interaction.csv",
+        "decision.json"
+      ]
+    }
+  ],
+  "run_counts": {
+    "screening": 18,
+    "confirmation_main_total": 28,
+    "confirmation_with_interaction_total": 30,
+    "excludes": [
+      "probe_fits",
+      "extra_hyperparameter_search",
+      "G3r",
+      "G3p",
+      "full_attack_holdout_retraining"
+    ]
+  },
+  "decision_statuses": [
+    "supported",
+    "unsupported",
+    "inconclusive",
+    "not_run",
+    "invalid"
+  ],
+  "cached_analysis_data_size_policy": {
+    "scope": "frozen cached diagnostics only; original joint training and full benchmark confirmation rules remain unchanged",
+    "authoritative_config": "ebm_frozen_model_protocol_20261105.json",
+    "section": "analysis_data_plan",
+    "DF_pilot_rows": 20000,
+    "21LA_pilot_rows": 20000,
+    "bonafide_per_eval": 2000,
+    "spoof_per_eval": 18000,
+    "small_panel_rows_each": 2000,
+    "21LA_full_rows_supplementary_only": 148176
+  }
+}

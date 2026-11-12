@@ -1,0 +1,119 @@
+{
+  "status": "passed",
+  "checks": 15,
+  "results": [
+    {
+      "name": "original_OC_formula_and_gradient_identity",
+      "status": "passed",
+      "max_gradient_error": 0.0
+    },
+    {
+      "name": "OC_score_derivatives_pull_compact_push_other",
+      "status": "passed"
+    },
+    {
+      "name": "reverse_embedding_gradient_step_direction",
+      "status": "passed",
+      "labels": {
+        "0": {
+          "before": 0.3030457633656632,
+          "after": 0.31332404353923127
+        },
+        "1": {
+          "before": 0.3030457633656632,
+          "after": 0.22002642677768233
+        }
+      }
+    },
+    {
+      "name": "center_scale_control",
+      "status": "passed",
+      "original_bona_multiplier": 5.0,
+      "naive_spoof_multiplier": 0.5555555555555556,
+      "naive_objective_ratio": 0.1111111111111111,
+      "proposed_both_arm_multiplier": 5.0,
+      "caution": "Adam moments, epsilon and weight decay prevent inferring a 9x parameter update ratio."
+    },
+    {
+      "name": "spoof_BPL_routes_both_gradients_and_is_permutation_invariant",
+      "status": "passed",
+      "pairs": 11664
+    },
+    {
+      "name": "pair_mean_scale_is_not_multiplied_by_81",
+      "status": "passed"
+    },
+    {
+      "name": "constructive_two_class_feasibility",
+      "status": "passed",
+      "reverse_backend_loss": 0.45661118610030743,
+      "baseline_backend_loss": 0.4566111861003072,
+      "note": "Feasibility in embedding space does not prove a network learns this mapping on real data."
+    },
+    {
+      "name": "independent_subset_pair_estimator",
+      "status": "passed",
+      "full_mean": 196.0,
+      "independent_mean": 196.0,
+      "shared_subset_mean": 203.5
+    },
+    {
+      "name": "center_negation_is_not_role_reversal_with_same_margins",
+      "status": "passed"
+    },
+    {
+      "name": "canonical_score_sign_and_tied_ROC",
+      "status": "passed",
+      "correct_sign_eer": 0.0,
+      "wrong_sign_eer": 100.0,
+      "constant_eer": 50.0
+    },
+    {
+      "name": "actual_current_EER_method_matches_independent_tied_ROC",
+      "status": "passed",
+      "max_error": 0.0
+    },
+    {
+      "name": "original_per_rank_partial_batches",
+      "status": "passed",
+      "steps": 108,
+      "bona_visits": 1290,
+      "spoof_visits": 11616,
+      "step106": {
+        "bona": 12,
+        "spoof": 60,
+        "total": 72
+      },
+      "step108": {
+        "bona": 6,
+        "spoof": 108,
+        "total": 114
+      },
+      "bona_pairs_epoch": 15444,
+      "spoof_pairs_epoch": 1251648
+    },
+    {
+      "name": "OC_does_not_guarantee_escape_from_exact_angular_stationary_collapse",
+      "status": "passed",
+      "wrong_class_loss": 80.00000056267584,
+      "gradient_norm": 0.0
+    },
+    {
+      "name": "bona_push_is_not_bona_mutual_repulsion",
+      "status": "passed"
+    },
+    {
+      "name": "two_phase_gradient_isolation_without_optimizer_or_training",
+      "status": "passed"
+    }
+  ],
+  "torch_version": "2.13.0+cpu",
+  "device": "cpu",
+  "dtype": "float64",
+  "synthetic_only": true,
+  "optimizers_instantiated": 0,
+  "remote_calls": 0,
+  "model_inference_runs": 0,
+  "spending_usd": 0,
+  "limitations": "This validates source identities and candidate algebra, not an implemented reverse runner, DDP, audio, GPU memory, convergence or EER improvement."
+}

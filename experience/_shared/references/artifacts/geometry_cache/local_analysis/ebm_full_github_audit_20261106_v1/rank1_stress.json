@@ -1,0 +1,254 @@
+{
+  "status": "pass",
+  "rank": 1,
+  "checks": {
+    "commented_extra_vocoder_data_stays_disabled": true,
+    "rawboost_shape_finite_train_y0_minimum_0": true,
+    "rawboost_shape_finite_train_y0_minimum_1": true,
+    "rawboost_shape_finite_train_y0_minimum_2": true,
+    "rawboost_shape_finite_train_y0_minimum_3": true,
+    "rawboost_shape_finite_train_y0_minimum_4": true,
+    "rawboost_shape_finite_train_y0_minimum_5": true,
+    "rawboost_shape_finite_train_y0_minimum_6": true,
+    "rawboost_shape_finite_train_y0_minimum_7": true,
+    "rawboost_shape_finite_train_y0_minimum_8": true,
+    "rawboost_shape_finite_train_y1_minimum_0": true,
+    "rawboost_shape_finite_train_y1_minimum_1": true,
+    "rawboost_shape_finite_train_y1_minimum_2": true,
+    "rawboost_shape_finite_train_y1_minimum_3": true,
+    "rawboost_shape_finite_train_y1_minimum_4": true,
+    "rawboost_shape_finite_train_y1_minimum_5": true,
+    "rawboost_shape_finite_train_y1_minimum_6": true,
+    "rawboost_shape_finite_train_y1_minimum_7": true,
+    "rawboost_shape_finite_train_y1_minimum_8": true,
+    "rawboost_shape_finite_train_y0_maximum_0": true,
+    "rawboost_shape_finite_train_y0_maximum_1": true,
+    "rawboost_shape_finite_train_y0_maximum_2": true,
+    "rawboost_shape_finite_train_y0_maximum_3": true,
+    "rawboost_shape_finite_train_y0_maximum_4": true,
+    "rawboost_shape_finite_train_y0_maximum_5": true,
+    "rawboost_shape_finite_train_y0_maximum_6": true,
+    "rawboost_shape_finite_train_y0_maximum_7": true,
+    "rawboost_shape_finite_train_y0_maximum_8": true,
+    "forced_codec_branch_zero_calls": true,
+    "finite_update_fixed_two_views_0": true,
+    "finite_update_fixed_two_views_1": true,
+    "finite_update_fixed_two_views_2": true,
+    "finite_update_native_two_views_0": true,
+    "finite_update_native_two_views_1": true,
+    "finite_update_native_two_views_2": true,
+    "finite_update_native_three_views_0": true,
+    "finite_update_native_three_views_1": true,
+    "finite_update_native_three_views_2": true,
+    "finite_update_worst_train_three_views_0": true,
+    "frontend_never_updated": true,
+    "eval8_longest29_312_finite": true
+  },
+  "codec_calls": 0,
+  "codec_cases": [
+    {
+      "key": "train_y0_minimum",
+      "raw_samples": 10439,
+      "tested_aug_types": 9
+    },
+    {
+      "key": "train_y1_minimum",
+      "raw_samples": 21798,
+      "tested_aug_types": 9
+    },
+    {
+      "key": "train_y0_maximum",
+      "raw_samples": 211007,
+      "tested_aug_types": 9
+    }
+  ],
+  "timing_profiles": [
+    {
+      "case": "fixed_two_views",
+      "iteration": 0,
+      "warmup": true,
+      "seconds": 10.626298264600337,
+      "peak_allocated_MiB": 1939.603515625,
+      "local_batch": 120,
+      "physical_batch": 8,
+      "max_long_seconds": 4.0375,
+      "frontend_counts": {
+        "calls": 62,
+        "sample_slots": 492,
+        "waveform_samples": 27904800
+      },
+      "active_normal_pairs": 0
+    },
+    {
+      "case": "fixed_two_views",
+      "iteration": 1,
+      "warmup": false,
+      "seconds": 9.645456958562136,
+      "peak_allocated_MiB": 1939.603515625,
+      "local_batch": 120,
+      "physical_batch": 8,
+      "max_long_seconds": 4.0375,
+      "frontend_counts": {
+        "calls": 62,
+        "sample_slots": 492,
+        "waveform_samples": 27904800
+      },
+      "active_normal_pairs": 0
+    },
+    {
+      "case": "fixed_two_views",
+      "iteration": 2,
+      "warmup": false,
+      "seconds": 9.661655879579484,
+      "peak_allocated_MiB": 1939.603515625,
+      "local_batch": 120,
+      "physical_batch": 8,
+      "max_long_seconds": 4.0375,
+      "frontend_counts": {
+        "calls": 62,
+        "sample_slots": 492,
+        "waveform_samples": 27904800
+      },
+      "active_normal_pairs": 0
+    },
+    {
+      "case": "native_two_views",
+      "iteration": 0,
+      "warmup": true,
+      "seconds": 10.161947268992662,
+      "peak_allocated_MiB": 3315.0224609375,
+      "local_batch": 120,
+      "physical_batch": 8,
+      "max_long_seconds": 13.1879375,
+      "frontend_counts": {
+        "calls": 62,
+        "sample_slots": 492,
+        "waveform_samples": 29593440
+      },
+      "active_normal_pairs": 0
+    },
+    {
+      "case": "native_two_views",
+      "iteration": 1,
+      "warmup": false,
+      "seconds": 10.156789251603186,
+      "peak_allocated_MiB": 3315.0224609375,
+      "local_batch": 120,
+      "physical_batch": 8,
+      "max_long_seconds": 13.1879375,
+      "frontend_counts": {
+        "calls": 62,
+        "sample_slots": 492,
+        "waveform_samples": 29593440
+      },
+      "active_normal_pairs": 0
+    },
+    {
+      "case": "native_two_views",
+      "iteration": 2,
+      "warmup": false,
+      "seconds": 10.204030669294298,
+      "peak_allocated_MiB": 3315.0224609375,
+      "local_batch": 120,
+      "physical_batch": 8,
+      "max_long_seconds": 13.1879375,
+      "frontend_counts": {
+        "calls": 62,
+        "sample_slots": 492,
+        "waveform_samples": 29593440
+      },
+      "active_normal_pairs": 0
+    },
+    {
+      "case": "native_three_views",
+      "iteration": 0,
+      "warmup": true,
+      "seconds": 14.611325009725988,
+      "peak_allocated_MiB": 3315.095703125,
+      "local_batch": 120,
+      "physical_batch": 8,
+      "max_long_seconds": 13.1879375,
+      "frontend_counts": {
+        "calls": 92,
+        "sample_slots": 732,
+        "waveform_samples": 41219040
+      },
+      "active_normal_pairs": 10
+    },
+    {
+      "case": "native_three_views",
+      "iteration": 1,
+      "warmup": false,
+      "seconds": 14.573705216869712,
+      "peak_allocated_MiB": 3315.095703125,
+      "local_batch": 120,
+      "physical_batch": 8,
+      "max_long_seconds": 13.1879375,
+      "frontend_counts": {
+        "calls": 92,
+        "sample_slots": 732,
+        "waveform_samples": 41219040
+      },
+      "active_normal_pairs": 10
+    },
+    {
+      "case": "native_three_views",
+      "iteration": 2,
+      "warmup": false,
+      "seconds": 14.646996147930622,
+      "peak_allocated_MiB": 3315.095703125,
+      "local_batch": 120,
+      "physical_batch": 8,
+      "max_long_seconds": 13.1879375,
+      "frontend_counts": {
+        "calls": 92,
+        "sample_slots": 732,
+        "waveform_samples": 41219040
+      },
+      "active_normal_pairs": 10
+    },
+    {
+      "case": "worst_train_three_views",
+      "iteration": 0,
+      "warmup": false,
+      "seconds": 23.81533799599856,
+      "peak_allocated_MiB": 3315.095703125,
+      "local_batch": 120,
+      "physical_batch": 8,
+      "max_long_seconds": 13.1879375,
+      "frontend_counts": {
+        "calls": 92,
+        "sample_slots": 732,
+        "waveform_samples": 75502728
+      },
+      "active_normal_pairs": 0
+    }
+  ],
+  "worst_evaluation": {
+    "batch": 8,
+    "seconds_per_clip": 29.312,
+    "wall_seconds": 1.1785103976726532,
+    "peak_allocated_MiB": 5747.0517578125
+  },
+  "epoch_frontend_padded_sample_slots": {
+    "legacy_direct_fixed": 1464998400,
+    "cached_fixed_two": 3013718400,
+    "cached_native_two": 2664314800,
+    "cached_native_three": 3919879600
+  },
+  "frontend_work_ratios_to_original_two_direct_fixed_views": {
+    "legacy_direct_fixed": 1.0,
+    "cached_fixed_two": 2.0571479122434537,
+    "cached_native_two": 1.818646900911291,
+    "cached_native_three": 2.6756886560422184
+  },
+  "qualifications": [
+    "Timing fixed_two uses new gradient cache, not original full-graph training wall time",
+    "Three trials per quantile cohort: first warmup, next two measurements; not an epoch throughput estimate",
+    "Worst-train stress repeats true-label longest train normal/spoof clips; not an accuracy evaluation",
+    "Forward-sample proxy is not FLOPs or runtime; attention additionally depends on squared frame length",
+    "No50epoch training or performance-improvement claim"
+  ],
+  "full_training_started": false,
+  "raw_audio_or_SSL_saved": false
+}

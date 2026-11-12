@@ -1,0 +1,42 @@
+{
+  "status": "embedding_level_invariance_verified",
+  "samples": 128,
+  "rotations": [
+    {
+      "angle_radians": 0.3,
+      "cosine_error": 2.220446049250313e-16,
+      "unit_norm_error": 2.220446049250313e-16,
+      "OC_loss_error": 5.828670879282072e-16
+    },
+    {
+      "angle_radians": 1.0,
+      "cosine_error": 2.220446049250313e-16,
+      "unit_norm_error": 2.220446049250313e-16,
+      "OC_loss_error": 3.3306690738754696e-16
+    },
+    {
+      "angle_radians": 2.0,
+      "cosine_error": 2.220446049250313e-16,
+      "unit_norm_error": 2.220446049250313e-16,
+      "OC_loss_error": 5.828670879282072e-16
+    }
+  ],
+  "max_finite_difference_OC_azimuth_derivative": 4.1633363423443364e-11,
+  "normal_pair_BPL_demo_before": 0.410138597618659,
+  "normal_pair_BPL_demo_after_independent_normal_rotations": 0.44443529318042174,
+  "spoof_rotation_BPL_change": 0.0,
+  "joint_feature_centroid_channel_permutation_score_error": 4.440892098500626e-16,
+  "implementation_evidence": {
+    "archived_loss_sha256": "164be4161b57a7899ef7b289e005ab80d12da373922d57e9e021844ea828b1ac",
+    "archived_classifier_sha256": "c2cbcf898f1905c9c6ee8b20ef4514c4af7cb343abbf35e2dbd1fd526ad3459f",
+    "architecture_has_layer_attention_temporal_attention_and_channel_mixing": true,
+    "OC_reads_only_normalized_centroid_dot_product": true,
+    "BPL_uses_bonafide_long_short_pairs_only": true
+  },
+  "limits": [
+    "Rotated vectors need not lie on the LayerNorm/encoder attainable manifold",
+    "BPL numeric example uses bona long features as both views; not a measured training-batch loss",
+    "Invariance does not prove useful direction information was lost or caused performance degradation",
+    "Model already learns channels; unconstrained spoof azimuth is a different statement"
+  ]
+}

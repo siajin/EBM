@@ -1,0 +1,8 @@
+[
+  {
+    "path": "experience/01_duration_bias/E077/code/artifacts/silence_analysis/analyze_silence.py",
+    "sha256": "7458474a3679ac6dd2729620eb9d1ab610e178c97a7b83289ede36ed7035c84f",
+    "origin": "artifacts/silence_analysis/analyze_silence.py",
+    "kind": "implementation / validation source"
+  }
+]

@@ -1,0 +1,42 @@
+{
+  "status": "complete",
+  "population": {
+    "n": 148176,
+    "bonafide": 14816,
+    "spoof": 133360,
+    "short_le2s_bonafide_n": 571,
+    "short_le2s_spoof_n": 49193,
+    "short_bonafide_class_share_percent": 3.853941684665227,
+    "short_spoof_class_share_percent": 36.8873725254949,
+    "spoof_fraction_among_short_percent": 98.85258419741179
+  },
+  "primary_comparison": "Coverage20 versus B20; each model global21LA diagnostic EER-nearest operating point",
+  "change": {
+    "extra_spoof_errors": 5489,
+    "extra_short_spoof_errors": 5013,
+    "extra_spoof_errors_short_share_percent": 91.32811076698853,
+    "extra_normal_errors": 610,
+    "extra_short_normal_errors": 8,
+    "extra_normal_errors_long_share_percent": 98.68852459016394,
+    "short_bin_balanced_error_increase_pp": 1.9064969403527499,
+    "all_bins_balanced_error_increase_pp": 4.1165487204934825,
+    "short_share_balanced_error_increase_percent": 46.31299347586012,
+    "extra_short_spoof_errors_A10_plus_A11_share_percent": 91.42230201476163
+  },
+  "limitations": [
+    "Retrospective target EER-nearest thresholds, not operational thresholds, not model selection.",
+    "Observational duration/attack/content association; no length-only counterfactual model inference.",
+    "Historical repeated-input per-trial scores unavailable in original result text directory; do not invent repeat-versus-nonrepeat length deltas.",
+    "Legacy240 reference is epoch50; B/C best checkpoint references have different epochs.",
+    "Ongoing baseline240mildv2 training was observed and left untouched."
+  ],
+  "independent_checks": [
+    "ManualCSV classerror totals reproduce JSONglobalmetrics",
+    "Balancederrorcontributions sum exactly to full comparison",
+    "SourceCSVsha verifiedagainst completedrankdone records",
+    "Officialmetadata1:1UID/speaker/attack/class join"
+  ],
+  "new_spending_USD": 0,
+  "new_model_inference": false,
+  "training_updates": 0
+}

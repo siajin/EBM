@@ -1,0 +1,135 @@
+{
+  "status": "complete",
+  "unit_tests_passed": 26,
+  "exits": {
+    "unit": 0,
+    "preflight": 0,
+    "validation": 0,
+    "loader": 0,
+    "run": 0
+  },
+  "expected_source_probabilities_preserved": true,
+  "all_originals_used_each_of_50epochs": true,
+  "source_coverage": [
+    {
+      "mode": "replacement",
+      "population": "bona_OC",
+      "unique_originals": 1671,
+      "original_time_fraction": 0.39238562899970997
+    },
+    {
+      "mode": "replacement",
+      "population": "spoof_OC",
+      "unique_originals": 14597,
+      "original_time_fraction": 0.3867792888781507
+    },
+    {
+      "mode": "replacement",
+      "population": "bona_OC_plus_BPL",
+      "unique_originals": 2241,
+      "original_time_fraction": 0.6119239391278148
+    },
+    {
+      "mode": "coverage",
+      "population": "bona_OC",
+      "unique_originals": 2580,
+      "original_time_fraction": 0.5020739013843516
+    },
+    {
+      "mode": "coverage",
+      "population": "spoof_OC",
+      "unique_originals": 22800,
+      "original_time_fraction": 0.5000854990729557
+    },
+    {
+      "mode": "coverage",
+      "population": "bona_OC_plus_BPL",
+      "unique_originals": 2580,
+      "original_time_fraction": 0.7170199668378512
+    }
+  ],
+  "pooled10_length_metrics": [
+    {
+      "mode": "replacement",
+      "role": "OC_bona",
+      "mean_seconds": 1.700250771604938,
+      "max_target_probability_gap_pp": 0.43595679012345956
+    },
+    {
+      "mode": "replacement",
+      "role": "OC_spoof",
+      "mean_seconds": 1.6990226337448553,
+      "max_target_probability_gap_pp": 0.14960562414265965
+    },
+    {
+      "mode": "replacement",
+      "role": "BPL_right_bona",
+      "mean_seconds": 1.700192901234567,
+      "max_target_probability_gap_pp": 0.22762345679012974
+    },
+    {
+      "mode": "coverage",
+      "role": "OC_bona",
+      "mean_seconds": 1.6994791666666662,
+      "max_target_probability_gap_pp": 0.3472222222222182
+    },
+    {
+      "mode": "coverage",
+      "role": "OC_spoof",
+      "mean_seconds": 1.6992348251028802,
+      "max_target_probability_gap_pp": 0.10159465020575797
+    },
+    {
+      "mode": "coverage",
+      "role": "BPL_right_bona",
+      "mean_seconds": 1.702989969135802,
+      "max_target_probability_gap_pp": 0.47067901234568166
+    }
+  ],
+  "VAD_mean_gap_pp_range_coverage": [
+    0.11082219637742474,
+    0.6586346223750983
+  ],
+  "source_group_target_TV_50epoch_means": [
+    {
+      "mode": "coverage",
+      "role": "BPL_right_bona",
+      "speaker_target_TV": 0.002125101999183912,
+      "attack_target_TV": 0.0
+    },
+    {
+      "mode": "coverage",
+      "role": "OC_bona",
+      "speaker_target_TV": 0.0020776414010909216,
+      "attack_target_TV": 0.0
+    },
+    {
+      "mode": "coverage",
+      "role": "OC_spoof",
+      "speaker_target_TV": 0.0016800268387976336,
+      "attack_target_TV": 0.000908779149519893
+    },
+    {
+      "mode": "replacement",
+      "role": "BPL_right_bona",
+      "speaker_target_TV": 0.0351400717016486,
+      "attack_target_TV": 0.0
+    },
+    {
+      "mode": "replacement",
+      "role": "OC_bona",
+      "speaker_target_TV": 0.03476378726747963,
+      "attack_target_TV": 0.0
+    },
+    {
+      "mode": "replacement",
+      "role": "OC_spoof",
+      "speaker_target_TV": 0.011709189622779314,
+      "attack_target_TV": 0.005770747599451307
+    }
+  ],
+  "dev_used": false,
+  "eval_used": false,
+  "model_training": false,
+  "optimizer_updates": 0
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "path": "experience/03_bonafide_diversity/E099/code/quiet_donor_audit.py",
+    "sha256": "02d57c6f0a6b1bb107c28222366d23706ab3b9c1405fff4f7b844bb1aa702867",
+    "origin": "artifacts/github_archive_20261112/remote_source/historical_analysis/quiet_donor_audit.py",
+    "kind": "actual historical analysis source"
+  },
+  {
+    "path": "experience/03_bonafide_diversity/E099/code/analyze_quiet_donor_audit.py",
+    "sha256": "76e8bd35b7d737402f077865de02a5aaef99e40364e59fa0f6dd833473ca43cb",
+    "origin": "artifacts/github_archive_20261112/remote_source/historical_analysis/analyze_quiet_donor_audit.py",
+    "kind": "actual historical analysis source"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "path": "experience/05_residual_geometry/E075/code/EBM/tools/evaluate_low_occupancy_ablation.py",
+    "sha256": "a9e7579fda8196c12027f3134cfdc2295c5ac8675025a0400ed7d5e5a399c1df",
+    "origin": "EBM/tools/evaluate_low_occupancy_ablation.py",
+    "kind": "implementation / validation source"
+  },
+  {
+    "path": "experience/05_residual_geometry/E075/code/EBM/tools/verify_low_occupancy_ablation.py",
+    "sha256": "d48645b4bf660f70cb312bfdb20a8f7a86c53f89b2c190b72ed0ad73313b1b75",
+    "origin": "EBM/tools/verify_low_occupancy_ablation.py",
+    "kind": "implementation / validation source"
+  }
+]

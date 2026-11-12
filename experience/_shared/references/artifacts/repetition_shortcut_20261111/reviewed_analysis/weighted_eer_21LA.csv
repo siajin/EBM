@@ -1,0 +1,17 @@
+model,condition,policy,eer,n,ipf_residual
+legacy240,native,observed,6.688714902807775,148176,0.0
+legacy240,native,common_support_observed,6.470628871439427,145097,0.0
+legacy240,native,duration_matched,3.3342332613218897,145097,0.0
+legacy240,native,duration_attack_codec_preserved,3.799113306646306,145097,7.19230230927792e-13
+legacy240,wrap4,observed,1.0527894421115778,148176,0.0
+legacy240,wrap4,common_support_observed,1.0684597140028094,145097,0.0
+legacy240,wrap4,duration_matched,1.3005302131063892,145097,0.0
+legacy240,wrap4,duration_attack_codec_preserved,1.2891468682327938,145097,7.19230230927792e-13
+B,native,observed,4.79211663066955,148176,0.0
+B,native,common_support_observed,4.844912151426532,145097,0.0
+B,native,duration_matched,5.11609071272623,145097,0.0
+B,native,duration_attack_codec_preserved,6.262632263583141,145097,7.19230230927792e-13
+B,wrap4,observed,7.736952609478104,148176,0.0
+B,wrap4,common_support_observed,7.624289036774357,145097,0.0
+B,wrap4,duration_matched,5.739842292884179,145097,0.0
+B,wrap4,duration_attack_codec_preserved,6.904697624173793,145097,7.19230230927792e-13

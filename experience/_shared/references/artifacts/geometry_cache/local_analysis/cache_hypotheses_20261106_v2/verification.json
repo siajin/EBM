@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "input_files_rehashed_unchanged": 309,
+  "numerical_self_checks_passed": true,
+  "readout_metric_rows_per_dataset": 48,
+  "EER_and_AUROC_independently_checked_for_every_readout_metric_row": true,
+  "all_saved_native_predictions_reproduced": true,
+  "original_models_and_folds_unchanged": true,
+  "original_EBM_retraining": false,
+  "new_head_fits": 0,
+  "new_audio_inference": false,
+  "CV4_not_launched": true,
+  "limits": "Individual exploratory intervals conditional on saved fits; no source-family/refit uncertainty or full new-method validation."
+}

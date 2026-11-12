@@ -1,0 +1,265 @@
+{
+  "remote_root": "/home/mentee/results/analysis/EBM80_21DF_multicrop",
+  "file_inventory": [
+    {
+      "name": "shard_1.npz",
+      "bytes": 39816,
+      "directory": false
+    },
+    {
+      "name": "shard_0.npz",
+      "bytes": 39429,
+      "directory": false
+    },
+    {
+      "name": "multicrop.pdf",
+      "bytes": 49377,
+      "directory": false
+    },
+    {
+      "name": "crop_scores.npz",
+      "bytes": 75265,
+      "directory": false
+    },
+    {
+      "name": "summary.json",
+      "bytes": 5130,
+      "directory": false
+    },
+    {
+      "name": "sample_manifest.json",
+      "bytes": 146131,
+      "directory": false
+    },
+    {
+      "name": "provenance.json",
+      "bytes": 1237,
+      "directory": false
+    },
+    {
+      "name": "multicrop.png",
+      "bytes": 427409,
+      "directory": false
+    }
+  ],
+  "aggregate_json": {
+    "summary.json": {
+      "provenance": {
+        "per_class": 1000,
+        "batch_size": 4,
+        "seed": 1,
+        "cpu": false,
+        "out": "/results/analysis/EBM80_21DF_multicrop",
+        "workers": 2,
+        "plm_path": "/home/mentee/.cache/huggingface/hub/models--facebook--wav2vec2-xls-r-300m/snapshots/1a640f32ac3e39899438a2931f9924c02f080a54",
+        "checkpoint": "/home/mentee/results/CM/LA/EBM/model/BestCLS_80_21DF.pt",
+        "checkpoint_sha256": "30043199664bc84da780654e01fd430235f647b894e7832a52f777c7fee5939a",
+        "protocol_sha256": "70e0e7d5964562cb0166e79143f73beaeaf77ee18e799fa4156355a57006d800",
+        "population": {
+          "0": 519059,
+          "1": 14869
+        },
+        "torch_version": "2.6.0+cu124",
+        "sampling": "uniform random within label, without replacement",
+        "crop_samples": 64600,
+        "sample_rate": 16000,
+        "embedding": "after layer_norm, L2 normalized",
+        "crop_lengths": [
+          64600,
+          48440
+        ],
+        "crop_start_fractions": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "repeats": "long and short head",
+        "source_sha256": {
+          "model/b_linear.py": "c2cbcf898f1905c9c6ee8b20ef4514c4af7cb343abbf35e2dbd1fd526ad3459f",
+          "model/loss.py": "164be4161b57a7899ef7b289e005ab80d12da373922d57e9e021844ea828b1ac",
+          "train.py": "b7b98a182a4946c479f477b7110e1c4a49be53ee6b6e89ef1b4bc4785374873f"
+        }
+      },
+      "head_reproduction_max_abs_diff": 7.208436727523804e-06,
+      "repeat_noise": {
+        "n": 4000,
+        "mean": 2.9458664130288525e-07,
+        "median": 1.1920928955078125e-07,
+        "q90": 4.76837158203125e-07
+      },
+      "classes": {
+        "Bonafide": {
+          "long": {
+            "eligible_n": 275,
+            "range": {
+              "n": 275,
+              "mean": 0.14659592509269714,
+              "median": 0.014741301536560059,
+              "q90": 0.5357707381248474
+            },
+            "range_above_0p2_n": 46,
+            "straddle_training_margin_n": 44,
+            "padded_or_no_shift_n": 725
+          },
+          "short": {
+            "eligible_n": 574,
+            "range": {
+              "n": 574,
+              "mean": 0.061861149966716766,
+              "median": 0.008412748575210571,
+              "q90": 0.09671685695648198
+            },
+            "range_above_0p2_n": 29,
+            "straddle_training_margin_n": 60,
+            "padded_or_no_shift_n": 426
+          }
+        },
+        "Spoof": {
+          "long": {
+            "eligible_n": 222,
+            "range": {
+              "n": 222,
+              "mean": 0.03530099242925644,
+              "median": 0.0026691555976867676,
+              "q90": 0.032664620876312285
+            },
+            "range_above_0p2_n": 7,
+            "straddle_training_margin_n": 2,
+            "padded_or_no_shift_n": 778
+          },
+          "short": {
+            "eligible_n": 424,
+            "range": {
+              "n": 424,
+              "mean": 0.12095361202955246,
+              "median": 0.00913470983505249,
+              "q90": 0.2847424864768981
+            },
+            "range_above_0p2_n": 51,
+            "straddle_training_margin_n": 22,
+            "padded_or_no_shift_n": 576
+          }
+        }
+      },
+      "bonafide_groups": {
+        "head_below_0p9": {
+          "n": 163,
+          "long": {
+            "eligible_n": 35,
+            "range": {
+              "n": 35,
+              "mean": 0.5752875804901123,
+              "median": 0.39581674337387085,
+              "q90": 1.23316068649292
+            },
+            "any_above_0p9_n": 3,
+            "all_below_0p9_n": 32,
+            "any_below_0p9_n": 35
+          },
+          "short": {
+            "eligible_n": 59,
+            "range": {
+              "n": 59,
+              "mean": 0.3923356533050537,
+              "median": 0.14498257637023926,
+              "q90": 1.2016691684722902
+            },
+            "any_above_0p9_n": 54,
+            "all_below_0p9_n": 5,
+            "any_below_0p9_n": 43
+          }
+        },
+        "head_at_least_0p9": {
+          "n": 837,
+          "long": {
+            "eligible_n": 240,
+            "range": {
+              "n": 240,
+              "mean": 0.08407840877771378,
+              "median": 0.008983790874481201,
+              "q90": 0.16059113144874573
+            },
+            "any_above_0p9_n": 240,
+            "all_below_0p9_n": 0,
+            "any_below_0p9_n": 41
+          },
+          "short": {
+            "eligible_n": 515,
+            "range": {
+              "n": 515,
+              "mean": 0.024000955745577812,
+              "median": 0.006016731262207031,
+              "q90": 0.055918133258819586
+            },
+            "any_above_0p9_n": 515,
+            "all_below_0p9_n": 0,
+            "any_below_0p9_n": 22
+          }
+        }
+      },
+      "head_length_change": {
+        "Bonafide": {
+          "n": 1000,
+          "mean": 0.07147036492824554,
+          "median": 0.0027663707733154297,
+          "q90": 0.1426126703619957
+        },
+        "Spoof": {
+          "n": 1000,
+          "mean": 0.08959449082612991,
+          "median": 0.007129669189453125,
+          "q90": 0.24183443188667317
+        }
+      },
+      "limitations": [
+        "Descriptive association, not causal attribution to BPL or EOC-S.",
+        "Five deterministic overlapping windows per length; range depends on audio duration and window overlap.",
+        "No-shift/padded clips excluded from range comparisons.",
+        "Bonafide groups defined by previous long-head score, introducing baseline selection effects.",
+        "Margins 0.9/0.2 are training margins, not calibrated thresholds or EER.",
+        "Balanced 2000-trial sample, no augmentation, epoch80 checkpoint only."
+      ]
+    },
+    "provenance.json": {
+      "per_class": 1000,
+      "batch_size": 4,
+      "seed": 1,
+      "cpu": false,
+      "out": "/results/analysis/EBM80_21DF_multicrop",
+      "workers": 2,
+      "plm_path": "/home/mentee/.cache/huggingface/hub/models--facebook--wav2vec2-xls-r-300m/snapshots/1a640f32ac3e39899438a2931f9924c02f080a54",
+      "checkpoint": "/home/mentee/results/CM/LA/EBM/model/BestCLS_80_21DF.pt",
+      "checkpoint_sha256": "30043199664bc84da780654e01fd430235f647b894e7832a52f777c7fee5939a",
+      "protocol_sha256": "70e0e7d5964562cb0166e79143f73beaeaf77ee18e799fa4156355a57006d800",
+      "population": {
+        "0": 519059,
+        "1": 14869
+      },
+      "torch_version": "2.6.0+cu124",
+      "sampling": "uniform random within label, without replacement",
+      "crop_samples": 64600,
+      "sample_rate": 16000,
+      "embedding": "after layer_norm, L2 normalized",
+      "crop_lengths": [
+        64600,
+        48440
+      ],
+      "crop_start_fractions": [
+        0,
+        0.25,
+        0.5,
+        0.75,
+        1
+      ],
+      "repeats": "long and short head",
+      "source_sha256": {
+        "model/b_linear.py": "c2cbcf898f1905c9c6ee8b20ef4514c4af7cb343abbf35e2dbd1fd526ad3459f",
+        "model/loss.py": "164be4161b57a7899ef7b289e005ab80d12da373922d57e9e021844ea828b1ac",
+        "train.py": "b7b98a182a4946c479f477b7110e1c4a49be53ee6b6e89ef1b4bc4785374873f"
+      }
+    }
+  },
+  "method_documents": {}
+}

@@ -1,0 +1,21 @@
+{
+  "status": "final_OC_BPL_variable_input_design_verified",
+  "latest_validation": "v3_eval/state.json",
+  "training_checks": "v2",
+  "unit_tests_passed": 11,
+  "OC_loss_retained": true,
+  "OC_centroid_updates_retained": true,
+  "both_classes_variable_length": true,
+  "BPL_pairing": "OC_bona12 x independent_bona12",
+  "OC_per_rank": {
+    "bona": 12,
+    "spoof": 108
+  },
+  "extra_BPL_bona_per_rank": 12,
+  "optimizer_steps_per_logical_batch": 2,
+  "validation_logical_batches_per_condition": 2,
+  "full_training_started": false,
+  "live_server_repo_changed": false,
+  "final_server_audit": "v3_eval/final_server_audit.json",
+  "later_reader_optimization_and_Train_only_analysis": "artifacts/train_crop_io_activity_20261110/state.json"
+}

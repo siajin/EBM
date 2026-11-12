@@ -1,0 +1,63 @@
+# E017. 클래스별 길이 분포를 맞추되 공격·코덱 비율을 보존한 EER
+
+**실행 상태:** 기존 점수 재가중 완료
+
+이 문서의 상태는 2026-11-12 출판 검토 기준이다. 기존 문서·state의 시점별 상태와 충돌하면 실제 완료표식과 본문 최신 보완을 우선한다.
+
+## 가설
+
+공격·코덱 비중을 유지해도 클래스 길이 구성을 바꾸면 EER과 모델 순위가 달라질 수 있다.
+
+## 그렇게 설계한 이유
+
+짧은 위조가 많은 평가 구성에 대한 EER 민감도를 검사한다.
+
+대조와 통제의 근거: 모델 재학습·발화 삭제 파일 작업 없음. 균등 길이 구간 가중은 별도 민감도 분석이며 정상 표본 23개 인 구간에 큰 가중치가 생길 수 있다.
+
+## 모델·데이터·표본
+
+[E014](../../02_repetition/E014/README.md)의 21LA 148,176개. 정상과 위조가 모두 존재하는 길이 구간 145,097개를 공통 지지 집합으로 사용한다.
+
+## 실험 내용과 상세 절차
+
+1. 원음 길이를 ≤1,(1,1.5],(1.5,2],(2,2.5],(2.5,3],(3,3.5],(3.5,4.0375],>4.0375초로 나눈다.
+2. 정상 없는 ≤1초 위조 3,079개를 공통 지지 비교 양쪽에서 제외한다. 남은 정상의 구간 비율을 목표로 삼는다.
+3. 클래스별 길이 × 공격·코덱 빈도 표에서 행 합은 목표 길이, 열 합은 원래 공격 × 코덱 비율이 되도록 반복 비례 조정(IPF)을 한다.
+4. 길이 행과 공격·코덱 열을 번갈아 맞추어 최대 잔차 1e-12 미만까지 수렴시킨다. 셀 가중치를 발화에 부여하고 클래스별 가중 ROC로 EER을 계산한다.
+5. 전체 관측 값, 공통 지지 관측값, 길이만 맞춘 값, 공격·코덱 보존 길이 조정 값을 따로 보고한다.
+
+## 측정과 검증
+
+클래스별 가중치 정규화, IPF 잔차, 독립 가중 ROC. 새 잡음 0 점수와 과거 잡음 1e-5 점수의 재가중 표는 별도 버전이다.
+
+## 결과
+
+공통 지지집합의 비반복 점수에서 공격·코덱 비율을 보존하며 길이를 맞추면, 원래 배치 240 모델의 EER은 6.470629→3.799113%, B는 4.844912→6.262632%였다. 반복 입력에서는 각각 1.068460→1.289147%, 7.624289→6.904698%였다.
+
+## 해석·실패한 부분·한계
+
+평가 구성에 대한 민감도다. 길이를 바꿔 학습한 인과 실험이 아니며 공격·코덱 내부의 발화 내용·화자 구성이 모두 같아진 것도 아니다.
+
+## 배운 점
+
+기존240과 B의 길이 재가중 반응이 달랐다. 평가 구성 민감도를 학습 원인 증명으로 쓰면 안 된다.
+
+## 실험 코드
+
+- [EBM/tools/review_repetition_results.py](code/EBM/tools/review_repetition_results.py)
+- [EBM/tools/analyze_repetition_duration_proxy.py](code/EBM/tools/analyze_repetition_duration_proxy.py)
+
+코드의 파일별 원본 위치·SHA256은 [source_manifest.json](code/source_manifest.json)에 있다. 공통 의존성과 실행 위치는 [재현 안내](../../REPRODUCIBILITY.md)를 따른다. 역사 snapshot은 당시 실패를 포함한 실제 버전이며 최신 수정 코드와 구분한다.
+
+## 설정·결과·검산 근거
+
+- [EBM/tools/review_repetition_results.py](../../../tools/review_repetition_results.py)
+- [artifacts/repetition_shortcut_20261111/reviewed_analysis/weighted_eer_21LA.csv](../../_shared/references/artifacts/repetition_shortcut_20261111/reviewed_analysis/weighted_eer_21LA.csv)
+- [artifacts/repetition_shortcut_20261111/reviewed_analysis/validation.json](../../_shared/references/artifacts/repetition_shortcut_20261111/reviewed_analysis/validation.json)
+- [artifacts/repetition_shortcut_20261111/native_length_reweighted_eer.csv](../../_shared/references/artifacts/repetition_shortcut_20261111/native_length_reweighted_eer.csv)
+
+## 연결
+
+다른 관련 가설: [정상 다양성·도메인 지지와 정상쌍 학습](../../03_bonafide_diversity/README.md)
+
+[가설 목록으로](../README.md) · [전체 실험 목록](../../README.md)

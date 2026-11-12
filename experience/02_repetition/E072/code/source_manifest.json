@@ -1,0 +1,14 @@
+[
+  {
+    "path": "experience/02_repetition/E072/code/artifacts/geometry_experiments/pooling_mechanism_sidecar.py",
+    "sha256": "7f376a4b7822e9c5cd23a0e973cb6cb5d240c6b55d4b02aa7fcfb6a13e78f4b5",
+    "origin": "artifacts/geometry_experiments/pooling_mechanism_sidecar.py",
+    "kind": "explicit method source"
+  },
+  {
+    "path": "experience/02_repetition/E072/code/artifacts/geometry_experiments/verify_padding_mechanisms.py",
+    "sha256": "49c7e32cb97af25b4e566867b7a8b85bb555233f52221cfdf0c3fab67de583b0",
+    "origin": "artifacts/geometry_experiments/verify_padding_mechanisms.py",
+    "kind": "explicit method source"
+  }
+]

@@ -1,0 +1,624 @@
+{
+  "remote_root": "/home/mentee/results/analysis/EBM80_ASV_quiet_presence_hypothesis_20261030",
+  "file_inventory": [
+    {
+      "name": "report.md",
+      "bytes": 1233,
+      "directory": false
+    },
+    {
+      "name": "private",
+      "bytes": 4096,
+      "directory": true
+    },
+    {
+      "name": "train_context.json",
+      "bytes": 2042,
+      "directory": false
+    },
+    {
+      "name": "COMPLETED.json",
+      "bytes": 118,
+      "directory": false
+    },
+    {
+      "name": "summary.json",
+      "bytes": 14669,
+      "directory": false
+    },
+    {
+      "name": "report_ko.md",
+      "bytes": 4426,
+      "directory": false
+    },
+    {
+      "name": "plan.json",
+      "bytes": 1041,
+      "directory": false
+    }
+  ],
+  "aggregate_json": {
+    "train_context.json": {
+      "scope": "1000 bonafide and 1000 spoof sampled from 19LA training with existing seed17 manifest; original audio before random cropping or augmentation. Not an exact training-time input distribution.",
+      "definition": "20ms relative frame RMS <10% of maximum RMS (-20dB)",
+      "training_labels_checked": true,
+      "manifest_sha256": "eca50159e2533eea704b5ebb4a47fe70e01f8f7d00db11e74110ed4f193788be",
+      "views": {
+        "full_native": {
+          "median_seconds": {
+            "bonafide": 1.0,
+            "spoof": 0.48
+          },
+          "length_only_AUC": 0.69356,
+          "rules": [
+            {
+              "cutoff_s": 0.02,
+              "bonafide_with_prefix_n": 998,
+              "spoof_with_prefix_n": 993,
+              "per_class_n": 1000,
+              "length_only_balanced_accuracy": 0.5025
+            },
+            {
+              "cutoff_s": 0.1,
+              "bonafide_with_prefix_n": 997,
+              "spoof_with_prefix_n": 859,
+              "per_class_n": 1000,
+              "length_only_balanced_accuracy": 0.569
+            },
+            {
+              "cutoff_s": 0.5,
+              "bonafide_with_prefix_n": 988,
+              "spoof_with_prefix_n": 499,
+              "per_class_n": 1000,
+              "length_only_balanced_accuracy": 0.7444999999999999
+            }
+          ]
+        },
+        "first_64600_before_padding": {
+          "median_seconds": {
+            "bonafide": 1.0,
+            "spoof": 0.48
+          },
+          "length_only_AUC": 0.6935605,
+          "rules": [
+            {
+              "cutoff_s": 0.02,
+              "bonafide_with_prefix_n": 998,
+              "spoof_with_prefix_n": 993,
+              "per_class_n": 1000,
+              "length_only_balanced_accuracy": 0.5025
+            },
+            {
+              "cutoff_s": 0.1,
+              "bonafide_with_prefix_n": 997,
+              "spoof_with_prefix_n": 859,
+              "per_class_n": 1000,
+              "length_only_balanced_accuracy": 0.569
+            },
+            {
+              "cutoff_s": 0.5,
+              "bonafide_with_prefix_n": 988,
+              "spoof_with_prefix_n": 499,
+              "per_class_n": 1000,
+              "length_only_balanced_accuracy": 0.7444999999999999
+            }
+          ]
+        }
+      }
+    },
+    "COMPLETED.json": {
+      "status": "complete",
+      "script_sha256": "c03c10863de95db7fc20fabd2961797b54de3110ff4e8178d320f5de7798ec68",
+      "n": 1298
+    },
+    "summary.json": {
+      "plan": {
+        "population": "Existing original/native samples only; ASVspoof2021 DF source=asvspoof, both true labels. No VCC inspection.",
+        "checkpoint": "/home/mentee/results/CM/LA/EBM/model/BestCLS_80_21DF.pt",
+        "input": "Entire native waveform, existing frozen-model view 0. No new inference or waveform intervention.",
+        "definitions": "Leading consecutive nonoverlapping 20ms frame RMS below 10% of full-file maximum RMS (-20dB); -40dB sensitivity.",
+        "fixed_cutoffs_seconds": [
+          0.02,
+          0.1,
+          0.5
+        ],
+        "cutoff_meaning": ">=20ms means at least one measured leading quiet frame; >=100ms and >=500ms are descriptive sustained-prefix thresholds. They are not picked for accuracy.",
+        "availability_vs_use": "Length-only balanced accuracy measures availability of a correlated cue, NOT whether the network uses it.",
+        "interpretation": "Natural cross-file associations, not causal shortcut identification. Model selection involved 21DF. No VCC causal/generalization claim from this analysis.",
+        "created_utc": "2026-10-30T07:29:16Z"
+      },
+      "n": 1298,
+      "classes": {
+        "bonafide": {
+          "n": 1050,
+          "speakers": 64,
+          "lead_median_s": 1.04,
+          "cosine_mean": 0.989206842822688,
+          "cosine_median": 0.9938362240791321,
+          "cosine_q10": 0.9899167478084564,
+          "cosine_q90": 0.9952553749084473,
+          "OC_cosine_ge09_n": 1044,
+          "duration_quantiles_s": {
+            "20": [
+              0.0,
+              0.86,
+              1.04,
+              1.24,
+              5.16
+            ],
+            "40": [
+              0.0,
+              0.52,
+              0.76,
+              1.0150000000000001,
+              5.14
+            ]
+          },
+          "source_cohort_counts": {
+            "previous": 525,
+            "new_files": 525
+          }
+        },
+        "spoof": {
+          "n": 248,
+          "speakers": 44,
+          "lead_median_s": 0.08,
+          "cosine_mean": -0.40896563442243683,
+          "cosine_median": -0.8956920802593231,
+          "cosine_q10": -0.9783696115016938,
+          "cosine_q90": 0.943166619539261,
+          "OC_cosine_ge09_n": 34,
+          "duration_quantiles_s": {
+            "20": [
+              0.0,
+              0.06,
+              0.08,
+              0.52,
+              3.88
+            ],
+            "40": [
+              0.0,
+              0.0,
+              0.04,
+              0.125,
+              3.56
+            ]
+          },
+          "source_cohort_counts": {
+            "previous": 124,
+            "new_files": 124
+          }
+        }
+      },
+      "cutoff_rules": {
+        "20": {
+          "rules": [
+            {
+              "cutoff_s": 0.02,
+              "bonafide_with_prefix_n": 1048,
+              "bonafide_total_n": 1050,
+              "spoof_with_prefix_n": 228,
+              "spoof_total_n": 248,
+              "bonafide_with_prefix_fraction": 0.9980952380952381,
+              "spoof_with_prefix_fraction": 0.9193548387096774,
+              "length_only_balanced_accuracy": 0.5393701996927803
+            },
+            {
+              "cutoff_s": 0.1,
+              "bonafide_with_prefix_n": 1045,
+              "bonafide_total_n": 1050,
+              "spoof_with_prefix_n": 111,
+              "spoof_total_n": 248,
+              "bonafide_with_prefix_fraction": 0.9952380952380953,
+              "spoof_with_prefix_fraction": 0.4475806451612903,
+              "length_only_balanced_accuracy": 0.7738287250384024
+            },
+            {
+              "cutoff_s": 0.5,
+              "bonafide_with_prefix_n": 1036,
+              "bonafide_total_n": 1050,
+              "spoof_with_prefix_n": 63,
+              "spoof_total_n": 248,
+              "bonafide_with_prefix_fraction": 0.9866666666666667,
+              "spoof_with_prefix_fraction": 0.2540322580645161,
+              "length_only_balanced_accuracy": 0.8663172043010753
+            }
+          ],
+          "length_only_AUC": 0.8622100614439325
+        },
+        "40": {
+          "rules": [
+            {
+              "cutoff_s": 0.02,
+              "bonafide_with_prefix_n": 978,
+              "bonafide_total_n": 1050,
+              "spoof_with_prefix_n": 184,
+              "spoof_total_n": 248,
+              "bonafide_with_prefix_fraction": 0.9314285714285714,
+              "spoof_with_prefix_fraction": 0.7419354838709677,
+              "length_only_balanced_accuracy": 0.5947465437788018
+            },
+            {
+              "cutoff_s": 0.1,
+              "bonafide_with_prefix_n": 960,
+              "bonafide_total_n": 1050,
+              "spoof_with_prefix_n": 68,
+              "spoof_total_n": 248,
+              "bonafide_with_prefix_fraction": 0.9142857142857143,
+              "spoof_with_prefix_fraction": 0.27419354838709675,
+              "length_only_balanced_accuracy": 0.8200460829493088
+            },
+            {
+              "cutoff_s": 0.5,
+              "bonafide_with_prefix_n": 814,
+              "bonafide_total_n": 1050,
+              "spoof_with_prefix_n": 36,
+              "spoof_total_n": 248,
+              "bonafide_with_prefix_fraction": 0.7752380952380953,
+              "spoof_with_prefix_fraction": 0.14516129032258066,
+              "length_only_balanced_accuracy": 0.8150384024577573
+            }
+          ],
+          "length_only_AUC": 0.8338133640552996
+        }
+      },
+      "score_strata": {
+        "0.02": {
+          "bonafide": {
+            "shorter": {
+              "n": 2,
+              "speakers": 2,
+              "lead_median_s": 0.0,
+              "cosine_mean": 0.993571400642395,
+              "cosine_median": 0.993571400642395,
+              "cosine_q10": 0.9930910348892212,
+              "cosine_q90": 0.9940517663955688,
+              "OC_cosine_ge09_n": 2
+            },
+            "at_least_cutoff": {
+              "n": 1048,
+              "speakers": 64,
+              "lead_median_s": 1.04,
+              "cosine_mean": 0.9891985135138718,
+              "cosine_median": 0.9938362240791321,
+              "cosine_q10": 0.9899067461490632,
+              "cosine_q90": 0.9952566146850585,
+              "OC_cosine_ge09_n": 1042
+            }
+          },
+          "spoof": {
+            "shorter": {
+              "n": 20,
+              "speakers": 15,
+              "lead_median_s": 0.0,
+              "cosine_mean": -0.9677144229412079,
+              "cosine_median": -0.9698619544506073,
+              "cosine_q10": -0.9841333270072937,
+              "cosine_q90": -0.949388188123703,
+              "OC_cosine_ge09_n": 0
+            },
+            "at_least_cutoff": {
+              "n": 228,
+              "speakers": 44,
+              "lead_median_s": 0.08,
+              "cosine_mean": -0.35995258279798326,
+              "cosine_median": -0.8647081553936005,
+              "cosine_q10": -0.9753113389015198,
+              "cosine_q90": 0.954806798696518,
+              "OC_cosine_ge09_n": 34
+            }
+          }
+        },
+        "0.1": {
+          "bonafide": {
+            "shorter": {
+              "n": 5,
+              "speakers": 3,
+              "lead_median_s": 0.02,
+              "cosine_mean": 0.9933441519737244,
+              "cosine_median": 0.9929709434509277,
+              "cosine_q10": 0.9926797389984131,
+              "cosine_q90": 0.9941718578338623,
+              "OC_cosine_ge09_n": 5
+            },
+            "at_least_cutoff": {
+              "n": 1045,
+              "speakers": 64,
+              "lead_median_s": 1.04,
+              "cosine_mean": 0.9891870470851232,
+              "cosine_median": 0.9938371181488037,
+              "cosine_q10": 0.9898917436599731,
+              "cosine_q90": 0.9952584743499756,
+              "OC_cosine_ge09_n": 1039
+            }
+          },
+          "spoof": {
+            "shorter": {
+              "n": 137,
+              "speakers": 37,
+              "lead_median_s": 0.06,
+              "cosine_mean": -0.25040789660963697,
+              "cosine_median": -0.8310517072677612,
+              "cosine_q10": -0.9785927653312683,
+              "cosine_q90": 0.9705678343772889,
+              "OC_cosine_ge09_n": 29
+            },
+            "at_least_cutoff": {
+              "n": 111,
+              "speakers": 40,
+              "lead_median_s": 0.68,
+              "cosine_mean": -0.6046630225337304,
+              "cosine_median": -0.9191054105758667,
+              "cosine_q10": -0.9783356189727783,
+              "cosine_q90": 0.8180992007255554,
+              "OC_cosine_ge09_n": 5
+            }
+          }
+        },
+        "0.5": {
+          "bonafide": {
+            "shorter": {
+              "n": 14,
+              "speakers": 9,
+              "lead_median_s": 0.4,
+              "cosine_mean": 0.9938516574246543,
+              "cosine_median": 0.994142085313797,
+              "cosine_q10": 0.9926564276218415,
+              "cosine_q90": 0.9951024174690246,
+              "OC_cosine_ge09_n": 14
+            },
+            "at_least_cutoff": {
+              "n": 1036,
+              "speakers": 64,
+              "lead_median_s": 1.04,
+              "cosine_mean": 0.9891440750577966,
+              "cosine_median": 0.9938263595104218,
+              "cosine_q10": 0.989861249923706,
+              "cosine_q90": 0.995254635810852,
+              "OC_cosine_ge09_n": 1030
+            }
+          },
+          "spoof": {
+            "shorter": {
+              "n": 185,
+              "speakers": 39,
+              "lead_median_s": 0.06,
+              "cosine_mean": -0.32569382130294233,
+              "cosine_median": -0.8683406710624695,
+              "cosine_q10": -0.9787546277046204,
+              "cosine_q90": 0.9654848456382752,
+              "OC_cosine_ge09_n": 33
+            },
+            "at_least_cutoff": {
+              "n": 63,
+              "speakers": 32,
+              "lead_median_s": 1.06,
+              "cosine_mean": -0.6534939745352382,
+              "cosine_median": -0.9191054105758667,
+              "cosine_q10": -0.9781212687492371,
+              "cosine_q90": 0.45741965770721454,
+              "OC_cosine_ge09_n": 1
+            }
+          }
+        }
+      },
+      "natural_score_association": {
+        "bonafide": {
+          "n": 1050,
+          "speakers": 64,
+          "spearman": -0.11726469825925687,
+          "ci95_speaker_bootstrap": [
+            -0.24670894933323342,
+            0.003596205240959017
+          ]
+        },
+        "spoof": {
+          "n": 248,
+          "speakers": 44,
+          "spearman": -0.08533214181978184,
+          "ci95_speaker_bootstrap": [
+            -0.23582458585229482,
+            0.07153802960722822
+          ]
+        }
+      },
+      "spoof_attack_strata": [
+        {
+          "n": 16,
+          "speakers": 14,
+          "lead_median_s": 0.06,
+          "cosine_mean": -0.42966586723923683,
+          "cosine_median": -0.7386103868484497,
+          "cosine_q10": -0.9678945243358612,
+          "cosine_q90": 0.7590517997741699,
+          "OC_cosine_ge09_n": 2,
+          "attack": "A07",
+          "n_ge100ms": 1,
+          "lead_score_spearman": 0.14999601461308465
+        },
+        {
+          "n": 22,
+          "speakers": 17,
+          "lead_median_s": 0.21000000000000002,
+          "cosine_mean": -0.20501164922660048,
+          "cosine_median": -0.8657640218734741,
+          "cosine_q10": -0.9551803767681122,
+          "cosine_q90": 0.8896140515804292,
+          "OC_cosine_ge09_n": 2,
+          "attack": "A08",
+          "n_ge100ms": 22,
+          "lead_score_spearman": -0.22461944246247878
+        },
+        {
+          "n": 16,
+          "speakers": 14,
+          "lead_median_s": 0.08,
+          "cosine_mean": -0.9366160817444324,
+          "cosine_median": -0.9471796751022339,
+          "cosine_q10": -0.9779755771160126,
+          "cosine_q90": -0.8843967616558075,
+          "OC_cosine_ge09_n": 0,
+          "attack": "A09",
+          "n_ge100ms": 5,
+          "lead_score_spearman": -0.21940349021892172
+        },
+        {
+          "n": 20,
+          "speakers": 12,
+          "lead_median_s": 0.06,
+          "cosine_mean": 0.858856451511383,
+          "cosine_median": 0.9793434739112854,
+          "cosine_q10": 0.8624860525131226,
+          "cosine_q90": 0.9891862094402313,
+          "OC_cosine_ge09_n": 15,
+          "attack": "A10",
+          "n_ge100ms": 0,
+          "lead_score_spearman": 0.42671121671907586
+        },
+        {
+          "n": 15,
+          "speakers": 12,
+          "lead_median_s": 0.06,
+          "cosine_mean": 0.838676451643308,
+          "cosine_median": 0.914890468120575,
+          "cosine_q10": 0.7685619831085205,
+          "cosine_q90": 0.9655925989151001,
+          "OC_cosine_ge09_n": 10,
+          "attack": "A11",
+          "n_ge100ms": 1,
+          "lead_score_spearman": 0.20933630659693378
+        },
+        {
+          "n": 22,
+          "speakers": 17,
+          "lead_median_s": 0.04,
+          "cosine_mean": -0.5844578980044886,
+          "cosine_median": -0.8640240430831909,
+          "cosine_q10": -0.9569810152053833,
+          "cosine_q90": 0.26145516782999106,
+          "OC_cosine_ge09_n": 1,
+          "attack": "A12",
+          "n_ge100ms": 1,
+          "lead_score_spearman": -0.23437266679412289
+        },
+        {
+          "n": 26,
+          "speakers": 16,
+          "lead_median_s": 0.0,
+          "cosine_mean": -0.9690835109123817,
+          "cosine_median": -0.973681628704071,
+          "cosine_q10": -0.9840312302112579,
+          "cosine_q90": -0.9506793916225433,
+          "OC_cosine_ge09_n": 0,
+          "attack": "A13",
+          "n_ge100ms": 0,
+          "lead_score_spearman": -0.10009101746385184
+        },
+        {
+          "n": 20,
+          "speakers": 13,
+          "lead_median_s": 0.08,
+          "cosine_mean": -0.7657086696475744,
+          "cosine_median": -0.8988075256347656,
+          "cosine_q10": -0.9676450848579407,
+          "cosine_q90": -0.5039383709430691,
+          "OC_cosine_ge09_n": 0,
+          "attack": "A14",
+          "n_ge100ms": 7,
+          "lead_score_spearman": -0.1766197390562009
+        },
+        {
+          "n": 20,
+          "speakers": 16,
+          "lead_median_s": 0.06,
+          "cosine_mean": -0.03885428234934807,
+          "cosine_median": -0.10827840119600296,
+          "cosine_q10": -0.9459927201271057,
+          "cosine_q90": 0.9129535079002381,
+          "OC_cosine_ge09_n": 3,
+          "attack": "A15",
+          "n_ge100ms": 8,
+          "lead_score_spearman": -0.46637758935643603
+        },
+        {
+          "n": 9,
+          "speakers": 9,
+          "lead_median_s": 0.06,
+          "cosine_mean": -0.859148793750339,
+          "cosine_median": -0.9637322425842285,
+          "cosine_q10": -0.9801780700683593,
+          "cosine_q90": -0.5733357906341553,
+          "OC_cosine_ge09_n": 0,
+          "attack": "A16",
+          "n_ge100ms": 4,
+          "lead_score_spearman": 0.12241204793696706
+        },
+        {
+          "n": 19,
+          "speakers": 16,
+          "lead_median_s": 1.08,
+          "cosine_mean": -0.9376955597024215,
+          "cosine_median": -0.953925609588623,
+          "cosine_q10": -0.9813177108764648,
+          "cosine_q90": -0.9034109830856323,
+          "OC_cosine_ge09_n": 0,
+          "attack": "A17",
+          "n_ge100ms": 19,
+          "lead_score_spearman": -0.4958315527787216
+        },
+        {
+          "n": 25,
+          "speakers": 17,
+          "lead_median_s": 1.08,
+          "cosine_mean": -0.7516045808792114,
+          "cosine_median": -0.9107779860496521,
+          "cosine_q10": -0.9744558811187745,
+          "cosine_q90": -0.5844719052314755,
+          "OC_cosine_ge09_n": 1,
+          "attack": "A18",
+          "n_ge100ms": 25,
+          "lead_score_spearman": -0.5246153846153846
+        },
+        {
+          "n": 18,
+          "speakers": 14,
+          "lead_median_s": 0.96,
+          "cosine_mean": -0.35143401639329064,
+          "cosine_median": -0.6439538598060608,
+          "cosine_q10": -0.9678754806518555,
+          "cosine_q90": 0.6034913718700411,
+          "OC_cosine_ge09_n": 0,
+          "attack": "A19",
+          "n_ge100ms": 18,
+          "lead_score_spearman": -0.7518113287871696
+        }
+      ],
+      "note_score": "Higher cosine means more bonafide-like. >=0.9 is a descriptive region, not calibrated classification accuracy.",
+      "verification": {
+        "all_original_pcm_hashes_verified": true,
+        "cached_cosine_recomputed": true,
+        "source_only_asvspoof": true
+      },
+      "frozen_model_native_ASV_AUC": 0.9951958525345621
+    },
+    "plan.json": {
+      "population": "Existing original/native samples only; ASVspoof2021 DF source=asvspoof, both true labels. No VCC inspection.",
+      "checkpoint": "/home/mentee/results/CM/LA/EBM/model/BestCLS_80_21DF.pt",
+      "input": "Entire native waveform, existing frozen-model view 0. No new inference or waveform intervention.",
+      "definitions": "Leading consecutive nonoverlapping 20ms frame RMS below 10% of full-file maximum RMS (-20dB); -40dB sensitivity.",
+      "fixed_cutoffs_seconds": [
+        0.02,
+        0.1,
+        0.5
+      ],
+      "cutoff_meaning": ">=20ms means at least one measured leading quiet frame; >=100ms and >=500ms are descriptive sustained-prefix thresholds. They are not picked for accuracy.",
+      "availability_vs_use": "Length-only balanced accuracy measures availability of a correlated cue, NOT whether the network uses it.",
+      "interpretation": "Natural cross-file associations, not causal shortcut identification. Model selection involved 21DF. No VCC causal/generalization claim from this analysis.",
+      "created_utc": "2026-10-30T07:29:16Z"
+    }
+  },
+  "method_documents": {
+    "report.md": "# ASV natural leading low-energy presence: cue availability, not causal use\n\nFull original/native ASV-source sample only; B=1050, S=248; frozen epoch80. VCC not inspected.\nPrimary low-energy criterion: 20ms RMS <10% of full-file max RMS (relative -20dB).\n\n| Required leading prefix | B with prefix | S with prefix | Length-only balanced accuracy |\n|---|---:|---:|---:|\n|>=0.02s|1048/1050 (99.8%)|228/248 (91.9%)|53.9%|\n|>=0.10s|1045/1050 (99.5%)|111/248 (44.8%)|77.4%|\n|>=0.50s|1036/1050 (98.7%)|63/248 (25.4%)|86.6%|\n\nThe threshold-only rule predicts bonafide if prefix duration is at least the cutoff. Balanced accuracy avoids reporting an inflated majority-class accuracy. This is not the model accuracy.\nModel score strata are observational: source, codec, attack and waveform properties can confound the association. A score region at cosine 0.9 is descriptive and is not a calibrated classification boundary.\nB-only natural length/score correlation does not test B-vs-S adoption of a presence cue, especially with near-complete B exposure.\nTesting whether this cue causes VCC degradation requires a controlled ASV-trained intervention/retraining comparison, with VCC held out from tuning. No such causal estimate is made here.\n",
+    "report_ko.md": "# 앞 저에너지 구간이 ASV 지름길이 되어 VCC 성능을 낮추는가\r\n\r\n현재 판정: 학습 원본에 길이와 정답의 연관성은 확인되며, 이 연관성을 학습했을 가능성은 남는다. 그러나 단순 존재 여부만으로 구분되는 학습 분포는 아니었다. 실제 모델의 이용 정도 및 VCC 성능 저하의 인과 원인은 미확정이다.\r\n\r\n## 19LA 학습 원본에서 확인한 단서의 가용성\r\n\r\n기존 seed17 표본 B/S 각 1,000개. 전체 원본 파일에서 측정한 값이며 랜덤 crop·augmentation을 거친 실제 학습 입력 스트림은 재현하지 않았다. 저에너지 정의는 20ms 프레임 RMS가 최대 프레임 RMS의 10% 미만인 초기 연속 구간(−20dB)이다.\r\n\r\n| 앞 구간 기준 | Bona fide에 존재 | Spoof에 존재 | 길이 규칙만의 균형 정확도 |\r\n|---|---:|---:|---:|\r\n| ≥0.02초 | 998/1000 (99.8%) | 993/1000 (99.3%) | 50.25% |\r\n| ≥0.10초 | 997/1000 (99.7%) | 859/1000 (85.9%) | 56.90% |\r\n| ≥0.50초 | 988/1000 (98.8%) | 499/1000 (49.9%) | 74.45% |\r\n\r\n학습 원본 앞 저에너지 길이 중앙값은 B=1.00초, S=0.48초다. 20ms의 단순 유무는 거의 구분력이 없지만, 0.5초 이상인지에는 정답 연관성이 있다. 임계값은 결과에 맞춰 최적화하지 않고 20/100/500ms로 고정했다. 이 단순 규칙의 정확도는 신경망의 정확도나 신경망이 단서를 이용한 비율이 아니다.\r\n전체 원본과 첫 64,600샘플에서 이 표의 비율과 중앙값은 같았다. 랜덤 crop이나 그 밖의 학습 증강이 이 정보를 실제로 얼마나 보존했는지는 별도의 문제다.\r\n\r\n## 21DF ASV 출처 평가 표본\r\n\r\n원본 전체 파형을 입력한 기존 epoch80 모델의 native view0만 사용했다. B=1,050개, S=248개. 전체 원본 PCM 해시를 검증했다. VCC는 열거나 평가하지 않았다.\r\n\r\n| 앞 구간 기준 | Bona fide에 존재 | Spoof에 존재 | 길이 규칙만의 균형 정확도 |\r\n|---|---:|---:|---:|\r\n| ≥0.02초 | 1048/1050 (99.8%) | 228/248 (91.9%) | 53.94% |\r\n| ≥0.10초 | 1045/1050 (99.5%) | 111/248 (44.8%) | 77.38% |\r\n| ≥0.50초 | 1036/1050 (98.7%) | 63/248 (25.4%) | 86.63% |\r\n\r\n평가 ASV의 중앙값은 B=1.04초, S=0.08초였다. 평가 자료의 강한 분포 차이를 곧바로 학습 당시의 동일한 차이라고 가정해서는 안 된다.\r\n\r\n## 모델의 자연 점수는 단순 길이 규칙과 일치하지 않는다\r\n\r\n학습된 bona fide OC 중심과의 코사인이 클수록 bona fide 방향이다. 아래는 서로 다른 공격의 원본 파일을 비교한 관찰값이다.\r\n\r\n| Spoof 공격 | n | 앞 저에너지 길이 중앙값 | 중심 코사인 중앙값 |\r\n|---|---:|---:|---:|\r\n| A10 | 20 | 0.06초 | +0.979 |\r\n| A11 | 15 | 0.06초 | +0.915 |\r\n| A17 | 19 | 1.08초 | -0.954 |\r\n\r\n따라서 이 모델을 단순히 “앞 구간이 길면 B”라는 규칙만으로 설명할 수는 없다. 다른 합성 흔적과 공격별 특성이 함께 작용할 수 있으며, 이 비교는 작은 보조적 길이 의존성을 배제하지도 않는다. 코사인 값 자체를 보정된 오류율 또는 확률로 해석하지 않는다.\r\n\r\n## 가설을 인과적으로 검증하려면\r\n\r\n검증할 가설은 “ASV 학습에서 정답과 상관된 앞 저에너지 길이/형태에 의존해, 그 상관관계가 유지되지 않는 VCC에서 일반화가 저하된다”이다.\r\n기준 학습과, ASV 학습 B/S의 앞 구간 유무·길이 분포를 맞춘 학습을 비교해야 한다. 본문 보존, 모델·손실·학습량·seed를 맞추고, 처리 자체의 영향을 대조해야 한다. ASV 학습/검증으로 처리 설정을 정한 뒤 VCC는 마지막 평가에만 사용한다. 복수 seed에서 VCC의 EER 및 고정 임계값 오류율이 재현성 있게 개선되고 앞 구간 변화에 대한 점수 민감도도 감소하면 가설의 근거가 강화된다. 성능 변화 하나만으로 유일 원인이라고 확정하지 않는다.\r\n이번 작업은 그 재학습 검증을 실행한 것이 아니다. VCC 성능을 새로 측정하거나 VCC에 맞춰 설정을 조정하지 않았다.\r\n\r\n서버 저장 경로: /results/analysis/EBM80_ASV_quiet_presence_hypothesis_20261030/\r\n산출물: summary.json, train_context.json, report_ko.md. 파일별 특징과 점수는 private/에만 보관했다. 두 분석 프로세스는 정상 종료했다.\r\n"
+  }
+}

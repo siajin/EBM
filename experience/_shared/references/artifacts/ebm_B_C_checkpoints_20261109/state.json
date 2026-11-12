@@ -1,0 +1,94 @@
+{
+  "status": "evaluation_complete_analysis_pending",
+  "root": "/home/mentee/analysis/ebm_B_C_checkpoints_20261109",
+  "models": [
+    "B_e5",
+    "B_e10",
+    "B_e15",
+    "B_e20",
+    "B_e25",
+    "B_e30",
+    "B_e35",
+    "B_e40",
+    "B_e45",
+    "B_e50",
+    "C_e5",
+    "C_e10",
+    "C_e15",
+    "C_e20",
+    "C_e25",
+    "C_e30",
+    "C_e35",
+    "C_e40",
+    "C_e45",
+    "C_e50"
+  ],
+  "epochs": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50
+  ],
+  "phases": [
+    "dev",
+    "19LA",
+    "21LA",
+    "21DF"
+  ],
+  "evaluation_complete": true,
+  "analysis_complete": false,
+  "automation_status": "PAUSED",
+  "regular_schedule_reenabled": false,
+  "supersedes_B8_root": "/home/mentee/analysis/ebm_B_checkpoints_20261108",
+  "evaluator": "EBM/tools/evaluate_B_C_checkpoints.py",
+  "model_count": 20,
+  "started_KST": "2026-11-09T11:22:34+09:00",
+  "last_check_KST": "2026-11-09T20:51:48",
+  "smoke_passed": true,
+  "current_phase": "complete",
+  "run_exit": 0,
+  "report": "docs/experiments/ebm_B_C_all_checkpoint_evaluation_20261109.md",
+  "parent_host_pid": 4099748,
+  "rank_host_pids": [
+    4099757,
+    4099758
+  ],
+  "last_progress": {
+    "progress_rank0.json": {
+      "phase": "21DF",
+      "rows": 266808,
+      "expected_rank_rows": 266964,
+      "elapsed_seconds": 23639.80949640274,
+      "updated_unix": 1794222649.9277108,
+      "smoke": false
+    },
+    "progress_rank1.json": {
+      "phase": "21DF",
+      "rows": 266808,
+      "expected_rank_rows": 266964,
+      "elapsed_seconds": 19592.478097200394,
+      "updated_unix": 1794218377.6065729,
+      "smoke": false
+    }
+  },
+  "completed_phases": [
+    "dev",
+    "19LA",
+    "21LA",
+    "21DF"
+  ],
+  "observed_completed_inputs": 778185,
+  "total_inputs": 778185,
+  "dev_analysis_complete": true,
+  "dev_analysis": "artifacts/ebm_B_C_checkpoints_20261109/dev_analysis/analysis.json",
+  "LA_analysis_complete": true,
+  "LA_analysis": "artifacts/ebm_B_C_checkpoints_20261109/LA_analysis/analysis.json",
+  "finished_KST": "2026-11-09T20:11:34+09:00",
+  "metrics": "artifacts/ebm_B_C_checkpoints_20261109/metrics.json"
+}

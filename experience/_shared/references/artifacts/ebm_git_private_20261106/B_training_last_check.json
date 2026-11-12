@@ -1,0 +1,60 @@
+{
+  "checked_KST": "2026-11-07T21:47:59",
+  "run_root": "/home/mentee/analysis/ebm_train_B_20261106_213627",
+  "condition": "B",
+  "experiment_name": "EBM_e50_bs240_lr1e5_B_zeropad_short303",
+  "branch": "train/ebm-B-zeropad-e50-bs240-20261106",
+  "commit": "2c2c6ff65bbadf33b811983f7c648c97fffb81a1",
+  "working_tree_clean": true,
+  "exit_code": 0,
+  "last_epoch": 50,
+  "last_completed_batch": 108,
+  "batches_per_epoch": 108,
+  "last_loss1": 0.539,
+  "last_loss2": 0.683,
+  "error_markers": [],
+  "log_age_seconds": 19521.56,
+  "GPU_readback": "6, 0\n6, 0",
+  "source_hashes_unchanged": true,
+  "logger_backup_matches_launched_source": true,
+  "old_baseline_results_unchanged": true,
+  "metrics_tail": {
+    "loss1": [
+      "loss1: 0.5484088063240051",
+      "loss1: 0.561244010925293",
+      "loss1: 0.5393436551094055"
+    ],
+    "loss2": [
+      "loss2: 0.6487467885017395",
+      "loss2: 0.641943097114563",
+      "loss2: 0.6829141974449158"
+    ],
+    "padding": [
+      "padding: 0.0",
+      "padding: 0.0",
+      "padding: 0.0"
+    ],
+    "active_pairs": [
+      "active_pairs: 0",
+      "active_pairs: 0",
+      "active_pairs: 0"
+    ],
+    "oc_long": [
+      "oc_long: 0.1321975439786911",
+      "oc_long: 0.1046859622001648",
+      "oc_long: 0.06877521425485611"
+    ],
+    "oc_short": [
+      "oc_short: 0.1375943273305893",
+      "oc_short: 0.21497215330600739",
+      "oc_short: 0.1218581274151802"
+    ],
+    "bpl": [
+      "bpl: 0.4162112772464752",
+      "bpl: 0.45655807852745056",
+      "bpl: 0.47056844830513"
+    ]
+  },
+  "parent_container_pid": 1619454,
+  "preflight_passed": true
+}

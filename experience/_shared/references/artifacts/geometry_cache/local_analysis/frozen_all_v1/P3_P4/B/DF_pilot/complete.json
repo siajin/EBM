@@ -1,0 +1,23 @@
+{
+  "status": "complete",
+  "seconds": 15530.59125289999,
+  "outer_folds": 5,
+  "inner_folds": 3,
+  "variants": [
+    "scalar",
+    "direction_linear",
+    "noise_linear",
+    "direction_mlp",
+    "noise_mlp",
+    "direction_hstat",
+    "direction_noise2",
+    "direction_h",
+    "direction_noise160"
+  ],
+  "seeds": [
+    101,
+    102,
+    103
+  ],
+  "new_EBM_training": false
+}

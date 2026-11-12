@@ -1,0 +1,14 @@
+[
+  {
+    "path": "experience/02_repetition/E010/code/EBM/tools/evaluate_B_C_checkpoints.py",
+    "sha256": "961ece4a5ba570bab91bfee45a6992e1767174f22cfaa94861c7e755e1a2230e",
+    "origin": "EBM/tools/evaluate_B_C_checkpoints.py",
+    "kind": "explicit method source"
+  },
+  {
+    "path": "experience/02_repetition/E010/code/EBM/tools/evaluate_B_checkpoints.py",
+    "sha256": "9482fd15f9cdee9a22f710f3e6132844814b5d73c11f642ea59d5baf112030cd",
+    "origin": "EBM/tools/evaluate_B_checkpoints.py",
+    "kind": "implementation / validation source"
+  }
+]
