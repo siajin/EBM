@@ -150,7 +150,7 @@ DF 완화52쌍에서 원점수 평균 차이는0.009805다. 이 부분집합에�
 4. P_mean: P_scalar에 세 view의 평균 점수 하나만 추가. `d_0.5,d_1`의 일반적인 양방향 조합과 같지는 않지만, ‘평균하기만 해도 되는가’를 평가한다. 원본과 변형 하나의 평균은 그 변형 delta와 원본으로 정확히 복원 가능하므로 독립된 기전 증거로 세지 않는다.
 5. P_noise: P_scalar에 UID로 생성한 정규잡음2개를 추가. 같은 차원의 정규화·분류기 대조.
 
-부모 EBM은 T에서 이미 학습됐으므로 T 성능은 독립 결과가 아니다. 모든 response 출력을 T/V에서 새로 계산하고, 두 결합기의 scaler/spline knot는 T만으로 fit한다. spline은 degree3/quantile5 knots, 중복 knot는 deterministic unique 처리한다. ridge C={0.01,0.1,1,10}, 각 모델은 V balanced log-loss로 선택하며 동점은 작은 원음 전체 비반복 학습 우선이다. V가 너무 쉬워 분별하지 못하면 선택력 부족으로 보고하며 target에서 tau/원음 전체 비반복 학습/feature를 재선택하지 않는다. seed는 fit 구현에 필요한 경우101/102/103 고정이며 결과를 보고 좋은 seed를 고르지 않는다.
+부모 EBM은 T에서 이미 학습됐으므로 T 성능은 독립 결과가 아니다. 모든 response 출력을 T/V에서 새로 계산하고, 두 결합기의 scaler/spline knot는 T만으로 fit한다. spline은 degree3/quantile5 knots, 중복 knot는 deterministic unique 처리한다. ridge C={0.01,0.1,1,10}, 각 모델은 V balanced log-loss로 선택하며 동점은 작은 EBM-FullContext 우선이다. V가 너무 쉬워 분별하지 못하면 선택력 부족으로 보고하며 target에서 tau/EBM-FullContext/feature를 재선택하지 않는다. seed는 fit 구현에 필요한 경우101/102/103 고정이며 결과를 보고 좋은 seed를 고르지 않는다.
 
 주 지표는 고정 target에서 `LL(P_scalar)−LL(P_response)`다. 주 도메인은 DF,21LA 두 개다. 보조는 EER/AUROC와 V에서 bona FRR≤1%로 정한 각 모델별 threshold의 FAR/FRR다. 원점수의 단조 보정만으로 EER는 바뀌지 않지만 scalar 결합기는 norm·길이도 쓰므로 native와 따로 비교한다. 반응은 이 모든 공통 항을 넘어 이득이 있어야 한다.
 

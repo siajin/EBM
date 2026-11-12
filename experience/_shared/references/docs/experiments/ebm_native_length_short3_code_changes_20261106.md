@@ -4,9 +4,9 @@
 
 # EBM 원길이와 3초 short 코드 변경 결과
 
-**현재 기본값은 4.0375초 상한 비반복 학습:** Long4.0375초·Short3.0275초 상한을 유지하고 반복을 제거했다. CPU의 미사용 wrapped 생성도 껐다. 두 보조 손실0, 기존 OC+BPL 유지. 아래 내용은 이전 구현 기록이며 현재 설정과 통제 비교 기준은 [4.0375초 상한 비반복 학습 변경·검증 기록](ebm_control_B_20261106.md)을 따른다. 배치 240 고정 길이 반복 입력 학습 codec에 관한 확정 표현도 정정했다. 보관 소스에는 활성 호출이 있지만 당시 실행 적용 여부는 확인하지 못했다.
+**현재 기본값은 EBM-NoRepeat:** Long4.0375초·Short3.0275초 상한을 유지하고 반복을 제거했다. CPU의 미사용 wrapped 생성도 껐다. 두 보조 손실0, 기존 OC+BPL 유지. 아래 내용은 이전 구현 기록이며 현재 설정과 통제 비교 기준은 [EBM-NoRepeat 변경·검증 기록](ebm_control_B_20261106.md)을 따른다. EBM-Repeat codec에 관한 확정 표현도 정정했다. 보관 소스에는 활성 호출이 있지만 당시 실행 적용 여부는 확인하지 못했다.
 
-**최신 기본값 20:58 E1 전환:** 사용자가 이번에는 반복 입력 없이0패딩으로기존batch240결과와비교하려는의도를명확히해 `arguments.py`의 `short_oc_weight=0`, `padding_loss_weight=0`, 이름=`EBM_e50_bs240_lr1e5_native_short303_E1`로바꿨다. 모델에는long/short두branch만입력되고분류손실은기존long OC와로컬BPL만쓴다. 아래E3는이전구현당시기록이다. 미사용W가CPU collate에서생성될수는있지만모델forward나손실에는들어가지않는다. 배치 240 고정 길이 반복 입력 학습실험의보관코드에는onlinecodec확률.8/활성호출2개가있으므로현재codec-off결과와의단순비교로반복제거효과를단독입증할수없다.
+**최신 기본값 20:58 E1 전환:** 사용자가 이번에는 반복 입력 없이0패딩으로기존batch240결과와비교하려는의도를명확히해 `arguments.py`의 `short_oc_weight=0`, `padding_loss_weight=0`, 이름=`EBM_e50_bs240_lr1e5_native_short303_E1`로바꿨다. 모델에는long/short두branch만입력되고분류손실은기존long OC와로컬BPL만쓴다. 아래E3는이전구현당시기록이다. 미사용W가CPU collate에서생성될수는있지만모델forward나손실에는들어가지않는다. EBM-Repeat실험의보관코드에는onlinecodec확률.8/활성호출2개가있으므로현재codec-off결과와의단순비교로반복제거효과를단독입증할수없다.
 
 2026-11-06 서버 `/home/mentee/code/EBM`에 반영했다. 변경 전 파일은 서버 안의 `/home/mentee/analysis/ebm_native_short303_patch_20261106_2005_03/before`에 보관했다. 별도 경로에서 검증한 후 실제 소스에 적용했고, 실제 경로를 다시 import해 두 GPU 검증을 통과했다. 전체50epoch 학습은 시작하지 않았다.
 
@@ -61,7 +61,7 @@ Centroid를 고정한 encoder update 다음에, 갱신된 encoder로 정상 long
 
 | 항목 | 반영값 |
 |---|---|
-| 전체 batch | **배치 240 고정 길이 반복 입력 학습 유지**, GPU당120=정상12+스푸프108 |
+| 전체 batch | **EBM-Repeat 유지**, GPU당120=정상12+스푸프108 |
 | Physical / eval batch | GPU당8 / 8 |
 | Short | 303frames 설정 유지, 48,440samples |
 | Long / 평가 | 전체 원길이 |

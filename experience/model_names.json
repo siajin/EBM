@@ -1,0 +1,48 @@
+{
+  "created_at": "2026-11-12T11:48:47.541168+09:00",
+  "models": [
+    {
+      "name": "EBM-Repeat",
+      "description": "반복형",
+      "branch": "models/repeat"
+    },
+    {
+      "name": "EBM-NoRepeat",
+      "description": "비반복형·긴 입력 4.0375초 상한",
+      "branch": "models/no-repeat"
+    },
+    {
+      "name": "EBM-FullContext",
+      "description": "전체 문맥형·긴 학습 입력 원음 전체",
+      "branch": "models/full-context"
+    }
+  ],
+  "branch_renames": [
+    {
+      "old": "baseline/e50-bs240-lr1e5",
+      "new": "models/repeat",
+      "old_head": "cc7d324c7287b4c5e5f8a29dafec303f834f3525"
+    },
+    {
+      "old": "train/ebm-B-zeropad-e50-bs240-20261106",
+      "new": "models/no-repeat",
+      "old_head": "2c2c6ff65bbadf33b811983f7c648c97fffb81a1"
+    },
+    {
+      "old": "train/ebm-C-native-long-e50-bs240-20261108",
+      "new": "models/full-context",
+      "old_head": "cf199af03044c40837c08ce31d633e2c048bde08"
+    },
+    {
+      "old": "train/ebm-e50-bs240-lr1e5-nocodec-20261106",
+      "new": "setup/repeat-no-codec",
+      "old_head": "10f3bcd057dc6a2ca687fbd5389ad6c9e15a3746"
+    },
+    {
+      "old": "archive/ebm-research-20261112",
+      "new": "archive/research",
+      "old_head": "4afe39c5be82b84132c5f97f02e585e12e632076"
+    }
+  ],
+  "source_and_measurements_unchanged": true
+}

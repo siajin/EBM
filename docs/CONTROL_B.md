@@ -1,8 +1,8 @@
 <a id="b-상한을-유지한-반복-제거-통제실험"></a>
 
-# 4.0375초 상한 비반복 학습: 상한을 유지한 반복 제거 통제실험
+# EBM-NoRepeat: 상한을 유지한 반복 제거 통제실험
 
-2026-11-06 기준 4.0375초 상한 비반복 학습 기본값이다. 전체 학습은 시작하지 않았고, 두 GPU에서 제한된 실제 갱신 검증만 수행했다.
+2026-11-06 기준 EBM-NoRepeat 기본값이다. 전체 학습은 시작하지 않았고, 두 GPU에서 제한된 실제 갱신 검증만 수행했다.
 
 | 항목 | 설정 |
 |---|---|
@@ -25,17 +25,17 @@
 ## 비교 조건
 
 - A: native_length=False, cap_long=True, 두 보조 계수0. 기존 상한과 반복을 사용한다.
-- 4.0375초 상한 비반복 학습: native_length=True, cap_long=True, 두 보조 계수0. 현재 기본값이다.
-- 원음 전체 비반복 학습: native_length=True, cap_long=False, 두 보조 계수0. Long 전체를 사용하며 이번 대상이 아니다.
+- EBM-NoRepeat: native_length=True, cap_long=True, 두 보조 계수0. 현재 기본값이다.
+- EBM-FullContext: native_length=True, cap_long=False, 두 보조 계수0. Long 전체를 사용하며 이번 대상이 아니다.
 
 동일 구현의 반복 입력·비반복 입력 대조는 같은 현재 코드에서 새 실험 이름으로 각각 학습한다. 데이터, UID 배치 순서,
 class 비율, 초기화 seed, codec-off, RawBoost 정책, physical batch와 optimizer를 맞춘다.
 단일 seed의 결과를 일반적 개선의 증명으로 해석하지 않는다.
 
-학습 효과의 최종 비교는 각50epoch checkpoint를 모두 같은 4.0375초 상한 비반복 학습 평가 설정으로 수행한다.
+학습 효과의 최종 비교는 각50epoch checkpoint를 모두 같은 EBM-NoRepeat 평가 설정으로 수행한다.
 A 학습 설정 그대로 평가하면 반복 평가까지 함께 달라진다. target 성능으로 checkpoint나
 threshold를 선택하지 않는다. 기존 batch240 결과와의 비교만으로 반복 제거의 단독 효과를
-주장하지 않는다. 배치 240 고정 길이 반복 입력 학습의 보관 소스에는 활성 codec 호출이 있지만 당시 실행에서의
+주장하지 않는다. EBM-Repeat의 보관 소스에는 활성 codec 호출이 있지만 당시 실행에서의
 실제 적용 여부는 확인하지 못했다.
 
 ## 제한 검증

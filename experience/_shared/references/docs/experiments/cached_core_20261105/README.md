@@ -24,6 +24,6 @@
 
 기존 DF 내부1.20%/0.60%는 새 probe를 DF에서 학습한 결과다. T에서만 학습한 검출기의 일반화 성능이나 새 EBM의 성능으로 사용하지 않는다. 모든 문서의 scalar baseline은 원래 EBM과 다를 수 있다. 원래 native는cos(z,c)만 쓰며,크기는 별도 판별 입력이 아니다.
 
-진행 중인 F1 전체·P3-4.0375초 상한 비반복 학습/P4·전체 데이터 추출·R2/R3는 [실행 체크표](../ebm_frozen_model_experiments_20261105.md)를 따른다. 각 문서의 새 해석은 작성 시점의 검수 완료 자료에 한정되며,이후 완료 결과는 최신 통합 분석에 반영된다.
+진행 중인 F1 전체·P3-EBM-NoRepeat/P4·전체 데이터 추출·R2/R3는 [실행 체크표](../ebm_frozen_model_experiments_20261105.md)를 따른다. 각 문서의 새 해석은 작성 시점의 검수 완료 자료에 한정되며,이후 완료 결과는 최신 통합 분석에 반영된다.
 
 기존 [통합 결과와 검수 이력](../ebm_cached_core_results_20261105.md), [기존 독립 검수](../../../artifacts/geometry_cache/local_analysis/cached_core_v1/output_audit.json), [새 실험 검수](../../../artifacts/geometry_cache/local_analysis/frozen_all_v1/verification.json), [P3 전이 검수](../../../artifacts/geometry_cache/local_analysis/frozen_all_v1/P3_P4/A/verification.json)를 함께 확인할 수 있다.

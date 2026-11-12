@@ -29,7 +29,7 @@
 
 ## 측정과 검증
 
-길이별 단독/배치 score 최대 오차 5.96e-8, 특징 차이·유한 gradient·frontend 불변·두 GPU 동일 검사. 뒤 4.0375초 상한 비반복 학습과 원음 전체 비반복 학습 연결 검사는 별도 E006/E007에 기록한다.
+길이별 단독/배치 score 최대 오차 5.96e-8, 특징 차이·유한 gradient·frontend 불변·두 GPU 동일 검사. 뒤 EBM-NoRepeat와 EBM-FullContext 연결 검사는 별도 E006/E007에 기록한다.
 
 ## 결과
 

@@ -4,13 +4,13 @@
 
 <a id="ebm-b-조건-길이-상한을-유지한-반복-제거-통제실험"></a>
 
-# EBM 4.0375초 상한 비반복 학습 조건: 길이 상한을 유지한 반복 제거 통제실험
+# EBM EBM-NoRepeat 조건: 길이 상한을 유지한 반복 제거 통제실험
 
 2026-11-06 서버 `/home/mentee/code/EBM`에 반영했다. **이번 수정은 `arguments.py`, `data_loaders.py` 두 파일뿐**이다. 기존 마스크·메모리 분할·학습 연결 코드는 유지했다. 전체 학습은 시작하지 않았다.
 
 ## 현재 기본값
 
-| 항목 | 4.0375초 상한 비반복 학습 |
+| 항목 | EBM-NoRepeat |
 |---|---|
 | 실험명 | `EBM_e50_bs240_lr1e5_B_zeropad_short303` |
 | Long | 원음 앞부분 최대64,600sample = 4.0375초 |
@@ -29,42 +29,42 @@
 
 ## 두 파일의 변경
 
-- `arguments.py`: 4.0375초 상한 비반복 학습용 새 결과 이름, `cap_long=True` 추가. 두 보조 손실 계수는 이미0이었으며 그대로 유지한다.
+- `arguments.py`: EBM-NoRepeat용 새 결과 이름, `cap_long=True` 추가. 두 보조 손실 계수는 이미0이었으며 그대로 유지한다.
 - `data_loaders.py`: `native_length=True`일 때도 `cap_long=True`이면 long/train과 평가 입력을 기존 상한까지만 자른다. 짧은 음성을 반복하지 않는다. Loader가 두 보조 손실 계수의 활성 여부를 collate에 전달하며, 둘 다0이면 wrapped 입력과 pair mask 자체를 만들지 않는다.
 
-`native_steps.py`, `model/loss.py`, `model/b_linear.py`, `main.py`, `train.py`, logger는 이번에 수정하지 않았다. 따라서 이번 변경으로 전역 BPL, 새로운 손실, 추가 optimizer 단계가 도입되지 않는다. 보조 실험용 기존 코드는 남아 있지만 4.0375초 상한 비반복 학습에서는 실행되지 않는다.
+`native_steps.py`, `model/loss.py`, `model/b_linear.py`, `main.py`, `train.py`, logger는 이번에 수정하지 않았다. 따라서 이번 변경으로 전역 BPL, 새로운 손실, 추가 optimizer 단계가 도입되지 않는다. 보조 실험용 기존 코드는 남아 있지만 EBM-NoRepeat에서는 실행되지 않는다.
 
 <a id="a와-b를-비교할-때의-통제"></a>
 
-## A와 4.0375초 상한 비반복 학습을 비교할 때의 통제
+## A와 EBM-NoRepeat 모델을 비교할 때의 통제
 
 | 조건 | native_length | cap_long | 두 보조 손실 계수 | 학습 입력 |
 |---|---|---|---|---|
 | A | False | True | 둘 다0 | 기존 상한 유지 + 짧으면 반복 |
-| 4.0375초 상한 비반복 학습, 현재 기본값 | True | True | 둘 다0 | 같은 상한 유지 + 짧으면 실제 길이 |
-| 원음 전체 비반복 학습, 이번 실행 대상 아님 | True | False | 둘 다0 | Long 전체 + Short 기존 상한 |
+| EBM-NoRepeat, 현재 기본값 | True | True | 둘 다0 | 같은 상한 유지 + 짧으면 실제 길이 |
+| EBM-FullContext, 이번 실행 대상 아님 | True | False | 둘 다0 | Long 전체 + Short 기존 상한 |
 
 **A도 같은 현재 코드로 학습해야 반복 처리의 효과를 분리할 수 있다.** 동일 구현의 반복 입력·비반복 입력 대조에서 같은 데이터, sampler와 UID 배치 순서, class 비율, 초기화 seed, RawBoost 정책, codec-off, physical batch8, optimizer·scheduler, 고정50epoch를 사용한다. 이번 검증에서 동일 구현의 반복 입력·비반복 입력 대조 sampler의 전체 UID 배치 순서가 동일함을 확인했다. RawBoost의 입력 길이가 달라져 생기는 증강 결과 차이도 이 반복 처리 개입의 일부이므로, 이를 반복 경계 하나만의 효과라고 해석하지 않는다.
 
-학습 효과만 비교하는 최종 평가는 **두50epoch checkpoint 모두 같은 4.0375초 상한 비반복 학습 평가 설정**으로 수행한다. A 학습 설정을 그대로 읽어 평가하면 A는 반복 평가, 4.0375초 상한 비반복 학습은 비반복 평가가 되어 학습과 추론 처리를 함께 바꾼 결과가 된다. 현재 train은 target 성능에 따른 best 선택 없이 고정 epoch checkpoint를 저장하므로, A의 학습 중 dev 입력 정책 차이로 checkpoint가 선택되지는 않는다. 반복 평가 결과가 필요하면 별도의 보조 비교로 두 모델 모두 같은 반복 평가 설정에서도 평가한다.
+학습 효과만 비교하는 최종 평가는 **두50epoch checkpoint 모두 같은 EBM-NoRepeat 평가 설정**으로 수행한다. A 학습 설정을 그대로 읽어 평가하면 A는 반복 평가, EBM-NoRepeat 모델은 비반복 평가가 되어 학습과 추론 처리를 함께 바꾼 결과가 된다. 현재 train은 target 성능에 따른 best 선택 없이 고정 epoch checkpoint를 저장하므로, A의 학습 중 dev 입력 정책 차이로 checkpoint가 선택되지는 않는다. 반복 평가 결과가 필요하면 별도의 보조 비교로 두 모델 모두 같은 반복 평가 설정에서도 평가한다.
 
-전체 EER와 함께 길이별 정상 거부·spoof 수락을 확인한다. 클래스별 오류는 동일 dev 기준으로 정한 threshold를 사용하고, target 결과로 threshold나 checkpoint를 고르지 않는다. 한 seed의 개선은 해당 실행의 근거이며 일반적 개선 주장에는 여러 seed의 재현성과 효과 크기를 확인한다. 4.0375초 상한 비반복 학습 구현 완료나 짧은 smoke update 통과만으로 판별 성능 개선을 주장하지 않는다.
+전체 EER와 함께 길이별 정상 거부·spoof 수락을 확인한다. 클래스별 오류는 동일 dev 기준으로 정한 threshold를 사용하고, target 결과로 threshold나 checkpoint를 고르지 않는다. 한 seed의 개선은 해당 실행의 근거이며 일반적 개선 주장에는 여러 seed의 재현성과 효과 크기를 확인한다. EBM-NoRepeat 구현 완료나 짧은 smoke update 통과만으로 판별 성능 개선을 주장하지 않는다.
 
 ## 기존 batch240 codec 기록 정정
 
 사용자는 기존 `EBM_e50_bs240_lr1e5`에서도 codec을 껐다고 기억한다. 결과 폴더의 `backup/scripts/main.py`에는 ACN off가 있고, `backup/scripts/data_loaders.py`에는 확률0.8과 활성 codec 호출 두 곳이 있다. 백업 codec 구현의 convert도 실제 변환 함수로 연결된다. 그러나 codec 적용 횟수를 기록한 실행 로그는 확인하지 못했다. **확인 사실은 보관 소스의 상태이며, 당시 실행에서 codec이 적용됐다고 단정하지 않는다.**
 
-따라서 이전의 ‘배치 240 고정 길이 반복 입력 학습은 codec-on이므로 다르다’라는 확정 표현을 철회한다. 당시 실행의 codec-off가 확인되더라도 이전 실험과 현재 코드 사이에는 sampler·마스크·재계산·평가 정책 차이가 남는다. 기존 결과와의 비교는 참고로 하고, 반복 제거 효과는 위의 동일 코드 동일 구현의 반복 입력·비반복 입력 대조 비교로 판단한다.
+따라서 이전의 ‘EBM-Repeat 모델은 codec-on이므로 다르다’라는 확정 표현을 철회한다. 당시 실행의 codec-off가 확인되더라도 이전 실험과 현재 코드 사이에는 sampler·마스크·재계산·평가 정책 차이가 남는다. 기존 결과와의 비교는 참고로 하고, 반복 제거 효과는 위의 동일 코드 동일 구현의 반복 입력·비반복 입력 대조 비교로 판단한다.
 
 ## 검증과 보관
 
 기존 컨테이너 안에서 `CUDA_VISIBLE_DEVICES=0,1`로 제한된 검증을 수행했다. 원래 실험을 중단하거나 전체 학습을 시작하지 않았다.
 
 - 양 GPU 각각105개 검증 통과, 검증 프로세스 exit0.
-- 실제 최소/중앙/최장 정상·spoof와 최장 DF 입력에서 동일 구현의 반복 입력·비반복 입력 대조의 보존 원음·crop 상한 일치 확인. 원음 전체 비반복 학습은 long 전체를 보존하는 것도 확인.
+- 실제 최소/중앙/최장 정상·spoof와 최장 DF 입력에서 동일 구현의 반복 입력·비반복 입력 대조의 보존 원음·crop 상한 일치 확인. EBM-FullContext 모델은 long 전체를 보존하는 것도 확인.
 - 7개 길이 사례 × RawBoost9종에서 길이 상한과 유한값 통과. 변환 시 실패하는 codec 함수를 넣고도 통과하여 codec 호출 없음 확인.
 - 실제25,380개 학습 데이터와 loader 연결, 동일 구현의 반복 입력·비반복 입력 대조 UID 순서 동일, GPU당 정상12/spoof108 확인.
-- `np.pad(..., mode='wrap')` 호출 시 실패하도록 설정한 4.0375초 상한 비반복 학습 데이터 준비·collate 통과. wrapped/pair_active key 없음.
+- `np.pad(..., mode='wrap')` 호출 시 실패하도록 설정한 EBM-NoRepeat 데이터 준비·collate 통과. wrapped/pair_active key 없음.
 - 실제 XLS-R와 backend에서 혼합 길이0패딩 배치와 개별 입력의 embedding 최대 오차3.73e-6. 유효 feature mask 길이 일치.
 - 실제 논리적 batch240에서 OC+BPL과 두 단계 optimizer update 통과. 본체와 centroid 갱신, frozen frontend 불변 확인. 보조 손실·활성 쌍0. 이 검증 배치의 peak allocated memory는 GPU별1,840/1,853MiB이며 전체 데이터 최악치 측정은 아니다.
 - Python29파일 구문 검사 통과. 변경 파일은 두 개뿐이며 검증 전후 전체 Python hash 동일. Codec 활성 convert AST 호출0개.

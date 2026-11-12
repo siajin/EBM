@@ -12,7 +12,7 @@
 
 - [구조 확인 기록](ebm_frozen_structure_audit_20261105.json): 보관 소스 SHA256, 줄 위치, 실제 설정, 캐시 구성.
 - [수치·실행 설정](ebm_frozen_model_protocol_20261105.json): 실험 ID, 기본값, 분할·학습·판정 규칙.
-- [기존 전체 연구 명세](ebm_embedding_geometry_spec_20261105.md): EBM 자체를 공동 학습하는 4.0375초 상한 비반복 학습/G 실험까지 포함한 별도 범위. 본 문서의 동결 후처리 실험과 같은 실험이 아니다.
+- [기존 전체 연구 명세](ebm_embedding_geometry_spec_20261105.md): EBM 자체를 공동 학습하는 EBM-NoRepeat/G 실험까지 포함한 별도 범위. 본 문서의 동결 후처리 실험과 같은 실험이 아니다.
 - [캐시 사용법](../../artifacts/geometry_experiments/README.md), `../../MENTEE_SERVER.md` (원자료 경로; 배포 제외 또는 미확보, 출처 목록 참조).
 - [완료된 네 가지 캐시 진단](ebm_cached_core_results_20261105.md): 09:06 KST 완료 결과. 아래 신규 명세와 설정이 같은 실험으로 합치지 않는다.
 - [21LA 전체 캐시 추가 기록](21la_cache_20261105.md): 11:29 KST 로컬 저장·독립 검수 완료, 같은 기준 모델의 h/z를 재사용할 수 있다.
@@ -50,7 +50,7 @@
 
 진행 결과: [이번 실제 실행 기록](ebm_frozen_all_results_20261105.md). 완료 근거는 `artifacts/geometry_cache/local_analysis/frozen_all_v1/`의 실험별 완료 JSON과 `verification.json`에 기록한다. 서버 raw 추출이 끝나기 전에는 부분 파일을 완료 캐시로 등록하지 않는다.
 
-현재 실행 범위는 기존 EBM을 고정한 F/P/R 전체다. 작은 gate/metric/probe의 학습은 포함하며, 새 attention/방향 loss로 EBM 자체를 공동 재학습하는 N3/4.0375초 상한 비반복 학습/G는 이 묶음에 포함하지 않는다.
+현재 실행 범위는 기존 EBM을 고정한 F/P/R 전체다. 작은 gate/metric/probe의 학습은 포함하며, 새 attention/방향 loss로 EBM 자체를 공동 재학습하는 N3/EBM-NoRepeat/G는 이 묶음에 포함하지 않는다.
 
 ## 1. 먼저 구분할 네 가지 작업
 
@@ -98,7 +98,7 @@ SHA256: `104873703a57cad98b686d770e0860e031a2cf9abef79b72668780c1660e0b24`.
 
 ### 2.2 긴 branch의 forward와 캐시 위치
 
-4.0375초 상한 비반복 학습는 배치, `τ`는 SSL 시간 길이다. 다음은 실제 구현의 순서를 요약한 것이다.
+EBM-NoRepeat는 배치, `τ`는 SSL 시간 길이다. 다음은 실제 구현의 순서를 요약한 것이다.
 
 ```mermaid
 flowchart LR
@@ -239,14 +239,14 @@ geom = t.geometry()  # unit_z, cosine, norm, direction, valid 등
 | F3 공분산 거리 | T 정상2,580 covariance·V14,983 선택 | 20,000 | 20,000 |
 | F4 조건 분석 | 필요한 bin/PCA는 T에서만 fit | 20,000의 source/codec/길이/padding | 20,000의 codec/transmission/길이/padding |
 | P1 gate/MLP·P2 metric·P3-A 전이 | T25,380 학습·V14,983 선택; 같은 head를 양쪽에 적용 | 20,000 | 20,000 |
-| P3-4.0375초 상한 비반복 학습/P4 내부 진단 | 각 셋20,000 안에서 별도로5 outer×3 inner grouped CV | 20,000 OOF | 20,000 OOF |
+| P3-EBM-NoRepeat/P4 내부 진단 | 각 셋20,000 안에서 별도로5 outer×3 inner grouped CV | 20,000 OOF | 20,000 OOF |
 | R1 전체 확장 | T/V에서 이미 동결한 비교군 | DF 전체는 별도 신규 추출 필요 | 전체148,176 마지막 보조 평가, 캐시 재사용 |
 | R2 attention 제거 | 새 학습 없음, native도 같은 발화로 계산 | 먼저2,000×4조건, 확대20,000 | 먼저2,000×4조건, 확대20,000 |
 | R3 입력 변형 | V128개(정상32/spoof96) 전처리QC; fit/설정 변경 없음 | 먼저2,000×새변형3조건 | 먼저2,000×새변형3조건 |
 
 F2는 각20,000개 안의 실제 overlap으로 pair 수가 정해진다(셋별 최대2,000쌍). 최소200쌍·10그룹 미달이면 판정 불가로 기록하며, 21LA만 자동으로14.8만 개로 바꾸지 않는다. 주 matching은 DF에서 같은 source×speaker×codec, 21LA에서 같은 speaker×codec×transmission이다.
 
-P3-4.0375초 상한 비반복 학습/P4는 DF2만 개와21LA2만 개에 **각각 별도의 CV 모델**을 fit한다. 두 셋을 합친4만 개에서 fit하거나 화자를 섞어 나누지 않는다. outer held-out은 평균 약4천 개지만 정확한 발화·class 수는 화자 구성에 따라 달라지며 실제 수를 기록한다. 같은 셋의 모든 비교군은 같은 fold ID를 재사용한다. 전이용 P1/P2/P3-A는 두 평가셋에서 다시 학습하지 않는다.
+P3-EBM-NoRepeat/P4는 DF2만 개와21LA2만 개에 **각각 별도의 CV 모델**을 fit한다. 두 셋을 합친4만 개에서 fit하거나 화자를 섞어 나누지 않는다. outer held-out은 평균 약4천 개지만 정확한 발화·class 수는 화자 구성에 따라 달라지며 실제 수를 기록한다. 같은 셋의 모든 비교군은 같은 fold ID를 재사용한다. 전이용 P1/P2/P3-A는 두 평가셋에서 다시 학습하지 않는다.
 
 전체21LA는 V에서 이미 동결한 비교군을 마지막에 보조 평가할 때만 사용한다. pilot을 포함하므로 독립적인 두 번의 확인으로 세지 않는다. 이미 보고한 **전체 EER1.0535393%는 pilot의 baseline이 아니다.** 실제 주 실험에서는 같은2만 개의 native와 후보를 함께 계산한다. 2만 개는 비용·정상 표본 수·절차를 맞추기 위한 선택이며 작은 효과를 검출할 통계적 power까지 보장하지 않는다. 두 평가셋은 공격·조건·화자 분포가 다르므로 EER와CI를 각각 보고하고, 합친4만 개의 EER를 주 결과로 사용하지 않는다.
 
@@ -333,11 +333,11 @@ native score는 s, 큰 값은 bona다. 수치 검사는 float64 기준 native �
 
 **경로 A: 전이 평가.** T에서 통계·파라미터를 fit, V에서 설정/epoch/threshold를 선택, **DF_pilot20,000개와21LA_pilot20,000개**에서 고정 평가한다. 전체21LA는3.1.1의 마지막 보조 평가로 분리한다. fit/선택은 여전히 T/V에 한정한다. 이 문서의 주 비교 family는 DF이고 21LA는 보조 평가이며, 이미 관찰한 benchmark와 공유 화자라는 한계를 유지한다. 21LA 캐시 추가 자체와후속head학습은별도단계다. 현재P1/P2/P3-A실제완료범위는0절과통합분석에기록한다.
 
-**경로 4.0375초 상한 비반복 학습: 데이터셋 내부 정보 진단.** DF_pilot과21LA_pilot의 각20,000개에서 source×speaker가 겹치지 않는 outer5-fold와 inner3-fold를 **별도로** 사용한다. 21LA의 source는 asvspoof로 고정이라 class stratification과 speaker grouping이 된다. `StratifiedGroupKFold`의 stratification target은 source×class 조합, group은 source×speaker, seed는 outer 11/inner 12다. 분할마다 class·source coverage를 확인하고 불가능하면 임의 발화 분할로 바꾸지 않는다. fold manifest를 고정하고 모든 방법에 재사용한다.
+**경로 EBM-NoRepeat: 데이터셋 내부 정보 진단.** DF_pilot과21LA_pilot의 각20,000개에서 source×speaker가 겹치지 않는 outer5-fold와 inner3-fold를 **별도로** 사용한다. 21LA의 source는 asvspoof로 고정이라 class stratification과 speaker grouping이 된다. `StratifiedGroupKFold`의 stratification target은 source×class 조합, group은 source×speaker, seed는 outer 11/inner 12다. 분할마다 class·source coverage를 확인하고 불가능하면 임의 발화 분할로 바꾸지 않는다. fold manifest를 고정하고 모든 방법에 재사용한다.
 
-경로 4.0375초 상한 비반복 학습에서는 scaler, covariance, PCA, class weight 추정, early stopping, hyperparameter 선택도 **해당 fold의 train/inner 부분**에서만 한다. DF/21LA 전체에 fit한 결과를 held-out 평가라고 부르지 않는다. 이 경로가 성공하면 “해당 데이터셋 내부에서 다른 화자에도 읽을 수 있는 정보가 현재 표현에 있다”는 근거이며, **T에서 학습해 DF로 전이한 성능이나 원래 EBM의 DF 성능이 아니다.**
+경로 EBM-NoRepeat에서는 scaler, covariance, PCA, class weight 추정, early stopping, hyperparameter 선택도 **해당 fold의 train/inner 부분**에서만 한다. DF/21LA 전체에 fit한 결과를 held-out 평가라고 부르지 않는다. 이 경로가 성공하면 “해당 데이터셋 내부에서 다른 화자에도 읽을 수 있는 정보가 현재 표현에 있다”는 근거이며, **T에서 학습해 DF로 전이한 성능이나 원래 EBM의 DF 성능이 아니다.**
 
-두 경로의 결과를 같은 평균/CI로 합치지 않는다. 문서상의 모든 기본값은 경로 A 기준이며 4.0375초 상한 비반복 학습을 수행할 때 fold별 fit 규칙이 우선한다.
+두 경로의 결과를 같은 평균/CI로 합치지 않는다. 문서상의 모든 기본값은 경로 A 기준이며 EBM-NoRepeat 모델을 수행할 때 fold별 fit 규칙이 우선한다.
 
 ### 4.3 지표와 불확실성
 
@@ -375,7 +375,7 @@ native score는 s, 큰 값은 bona다. 수치 검사는 float64 기준 native �
 **T에서 고정할 순위:** 기존 `artifacts/geometry_cache/runs/20261105_fast_p0_01/686e593443178bb8/fast_analysis/A_fisher_by_attack.npy`의 공격별 Fisher를 macro 평균해 내림차순 정렬한다. Fisher는 **L2 정규화 전 post-LN z**에서 계산하며 아래 분산은 `ddof=1`이다. 동점은 channel index 오름차순이다. 새 자료에서 순위를 다시 고르지 않는다. 이 순위는 데이터 좌표별 판별력 순위이며 물리적 주파수 중요도가 아니다.
 
 \[
-F_{j,a}=\frac{(\mu_{4.0375초 상한 비반복 학습,j}-\mu_{S_a,j})^2}{\sigma^2_{4.0375초 상한 비반복 학습,j}+\sigma^2_{S_a,j}+10^{-8}},
+F_{j,a}=\frac{(\mu_{EBM-NoRepeat,j}-\mu_{S_a,j})^2}{\sigma^2_{EBM-NoRepeat,j}+\sigma^2_{S_a,j}+10^{-8}},
 \quad R_j=\operatorname{mean}_{a\in T\ attacks}F_{j,a}.
 \]
 
@@ -457,7 +457,7 @@ codec/source를 잘 분류하는 **진단용 새 classifier**까지 쓰면 N1/P3
 
 ### 6.1 공통 학습·선택 규칙
 
-이 절은 제안 구조의 **고정 표현 readout 실험**이다. 기존 4.0375초 상한 비반복 학습/G 공동 학습 결과와 같은 실험 ID로 세지 않는다.
+이 절은 제안 구조의 **고정 표현 readout 실험**이다. 기존 EBM-NoRepeat/G 공동 학습 결과와 같은 실험 ID로 세지 않는다.
 
 | 항목 | 고정값 |
 | --- | --- |
@@ -477,7 +477,7 @@ codec/source를 잘 분류하는 **진단용 새 classifier**까지 쓰면 N1/P3
 
 V log-loss를 위한 링크는 T에서 이미 고정한 양의 scalar calibration `p=sigmoid(8.710543812499347*S - 0.7151751091389169)`를 모든 head에 공통 사용한다. 이는 선택용 공통 링크이고 각 새 score가 배포 확률로 교정됐다는 보장이 아니다. EER는 비포화 S로 계산한다. 더 유리한 DF calibration을 새로 fit하지 않는다.
 
-V의 모든 EER가 0이어도 selection rule을 바꾸지 않는다. V가 지나치게 쉬워 선택력이 약하다는 한계를 기록하고, 경로 4.0375초 상한 비반복 학습은 별도의 정보 진단 결과로만 수행한다.
+V의 모든 EER가 0이어도 selection rule을 바꾸지 않는다. V가 지나치게 쉬워 선택력이 약하다는 한계를 기록하고, 경로 EBM-NoRepeat 모델은 별도의 정보 진단 결과로만 수행한다.
 
 원래 BPL을 캐시에서 재현할 수 없는 이유는 long/short 평가 표현 쌍도, 증강 학습 view도 없기 때문이다. long을 short 자리에 복사하거나 dropout으로 만든 벡터를 실제 원래 short로 부르지 않는다. 입력 전에 계산한 원래 BPL 상수를 더해도 신규 head에 gradient가 생기지 않는다.
 
@@ -499,7 +499,7 @@ W_1:160\to16,\quad W_2:16\to160.
 | PH2 | `g(x)=1+0.5*tanh(F(x))`, x'=g(x)⊙x | 5,296 |
 | PHm | `x'=x+(0.5/sqrt(160))*tanh(F(x))` | 5,296 |
 
-이 bounded posthoc 구조는 기존 전체 명세 4.0375초 상한 비반복 학습/G의 `2*sigmoid` raw-z joint gate와 다르다. 학습 범위와 변환 폭을 제한하는 새 후처리 버전이며 이전 4.0375초 상한 비반복 학습/G run을 대체하지 않는다.
+이 bounded posthoc 구조는 기존 전체 명세 EBM-NoRepeat/G의 `2*sigmoid` raw-z joint gate와 다르다. 학습 범위와 변환 폭을 제한하는 새 후처리 버전이며 이전 EBM-NoRepeat/G run을 대체하지 않는다.
 
 v=0, W2=0, b2=0으로 identity 초기화한다. W1은 seed별 비영 초기화, b1=0이다. W1/W2를 모두 0으로 만들어 학습이 막히게 하지 않는다. 첫 step의 W1 gradient가 0이어도 W2 gradient가 비영이면 다음 step부터 W1 경로가 열릴 수 있음을 검사한다.
 
@@ -545,7 +545,7 @@ PH1과 파라미터 수는 같지만 score 정의는 다르다. F3의 covariance
 
 **질문:** 기존 T-fit 보정이 실패했어도 DF/21LA의 각2만 개 내부에 다른 화자에게 읽을 수 있는 방향 정보가 남아 있는가?
 
-경로 A와 4.0375초 상한 비반복 학습을 별도 실행한다. 경로 4.0375초 상한 비반복 학습이 성공하고 A가 실패하면 “정보는 이 진단에서 읽히지만 학습 도메인에서 학습한 readout의 전이가 약하다”는 해석이 가능하다. 표현이 반드시 정보를 버렸다는 결론과 구분한다.
+경로 A와 EBM-NoRepeat 모델을 별도 실행한다. 경로 EBM-NoRepeat 모델이 성공하고 A가 실패하면 “정보는 이 진단에서 읽히지만 학습 도메인에서 학습한 readout의 전이가 약하다”는 해석이 가능하다. 표현이 반드시 정보를 버렸다는 결론과 구분한다.
 
 입력군:
 
@@ -555,9 +555,9 @@ PH1과 파라미터 수는 같지만 score 정의는 다르다. F3의 covariance
 
 기본 logit은 `ell0=a*s+b+beta*n+eta*valid`, `a=softplus(a0)+1e-4>0`로 fixed norm에서 단조성을 보장한다. n은 train 부분의 log(norm) 평균/std로 표준화한다(std 하한1e-12). direction/noise는 `ell=ell0+w^T*u`의 선형 잔차 또는 `ell=ell0+w2^T*GELU(W1*u+b1)+b2`의 hidden16 잔차를 추가한다. noise 모델은 u 자리에 UID별 고정 잡음을 c 수직 공간에 투영·단위 정규화해 넣으며 유효하지 않은 direction 행에서는 동일하게0으로 둔다. s/n을 잔차 입력에 다시 넣지 않는다. 두 모델 계열은 별도 결과다.
 
-scalar는 기존 T calibration으로 시작하고 beta/eta=0, 선형 잔차 w=0, MLP의 W1 비영·w2/b2=0으로 시작한다. ridge는 intercept와 bias를 제외한 학습 파라미터의 제곱합에 곱하며 `[1e-4,1e-2]` 두 후보만 inner/V에서 선택한다. Adam lr1e-3, 최대80 epoch, patience10, 동일 seeds를 사용한다. loss는 각 class 50%의 BCE다. 경로 4.0375초 상한 비반복 학습의 epoch 선택도 inner fold에서 하고 outer held-out에서는 선택하지 않는다. 이 probe objective는 P1/P2의 OC 학습과 다른 진단용 목적이다.
+scalar는 기존 T calibration으로 시작하고 beta/eta=0, 선형 잔차 w=0, MLP의 W1 비영·w2/b2=0으로 시작한다. ridge는 intercept와 bias를 제외한 학습 파라미터의 제곱합에 곱하며 `[1e-4,1e-2]` 두 후보만 inner/V에서 선택한다. Adam lr1e-3, 최대80 epoch, patience10, 동일 seeds를 사용한다. loss는 각 class 50%의 BCE다. 경로 EBM-NoRepeat의 epoch 선택도 inner fold에서 하고 outer held-out에서는 선택하지 않는다. 이 probe objective는 P1/P2의 OC 학습과 다른 진단용 목적이다.
 
-경로 4.0375초 상한 비반복 학습에서는 각 inner fold의 class-balanced log-loss를 epoch별로 저장해 평균이 가장 작은 `(ridge, epoch)`를 고른다. 후보 epoch는 세 inner fit 모두에 존재하는 epoch의 교집합(0 포함)이며 동점은 작은 epoch, 큰 ridge 순이다. 그 설정으로 outer-train 전체에서 초기화부터 정확히 해당 epoch까지 다시 fit하고 outer-test는 한 번만 예측한다. outer-train 전체의 scaler도 이 refit 때만 fit한다. sampler steps/epoch는 해당 train 부분의 `max(ceil(N_B/16), ceil(N_S/144))`로 계산한다.
+경로 EBM-NoRepeat에서는 각 inner fold의 class-balanced log-loss를 epoch별로 저장해 평균이 가장 작은 `(ridge, epoch)`를 고른다. 후보 epoch는 세 inner fit 모두에 존재하는 epoch의 교집합(0 포함)이며 동점은 작은 epoch, 큰 ridge 순이다. 그 설정으로 outer-train 전체에서 초기화부터 정확히 해당 epoch까지 다시 fit하고 outer-test는 한 번만 예측한다. outer-train 전체의 scaler도 이 refit 때만 fit한다. sampler steps/epoch는 해당 train 부분의 `max(ceil(N_B/16), ceil(N_S/144))`로 계산한다.
 
 scalar·noise 대조와 **native cosine**을 모두 보고한다. scalar baseline이 나빠졌다는 이유만으로 그보다 나은 direction 모델을 기존 탐지기 개선이라고 하지 않는다. 단조성을 s 단독의 전체 샘플 순위 보존으로 확대하지 않는다. norm/방향이 다르면 의도적으로 순위가 바뀔 수 있다.
 
@@ -658,7 +658,7 @@ baseline과 변형의 score 차이, u 각도, PH2 gate 변화, V-fixed 오류 �
 3. 필요하면 F1 keep/회전 대조와 F2 same-speaker overlap/coverage, F4 남은 통계를 추가한다. overlap 부족이면 이유를 기록하고 그 조건의 정보 부재를 주장하지 않는다.
 4. P1/P2 공통 runner와 synthetic gradient/identity 테스트를 구현한다. PH0/PH1/PH2/PHm/metric을 같은 코드의 비교군으로 다룬다.
 5. P1/P2의 trainable4종×3 seeds=12개의 **작은 posthoc fit**을 경로 A로 실행한다. 기존 EBM full run 12개가 아니다.
-6. P3/P4는 필요하면 경로 4.0375초 상한 비반복 학습로 확장하되 별도 registry와 결과로 남긴다. outer/inner 반복으로 CPU 비용이 크게 늘어나는 점을 기록한다.
+6. P3/P4는 필요하면 경로 EBM-NoRepeat로 확장하되 별도 registry와 결과로 남긴다. outer/inner 반복으로 CPU 비용이 크게 늘어나는 점을 기록한다.
 7. 유망 후보의 범위 확장이 필요하면 R1~R3를 별도 실행한다. 이 문서 작성만으로 새 서버 추론을 실행하지 않는다.
 
 ### 9.2 실제 존재하는 명령과 계획 단계의 구분
@@ -728,7 +728,7 @@ paired_group_effects(scores, dependency_groups)
 
 #### 9.5.2 빠른 순서
 
-아래 시간표는 **21LA 추가 전의 T/V/DF pilot** 기준이다. N1 기본 head는 seed3개·최대80 epoch다. R2/R3는 작은 확인 단계와 2만 개 확장을 나눴다. 이번 표본 수 정리 후에도 T/V 학습 비용은 같다. 기본 평가에는21LA_pilot20,000개를 추가하며 점수·통계 비용이 늘어난다. P3-4.0375초 상한 비반복 학습/P4를 양쪽에서 모두 수행하면 CV 계산도 두 묶음이다. 전체148,176행은 마지막 보조 평가에만 쓰며 그 비용은 이 표에 포함되지 않는다. 이번21LA 추출 실측은 모델 로딩 제외 **72분21초**이고, 완료된 캐시를 재사용하면 같은 추출을 반복할 필요가 없다.
+아래 시간표는 **21LA 추가 전의 T/V/DF pilot** 기준이다. N1 기본 head는 seed3개·최대80 epoch다. R2/R3는 작은 확인 단계와 2만 개 확장을 나눴다. 이번 표본 수 정리 후에도 T/V 학습 비용은 같다. 기본 평가에는21LA_pilot20,000개를 추가하며 점수·통계 비용이 늘어난다. P3-EBM-NoRepeat/P4를 양쪽에서 모두 수행하면 CV 계산도 두 묶음이다. 전체148,176행은 마지막 보조 평가에만 쓰며 그 비용은 이 표에 포함되지 않는다. 이번21LA 추출 실측은 모델 로딩 제외 **72분21초**이고, 완료된 캐시를 재사용하면 같은 추출을 반복할 필요가 없다.
 
 | 순서 | 실험·실행 범위 | 예상 실행 시간 | 상태/시간을 좌우하는 부분 |
 | ---: | --- | ---: | --- |
@@ -746,7 +746,7 @@ paired_group_effects(scores, dependency_groups)
 | 11 | **R3 소규모** 2,000개×새 변형3개 | **5~12분** | noise20/10dB와 codec1개; 순수 추론 약3분 + 변형/QC |
 | 12 | **F1 전체** 4개 fraction + 회전 좌표3개 | **8~15분** | 핵심25%를 포함한 총시간. 주 비교 CI만 계산하면 EER 연산 약6.6분; 모든 score CI 확장은 약11.4분 |
 | 13 | **P4** DF nested CV + h-stat/h와 noise 대조 | **8~40분** | P3의 scalar+u baseline 재사용. seed3개·ridge2개·5×3 CV; 모두80epoch면 약32분 연산 환산 |
-| 14 | **P3-4.0375초 상한 비반복 학습** DF 내부 nested CV 전체 | **15~65분** | 선형/MLP·ridge2개·seed3개·5×3 CV. 모두80epoch면 약54분 연산 환산 |
+| 14 | **P3-EBM-NoRepeat** DF 내부 nested CV 전체 | **15~65분** | 선형/MLP·ridge2개·seed3개·5×3 CV. 모두80epoch면 약54분 연산 환산 |
 | 15 | **R3 확장** DF20,000개×새 변형3개 | **35~55분** | 순수 추론 약30분 + codec/noise 생성·QC·통계 |
 | 16 | **R2 확장** DF20,000개×조건4개 | **45~60분** | 독립 forward4회 기준 순수 추론 약40분 |
 | 17 | **R1-DF 전체** 미추출513,928개 | **4.5~5.5시간** | 순수 추론 약4.27시간 + 로딩/QC·저장·소수 고정 score 평가 |

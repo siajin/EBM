@@ -21,7 +21,7 @@
 
 ## 조건 점검에서 추가로 확인한 제한
 
-**현재 DF의5×3 내부 CV는 모든 출처×클래스가 매 fold에 존재하는 검증이 아니다.** vcc2018 spoof는4개 화자 그룹뿐이므로 outer5개 모두에 넣을 수 없다. 실제로 일부 outer-test·inner-validation,한 inner-train에서 해당 조건이 빠졌다. 화자 누수로 OOF 비교 전체가 무효인 것은 아니지만,이를 조건이 완전히 보존된 출처별 검증으로 해석하면 안 된다. P3-4.0375초 상한 비반복 학습과 그 분할을 쓰는 P4에 이 제한을 적용한다. T/V 전이와 native 평가의 계산 오류를 뜻하지 않는다.
+**현재 DF의5×3 내부 CV는 모든 출처×클래스가 매 fold에 존재하는 검증이 아니다.** vcc2018 spoof는4개 화자 그룹뿐이므로 outer5개 모두에 넣을 수 없다. 실제로 일부 outer-test·inner-validation,한 inner-train에서 해당 조건이 빠졌다. 화자 누수로 OOF 비교 전체가 무효인 것은 아니지만,이를 조건이 완전히 보존된 출처별 검증으로 해석하면 안 된다. P3-EBM-NoRepeat와 그 분할을 쓰는 P4에 이 제한을 적용한다. T/V 전이와 native 평가의 계산 오류를 뜻하지 않는다.
 
 기존의 분할은 변경하지 않았다. 점수·임베딩을 사용하지 않은4outer×3inner 보완 후보는 준비됐지만 새 학습을 시작한 것은 아니다. [조건 점검 보고서](ebm_condition_audit_20261105.md)에 누락 cell,학습 신호·V 선택력의 제한,metadata 정정과 P3 운용점 보충을 기록했다.
 
@@ -43,7 +43,7 @@
 | --- | --- | --- | --- |
 | Native | 추가 fit 없음 | 같은 표본의 기존 cosine | 기준 모델의 점수 성능 |
 | P1/P2/P3-A 전이 | 2019LA T에서 fit, V에서 선택 | DF/21LA 각20,000개 | 학습 도메인에서 배운 새 readout이 전이하는가 |
-| 기존 cached_core 및 P3-4.0375초 상한 비반복 학습/P4 | 각 평가셋의 outer-train/inner에서만 fit·선택 | 같은 셋의 held-out speaker | 현재 표현에서 다른 화자에게 읽히는 정보가 있는가 |
+| 기존 cached_core 및 P3-EBM-NoRepeat/P4 | 각 평가셋의 outer-train/inner에서만 fit·선택 | 같은 셋의 held-out speaker | 현재 표현에서 다른 화자에게 읽히는 정보가 있는가 |
 | F1/F3/F4 | 순위·공분산·PCA는 T, 설정·threshold는 V | 평가셋의 고정 점수/통계 | 현재 점수의 좌표·거리·조건 의존성 |
 | R2/R3 | 원래 EBM·새 head·기준 threshold 고정 | attention 또는 동일 음성 입력 개입 | 학습된 함수가 개입에 얼마나 민감한가 |
 
@@ -104,7 +104,7 @@ Fisher는 T raw post-LN z의 정상/공격별 평균·분산으로 정한 단변
 
 ![기존 DF pilot에서 전체160개와 하위2개 좌표의 오류율 곡선](cached_core_20261105/figures_author/03_roc_and_operating_points.png)
 
-그림은 기존 DF20,000개 부분집합 비교다. 새 gate·21LA·내부 P3-4.0375초 상한 비반복 학습/P4의 결과를 그린 그림이 아니다. 곡선의 운용점별 장단점을 보여주며, 평가 표본에서 배포 threshold를 고른 결과로 읽지 않는다.
+그림은 기존 DF20,000개 부분집합 비교다. 새 gate·21LA·내부 P3-EBM-NoRepeat/P4의 결과를 그린 그림이 아니다. 곡선의 운용점별 장단점을 보여주며, 평가 표본에서 배포 threshold를 고른 결과로 읽지 않는다.
 
 **현재 checkpoint가 만든160차원 표현의 일부 좌표만 읽어도 이 DF 표본의 EER가 낮은 점 추정치를 보였다**는 표현이 적절하다. “성능 동등성 입증”, “158개가 모두 잡음”, “모델의 본질적 차원이2”, “encoder 연산량 감소”로 확대하지 않는다. 전체 encoder와160차원LayerNorm은 여전히 계산했다.
 
@@ -267,7 +267,7 @@ T 평균 gate·실제 gate·T에서 정한 score/norm 구간 안의 gate 재배�
 | noise_mlp | 0.800000 | 0.037354 |
 | scalar | 0.800000 | 0.038032 |
 
-정확한paired효과와LL/EER구간은각셋4.0375초 상한 비반복 학습/paired_effects.json에있다. 같은fold·같은모델계열의scalar/noise대조에대한증분을판정하고, 원래native를별도기준으로확인한다. 내부CV가좋더라도T→평가셋의전이개선과동일시하지않는다.
+정확한paired효과와LL/EER구간은각셋EBM-NoRepeat/paired_effects.json에있다. 같은fold·같은모델계열의scalar/noise대조에대한증분을판정하고, 원래native를별도기준으로확인한다. 내부CV가좋더라도T→평가셋의전이개선과동일시하지않는다.
 
 ## 10. P4: LayerNorm이 정보를 없앴는가
 
@@ -415,7 +415,7 @@ P1/P2의 주 family는 DF의5개 비교다. 각99% CI로 이 family의95% 범위
 
 CI는 고정된 T 순위·선택된 head·저장된 OOF 예측에 조건부다. 재표집마다 전체 fit/CV/모델 선택을 다시 하지 않으므로 학습 표본과 선택의 전체 불확실성은 포함하지 않는다. 세 seed만으로 학습 변동의 모집단을 정밀하게 추론하지 않는다. 반복 탐색한 DF와 과거 benchmark 관찰을 독립 확인으로 되돌릴 수도 없다.
 
-완료 범위의 새 검수는 950개 metric / 1075check, P3 전이는 30개 metric / 30후보 fit을 독립 확인했다. 독립 NumPy head 수식, full tied ROC EER, rank AUC, ID정렬·V선택을사용한다. P3-4.0375초 상한 비반복 학습/P4의독립검수도완료했고각fold의선택·scaler·refit·OOF예측을대조했다. R1/R2/R3의검수범위는각완료JSON에있다.
+완료 범위의 새 검수는 950개 metric / 1075check, P3 전이는 30개 metric / 30후보 fit을 독립 확인했다. 독립 NumPy head 수식, full tied ROC EER, rank AUC, ID정렬·V선택을사용한다. P3-EBM-NoRepeat/P4의독립검수도완료했고각fold의선택·scaler·refit·OOF예측을대조했다. R1/R2/R3의검수범위는각완료JSON에있다.
 
 - [새실험검수](../../artifacts/geometry_cache/local_analysis/frozen_all_v1/verification.json); [P3전이검수](../../artifacts/geometry_cache/local_analysis/frozen_all_v1/P3_P4/A/verification.json)
 - [집계 결과 표](../../artifacts/geometry_cache/local_analysis/frozen_all_v1/head_metrics.csv); [설정·결과 근거](../../artifacts/geometry_cache/local_analysis/frozen_all_v1/head_paired_effects.json)

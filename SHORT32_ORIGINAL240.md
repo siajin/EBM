@@ -8,7 +8,7 @@
 기준 commit: `10f3bcd057dc6a2ca687fbd5389ad6c9e15a3746`.
 `baseline240_source/`의 main.py, train.py, data_loaders.py, model/b_linear.py,
 model/loss.py는 해당 Git blob의 바이트 그대로 보관했다. manifest.json의 SHA256을
-읽을 때 확인한다. 기존 원음 전체 비반복 학습/가변길이 코드와 공존하도록 opt-in 경로에서만 사용한다.
+읽을 때 확인한다. 기존 EBM-FullContext/가변길이 코드와 공존하도록 opt-in 경로에서만 사용한다.
 
 - `TrainSet` 및 `get_loaders()`를 그대로 호출한다. 정상·스푸프 **두 개의 실제
   torch DataLoader**와 각각의 DistributedSampler를 사용한다.

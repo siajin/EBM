@@ -18,7 +18,7 @@
 
 ## 모델·데이터·표본
 
-[중단한 가변 길이 학습의 저장 20epoch를 21LA·DF 전체 평가](../E022/README.md)의 21LA 전체 점수, 4.0375초 상한 비반복 학습 20/원음 전체 비반복 학습 20epoch 모델, 참고 4.0375초 상한 비반복 학습 45/원음 전체 비반복 학습 30epoch 모델·원래 24050의 완료 점수. 모든 발화 ID·원음 길이를 맞춘다.
+[중단한 가변 길이 학습의 저장 20epoch를 21LA·DF 전체 평가](../E022/README.md)의 21LA 전체 점수, EBM-NoRepeat 20/EBM-FullContext 20epoch 모델, 참고 EBM-NoRepeat 45/EBM-FullContext 30epoch 모델·원래 24050의 완료 점수. 모든 발화 ID·원음 길이를 맞춘다.
 
 ## 실험 내용과 상세 절차
 

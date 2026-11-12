@@ -18,8 +18,8 @@
 
 아래 v1 기록은 이전 실행의 재현 정보이며 현재 활성 실행으로 해석하지 않는다.
 
-사용자 요청으로 전수 순회+길이/VAD 정책의50epoch 학습과 배치 240 고정 길이 반복 입력 학습 고정50 모델의 동일 조건 비교를 시작했다.
-운영 원음 전체 비반복 학습 저장소를 변경하지 않고 `/home/mentee/analysis/ebm_coverage_e50_20261110_v1/code`의
+사용자 요청으로 전수 순회+길이/VAD 정책의50epoch 학습과 EBM-Repeat 고정50 모델의 동일 조건 비교를 시작했다.
+운영 EBM-FullContext 저장소를 변경하지 않고 `/home/mentee/analysis/ebm_coverage_e50_20261110_v1/code`의
 고정 소스 snapshot으로 실행한다. 소스/정책/체크포인트 SHA와 실행 설정은 그 폴더의 `experiment.json`이다.
 결과명은 `EBM_e50_bs240_lr1e5_OC_BPL_coverage_activity_20261110`이다.
 실제 진행과 완료 여부는 `../artifacts/ebm_coverage_e50_20261110/state.json` 및
@@ -158,10 +158,10 @@ Train 전체의 앞/뒤 격자 후보를 중복 제거한 뒤 WebRTC VAD2(16kHz,
 
 ## 기존 EBM과 달라지는 것과 유지하는 것
 
-| 항목 | 기존 원본/4.0375초 상한 비반복 학습과 원음 전체 비반복 학습 | 최종 matched 구성 |
+| 항목 | 기존 원본/EBM-NoRepeat와 EBM-FullContext | 최종 matched 구성 |
 |---|---|---|
-| 원음 선택 | 클래스별 shuffle; 4.0375초 상한 비반복 학습과 원음 전체 비반복 학습는 길이 sortish grouping | 클래스 quota/목표 비율 유지; coverage는 전수 순회+보정 추가 추출 |
-| OC 입력 | 원본/4.0375초 상한 비반복 학습은 앞 구간 상한, 원음 전체 비반복 학습은 원길이 전체 | 보나/스푸프 모두0.5~4초 조건부 무작위 조각 |
+| 원음 선택 | 클래스별 shuffle; EBM-NoRepeat와 EBM-FullContext는 길이 sortish grouping | 클래스 quota/목표 비율 유지; coverage는 전수 순회+보정 추가 추출 |
+| OC 입력 | 원본/EBM-NoRepeat 모델은 앞 구간 상한, EBM-FullContext 모델은 원길이 전체 | 보나/스푸프 모두0.5~4초 조건부 무작위 조각 |
 | BPL 왼쪽 | OC 보나의 Long | OC 보나의 가변 길이 조각(임베딩 공유) |
 | BPL 오른쪽 | 같은 원음 목록의 Short | 같은 분포에서 독립 추출한 보나 조각 |
 | OC 손실/가중치 | 기존 OCSoftmax·클래스 가중치 | 동일 |
@@ -174,7 +174,7 @@ Train 전체의 앞/뒤 격자 후보를 중복 제거한 뒤 WebRTC VAD2(16kHz,
 
 원본은 정상12개 전체 배치에서 Long12×같은 원음 Short12의144쌍이다.
 대각12쌍은 같은 원음, 나머지는 묶음 내부 교차 원음이다. 원본의 불완전 마지막 배치는 예외다.
-원음 전체 비반복 학습의 OC 입력도 원음 길이에 따라 가변이었지만 **맞춘0.5초 격자 분포의 조각**을 쓰던 것은 아니다.
+EBM-FullContext의 OC 입력도 원음 길이에 따라 가변이었지만 **맞춘0.5초 격자 분포의 조각**을 쓰던 것은 아니다.
 
 기존과 최종 구성을 한 번 비교하면 OC 입력·길이 분포·BPL 원음 관계가 함께 바뀐다.
 독립 원음 효과만 보려면 같은 OC 가변 입력을 쓰는 `matched_same_source`와
@@ -291,10 +291,10 @@ SoX `tempo -s`(피치 보존 WSOLA)를 적용하고 float32 배열을 캐시한�
 Adam2160step/매epoch 원음 사용/손실 유한성을 검산한다. 별도 GPU smoke2step은 본학습에 재사용하지 않는다.
 
 5/10/15/20epoch 중간평가는 19LA 공식eval71,237개 전체이며 dev 평가/정책 적합/체크포인트 선택은 없다.
-고정20을21LA148,176·21DF533,928개 전체에 평가하고, 기존 4.0375초 상한 비반복 학습/원음 전체 비반복 학습 20epoch 모델과 같은 입력·OC점수 정책으로 비교한다.
+고정20을21LA148,176·21DF533,928개 전체에 평가하고, 기존 EBM-NoRepeat/EBM-FullContext 20epoch 모델과 같은 입력·OC점수 정책으로 비교한다.
 앞64600/반복 없음/mask/batch8/seed1729/원본 ASP잡음/각자 학습한 OC중심을 사용한다.
-저장된 4.0375초 상한 비반복 학습과 원음 전체 비반복 학습 점수의 평가 난수는 다르므로 엄격한 동일 RNG 비교라고 부르지 않는다.
-배치 240 고정 길이 반복 입력 학습의50epoch는 epoch가 다른 참고값이다. `tools/finish_mild_experiment.py`가 독립 EER 재계산과 비교표를 생성한다.
+저장된 EBM-NoRepeat와 EBM-FullContext 점수의 평가 난수는 다르므로 엄격한 동일 RNG 비교라고 부르지 않는다.
+EBM-Repeat의50epoch는 epoch가 다른 참고값이다. `tools/finish_mild_experiment.py`가 독립 EER 재계산과 비교표를 생성한다.
 
 `tools/queue_mild_experiment.py`는 기존 DF 평가와 후속 비교분석이 성공적으로 끝나고
 동일 컨테이너 셸과 GPU6/7이 실제 유휴일 때만 격리 snapshot을 실행한다.

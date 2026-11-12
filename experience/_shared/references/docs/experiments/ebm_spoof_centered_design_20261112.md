@@ -219,7 +219,7 @@ margin은 hard constraint가 아니다. softplus는 margin을 넘겨도 작은 g
 
 원본 train에는 `param.require_grad=False`라는 속성명 오타가 있지만50epoch 조건의 frontend forward는 별도로 `set_grad_enabled(False)` 안에서 실행된다. 신규 runner는 `requires_grad_(False)`도 명시하고 gradient·parameter 불변을 확인한다. 또한 원래 설정은 `lr=lr_min=1e-5`이므로 scheduler가 있어도 학습률은 같은 값이다.
 
-기존 저장240/4.0375초 상한 비반복 학습과 원음 전체 비반복 학습/짧은 정상 음성의 3.0275초·2초 정렬 학습 성능은 참고 자료로만 사용한다. 원래 실험들이 입력·난수·학습 이력까지 이 새 비교와 같다는 근거가 없으므로 `A`를 생략하고 신규 `R_all`과 과거 최소 EER만 비교해서 방향 전환의 효과라고 결론내리지 않는다.
+기존 저장240/EBM-NoRepeat와 EBM-FullContext/짧은 정상 음성의 3.0275초·2초 정렬 학습 성능은 참고 자료로만 사용한다. 원래 실험들이 입력·난수·학습 이력까지 이 새 비교와 같다는 근거가 없으므로 `A`를 생략하고 신규 `R_all`과 과거 최소 EER만 비교해서 방향 전환의 효과라고 결론내리지 않는다.
 
 ### 5.1 부분 배치와 표본 수
 

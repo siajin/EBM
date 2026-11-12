@@ -71,8 +71,8 @@ development 부분집합은 공식 development의 화자를 seed 11로 무작위
 
 \[
 J_{a,j}=
-\frac{(\mu_{4.0375초 상한 비반복 학습,j}-\mu_{a,j})^2}
-{\sigma_{4.0375초 상한 비반복 학습,j}^{2}+\sigma_{a,j}^{2}+10^{-8}},
+\frac{(\mu_{EBM-NoRepeat,j}-\mu_{a,j})^2}
+{\sigma_{EBM-NoRepeat,j}^{2}+\sigma_{a,j}^{2}+10^{-8}},
 \qquad
 J_j=\frac{1}{6}\sum_{a\in\{\mathrm{A01},\ldots,\mathrm{A06}\}}J_{a,j}.
 \]

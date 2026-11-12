@@ -4,7 +4,7 @@
 
 # EBM 비공개 저장소 연결 완료
 
-**현재 상태 정정:** 아래는 최초 연결 당시 기록이다. 이후 사용자 요청으로 서버만 `baseline/e50-bs240-lr1e5`로 복원했다. 로컬과 GitHub `main`은 4.0375초 상한 비반복 학습 버전을 유지한다. 서버 baseline은 배치 240 고정 길이 반복 입력 학습 백업에서 codec-off와 Git 제외 규칙을 보존한 버전이다. 자세한 현재 상태는 [서버 baseline 복원](ebm_server_baseline_restore_20261106.md)을 따른다.
+**현재 상태 정정:** 아래는 최초 연결 당시 기록이다. 이후 사용자 요청으로 서버만 `baseline/e50-bs240-lr1e5`로 복원했다. 로컬과 GitHub `main`은 EBM-NoRepeat 버전을 유지한다. 서버 baseline은 EBM-Repeat 백업에서 codec-off와 Git 제외 규칙을 보존한 버전이다. 자세한 현재 상태는 [서버 baseline 복원](ebm_server_baseline_restore_20261106.md)을 따른다.
 
 2026-11-06 사용자의 요청으로 [siajin/EBM](https://github.com/siajin/EBM)을 **Private**로 생성했다. 공개 저장소를 private fork로 바꾸는 방식이 아니라, 원본 이력과 LICENSE를 보존한 별도 비공개 저장소다.
 
@@ -17,7 +17,7 @@
 | 원본 저장소 | `upstream` = https://github.com/kimho1wq/EBM |
 | 최초 사용자 커밋 | `0b860798c87daef8ea47cd24f15c8aaecb9a8c7e` |
 
-커밋에는 현재 4.0375초 상한 비반복 학습 코드, 기존 사용자 설정·데이터 경로 변경, ignore 규칙, 통제실험·작업 안내가 포함됐다. 현재 4.0375초 상한 비반복 학습의 손실·입력 코드는 제한 검증 뒤 변경하지 않았으며 Python 파일 hash도 유지했다. 데이터·음성·모델·결과·백업·인증 파일은 포함하지 않았다. 기존 원본 LICENSE와 커밋 이력은 유지했다.
+커밋에는 현재 EBM-NoRepeat 코드, 기존 사용자 설정·데이터 경로 변경, ignore 규칙, 통제실험·작업 안내가 포함됐다. 현재 EBM-NoRepeat의 손실·입력 코드는 제한 검증 뒤 변경하지 않았으며 Python 파일 hash도 유지했다. 데이터·음성·모델·결과·백업·인증 파일은 포함하지 않았다. 기존 원본 LICENSE와 커밋 이력은 유지했다.
 
 서버에는 이 저장소 전용 write deploy key를 설정했다. 비밀 키는 서버에만 있고 개인 GitHub token을 서버에 복사하지 않았다. GitHub 호스트 키는 공식 HTTPS API로 받은 키로 확인하며, 서버의22번 연결 timeout 때문에443번 SSH 연결을 사용한다. 로컬은 기존 GitHub CLI 인증을 저장소 범위 credential helper로 사용한다.
 

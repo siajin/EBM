@@ -176,7 +176,7 @@ g=unit(\mu),\quad g_k=unit(\mu_k).
 N-OFF와 G-OFF는 각각 기준 점수 `q ∈ {N,G}`에 대해 다음과 같이 계산한다.
 
 \[
-a_{q,k}=mean_{T,4.0375초 상한 비반복 학습,k}(s_q),\quad a_q=mean_{T,4.0375초 상한 비반복 학습}(s_q),\quad
+a_{q,k}=mean_{T,EBM-NoRepeat,k}(s_q),\quad a_q=mean_{T,EBM-NoRepeat}(s_q),\quad
 s_{q\text{-OFF}}(i)=s_q(i)-a_{q,b(d_i)}+a_q.
 \]
 

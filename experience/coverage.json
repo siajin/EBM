@@ -217,7 +217,7 @@
   },
   {
     "id": "E025",
-    "title": "완만한 변형 캐시를 배치 240 고정 길이 반복 입력 학습 학습에 연결한 두 실행",
+    "title": "완만한 변형 캐시를 EBM-Repeat 학습에 연결한 두 실행",
     "theme": 1,
     "status": "1차 진입 실패·2차 평가 오류로 중단",
     "report": "experience/01_duration_bias/E025/README.md",
@@ -226,7 +226,7 @@
   },
   {
     "id": "E026",
-    "title": "원음 2초 이하 정상에만 3.0275초·2초 손실을 더한 배치 240 고정 길이 반복 입력 학습 학습",
+    "title": "원음 2초 이하 정상에만 3.0275초·2초 손실을 더한 EBM-Repeat 학습",
     "theme": 1,
     "status": "사용자 중단:25epoch 저장·19LA 완료·후속21LA/DF 전체 평가 완료",
     "report": "experience/01_duration_bias/E026/README.md",

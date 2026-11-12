@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "checked_at": "2026-11-12T11:48:54.141933+09:00",
+  "base_main": "c39bef6ec240f98290b05c1c721ce78ff5b398a5",
+  "branch_readmes": 4,
+  "each_model_branch_changes_only_readme": true,
+  "main_changed_numeric_table_cells": 0,
+  "numeric_table_cells_checked": 1739,
+  "markdown_links_checked": 2468,
+  "code_measurements_and_original_snapshots_changed": 0,
+  "new_training_or_inference": 0,
+  "spending_ceiling_usd": 0,
+  "errors": []
+}
