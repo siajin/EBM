@@ -1,0 +1,67 @@
+{
+  "status": "actual_training_verified",
+  "unit_tests": 147,
+  "initial_state_exact": true,
+  "initial_rng_exact": true,
+  "parameters": 3744384,
+  "source_controls_protected_models_unchanged": true,
+  "smoke_loader_batches_seen": 108,
+  "smoke_trained_batches": [
+    1,
+    106,
+    108
+  ],
+  "smoke_eval_phases": [
+    "19LA"
+  ],
+  "bona_pairs": [
+    144,
+    144,
+    36
+  ],
+  "spoof_pairs": [
+    108,
+    60,
+    108
+  ],
+  "both_short_gradients_positive": true,
+  "training": [
+    {
+      "rank": 0,
+      "epoch": 1,
+      "batch": 5,
+      "first_matches_fresh_smoke": true
+    },
+    {
+      "rank": 1,
+      "epoch": 1,
+      "batch": 5,
+      "first_matches_fresh_smoke": true
+    }
+  ],
+  "errors": {
+    "unit.log": {
+      "Traceback": 0,
+      "CUDA out of memory": 0,
+      "Exception ignored in": 0
+    },
+    "validate.log": {
+      "Traceback": 0,
+      "CUDA out of memory": 0,
+      "Exception ignored in": 0
+    },
+    "smoke.log": {
+      "Traceback": 0,
+      "CUDA out of memory": 0,
+      "Exception ignored in": 0
+    },
+    "train.log": {
+      "Traceback": 0,
+      "CUDA out of memory": 0,
+      "Exception ignored in": 0
+    }
+  },
+  "new_spending_usd": 0,
+  "automatic_retries": 0,
+  "note": "Training-start verification only, not final EER or training completion"
+}
