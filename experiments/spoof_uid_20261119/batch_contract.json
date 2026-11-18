@@ -1,0 +1,52 @@
+{
+  "status": "passed",
+  "unchanged_sources": {
+    "role_training.py": "eff130382759f8c8516f486a55f3aa10a9ad1f61cd0e05ad09bb7b261704157e",
+    "role_lifecycle.py": "2952d8b7362c57b988f7df7e1369ec5fbd0e654ed9f6fb6cae5b5fa9db849180",
+    "baseline240_source/data_loaders.py": "411e294692207b8f434cc49769cbd052abb51316d4a17fe555c71459d7eea8f6",
+    "baseline240_source/train.py": "b7b98a182a4946c479f477b7110e1c4a49be53ee6b6e89ef1b4bc4785374873f",
+    "baseline240_source/main.py": "f23483e1a8d1bf98edfcd934e9c373821635b9226240677bb38644809a9c0326",
+    "model/b_linear.py": "73bd5e5676d4877a8a08f9fb82695b9fd7358d289a94a53b3203ab114920e5cb",
+    "model/loss.py": "b3c282817cf7a2781fab2881cf1508ca862710245002c78e5a5ad2708815f7bb",
+    "data_loaders.py": "106809812cfcc113ff49952f9fb75eb99119ef8cf1a851052dc6e75e69b3b04b"
+  },
+  "build_trainer_AST_exact": true,
+  "all_non_objective_options_exact": true,
+  "steps_per_epoch": 108,
+  "global_batch_size": 240,
+  "rank_batch_size": 120,
+  "per_rank_bona": 1290,
+  "per_rank_spoof": 11616,
+  "backend_updates": 108,
+  "center_updates": 108,
+  "special_batches": [
+    {
+      "bona": 12,
+      "spoof": 108,
+      "bona_pairs": 144,
+      "spoof_pairs": 108,
+      "loss": 0.8497583666602595,
+      "lower_bound": 0.8497583666602525,
+      "normal_original_loss_gradient_exact": true
+    },
+    {
+      "bona": 12,
+      "spoof": 60,
+      "bona_pairs": 144,
+      "spoof_pairs": 60,
+      "loss": 0.8450573292268071,
+      "lower_bound": 0.8450573292268003,
+      "normal_original_loss_gradient_exact": true
+    },
+    {
+      "bona": 6,
+      "spoof": 108,
+      "bona_pairs": 36,
+      "spoof_pairs": 108,
+      "loss": 0.8530985774682387,
+      "lower_bound": 0.8530985774682318,
+      "normal_original_loss_gradient_exact": true
+    }
+  ],
+  "limitation": "CPU/static proof; actual2GPU108loader smoke is mandatory before training"
+}

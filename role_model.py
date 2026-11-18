@@ -37,7 +37,9 @@ class RoleBLinear(B_Linear):
         z, short = self.encode(x, mask), self.encode(x_short, mask_short)
         self.loss.validate_embeddings(short)
         oc = self.loss.backend_loss(z, labels)
-        pair = self.loss_bpl(z[compact], short[compact])
+        pair = (self.loss_bpl.same_uid(z[compact], short[compact])
+                if self.role.spoof_bpl_pairing == 'same_uid'
+                else self.loss_bpl(z[compact], short[compact]))
         total = oc + pair
         bona_pair = None
         if self.role.bona_bpl_weight > 0:
@@ -50,7 +52,7 @@ class RoleBLinear(B_Linear):
         if not bool(torch.isfinite(total)):
             raise ValueError('Nonfinite role objective')
         stats = dict(oc=oc.detach(), pair=pair.detach(), compact_rows=int(compact.sum()),
-                     pair_count=int(compact.sum()) ** 2)
+                     pair_count=int(compact.sum()) ** (1 if self.role.spoof_bpl_pairing == 'same_uid' else 2))
         if bona_pair is not None:
             stats.update(pair_spoof=pair.detach(), pair_bona=bona_pair.detach(),
                          bona_pair_count=int((labels == 1).sum())**(1 if self.role.bona_bpl_pairing == 'same_uid' else 2),

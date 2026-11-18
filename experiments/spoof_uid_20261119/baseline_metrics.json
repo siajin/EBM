@@ -1,0 +1,275 @@
+{
+  "protocol": "wrap64600/no-mask/batch8/frozen XLSR1a640f32/common matched_wrap1729/ASP1e-5",
+  "rows": [
+    {
+      "phase": "19LA",
+      "epoch": 5,
+      "legacy240": null,
+      "spoof_only": 0.5337966876428415,
+      "bona_allcross": 0.8565601631543243,
+      "bona_uid": 0.8021753908905513,
+      "uid_minus_allcross_pp": -0.05438477226377292
+    },
+    {
+      "phase": "19LA",
+      "epoch": 10,
+      "legacy240": null,
+      "spoof_only": 0.39604270373501144,
+      "bona_allcross": 0.6254248810333054,
+      "bona_uid": 0.652766037381422,
+      "uid_minus_allcross_pp": 0.027341156348116624
+    },
+    {
+      "phase": "19LA",
+      "epoch": 15,
+      "legacy240": 0.299116247450717,
+      "spoof_only": 0.20350020350020348,
+      "bona_allcross": 0.6526172671651868,
+      "bona_uid": 0.7623430700353777,
+      "uid_minus_allcross_pp": 0.10972580287019096
+    },
+    {
+      "phase": "19LA",
+      "epoch": 20,
+      "legacy240": 0.2974233743464513,
+      "spoof_only": 0.44867437117607145,
+      "bona_allcross": 0.7070020394289598,
+      "bona_uid": 0.8327854481700635,
+      "uid_minus_allcross_pp": 0.12578340874110372
+    },
+    {
+      "phase": "19LA",
+      "epoch": 25,
+      "legacy240": 0.21753908905506963,
+      "spoof_only": 0.37725806956576186,
+      "bona_allcross": 0.6652891268275883,
+      "bona_uid": 0.6254248810333054,
+      "uid_minus_allcross_pp": -0.03986424579428294
+    },
+    {
+      "phase": "19LA",
+      "epoch": 30,
+      "legacy240": 0.29116182962336806,
+      "spoof_only": 0.5165774396543628,
+      "bona_allcross": 0.543847722637663,
+      "bona_uid": 0.5574439157036051,
+      "uid_minus_allcross_pp": 0.013596193065942064
+    },
+    {
+      "phase": "19LA",
+      "epoch": 35,
+      "legacy240": 0.3263086335825934,
+      "spoof_only": 0.4078857919782528,
+      "bona_allcross": 0.7070020394289598,
+      "bona_uid": 0.6919006919006919,
+      "uid_minus_allcross_pp": -0.015101347528267861
+    },
+    {
+      "phase": "19LA",
+      "epoch": 40,
+      "legacy240": 0.3942895989122985,
+      "spoof_only": 0.4078857919782528,
+      "bona_allcross": 0.543847722637663,
+      "bona_uid": 0.5302515295717309,
+      "uid_minus_allcross_pp": -0.013596193065932072
+    },
+    {
+      "phase": "19LA",
+      "epoch": 45,
+      "legacy240": 0.6809429886352963,
+      "spoof_only": 0.25515794746563975,
+      "bona_allcross": 0.5400582323659248,
+      "bona_uid": 0.5353620738236123,
+      "uid_minus_allcross_pp": -0.004696158542312423
+    },
+    {
+      "phase": "19LA",
+      "epoch": 50,
+      "legacy240": 0.5710401087695496,
+      "spoof_only": 0.24473147518694124,
+      "bona_allcross": 0.6798096532970812,
+      "bona_uid": 0.6118286879673681,
+      "uid_minus_allcross_pp": -0.0679809653297131
+    },
+    {
+      "phase": "21LA",
+      "epoch": 5,
+      "legacy240": null,
+      "spoof_only": 3.460557888422316,
+      "bona_allcross": 6.034017278617711,
+      "bona_uid": 6.344492440604756,
+      "uid_minus_allcross_pp": 0.3104751619870454
+    },
+    {
+      "phase": "21LA",
+      "epoch": 10,
+      "legacy240": null,
+      "spoof_only": 2.6492201559688064,
+      "bona_allcross": 5.09584233261339,
+      "bona_uid": 5.1903347732181375,
+      "uid_minus_allcross_pp": 0.09449244060474715
+    },
+    {
+      "phase": "21LA",
+      "epoch": 15,
+      "legacy240": 1.3971382289416883,
+      "spoof_only": 2.6972105578884222,
+      "bona_allcross": 5.284193161367726,
+      "bona_uid": 5.899028077753777,
+      "uid_minus_allcross_pp": 0.6148349163860507
+    },
+    {
+      "phase": "21LA",
+      "epoch": 20,
+      "legacy240": 1.1300239952009599,
+      "spoof_only": 2.3605278944211157,
+      "bona_allcross": 4.807288542291541,
+      "bona_uid": 5.215206958608278,
+      "uid_minus_allcross_pp": 0.4079184163167371
+    },
+    {
+      "phase": "21LA",
+      "epoch": 25,
+      "legacy240": 1.3564787042591482,
+      "spoof_only": 2.1530777537796983,
+      "bona_allcross": 4.900107991360687,
+      "bona_uid": 4.870275944811038,
+      "uid_minus_allcross_pp": -0.029832046549649327
+    },
+    {
+      "phase": "21LA",
+      "epoch": 30,
+      "legacy240": 1.1406587473002188,
+      "spoof_only": 1.700863930885528,
+      "bona_allcross": 4.185662867426514,
+      "bona_uid": 4.292656587473004,
+      "uid_minus_allcross_pp": 0.10699372004648922
+    },
+    {
+      "phase": "21LA",
+      "epoch": 35,
+      "legacy240": 1.3167366526694662,
+      "spoof_only": 1.9653569286142771,
+      "bona_allcross": 4.069436112777444,
+      "bona_uid": 4.216406718656269,
+      "uid_minus_allcross_pp": 0.14697060587882493
+    },
+    {
+      "phase": "21LA",
+      "epoch": 40,
+      "legacy240": 1.1915116976604678,
+      "spoof_only": 1.6631673665266946,
+      "bona_allcross": 4.006448710257948,
+      "bona_uid": 3.948434125269979,
+      "uid_minus_allcross_pp": -0.05801458498796919
+    },
+    {
+      "phase": "21LA",
+      "epoch": 45,
+      "legacy240": 1.9235961123110126,
+      "spoof_only": 1.9573434125270068,
+      "bona_allcross": 4.171166306695459,
+      "bona_uid": 4.02267818574514,
+      "uid_minus_allcross_pp": -0.1484881209503186
+    },
+    {
+      "phase": "21LA",
+      "epoch": 50,
+      "legacy240": 1.0527894421115778,
+      "spoof_only": 2.166576673866095,
+      "bona_allcross": 4.347630473905219,
+      "bona_uid": 3.9821814254859698,
+      "uid_minus_allcross_pp": -0.36544904841924897
+    },
+    {
+      "phase": "21DF",
+      "epoch": 5,
+      "legacy240": null,
+      "spoof_only": 4.292190290506475,
+      "bona_allcross": 3.080234043984129,
+      "bona_uid": 3.349250117694538,
+      "uid_minus_allcross_pp": 0.26901607371040903
+    },
+    {
+      "phase": "21DF",
+      "epoch": 10,
+      "legacy240": null,
+      "spoof_only": 5.111305400497676,
+      "bona_allcross": 2.784654538308747,
+      "bona_uid": 2.9659022126571974,
+      "uid_minus_allcross_pp": 0.18124767434845035
+    },
+    {
+      "phase": "21DF",
+      "epoch": 15,
+      "legacy240": 2.396259384771288,
+      "spoof_only": 3.6383182751232384,
+      "bona_allcross": 2.764140157374404,
+      "bona_uid": 3.1205864550406823,
+      "uid_minus_allcross_pp": 0.35644629766627833
+    },
+    {
+      "phase": "21DF",
+      "epoch": 20,
+      "legacy240": 2.575815080751899,
+      "spoof_only": 3.3828771269083306,
+      "bona_allcross": 2.9995292218710072,
+      "bona_uid": 3.1896181358959192,
+      "uid_minus_allcross_pp": 0.19008891402491201
+    },
+    {
+      "phase": "21DF",
+      "epoch": 25,
+      "legacy240": 2.873661760994415,
+      "spoof_only": 3.3828771269083306,
+      "bona_allcross": 3.300202867111446,
+      "bona_uid": 3.255094491895897,
+      "uid_minus_allcross_pp": -0.04510837521554878
+    },
+    {
+      "phase": "21DF",
+      "epoch": 30,
+      "legacy240": 2.849001751246005,
+      "spoof_only": 3.537561369291823,
+      "bona_allcross": 3.2156267399274454,
+      "bona_uid": 3.268545295581421,
+      "uid_minus_allcross_pp": 0.05291855565397574
+    },
+    {
+      "phase": "21DF",
+      "epoch": 35,
+      "legacy240": 2.550191789372692,
+      "spoof_only": 3.248369090053134,
+      "bona_allcross": 3.641782533392158,
+      "bona_uid": 3.5980899858766477,
+      "uid_minus_allcross_pp": -0.04369254751551033
+    },
+    {
+      "phase": "21DF",
+      "epoch": 40,
+      "legacy240": 2.648446515714013,
+      "spoof_only": 3.3588798489684,
+      "bona_allcross": 3.4972089582352575,
+      "bona_uid": 3.504418572840467,
+      "uid_minus_allcross_pp": 0.0072096146052094134
+    },
+    {
+      "phase": "21DF",
+      "epoch": 45,
+      "legacy240": 2.885197390544076,
+      "spoof_only": 3.053332436613089,
+      "bona_allcross": 3.7393234245746134,
+      "bona_uid": 3.7338722572963765,
+      "uid_minus_allcross_pp": -0.0054511672782369125
+    },
+    {
+      "phase": "21DF",
+      "epoch": 50,
+      "legacy240": 3.4770327527069758,
+      "spoof_only": 3.2379748737619423,
+      "bona_allcross": 3.7664311764173246,
+      "bona_uid": 3.658158321115711,
+      "uid_minus_allcross_pp": -0.10827285530161346
+    }
+  ]
+}

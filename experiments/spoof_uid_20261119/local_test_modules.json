@@ -1,0 +1,52 @@
+[
+  {
+    "module": "test_spoof_uid_bpl",
+    "exit_code": 0,
+    "seconds": 16.469330072402954
+  },
+  {
+    "module": "test_bona_uid_bpl",
+    "exit_code": 0,
+    "seconds": 18.7682147026062
+  },
+  {
+    "module": "test_dual_bpl",
+    "exit_code": 0,
+    "seconds": 16.403301000595093
+  },
+  {
+    "module": "test_role_relaxed",
+    "exit_code": 0,
+    "seconds": 9.932114601135254
+  },
+  {
+    "module": "test_role_iterator_lifecycle",
+    "exit_code": 0,
+    "seconds": 79.12149453163147
+  },
+  {
+    "module": "test_role_code_audit",
+    "exit_code": 0,
+    "seconds": 8.710314512252808
+  },
+  {
+    "module": "test_role_experiment",
+    "exit_code": 0,
+    "seconds": 25.5063259601593
+  },
+  {
+    "module": "test_short32_bpl",
+    "exit_code": 0,
+    "seconds": 24.53248357772827
+  },
+  {
+    "module": "test_short32_lifecycle",
+    "exit_code": 0,
+    "seconds": 27.298883199691772
+  },
+  {
+    "module": "test_positive_bpl",
+    "exit_code": 0,
+    "seconds": 16.045719146728516
+  }
+]

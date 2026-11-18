@@ -1,0 +1,969 @@
+{
+  "status": "complete_verified",
+  "analysis": "Completed normal-allcross vs normal-sameUID; spoof BPL all-cross in both",
+  "epochs": [
+    40,
+    50
+  ],
+  "metrics": [
+    {
+      "model": "bona_allcross",
+      "phase": "19LA",
+      "epoch": 40,
+      "eer_percent": 0.5438477226376581
+    },
+    {
+      "model": "bona_uid",
+      "phase": "19LA",
+      "epoch": 40,
+      "eer_percent": 0.5302515295717236
+    },
+    {
+      "model": "bona_allcross",
+      "phase": "21LA",
+      "epoch": 40,
+      "eer_percent": 4.006448710257948
+    },
+    {
+      "model": "bona_uid",
+      "phase": "21LA",
+      "epoch": 40,
+      "eer_percent": 3.948434125269984
+    },
+    {
+      "model": "bona_allcross",
+      "phase": "21DF",
+      "epoch": 40,
+      "eer_percent": 3.497208958235254
+    },
+    {
+      "model": "bona_uid",
+      "phase": "21DF",
+      "epoch": 40,
+      "eer_percent": 3.504418572840467
+    },
+    {
+      "model": "bona_allcross",
+      "phase": "19LA",
+      "epoch": 50,
+      "eer_percent": 0.679809653297081
+    },
+    {
+      "model": "bona_uid",
+      "phase": "19LA",
+      "epoch": 50,
+      "eer_percent": 0.611828687967364
+    },
+    {
+      "model": "bona_allcross",
+      "phase": "21LA",
+      "epoch": 50,
+      "eer_percent": 4.347630473905219
+    },
+    {
+      "model": "bona_uid",
+      "phase": "21LA",
+      "epoch": 50,
+      "eer_percent": 3.9821814254859644
+    },
+    {
+      "model": "bona_allcross",
+      "phase": "21DF",
+      "epoch": 50,
+      "eer_percent": 3.7664311764173246
+    },
+    {
+      "model": "bona_uid",
+      "phase": "21DF",
+      "epoch": 50,
+      "eer_percent": 3.658158321115711
+    }
+  ],
+  "class_errors": [
+    {
+      "model": "bona_allcross",
+      "phase": "19LA",
+      "epoch": 40,
+      "mode": "fixed19LA_EER_nearest",
+      "source_matched_far_percent": 0.49935819166588397,
+      "threshold": -0.2751425504684448,
+      "bona_count": 7355,
+      "spoof_count": 63882,
+      "bona_rejected": 40,
+      "spoof_accepted": 347,
+      "bona_rejection_percent": 0.5438477226376615,
+      "spoof_acceptance_percent": 0.5431890047274662
+    },
+    {
+      "model": "bona_allcross",
+      "phase": "19LA",
+      "epoch": 40,
+      "mode": "fixed19LA_FAR0.5",
+      "source_matched_far_percent": 0.49935819166588397,
+      "threshold": -0.2614994943141937,
+      "bona_count": 7355,
+      "spoof_count": 63882,
+      "bona_rejected": 42,
+      "spoof_accepted": 319,
+      "bona_rejection_percent": 0.5710401087695445,
+      "spoof_acceptance_percent": 0.49935819166588397
+    },
+    {
+      "model": "bona_allcross",
+      "phase": "19LA",
+      "epoch": 40,
+      "mode": "own_dataset_EER_nearest",
+      "source_matched_far_percent": 0.49935819166588397,
+      "threshold": -0.2751425504684448,
+      "bona_count": 7355,
+      "spoof_count": 63882,
+      "bona_rejected": 40,
+      "spoof_accepted": 347,
+      "bona_rejection_percent": 0.5438477226376615,
+      "spoof_acceptance_percent": 0.5431890047274662
+    },
+    {
+      "model": "bona_uid",
+      "phase": "19LA",
+      "epoch": 40,
+      "mode": "fixed19LA_EER_nearest",
+      "source_matched_far_percent": 0.49935819166588397,
+      "threshold": -0.32636359333992004,
+      "bona_count": 7355,
+      "spoof_count": 63882,
+      "bona_rejected": 39,
+      "spoof_accepted": 339,
+      "bona_rejection_percent": 0.53025152957172,
+      "spoof_acceptance_percent": 0.5306659152812999
+    },
+    {
+      "model": "bona_uid",
+      "phase": "19LA",
+      "epoch": 40,
+      "mode": "fixed19LA_FAR0.5",
+      "source_matched_far_percent": 0.49935819166588397,
+      "threshold": -0.3174084722995758,
+      "bona_count": 7355,
+      "spoof_count": 63882,
+      "bona_rejected": 40,
+      "spoof_accepted": 319,
+      "bona_rejection_percent": 0.5438477226376615,
+      "spoof_acceptance_percent": 0.49935819166588397
+    },
+    {
+      "model": "bona_uid",
+      "phase": "19LA",
+      "epoch": 40,
+      "mode": "own_dataset_EER_nearest",
+      "source_matched_far_percent": 0.49935819166588397,
+      "threshold": -0.32636359333992004,
+      "bona_count": 7355,
+      "spoof_count": 63882,
+      "bona_rejected": 39,
+      "spoof_accepted": 339,
+      "bona_rejection_percent": 0.53025152957172,
+      "spoof_acceptance_percent": 0.5306659152812999
+    },
+    {
+      "model": "bona_allcross",
+      "phase": "21LA",
+      "epoch": 40,
+      "mode": "fixed19LA_EER_nearest",
+      "source_matched_far_percent": 0.49935819166588397,
+      "threshold": -0.2751425504684448,
+      "bona_count": 14816,
+      "spoof_count": 133360,
+      "bona_rejected": 2784,
+      "spoof_accepted": 184,
+      "bona_rejection_percent": 18.79049676025918,
+      "spoof_acceptance_percent": 0.13797240551889622
+    },
+    {
+      "model": "bona_allcross",
+      "phase": "21LA",
+      "epoch": 40,
+      "mode": "fixed19LA_FAR0.5",
+      "source_matched_far_percent": 0.49935819166588397,
+      "threshold": -0.2614994943141937,
+      "bona_count": 14816,
+      "spoof_count": 133360,
+      "bona_rejected": 2854,
+      "spoof_accepted": 166,
+      "bona_rejection_percent": 19.262958963282937,
+      "spoof_acceptance_percent": 0.1244751049790042
+    },
+    {
+      "model": "bona_allcross",
+      "phase": "21LA",
+      "epoch": 40,
+      "mode": "own_dataset_EER_nearest",
+      "source_matched_far_percent": 0.49935819166588397,
+      "threshold": -0.9214228987693787,
+      "bona_count": 14816,
+      "spoof_count": 133360,
+      "bona_rejected": 594,
+      "spoof_accepted": 5343,
+      "bona_rejection_percent": 4.009179265658747,
+      "spoof_acceptance_percent": 4.006448710257948
+    },
+    {
+      "model": "bona_uid",
+      "phase": "21LA",
+      "epoch": 40,
+      "mode": "fixed19LA_EER_nearest",
+      "source_matched_far_percent": 0.49935819166588397,
+      "threshold": -0.32636359333992004,
+      "bona_count": 14816,
+      "spoof_count": 133360,
+      "bona_rejected": 2778,
+      "spoof_accepted": 202,
+      "bona_rejection_percent": 18.75,
+      "spoof_acceptance_percent": 0.15146970605878823
+    },
+    {
+      "model": "bona_uid",
+      "phase": "21LA",
+      "epoch": 40,
+      "mode": "fixed19LA_FAR0.5",
+      "source_matched_far_percent": 0.49935819166588397,
+      "threshold": -0.3174084722995758,
+      "bona_count": 14816,
+      "spoof_count": 133360,
+      "bona_rejected": 2817,
+      "spoof_accepted": 193,
+      "bona_rejection_percent": 19.013228941684666,
+      "spoof_acceptance_percent": 0.14472105578884223
+    },
+    {
+      "model": "bona_uid",
+      "phase": "21LA",
+      "epoch": 40,
+      "mode": "own_dataset_EER_nearest",
+      "source_matched_far_percent": 0.49935819166588397,
+      "threshold": -0.9253362417221069,
+      "bona_count": 14816,
+      "spoof_count": 133360,
+      "bona_rejected": 585,
+      "spoof_accepted": 5266,
+      "bona_rejection_percent": 3.9484341252699786,
+      "spoof_acceptance_percent": 3.9487102579484104
+    },
+    {
+      "model": "bona_allcross",
+      "phase": "21DF",
+      "epoch": 40,
+      "mode": "fixed19LA_EER_nearest",
+      "source_matched_far_percent": 0.49935819166588397,
+      "threshold": -0.2751425504684448,
+      "bona_count": 14869,
+      "spoof_count": 519059,
+      "bona_rejected": 3042,
+      "spoof_accepted": 261,
+      "bona_rejection_percent": 20.45867240567624,
+      "spoof_acceptance_percent": 0.050283301127617475
+    },
+    {
+      "model": "bona_allcross",
+      "phase": "21DF",
+      "epoch": 40,
+      "mode": "fixed19LA_FAR0.5",
+      "source_matched_far_percent": 0.49935819166588397,
+      "threshold": -0.2614994943141937,
+      "bona_count": 14869,
+      "spoof_count": 519059,
+      "bona_rejected": 3155,
+      "spoof_accepted": 229,
+      "bona_rejection_percent": 21.21864281390813,
+      "spoof_acceptance_percent": 0.04411829869051495
+    },
+    {
+      "model": "bona_allcross",
+      "phase": "21DF",
+      "epoch": 40,
+      "mode": "own_dataset_EER_nearest",
+      "source_matched_far_percent": 0.49935819166588397,
+      "threshold": -0.9680094718933105,
+      "bona_count": 14869,
+      "spoof_count": 519059,
+      "bona_rejected": 520,
+      "spoof_accepted": 18153,
+      "bona_rejection_percent": 3.4972089582352544,
+      "spoof_acceptance_percent": 3.497290288772567
+    },
+    {
+      "model": "bona_uid",
+      "phase": "21DF",
+      "epoch": 40,
+      "mode": "fixed19LA_EER_nearest",
+      "source_matched_far_percent": 0.49935819166588397,
+      "threshold": -0.32636359333992004,
+      "bona_count": 14869,
+      "spoof_count": 519059,
+      "bona_rejected": 3123,
+      "spoof_accepted": 219,
+      "bona_rejection_percent": 21.003429954939808,
+      "spoof_acceptance_percent": 0.042191735428920414
+    },
+    {
+      "model": "bona_uid",
+      "phase": "21DF",
+      "epoch": 40,
+      "mode": "fixed19LA_FAR0.5",
+      "source_matched_far_percent": 0.49935819166588397,
+      "threshold": -0.3174084722995758,
+      "bona_count": 14869,
+      "spoof_count": 519059,
+      "bona_rejected": 3186,
+      "spoof_accepted": 201,
+      "bona_rejection_percent": 21.427130271033693,
+      "spoof_acceptance_percent": 0.03872392155805024
+    },
+    {
+      "model": "bona_uid",
+      "phase": "21DF",
+      "epoch": 40,
+      "mode": "own_dataset_EER_nearest",
+      "source_matched_far_percent": 0.49935819166588397,
+      "threshold": -0.9712377786636353,
+      "bona_count": 14869,
+      "spoof_count": 519059,
+      "bona_rejected": 521,
+      "spoof_accepted": 18190,
+      "bona_rejection_percent": 3.5039343600780146,
+      "spoof_acceptance_percent": 3.504418572840467
+    },
+    {
+      "model": "bona_allcross",
+      "phase": "19LA",
+      "epoch": 50,
+      "mode": "fixed19LA_EER_nearest",
+      "source_matched_far_percent": 0.49935819166588397,
+      "threshold": -0.1040571928024292,
+      "bona_count": 7355,
+      "spoof_count": 63882,
+      "bona_rejected": 50,
+      "spoof_accepted": 434,
+      "bona_rejection_percent": 0.6798096532970768,
+      "spoof_acceptance_percent": 0.6793776024545255
+    },
+    {
+      "model": "bona_allcross",
+      "phase": "19LA",
+      "epoch": 50,
+      "mode": "fixed19LA_FAR0.5",
+      "source_matched_far_percent": 0.49935819166588397,
+      "threshold": -0.06555540859699249,
+      "bona_count": 7355,
+      "spoof_count": 63882,
+      "bona_rejected": 58,
+      "spoof_accepted": 319,
+      "bona_rejection_percent": 0.7885791978246091,
+      "spoof_acceptance_percent": 0.49935819166588397
+    },
+    {
+      "model": "bona_allcross",
+      "phase": "19LA",
+      "epoch": 50,
+      "mode": "own_dataset_EER_nearest",
+      "source_matched_far_percent": 0.49935819166588397,
+      "threshold": -0.1040571928024292,
+      "bona_count": 7355,
+      "spoof_count": 63882,
+      "bona_rejected": 50,
+      "spoof_accepted": 434,
+      "bona_rejection_percent": 0.6798096532970768,
+      "spoof_acceptance_percent": 0.6793776024545255
+    },
+    {
+      "model": "bona_uid",
+      "phase": "19LA",
+      "epoch": 50,
+      "mode": "fixed19LA_EER_nearest",
+      "source_matched_far_percent": 0.49935819166588397,
+      "threshold": -0.18595705926418304,
+      "bona_count": 7355,
+      "spoof_count": 63882,
+      "bona_rejected": 45,
+      "spoof_accepted": 391,
+      "bona_rejection_percent": 0.6118286879673691,
+      "spoof_acceptance_percent": 0.6120659966813813
+    },
+    {
+      "model": "bona_uid",
+      "phase": "19LA",
+      "epoch": 50,
+      "mode": "fixed19LA_FAR0.5",
+      "source_matched_far_percent": 0.49935819166588397,
+      "threshold": -0.15850985050201416,
+      "bona_count": 7355,
+      "spoof_count": 63882,
+      "bona_rejected": 50,
+      "spoof_accepted": 319,
+      "bona_rejection_percent": 0.6798096532970768,
+      "spoof_acceptance_percent": 0.49935819166588397
+    },
+    {
+      "model": "bona_uid",
+      "phase": "19LA",
+      "epoch": 50,
+      "mode": "own_dataset_EER_nearest",
+      "source_matched_far_percent": 0.49935819166588397,
+      "threshold": -0.18595705926418304,
+      "bona_count": 7355,
+      "spoof_count": 63882,
+      "bona_rejected": 45,
+      "spoof_accepted": 391,
+      "bona_rejection_percent": 0.6118286879673691,
+      "spoof_acceptance_percent": 0.6120659966813813
+    },
+    {
+      "model": "bona_allcross",
+      "phase": "21LA",
+      "epoch": 50,
+      "mode": "fixed19LA_EER_nearest",
+      "source_matched_far_percent": 0.49935819166588397,
+      "threshold": -0.1040571928024292,
+      "bona_count": 14816,
+      "spoof_count": 133360,
+      "bona_rejected": 2432,
+      "spoof_accepted": 239,
+      "bona_rejection_percent": 16.414686825053995,
+      "spoof_acceptance_percent": 0.17921415716856628
+    },
+    {
+      "model": "bona_allcross",
+      "phase": "21LA",
+      "epoch": 50,
+      "mode": "fixed19LA_FAR0.5",
+      "source_matched_far_percent": 0.49935819166588397,
+      "threshold": -0.06555540859699249,
+      "bona_count": 14816,
+      "spoof_count": 133360,
+      "bona_rejected": 2713,
+      "spoof_accepted": 158,
+      "bona_rejection_percent": 18.311285097192226,
+      "spoof_acceptance_percent": 0.11847630473905219
+    },
+    {
+      "model": "bona_allcross",
+      "phase": "21LA",
+      "epoch": 50,
+      "mode": "own_dataset_EER_nearest",
+      "source_matched_far_percent": 0.49935819166588397,
+      "threshold": -0.8180806636810303,
+      "bona_count": 14816,
+      "spoof_count": 133360,
+      "bona_rejected": 644,
+      "spoof_accepted": 5798,
+      "bona_rejection_percent": 4.346652267818574,
+      "spoof_acceptance_percent": 4.347630473905219
+    },
+    {
+      "model": "bona_uid",
+      "phase": "21LA",
+      "epoch": 50,
+      "mode": "fixed19LA_EER_nearest",
+      "source_matched_far_percent": 0.49935819166588397,
+      "threshold": -0.18595705926418304,
+      "bona_count": 14816,
+      "spoof_count": 133360,
+      "bona_rejected": 2348,
+      "spoof_accepted": 223,
+      "bona_rejection_percent": 15.847732181425487,
+      "spoof_acceptance_percent": 0.16721655668866225
+    },
+    {
+      "model": "bona_uid",
+      "phase": "21LA",
+      "epoch": 50,
+      "mode": "fixed19LA_FAR0.5",
+      "source_matched_far_percent": 0.49935819166588397,
+      "threshold": -0.15850985050201416,
+      "bona_count": 14816,
+      "spoof_count": 133360,
+      "bona_rejected": 2486,
+      "spoof_accepted": 174,
+      "bona_rejection_percent": 16.77915766738661,
+      "spoof_acceptance_percent": 0.13047390521895622
+    },
+    {
+      "model": "bona_uid",
+      "phase": "21LA",
+      "epoch": 50,
+      "mode": "own_dataset_EER_nearest",
+      "source_matched_far_percent": 0.49935819166588397,
+      "threshold": -0.8687909841537476,
+      "bona_count": 14816,
+      "spoof_count": 133360,
+      "bona_rejected": 590,
+      "spoof_accepted": 5311,
+      "bona_rejection_percent": 3.9821814254859613,
+      "spoof_acceptance_percent": 3.9824535092981406
+    },
+    {
+      "model": "bona_allcross",
+      "phase": "21DF",
+      "epoch": 50,
+      "mode": "fixed19LA_EER_nearest",
+      "source_matched_far_percent": 0.49935819166588397,
+      "threshold": -0.1040571928024292,
+      "bona_count": 14869,
+      "spoof_count": 519059,
+      "bona_rejected": 2688,
+      "spoof_accepted": 489,
+      "bona_rejection_percent": 18.077880153339162,
+      "spoof_acceptance_percent": 0.09420894349197298
+    },
+    {
+      "model": "bona_allcross",
+      "phase": "21DF",
+      "epoch": 50,
+      "mode": "fixed19LA_FAR0.5",
+      "source_matched_far_percent": 0.49935819166588397,
+      "threshold": -0.06555540859699249,
+      "bona_count": 14869,
+      "spoof_count": 519059,
+      "bona_rejected": 3065,
+      "spoof_accepted": 325,
+      "bona_rejection_percent": 20.61335664805972,
+      "spoof_acceptance_percent": 0.06261330600182254
+    },
+    {
+      "model": "bona_allcross",
+      "phase": "21DF",
+      "epoch": 50,
+      "mode": "own_dataset_EER_nearest",
+      "source_matched_far_percent": 0.49935819166588397,
+      "threshold": -0.9220748543739319,
+      "bona_count": 14869,
+      "spoof_count": 519059,
+      "bona_rejected": 560,
+      "spoof_accepted": 19550,
+      "bona_rejection_percent": 3.766225031945659,
+      "spoof_acceptance_percent": 3.7664311764173246
+    },
+    {
+      "model": "bona_uid",
+      "phase": "21DF",
+      "epoch": 50,
+      "mode": "fixed19LA_EER_nearest",
+      "source_matched_far_percent": 0.49935819166588397,
+      "threshold": -0.18595705926418304,
+      "bona_count": 14869,
+      "spoof_count": 519059,
+      "bona_rejected": 2824,
+      "spoof_accepted": 334,
+      "bona_rejection_percent": 18.992534803954538,
+      "spoof_acceptance_percent": 0.06434721293725762
+    },
+    {
+      "model": "bona_uid",
+      "phase": "21DF",
+      "epoch": 50,
+      "mode": "fixed19LA_FAR0.5",
+      "source_matched_far_percent": 0.49935819166588397,
+      "threshold": -0.15850985050201416,
+      "bona_count": 14869,
+      "spoof_count": 519059,
+      "bona_rejected": 3021,
+      "spoof_accepted": 262,
+      "bona_rejection_percent": 20.317438966978276,
+      "spoof_acceptance_percent": 0.05047595745377693
+    },
+    {
+      "model": "bona_uid",
+      "phase": "21DF",
+      "epoch": 50,
+      "mode": "own_dataset_EER_nearest",
+      "source_matched_far_percent": 0.49935819166588397,
+      "threshold": -0.9548680186271667,
+      "bona_count": 14869,
+      "spoof_count": 519059,
+      "bona_rejected": 544,
+      "spoof_accepted": 18988,
+      "bona_rejection_percent": 3.6586186024614973,
+      "spoof_acceptance_percent": 3.658158321115711
+    }
+  ],
+  "paired_transitions": [
+    {
+      "epoch": 40,
+      "phase": "19LA",
+      "mode": "fixed19LA_EER_nearest",
+      "label": 0,
+      "new_errors": 30,
+      "corrected": 38,
+      "both_wrong": 309
+    },
+    {
+      "epoch": 40,
+      "phase": "19LA",
+      "mode": "fixed19LA_EER_nearest",
+      "label": 1,
+      "new_errors": 1,
+      "corrected": 2,
+      "both_wrong": 38
+    },
+    {
+      "epoch": 40,
+      "phase": "19LA",
+      "mode": "fixed19LA_FAR0.5",
+      "label": 0,
+      "new_errors": 32,
+      "corrected": 32,
+      "both_wrong": 287
+    },
+    {
+      "epoch": 40,
+      "phase": "19LA",
+      "mode": "fixed19LA_FAR0.5",
+      "label": 1,
+      "new_errors": 1,
+      "corrected": 3,
+      "both_wrong": 39
+    },
+    {
+      "epoch": 40,
+      "phase": "21LA",
+      "mode": "fixed19LA_EER_nearest",
+      "label": 0,
+      "new_errors": 30,
+      "corrected": 12,
+      "both_wrong": 172
+    },
+    {
+      "epoch": 40,
+      "phase": "21LA",
+      "mode": "fixed19LA_EER_nearest",
+      "label": 1,
+      "new_errors": 102,
+      "corrected": 108,
+      "both_wrong": 2676
+    },
+    {
+      "epoch": 40,
+      "phase": "21LA",
+      "mode": "fixed19LA_FAR0.5",
+      "label": 0,
+      "new_errors": 39,
+      "corrected": 12,
+      "both_wrong": 154
+    },
+    {
+      "epoch": 40,
+      "phase": "21LA",
+      "mode": "fixed19LA_FAR0.5",
+      "label": 1,
+      "new_errors": 88,
+      "corrected": 125,
+      "both_wrong": 2729
+    },
+    {
+      "epoch": 40,
+      "phase": "21DF",
+      "mode": "fixed19LA_EER_nearest",
+      "label": 0,
+      "new_errors": 34,
+      "corrected": 76,
+      "both_wrong": 185
+    },
+    {
+      "epoch": 40,
+      "phase": "21DF",
+      "mode": "fixed19LA_EER_nearest",
+      "label": 1,
+      "new_errors": 179,
+      "corrected": 98,
+      "both_wrong": 2944
+    },
+    {
+      "epoch": 40,
+      "phase": "21DF",
+      "mode": "fixed19LA_FAR0.5",
+      "label": 0,
+      "new_errors": 33,
+      "corrected": 61,
+      "both_wrong": 168
+    },
+    {
+      "epoch": 40,
+      "phase": "21DF",
+      "mode": "fixed19LA_FAR0.5",
+      "label": 1,
+      "new_errors": 153,
+      "corrected": 122,
+      "both_wrong": 3033
+    },
+    {
+      "epoch": 50,
+      "phase": "19LA",
+      "mode": "fixed19LA_EER_nearest",
+      "label": 0,
+      "new_errors": 16,
+      "corrected": 59,
+      "both_wrong": 375
+    },
+    {
+      "epoch": 50,
+      "phase": "19LA",
+      "mode": "fixed19LA_EER_nearest",
+      "label": 1,
+      "new_errors": 2,
+      "corrected": 7,
+      "both_wrong": 43
+    },
+    {
+      "epoch": 50,
+      "phase": "19LA",
+      "mode": "fixed19LA_FAR0.5",
+      "label": 0,
+      "new_errors": 34,
+      "corrected": 34,
+      "both_wrong": 285
+    },
+    {
+      "epoch": 50,
+      "phase": "19LA",
+      "mode": "fixed19LA_FAR0.5",
+      "label": 1,
+      "new_errors": 1,
+      "corrected": 9,
+      "both_wrong": 49
+    },
+    {
+      "epoch": 50,
+      "phase": "21LA",
+      "mode": "fixed19LA_EER_nearest",
+      "label": 0,
+      "new_errors": 22,
+      "corrected": 38,
+      "both_wrong": 201
+    },
+    {
+      "epoch": 50,
+      "phase": "21LA",
+      "mode": "fixed19LA_EER_nearest",
+      "label": 1,
+      "new_errors": 64,
+      "corrected": 148,
+      "both_wrong": 2284
+    },
+    {
+      "epoch": 50,
+      "phase": "21LA",
+      "mode": "fixed19LA_FAR0.5",
+      "label": 0,
+      "new_errors": 27,
+      "corrected": 11,
+      "both_wrong": 147
+    },
+    {
+      "epoch": 50,
+      "phase": "21LA",
+      "mode": "fixed19LA_FAR0.5",
+      "label": 1,
+      "new_errors": 34,
+      "corrected": 261,
+      "both_wrong": 2452
+    },
+    {
+      "epoch": 50,
+      "phase": "21DF",
+      "mode": "fixed19LA_EER_nearest",
+      "label": 0,
+      "new_errors": 25,
+      "corrected": 180,
+      "both_wrong": 309
+    },
+    {
+      "epoch": 50,
+      "phase": "21DF",
+      "mode": "fixed19LA_EER_nearest",
+      "label": 1,
+      "new_errors": 198,
+      "corrected": 62,
+      "both_wrong": 2626
+    },
+    {
+      "epoch": 50,
+      "phase": "21DF",
+      "mode": "fixed19LA_FAR0.5",
+      "label": 0,
+      "new_errors": 38,
+      "corrected": 101,
+      "both_wrong": 224
+    },
+    {
+      "epoch": 50,
+      "phase": "21DF",
+      "mode": "fixed19LA_FAR0.5",
+      "label": 1,
+      "new_errors": 117,
+      "corrected": 161,
+      "both_wrong": 2904
+    }
+  ],
+  "checks": [
+    {
+      "model": "bona_allcross",
+      "phase": "19LA",
+      "epoch": 40,
+      "rows": 71237,
+      "bona": 7355,
+      "uid_label_sha256": "1f791dbd4e9ee7b6cd821c6b5abee4f0574eba88247ff7ee910f2626400c08c6",
+      "files": {
+        "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1/stages/eval_40_19LA_scores.csv": "a36834b966df523c69677f5de5aea27607a3469fb7cb19c70f2254f0a1f19376"
+      },
+      "independent_eer_error_pp": 4.884981308350689e-15
+    },
+    {
+      "model": "bona_uid",
+      "phase": "19LA",
+      "epoch": 40,
+      "rows": 71237,
+      "bona": 7355,
+      "uid_label_sha256": "1f791dbd4e9ee7b6cd821c6b5abee4f0574eba88247ff7ee910f2626400c08c6",
+      "files": {
+        "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_spoof_bonaUIDBPL_pair1_pull09_wrapeval_20261118_v1/stages/eval_40_19LA_scores.csv": "1450d19eba019383b35df5b1d0d0513323632ef9cd837c2f1e20c168d0afe9f7"
+      },
+      "independent_eer_error_pp": 7.327471962526033e-15
+    },
+    {
+      "model": "bona_allcross",
+      "phase": "21LA",
+      "epoch": 40,
+      "rows": 148176,
+      "bona": 14816,
+      "uid_label_sha256": "e37a6cd343ec4894f191d65722bc69c08ac0e6ecd5a8be9d3494b5ac9902c449",
+      "files": {
+        "/home/mentee/analysis/ebm_dualbpl_shared_wrap_eval_20261117_v1/full/21LA_rank0.csv": "d3083810efe67924e252814c37459e94c04216f8485ebd234805a4944cd38a89",
+        "/home/mentee/analysis/ebm_dualbpl_shared_wrap_eval_20261117_v1/full/21LA_rank1.csv": "102820e5c8adfc9196bcb8dca7fc89e0996b691170a7acb586714cd6d8ec1763"
+      },
+      "independent_eer_error_pp": 0.0
+    },
+    {
+      "model": "bona_uid",
+      "phase": "21LA",
+      "epoch": 40,
+      "rows": 148176,
+      "bona": 14816,
+      "uid_label_sha256": "e37a6cd343ec4894f191d65722bc69c08ac0e6ecd5a8be9d3494b5ac9902c449",
+      "files": {
+        "/home/mentee/analysis/ebm_spoof_bonauid_pair1_pull09_e50_20261118_v1/shared_eval/full/21LA_rank0.csv": "c23357d4efdd60bae68a4fb93e0c74cf9870ccbc9fd564a2f46abb8acd6eb75c",
+        "/home/mentee/analysis/ebm_spoof_bonauid_pair1_pull09_e50_20261118_v1/shared_eval/full/21LA_rank1.csv": "ad40cdab54aba323b6eb59883350a34995cd9e9b4843cf35d99e23d04aa6b425"
+      },
+      "independent_eer_error_pp": 4.884981308350689e-15
+    },
+    {
+      "model": "bona_allcross",
+      "phase": "21DF",
+      "epoch": 40,
+      "rows": 533928,
+      "bona": 14869,
+      "uid_label_sha256": "7a30ca4a97f642773b30c128ef23e72345625f55f309f2ca6b58c727a995ba3a",
+      "files": {
+        "/home/mentee/analysis/ebm_dualbpl_shared_wrap_eval_20261117_v1/full/21DF_rank0.csv": "d345ecf28c91c71505fde3a8c0a776fbbcff15ddec781bf5ed0eda886593ce41",
+        "/home/mentee/analysis/ebm_dualbpl_shared_wrap_eval_20261117_v1/full/21DF_rank1.csv": "3d7001f1ccc689d095b2da03f43d4ca9b86b5362ae6684edf2cbf3c43a32c9a5"
+      },
+      "independent_eer_error_pp": 3.552713678800501e-15
+    },
+    {
+      "model": "bona_uid",
+      "phase": "21DF",
+      "epoch": 40,
+      "rows": 533928,
+      "bona": 14869,
+      "uid_label_sha256": "7a30ca4a97f642773b30c128ef23e72345625f55f309f2ca6b58c727a995ba3a",
+      "files": {
+        "/home/mentee/analysis/ebm_spoof_bonauid_pair1_pull09_e50_20261118_v1/shared_eval/full/21DF_rank0.csv": "beb2e98a2dd572454529e291ecf8c8beb8c5fc62be4cecb59337ed41428e358d",
+        "/home/mentee/analysis/ebm_spoof_bonauid_pair1_pull09_e50_20261118_v1/shared_eval/full/21DF_rank1.csv": "d4c0df0ad1a485e5ddcf3d264ee78f5a488eb23fa50272ea2de1d4a6eb0fd0fd"
+      },
+      "independent_eer_error_pp": 0.0
+    },
+    {
+      "model": "bona_allcross",
+      "phase": "19LA",
+      "epoch": 50,
+      "rows": 71237,
+      "bona": 7355,
+      "uid_label_sha256": "1f791dbd4e9ee7b6cd821c6b5abee4f0574eba88247ff7ee910f2626400c08c6",
+      "files": {
+        "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1/stages/eval_50_19LA_scores.csv": "96fc755ed1e2ffc52d0b7605c57def4c5140f3f890e17804dee6a9036cd3a552"
+      },
+      "independent_eer_error_pp": 2.220446049250313e-16
+    },
+    {
+      "model": "bona_uid",
+      "phase": "19LA",
+      "epoch": 50,
+      "rows": 71237,
+      "bona": 7355,
+      "uid_label_sha256": "1f791dbd4e9ee7b6cd821c6b5abee4f0574eba88247ff7ee910f2626400c08c6",
+      "files": {
+        "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_spoof_bonaUIDBPL_pair1_pull09_wrapeval_20261118_v1/stages/eval_50_19LA_scores.csv": "cd44a0c55ea63c6cb2325fe4a75e86c3a064e3c6248cb86aca12d99fd5d7ed46"
+      },
+      "independent_eer_error_pp": 4.107825191113079e-15
+    },
+    {
+      "model": "bona_allcross",
+      "phase": "21LA",
+      "epoch": 50,
+      "rows": 148176,
+      "bona": 14816,
+      "uid_label_sha256": "e37a6cd343ec4894f191d65722bc69c08ac0e6ecd5a8be9d3494b5ac9902c449",
+      "files": {
+        "/home/mentee/analysis/ebm_dualbpl_shared_wrap_eval_20261117_v1/full/21LA_rank0.csv": "d3083810efe67924e252814c37459e94c04216f8485ebd234805a4944cd38a89",
+        "/home/mentee/analysis/ebm_dualbpl_shared_wrap_eval_20261117_v1/full/21LA_rank1.csv": "102820e5c8adfc9196bcb8dca7fc89e0996b691170a7acb586714cd6d8ec1763"
+      },
+      "independent_eer_error_pp": 0.0
+    },
+    {
+      "model": "bona_uid",
+      "phase": "21LA",
+      "epoch": 50,
+      "rows": 148176,
+      "bona": 14816,
+      "uid_label_sha256": "e37a6cd343ec4894f191d65722bc69c08ac0e6ecd5a8be9d3494b5ac9902c449",
+      "files": {
+        "/home/mentee/analysis/ebm_spoof_bonauid_pair1_pull09_e50_20261118_v1/shared_eval/full/21LA_rank0.csv": "c23357d4efdd60bae68a4fb93e0c74cf9870ccbc9fd564a2f46abb8acd6eb75c",
+        "/home/mentee/analysis/ebm_spoof_bonauid_pair1_pull09_e50_20261118_v1/shared_eval/full/21LA_rank1.csv": "ad40cdab54aba323b6eb59883350a34995cd9e9b4843cf35d99e23d04aa6b425"
+      },
+      "independent_eer_error_pp": 5.329070518200751e-15
+    },
+    {
+      "model": "bona_allcross",
+      "phase": "21DF",
+      "epoch": 50,
+      "rows": 533928,
+      "bona": 14869,
+      "uid_label_sha256": "7a30ca4a97f642773b30c128ef23e72345625f55f309f2ca6b58c727a995ba3a",
+      "files": {
+        "/home/mentee/analysis/ebm_dualbpl_shared_wrap_eval_20261117_v1/full/21DF_rank0.csv": "d345ecf28c91c71505fde3a8c0a776fbbcff15ddec781bf5ed0eda886593ce41",
+        "/home/mentee/analysis/ebm_dualbpl_shared_wrap_eval_20261117_v1/full/21DF_rank1.csv": "3d7001f1ccc689d095b2da03f43d4ca9b86b5362ae6684edf2cbf3c43a32c9a5"
+      },
+      "independent_eer_error_pp": 0.0
+    },
+    {
+      "model": "bona_uid",
+      "phase": "21DF",
+      "epoch": 50,
+      "rows": 533928,
+      "bona": 14869,
+      "uid_label_sha256": "7a30ca4a97f642773b30c128ef23e72345625f55f309f2ca6b58c727a995ba3a",
+      "files": {
+        "/home/mentee/analysis/ebm_spoof_bonauid_pair1_pull09_e50_20261118_v1/shared_eval/full/21DF_rank0.csv": "beb2e98a2dd572454529e291ecf8c8beb8c5fc62be4cecb59337ed41428e358d",
+        "/home/mentee/analysis/ebm_spoof_bonauid_pair1_pull09_e50_20261118_v1/shared_eval/full/21DF_rank1.csv": "d4c0df0ad1a485e5ddcf3d264ee78f5a488eb23fa50272ea2de1d4a6eb0fd0fd"
+      },
+      "independent_eer_error_pp": 0.0
+    }
+  ],
+  "threshold_note": "Each model calibrated separately on19LA eval, then fixed across21LA/DF; descriptive cross-domain diagnostic, not operational calibration",
+  "limits": [
+    "Single seed, no causal guarantee",
+    "EER-nearest uses a realizable discrete threshold; EER itself is linearly interpolated",
+    "FAR0.5 uses the most permissive source threshold that does not exceed0.5% spoof acceptance, respecting ties"
+  ],
+  "new_inference": 0,
+  "new_training": 0,
+  "new_spending_usd": 0
+}

@@ -158,3 +158,9 @@ scores = head(hidden_states, mask=frame_mask, phase="score")
 `--bona-bpl-weight 1 --bona-bpl-pairing same_uid`는 정상 long/short의 같은 행만 정합한다. 스푸프 all-cross·OC·두 Adam 단계·loader/RNG는 유지한다. 정상 쌍은12/12/6개이고 role v4에 명시한다. 기존 v1/v2/v3 metadata와 tensor 구조는 유지한다.
 
 `--final-eval-policy deferred_shared`는 smoke와 학습 중 평가를19LA로 제한한다. 매5epoch에 저장 후19LA 전체를 평가하고, 학습 완료를 `training_complete`로 기록한다. 이어 독립된 공유 frontend 평가에서10개 저장 head에 동일 batch의 XLSR 출력을 넣어21LA/DF를 평가한다. `awaiting_shared_evaluation`은 전체평가 완료가 아니다. 실제 source·모델·입력 및 smoke 검증은 `../artifacts/bona_uid_train_20261118/`에 보존한다.
+
+## 2026-11-19 스푸프 same UID / 정상 원본 all-cross BPL
+
+`--spoof-bpl-pairing same_uid --bona-bpl-weight 1 --bona-bpl-pairing all_cross --pair-target-cosine 1 --r-pull .9 --eval-input front64600_wrap --final-eval-policy deferred_shared`로 선택한다. 스푸프는 같은 음성 항목의 long/short만 평균하고, 정상은 원본 EBM BPL(alpha30)의 전체 long×short 평균이다. 다른 UID를 허용하며 같은 UID도 포함한다. 클래스별 계수1과 별도mean, 스푸프 중심 OC 및 두 Adam 단계, 배치/loader/증강은 유지한다. role v5에 두 pairing과 reduction을 기록하고 v1~v4 모델은 기존 의미 그대로 읽는다.
+
+실제2GPU smoke는108loader를 소진하고1/106/108배치에서 스푸프108/60/108쌍·정상144/144/36쌍 및 두 클래스 short의 양수 유한 gradient를 요구한다. 원본 정상 BPL의 값·기울기 정확 일치, 유한차분, 부분 배치, CPU DDP, 저장·복원을 검사한다. 다만 OC에 의한 스푸프 응집과 공유 파라미터 충돌은 남을 수 있어 분산 보존·EER 개선을 보장하지 않는다. 명세·학습 전 오류 분석은 `../docs/experiments/ebm_spoof_uid_bona_allcross_20261119.md`, 상태는 `../artifacts/spoof_uid_train_20261119/state.json`이다.

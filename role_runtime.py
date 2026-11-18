@@ -48,12 +48,13 @@ def options(compact_class='spoof', *, epoch=50, seed=1, workers=4, frontend_revi
             path_19LA='/data/ASVspoof2019', path_21LA='/data/ASVspoof2021_LA_eval',
             path_21DF='/data/ASVspoof2021_DF', run_root=None, r_pull=.9,
             pair_target_cosine=1., eval_input='front64600_native_mask', bona_bpl_weight=0.,
-            bona_bpl_pairing='all_cross', final_eval_policy='serial'):
+            bona_bpl_pairing='all_cross', spoof_bpl_pairing='all_cross', final_eval_policy='serial'):
     if compact_class not in ('spoof', 'bonafide'):
         raise ValueError('Unknown compact class')
     args = dict(role=RoleConfig(compact_label=int(compact_class == 'bonafide'),
                                r_pull=r_pull,pair_target_cosine=pair_target_cosine,
-                               bona_bpl_weight=bona_bpl_weight,bona_bpl_pairing=bona_bpl_pairing).metadata(),
+                               bona_bpl_weight=bona_bpl_weight,bona_bpl_pairing=bona_bpl_pairing,
+                               spoof_bpl_pairing=spoof_bpl_pairing).metadata(),
                 epoch=epoch, rand_seed=seed, num_workers=workers, frontend_revision=frontend_revision,
                 path_19LA=path_19LA, path_21LA=path_21LA, path_21DF=path_21DF,
                 run_root=str(run_root) if run_root else None,
@@ -98,7 +99,7 @@ def validate_options(args):
         if args.get(name):
             raise ValueError('Do not combine the role experiment with '+name)
     if args.get('bpl_pairing', 'legacy_long_short') != 'legacy_long_short':
-        raise ValueError('Role experiment uses original long/short full cross-pairs')
+        raise ValueError('Role experiment requires original aligned long/short input views')
     revision = args.get('frontend_revision')
     if revision is not None and (not isinstance(revision, str) or not re.fullmatch(r'[0-9a-f]{40}', revision)):
         raise ValueError('Pin frontend_revision to a resolved 40-character commit SHA')
@@ -129,6 +130,14 @@ def validate_smoke_receipt(args, path):
             if ([r.get('bona_pair_count') for r in values] != ([12,12,6] if uid else [144,144,36])
                     or not all(np.isfinite(r.get('bona_short_gradient_norm',0)) and r.get('bona_short_gradient_norm',0)>0 for r in values)):
                 raise ValueError('Smoke did not validate bona pair counts and short gradients')
+    if RoleConfig.from_metadata(args['role']).spoof_bpl_pairing == 'same_uid':
+        if receipt.get('spoof_uid_graph_checked') is not True or len(receipt.get('ranks',[])) != 2:
+            raise ValueError('Same-UID spoof BPL requires its own gradient-audited smoke')
+        for record in receipt['ranks']:
+            values=record.get('values',[])
+            if ([r.get('pair_count') for r in values] != [108,60,108]
+                    or not all(np.isfinite(r.get('spoof_short_gradient_norm',0)) and r.get('spoof_short_gradient_norm',0)>0 for r in values)):
+                raise ValueError('Smoke did not validate spoof UID pairs and short gradients')
     return receipt
 
 
@@ -282,13 +291,15 @@ def run_smoke(trainer):
             a = torch.stack(t.plm(long, output_hidden_states=True).hidden_states, dim=1)
             b = torch.stack(t.plm(short, output_hidden_states=True).hidden_states, dim=1)
         audit = {}; calls = []; hook = None
-        if unwrap(t.classifier).role.bona_bpl_weight > 0:
+        role = unwrap(t.classifier).role
+        if role.bona_bpl_weight > 0 or role.spoof_bpl_pairing == 'same_uid':
             def capture(module, inputs, output):
                 if output.requires_grad and len(output)==len(labels):
                     calls.append(True)
                     if len(calls)==2:
                         def gradients(grad):
                             audit['bona_short_gradient_norm']=float(grad[labels==1].norm())
+                            audit['spoof_short_gradient_norm']=float(grad[labels==0].norm())
                         output.register_hook(gradients)
             hook=unwrap(t.classifier).layer_norm.register_forward_hook(capture)
         try:
@@ -300,6 +311,11 @@ def run_smoke(trainer):
             if (len(calls)!=2 or not np.isfinite(audit.get('bona_short_gradient_norm',0)) or audit.get('bona_short_gradient_norm',0)<=0
                     or result.get('bona_pair_count')!=expected[0]**(1 if unwrap(t.classifier).role.bona_bpl_pairing=='same_uid' else 2)):
                 raise RuntimeError('Bona BPL graph/short-gradient smoke failed')
+            result.update(audit)
+        if role.spoof_bpl_pairing == 'same_uid':
+            if (len(calls)!=2 or not np.isfinite(audit.get('spoof_short_gradient_norm',0)) or audit.get('spoof_short_gradient_norm',0)<=0
+                    or result.get('pair_count')!=expected[1]):
+                raise RuntimeError('Spoof same-UID BPL graph/short-gradient smoke failed')
             result.update(audit)
         result.update(epoch=0, batch=step); t.record_train(result); values.append(result)
         del long, short, labels, a, b
@@ -322,6 +338,7 @@ def run_smoke(trainer):
             world_size=2, trained_batches=[1, 106, 108], eval_phases=eval_phases,
             iterator_policy=args['iterator_policy'], loader_batches_seen=seen,
             dual_bpl_graph_checked=unwrap(t.classifier).role.bona_bpl_weight > 0,
+            spoof_uid_graph_checked=unwrap(t.classifier).role.spoof_bpl_pairing == 'same_uid',
             data_fingerprint=args['data_summary']['fingerprint'], ranks=summaries,
             note='Smoke optimizer/checkpoint is not reused for training'))
 

@@ -1,0 +1,48 @@
+{
+  "status": "passed",
+  "compatibility": [
+    {
+      "bona": 12,
+      "spoof": 108,
+      "bona_pairs": 144,
+      "spoof_pairs": 108,
+      "loss": 0.8497583666602595,
+      "lower_bound": 0.8497583666602525,
+      "normal_original_loss_gradient_exact": true
+    },
+    {
+      "bona": 12,
+      "spoof": 60,
+      "bona_pairs": 144,
+      "spoof_pairs": 60,
+      "loss": 0.8450573292268071,
+      "lower_bound": 0.8450573292268003,
+      "normal_original_loss_gradient_exact": true
+    },
+    {
+      "bona": 6,
+      "spoof": 108,
+      "bona_pairs": 36,
+      "spoof_pairs": 108,
+      "loss": 0.8530985774682387,
+      "lower_bound": 0.8530985774682318,
+      "normal_original_loss_gradient_exact": true
+    }
+  ],
+  "objective": "OC_long + mean_i spoof_softplus(30*(1-cos(z_i,s_i)))-0.3 + original_normal_BPL(alpha30)",
+  "reviewed": [
+    "Separate class means, no ns-vs-nb^2 pooling",
+    "Aligned same source item, independently augmented views",
+    "OC class weights, original full local N, spoof-only center update",
+    "Unit-sphere derivatives finite; additive-0.3 constants do not affect gradients",
+    "Fresh seed1 and two Adam phases unchanged"
+  ],
+  "limits": [
+    "Point collapse remains a compatible global minimum; not an anti-collapse constraint",
+    "Spoof-only center OC still encourages a cap; shared gradients can still conflict",
+    "Both pair modes change relative to last normal-UID experiment; use dual-allcross as single-change control",
+    "No theorem implies lower EER; evaluate matched inputs and single-seed uncertainty"
+  ],
+  "new_spending_usd": 0,
+  "optimizer_updates": 0
+}

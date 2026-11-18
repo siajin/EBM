@@ -1,0 +1,16 @@
+{
+  "authorization": "User requests spoof same-UID BPL and normal all-cross BPL exactly as original EBM, new GitHub branch, and prior-model class-error analysis before training",
+  "objective": "Fresh seed1 50epoch spoof-aligned/normal-allcross training with matched evaluation",
+  "change": "Spoof BPL becomes mean aligned same-item long-short pairs; normal BPL is original EBM BPL(alpha30) all local long-short cross pairs, separate mean coefficient1",
+  "reference": "Compare this change against dual all-cross (v3); relative to last v4 experiment both class pairing modes change, so the difference cannot isolate one cause",
+  "parameters": {"spoof_bpl_pairing":"same_uid", "bona_bpl_pairing":"all_cross", "bona_bpl_weight":1, "pair_target_cosine":1, "r_pull":0.9, "r_push":0.2, "alpha_pair":30, "alpha_oc":20, "center_loss_multiplier":5},
+  "preserved": ["Original240 class loaders/samplers/quotas and aligned independently augmented views", "Global batch240, local120, partial72/114", "64600long/48440short wrap, RawBoost, codec-off", "Two alternating Adam phases and spoof-only center", "Separate means, no pooling of class pair counts", "Frozen XLSR, architecture and initialization RNG", "50epochs fresh seed1, no resume", "Evaluation wrap64600/no-mask/batch8/matched_wrap1729"],
+  "evaluation": "Every5epoch19LA only; after training10saved heads share each XLSR batch for21LA/DF without persistent feature files",
+  "before_training": ["Compare completed bona-allcross and bona-sameuid models at common40/50epoch with19LA-fixed EER-nearest thresholds and matched19LA spoof FAR0.5%, including per-dataset class counts and independent ROC verification", "Push text-only immutable source/config/check records to new GitHub branch", "Complete local/server regressions and twoGPU108loader/3step smoke, pair counts108/60/108 and144/144/36, both short gradients positive, v5 save/reload, independent19LA ROC"],
+  "new_spending_ceiling_usd": 0,
+  "resources": "Existing assigned container and GPUs6/7 only, after previous pipeline exit0 and three idle checks",
+  "automatic_retries": 0,
+  "maximum_pipeline_hours": 168,
+  "cleanup": "One exclusive isolated run; fail closed, no queue/watchers or automatic retries; preserve old snapshots/models/scores, no feature cache; verify idle before launch",
+  "limits": ["No guaranteed EER improvement or gradient-conflict elimination", "Spoof OC still encourages a common cap and full point collapse remains possible", "Normal all-cross can still oppose spoof BPL through shared parameters", "All-cross includes same UID, not different-UID-only", "19LA eval thresholds are explanatory, not independent operational calibration", "Single seed exploratory comparison"]
+}

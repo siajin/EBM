@@ -1,0 +1,62 @@
+{
+  "status": "passed",
+  "modules": [
+    {
+      "module": "test_spoof_uid_bpl",
+      "count": 10,
+      "exit_code": 0
+    },
+    {
+      "module": "test_bona_uid_bpl",
+      "count": 11,
+      "exit_code": 0
+    },
+    {
+      "module": "test_dual_bpl",
+      "count": 12,
+      "exit_code": 0
+    },
+    {
+      "module": "test_role_relaxed",
+      "count": 10,
+      "exit_code": 0
+    },
+    {
+      "module": "test_role_iterator_lifecycle",
+      "count": 11,
+      "exit_code": 0
+    },
+    {
+      "module": "test_role_code_audit",
+      "count": 8,
+      "exit_code": 0
+    },
+    {
+      "module": "test_role_experiment",
+      "count": 32,
+      "exit_code": 0
+    },
+    {
+      "module": "test_short32_bpl",
+      "count": 18,
+      "exit_code": 0
+    },
+    {
+      "module": "test_short32_lifecycle",
+      "count": 14,
+      "exit_code": 0
+    },
+    {
+      "module": "test_positive_bpl",
+      "count": 14,
+      "exit_code": 0
+    }
+  ],
+  "extra_original_BPL_exact_regression": 1,
+  "control_checks": 6,
+  "total_tests": 147,
+  "math_review": "passed",
+  "batch_contract": "passed",
+  "prior_class_error_cells": 12,
+  "new_spending_usd": 0
+}
