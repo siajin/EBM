@@ -1,0 +1,4 @@
+*.py -text
+*.json -text
+*.md -text
+*.sh text eol=lf

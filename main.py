@@ -6,24 +6,21 @@ import numpy as np
 import torch
 import torch.nn as nn
 
-import warnings
-import torchvision
-
-torchvision.disable_beta_transforms_warning()
-warnings.filterwarnings("ignore", message="Failed to load image Python extension")
-
 import arguments
 import data_loaders as data_loaders
 import train
 import model
 import argparse
+import hashlib
+import json
+from pathlib import Path
+from positive_bpl import evaluation_mode, validate_options, validate_evaluation_options, oc_evaluation_protocol
 from collections import OrderedDict
 
 from dataset import ASVspoof2019_LA_Train, ASVspoof2021_DF_Eval, ASVspoof2019_LA_Eval, ASVspoof2021_LA_Eval
+from dataset.ASVspoof2019_la_train import load_train_items_only
 from logger import Logger
 from utils import get_threshold
-from data_processing import WaveformAugmetation
-from transformers import AutoConfig, Wav2Vec2Model
 
 def set_experiment_environment(args):
     # reproducible
@@ -41,10 +38,15 @@ def set_experiment_environment(args):
     torch.cuda.set_device(args['process_id'])
     torch.distributed.init_process_group(   
             backend='nccl', world_size=args['world_size'], rank=args['rank'],
-            timeout=datetime.timedelta(hours=12))
+            timeout=datetime.timedelta(seconds=args.get('distributed_timeout_seconds', 43200)))
     torch.cuda.empty_cache()
 
 def run(process_id, args, experiment_args):
+    from transformers import AutoConfig, Wav2Vec2Model
+    if args.get('short32_bpl', False) and not args.get('evaluate_checkpoint'):
+        from short32_original240 import run as original240_run
+        return original240_run(process_id, args, experiment_args,
+                               dict(globals(), AutoConfig=AutoConfig, Wav2Vec2Model=Wav2Vec2Model))
     # check parent process
     args['process_id'] = process_id
     args['flag_parent'] = process_id == 0
@@ -87,7 +89,28 @@ def run(process_id, args, experiment_args):
         # Data loader
         trainer.train_loader, trainer.train_sampler, trainer.val_loader, trainer.eval_loader = \
             data_loaders.get_loaders(args, train_set, train_db_19la.dev_set, test_set)
-        trainer.num_val = len(train_db_19la.dev_set) 
+        trainer.num_val = len(train_db_19la.dev_set)
+        if args.get('bpl_pairing', 'legacy_long_short') != 'legacy_long_short':
+            ds = trainer.train_loader.dataset
+            trainer.args['duration_policy_sha256'] = ds.policy_sha256
+            trainer.args['bpl_source_fingerprint'] = ds.source_fingerprint
+            if ds.activity_policy is not None:
+                trainer.args['activity_policy_sha256']=ds.activity_policy.sha256
+            if trainer.logger is not None:
+                trainer.logger.log_text('bpl_sampling_policy', ds.policy_text)
+                trainer.logger.log_parameter({'duration_policy_sha256': ds.policy_sha256,
+                    'bpl_source_fingerprint': ds.source_fingerprint,
+                    'OC_waveforms_per_rank': args['batch_size'],
+                    'extra_BPL_waveforms_per_rank': args['bpl_pair_size'],
+                    'objective': 'original OC+BPL, matched variable inputs for both classes; original centroid update'})
+                trainer.logger.log_parameter({'matched_source_sampling':trainer.train_sampler.source_sampling})
+                if trainer.train_sampler.coverage_plans is not None:
+                    trainer.logger.log_text('source_coverage_plan',json.dumps(
+                        {y:plan.summary for y,plan in trainer.train_sampler.coverage_plans.items()},indent=2))
+                if ds.activity_policy is not None:
+                    trainer.logger.log_parameter({'activity_policy_sha256':ds.activity_policy.sha256,
+                        'activity_matching':'raw VAD2 class bins and mean within length; original source priors retained'})
+                    trainer.logger.log_text('activity_sampling_policy',json.dumps(ds.activity_policy.metadata,indent=2))
 
     # Data augmentation
     trainer.da = None
@@ -110,6 +133,8 @@ def run(process_id, args, experiment_args):
     ).to(args['device'])
     trainer.plm.eval()
     trainer.plm.requires_grad_(False)
+    trainer.evaluation_protocol = oc_evaluation_protocol(args, getattr(config, '_commit_hash', None))
+    trainer.args['frontend_resolved_revision'] = getattr(config, '_commit_hash', None)
 
     # classifier
     trainer.classifier = model.B_Linear(
@@ -148,14 +173,90 @@ def run(process_id, args, experiment_args):
     # set thresghold for accuracy
     trainer.threshold = get_threshold(args['r_real'], args['r_fake'])
         
-    trainer.run()
+    if args.get('evaluate_checkpoint'):
+        state = torch.load(args['evaluate_checkpoint'], map_location='cpu', weights_only=True)
+        if state.get('args', {}).get('training_mode') == 'bpl_only':
+            raise ValueError('The superseded BPL-only pilot has no trained OC center and is not a valid control')
+        trainer.classifier.load_state_dict(state.get('classifier', state), strict=True)
+        for phase in args.get('evaluate_phases', ['V']):
+            trainer.test(phase, 0)
+        trainer._synchronize()
+    else:
+        trainer.run()
 
 if __name__ == '__main__':
     # get arguments
     args, system_args, experiment_args = arguments.get_args()
     
     parser = argparse.ArgumentParser()
+    parser.add_argument('--bpl-pairing', choices=['legacy_long_short', 'matched_same_source', 'matched_independent'])
+    parser.add_argument('--short32-bpl', action='store_true', default=None,
+                        help='Opt in to original OC/BPL43 plus BPL32 for native<=2s bona')
+    parser.add_argument('--duration-policy', dest='duration_policy_path')
+    parser.add_argument('--activity-policy', dest='activity_policy_path')
+    parser.add_argument('--source-sampling', dest='matched_source_sampling', choices=['replacement','coverage'])
+    parser.add_argument('--evaluation-mode', choices=['controlled_oc', 'original_oc'])
+    parser.add_argument('--evaluation-seed', type=int)
+    parser.add_argument('--evaluate-checkpoint')
+    parser.add_argument('--evaluate-phases', nargs='+', choices=['V','19LA','21LA','21DF'])
+    parser.add_argument('--name')
+    parser.add_argument('--validate-only', action='store_true')
     parser_args = parser.parse_args()
+    for key, value in vars(parser_args).items():
+        if key != 'validate_only' and value is not None:
+            args[key] = value
+            if key != 'name':
+                experiment_args[key] = value
+    if args.get('short32_bpl', False):
+        from short32_bpl import configure
+        configure(args)
+        for key in ['short32_bpl', 'short32_train_input_policy', 'native_length', 'cap_long']:
+            experiment_args[key] = args[key]
+        if parser_args.name is None:
+            args['name'] = f"EBM_e{args['epoch']}_bs{args['batch_size']}_OC_BPL43_short32_LE2"
+    validate_options(args)
+    validate_evaluation_options(args)
+    if args.get('evaluate_checkpoint'):
+        if evaluation_mode(args) != 'controlled_oc':
+            raise ValueError('Compare checkpoints with controlled_oc for both models')
+        checkpoint = Path(args['evaluate_checkpoint'])
+        if not checkpoint.is_file():
+            raise ValueError('Evaluation checkpoint does not exist')
+        args['evaluation_checkpoint_sha256'] = hashlib.sha256(checkpoint.read_bytes()).hexdigest()
+        if parser_args.name is None:
+            args['name'] = 'EBM_controlled_OC_eval_'+args['evaluation_checkpoint_sha256'][:8]
+    elif args.get('evaluate_phases'):
+        raise ValueError('--evaluate-phases requires --evaluate-checkpoint')
+    if args['bpl_pairing'] != 'legacy_long_short':
+        from positive_bpl import MatchedTrainSet
+        preflight = MatchedTrainSet(args, load_train_items_only(args['path_19LA']))
+        if args.get('matched_source_sampling','replacement')=='coverage':
+            from positive_bpl import coverage_source_plans
+            plans=coverage_source_plans(preflight,{y:args['bpl_steps_per_epoch']*int(args['batch_size']*args[ratio])
+                for y,ratio in [(1,'ratio_bona'),(0,'ratio_spoof')]})
+            args['source_coverage_plan']={y:plan.summary for y,plan in plans.items()}
+        args['duration_policy_sha256'] = preflight.policy_sha256
+        if preflight.activity_policy is not None:
+            args['activity_policy_sha256'] = preflight.activity_policy.sha256
+        if parser_args.name is None and not args.get('evaluate_checkpoint'):
+            args['name'] = f"EBM_e{args['epoch']}_OC_BPL_{args['bpl_pairing']}_{preflight.policy_sha256[:8]}"
+            if preflight.activity_policy is not None:
+                args['name'] += '_act_'+preflight.activity_policy.sha256[:8]
+            if args.get('matched_source_sampling','replacement')=='coverage':
+                args['name'] += '_src_coverage'
+        del preflight
+    if parser_args.validate_only:
+        print({'objective': ('OC+conditional0.5BPL43/0.5BPL32, two optimizer steps including centroid'
+                            if args.get('short32_bpl') else 'original OC+BPL, two optimizer steps including centroid'),
+               'short32_bpl': args.get('short32_bpl', False),
+               'training_basis': 'original240 two DataLoaders and unchanged full-graph train' if args.get('short32_bpl') else 'current native trainer',
+               'bpl_pairing': args['bpl_pairing'], 'evaluation': evaluation_mode(args),
+               'policy_sha256': args.get('duration_policy_sha256'),
+               'activity_policy_sha256': args.get('activity_policy_sha256'),
+               'source_sampling':args.get('matched_source_sampling','replacement'),
+               'source_coverage_plan':args.get('source_coverage_plan'),
+               'evaluation_only': bool(args.get('evaluate_checkpoint'))})
+        raise SystemExit(0)
 
     # set reproducible
     random.seed(args['rand_seed'])
@@ -174,6 +275,8 @@ if __name__ == '__main__':
 
     # set DDP
     args['world_size'] = len(args['gpu_ids'])
+    if evaluation_mode(args) == 'controlled_oc' and args['gpu_ids'] != ['0','1']:
+        raise ValueError('Controlled evaluation requires CUDA_VISIBLE_DEVICES=0,1')
     args['batch_size'] = args['batch_size'] // args['world_size']
 
 

@@ -95,6 +95,9 @@ def collate_eval(rows):
 
 
 def get_loaders(args, train_db, val_db, eval_db):
+    if args.get('bpl_pairing', 'legacy_long_short') != 'legacy_long_short':
+        from positive_bpl import get_loaders as matched_loaders
+        return matched_loaders(args, train_db, val_db, eval_db)
     train_set = TrainSet(args, train_db)
     sampler = BalancedLengthBatchSampler(train_set,args)
     train_loader = DataLoader(train_set, batch_sampler=sampler,
@@ -254,4 +257,3 @@ class EnrollmentSet(Dataset):
                 audio = audio[:self.crop_size]
 
         return audio, item.type, item.label, index
-    
