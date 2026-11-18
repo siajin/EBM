@@ -43,7 +43,9 @@ class RoleBLinear(B_Linear):
         if self.role.bona_bpl_weight > 0:
             bona = labels == 1
             # Separate class mean: never pool144 bona pairs with11664 spoof pairs.
-            bona_pair = self.loss_bpl(z[bona], short[bona])
+            bona_pair = (self.loss_bpl.same_uid(z[bona], short[bona])
+                         if self.role.bona_bpl_pairing == 'same_uid'
+                         else self.loss_bpl(z[bona], short[bona]))
             total = total + self.role.bona_bpl_weight * bona_pair
         if not bool(torch.isfinite(total)):
             raise ValueError('Nonfinite role objective')
@@ -51,7 +53,7 @@ class RoleBLinear(B_Linear):
                      pair_count=int(compact.sum()) ** 2)
         if bona_pair is not None:
             stats.update(pair_spoof=pair.detach(), pair_bona=bona_pair.detach(),
-                         bona_pair_count=int((labels == 1).sum())**2,
+                         bona_pair_count=int((labels == 1).sum())**(1 if self.role.bona_bpl_pairing == 'same_uid' else 2),
                          bona_bpl_weight=self.role.bona_bpl_weight,
                          pair_total=(pair+self.role.bona_bpl_weight*bona_pair).detach())
         with torch.no_grad():

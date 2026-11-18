@@ -1,0 +1,15 @@
+{
+  "authorization": "User requests first trying bona BPL with same UID only to compare",
+  "objective": "Fresh seed1 50epoch bona-only same-UID BPL training and matched evaluation against previous models",
+  "single_training_change": "Normal all-cross mean BPL becomes aligned same-UID long-short mean, coefficient1",
+  "unchanged": ["spoof pair1.0 all-cross", "OC pull0.9 push0.2 alpha20", "pair alpha30", "center multiplier5 spoof-only", "normal BPL coefficient1 separate mean", "original240 loader/samplers/RNG/RawBoost/64600long48440short/wrap", "original two Adam phases", "no gradient projection, norm cap or Adam gate", "wrap64600/no-mask/eval batch8/common1729"],
+  "artifacts": "Role v4 only for same-UID bona; exact old v1/v2/v3 metadata preserved; architecture/state keys unchanged",
+  "evaluation": "Final explicit user scope: only19LA during training every5epoch; after50,10saved heads share each frozen XLSR batch for21LA/DF; no persistent feature files and no serial target re-evaluation",
+  "new_spending_ceiling_usd": 0,
+  "resources": "Existing assigned container and host GPUs6/7; no new paid resources",
+  "automatic_retries": 0,
+  "maximum_pipeline_hours": 168,
+  "checks": ["old metadata, loss/Adam regressions", "normal-only formula and finite differences", "compatible geometric minimum and finite gradients", "initial tensors and RNG exact", "twoCPUrank full/asymmetric partials and checkpoint", "local/server complete unit suites", "old snapshots/models SHA unchanged", "original actual2GPU108loader/steps1,106,108 with UID counts12/12/6 and spoof counts11664/3600/11664", "positive normal-short gradient and center sync", "v4 checkpoint reload", "19LA wrap/independent ROC pretraining smoke", "shared-head three-set equivalence smoke after training", "first real epoch metrics finite and actual updates"],
+  "cleanup": "Bounded one-shot pipeline, fail closed without restart; preserve models/logs; no watcher/app schedule; verify existing resources idle before launch; cache must have explicit storage ceiling and protected-path cleanup",
+  "limits": ["Single seed exploratory comparison; EER improvement and elimination of gradient conflict are not guaranteed", "Observed minima may be different checkpoints and are retrospective selections"]
+}

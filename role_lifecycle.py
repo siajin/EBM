@@ -328,6 +328,12 @@ def run_training(trainer):
             trainer.checkpoints.save(epoch)
             saved.append(epoch)
             attempt('19LA', epoch)
+    if trainer.args.get('final_eval_policy','serial') == 'deferred_shared':
+        trainer.checkpoints.record('training_complete', 'complete', saved_epochs=saved, results=results)
+        successful = all(r['status']=='complete' for r in results)
+        trainer.checkpoints.record('complete', 'awaiting_shared_evaluation' if successful else 'evaluation_incomplete',
+                                   saved_epochs=saved, results=results, pending_phases=['21LA','21DF'])
+        return 'training_complete' if successful else 'evaluation_incomplete'
     final = {k: v.detach().cpu().clone() for k, v in unwrap(trainer.classifier).state_dict().items()}
     try:
         for epoch in saved:

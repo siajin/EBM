@@ -1,22 +1,23 @@
-# Spoof center with normal all-cross BPL
+# Spoof center with normal same-UID BPL
 
-This branch preserves the exact frozen source of the completed November16 run.
-Use tools/train_role_experiment.py, not main.py, for this opt-in experiment.
+The only objective change from the parent all-cross model is normal pairing:
+normal long/short views are aligned by the same dataset item and averaged over n
+pairs. Spoof BPL remains all-cross, with pair target1 and OC pull0.9/push0.2.
+Normal coefficient1 and separate class means, two Adam phases, model architecture,
+seed1, global batch240 and original loader/augmentation are unchanged.
+No gradient projection, norm cap or Adam gate is used. Metadata v4 records pairing;
+the v1/v2/v3 checkpoint readers and default metadata remain supported.
 
-Backend objective: original OC + spoof all-cross BPL + normal all-cross BPL.
-Both class BPL means have coefficient1. Pair target1, OC pull0.9/push0.2,
-alpha_pair30/alpha_oc20, spoof-only center multiplier5. Seed1, global batch240,
-50epochs, original fixed64600/48440 views and independent RawBoost, codec off.
-The architecture, two Adam phases and frozen XLSR are unchanged.
+Use tools/train_role_experiment.py, not main.py. Configuration-only example:
+python tools/train_role_experiment.py --bona-bpl-weight 1 --bona-bpl-pairing same_uid --pair-target-cosine 1 --r-pull .9 --eval-input front64600_wrap --final-eval-policy deferred_shared
 
-Example configuration check (does not launch):
-python tools/train_role_experiment.py --bona-bpl-weight 1 --pair-target-cosine 1 --r-pull .9 --eval-input front64600_wrap
+Run a new two-GPU smoke before fresh seed1 training. During smoke and training,
+evaluation is19LA only, after each5epoch committed checkpoint. After50epochs,
+the shared evaluator runs21LA/DF by extracting one frozen XLSR batch and passing
+that same tensor to all10 saved heads. No persistent frontend feature files.
+The training_complete marker precedes complete shared evaluation; do not confuse them.
+Pinned frontend revision:1a640f32ac3e39899438a2931f9924c02f080a54.
 
-Training requires a new isolated root, the pinned frontend revision, a matching
-two-GPU smoke receipt and --mode train. Preserve existing run directories.
-The historical pipeline is included as execution documentation, not an instruction
-to restart its already completed run. Model weights and datasets are not committed.
-
-The implementation is recorded as role metadata v3. Retrospective EER minima were
-19LA0.540058(e45),21LA4.006449(e40),DF2.764140(e15) percent, at different checkpoints.
-Fixed50 was0.679810/4.347630/3.766431 percent. Use matched wrap inputs for comparison.
+Reproduction controls, mathematical/batch review and matched historical metrics
+are under experiments/bona_uid_20261118. No weights, audio, private credentials,
+or environment administration helpers are included. EER improvement is unproven.

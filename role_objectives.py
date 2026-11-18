@@ -17,11 +17,12 @@ class RoleConfig:
     center_loss_multiplier: float = 5.
     pair_target_cosine: float = 1.
     bona_bpl_weight: float = 0.
+    bona_bpl_pairing: str = 'all_cross'
 
     def __post_init__(self):
         if type(self.compact_label) is not int or self.compact_label not in (0, 1):
             raise ValueError('compact_label must be 0 (spoof) or 1 (bonafide)')
-        values = [getattr(self, f.name) for f in fields(self) if f.name != 'compact_label']
+        values = [getattr(self, f.name) for f in fields(self) if f.name not in ('compact_label','bona_bpl_pairing')]
         if not all(isinstance(v, (int, float)) and not isinstance(v,bool) and math.isfinite(v) for v in values):
             raise ValueError('Role coefficients must be finite numbers')
         if not -1 < self.r_push < self.r_pull < 1:
@@ -32,6 +33,10 @@ class RoleConfig:
             raise ValueError('Loss scales must be positive')
         if self.bona_bpl_weight < 0 or (self.bona_bpl_weight > 0 and self.compact_label != 0):
             raise ValueError('Additional bona BPL requires a nonnegative weight and spoof-centered role')
+        if type(self.bona_bpl_pairing) is not str or self.bona_bpl_pairing not in ('all_cross','same_uid'):
+            raise ValueError('Unknown additional bona BPL pairing')
+        if self.bona_bpl_pairing == 'same_uid' and self.bona_bpl_weight <= 0:
+            raise ValueError('Same-UID bona pairing requires an enabled bona BPL')
 
     @property
     def score_sign(self):
@@ -42,11 +47,14 @@ class RoleConfig:
         # targets require an explicit v2 field; tensor shapes cannot encode it.
         values = {f.name: getattr(self, f.name) for f in fields(self)}
         dual = self.bona_bpl_weight > 0
+        uid = self.bona_bpl_pairing == 'same_uid'
+        if not uid:
+            values.pop('bona_bpl_pairing')
         if not dual:
             values.pop('bona_bpl_weight')
         if self.pair_target_cosine == 1. and not dual:
             values.pop('pair_target_cosine')
-        result = dict(schema_version='ebm_role_v3' if dual else ('ebm_role_v1' if self.pair_target_cosine == 1. else 'ebm_role_v2'),
+        result = dict(schema_version='ebm_role_v4' if uid else ('ebm_role_v3' if dual else ('ebm_role_v1' if self.pair_target_cosine == 1. else 'ebm_role_v2')),
                     **values,
                     label_semantics={'0': 'spoof', '1': 'bonafide'}, pair_class=self.compact_label,
                     backend_class_weights=[5/9, 5.], pair_reduction='mean_all_local_cross_pairs',
@@ -54,7 +62,7 @@ class RoleConfig:
         if dual:
             result['additional_bona_bpl'] = dict(pair_class=1, weight=self.bona_bpl_weight,
                 alpha=self.alpha_pair, target_cosine=self.pair_target_cosine,
-                reduction='mean_all_local_cross_pairs', aggregation='add_separate_class_mean')
+                reduction='mean_aligned_same_uid' if uid else 'mean_all_local_cross_pairs', aggregation='add_separate_class_mean')
         return result
 
     @classmethod
@@ -62,6 +70,8 @@ class RoleConfig:
         if not isinstance(metadata, dict):
             raise ValueError('A role manifest is required; tensor shapes do not identify the center class')
         names = {f.name for f in fields(cls)}
+        if metadata.get('schema_version') in ('ebm_role_v1','ebm_role_v2','ebm_role_v3'):
+            names.remove('bona_bpl_pairing')
         if metadata.get('schema_version') in ('ebm_role_v1','ebm_role_v2'):
             names.remove('bona_bpl_weight')
         if metadata.get('schema_version') == 'ebm_role_v1':
@@ -82,6 +92,15 @@ class RoleBPL(BPL):
 
     def forward(self, x, y):
         cosine = F.normalize(x,p=2,dim=1) @ F.normalize(y,p=2,dim=1).T
+        return (self.softplus(self.alpha * (self.target-cosine)) - .3).mean()
+
+    def same_uid(self, x, y):
+        """Aligned views from the same dataset item; no cross-utterance pairs."""
+        if (x.ndim != 2 or x.shape != y.shape or not len(x)
+                or not bool(torch.isfinite(x).all()) or not bool(torch.isfinite(y).all())
+                or bool((x.norm(dim=1) <= 1e-12).any()) or bool((y.norm(dim=1) <= 1e-12).any())):
+            raise ValueError('Same-UID BPL needs aligned finite nonzero embeddings')
+        cosine = (F.normalize(x,p=2,dim=1) * F.normalize(y,p=2,dim=1)).sum(dim=1)
         return (self.softplus(self.alpha * (self.target-cosine)) - .3).mean()
 
 

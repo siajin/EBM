@@ -68,6 +68,8 @@ def main(argv=None):
     parser.add_argument('--r-pull',type=float,default=.9)
     parser.add_argument('--pair-target-cosine',type=float,default=1.)
     parser.add_argument('--bona-bpl-weight',type=float,default=0.)
+    parser.add_argument('--bona-bpl-pairing',choices=['all_cross','same_uid'],default='all_cross')
+    parser.add_argument('--final-eval-policy',choices=['serial','deferred_shared'],default='serial')
     parser.add_argument('--eval-input',choices=['front64600_native_mask','front64600_wrap'],default='front64600_native_mask')
     parser.add_argument('--run-root')
     parser.add_argument('--epochs', type=int, default=50)
@@ -87,7 +89,8 @@ def main(argv=None):
                    frontend_revision=parsed.frontend_revision, path_19LA=parsed.path_19LA,
                    path_21LA=parsed.path_21LA, path_21DF=parsed.path_21DF, run_root=parsed.run_root,
                    r_pull=parsed.r_pull,pair_target_cosine=parsed.pair_target_cosine,eval_input=parsed.eval_input,
-                   bona_bpl_weight=parsed.bona_bpl_weight)
+                   bona_bpl_weight=parsed.bona_bpl_weight,bona_bpl_pairing=parsed.bona_bpl_pairing,
+                   final_eval_policy=parsed.final_eval_policy)
     args['reference'] = verify_reference()
     args['source_sha256'] = source_fingerprint()
     args['timeout_hours'] = parsed.timeout_hours

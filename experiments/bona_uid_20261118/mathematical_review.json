@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "free_embedding_compatibility": [
+    {
+      "bona": 12,
+      "spoof": 108,
+      "backend_loss": 0.8497583666602593,
+      "lower_bound": 0.8497583666602525,
+      "gradient_norm": 1.1663599740424864e-15
+    },
+    {
+      "bona": 12,
+      "spoof": 60,
+      "backend_loss": 0.8450573292268071,
+      "lower_bound": 0.8450573292268003,
+      "gradient_norm": 1.0881238309400756e-15
+    },
+    {
+      "bona": 6,
+      "spoof": 108,
+      "backend_loss": 0.8530985774682385,
+      "lower_bound": 0.8530985774682318,
+      "gradient_norm": 1.5948971064795493e-15
+    }
+  ],
+  "reviewed": [
+    "Bona mean1/n, spoof mean1/ns^2, separate class means and coefficient1",
+    "Class weights and full local N OC denominator unchanged at partial batches",
+    "Unit-normalization tangent gradients finite; no forced minimum at pair target0.9",
+    "No cross-class positive pairs or bona contribution to center phase",
+    "Original two Adam phases and fresh seed1 initialization",
+    "Evaluation preserves training RNG/parameters/optimizer; target sets not evaluated during training"
+  ],
+  "performance_limits": [
+    "Same-UID removes cross-utterance normal compactness and may weaken useful discrimination",
+    "Independent long/short crops and RawBoost can require invariance across differing content",
+    "OC and both BPL still admit per-class point collapse; no anti-collapse guarantee",
+    "Shared-parameter gradient conflict can remain; no mathematical EER improvement guarantee",
+    "Single seed comparison is exploratory; retrospective minima are not one common checkpoint"
+  ],
+  "model_updates": 0,
+  "new_spending_usd": 0
+}

@@ -47,12 +47,13 @@ def source_fingerprint():
 def options(compact_class='spoof', *, epoch=50, seed=1, workers=4, frontend_revision=None,
             path_19LA='/data/ASVspoof2019', path_21LA='/data/ASVspoof2021_LA_eval',
             path_21DF='/data/ASVspoof2021_DF', run_root=None, r_pull=.9,
-            pair_target_cosine=1., eval_input='front64600_native_mask', bona_bpl_weight=0.):
+            pair_target_cosine=1., eval_input='front64600_native_mask', bona_bpl_weight=0.,
+            bona_bpl_pairing='all_cross', final_eval_policy='serial'):
     if compact_class not in ('spoof', 'bonafide'):
         raise ValueError('Unknown compact class')
     args = dict(role=RoleConfig(compact_label=int(compact_class == 'bonafide'),
                                r_pull=r_pull,pair_target_cosine=pair_target_cosine,
-                               bona_bpl_weight=bona_bpl_weight).metadata(),
+                               bona_bpl_weight=bona_bpl_weight,bona_bpl_pairing=bona_bpl_pairing).metadata(),
                 epoch=epoch, rand_seed=seed, num_workers=workers, frontend_revision=frontend_revision,
                 path_19LA=path_19LA, path_21LA=path_21LA, path_21DF=path_21DF,
                 run_root=str(run_root) if run_root else None,
@@ -65,11 +66,16 @@ def options(compact_class='spoof', *, epoch=50, seed=1, workers=4, frontend_revi
                 rng_policy='role_v1_isolated_phase_and_loader_generators',
                 iterator_policy='bounded_cycles_legacy_seed_v1', automatic_retries=0)
     validate_options(args)
+    if final_eval_policy != 'serial':
+        args['final_eval_policy'] = final_eval_policy
+        validate_options(args)
     return args
 
 
 def validate_options(args):
     RoleConfig.from_metadata(args['role'])
+    if args.get('final_eval_policy','serial') not in ('serial','deferred_shared'):
+        raise ValueError('Unknown final evaluation policy')
     if type(args['epoch']) is not int or not 1 <= args['epoch'] <= 50:
         raise ValueError('Choose a fixed training budget of 1..50 epochs')
     if type(args['rand_seed']) is not int or args['rand_seed'] < 0:
@@ -109,17 +115,18 @@ def validate_smoke_receipt(args, path):
     receipt = json.loads(Path(path).read_text(encoding='utf-8'))
     if (receipt.get('status') != 'passed' or receipt.get('signature') != signature(args)
             or receipt.get('world_size') != 2 or receipt.get('trained_batches') != [1, 106, 108]
-            or receipt.get('eval_phases') != ['19LA', '21LA', '21DF']
+            or receipt.get('eval_phases') != (['19LA'] if args.get('final_eval_policy')=='deferred_shared' else ['19LA', '21LA', '21DF'])
             or receipt.get('iterator_policy') != args['iterator_policy']
             or receipt.get('loader_batches_seen') != 108
             or not receipt.get('data_fingerprint')):
         raise ValueError('A successful matching two-GPU smoke receipt is required before training')
     if RoleConfig.from_metadata(args['role']).bona_bpl_weight > 0:
+        uid = RoleConfig.from_metadata(args['role']).bona_bpl_pairing == 'same_uid'
         if receipt.get('dual_bpl_graph_checked') is not True or len(receipt.get('ranks',[])) != 2:
             raise ValueError('Additional bona BPL requires its own gradient-audited smoke')
         for record in receipt['ranks']:
             values=record.get('values',[])
-            if ([r.get('bona_pair_count') for r in values] != [144,144,36]
+            if ([r.get('bona_pair_count') for r in values] != ([12,12,6] if uid else [144,144,36])
                     or not all(np.isfinite(r.get('bona_short_gradient_norm',0)) and r.get('bona_short_gradient_norm',0)>0 for r in values)):
                 raise ValueError('Smoke did not validate bona pair counts and short gradients')
     return receipt
@@ -291,7 +298,7 @@ def run_smoke(trainer):
             if hook is not None: hook.remove()
         if unwrap(t.classifier).role.bona_bpl_weight > 0:
             if (len(calls)!=2 or not np.isfinite(audit.get('bona_short_gradient_norm',0)) or audit.get('bona_short_gradient_norm',0)<=0
-                    or result.get('bona_pair_count')!=expected[0]**2):
+                    or result.get('bona_pair_count')!=expected[0]**(1 if unwrap(t.classifier).role.bona_bpl_pairing=='same_uid' else 2)):
                 raise RuntimeError('Bona BPL graph/short-gradient smoke failed')
             result.update(audit)
         result.update(epoch=0, batch=step); t.record_train(result); values.append(result)
@@ -306,12 +313,13 @@ def run_smoke(trainer):
     if any(p.grad is not None or p.requires_grad for p in t.plm.parameters()):
         raise RuntimeError('Frontend was not frozen')
     t.checkpoints = RoleCheckpoints(t); t.checkpoints.save(0)
-    for phase in ['19LA', '21LA', '21DF']:
+    eval_phases = ['19LA'] if args.get('final_eval_policy')=='deferred_shared' else ['19LA', '21LA', '21DF']
+    for phase in eval_phases:
         evaluate(t, phase, 0)
     summaries = gather(dict(values=values, peak_memory_bytes=torch.cuda.max_memory_allocated(args['device'])))
     if rank() == 0:
         write_json(Path(args['run_root'])/'smoke_complete.json', dict(status='passed', signature=signature(args),
-            world_size=2, trained_batches=[1, 106, 108], eval_phases=['19LA', '21LA', '21DF'],
+            world_size=2, trained_batches=[1, 106, 108], eval_phases=eval_phases,
             iterator_policy=args['iterator_policy'], loader_batches_seen=seen,
             dual_bpl_graph_checked=unwrap(t.classifier).role.bona_bpl_weight > 0,
             data_fingerprint=args['data_summary']['fingerprint'], ranks=summaries,
@@ -335,7 +343,7 @@ def worker(process_id, args, mode, rendezvous):
             run_smoke(trainer)
         else:
             result = run_training(trainer)
-            if result != 'complete':
+            if result != 'complete' and not (result=='training_complete' and args.get('final_eval_policy')=='deferred_shared'):
                 raise RuntimeError('Training complete, but one or more evaluations failed; checkpoints preserved')
     finally:
         dist.destroy_process_group()

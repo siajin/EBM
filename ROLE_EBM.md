@@ -152,3 +152,9 @@ scores = head(hidden_states, mask=frame_mask, phase="score")
 `L_backend = OC + mean_spoof_BPL + 1*mean_bona_BPL`이다. 두 클래스 평균을 별도로 더하며 pair를 풀링하지 않는다. 중심 단계는 스푸프 long만 계수5로 갱신하고 평가 점수는 −cosine이다. 새 학습 의미는 `ebm_role_v3` metadata에 추가 가중치·대상·환산 방식을 기록한다. 구조나 parameter는 늘리지 않으며 기존 v1/v2 모델도 역할 로더로 읽는다.
 
 새 smoke는 실제108loader 배치를 소진하고1/106/108번째에서 정상144/144/36쌍, 스푸프11664/3600/11664쌍과 정상 short 임베딩의 유한한 양수 gradient norm을 요구한다. 새 receipt가 없으면 학습을 거부한다. 이 추가 손실은 정상 표현의 안정성을 시험하며, 두 클래스의 단일점 응집을 막거나 EER 개선을 보장하지 않는다. 실행·검증 상태는 `../artifacts/dual_bpl_train_20261116/state.json`과 `../docs/experiments/ebm_spoof_dualbpl_training_20261116.md`를 따른다.
+
+## 정상 same UID BPL
+
+`--bona-bpl-weight 1 --bona-bpl-pairing same_uid`는 정상 long/short의 같은 행만 정합한다. 스푸프 all-cross·OC·두 Adam 단계·loader/RNG는 유지한다. 정상 쌍은12/12/6개이고 role v4에 명시한다. 기존 v1/v2/v3 metadata와 tensor 구조는 유지한다.
+
+`--final-eval-policy deferred_shared`는 smoke와 학습 중 평가를19LA로 제한한다. 매5epoch에 저장 후19LA 전체를 평가하고, 학습 완료를 `training_complete`로 기록한다. 이어 독립된 공유 frontend 평가에서10개 저장 head에 동일 batch의 XLSR 출력을 넣어21LA/DF를 평가한다. `awaiting_shared_evaluation`은 전체평가 완료가 아니다. 실제 source·모델·입력 및 smoke 검증은 `../artifacts/bona_uid_train_20261118/`에 보존한다.

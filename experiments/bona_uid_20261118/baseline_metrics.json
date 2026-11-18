@@ -1,0 +1,219 @@
+{
+  "protocol": "wrap64600/no-mask/batch8/frozen XLSR1a640f32/common matched_wrap1729/ASP1e-5",
+  "rows": [
+    {
+      "phase": "19LA",
+      "epoch": 5,
+      "legacy240": null,
+      "spoof_only": 0.5337966876428415,
+      "bona_allcross": 0.8565601631543243
+    },
+    {
+      "phase": "19LA",
+      "epoch": 10,
+      "legacy240": null,
+      "spoof_only": 0.39604270373501144,
+      "bona_allcross": 0.6254248810333054
+    },
+    {
+      "phase": "19LA",
+      "epoch": 15,
+      "legacy240": 0.299116247450717,
+      "spoof_only": 0.20350020350020348,
+      "bona_allcross": 0.6526172671651868
+    },
+    {
+      "phase": "19LA",
+      "epoch": 20,
+      "legacy240": 0.2974233743464513,
+      "spoof_only": 0.44867437117607145,
+      "bona_allcross": 0.7070020394289598
+    },
+    {
+      "phase": "19LA",
+      "epoch": 25,
+      "legacy240": 0.21753908905506963,
+      "spoof_only": 0.37725806956576186,
+      "bona_allcross": 0.6652891268275883
+    },
+    {
+      "phase": "19LA",
+      "epoch": 30,
+      "legacy240": 0.29116182962336806,
+      "spoof_only": 0.5165774396543628,
+      "bona_allcross": 0.543847722637663
+    },
+    {
+      "phase": "19LA",
+      "epoch": 35,
+      "legacy240": 0.3263086335825934,
+      "spoof_only": 0.4078857919782528,
+      "bona_allcross": 0.7070020394289598
+    },
+    {
+      "phase": "19LA",
+      "epoch": 40,
+      "legacy240": 0.3942895989122985,
+      "spoof_only": 0.4078857919782528,
+      "bona_allcross": 0.543847722637663
+    },
+    {
+      "phase": "19LA",
+      "epoch": 45,
+      "legacy240": 0.6809429886352963,
+      "spoof_only": 0.25515794746563975,
+      "bona_allcross": 0.5400582323659248
+    },
+    {
+      "phase": "19LA",
+      "epoch": 50,
+      "legacy240": 0.5710401087695496,
+      "spoof_only": 0.24473147518694124,
+      "bona_allcross": 0.6798096532970812
+    },
+    {
+      "phase": "21LA",
+      "epoch": 5,
+      "legacy240": null,
+      "spoof_only": 3.460557888422316,
+      "bona_allcross": 6.034017278617711
+    },
+    {
+      "phase": "21LA",
+      "epoch": 10,
+      "legacy240": null,
+      "spoof_only": 2.6492201559688064,
+      "bona_allcross": 5.09584233261339
+    },
+    {
+      "phase": "21LA",
+      "epoch": 15,
+      "legacy240": 1.3971382289416883,
+      "spoof_only": 2.6972105578884222,
+      "bona_allcross": 5.284193161367726
+    },
+    {
+      "phase": "21LA",
+      "epoch": 20,
+      "legacy240": 1.1300239952009599,
+      "spoof_only": 2.3605278944211157,
+      "bona_allcross": 4.807288542291541
+    },
+    {
+      "phase": "21LA",
+      "epoch": 25,
+      "legacy240": 1.3564787042591482,
+      "spoof_only": 2.1530777537796983,
+      "bona_allcross": 4.900107991360687
+    },
+    {
+      "phase": "21LA",
+      "epoch": 30,
+      "legacy240": 1.1406587473002188,
+      "spoof_only": 1.700863930885528,
+      "bona_allcross": 4.185662867426514
+    },
+    {
+      "phase": "21LA",
+      "epoch": 35,
+      "legacy240": 1.3167366526694662,
+      "spoof_only": 1.9653569286142771,
+      "bona_allcross": 4.069436112777444
+    },
+    {
+      "phase": "21LA",
+      "epoch": 40,
+      "legacy240": 1.1915116976604678,
+      "spoof_only": 1.6631673665266946,
+      "bona_allcross": 4.006448710257948
+    },
+    {
+      "phase": "21LA",
+      "epoch": 45,
+      "legacy240": 1.9235961123110126,
+      "spoof_only": 1.9573434125270068,
+      "bona_allcross": 4.171166306695459
+    },
+    {
+      "phase": "21LA",
+      "epoch": 50,
+      "legacy240": 1.0527894421115778,
+      "spoof_only": 2.166576673866095,
+      "bona_allcross": 4.347630473905219
+    },
+    {
+      "phase": "21DF",
+      "epoch": 5,
+      "legacy240": null,
+      "spoof_only": 4.292190290506475,
+      "bona_allcross": 3.080234043984129
+    },
+    {
+      "phase": "21DF",
+      "epoch": 10,
+      "legacy240": null,
+      "spoof_only": 5.111305400497676,
+      "bona_allcross": 2.784654538308747
+    },
+    {
+      "phase": "21DF",
+      "epoch": 15,
+      "legacy240": 2.396259384771288,
+      "spoof_only": 3.6383182751232384,
+      "bona_allcross": 2.764140157374404
+    },
+    {
+      "phase": "21DF",
+      "epoch": 20,
+      "legacy240": 2.575815080751899,
+      "spoof_only": 3.3828771269083306,
+      "bona_allcross": 2.9995292218710072
+    },
+    {
+      "phase": "21DF",
+      "epoch": 25,
+      "legacy240": 2.873661760994415,
+      "spoof_only": 3.3828771269083306,
+      "bona_allcross": 3.300202867111446
+    },
+    {
+      "phase": "21DF",
+      "epoch": 30,
+      "legacy240": 2.849001751246005,
+      "spoof_only": 3.537561369291823,
+      "bona_allcross": 3.2156267399274454
+    },
+    {
+      "phase": "21DF",
+      "epoch": 35,
+      "legacy240": 2.550191789372692,
+      "spoof_only": 3.248369090053134,
+      "bona_allcross": 3.641782533392158
+    },
+    {
+      "phase": "21DF",
+      "epoch": 40,
+      "legacy240": 2.648446515714013,
+      "spoof_only": 3.3588798489684,
+      "bona_allcross": 3.4972089582352575
+    },
+    {
+      "phase": "21DF",
+      "epoch": 45,
+      "legacy240": 2.885197390544076,
+      "spoof_only": 3.053332436613089,
+      "bona_allcross": 3.7393234245746134
+    },
+    {
+      "phase": "21DF",
+      "epoch": 50,
+      "legacy240": 3.4770327527069758,
+      "spoof_only": 3.2379748737619423,
+      "bona_allcross": 3.7664311764173246
+    }
+  ],
+  "source_sha256": {
+    "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\spoof_relaxed_train_20261113\\three_model_comparison_20261116.json": "b6a86d433280da1b35d5b393a24c3931f3f1fa3d75e271d99cf74943ca6d19ca",
+    "C:\\Users\\sihwa\\PycharmProjects\\PythonProject\\IRLab\\artifacts\\dual_bpl_shared_eval_20261117\\last_status.json": "0bc0d67173a8ca73a10303f3505b90e83806093f8a5a8b4ac979d690676568b0"
+  }
+}
