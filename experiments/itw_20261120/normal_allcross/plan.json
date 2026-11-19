@@ -1,0 +1,36 @@
+{
+  "authorization": "User explicitly requests ITW evaluation of 1.0/0.9 plus normal all-cross BPL",
+  "root": "/home/mentee/analysis/ebm_itw_dualbpl_20261120_v1",
+  "family": "EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1",
+  "checkpoints": 10,
+  "epochs": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50
+  ],
+  "dataset_reuse_from": "/home/mentee/analysis/ebm_itw_all_models_20261120_v1",
+  "protocol": "ITW31779/wrap64600/no-mask/FP32/batch8 per GPU/frozen pinned XLSR300M/shared output/common matched_wrap:ITW seed1729/ASP1e-5/higher=bona",
+  "frontend_revision": "1a640f32ac3e39899438a2931f9924c02f080a54",
+  "new_spending_ceiling_usd": 0,
+  "new_paid_resources": 0,
+  "automatic_retries": 0,
+  "optimizer_updates": 0,
+  "feature_files": 0,
+  "runtime_ceiling_hours": 24,
+  "resources": "Existing lab container and GPUs6/7 only",
+  "gates": [
+    "Prior ITW complete exit0; old artifacts immutable",
+    "Model v3 correct class sign and all-cross roles, weights/source/control hashes",
+    "Existing shell and GPUs idle 3 samples",
+    "Server6 CPU regressions then real two-GPU ten-head full/partial/two-class smoke",
+    "All31779 official manifest UID/index/labels, independent EER, source/model/data/score SHA; frontend_calls=batches"
+  ],
+  "cleanup": "No download or ZIP, reuse existing verified audio paths; no new feature/checkpoint files, bounded evaluator cleans owned workers; preserve prior scores and weights; no automatic restart"
+}

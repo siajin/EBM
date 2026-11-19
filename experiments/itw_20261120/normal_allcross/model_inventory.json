@@ -1,0 +1,567 @@
+{
+  "models": [
+    {
+      "key": "m095",
+      "family": "EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1",
+      "epoch": 5,
+      "host_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1/model/CLS_5.pt",
+      "container_path": "/results/CM/LA/EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1/model/CLS_5.pt",
+      "sha256": "9e78e6df723d11876d39f961d879c680cb43a2ae9d9d170795349abe4f9876b4",
+      "bytes": 15035974,
+      "architecture": {
+        "num_layer": 25,
+        "hidden_size": 1024,
+        "output_size": 160,
+        "agg_size": 128
+      },
+      "kind": "role",
+      "score_sign": -1,
+      "metadata": {
+        "role": {
+          "schema_version": "ebm_role_v3",
+          "compact_label": 0,
+          "r_pull": 0.9,
+          "r_push": 0.2,
+          "alpha_oc": 20.0,
+          "alpha_pair": 30.0,
+          "center_loss_multiplier": 5.0,
+          "pair_target_cosine": 1.0,
+          "bona_bpl_weight": 1.0,
+          "label_semantics": {
+            "0": "spoof",
+            "1": "bonafide"
+          },
+          "pair_class": 0,
+          "backend_class_weights": [
+            0.5555555555555556,
+            5.0
+          ],
+          "pair_reduction": "mean_all_local_cross_pairs",
+          "score_bona_transform": "negative_center_cosine",
+          "additional_bona_bpl": {
+            "pair_class": 1,
+            "weight": 1.0,
+            "alpha": 30.0,
+            "target_cosine": 1.0,
+            "reduction": "mean_all_local_cross_pairs",
+            "aggregation": "add_separate_class_mean"
+          }
+        },
+        "architecture": {
+          "num_layer": 25,
+          "hidden_size": 1024,
+          "output_size": 160,
+          "agg_size": 128
+        }
+      },
+      "tensors": 182
+    },
+    {
+      "key": "m087",
+      "family": "EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1",
+      "epoch": 10,
+      "host_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1/model/CLS_10.pt",
+      "container_path": "/results/CM/LA/EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1/model/CLS_10.pt",
+      "sha256": "2d6a812b7b59c619fa331e82541ab1e46a297478aa4b08f23e6ea5253451efb3",
+      "bytes": 15035974,
+      "architecture": {
+        "num_layer": 25,
+        "hidden_size": 1024,
+        "output_size": 160,
+        "agg_size": 128
+      },
+      "kind": "role",
+      "score_sign": -1,
+      "metadata": {
+        "role": {
+          "schema_version": "ebm_role_v3",
+          "compact_label": 0,
+          "r_pull": 0.9,
+          "r_push": 0.2,
+          "alpha_oc": 20.0,
+          "alpha_pair": 30.0,
+          "center_loss_multiplier": 5.0,
+          "pair_target_cosine": 1.0,
+          "bona_bpl_weight": 1.0,
+          "label_semantics": {
+            "0": "spoof",
+            "1": "bonafide"
+          },
+          "pair_class": 0,
+          "backend_class_weights": [
+            0.5555555555555556,
+            5.0
+          ],
+          "pair_reduction": "mean_all_local_cross_pairs",
+          "score_bona_transform": "negative_center_cosine",
+          "additional_bona_bpl": {
+            "pair_class": 1,
+            "weight": 1.0,
+            "alpha": 30.0,
+            "target_cosine": 1.0,
+            "reduction": "mean_all_local_cross_pairs",
+            "aggregation": "add_separate_class_mean"
+          }
+        },
+        "architecture": {
+          "num_layer": 25,
+          "hidden_size": 1024,
+          "output_size": 160,
+          "agg_size": 128
+        }
+      },
+      "tensors": 182
+    },
+    {
+      "key": "m088",
+      "family": "EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1",
+      "epoch": 15,
+      "host_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1/model/CLS_15.pt",
+      "container_path": "/results/CM/LA/EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1/model/CLS_15.pt",
+      "sha256": "eca6edab60c32d1cca160ae13141d0595f687a1c5f4ea01e8ab6f1e9d952089e",
+      "bytes": 15035974,
+      "architecture": {
+        "num_layer": 25,
+        "hidden_size": 1024,
+        "output_size": 160,
+        "agg_size": 128
+      },
+      "kind": "role",
+      "score_sign": -1,
+      "metadata": {
+        "role": {
+          "schema_version": "ebm_role_v3",
+          "compact_label": 0,
+          "r_pull": 0.9,
+          "r_push": 0.2,
+          "alpha_oc": 20.0,
+          "alpha_pair": 30.0,
+          "center_loss_multiplier": 5.0,
+          "pair_target_cosine": 1.0,
+          "bona_bpl_weight": 1.0,
+          "label_semantics": {
+            "0": "spoof",
+            "1": "bonafide"
+          },
+          "pair_class": 0,
+          "backend_class_weights": [
+            0.5555555555555556,
+            5.0
+          ],
+          "pair_reduction": "mean_all_local_cross_pairs",
+          "score_bona_transform": "negative_center_cosine",
+          "additional_bona_bpl": {
+            "pair_class": 1,
+            "weight": 1.0,
+            "alpha": 30.0,
+            "target_cosine": 1.0,
+            "reduction": "mean_all_local_cross_pairs",
+            "aggregation": "add_separate_class_mean"
+          }
+        },
+        "architecture": {
+          "num_layer": 25,
+          "hidden_size": 1024,
+          "output_size": 160,
+          "agg_size": 128
+        }
+      },
+      "tensors": 182
+    },
+    {
+      "key": "m089",
+      "family": "EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1",
+      "epoch": 20,
+      "host_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1/model/CLS_20.pt",
+      "container_path": "/results/CM/LA/EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1/model/CLS_20.pt",
+      "sha256": "5ac34a5008fc567bc45d23f46887aad17cf17fdd89003a247fb09bde8a14edd8",
+      "bytes": 15035974,
+      "architecture": {
+        "num_layer": 25,
+        "hidden_size": 1024,
+        "output_size": 160,
+        "agg_size": 128
+      },
+      "kind": "role",
+      "score_sign": -1,
+      "metadata": {
+        "role": {
+          "schema_version": "ebm_role_v3",
+          "compact_label": 0,
+          "r_pull": 0.9,
+          "r_push": 0.2,
+          "alpha_oc": 20.0,
+          "alpha_pair": 30.0,
+          "center_loss_multiplier": 5.0,
+          "pair_target_cosine": 1.0,
+          "bona_bpl_weight": 1.0,
+          "label_semantics": {
+            "0": "spoof",
+            "1": "bonafide"
+          },
+          "pair_class": 0,
+          "backend_class_weights": [
+            0.5555555555555556,
+            5.0
+          ],
+          "pair_reduction": "mean_all_local_cross_pairs",
+          "score_bona_transform": "negative_center_cosine",
+          "additional_bona_bpl": {
+            "pair_class": 1,
+            "weight": 1.0,
+            "alpha": 30.0,
+            "target_cosine": 1.0,
+            "reduction": "mean_all_local_cross_pairs",
+            "aggregation": "add_separate_class_mean"
+          }
+        },
+        "architecture": {
+          "num_layer": 25,
+          "hidden_size": 1024,
+          "output_size": 160,
+          "agg_size": 128
+        }
+      },
+      "tensors": 182
+    },
+    {
+      "key": "m090",
+      "family": "EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1",
+      "epoch": 25,
+      "host_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1/model/CLS_25.pt",
+      "container_path": "/results/CM/LA/EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1/model/CLS_25.pt",
+      "sha256": "7847609f86e5694c714f0726577212456a49930612d31acf4d93c16b28eaecda",
+      "bytes": 15035974,
+      "architecture": {
+        "num_layer": 25,
+        "hidden_size": 1024,
+        "output_size": 160,
+        "agg_size": 128
+      },
+      "kind": "role",
+      "score_sign": -1,
+      "metadata": {
+        "role": {
+          "schema_version": "ebm_role_v3",
+          "compact_label": 0,
+          "r_pull": 0.9,
+          "r_push": 0.2,
+          "alpha_oc": 20.0,
+          "alpha_pair": 30.0,
+          "center_loss_multiplier": 5.0,
+          "pair_target_cosine": 1.0,
+          "bona_bpl_weight": 1.0,
+          "label_semantics": {
+            "0": "spoof",
+            "1": "bonafide"
+          },
+          "pair_class": 0,
+          "backend_class_weights": [
+            0.5555555555555556,
+            5.0
+          ],
+          "pair_reduction": "mean_all_local_cross_pairs",
+          "score_bona_transform": "negative_center_cosine",
+          "additional_bona_bpl": {
+            "pair_class": 1,
+            "weight": 1.0,
+            "alpha": 30.0,
+            "target_cosine": 1.0,
+            "reduction": "mean_all_local_cross_pairs",
+            "aggregation": "add_separate_class_mean"
+          }
+        },
+        "architecture": {
+          "num_layer": 25,
+          "hidden_size": 1024,
+          "output_size": 160,
+          "agg_size": 128
+        }
+      },
+      "tensors": 182
+    },
+    {
+      "key": "m091",
+      "family": "EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1",
+      "epoch": 30,
+      "host_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1/model/CLS_30.pt",
+      "container_path": "/results/CM/LA/EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1/model/CLS_30.pt",
+      "sha256": "d087d09eb4dad8e10bcb4e01c3e7dd299547c7b2c045f57994875dc570004210",
+      "bytes": 15035974,
+      "architecture": {
+        "num_layer": 25,
+        "hidden_size": 1024,
+        "output_size": 160,
+        "agg_size": 128
+      },
+      "kind": "role",
+      "score_sign": -1,
+      "metadata": {
+        "role": {
+          "schema_version": "ebm_role_v3",
+          "compact_label": 0,
+          "r_pull": 0.9,
+          "r_push": 0.2,
+          "alpha_oc": 20.0,
+          "alpha_pair": 30.0,
+          "center_loss_multiplier": 5.0,
+          "pair_target_cosine": 1.0,
+          "bona_bpl_weight": 1.0,
+          "label_semantics": {
+            "0": "spoof",
+            "1": "bonafide"
+          },
+          "pair_class": 0,
+          "backend_class_weights": [
+            0.5555555555555556,
+            5.0
+          ],
+          "pair_reduction": "mean_all_local_cross_pairs",
+          "score_bona_transform": "negative_center_cosine",
+          "additional_bona_bpl": {
+            "pair_class": 1,
+            "weight": 1.0,
+            "alpha": 30.0,
+            "target_cosine": 1.0,
+            "reduction": "mean_all_local_cross_pairs",
+            "aggregation": "add_separate_class_mean"
+          }
+        },
+        "architecture": {
+          "num_layer": 25,
+          "hidden_size": 1024,
+          "output_size": 160,
+          "agg_size": 128
+        }
+      },
+      "tensors": 182
+    },
+    {
+      "key": "m092",
+      "family": "EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1",
+      "epoch": 35,
+      "host_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1/model/CLS_35.pt",
+      "container_path": "/results/CM/LA/EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1/model/CLS_35.pt",
+      "sha256": "74e74a5ca6d034b0c61656a78bc4884249adfcc8d9305f3b3af078eee10976d3",
+      "bytes": 15035974,
+      "architecture": {
+        "num_layer": 25,
+        "hidden_size": 1024,
+        "output_size": 160,
+        "agg_size": 128
+      },
+      "kind": "role",
+      "score_sign": -1,
+      "metadata": {
+        "role": {
+          "schema_version": "ebm_role_v3",
+          "compact_label": 0,
+          "r_pull": 0.9,
+          "r_push": 0.2,
+          "alpha_oc": 20.0,
+          "alpha_pair": 30.0,
+          "center_loss_multiplier": 5.0,
+          "pair_target_cosine": 1.0,
+          "bona_bpl_weight": 1.0,
+          "label_semantics": {
+            "0": "spoof",
+            "1": "bonafide"
+          },
+          "pair_class": 0,
+          "backend_class_weights": [
+            0.5555555555555556,
+            5.0
+          ],
+          "pair_reduction": "mean_all_local_cross_pairs",
+          "score_bona_transform": "negative_center_cosine",
+          "additional_bona_bpl": {
+            "pair_class": 1,
+            "weight": 1.0,
+            "alpha": 30.0,
+            "target_cosine": 1.0,
+            "reduction": "mean_all_local_cross_pairs",
+            "aggregation": "add_separate_class_mean"
+          }
+        },
+        "architecture": {
+          "num_layer": 25,
+          "hidden_size": 1024,
+          "output_size": 160,
+          "agg_size": 128
+        }
+      },
+      "tensors": 182
+    },
+    {
+      "key": "m093",
+      "family": "EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1",
+      "epoch": 40,
+      "host_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1/model/CLS_40.pt",
+      "container_path": "/results/CM/LA/EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1/model/CLS_40.pt",
+      "sha256": "6ace7133ade57fb6f377b7ba135f45fd307dc635fc3579b35e8fcd50db63c4d9",
+      "bytes": 15035974,
+      "architecture": {
+        "num_layer": 25,
+        "hidden_size": 1024,
+        "output_size": 160,
+        "agg_size": 128
+      },
+      "kind": "role",
+      "score_sign": -1,
+      "metadata": {
+        "role": {
+          "schema_version": "ebm_role_v3",
+          "compact_label": 0,
+          "r_pull": 0.9,
+          "r_push": 0.2,
+          "alpha_oc": 20.0,
+          "alpha_pair": 30.0,
+          "center_loss_multiplier": 5.0,
+          "pair_target_cosine": 1.0,
+          "bona_bpl_weight": 1.0,
+          "label_semantics": {
+            "0": "spoof",
+            "1": "bonafide"
+          },
+          "pair_class": 0,
+          "backend_class_weights": [
+            0.5555555555555556,
+            5.0
+          ],
+          "pair_reduction": "mean_all_local_cross_pairs",
+          "score_bona_transform": "negative_center_cosine",
+          "additional_bona_bpl": {
+            "pair_class": 1,
+            "weight": 1.0,
+            "alpha": 30.0,
+            "target_cosine": 1.0,
+            "reduction": "mean_all_local_cross_pairs",
+            "aggregation": "add_separate_class_mean"
+          }
+        },
+        "architecture": {
+          "num_layer": 25,
+          "hidden_size": 1024,
+          "output_size": 160,
+          "agg_size": 128
+        }
+      },
+      "tensors": 182
+    },
+    {
+      "key": "m094",
+      "family": "EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1",
+      "epoch": 45,
+      "host_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1/model/CLS_45.pt",
+      "container_path": "/results/CM/LA/EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1/model/CLS_45.pt",
+      "sha256": "24837d3cfc3e4cd73fe5f277f7a4d08cd24fe2f5d3fb3201b0271765c0df63d1",
+      "bytes": 15035974,
+      "architecture": {
+        "num_layer": 25,
+        "hidden_size": 1024,
+        "output_size": 160,
+        "agg_size": 128
+      },
+      "kind": "role",
+      "score_sign": -1,
+      "metadata": {
+        "role": {
+          "schema_version": "ebm_role_v3",
+          "compact_label": 0,
+          "r_pull": 0.9,
+          "r_push": 0.2,
+          "alpha_oc": 20.0,
+          "alpha_pair": 30.0,
+          "center_loss_multiplier": 5.0,
+          "pair_target_cosine": 1.0,
+          "bona_bpl_weight": 1.0,
+          "label_semantics": {
+            "0": "spoof",
+            "1": "bonafide"
+          },
+          "pair_class": 0,
+          "backend_class_weights": [
+            0.5555555555555556,
+            5.0
+          ],
+          "pair_reduction": "mean_all_local_cross_pairs",
+          "score_bona_transform": "negative_center_cosine",
+          "additional_bona_bpl": {
+            "pair_class": 1,
+            "weight": 1.0,
+            "alpha": 30.0,
+            "target_cosine": 1.0,
+            "reduction": "mean_all_local_cross_pairs",
+            "aggregation": "add_separate_class_mean"
+          }
+        },
+        "architecture": {
+          "num_layer": 25,
+          "hidden_size": 1024,
+          "output_size": 160,
+          "agg_size": 128
+        }
+      },
+      "tensors": 182
+    },
+    {
+      "key": "m096",
+      "family": "EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1",
+      "epoch": 50,
+      "host_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1/model/CLS_50.pt",
+      "container_path": "/results/CM/LA/EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1/model/CLS_50.pt",
+      "sha256": "b11d0a4f15461903e72f62bc307cdce174e731848769d45ff116a1075fe467ba",
+      "bytes": 15035974,
+      "architecture": {
+        "num_layer": 25,
+        "hidden_size": 1024,
+        "output_size": 160,
+        "agg_size": 128
+      },
+      "kind": "role",
+      "score_sign": -1,
+      "metadata": {
+        "role": {
+          "schema_version": "ebm_role_v3",
+          "compact_label": 0,
+          "r_pull": 0.9,
+          "r_push": 0.2,
+          "alpha_oc": 20.0,
+          "alpha_pair": 30.0,
+          "center_loss_multiplier": 5.0,
+          "pair_target_cosine": 1.0,
+          "bona_bpl_weight": 1.0,
+          "label_semantics": {
+            "0": "spoof",
+            "1": "bonafide"
+          },
+          "pair_class": 0,
+          "backend_class_weights": [
+            0.5555555555555556,
+            5.0
+          ],
+          "pair_reduction": "mean_all_local_cross_pairs",
+          "score_bona_transform": "negative_center_cosine",
+          "additional_bona_bpl": {
+            "pair_class": 1,
+            "weight": 1.0,
+            "alpha": 30.0,
+            "target_cosine": 1.0,
+            "reduction": "mean_all_local_cross_pairs",
+            "aggregation": "add_separate_class_mean"
+          }
+        },
+        "architecture": {
+          "num_layer": 25,
+          "hidden_size": 1024,
+          "output_size": 160,
+          "agg_size": 128
+        }
+      },
+      "tensors": 182
+    }
+  ],
+  "family_count": 1,
+  "checkpoints": 10,
+  "aliases": []
+}

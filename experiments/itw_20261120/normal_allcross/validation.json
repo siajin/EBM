@@ -1,0 +1,185 @@
+{
+  "status": "complete_integrity_verified",
+  "checked_KST": "2026-11-20T08:01:10.466337+09:00",
+  "pipeline_exits": {
+    "unit": "0",
+    "smoke": "0",
+    "full": "0",
+    "report": "0",
+    "compare": "0",
+    "run": "0"
+  },
+  "models": 10,
+  "rows": 31779,
+  "bonafide": 19963,
+  "frontend_calls": 3974,
+  "batches": 3974,
+  "checks": [
+    {
+      "rank": 0,
+      "rows": 15890,
+      "batches": 1987,
+      "frontend_calls": 1987,
+      "models": 10,
+      "serial_shared_max_error": 0.0,
+      "peak_cuda_bytes": 2058426880
+    },
+    {
+      "rank": 1,
+      "rows": 15889,
+      "batches": 1987,
+      "frontend_calls": 1987,
+      "models": 10,
+      "serial_shared_max_error": 0.0,
+      "peak_cuda_bytes": 2058426880
+    }
+  ],
+  "metrics": {
+    "m095": {
+      "family": "EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1",
+      "epoch": 5,
+      "eer_percent": 14.700406228842247,
+      "independent_error_pp": 0.0,
+      "checkpoint_sha256": "9e78e6df723d11876d39f961d879c680cb43a2ae9d9d170795349abe4f9876b4"
+    },
+    "m087": {
+      "family": "EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1",
+      "epoch": 10,
+      "eer_percent": 11.729857819905213,
+      "independent_error_pp": 0.0,
+      "checkpoint_sha256": "2d6a812b7b59c619fa331e82541ab1e46a297478aa4b08f23e6ea5253451efb3"
+    },
+    "m088": {
+      "family": "EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1",
+      "epoch": 15,
+      "eer_percent": 11.080498923007566,
+      "independent_error_pp": 0.0,
+      "checkpoint_sha256": "eca6edab60c32d1cca160ae13141d0595f687a1c5f4ea01e8ab6f1e9d952089e"
+    },
+    "m089": {
+      "family": "EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1",
+      "epoch": 20,
+      "eer_percent": 10.98031358012322,
+      "independent_error_pp": 0.0,
+      "checkpoint_sha256": "5ac34a5008fc567bc45d23f46887aad17cf17fdd89003a247fb09bde8a14edd8"
+    },
+    "m090": {
+      "family": "EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1",
+      "epoch": 25,
+      "eer_percent": 10.794970695787205,
+      "independent_error_pp": 0.0,
+      "checkpoint_sha256": "7847609f86e5694c714f0726577212456a49930612d31acf4d93c16b28eaecda"
+    },
+    "m091": {
+      "family": "EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1",
+      "epoch": 30,
+      "eer_percent": 10.98031358012322,
+      "independent_error_pp": 0.0,
+      "checkpoint_sha256": "d087d09eb4dad8e10bcb4e01c3e7dd299547c7b2c045f57994875dc570004210"
+    },
+    "m092": {
+      "family": "EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1",
+      "epoch": 35,
+      "eer_percent": 11.196682464454977,
+      "independent_error_pp": 0.0,
+      "checkpoint_sha256": "74e74a5ca6d034b0c61656a78bc4884249adfcc8d9305f3b3af078eee10976d3"
+    },
+    "m093": {
+      "family": "EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1",
+      "epoch": 40,
+      "eer_percent": 11.086662153012863,
+      "independent_error_pp": 0.0,
+      "checkpoint_sha256": "6ace7133ade57fb6f377b7ba135f45fd307dc635fc3579b35e8fcd50db63c4d9"
+    },
+    "m094": {
+      "family": "EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1",
+      "epoch": 45,
+      "eer_percent": 11.250814005910938,
+      "independent_error_pp": 0.0,
+      "checkpoint_sha256": "24837d3cfc3e4cd73fe5f277f7a4d08cd24fe2f5d3fb3201b0271765c0df63d1"
+    },
+    "m096": {
+      "family": "EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1",
+      "epoch": 50,
+      "eer_percent": 11.711666583178886,
+      "independent_error_pp": 0.0,
+      "checkpoint_sha256": "b11d0a4f15461903e72f62bc307cdce174e731848769d45ff116a1075fe467ba"
+    }
+  },
+  "families": {
+    "EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1": {
+      "available_epochs": [
+        5,
+        10,
+        15,
+        20,
+        25,
+        30,
+        35,
+        40,
+        45,
+        50
+      ],
+      "candidates": 10,
+      "minimum": {
+        "family": "EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1",
+        "epoch": 25,
+        "eer_percent": 10.794970695787205,
+        "independent_error_pp": 0.0,
+        "checkpoint_sha256": "7847609f86e5694c714f0726577212456a49930612d31acf4d93c16b28eaecda"
+      },
+      "epoch50": {
+        "family": "EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1",
+        "epoch": 50,
+        "eer_percent": 11.711666583178886,
+        "independent_error_pp": 0.0,
+        "checkpoint_sha256": "b11d0a4f15461903e72f62bc307cdce174e731848769d45ff116a1075fe467ba"
+      },
+      "common15_50_minimum": {
+        "family": "EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1",
+        "epoch": 25,
+        "eer_percent": 10.794970695787205,
+        "independent_error_pp": 0.0,
+        "checkpoint_sha256": "7847609f86e5694c714f0726577212456a49930612d31acf4d93c16b28eaecda"
+      }
+    }
+  },
+  "errors": {
+    "pipeline.log": {
+      "Traceback": 0,
+      "CUDA out of memory": 0,
+      "Exception ignored in": 0
+    },
+    "unit.log": {
+      "Traceback": 0,
+      "CUDA out of memory": 0,
+      "Exception ignored in": 0
+    },
+    "smoke.log": {
+      "Traceback": 0,
+      "CUDA out of memory": 0,
+      "Exception ignored in": 0
+    },
+    "full.log": {
+      "Traceback": 0,
+      "CUDA out of memory": 0,
+      "Exception ignored in": 0
+    },
+    "report.log": {
+      "Traceback": 0,
+      "CUDA out of memory": 0,
+      "Exception ignored in": 0
+    },
+    "compare.log": {
+      "Traceback": 0,
+      "CUDA out of memory": 0,
+      "Exception ignored in": 0
+    }
+  },
+  "score_SHA_verified": true,
+  "source_model_control_SHA_verified": true,
+  "optimizer_updates": 0,
+  "feature_files": 0,
+  "new_spending_usd": 0,
+  "automatic_retries": 0
+}

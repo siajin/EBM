@@ -1,0 +1,269 @@
+{
+  "status": "complete_integrity_verified",
+  "checked_KST": "2026-11-20T07:47:23.062334+09:00",
+  "pipeline_exits": {
+    "unit": "0",
+    "smoke": "0",
+    "full": "0",
+    "report": "0",
+    "run": "0"
+  },
+  "models": 18,
+  "rows": 31779,
+  "bonafide": 19963,
+  "frontend_calls": 3974,
+  "batches": 3974,
+  "checks": [
+    {
+      "rank": 0,
+      "rows": 15890,
+      "batches": 1987,
+      "frontend_calls": 1987,
+      "models": 18,
+      "serial_shared_max_error": 0.0,
+      "peak_cuda_bytes": 2178259456
+    },
+    {
+      "rank": 1,
+      "rows": 15889,
+      "batches": 1987,
+      "frontend_calls": 1987,
+      "models": 18,
+      "serial_shared_max_error": 0.0,
+      "peak_cuda_bytes": 2178259456
+    }
+  ],
+  "metrics": {
+    "m020": {
+      "family": "EBM_e50_bs240_lr1e5",
+      "epoch": 15,
+      "eer_percent": 8.395396073121193,
+      "independent_error_pp": 0.0,
+      "checkpoint_sha256": "31b8ed9007e160acd53a5691aa2c50893389d4435510333fa649a6cb2bae94d4"
+    },
+    "m021": {
+      "family": "EBM_e50_bs240_lr1e5",
+      "epoch": 20,
+      "eer_percent": 9.461746784021665,
+      "independent_error_pp": 0.0,
+      "checkpoint_sha256": "7dc6ba8892ee84a747f8a3947cad1a0885aece17d948cb6aa6202be69a0ef2d1"
+    },
+    "m022": {
+      "family": "EBM_e50_bs240_lr1e5",
+      "epoch": 25,
+      "eer_percent": 8.945497630331753,
+      "independent_error_pp": 0.0,
+      "checkpoint_sha256": "b65774d21dd8cade7695451743ce026d999b5f60761c30ad1e037d5aa64c1a28"
+    },
+    "m023": {
+      "family": "EBM_e50_bs240_lr1e5",
+      "epoch": 30,
+      "eer_percent": 8.245253719380855,
+      "independent_error_pp": 0.0,
+      "checkpoint_sha256": "5dd2c4b77dbef96215473a067e3d5d11cc0ebf2a6c54f2df3dba5af287096194"
+    },
+    "m024": {
+      "family": "EBM_e50_bs240_lr1e5",
+      "epoch": 35,
+      "eer_percent": 7.74373730534868,
+      "independent_error_pp": 0.0,
+      "checkpoint_sha256": "ed07d846b376726d8472c7dbbddfa4bc7d5317611eb6b1e62471b705e2bba41e"
+    },
+    "m025": {
+      "family": "EBM_e50_bs240_lr1e5",
+      "epoch": 40,
+      "eer_percent": 8.285327856534582,
+      "independent_error_pp": 0.0,
+      "checkpoint_sha256": "c4d54f90ae03cd148650798140e2a4d306d03ed51e1bf617a65cfce638edfd7e"
+    },
+    "m026": {
+      "family": "EBM_e50_bs240_lr1e5",
+      "epoch": 45,
+      "eer_percent": 9.161949606772525,
+      "independent_error_pp": 0.0,
+      "checkpoint_sha256": "3833140ee429722d9eeba0435c01d35fcbaf7374d78f3aa42fc325baba622bf0"
+    },
+    "m027": {
+      "family": "EBM_e50_bs240_lr1e5",
+      "epoch": 50,
+      "eer_percent": 10.299053248509756,
+      "independent_error_pp": 0.0,
+      "checkpoint_sha256": "84a828eeda71d74212178dc2c2f02e72f8bb79b3573354f6cd9ca181a376d19e"
+    },
+    "m057": {
+      "family": "EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1",
+      "epoch": 10,
+      "eer_percent": 9.046736462455534,
+      "independent_error_pp": 0.0,
+      "checkpoint_sha256": "f1f62c342ceacb80d394a0456bc4ae5703b9584b4e6169220f88360a00533fcd"
+    },
+    "m058": {
+      "family": "EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1",
+      "epoch": 15,
+      "eer_percent": 8.350448329409414,
+      "independent_error_pp": 0.0,
+      "checkpoint_sha256": "fd27071a21b11fbb2111c87f579b6badb65418671fa5188dd8b1b9aa4bf7c375"
+    },
+    "m059": {
+      "family": "EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1",
+      "epoch": 20,
+      "eer_percent": 8.843940419769805,
+      "independent_error_pp": 0.0,
+      "checkpoint_sha256": "f3c3df0115ca87010fecc80bd2064d486ab42bd3ec89e209595e5469adb49cc2"
+    },
+    "m060": {
+      "family": "EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1",
+      "epoch": 25,
+      "eer_percent": 8.590893152331812,
+      "independent_error_pp": 0.0,
+      "checkpoint_sha256": "12e2003ad4647bc203a8d57c0582dfc8c2cd8d69281d6b60d9177fc472edcd73"
+    },
+    "m061": {
+      "family": "EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1",
+      "epoch": 30,
+      "eer_percent": 8.786254570956267,
+      "independent_error_pp": 0.0,
+      "checkpoint_sha256": "63e468dbfb8258f9c6548f32cca5e5af5b1c55e48f20ced7b10aa1aa4948727d"
+    },
+    "m062": {
+      "family": "EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1",
+      "epoch": 35,
+      "eer_percent": 9.171968141060962,
+      "independent_error_pp": 0.0,
+      "checkpoint_sha256": "f24944d44b243f2ab4e20c5f7e398684bbb5e66b126d03661848543fb62e2797"
+    },
+    "m063": {
+      "family": "EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1",
+      "epoch": 40,
+      "eer_percent": 9.21705154535891,
+      "independent_error_pp": 0.0,
+      "checkpoint_sha256": "cbe4d29dace71c6c7f0185c70f63fb1daad11fc1e0ce37816fd83e49d4ba2a67"
+    },
+    "m064": {
+      "family": "EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1",
+      "epoch": 45,
+      "eer_percent": 9.352301758252764,
+      "independent_error_pp": 0.0,
+      "checkpoint_sha256": "07d044b27d4f8873658e3f1c83873951880bfb9787b326cc757bed933eb87e4f"
+    },
+    "m065": {
+      "family": "EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1",
+      "epoch": 5,
+      "eer_percent": 10.439312728547815,
+      "independent_error_pp": 0.0,
+      "checkpoint_sha256": "8ed5c8374182b33b68cd85cb2ab83ee611932c2c76f3373dd3378c5dbd22d23d"
+    },
+    "m066": {
+      "family": "EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1",
+      "epoch": 50,
+      "eer_percent": 10.253969844211795,
+      "independent_error_pp": 0.0,
+      "checkpoint_sha256": "f7a2a2fe1f3c7ffba3a269581393fdf6a0240beb647969e41e61a3ee85b1f4eb"
+    }
+  },
+  "families": {
+    "EBM_e50_bs240_lr1e5": {
+      "available_epochs": [
+        15,
+        20,
+        25,
+        30,
+        35,
+        40,
+        45,
+        50
+      ],
+      "candidates": 8,
+      "minimum": {
+        "family": "EBM_e50_bs240_lr1e5",
+        "epoch": 35,
+        "eer_percent": 7.74373730534868,
+        "independent_error_pp": 0.0,
+        "checkpoint_sha256": "ed07d846b376726d8472c7dbbddfa4bc7d5317611eb6b1e62471b705e2bba41e"
+      },
+      "epoch50": {
+        "family": "EBM_e50_bs240_lr1e5",
+        "epoch": 50,
+        "eer_percent": 10.299053248509756,
+        "independent_error_pp": 0.0,
+        "checkpoint_sha256": "84a828eeda71d74212178dc2c2f02e72f8bb79b3573354f6cd9ca181a376d19e"
+      },
+      "common15_50_minimum": {
+        "family": "EBM_e50_bs240_lr1e5",
+        "epoch": 35,
+        "eer_percent": 7.74373730534868,
+        "independent_error_pp": 0.0,
+        "checkpoint_sha256": "ed07d846b376726d8472c7dbbddfa4bc7d5317611eb6b1e62471b705e2bba41e"
+      }
+    },
+    "EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1": {
+      "available_epochs": [
+        5,
+        10,
+        15,
+        20,
+        25,
+        30,
+        35,
+        40,
+        45,
+        50
+      ],
+      "candidates": 10,
+      "minimum": {
+        "family": "EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1",
+        "epoch": 15,
+        "eer_percent": 8.350448329409414,
+        "independent_error_pp": 0.0,
+        "checkpoint_sha256": "fd27071a21b11fbb2111c87f579b6badb65418671fa5188dd8b1b9aa4bf7c375"
+      },
+      "epoch50": {
+        "family": "EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1",
+        "epoch": 50,
+        "eer_percent": 10.253969844211795,
+        "independent_error_pp": 0.0,
+        "checkpoint_sha256": "f7a2a2fe1f3c7ffba3a269581393fdf6a0240beb647969e41e61a3ee85b1f4eb"
+      },
+      "common15_50_minimum": {
+        "family": "EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1",
+        "epoch": 15,
+        "eer_percent": 8.350448329409414,
+        "independent_error_pp": 0.0,
+        "checkpoint_sha256": "fd27071a21b11fbb2111c87f579b6badb65418671fa5188dd8b1b9aa4bf7c375"
+      }
+    }
+  },
+  "errors": {
+    "pipeline.log": {
+      "Traceback": 0,
+      "CUDA out of memory": 0,
+      "Exception ignored in": 0
+    },
+    "unit.log": {
+      "Traceback": 0,
+      "CUDA out of memory": 0,
+      "Exception ignored in": 0
+    },
+    "smoke.log": {
+      "Traceback": 0,
+      "CUDA out of memory": 0,
+      "Exception ignored in": 0
+    },
+    "full.log": {
+      "Traceback": 0,
+      "CUDA out of memory": 0,
+      "Exception ignored in": 0
+    },
+    "report.log": {
+      "Traceback": 0,
+      "CUDA out of memory": 0,
+      "Exception ignored in": 0
+    }
+  },
+  "score_SHA_verified": true,
+  "source_model_control_SHA_verified": true,
+  "optimizer_updates": 0,
+  "feature_files": 0,
+  "new_spending_usd": 0,
+  "automatic_retries": 0
+}

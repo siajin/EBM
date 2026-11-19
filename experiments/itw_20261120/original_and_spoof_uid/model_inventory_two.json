@@ -1,0 +1,773 @@
+{
+  "status": "inventory_shape_verified",
+  "models": [
+    {
+      "key": "m020",
+      "family": "EBM_e50_bs240_lr1e5",
+      "epoch": 15,
+      "host_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5/model/BestCLS_15_21DF.pt",
+      "container_path": "/results/CM/LA/EBM_e50_bs240_lr1e5/model/BestCLS_15_21DF.pt",
+      "sha256": "31b8ed9007e160acd53a5691aa2c50893389d4435510333fa649a6cb2bae94d4",
+      "bytes": 15053782,
+      "architecture": {
+        "num_layer": 25,
+        "hidden_size": 1024,
+        "output_size": 160,
+        "agg_size": 128
+      },
+      "kind": "legacy",
+      "score_sign": 1,
+      "metadata": null,
+      "tensors": 182
+    },
+    {
+      "key": "m021",
+      "family": "EBM_e50_bs240_lr1e5",
+      "epoch": 20,
+      "host_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5/model/BestCLS_20_21DF.pt",
+      "container_path": "/results/CM/LA/EBM_e50_bs240_lr1e5/model/BestCLS_20_21DF.pt",
+      "sha256": "7dc6ba8892ee84a747f8a3947cad1a0885aece17d948cb6aa6202be69a0ef2d1",
+      "bytes": 15053782,
+      "architecture": {
+        "num_layer": 25,
+        "hidden_size": 1024,
+        "output_size": 160,
+        "agg_size": 128
+      },
+      "kind": "legacy",
+      "score_sign": 1,
+      "metadata": null,
+      "tensors": 182
+    },
+    {
+      "key": "m022",
+      "family": "EBM_e50_bs240_lr1e5",
+      "epoch": 25,
+      "host_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5/model/BestCLS_25_21DF.pt",
+      "container_path": "/results/CM/LA/EBM_e50_bs240_lr1e5/model/BestCLS_25_21DF.pt",
+      "sha256": "b65774d21dd8cade7695451743ce026d999b5f60761c30ad1e037d5aa64c1a28",
+      "bytes": 15053782,
+      "architecture": {
+        "num_layer": 25,
+        "hidden_size": 1024,
+        "output_size": 160,
+        "agg_size": 128
+      },
+      "kind": "legacy",
+      "score_sign": 1,
+      "metadata": null,
+      "tensors": 182
+    },
+    {
+      "key": "m023",
+      "family": "EBM_e50_bs240_lr1e5",
+      "epoch": 30,
+      "host_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5/model/BestCLS_30_21DF.pt",
+      "container_path": "/results/CM/LA/EBM_e50_bs240_lr1e5/model/BestCLS_30_21DF.pt",
+      "sha256": "5dd2c4b77dbef96215473a067e3d5d11cc0ebf2a6c54f2df3dba5af287096194",
+      "bytes": 15053782,
+      "architecture": {
+        "num_layer": 25,
+        "hidden_size": 1024,
+        "output_size": 160,
+        "agg_size": 128
+      },
+      "kind": "legacy",
+      "score_sign": 1,
+      "metadata": null,
+      "tensors": 182
+    },
+    {
+      "key": "m024",
+      "family": "EBM_e50_bs240_lr1e5",
+      "epoch": 35,
+      "host_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5/model/BestCLS_35_21DF.pt",
+      "container_path": "/results/CM/LA/EBM_e50_bs240_lr1e5/model/BestCLS_35_21DF.pt",
+      "sha256": "ed07d846b376726d8472c7dbbddfa4bc7d5317611eb6b1e62471b705e2bba41e",
+      "bytes": 15053782,
+      "architecture": {
+        "num_layer": 25,
+        "hidden_size": 1024,
+        "output_size": 160,
+        "agg_size": 128
+      },
+      "kind": "legacy",
+      "score_sign": 1,
+      "metadata": null,
+      "tensors": 182
+    },
+    {
+      "key": "m025",
+      "family": "EBM_e50_bs240_lr1e5",
+      "epoch": 40,
+      "host_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5/model/BestCLS_40_21DF.pt",
+      "container_path": "/results/CM/LA/EBM_e50_bs240_lr1e5/model/BestCLS_40_21DF.pt",
+      "sha256": "c4d54f90ae03cd148650798140e2a4d306d03ed51e1bf617a65cfce638edfd7e",
+      "bytes": 15053782,
+      "architecture": {
+        "num_layer": 25,
+        "hidden_size": 1024,
+        "output_size": 160,
+        "agg_size": 128
+      },
+      "kind": "legacy",
+      "score_sign": 1,
+      "metadata": null,
+      "tensors": 182
+    },
+    {
+      "key": "m026",
+      "family": "EBM_e50_bs240_lr1e5",
+      "epoch": 45,
+      "host_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5/model/BestCLS_45_21DF.pt",
+      "container_path": "/results/CM/LA/EBM_e50_bs240_lr1e5/model/BestCLS_45_21DF.pt",
+      "sha256": "3833140ee429722d9eeba0435c01d35fcbaf7374d78f3aa42fc325baba622bf0",
+      "bytes": 15053782,
+      "architecture": {
+        "num_layer": 25,
+        "hidden_size": 1024,
+        "output_size": 160,
+        "agg_size": 128
+      },
+      "kind": "legacy",
+      "score_sign": 1,
+      "metadata": null,
+      "tensors": 182
+    },
+    {
+      "key": "m027",
+      "family": "EBM_e50_bs240_lr1e5",
+      "epoch": 50,
+      "host_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5/model/BestCLS_50_21DF.pt",
+      "container_path": "/results/CM/LA/EBM_e50_bs240_lr1e5/model/BestCLS_50_21DF.pt",
+      "sha256": "84a828eeda71d74212178dc2c2f02e72f8bb79b3573354f6cd9ca181a376d19e",
+      "bytes": 15053782,
+      "architecture": {
+        "num_layer": 25,
+        "hidden_size": 1024,
+        "output_size": 160,
+        "agg_size": 128
+      },
+      "kind": "legacy",
+      "score_sign": 1,
+      "metadata": null,
+      "tensors": 182
+    },
+    {
+      "key": "m057",
+      "family": "EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1",
+      "epoch": 10,
+      "host_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1/model/CLS_10.pt",
+      "container_path": "/results/CM/LA/EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1/model/CLS_10.pt",
+      "sha256": "f1f62c342ceacb80d394a0456bc4ae5703b9584b4e6169220f88360a00533fcd",
+      "bytes": 15036102,
+      "architecture": {
+        "num_layer": 25,
+        "hidden_size": 1024,
+        "output_size": 160,
+        "agg_size": 128
+      },
+      "kind": "role",
+      "score_sign": -1,
+      "metadata": {
+        "role": {
+          "schema_version": "ebm_role_v5",
+          "compact_label": 0,
+          "r_pull": 0.9,
+          "r_push": 0.2,
+          "alpha_oc": 20.0,
+          "alpha_pair": 30.0,
+          "center_loss_multiplier": 5.0,
+          "pair_target_cosine": 1.0,
+          "bona_bpl_weight": 1.0,
+          "bona_bpl_pairing": "all_cross",
+          "spoof_bpl_pairing": "same_uid",
+          "label_semantics": {
+            "0": "spoof",
+            "1": "bonafide"
+          },
+          "pair_class": 0,
+          "backend_class_weights": [
+            0.5555555555555556,
+            5.0
+          ],
+          "pair_reduction": "mean_aligned_same_uid",
+          "score_bona_transform": "negative_center_cosine",
+          "additional_bona_bpl": {
+            "pair_class": 1,
+            "weight": 1.0,
+            "alpha": 30.0,
+            "target_cosine": 1.0,
+            "reduction": "mean_all_local_cross_pairs",
+            "aggregation": "add_separate_class_mean"
+          }
+        },
+        "architecture": {
+          "num_layer": 25,
+          "hidden_size": 1024,
+          "output_size": 160,
+          "agg_size": 128
+        }
+      },
+      "tensors": 182
+    },
+    {
+      "key": "m058",
+      "family": "EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1",
+      "epoch": 15,
+      "host_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1/model/CLS_15.pt",
+      "container_path": "/results/CM/LA/EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1/model/CLS_15.pt",
+      "sha256": "fd27071a21b11fbb2111c87f579b6badb65418671fa5188dd8b1b9aa4bf7c375",
+      "bytes": 15036102,
+      "architecture": {
+        "num_layer": 25,
+        "hidden_size": 1024,
+        "output_size": 160,
+        "agg_size": 128
+      },
+      "kind": "role",
+      "score_sign": -1,
+      "metadata": {
+        "role": {
+          "schema_version": "ebm_role_v5",
+          "compact_label": 0,
+          "r_pull": 0.9,
+          "r_push": 0.2,
+          "alpha_oc": 20.0,
+          "alpha_pair": 30.0,
+          "center_loss_multiplier": 5.0,
+          "pair_target_cosine": 1.0,
+          "bona_bpl_weight": 1.0,
+          "bona_bpl_pairing": "all_cross",
+          "spoof_bpl_pairing": "same_uid",
+          "label_semantics": {
+            "0": "spoof",
+            "1": "bonafide"
+          },
+          "pair_class": 0,
+          "backend_class_weights": [
+            0.5555555555555556,
+            5.0
+          ],
+          "pair_reduction": "mean_aligned_same_uid",
+          "score_bona_transform": "negative_center_cosine",
+          "additional_bona_bpl": {
+            "pair_class": 1,
+            "weight": 1.0,
+            "alpha": 30.0,
+            "target_cosine": 1.0,
+            "reduction": "mean_all_local_cross_pairs",
+            "aggregation": "add_separate_class_mean"
+          }
+        },
+        "architecture": {
+          "num_layer": 25,
+          "hidden_size": 1024,
+          "output_size": 160,
+          "agg_size": 128
+        }
+      },
+      "tensors": 182
+    },
+    {
+      "key": "m059",
+      "family": "EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1",
+      "epoch": 20,
+      "host_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1/model/CLS_20.pt",
+      "container_path": "/results/CM/LA/EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1/model/CLS_20.pt",
+      "sha256": "f3c3df0115ca87010fecc80bd2064d486ab42bd3ec89e209595e5469adb49cc2",
+      "bytes": 15036102,
+      "architecture": {
+        "num_layer": 25,
+        "hidden_size": 1024,
+        "output_size": 160,
+        "agg_size": 128
+      },
+      "kind": "role",
+      "score_sign": -1,
+      "metadata": {
+        "role": {
+          "schema_version": "ebm_role_v5",
+          "compact_label": 0,
+          "r_pull": 0.9,
+          "r_push": 0.2,
+          "alpha_oc": 20.0,
+          "alpha_pair": 30.0,
+          "center_loss_multiplier": 5.0,
+          "pair_target_cosine": 1.0,
+          "bona_bpl_weight": 1.0,
+          "bona_bpl_pairing": "all_cross",
+          "spoof_bpl_pairing": "same_uid",
+          "label_semantics": {
+            "0": "spoof",
+            "1": "bonafide"
+          },
+          "pair_class": 0,
+          "backend_class_weights": [
+            0.5555555555555556,
+            5.0
+          ],
+          "pair_reduction": "mean_aligned_same_uid",
+          "score_bona_transform": "negative_center_cosine",
+          "additional_bona_bpl": {
+            "pair_class": 1,
+            "weight": 1.0,
+            "alpha": 30.0,
+            "target_cosine": 1.0,
+            "reduction": "mean_all_local_cross_pairs",
+            "aggregation": "add_separate_class_mean"
+          }
+        },
+        "architecture": {
+          "num_layer": 25,
+          "hidden_size": 1024,
+          "output_size": 160,
+          "agg_size": 128
+        }
+      },
+      "tensors": 182
+    },
+    {
+      "key": "m060",
+      "family": "EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1",
+      "epoch": 25,
+      "host_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1/model/CLS_25.pt",
+      "container_path": "/results/CM/LA/EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1/model/CLS_25.pt",
+      "sha256": "12e2003ad4647bc203a8d57c0582dfc8c2cd8d69281d6b60d9177fc472edcd73",
+      "bytes": 15036102,
+      "architecture": {
+        "num_layer": 25,
+        "hidden_size": 1024,
+        "output_size": 160,
+        "agg_size": 128
+      },
+      "kind": "role",
+      "score_sign": -1,
+      "metadata": {
+        "role": {
+          "schema_version": "ebm_role_v5",
+          "compact_label": 0,
+          "r_pull": 0.9,
+          "r_push": 0.2,
+          "alpha_oc": 20.0,
+          "alpha_pair": 30.0,
+          "center_loss_multiplier": 5.0,
+          "pair_target_cosine": 1.0,
+          "bona_bpl_weight": 1.0,
+          "bona_bpl_pairing": "all_cross",
+          "spoof_bpl_pairing": "same_uid",
+          "label_semantics": {
+            "0": "spoof",
+            "1": "bonafide"
+          },
+          "pair_class": 0,
+          "backend_class_weights": [
+            0.5555555555555556,
+            5.0
+          ],
+          "pair_reduction": "mean_aligned_same_uid",
+          "score_bona_transform": "negative_center_cosine",
+          "additional_bona_bpl": {
+            "pair_class": 1,
+            "weight": 1.0,
+            "alpha": 30.0,
+            "target_cosine": 1.0,
+            "reduction": "mean_all_local_cross_pairs",
+            "aggregation": "add_separate_class_mean"
+          }
+        },
+        "architecture": {
+          "num_layer": 25,
+          "hidden_size": 1024,
+          "output_size": 160,
+          "agg_size": 128
+        }
+      },
+      "tensors": 182
+    },
+    {
+      "key": "m061",
+      "family": "EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1",
+      "epoch": 30,
+      "host_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1/model/CLS_30.pt",
+      "container_path": "/results/CM/LA/EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1/model/CLS_30.pt",
+      "sha256": "63e468dbfb8258f9c6548f32cca5e5af5b1c55e48f20ced7b10aa1aa4948727d",
+      "bytes": 15036102,
+      "architecture": {
+        "num_layer": 25,
+        "hidden_size": 1024,
+        "output_size": 160,
+        "agg_size": 128
+      },
+      "kind": "role",
+      "score_sign": -1,
+      "metadata": {
+        "role": {
+          "schema_version": "ebm_role_v5",
+          "compact_label": 0,
+          "r_pull": 0.9,
+          "r_push": 0.2,
+          "alpha_oc": 20.0,
+          "alpha_pair": 30.0,
+          "center_loss_multiplier": 5.0,
+          "pair_target_cosine": 1.0,
+          "bona_bpl_weight": 1.0,
+          "bona_bpl_pairing": "all_cross",
+          "spoof_bpl_pairing": "same_uid",
+          "label_semantics": {
+            "0": "spoof",
+            "1": "bonafide"
+          },
+          "pair_class": 0,
+          "backend_class_weights": [
+            0.5555555555555556,
+            5.0
+          ],
+          "pair_reduction": "mean_aligned_same_uid",
+          "score_bona_transform": "negative_center_cosine",
+          "additional_bona_bpl": {
+            "pair_class": 1,
+            "weight": 1.0,
+            "alpha": 30.0,
+            "target_cosine": 1.0,
+            "reduction": "mean_all_local_cross_pairs",
+            "aggregation": "add_separate_class_mean"
+          }
+        },
+        "architecture": {
+          "num_layer": 25,
+          "hidden_size": 1024,
+          "output_size": 160,
+          "agg_size": 128
+        }
+      },
+      "tensors": 182
+    },
+    {
+      "key": "m062",
+      "family": "EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1",
+      "epoch": 35,
+      "host_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1/model/CLS_35.pt",
+      "container_path": "/results/CM/LA/EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1/model/CLS_35.pt",
+      "sha256": "f24944d44b243f2ab4e20c5f7e398684bbb5e66b126d03661848543fb62e2797",
+      "bytes": 15036102,
+      "architecture": {
+        "num_layer": 25,
+        "hidden_size": 1024,
+        "output_size": 160,
+        "agg_size": 128
+      },
+      "kind": "role",
+      "score_sign": -1,
+      "metadata": {
+        "role": {
+          "schema_version": "ebm_role_v5",
+          "compact_label": 0,
+          "r_pull": 0.9,
+          "r_push": 0.2,
+          "alpha_oc": 20.0,
+          "alpha_pair": 30.0,
+          "center_loss_multiplier": 5.0,
+          "pair_target_cosine": 1.0,
+          "bona_bpl_weight": 1.0,
+          "bona_bpl_pairing": "all_cross",
+          "spoof_bpl_pairing": "same_uid",
+          "label_semantics": {
+            "0": "spoof",
+            "1": "bonafide"
+          },
+          "pair_class": 0,
+          "backend_class_weights": [
+            0.5555555555555556,
+            5.0
+          ],
+          "pair_reduction": "mean_aligned_same_uid",
+          "score_bona_transform": "negative_center_cosine",
+          "additional_bona_bpl": {
+            "pair_class": 1,
+            "weight": 1.0,
+            "alpha": 30.0,
+            "target_cosine": 1.0,
+            "reduction": "mean_all_local_cross_pairs",
+            "aggregation": "add_separate_class_mean"
+          }
+        },
+        "architecture": {
+          "num_layer": 25,
+          "hidden_size": 1024,
+          "output_size": 160,
+          "agg_size": 128
+        }
+      },
+      "tensors": 182
+    },
+    {
+      "key": "m063",
+      "family": "EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1",
+      "epoch": 40,
+      "host_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1/model/CLS_40.pt",
+      "container_path": "/results/CM/LA/EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1/model/CLS_40.pt",
+      "sha256": "cbe4d29dace71c6c7f0185c70f63fb1daad11fc1e0ce37816fd83e49d4ba2a67",
+      "bytes": 15036102,
+      "architecture": {
+        "num_layer": 25,
+        "hidden_size": 1024,
+        "output_size": 160,
+        "agg_size": 128
+      },
+      "kind": "role",
+      "score_sign": -1,
+      "metadata": {
+        "role": {
+          "schema_version": "ebm_role_v5",
+          "compact_label": 0,
+          "r_pull": 0.9,
+          "r_push": 0.2,
+          "alpha_oc": 20.0,
+          "alpha_pair": 30.0,
+          "center_loss_multiplier": 5.0,
+          "pair_target_cosine": 1.0,
+          "bona_bpl_weight": 1.0,
+          "bona_bpl_pairing": "all_cross",
+          "spoof_bpl_pairing": "same_uid",
+          "label_semantics": {
+            "0": "spoof",
+            "1": "bonafide"
+          },
+          "pair_class": 0,
+          "backend_class_weights": [
+            0.5555555555555556,
+            5.0
+          ],
+          "pair_reduction": "mean_aligned_same_uid",
+          "score_bona_transform": "negative_center_cosine",
+          "additional_bona_bpl": {
+            "pair_class": 1,
+            "weight": 1.0,
+            "alpha": 30.0,
+            "target_cosine": 1.0,
+            "reduction": "mean_all_local_cross_pairs",
+            "aggregation": "add_separate_class_mean"
+          }
+        },
+        "architecture": {
+          "num_layer": 25,
+          "hidden_size": 1024,
+          "output_size": 160,
+          "agg_size": 128
+        }
+      },
+      "tensors": 182
+    },
+    {
+      "key": "m064",
+      "family": "EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1",
+      "epoch": 45,
+      "host_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1/model/CLS_45.pt",
+      "container_path": "/results/CM/LA/EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1/model/CLS_45.pt",
+      "sha256": "07d044b27d4f8873658e3f1c83873951880bfb9787b326cc757bed933eb87e4f",
+      "bytes": 15036102,
+      "architecture": {
+        "num_layer": 25,
+        "hidden_size": 1024,
+        "output_size": 160,
+        "agg_size": 128
+      },
+      "kind": "role",
+      "score_sign": -1,
+      "metadata": {
+        "role": {
+          "schema_version": "ebm_role_v5",
+          "compact_label": 0,
+          "r_pull": 0.9,
+          "r_push": 0.2,
+          "alpha_oc": 20.0,
+          "alpha_pair": 30.0,
+          "center_loss_multiplier": 5.0,
+          "pair_target_cosine": 1.0,
+          "bona_bpl_weight": 1.0,
+          "bona_bpl_pairing": "all_cross",
+          "spoof_bpl_pairing": "same_uid",
+          "label_semantics": {
+            "0": "spoof",
+            "1": "bonafide"
+          },
+          "pair_class": 0,
+          "backend_class_weights": [
+            0.5555555555555556,
+            5.0
+          ],
+          "pair_reduction": "mean_aligned_same_uid",
+          "score_bona_transform": "negative_center_cosine",
+          "additional_bona_bpl": {
+            "pair_class": 1,
+            "weight": 1.0,
+            "alpha": 30.0,
+            "target_cosine": 1.0,
+            "reduction": "mean_all_local_cross_pairs",
+            "aggregation": "add_separate_class_mean"
+          }
+        },
+        "architecture": {
+          "num_layer": 25,
+          "hidden_size": 1024,
+          "output_size": 160,
+          "agg_size": 128
+        }
+      },
+      "tensors": 182
+    },
+    {
+      "key": "m065",
+      "family": "EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1",
+      "epoch": 5,
+      "host_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1/model/CLS_5.pt",
+      "container_path": "/results/CM/LA/EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1/model/CLS_5.pt",
+      "sha256": "8ed5c8374182b33b68cd85cb2ab83ee611932c2c76f3373dd3378c5dbd22d23d",
+      "bytes": 15036102,
+      "architecture": {
+        "num_layer": 25,
+        "hidden_size": 1024,
+        "output_size": 160,
+        "agg_size": 128
+      },
+      "kind": "role",
+      "score_sign": -1,
+      "metadata": {
+        "role": {
+          "schema_version": "ebm_role_v5",
+          "compact_label": 0,
+          "r_pull": 0.9,
+          "r_push": 0.2,
+          "alpha_oc": 20.0,
+          "alpha_pair": 30.0,
+          "center_loss_multiplier": 5.0,
+          "pair_target_cosine": 1.0,
+          "bona_bpl_weight": 1.0,
+          "bona_bpl_pairing": "all_cross",
+          "spoof_bpl_pairing": "same_uid",
+          "label_semantics": {
+            "0": "spoof",
+            "1": "bonafide"
+          },
+          "pair_class": 0,
+          "backend_class_weights": [
+            0.5555555555555556,
+            5.0
+          ],
+          "pair_reduction": "mean_aligned_same_uid",
+          "score_bona_transform": "negative_center_cosine",
+          "additional_bona_bpl": {
+            "pair_class": 1,
+            "weight": 1.0,
+            "alpha": 30.0,
+            "target_cosine": 1.0,
+            "reduction": "mean_all_local_cross_pairs",
+            "aggregation": "add_separate_class_mean"
+          }
+        },
+        "architecture": {
+          "num_layer": 25,
+          "hidden_size": 1024,
+          "output_size": 160,
+          "agg_size": 128
+        }
+      },
+      "tensors": 182
+    },
+    {
+      "key": "m066",
+      "family": "EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1",
+      "epoch": 50,
+      "host_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1/model/CLS_50.pt",
+      "container_path": "/results/CM/LA/EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1/model/CLS_50.pt",
+      "sha256": "f7a2a2fe1f3c7ffba3a269581393fdf6a0240beb647969e41e61a3ee85b1f4eb",
+      "bytes": 15036102,
+      "architecture": {
+        "num_layer": 25,
+        "hidden_size": 1024,
+        "output_size": 160,
+        "agg_size": 128
+      },
+      "kind": "role",
+      "score_sign": -1,
+      "metadata": {
+        "role": {
+          "schema_version": "ebm_role_v5",
+          "compact_label": 0,
+          "r_pull": 0.9,
+          "r_push": 0.2,
+          "alpha_oc": 20.0,
+          "alpha_pair": 30.0,
+          "center_loss_multiplier": 5.0,
+          "pair_target_cosine": 1.0,
+          "bona_bpl_weight": 1.0,
+          "bona_bpl_pairing": "all_cross",
+          "spoof_bpl_pairing": "same_uid",
+          "label_semantics": {
+            "0": "spoof",
+            "1": "bonafide"
+          },
+          "pair_class": 0,
+          "backend_class_weights": [
+            0.5555555555555556,
+            5.0
+          ],
+          "pair_reduction": "mean_aligned_same_uid",
+          "score_bona_transform": "negative_center_cosine",
+          "additional_bona_bpl": {
+            "pair_class": 1,
+            "weight": 1.0,
+            "alpha": 30.0,
+            "target_cosine": 1.0,
+            "reduction": "mean_all_local_cross_pairs",
+            "aggregation": "add_separate_class_mean"
+          }
+        },
+        "architecture": {
+          "num_layer": 25,
+          "hidden_size": 1024,
+          "output_size": 160,
+          "agg_size": 128
+        }
+      },
+      "tensors": 182
+    }
+  ],
+  "aliases": [],
+  "families": [
+    {
+      "family": "EBM_e50_bs240_lr1e5",
+      "keys": [
+        "m020",
+        "m021",
+        "m022",
+        "m023",
+        "m024",
+        "m025",
+        "m026",
+        "m027"
+      ]
+    },
+    {
+      "family": "EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1",
+      "keys": [
+        "m057",
+        "m058",
+        "m059",
+        "m060",
+        "m061",
+        "m062",
+        "m063",
+        "m064",
+        "m065",
+        "m066"
+      ]
+    }
+  ],
+  "checkpoints": 18,
+  "family_count": 2,
+  "all_compatible_with_frozen_XLSR": true,
+  "new_gpu_work": 0,
+  "scope": "Explicit user reduction: original240 and latest spoof-sameUID/normal-allcross only"
+}
