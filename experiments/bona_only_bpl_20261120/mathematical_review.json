@@ -1,0 +1,52 @@
+{
+  "status": "passed",
+  "reference": "dual all-cross v3",
+  "changed_hyperparameters": [
+    "spoof_bpl_weight:1->0"
+  ],
+  "all_other_runtime_options_exact": true,
+  "objective": "Original spoof-centered OC long mean + original normal long x short BPL class mean; no spoof BPL; two original Adam phases",
+  "feasibility": "Antipodal normal/spoof normalized embedding assignment attains individual angular minima in embedding space; does not assert realizability or convergence of the shared network on real data",
+  "checks": [
+    {
+      "bona_rows": 12,
+      "spoof_rows": 108,
+      "bona_pairs": 144,
+      "spoof_pairs": 0,
+      "backend_loss": 0.4566111861003072,
+      "embedding_space_lower_bound": 0.4566111861003072,
+      "gap": 0.0,
+      "center_loss": 0.6346400552148629
+    },
+    {
+      "bona_rows": 12,
+      "spoof_rows": 60,
+      "bona_pairs": 144,
+      "spoof_pairs": 0,
+      "backend_loss": 0.45191014866685497,
+      "embedding_space_lower_bound": 0.451910148666855,
+      "gap": -5.551115123125783e-17,
+      "center_loss": 0.6346400552148628
+    },
+    {
+      "bona_rows": 6,
+      "spoof_rows": 108,
+      "bona_pairs": 36,
+      "spoof_pairs": 0,
+      "backend_loss": 0.4599513969082865,
+      "embedding_space_lower_bound": 0.4599513969082864,
+      "gap": 1.1102230246251565e-16,
+      "center_loss": 0.6346400552148629
+    }
+  ],
+  "primary_comparison": "v3 dual all-cross, same seed/budget/input/loader/RNG/optimizer/evaluation; v5 is secondary because its spoof pairing differs",
+  "risks": [
+    "Spoof OC still contracts spoofs, full point collapse remains possible",
+    "No guarantee shared-parameter OC/BPL gradients align or EER improves",
+    "Removal lowers loss scale by deleting a term; lower logged loss is not improved recognition",
+    "Post-hoc target EER minima are not unbiased checkpoint selection"
+  ],
+  "test_evidence": "12 new tests plus147 existing tests; independent value/grad/finite difference/Adam/DDP/metadata/checkpoint/RNG checks",
+  "new_spending_usd": 0,
+  "full_training_started": false
+}

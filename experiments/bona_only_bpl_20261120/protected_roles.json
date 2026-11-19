@@ -1,0 +1,266 @@
+[
+  {
+    "key": "m086",
+    "family": "EBM_e50_bs240_lr1e5_spoof_center_OC_SPL_20261112_v1",
+    "epoch": 50,
+    "host_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_spoof_center_OC_SPL_20261112_v1/model/CLS_50.pt",
+    "container_path": "/results/CM/LA/EBM_e50_bs240_lr1e5_spoof_center_OC_SPL_20261112_v1/model/CLS_50.pt",
+    "sha256": "c411b6bcd3777372d5fcd85c5f46cc81cce98000ff30ca6c4d8ddf7023d0b642",
+    "bytes": 15035718,
+    "architecture": {
+      "num_layer": 25,
+      "hidden_size": 1024,
+      "output_size": 160,
+      "agg_size": 128
+    },
+    "kind": "role",
+    "score_sign": -1,
+    "metadata": {
+      "role": {
+        "schema_version": "ebm_role_v1",
+        "compact_label": 0,
+        "r_pull": 0.9,
+        "r_push": 0.2,
+        "alpha_oc": 20.0,
+        "alpha_pair": 30.0,
+        "center_loss_multiplier": 5.0,
+        "label_semantics": {
+          "0": "spoof",
+          "1": "bonafide"
+        },
+        "pair_class": 0,
+        "backend_class_weights": [
+          0.5555555555555556,
+          5.0
+        ],
+        "pair_reduction": "mean_all_local_cross_pairs",
+        "score_bona_transform": "negative_center_cosine"
+      },
+      "architecture": {
+        "num_layer": 25,
+        "hidden_size": 1024,
+        "output_size": 160,
+        "agg_size": 128
+      }
+    },
+    "tensors": 182
+  },
+  {
+    "key": "m106",
+    "family": "EBM_e50_bs240_lr1e5_spoof_pair09_pull08_wrapeval_20261113_v1",
+    "epoch": 50,
+    "host_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_spoof_pair09_pull08_wrapeval_20261113_v1/model/CLS_50.pt",
+    "container_path": "/results/CM/LA/EBM_e50_bs240_lr1e5_spoof_pair09_pull08_wrapeval_20261113_v1/model/CLS_50.pt",
+    "sha256": "65b7095327fc515ccf1258787113a208d8b5fcb550ffb480208cc8c6d0fb7eee",
+    "bytes": 15035782,
+    "architecture": {
+      "num_layer": 25,
+      "hidden_size": 1024,
+      "output_size": 160,
+      "agg_size": 128
+    },
+    "kind": "role",
+    "score_sign": -1,
+    "metadata": {
+      "role": {
+        "schema_version": "ebm_role_v2",
+        "compact_label": 0,
+        "r_pull": 0.8,
+        "r_push": 0.2,
+        "alpha_oc": 20.0,
+        "alpha_pair": 30.0,
+        "center_loss_multiplier": 5.0,
+        "pair_target_cosine": 0.9,
+        "label_semantics": {
+          "0": "spoof",
+          "1": "bonafide"
+        },
+        "pair_class": 0,
+        "backend_class_weights": [
+          0.5555555555555556,
+          5.0
+        ],
+        "pair_reduction": "mean_all_local_cross_pairs",
+        "score_bona_transform": "negative_center_cosine"
+      },
+      "architecture": {
+        "num_layer": 25,
+        "hidden_size": 1024,
+        "output_size": 160,
+        "agg_size": 128
+      }
+    },
+    "tensors": 182
+  },
+  {
+    "key": "m096",
+    "family": "EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1",
+    "epoch": 50,
+    "host_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1/model/CLS_50.pt",
+    "container_path": "/results/CM/LA/EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1/model/CLS_50.pt",
+    "sha256": "b11d0a4f15461903e72f62bc307cdce174e731848769d45ff116a1075fe467ba",
+    "bytes": 15035974,
+    "architecture": {
+      "num_layer": 25,
+      "hidden_size": 1024,
+      "output_size": 160,
+      "agg_size": 128
+    },
+    "kind": "role",
+    "score_sign": -1,
+    "metadata": {
+      "role": {
+        "schema_version": "ebm_role_v3",
+        "compact_label": 0,
+        "r_pull": 0.9,
+        "r_push": 0.2,
+        "alpha_oc": 20.0,
+        "alpha_pair": 30.0,
+        "center_loss_multiplier": 5.0,
+        "pair_target_cosine": 1.0,
+        "bona_bpl_weight": 1.0,
+        "label_semantics": {
+          "0": "spoof",
+          "1": "bonafide"
+        },
+        "pair_class": 0,
+        "backend_class_weights": [
+          0.5555555555555556,
+          5.0
+        ],
+        "pair_reduction": "mean_all_local_cross_pairs",
+        "score_bona_transform": "negative_center_cosine",
+        "additional_bona_bpl": {
+          "pair_class": 1,
+          "weight": 1.0,
+          "alpha": 30.0,
+          "target_cosine": 1.0,
+          "reduction": "mean_all_local_cross_pairs",
+          "aggregation": "add_separate_class_mean"
+        }
+      },
+      "architecture": {
+        "num_layer": 25,
+        "hidden_size": 1024,
+        "output_size": 160,
+        "agg_size": 128
+      }
+    },
+    "tensors": 182
+  },
+  {
+    "key": "m076",
+    "family": "EBM_e50_bs240_lr1e5_spoof_bonaUIDBPL_pair1_pull09_wrapeval_20261118_v1",
+    "epoch": 50,
+    "host_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_spoof_bonaUIDBPL_pair1_pull09_wrapeval_20261118_v1/model/CLS_50.pt",
+    "container_path": "/results/CM/LA/EBM_e50_bs240_lr1e5_spoof_bonaUIDBPL_pair1_pull09_wrapeval_20261118_v1/model/CLS_50.pt",
+    "sha256": "c1b846090b5b55eeece3ee1f4c62fc3b53f74048b6e1f2f4f85fc10f99b82595",
+    "bytes": 15036038,
+    "architecture": {
+      "num_layer": 25,
+      "hidden_size": 1024,
+      "output_size": 160,
+      "agg_size": 128
+    },
+    "kind": "role",
+    "score_sign": -1,
+    "metadata": {
+      "role": {
+        "schema_version": "ebm_role_v4",
+        "compact_label": 0,
+        "r_pull": 0.9,
+        "r_push": 0.2,
+        "alpha_oc": 20.0,
+        "alpha_pair": 30.0,
+        "center_loss_multiplier": 5.0,
+        "pair_target_cosine": 1.0,
+        "bona_bpl_weight": 1.0,
+        "bona_bpl_pairing": "same_uid",
+        "label_semantics": {
+          "0": "spoof",
+          "1": "bonafide"
+        },
+        "pair_class": 0,
+        "backend_class_weights": [
+          0.5555555555555556,
+          5.0
+        ],
+        "pair_reduction": "mean_all_local_cross_pairs",
+        "score_bona_transform": "negative_center_cosine",
+        "additional_bona_bpl": {
+          "pair_class": 1,
+          "weight": 1.0,
+          "alpha": 30.0,
+          "target_cosine": 1.0,
+          "reduction": "mean_aligned_same_uid",
+          "aggregation": "add_separate_class_mean"
+        }
+      },
+      "architecture": {
+        "num_layer": 25,
+        "hidden_size": 1024,
+        "output_size": 160,
+        "agg_size": 128
+      }
+    },
+    "tensors": 182
+  },
+  {
+    "key": "m066",
+    "family": "EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1",
+    "epoch": 50,
+    "host_path": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1/model/CLS_50.pt",
+    "container_path": "/results/CM/LA/EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1/model/CLS_50.pt",
+    "sha256": "f7a2a2fe1f3c7ffba3a269581393fdf6a0240beb647969e41e61a3ee85b1f4eb",
+    "bytes": 15036102,
+    "architecture": {
+      "num_layer": 25,
+      "hidden_size": 1024,
+      "output_size": 160,
+      "agg_size": 128
+    },
+    "kind": "role",
+    "score_sign": -1,
+    "metadata": {
+      "role": {
+        "schema_version": "ebm_role_v5",
+        "compact_label": 0,
+        "r_pull": 0.9,
+        "r_push": 0.2,
+        "alpha_oc": 20.0,
+        "alpha_pair": 30.0,
+        "center_loss_multiplier": 5.0,
+        "pair_target_cosine": 1.0,
+        "bona_bpl_weight": 1.0,
+        "bona_bpl_pairing": "all_cross",
+        "spoof_bpl_pairing": "same_uid",
+        "label_semantics": {
+          "0": "spoof",
+          "1": "bonafide"
+        },
+        "pair_class": 0,
+        "backend_class_weights": [
+          0.5555555555555556,
+          5.0
+        ],
+        "pair_reduction": "mean_aligned_same_uid",
+        "score_bona_transform": "negative_center_cosine",
+        "additional_bona_bpl": {
+          "pair_class": 1,
+          "weight": 1.0,
+          "alpha": 30.0,
+          "target_cosine": 1.0,
+          "reduction": "mean_all_local_cross_pairs",
+          "aggregation": "add_separate_class_mean"
+        }
+      },
+      "architecture": {
+        "num_layer": 25,
+        "hidden_size": 1024,
+        "output_size": 160,
+        "agg_size": 128
+      }
+    },
+    "tensors": 182
+  }
+]

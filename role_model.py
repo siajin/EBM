@@ -37,10 +37,17 @@ class RoleBLinear(B_Linear):
         z, short = self.encode(x, mask), self.encode(x_short, mask_short)
         self.loss.validate_embeddings(short)
         oc = self.loss.backend_loss(z, labels)
-        pair = (self.loss_bpl.same_uid(z[compact], short[compact])
-                if self.role.spoof_bpl_pairing == 'same_uid'
-                else self.loss_bpl(z[compact], short[compact]))
-        total = oc + pair
+        # Keep both full forwards (dropout/ASP RNG and batch shape unchanged),
+        # but do not construct an inactive spoof-pair objective at weight zero.
+        if self.role.spoof_bpl_weight > 0:
+            pair = (self.loss_bpl.same_uid(z[compact], short[compact])
+                    if self.role.spoof_bpl_pairing == 'same_uid'
+                    else self.loss_bpl(z[compact], short[compact]))
+            weighted_pair = pair if self.role.spoof_bpl_weight == 1 else self.role.spoof_bpl_weight * pair
+            total = oc + weighted_pair
+        else:
+            pair = weighted_pair = z.new_zeros(())
+            total = oc
         bona_pair = None
         if self.role.bona_bpl_weight > 0:
             bona = labels == 1
@@ -52,12 +59,15 @@ class RoleBLinear(B_Linear):
         if not bool(torch.isfinite(total)):
             raise ValueError('Nonfinite role objective')
         stats = dict(oc=oc.detach(), pair=pair.detach(), compact_rows=int(compact.sum()),
-                     pair_count=int(compact.sum()) ** (1 if self.role.spoof_bpl_pairing == 'same_uid' else 2))
+                     pair_count=(int(compact.sum()) ** (1 if self.role.spoof_bpl_pairing == 'same_uid' else 2)
+                                 if self.role.spoof_bpl_weight > 0 else 0))
         if bona_pair is not None:
             stats.update(pair_spoof=pair.detach(), pair_bona=bona_pair.detach(),
                          bona_pair_count=int((labels == 1).sum())**(1 if self.role.bona_bpl_pairing == 'same_uid' else 2),
                          bona_bpl_weight=self.role.bona_bpl_weight,
-                         pair_total=(pair+self.role.bona_bpl_weight*bona_pair).detach())
+                         pair_total=(weighted_pair+self.role.bona_bpl_weight*bona_pair).detach())
+        if self.role.spoof_bpl_weight != 1:
+            stats['spoof_bpl_weight'] = self.role.spoof_bpl_weight
         with torch.no_grad():
             unit = torch.nn.functional.normalize(z.detach(), dim=1)
             center = torch.nn.functional.normalize(self.loss.weight.detach(), dim=1)

@@ -19,6 +19,7 @@ class RoleConfig:
     bona_bpl_weight: float = 0.
     bona_bpl_pairing: str = 'all_cross'
     spoof_bpl_pairing: str = 'all_cross'
+    spoof_bpl_weight: float = 1.
 
     def __post_init__(self):
         if type(self.compact_label) is not int or self.compact_label not in (0, 1):
@@ -42,6 +43,10 @@ class RoleConfig:
             raise ValueError('Unknown spoof BPL pairing')
         if self.spoof_bpl_pairing == 'same_uid' and self.compact_label != 0:
             raise ValueError('Same-UID spoof BPL requires a spoof-centered role')
+        if self.spoof_bpl_weight < 0 or (self.spoof_bpl_weight != 1 and self.compact_label != 0):
+            raise ValueError('Changing spoof BPL weight requires a nonnegative weight and spoof-centered role')
+        if self.spoof_bpl_weight == 0 and self.spoof_bpl_pairing != 'all_cross':
+            raise ValueError('Disabled spoof BPL must use the canonical all_cross pairing')
 
     @property
     def score_sign(self):
@@ -54,18 +59,21 @@ class RoleConfig:
         dual = self.bona_bpl_weight > 0
         uid = self.bona_bpl_pairing == 'same_uid'
         spoof_uid = self.spoof_bpl_pairing == 'same_uid'
-        if not spoof_uid:
+        weighted = self.spoof_bpl_weight != 1.
+        if not weighted:
+            values.pop('spoof_bpl_weight')
+        if not spoof_uid and not weighted:
             values.pop('spoof_bpl_pairing')
-        if not uid and not spoof_uid:
+        if not uid and not spoof_uid and not weighted:
             values.pop('bona_bpl_pairing')
-        if not dual and not spoof_uid:
+        if not dual and not spoof_uid and not weighted:
             values.pop('bona_bpl_weight')
-        if self.pair_target_cosine == 1. and not dual and not spoof_uid:
+        if self.pair_target_cosine == 1. and not dual and not spoof_uid and not weighted:
             values.pop('pair_target_cosine')
-        result = dict(schema_version='ebm_role_v5' if spoof_uid else ('ebm_role_v4' if uid else ('ebm_role_v3' if dual else ('ebm_role_v1' if self.pair_target_cosine == 1. else 'ebm_role_v2'))),
+        result = dict(schema_version='ebm_role_v6' if weighted else ('ebm_role_v5' if spoof_uid else ('ebm_role_v4' if uid else ('ebm_role_v3' if dual else ('ebm_role_v1' if self.pair_target_cosine == 1. else 'ebm_role_v2')))),
                     **values,
                     label_semantics={'0': 'spoof', '1': 'bonafide'}, pair_class=self.compact_label,
-                    backend_class_weights=[5/9, 5.], pair_reduction='mean_aligned_same_uid' if spoof_uid else 'mean_all_local_cross_pairs',
+                    backend_class_weights=[5/9, 5.], pair_reduction=('disabled' if self.spoof_bpl_weight == 0 else ('mean_aligned_same_uid' if spoof_uid else 'mean_all_local_cross_pairs')),
                     score_bona_transform=('center_cosine' if self.score_sign == 1 else 'negative_center_cosine'))
         if dual:
             result['additional_bona_bpl'] = dict(pair_class=1, weight=self.bona_bpl_weight,
@@ -78,6 +86,8 @@ class RoleConfig:
         if not isinstance(metadata, dict):
             raise ValueError('A role manifest is required; tensor shapes do not identify the center class')
         names = {f.name for f in fields(cls)}
+        if metadata.get('schema_version') in ('ebm_role_v1','ebm_role_v2','ebm_role_v3','ebm_role_v4','ebm_role_v5'):
+            names.remove('spoof_bpl_weight')
         if metadata.get('schema_version') in ('ebm_role_v1','ebm_role_v2','ebm_role_v3','ebm_role_v4'):
             names.remove('spoof_bpl_pairing')
         if metadata.get('schema_version') in ('ebm_role_v1','ebm_role_v2','ebm_role_v3'):

@@ -1,0 +1,71 @@
+{
+  "status": "passed",
+  "actual_two_GPU": true,
+  "loader_batches_seen": 108,
+  "trained_batches": [
+    1,
+    106,
+    108
+  ],
+  "bona_pairs": [
+    144,
+    144,
+    36
+  ],
+  "spoof_pairs": [
+    0,
+    0,
+    0
+  ],
+  "spoof_short_gradient_exact_zero": true,
+  "bona_short_gradient_positive": true,
+  "center_synchronized": true,
+  "v6_save_restore_passed": true,
+  "Adam_states": 182,
+  "Adam_steps": 3,
+  "eval_phases": [
+    "19LA"
+  ],
+  "smoke_eval_rows": 64,
+  "independent_ROC_error_pp": 0.0,
+  "initialization": {
+    "status": "passed",
+    "initial_state_exact": true,
+    "initial_rng_exact": true,
+    "parameters": 3744384,
+    "old_checkpoint_readers": [
+      {
+        "family": "EBM_e50_bs240_lr1e5_spoof_center_OC_SPL_20261112_v1",
+        "epoch": 50,
+        "schema": "ebm_role_v1"
+      },
+      {
+        "family": "EBM_e50_bs240_lr1e5_spoof_pair09_pull08_wrapeval_20261113_v1",
+        "epoch": 50,
+        "schema": "ebm_role_v2"
+      },
+      {
+        "family": "EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1",
+        "epoch": 50,
+        "schema": "ebm_role_v3"
+      },
+      {
+        "family": "EBM_e50_bs240_lr1e5_spoof_bonaUIDBPL_pair1_pull09_wrapeval_20261118_v1",
+        "epoch": 50,
+        "schema": "ebm_role_v4"
+      },
+      {
+        "family": "EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1",
+        "epoch": 50,
+        "schema": "ebm_role_v5"
+      }
+    ],
+    "frontend_downloads": 0,
+    "full_training_started": false
+  },
+  "source_model_prior_controls_unchanged": true,
+  "data_fingerprint_matches_prior": true,
+  "full_training_started": false,
+  "new_spending_usd": 0,
+  "automatic_retries": 0
+}

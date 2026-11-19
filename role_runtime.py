@@ -48,13 +48,13 @@ def options(compact_class='spoof', *, epoch=50, seed=1, workers=4, frontend_revi
             path_19LA='/data/ASVspoof2019', path_21LA='/data/ASVspoof2021_LA_eval',
             path_21DF='/data/ASVspoof2021_DF', run_root=None, r_pull=.9,
             pair_target_cosine=1., eval_input='front64600_native_mask', bona_bpl_weight=0.,
-            bona_bpl_pairing='all_cross', spoof_bpl_pairing='all_cross', final_eval_policy='serial'):
+            bona_bpl_pairing='all_cross', spoof_bpl_pairing='all_cross', spoof_bpl_weight=1., final_eval_policy='serial'):
     if compact_class not in ('spoof', 'bonafide'):
         raise ValueError('Unknown compact class')
     args = dict(role=RoleConfig(compact_label=int(compact_class == 'bonafide'),
                                r_pull=r_pull,pair_target_cosine=pair_target_cosine,
                                bona_bpl_weight=bona_bpl_weight,bona_bpl_pairing=bona_bpl_pairing,
-                               spoof_bpl_pairing=spoof_bpl_pairing).metadata(),
+                               spoof_bpl_pairing=spoof_bpl_pairing,spoof_bpl_weight=spoof_bpl_weight).metadata(),
                 epoch=epoch, rand_seed=seed, num_workers=workers, frontend_revision=frontend_revision,
                 path_19LA=path_19LA, path_21LA=path_21LA, path_21DF=path_21DF,
                 run_root=str(run_root) if run_root else None,
@@ -138,6 +138,14 @@ def validate_smoke_receipt(args, path):
             if ([r.get('pair_count') for r in values] != [108,60,108]
                     or not all(np.isfinite(r.get('spoof_short_gradient_norm',0)) and r.get('spoof_short_gradient_norm',0)>0 for r in values)):
                 raise ValueError('Smoke did not validate spoof UID pairs and short gradients')
+    if RoleConfig.from_metadata(args['role']).spoof_bpl_weight == 0:
+        if receipt.get('spoof_bpl_disabled_graph_checked') is not True or len(receipt.get('ranks',[])) != 2:
+            raise ValueError('Disabled spoof BPL requires its own zero-short-gradient smoke')
+        for record in receipt['ranks']:
+            values=record.get('values',[])
+            if (len(values)!=3 or any(r.get('pair_count')!=0 or r.get('pair_spoof')!=0.
+                                     or r.get('spoof_short_gradient_norm')!=0. for r in values)):
+                raise ValueError('Smoke did not verify absent spoof BPL and exact zero spoof short gradient')
     return receipt
 
 
@@ -292,7 +300,7 @@ def run_smoke(trainer):
             b = torch.stack(t.plm(short, output_hidden_states=True).hidden_states, dim=1)
         audit = {}; calls = []; hook = None
         role = unwrap(t.classifier).role
-        if role.bona_bpl_weight > 0 or role.spoof_bpl_pairing == 'same_uid':
+        if role.bona_bpl_weight > 0 or role.spoof_bpl_pairing == 'same_uid' or role.spoof_bpl_weight == 0:
             def capture(module, inputs, output):
                 if output.requires_grad and len(output)==len(labels):
                     calls.append(True)
@@ -317,6 +325,11 @@ def run_smoke(trainer):
                     or result.get('pair_count')!=expected[1]):
                 raise RuntimeError('Spoof same-UID BPL graph/short-gradient smoke failed')
             result.update(audit)
+        if role.spoof_bpl_weight == 0:
+            if (len(calls)!=2 or audit.get('spoof_short_gradient_norm')!=0.
+                    or result.get('pair_count')!=0 or result.get('pair',0.)!=0.):
+                raise RuntimeError('Disabled spoof BPL graph/zero-short-gradient smoke failed')
+            result.update(audit)
         result.update(epoch=0, batch=step); t.record_train(result); values.append(result)
         del long, short, labels, a, b
     if seen != 108 or [v['batch'] for v in values] != [1,106,108]:
@@ -339,6 +352,7 @@ def run_smoke(trainer):
             iterator_policy=args['iterator_policy'], loader_batches_seen=seen,
             dual_bpl_graph_checked=unwrap(t.classifier).role.bona_bpl_weight > 0,
             spoof_uid_graph_checked=unwrap(t.classifier).role.spoof_bpl_pairing == 'same_uid',
+            spoof_bpl_disabled_graph_checked=unwrap(t.classifier).role.spoof_bpl_weight == 0,
             data_fingerprint=args['data_summary']['fingerprint'], ranks=summaries,
             note='Smoke optimizer/checkpoint is not reused for training'))
 

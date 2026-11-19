@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "initial_state_exact": true,
+  "initial_rng_exact": true,
+  "parameters": 3744384,
+  "old_checkpoint_readers": [
+    {
+      "family": "EBM_e50_bs240_lr1e5_spoof_center_OC_SPL_20261112_v1",
+      "epoch": 50,
+      "schema": "ebm_role_v1"
+    },
+    {
+      "family": "EBM_e50_bs240_lr1e5_spoof_pair09_pull08_wrapeval_20261113_v1",
+      "epoch": 50,
+      "schema": "ebm_role_v2"
+    },
+    {
+      "family": "EBM_e50_bs240_lr1e5_spoof_dualBPL_pair1_pull09_wrapeval_20261116_v1",
+      "epoch": 50,
+      "schema": "ebm_role_v3"
+    },
+    {
+      "family": "EBM_e50_bs240_lr1e5_spoof_bonaUIDBPL_pair1_pull09_wrapeval_20261118_v1",
+      "epoch": 50,
+      "schema": "ebm_role_v4"
+    },
+    {
+      "family": "EBM_e50_bs240_lr1e5_spoofUID_bonaAllcrossBPL_pair1_pull09_wrapeval_20261119_v1",
+      "epoch": 50,
+      "schema": "ebm_role_v5"
+    }
+  ],
+  "frontend_downloads": 0,
+  "full_training_started": false
+}

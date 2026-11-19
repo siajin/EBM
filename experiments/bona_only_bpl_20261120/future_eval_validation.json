@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "local_tests": 4,
+  "server_tests": 4,
+  "total_core_tests": 159,
+  "total_unique_tests": 163,
+  "checks": [
+    "v6 ten-head deferred21LA/DF manifest",
+    "Wrong v3/v5/normalUID role rejection",
+    "Actual v6 score/RNG/order on shared hidden tensor",
+    "Synthetic full30cell aggregation preserves spoof_uid and adds bona_only"
+  ],
+  "synthetic_scores_are_performance_evidence": false,
+  "source_controls_unchanged": true,
+  "full_training_started": false,
+  "new_spending_usd": 0,
+  "automatic_retries": 0,
+  "GPU": "6, 6, 0\n7, 6, 0\n",
+  "checked_KST": "2026-11-20T08:22:37.245050+09:00"
+}
