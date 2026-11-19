@@ -8,10 +8,13 @@ augmentation, fresh seed1, two Adam phases and frozen frontend remain unchanged.
 Use tools/train_role_experiment.py, not main.py. Configuration-only example:
 python tools/train_role_experiment.py --spoof-bpl-weight 0 --spoof-bpl-pairing all_cross --bona-bpl-weight 1 --bona-bpl-pairing all_cross --pair-target-cosine 1 --r-pull .9 --eval-input front64600_wrap --final-eval-policy deferred_shared
 
-Default mode validates and does not train. This task completed CPU regression and
-actual two-GPU108loader/three-update smoke only; full50epoch training has NOT
-started and no trained-model EER exists. Smoke epoch0 is not a trained checkpoint
-and must never initialize the next fresh training run.
+Default mode validates and does not train. The user subsequently authorized fresh
+seed1/50epoch training after163CPU checks and actual two-GPU smoke passed.
+The new training run has started; actual first updates on both ranks match the
+accepted real-data smoke exactly. See experiments/bona_only_train_20261120 and
+docs/experiments/ebm_bona_only_training_20261120.md for frozen training controls
+and timestamped start verification. This records a start, not final EER/completion.
+Smoke epoch0 is not a trained checkpoint and is never loaded into training.
 
 For subsequent fresh training, preserve50epochs, save/evaluate19LA every5epochs,
 and defer21LA/DF until all10heads can share one frozen XLSR output per batch.

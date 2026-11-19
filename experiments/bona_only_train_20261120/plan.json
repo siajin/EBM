@@ -1,0 +1,16 @@
+{
+  "authorization":"User explicitly requests starting training if completed evaluation and logical review have no blocking issue",
+  "objective":"Fresh seed1 50epoch training of spoof-centered OC + normal original all-cross BPL only",
+  "root":"/home/mentee/analysis/ebm_bona_only_allcross_pair1_pull09_e50_20261120_v1",
+  "result":"/results/CM/LA/EBM_e50_bs240_lr1e5_bonaOnlyAllcrossBPL_spoofOff_pair1_pull09_wrapeval_20261120_v1",
+  "source_reference":"149 immutable files validated locally/server with163tests and actual2GPU108loader/3update smoke, GitHub17167f0e0dc8b0cf74102ddb844a727d8f106b58",
+  "validated_smoke_root":"/home/mentee/analysis/ebm_bona_only_bpl_validation_20261120_v1/smoke",
+  "initialization":"Fresh RoleBLinear initialization, new Adam/scheduler/RNG, no resume or smoke model/state loading; prior matching receipt is verification only",
+  "parameters":{"spoof_bpl_weight":0,"spoof_bpl_pairing":"all_cross","bona_bpl_weight":1,"bona_bpl_pairing":"all_cross","pair_target_cosine":1,"r_pull":0.9,"r_push":0.2,"alpha_pair":30,"alpha_oc":20,"center_loss_multiplier":5,"seed":1,"epochs":50,"global_batch_size":240,"local_batch_size":120,"lr":0.00001,"weight_decay":0.0001},
+  "evaluation":{"during_training":"19LA full only every5epochs after committed checkpoint","after_training":"21LA andDF full, all10heads share one frozen XLSR output per batch; no persistent features","input":"wrap64600/no-mask/batch8/common matched_wrap1729/ASP1e-5","report":"Sameepoch and fixed50, common15..50 minima and full available minima/epochs/candidate counts against six previous models; mark retrospective target selection"},
+  "gates":["Prior evaluation/actualGPU/future-finalizer validation success and old artifacts/SHA unchanged","New unique root/result paths, exact149 source SHA and new pipeline/controller hashes","Verify training and accepted smoke signatures/data roles match, fresh seed1 parameters/RNG equal dualBPL reference","Original container shell and GPUs6/7 idle three times","After launch both actual ranks first updates match prior fresh-smoke first values exactly, finite losses/gradient norms and nonzero center updates, correct144normal/0spoof pairs"],
+  "new_spending_ceiling_usd":0,"new_paid_resources":0,"automatic_retries":0,"maximum_pipeline_hours":168,
+  "resources":"Existing lab container and GPUs6/7 only",
+  "cleanup":"Bounded owned rank/loader cleanup; no watchers or app schedules; preserve every old model/source/score and frozen validation; never restart or overwrite a failed run; stop with diagnostic evidence on failure",
+  "limits":["No performance guarantee; shared-parameter gradient conflicts and spoofOC contraction remain possible","No new training EER before first5epoch full19LA completion","Current ITW results are retained as reference; no ITW job is added to this pipeline"]
+}

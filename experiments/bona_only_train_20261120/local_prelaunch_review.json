@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "source_files": 149,
+  "validated_CPU_tests": 163,
+  "actual_GPU_smoke_passed": true,
+  "smoke_signature": "a0e4804f69da76cb6919c24faf154f30d33caf52c98aa5e376e2d70ce7cd4d69",
+  "pipeline_args_exact": {
+    "--spoof-bpl-weight": "0",
+    "--spoof-bpl-pairing": "all_cross",
+    "--bona-bpl-weight": "1",
+    "--bona-bpl-pairing": "all_cross",
+    "--pair-target-cosine": "1",
+    "--r-pull": ".9",
+    "--eval-input": "front64600_wrap",
+    "--final-eval-policy": "deferred_shared",
+    "--epochs": "50",
+    "--seed": "1",
+    "--num-workers": "4"
+  },
+  "training_calls": 1,
+  "new_paid_resources": 0,
+  "new_spending_usd": 0,
+  "automatic_retries": 0
+}

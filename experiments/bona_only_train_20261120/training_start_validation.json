@@ -1,0 +1,86 @@
+{
+  "status": "actual_fresh_training_start_verified",
+  "unix": 1795131719.3829956,
+  "root": "/home/mentee/analysis/ebm_bona_only_allcross_pair1_pull09_e50_20261120_v1",
+  "result": "/home/mentee/results/CM/LA/EBM_e50_bs240_lr1e5_bonaOnlyAllcrossBPL_spoofOff_pair1_pull09_wrapeval_20261120_v1",
+  "source_files": 149,
+  "protected_files": 1059,
+  "source_controls_prior_models_unchanged": true,
+  "preflight": {
+    "status": "passed",
+    "source_files": 149,
+    "protected_files": 1059,
+    "signature": "a0e4804f69da76cb6919c24faf154f30d33caf52c98aa5e376e2d70ce7cd4d69",
+    "matching_smoke_signature": "a0e4804f69da76cb6919c24faf154f30d33caf52c98aa5e376e2d70ce7cd4d69",
+    "initial_state_exact": true,
+    "initial_rng_exact": true,
+    "fresh_initialization": true,
+    "no_smoke_weights_or_optimizer_loaded": true,
+    "normal_pairs": [
+      144,
+      144,
+      36
+    ],
+    "spoof_pairs": [
+      0,
+      0,
+      0
+    ],
+    "CPU_tests": 163,
+    "actual_GPU_validation_passed": true,
+    "during_training_eval": [
+      "19LA"
+    ],
+    "after_training_eval": [
+      "21LA",
+      "21DF"
+    ],
+    "new_spending_usd": 0,
+    "automatic_retries": 0
+  },
+  "training": [
+    {
+      "rank": 0,
+      "epoch": 1,
+      "batch": 10,
+      "finite": true,
+      "correct_pair_counts": true,
+      "first_update_matches_real_smoke_exact": true,
+      "backend_gradient_norm": 28.00560188293457,
+      "center_gradient_norm": 7.678880214691162,
+      "center_update_norm": 0.00012292586281244158
+    },
+    {
+      "rank": 1,
+      "epoch": 1,
+      "batch": 10,
+      "finite": true,
+      "correct_pair_counts": true,
+      "first_update_matches_real_smoke_exact": true,
+      "backend_gradient_norm": 28.00560188293457,
+      "center_gradient_norm": 7.678880214691162,
+      "center_update_norm": 0.00012292586281244158
+    }
+  ],
+  "errors": {
+    "preflight.log": {
+      "Traceback": 0,
+      "CUDA out of memory": 0,
+      "Exception ignored in": 0
+    },
+    "train.log": {
+      "Traceback": 0,
+      "CUDA out of memory": 0,
+      "Exception ignored in": 0
+    },
+    "pipeline.log": {
+      "Traceback": 0,
+      "CUDA out of memory": 0,
+      "Exception ignored in": 0
+    }
+  },
+  "GPU": "6, 20864, 100\n7, 20864, 100\n",
+  "new_spending_usd": 0,
+  "automatic_retries": 0,
+  "checked_KST": "2026-11-20T08:41:58.932543+09:00"
+}
